@@ -7,6 +7,7 @@ import "./index.css"
 import FirstMile from "./Components/FirstMile";
 import Guildeline from "./Components/Guildeline";
 import Randomizer from "./Components/Randomizer";
+import Dice from "./Components/Dice";
 
 const App = () => {
   return (
@@ -19,6 +20,8 @@ const App = () => {
           <Route path="/firstmile" element={<FirstMile/>}></Route>
           <Route path="/guildeline" element={<Guildeline/>}></Route>
           <Route path="/randomizer" element={<Randomizer/>}></Route>
+          <Route path="/dice" element={<Dice/>}></Route>
+
 
         </Routes>
       </div>
