@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .nav__img {
@@ -12,7 +13,9 @@
 .hr__line {
   border: 2px solid grey;
   width: 40px;
-} 
+  display: flex;
+  justify-content: center;
+}
 
 .flexbox-container {
   display: flex;
@@ -43,5 +46,76 @@
   height: 100%;
   font-size: 100px;
   cursor: pointer;
+}
+
+.round-box {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  background-color: #efefef;
+  padding: 5px;
+  font-size: 30px;
+  margin: 10px 35px 10px;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+
+/* .first-mile{
+    display: flex;
+    justify-content: ;
+} */
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: red;
+  cursor: pointer;
   border: none;
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.first-mile-heading {
+  margin-bottom: 40px;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.bold {
+  font-size: larger;
+}
+
+.btn-decor {
+  color: white;
+  padding: 6px 13px;
+  background-color: rgb(4, 4, 146);
+  font-size: 25px;
+  border-radius: 7px;
+}
+
+.btn-flex {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 200px;
 }

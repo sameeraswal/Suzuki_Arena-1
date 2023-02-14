@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./Navbar";
 
 const Dashboard = () => {
@@ -7,6 +6,9 @@ const Dashboard = () => {
       <Navbar />
       <div>
         <h1>Round 1 - Starting Interface</h1>
+      </div>
+      <div className="round-box">
+        Rounds
       </div>
       <div className="flexbox-container">
         <div className="flexbox-item flexbox-item-1">
