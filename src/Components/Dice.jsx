@@ -1,7 +1,6 @@
 import React from "react";
 
 const Dice = () => {
-  const dice = document.querySelector(".dice");
   const randomDice = () => {
     const random = Math.floor(Math.random() * 10);
 
@@ -13,7 +12,12 @@ const Dice = () => {
   };
 
   const rollDice = (random) => {
-    dice.style.animation = "rolling 4s";
+    const dice = document.querySelector(".dice");
+    if (dice) {
+      dice.style.animation = "rolling 4s";
+    } else {
+      console.log("Not working");
+    }
 
     setTimeout(() => {
       switch (random) {
@@ -59,7 +63,6 @@ const Dice = () => {
           <div className="face right"></div>
           <div className="face left"></div>
         </div>
-
         <button className="roll" onClick={randomDice}>
           Roll Dice
         </button>
