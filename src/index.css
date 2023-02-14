@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hr__line {
+  border: 2px solid grey;
+  width: 40px;
+} 
+
+.flexbox-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.flexbox-item {
+  margin: 10px;
+  background-color: #efefef;
+  flex: 1 0 20%;
+  text-align: center;
+  line-height: 200px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  border-radius: 9px;
+}
+
+.flexbox-item-1 {
+  min-height: 100px;
+}
+
+.btn {
+  width: 96%;
+  height: 100%;
+  font-size: 100px;
+  cursor: pointer;
+  border: none;
+}
