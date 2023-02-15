@@ -3,4 +3,9 @@
   height: 500px;
   width: 300px;
   perspective: 1000px;
+  margin-bottom: -170px;
+  margin-right: -20px;
+}
+.scroll-remove{
+  overflow-y: hidden;
 }
