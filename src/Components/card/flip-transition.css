@@ -37,10 +37,3 @@ z
 .flip-enter-done {
   transform: rotateY(0deg);
 }
-
-.no-flip {
-  transform: none;
-}
-.no-text{
-    
-}
