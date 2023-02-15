@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 export default class Wheel extends React.Component {
   constructor(props) {
@@ -33,23 +34,26 @@ export default class Wheel extends React.Component {
     const spinning = selectedItem !== null ? "spinning" : "";
 
     return (
-      <div className="wheel-container">
-        <div
-          className={`wheel ${spinning}`}
-          style={wheelVars}
-          onClick={this.selectItem}
-        >
-          {items.map((item, index) => (
-            <div
-              className="wheel-item"
-              key={index}
-              style={{ "--item-nb": index }}
-            >
-              {item}
-            </div>
-          ))}
+      <>
+      <Navbar></Navbar>
+        <div className="wheel-container">
+          <div
+            className={`wheel ${spinning}`}
+            style={wheelVars}
+            onClick={this.selectItem}
+          >
+            {items.map((item, index) => (
+              <div
+                className="wheel-item"
+                key={index}
+                style={{ "--item-nb": index }}
+              >
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 }

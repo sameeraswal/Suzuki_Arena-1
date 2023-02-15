@@ -1,6 +1,6 @@
 import React from "react";
 
-const Guildeline = () => {
+const Guideline = () => {
   return (
     <div>
       <div class="modal ">
@@ -9,7 +9,7 @@ const Guildeline = () => {
             <h1>The First Mile - Guidelines</h1>
           </div>
           <div>
-            <button class="close-modal">&times;</button>
+            <button className="guide-close-modal">&times;</button>
           </div>
         </div>
         <ul style={{ listStyleType: "disc" }}>
@@ -27,4 +27,4 @@ const Guildeline = () => {
   );
 };
 
-export default Guildeline;
+export default Guideline;

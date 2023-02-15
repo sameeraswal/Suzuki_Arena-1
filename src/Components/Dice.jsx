@@ -1,5 +1,5 @@
 import React from "react";
-
+import Navbar from "./Navbar";
 const Dice = () => {
   const randomDice = () => {
     const random = Math.floor(Math.random() * 10);
@@ -54,6 +54,7 @@ const Dice = () => {
   };
   return (
     <div>
+    <Navbar />
       <div className="container1">
         <div className="dice">
           <div className="face front"></div>
