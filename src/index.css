@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .nav__img {
@@ -46,7 +49,7 @@
   height: 100%;
   font-size: 100px;
   cursor: pointer;
-  border: 1px solid #F0F0F0;
+  border: 1px solid #f0f0f0;
 }
 
 .round-box {
@@ -825,4 +828,80 @@
   100% {
     padding-left: 80px;
   }
+}
+
+/* milestones css */
+.first-mile {
+  height: 600px;
+  width: 1000px;
+  background-color: #ecf2ff;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 80px;
+  text-align: center;
+  padding-top: 250px;
+  font-size: 60px;
+  border: 1px solid #205e61;
+}
+
+/* Aftercard  */
+
+.outer-div {
+  /* display: inline-block; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+.actual-card {
+  background-color: grey;
+  height: 450px;
+  width: 350px;
+  margin-right: -100px;
+  padding: 10px;
+}
+
+.border-div {
+  height: 430px;
+  width: 330px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* -webkit-mask: radial-gradient(circle 20px at top left, #0000 98%, #fff)top left; */
+  border-style: dashed;
+}
+
+.right-img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: 500px;
+}
+
+.margin-div {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.text-margin {
+  margin-top: 100px;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  
+}
+.width-input{
+  height: 30px;
+  width: 220px;
+}
+
+.card-btn-style{
+  background-color: #85CDFD;
+  width: 80px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  color: white;
+  box-shadow: -2px 0px white;
 }

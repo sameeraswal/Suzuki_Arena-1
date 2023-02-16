@@ -1,9 +1,8 @@
 import "./flippable-card.css";
 import Card from "./card/card";
 import { CSSTransition } from "react-transition-group";
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Linkcmp from "./Linkcmp";
+import React, { useState } from "react";
+
 
 function FlippableCard() {
   const [showFront, setShowFront] = useState(true);
