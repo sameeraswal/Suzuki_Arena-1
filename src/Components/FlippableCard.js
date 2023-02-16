@@ -1,17 +1,14 @@
 import "./flippable-card.css";
 import Card from "./card/card";
 import { CSSTransition } from "react-transition-group";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function FlippableCard() {
   const [showFront, setShowFront] = useState(true);
   const [color, setColor] = useState("#110781");
-  
-  const newLink = () => {
-    <Link to="/afterflip">document</Link>;
-    console.log("hiiii");
-  };
+  const linker = document.querySelector(".link-slct");
+
 
   useEffect(() => {
     document.querySelector(".card-front").style.backgroundColor = color;
@@ -26,7 +23,6 @@ function FlippableCard() {
               setShowFront((v) => !v);
               setColor("#A8A8A8");
               setShowFront(false);
-              newLink()
             }}
           />
         </CSSTransition>

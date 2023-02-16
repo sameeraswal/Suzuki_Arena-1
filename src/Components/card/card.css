@@ -49,3 +49,9 @@
   background-color: #A8A8A8;
   transform: rotateY(180deg);
 }
+
+.middle{
+  font-size: 0;
+  height: 300px;
+  width: 300px;
+}
