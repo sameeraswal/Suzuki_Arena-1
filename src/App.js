@@ -16,6 +16,16 @@ import Afterflip from "./Components/Afterflip";
 
 
 const App = () => {
+  const data = [
+    { id: 0, cardName: "Height" },
+    { id: 1, cardName: "Length" },
+    { id: 2, cardName: "Power" },
+    { id: 3, cardName: "Torque" },
+    { id: 4, cardName: "Boot space" },
+    { id: 5, cardName: "Mileage" },
+    { id: 6, cardName: "Width" },
+    { id: 7, cardName: "Wheelbase" },
+  ];
   const places = [
     "1",
     "2",
@@ -37,7 +47,9 @@ const App = () => {
           <Route path="/guideline" element={<Guildeline />}></Route>
           <Route path="/randomizer" element={<Randomizer />}></Route>
           <Route path="/dice" element={<Dice />}></Route>
-          <Route path="/afterflip" element={<Afterflip />}></Route>
+          <Route path="/afterflip" element={<Afterflip  />}></Route>
+
+
           <Route path="/flipcard" element={<Cards />}></Route>
         </Routes>
       </div>

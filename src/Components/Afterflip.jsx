@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 
-const Afterflip = () => {
+const Afterflip = ({para}) => {
   return (
     <>
       <Navbar></Navbar>
@@ -9,7 +9,7 @@ const Afterflip = () => {
         <div className="actual-card">
           <div className="border-div">
             <div className="text-div">
-              <p className="text-margin">What is the height of Wagonr</p>
+              <p className="text-margin">What is the {para} of Wagonr</p>
               <div className="margin-div">
                 <input type="text" className="width-input"/>
 
