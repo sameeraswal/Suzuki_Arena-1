@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
+import Timer from "./Timer";
 const Dice = () => {
   const navigate = useNavigate();
 
@@ -19,16 +20,12 @@ const Dice = () => {
   };
 
   const rollDice = (random) => {
-    
     const dice = document.querySelector(".dice");
     if (dice) {
       dice.style.animation = "rolling 4s";
     } else {
       console.log("Not working");
     }
-  
-
-   
 
     setTimeout(() => {
       switch (random) {
@@ -65,8 +62,10 @@ const Dice = () => {
   };
   return (
     <div>
-    <Navbar />
-    <div className="round-box">Dice</div>
+      <Navbar />
+
+      <div className="round-box">Dice</div>
+      <Timer />
       <div className="container1">
         <div className="dice">
           <div className="face front"></div>
@@ -76,10 +75,13 @@ const Dice = () => {
           <div className="face right"></div>
           <div className="face left"></div>
         </div>
-        <button className="roll" onClick={() => {
-          randomDice();
-          timeOutFun();
-        }}>
+        <button
+          className="roll"
+          onClick={() => {
+            randomDice();
+            timeOutFun();
+          }}
+        >
           Roll Dice
         </button>
       </div>
