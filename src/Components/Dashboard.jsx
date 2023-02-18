@@ -11,7 +11,7 @@ const Dashboard = () => {
       <div className="round-box">Rounds</div>
       <div className="flexbox-container">
         <div className="flexbox-item flexbox-item-1">
-          <button className="btn">1-A</button>
+        <Link to='/firstmile' > <button className="btn">1-A</button></Link>
         </div>
         <div className="flexbox-item flexbox-item-1">
           <button className="btn">1-B</button>

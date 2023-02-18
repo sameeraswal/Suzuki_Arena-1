@@ -32,10 +32,11 @@ export default class Wheel extends React.Component {
       "--selected-item": selectedItem,
     };
     const spinning = selectedItem !== null ? "spinning" : "";
-
+    const img1 = require('./wheel-pointer.png')
     return (
       <>
       <Navbar></Navbar>
+      <div className="round-box">Wheel</div>
         <div className="wheel-container">
           <div
             className={`wheel ${spinning}`}
@@ -50,8 +51,14 @@ export default class Wheel extends React.Component {
               >
                 {item}
               </div>
+
             ))}
+            
+
           </div>
+          <div className="marker">
+            <img src={img1} alt="img" />
+            </div>
         </div>
       </>
     );

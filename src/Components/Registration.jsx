@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
 function Registration() {
@@ -40,7 +41,7 @@ function Registration() {
             <input type="text" placeholder="Name" />
             <input type="text" placeholder="Dealership" />
             <input type="text" placeholder="Registration Number" />
-            <button class="control-button up">Register</button>
+           <Link to='/login' > <button class="control-button up">Register</button></Link>
           </form>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Randomizer = () => {
@@ -10,8 +11,12 @@ const Randomizer = () => {
         <h1>Choose One</h1>
       </div>
       <div className="btn-flex">
-        <button className="btn-decor">Spin Wheel</button>
-        <button className="btn-decor">Roll Dice</button>
+        <Link to="/wheel">
+          <button className="btn-decor">Spin Wheel</button>
+        </Link>
+        <Link to="/dice">
+          <button className="btn-decor">Roll Dice</button>
+        </Link>
       </div>
     </div>
   );

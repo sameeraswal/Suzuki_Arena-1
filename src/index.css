@@ -131,6 +131,7 @@
   width: 100%;
   padding: 60px 0 40px;
   border-radius: 30px;
+  margin-top: 100px;
 }
 
 /*
@@ -209,7 +210,7 @@
 .front::after {
   width: 30px;
   height: 30px;
-  background: #f63330;
+  background: black;
   margin: -15px 0 0 -15px;
 }
 
@@ -251,6 +252,12 @@
   font: 700 16px "Montserrat";
   border: 2px solid #b33951;
   transition: 0.4s;
+  background-color: #0e5c91;
+  border: 1px solid #85CDFD;
+  width: 170px;
+  height: 40px;
+  border-radius: 8px;
+  color: white;
 }
 
 .roll:hover {
@@ -292,7 +299,7 @@
 
 .wheel-container::before,
 .wheel-container::after {
-  content: "";
+  /* content: ""; */
   display: block;
   position: absolute;
   height: 0;
@@ -889,19 +896,28 @@
   font-size: 40px;
   text-align: center;
   color: white;
-  
 }
-.width-input{
+.width-input {
   height: 30px;
   width: 220px;
 }
 
-.card-btn-style{
-  background-color: #85CDFD;
+.card-btn-style {
+  background-color: #85cdfd;
   width: 80px;
   border-radius: 6px;
   border: none;
   font-size: 16px;
   color: white;
   box-shadow: -2px 0px white;
+}
+
+/* wheel marker */
+.marker {
+  transform: rotate(90deg);
+  margin-top: -516px;
+  margin-left: 449px;
+}
+.wheel-container{
+  margin-top: 100px;
 }

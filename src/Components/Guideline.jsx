@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Guideline = () => {
   return (
@@ -9,7 +10,9 @@ const Guideline = () => {
             <h1>The First Mile - Guidelines</h1>
           </div>
           <div>
-            <button className="guide-close-modal">&times;</button>
+            <Link to="/randomizer">
+              <button className="guide-close-modal">&times;</button>
+            </Link>
           </div>
         </div>
         <ul style={{ listStyleType: "disc" }}>

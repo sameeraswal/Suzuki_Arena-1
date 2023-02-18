@@ -55,6 +55,7 @@ const Dice = () => {
   return (
     <div>
     <Navbar />
+    <div className="round-box">Dice</div>
       <div className="container1">
         <div className="dice">
           <div className="face front"></div>
