@@ -11,7 +11,10 @@ const Dashboard = () => {
       <div className="round-box">Rounds</div>
       <div className="flexbox-container">
         <div className="flexbox-item flexbox-item-1">
-        <Link to='/firstmile' > <button className="btn">1-A</button></Link>
+          <Link to="/firstmile">
+            {" "}
+            <button className="btn">1-A</button>
+          </Link>
         </div>
         <div className="flexbox-item flexbox-item-1">
           <button className="btn">1-B</button>
@@ -34,7 +37,9 @@ const Dashboard = () => {
           <button className="btn">6</button>
         </div>
         <div className="flexbox-item flexbox-item-1">
-          <button className="btn">7</button>
+          <Link to="/flipcard">
+            <button className="btn">7</button>
+          </Link>
         </div>
       </div>
     </>
