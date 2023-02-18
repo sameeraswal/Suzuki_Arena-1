@@ -1,4 +1,5 @@
 import React from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 
 export default class Wheel extends React.Component {
@@ -22,7 +23,9 @@ export default class Wheel extends React.Component {
       setTimeout(this.selectItem, 500);
     }
   }
-
+  timeOutFun () {
+    setTimeout(() => window.open("/dashboard"), 8000);
+  };
   render() {
     const { selectedItem } = this.state;
     const { items } = this.props;
@@ -37,7 +40,7 @@ export default class Wheel extends React.Component {
       <>
       <Navbar></Navbar>
       <div className="round-box">Wheel</div>
-        <div className="wheel-container">
+        <div className="wheel-container" onClick={this.timeOutFun}>
           <div
             className={`wheel ${spinning}`}
             style={wheelVars}
