@@ -13,6 +13,7 @@ import Wheel from "./Components/Wheel";
 import Cards from "./Components/Cards";
 import Login from "./Components/Login";
 import Afterflip from "./Components/Afterflip";
+import Leaderboard from "./Components/leaderboard/Leaderboard";
 
 const App = () => {
   const data = [
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/guideline" element={<Guildeline />}></Route>
           <Route path="/randomizer" element={<Randomizer />}></Route>
           <Route path="/dice" element={<Dice />}></Route>
+          <Route path="/leaderboard" element={<Leaderboard />}></Route>
           <Route
             path="/afterflip/height"
             element={<Afterflip title={data[0].cardName} />}
