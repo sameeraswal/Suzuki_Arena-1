@@ -7,6 +7,9 @@ import React, { useState } from "react";
 function FlippableCard({title,key}) {
   const [showFront, setShowFront] = useState(true);
   const [color, setColor] = useState("#110781");
+  function setPageState(e){
+    e.preventDefault();
+  }
 
   return (
     <div className="scroll-remove">
@@ -17,7 +20,7 @@ function FlippableCard({title,key}) {
               setShowFront((v) => !v);
               setColor("#A8A8A8");
               setShowFront(false);
-              
+              setPageState()
             }}
           />
         </CSSTransition>
