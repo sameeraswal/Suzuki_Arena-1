@@ -16,7 +16,7 @@
   display: block;
   padding: 3em;
   padding-top: 2em;
-  background-color: #62b6b7;
+  background-color: #00309A;
   border-radius: 20px;
 }
 .theme-img {
@@ -54,7 +54,7 @@ table td {
   text-align: center;
 }
 tbody tr {
-  box-shadow: 0 2px rgba(100, 100, 100, 0.5);
+  box-shadow: 0 2px rgba(206, 44, 44, 0.733);
   border-radius: 10px;
 }
 tbody tr:hover {

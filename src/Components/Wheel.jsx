@@ -24,7 +24,7 @@ export default class Wheel extends React.Component {
     }
   }
   timeOutFun () {
-    setTimeout(() => window.open("/dashboard"), 8000);
+    setTimeout(() => window.open("/dashboard","_self"), 8000);
   };
   render() {
     const { selectedItem } = this.state;

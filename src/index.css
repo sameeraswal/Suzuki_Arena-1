@@ -100,10 +100,11 @@
 
 .first-mile-heading {
   margin-bottom: 40px;
-  background-color: #efefef;
+  background-color: #00309A;
   display: flex;
   justify-content: center;
   padding: 5px;
+  color: white;
 }
 
 .bold {
@@ -274,7 +275,7 @@
   --wheel-size: 400px;
   --wheel-slice-spacing: 50px;
   --wheel-border-size: 5px;
-  --wheel-color: #439a97;
+  --wheel-color: #00309A;
   --neutral-color: white;
   --PI: 3.14159265358979;
   --nb-item: 0;
@@ -431,7 +432,7 @@
   --form-height: 550px;
   --form-width: 900px;
   /*  Sea Green */
-  --left-color: #9fdeaf;
+  --left-color: #00309A;
   /*  Light Blue  */
   --right-color: #96dbe2;
 }
@@ -452,6 +453,7 @@
   box-shadow: 2px 10px 40px rgba(22, 20, 19, 0.4);
   border-radius: 10px;
   margin-top: 50px;
+  
 }
 /* 
 ----------------------
