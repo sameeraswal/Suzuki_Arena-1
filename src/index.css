@@ -116,12 +116,14 @@
   background-color: rgb(4, 4, 146);
   font-size: 25px;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .btn-flex {
   display: flex;
   justify-content: space-evenly;
   margin-top: 200px;
+  
 }
 
 /* Dice */
@@ -421,6 +423,7 @@
   display: inline-block;
   margin: 10px 0 0 10px;
   flex-grow: 1;
+  
 }
 
 /* Form  */
@@ -898,18 +901,26 @@
   color: white;
 }
 .width-input {
-  height: 30px;
+  height: 32px;
   width: 220px;
+  border-radius: 8px;
+  margin-bottom: 3px;
+  border: none;
 }
 
 .card-btn-style {
   background-color: #85cdfd;
   width: 80px;
   border-radius: 6px;
-  border: none;
+  border: 1px solid #85cdfd;
   font-size: 16px;
   color: white;
-  box-shadow: -2px 0px white;
+ 
+  height: 32px;
+}
+input:focus{
+  outline: none !important;
+  border-color: white;
 }
 
 /* wheel marker */

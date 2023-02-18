@@ -1,4 +1,7 @@
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
+
+
 const Afterflip = ({ title }) => {
   const img=require('./wagon_spec.webp')
   return (
@@ -11,8 +14,8 @@ const Afterflip = ({ title }) => {
             <div className="text-div">
               <p className="text-margin">What is the {title} of Wagonr</p>
               <div className="margin-div">
-                <input type="text" className="width-input" />
-                <input type="submit" className="card-btn-style" />
+                <input type="text" className="width-input" placeholder="Enter Answer" required/>
+                <Link to="/flipcard"><button className="card-btn-style">Submit</button></Link>
               </div>
             </div>
           </div>

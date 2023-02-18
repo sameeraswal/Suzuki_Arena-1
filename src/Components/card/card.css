@@ -52,6 +52,7 @@
 
 .middle{
   font-size: 0;
+  cursor: pointer;
 }
 .text-on-card{
   z-index: 1;
