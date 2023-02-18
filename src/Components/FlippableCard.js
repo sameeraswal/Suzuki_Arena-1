@@ -4,7 +4,7 @@ import { CSSTransition } from "react-transition-group";
 import React, { useState } from "react";
 
 
-function FlippableCard({title,value}) {
+function FlippableCard({title,key}) {
   const [showFront, setShowFront] = useState(true);
   const [color, setColor] = useState("#110781");
 
@@ -12,7 +12,7 @@ function FlippableCard({title,value}) {
     <div className="scroll-remove">
       <div className="flippable-card-container">
         <CSSTransition in={showFront} timeout={300} classNames="flip">
-          <Card title={title} value={value}
+          <Card title={title} value={key}
             onClick={() => {
               setShowFront((v) => !v);
               setColor("#A8A8A8");

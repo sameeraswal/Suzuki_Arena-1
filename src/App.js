@@ -14,41 +14,63 @@ import Cards from "./Components/Cards";
 import Login from "./Components/Login";
 import Afterflip from "./Components/Afterflip";
 
-
 const App = () => {
   const data = [
     { id: 0, cardName: "Height" },
     { id: 1, cardName: "Length" },
     { id: 2, cardName: "Power" },
     { id: 3, cardName: "Torque" },
-    { id: 4, cardName: "Boot space" },
+    { id: 4, cardName: "Bootspace" },
     { id: 5, cardName: "Mileage" },
     { id: 6, cardName: "Width" },
     { id: 7, cardName: "Wheelbase" },
   ];
-  const places = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-  ];
+  const places = ["1", "2", "3", "4", "5", "6"];
   return (
     <Router>
       <div>
         <Routes>
           <Route exact path="/" element={<Registration />}></Route>
           <Route path="/login" element={<Login />}></Route>
-          
+
           <Route path="/wheel" element={<Wheel items={places} />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/firstmile" element={<FirstMile />}></Route>
           <Route path="/guideline" element={<Guildeline />}></Route>
           <Route path="/randomizer" element={<Randomizer />}></Route>
           <Route path="/dice" element={<Dice />}></Route>
-          <Route path="/afterflip" element={<Afterflip  />}></Route>
-
+          <Route
+            path="/afterflip/height"
+            element={<Afterflip title={data[0].cardName} />}
+          ></Route>
+          <Route
+            path="/afterflip/length"
+            element={<Afterflip title={data[1].cardName} />}
+          ></Route>
+          <Route
+            path="/afterflip/power"
+            element={<Afterflip title={data[2].cardName} />}
+          ></Route>
+          <Route
+            path="/afterflip/torque"
+            element={<Afterflip title={data[3].cardName} />}
+          ></Route>
+          <Route
+            path="/afterflip/bootspace"
+            element={<Afterflip title={data[4].cardName} />}
+          ></Route>
+          <Route
+            path="/afterflip/mileage"
+            element={<Afterflip title={data[5].cardName} />}
+          ></Route>
+          <Route
+            path="/afterflip/width"
+            element={<Afterflip title={data[6].cardName} />}
+          ></Route>
+          <Route
+            path="/afterflip/wheelbase"
+            element={<Afterflip title={data[7].cardName} />}
+          ></Route>
 
           <Route path="/flipcard" element={<Cards />}></Route>
         </Routes>

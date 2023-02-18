@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
-
-const Afterflip = ({para}) => {
+const Afterflip = ({ title }) => {
+  const img=require('./wagon_spec.webp')
   return (
     <>
       <Navbar></Navbar>
@@ -9,17 +9,16 @@ const Afterflip = ({para}) => {
         <div className="actual-card">
           <div className="border-div">
             <div className="text-div">
-              <p className="text-margin">What is the {para} of Wagonr</p>
+              <p className="text-margin">What is the {title} of Wagonr</p>
               <div className="margin-div">
-                <input type="text" className="width-input"/>
-
-                <input type="submit" className="card-btn-style"/>
+                <input type="text" className="width-input" />
+                <input type="submit" className="card-btn-style" />
               </div>
             </div>
           </div>
         </div>
         <div className="right-img">
-          <img src="Assets/wagon_spec.webp" alt="img" />
+          <img src={img} alt="img" />
         </div>
       </div>
     </>

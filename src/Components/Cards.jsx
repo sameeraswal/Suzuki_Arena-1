@@ -10,7 +10,7 @@ const Cards = () => {
     { id: 1, cardName: "Length" },
     { id: 2, cardName: "Power" },
     { id: 3, cardName: "Torque" },
-    { id: 4, cardName: "Boot space" },
+    { id: 4, cardName: "Bootspace" },
     { id: 5, cardName: "Mileage" },
     { id: 6, cardName: "Width" },
     { id: 7, cardName: "Wheelbase" },
@@ -21,10 +21,10 @@ const Cards = () => {
       <div className="flex-container">
         <div className="flex-container-child">
           <div className="flex-child">
-            <FlippableCard title={data[0].cardName} value={data[0].cardName} />
+            <FlippableCard title={data[0].cardName} key={0} />
           </div>
           <div className="flex-child">
-            <FlippableCard title={data[1].cardName} value={data[1].cardName}/>
+            <FlippableCard title={data[1].cardName} key={1}/>
           </div>
           <div className="flex-child">
             <FlippableCard title={data[2].cardName} />
