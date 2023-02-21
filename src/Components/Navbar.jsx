@@ -1,12 +1,11 @@
 function Navbar() {
-  let Logo = require("./Suzuki-symbol.jpg");
+  let Logo = require("./Suzuki-symbol1.jpg");
 
   return (
     <>
       <div className="nav__img">
-        <img src={Logo} alt="Logo" width={40} height={40} />
+        <img src={Logo} alt="Logo" width={400} height={80} className="nav_img" />
       </div>
-        <hr />
     </>
   );
 }

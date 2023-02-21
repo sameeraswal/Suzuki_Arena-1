@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
+import Timer from "./Timer";
 
 export default class Wheel extends React.Component {
   constructor(props) {
@@ -40,6 +41,7 @@ export default class Wheel extends React.Component {
       <>
       <Navbar></Navbar>
       <div className="round-box">Wheel</div>
+      <Timer/>
         <div className="wheel-container" onClick={this.timeOutFun}>
           <div
             className={`wheel ${spinning}`}

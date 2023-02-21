@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Registration from "./Components/Registration";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -27,6 +27,15 @@ const App = () => {
     { id: 7, cardName: "Wheelbase" },
   ];
   const places = ["1", "2", "3", "4", "5", "6"];
+  const [showFront, setShowFront] = useState(true);
+  useEffect(() => {
+    const data = window.localStorage.getItem("cardState");
+    if (data !== null) setShowFront(JSON.parse(data));
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("cardState", JSON.stringify(showFront));
+  }, [showFront]);
   return (
     <Router>
       <div>
@@ -74,7 +83,7 @@ const App = () => {
             element={<Afterflip title={data[7].cardName} />}
           ></Route>
 
-          <Route path="/flipcard" element={<Cards />}></Route>
+          <Route path="/flipcard" element=<Cards />></Route>
         </Routes>
       </div>
     </Router>
