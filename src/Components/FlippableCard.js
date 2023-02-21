@@ -11,8 +11,6 @@ function FlippableCard({ title, key }) {
   // console.log("showFront");
   const [color, setColor] = useState("#110781");
 
-
-
   // useEffect(() => {
   //   const data = window.localStorage.getItem("cardState");
   //   if (data !== null) {
@@ -29,22 +27,19 @@ function FlippableCard({ title, key }) {
   // }, [showFront]);
 
   return (
-    <div className="scroll-remove">
-      <div className="flippable-card-container">
-        <CSSTransition in={showFront} timeout={300} classNames="flip">
-          <Card
-            title={title}
-            value={key}
-            onClick={() => {
-              setShowFront((v) => !v);
-              setColor("#A8A8A8");
-              setShowFront(false);
-              // setPappu(false);
-              // getLocalData();
-            }}
-          />
-        </CSSTransition>
-      </div>
+    <div className="flippable-card-container">
+      <CSSTransition in={showFront} timeout={300} classNames="flip">
+        <Card
+          
+          title={title}
+          value={key}
+          onClick={() => {
+            setShowFront((v) => !v);
+            setColor("#A8A8A8");
+            setShowFront(false);
+          }}
+        />
+      </CSSTransition>
     </div>
   );
 }

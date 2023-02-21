@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { reactLocalStorage } from "reactjs-localstorage";
 
 function Card({ onClick, title }) {
+  const flipImg = require("../flipcard-img.jpg");
   const navigate = useNavigate();
   const timeOutFun = (e) => {
     setTimeout(() => window.open("../afterflip/" + title), 400);
@@ -18,21 +19,19 @@ function Card({ onClick, title }) {
       <div className="card" onClick={onClick}>
         <div className="card-back"></div>
 
-        <div className="card-front">
+        <div className="card-front front-icon">
           <button
-            className="middle card-front"
+            className="middle card-front front-icon"
             onClick={() => {
               timeOutFun();
-            
             }}
+            
           >
             hiii
           </button>
           <p
             onClick={() => {
               timeOutFun();
-              
-
             }}
             className="text-on-card"
           >

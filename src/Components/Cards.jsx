@@ -56,6 +56,12 @@ const Cards = () => {
           <div className="flex-child">
             <FlippableCard title={data[7].cardName} />
           </div>
+          <div className="flex-child">
+            <FlippableCard title={data[7].cardName} />
+          </div>
+          <div className="flex-child">
+            <FlippableCard title={data[7].cardName} />
+          </div>
         </div>
       </div>
       {/* )} */}

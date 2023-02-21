@@ -26,7 +26,7 @@ const App = () => {
     { id: 6, cardName: "Width" },
     { id: 7, cardName: "Wheelbase" },
   ];
-  const places = ["1", "2", "3", "4", "5", "6"];
+  const places = ["1", "2", "3", "4", "5", "6","7","8","9","10","11","12"];
   const [showFront, setShowFront] = useState(true);
   useEffect(() => {
     const data = window.localStorage.getItem("cardState");
