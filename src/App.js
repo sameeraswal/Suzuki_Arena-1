@@ -14,6 +14,7 @@ import Cards from "./Components/Cards";
 import Login from "./Components/Login";
 import Afterflip from "./Components/Afterflip";
 import Leaderboard from "./Components/leaderboard/Leaderboard";
+import Question from "./Components/Question";
 
 const App = () => {
   const data = [
@@ -84,6 +85,8 @@ const App = () => {
           ></Route>
 
           <Route path="/flipcard" element=<Cards />></Route>
+          <Route path="/question" element=<Question />></Route>
+
         </Routes>
       </div>
     </Router>
