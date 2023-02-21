@@ -65,7 +65,6 @@ const Dice = () => {
       <Navbar />
 
       <div className="round-box">Dice</div>
-      <Timer />
       <div className="container1">
         <div className="dice">
           <div className="face front"></div>
@@ -76,7 +75,7 @@ const Dice = () => {
           <div className="face left"></div>
         </div>
         <button
-          className="roll"
+          className="roll third icon-conatiner"
           onClick={() => {
             randomDice();
             timeOutFun();

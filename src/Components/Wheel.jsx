@@ -41,7 +41,6 @@ export default class Wheel extends React.Component {
       <>
       <Navbar></Navbar>
       <div className="round-box">Wheel</div>
-      <Timer/>
         <div className="wheel-container" onClick={this.timeOutFun}>
           <div
             className={`wheel ${spinning}`}

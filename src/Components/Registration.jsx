@@ -1,19 +1,18 @@
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import Search from "./search";
 
 function Registration() {
-  const search = require("./search.png");
+  // const search = require("./search.svg");
+  const arena = require("./maruti-suzuki-arena.webp");
   return (
     <div>
       <div className="nav-center">
         <Navbar />
       </div>
-      
+
       <div className="container">
-        <div class="overlay-1" id="overlay-1">
-          <div class="sign-in" id="sign-in"></div>
-          <div class="sign-up" id="sign-up"></div>
-        </div>
+        <img src={arena} alt="arena" className="arena-img" />
         <div class="form">
           <div class="sign-in" id="sign-in-info">
             <h1>Registration</h1>
@@ -27,7 +26,7 @@ function Registration() {
           <div className="sign-up" id="sign-up-info">
             <h1>Registration</h1>
             <button className="search-icon">
-              <img src={search} alt="search" height={20} width={20} />
+              <Search />
             </button>
             <form action="#" class="custom-form">
               <div class="form-group" ng-class="{'not-empty': userName.length}">
@@ -37,6 +36,7 @@ function Registration() {
                   name="MSPIN"
                   id="MSPIN"
                   ng-model="MSPIN"
+                  autoFocus
                 />
 
                 <label for="MSPIN" class="animated-label">

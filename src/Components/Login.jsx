@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Login = () => {
+  const arena = require("./maruti-suzuki-arena.webp");
   return (
     <>
       <div className="nav-center">
@@ -9,10 +10,7 @@ const Login = () => {
       </div>
 
       <div className="container">
-        <div class="overlay-1" id="overlay-1">
-          <div class="sign-in" id="sign-in"></div>
-          <div class="sign-up" id="sign-up"></div>
-        </div>
+        <img src={arena} alt="" className="arena-img" />
         <div class="form">
           <div class="sign-in" id="sign-in-info">
             <h1>Sign In</h1>
@@ -35,6 +33,7 @@ const Login = () => {
                   name="MSPIN"
                   id="MSPIN"
                   ng-model="MSPIN"
+                  autoFocus
                 />
                 <label for="MSPIN" class="animated-label">
                   MSPIN
