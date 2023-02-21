@@ -17,7 +17,7 @@ function Card({ onClick, title }) {
   return (
     <>
       <div className="card" onClick={onClick}>
-        <div className="card-back"></div>
+        <div className="card-back">{title}</div>
 
         <div className="card-front front-icon">
           <button
@@ -25,7 +25,6 @@ function Card({ onClick, title }) {
             onClick={() => {
               timeOutFun();
             }}
-            
           >
             hiii
           </button>
