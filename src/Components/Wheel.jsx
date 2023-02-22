@@ -2,6 +2,7 @@ import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
+import WheelStand from './wheelstand.svg'
 
 export default class Wheel extends React.Component {
   constructor(props) {
@@ -63,6 +64,7 @@ export default class Wheel extends React.Component {
           <div className="marker">
             <img src={img1} alt="img" />
             </div>
+            <img src={WheelStand} alt="" className="wheel-stand"/>
         </div>
       </>
     );

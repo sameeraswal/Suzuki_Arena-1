@@ -53,7 +53,7 @@ const Login = () => {
               </div>
               <Link to="/dashboard">
                 {" "}
-                <button class="control-button up third">Join Now</button>
+                <button class="control-button up third icon-conatiner">Join Now</button>
               </Link>
             </form>
           </div>

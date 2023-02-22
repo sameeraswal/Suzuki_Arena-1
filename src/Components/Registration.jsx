@@ -82,8 +82,7 @@ function Registration() {
               </div>
               <div class="submit">
                 <Link to="/login">
-                  {" "}
-                  <button className="control-button up third">Register</button>
+                  <button className="control-button up third icon-conatiner">Register</button>
                 </Link>
               </div>
             </form>

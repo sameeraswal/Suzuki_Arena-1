@@ -15,15 +15,15 @@ const Guideline = () => {
             </Link>
           </div>
         </div>
-        <ul style={{ listStyleType: "disc" }}>
-          <li className="bold">
+        <div style={{ listStyleType: "disc" }}>
+          <div className="bold">
             First round will be based on images or videos in which{" "}
             <b>5 questions </b>
             would display as per randomizer. The duration of this round would be
             <b> 1 minute </b> per question.
-          </li>
-          <li className="bold">Each question carries 10 marks</li>
-        </ul>
+          </div>
+          <p className="bold">Each question carries 10 marks</p>
+        </div>
       </div>
       <div class="overlay"></div>
     </div>
