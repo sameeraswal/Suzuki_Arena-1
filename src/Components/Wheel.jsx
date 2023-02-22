@@ -62,7 +62,7 @@ export default class Wheel extends React.Component {
 
           </div>
           <div className="marker">
-            <img src={img1} alt="img" />
+            <img src={img1} alt="img" height={200} width={200}/>
             </div>
             <img src={WheelStand} alt="" className="wheel-stand"/>
         </div>

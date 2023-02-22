@@ -487,7 +487,7 @@
 
 .wheel-stand {
   margin-top: 97px;
-  margin-top: 52px;
+  margin-top: 26px;
   margin-left: -4px;
   height: 99%;
   width: 99%;
@@ -1105,8 +1105,8 @@ input:focus {
 /* wheel marker */
 .marker {
   transform: rotate(90deg);
-  margin-top: -516px;
-  margin-left: 449px;
+  margin-top: -361px;
+  margin-left: 345px;
 }
 .wheel-container {
   margin-top: 100px;
