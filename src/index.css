@@ -61,6 +61,8 @@
   cursor: pointer;
   border: 1px solid #f0f0f0;
   border-radius: 16px;
+  color: var(--arena-color);
+  
 }
 .btn:hover {
   /* From https://css.glass */
@@ -116,14 +118,14 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--arena-color);
   padding: 10px;
   font-size: 35px;
   font-weight: bold;
   margin: auto;
   margin-top: 20px;
   border-radius: 8px;
-  color: var(--arena-color);
+  color: #fff;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }

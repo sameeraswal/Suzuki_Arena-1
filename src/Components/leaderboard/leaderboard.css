@@ -6,7 +6,7 @@
 .leaderboard-container {
   display: flex;
   align-items: center;
-  margin-top: 130px;
+  margin-top: 75px;
 }
 
 .leaderboard {
@@ -16,8 +16,10 @@
   display: block;
   padding: 3em;
   padding-top: 2em;
-  background-color: #00309A;
+  background-color: #fff;
   border-radius: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .theme-img {
   width: 20em;
@@ -27,16 +29,22 @@
   display: inline-block;
   text-align: center;
   /* margin: 1em; */
-  color: white;
+  color: black;
   /* transform: translateY(-5em); */
-  margin-left: 270px;
+  margin-left: 300px;
+  font-size: 40px;
+ 
+}
+
+.description h3{
+  font-weight: bolder;
   font-size: 40px;
 }
 
 table {
   margin-top: 2em;
   width: 50em;
-  color: white;
+  color: black;
   margin-right: auto;
   margin-left: auto;
 }
