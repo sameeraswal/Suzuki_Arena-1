@@ -72,7 +72,7 @@
   border: 1px solid rgba(102, 150, 208, 0.19);
 }
 .icon-conatiner:active {
-  animation: press 0.2s 1 linear;
+  animation: press 0.5s 1 linear;
 }
 
 @keyframes press {
@@ -535,7 +535,11 @@
   border-radius: 10px;
   margin-top: 50px;
   background-image: linear-gradient(to right, #ececeb, #f9f9f8);
+  display: flex;
 }
+/* .form-container{
+  position: absolute;
+} */
 
 /* arena img   */
 .arena-img {
@@ -676,7 +680,7 @@
 }
 .search-icon {
   position: absolute;
-  margin-top: -219px;
+  margin-top: 12px;
   right: 76px;
   border: none;
   background-color: transparent;
@@ -688,334 +692,11 @@
       Forms
 --------------------------
 */
-
-input {
-  caret-color: rgb(4, 52, 156);
-  background-color: transparent;
-}
-
-/* .form {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 10px;
-} */
-
-.form .sign-in,
-.form .sign-up {
-  --padding: 50px;
-  position: absolute;
-
-  width: calc(var(--form-width) - 385px - var(--padding) * 2);
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px var(--padding);
-  text-align: center;
-  padding-top: 60px;
-  top: -20px;
-  right: -20px;
-  left: 475px;
-}
-
-/* Sign in is initially not displayed */
-.form .sign-in {
-  display: none;
-}
-
-.form .sign-in {
-  left: 0;
-}
-
-.form .sign-up {
-  right: 0;
-  margin-right: 40px;
-}
-
-.form-right-slide-in {
-  animation: form-slide-in-right 1s;
-}
-
-.form-right-slide-out {
-  animation: form-slide-out-right 1s;
-}
-
-.form-left-slide-in {
-  animation: form-slide-in-left 1s;
-}
-
-.form-left-slide-out {
-  animation: form-slide-out-left 1s;
-}
-
-.form .sign-in h1 {
-  color: var(--right-color);
-  margin: 0;
-}
-
-.form .sign-up h1 {
-  color: var(--left-color);
-  margin: 0;
-}
-
-.small {
-  font-size: 13px;
-  color: grey;
-  font-weight: 200;
-  margin: 5px;
-}
-
-#sign-in-form input,
-#sign-up-form input {
-  margin: 12px;
-  font-size: 14px;
-  padding: 15px;
-  width: 260px;
-  font-weight: 300;
-  border: none;
-  background-color: #e4e4e494;
-  font-family: "Helvetica Neue", sans-serif;
-  letter-spacing: 1.5px;
-  padding-left: 20px;
-}
-
-#sign-in-form input::placeholder {
-  letter-spacing: 1px;
-}
-
-.forgot-password {
-  font-size: 12px;
-  display: inline-block;
-  border-bottom: 2px solid #efebeb;
-  padding-bottom: 3px;
-}
-
-.forgot-password:hover {
-  cursor: pointer;
-}
-
-.custom-form {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  max-width: 460px;
-  /* margin: 40px auto 40px; */
-  /* background: #fff; */
-  padding: 40px;
-  border-radius: 4px;
-}
-/* .custom-form .btn-primary {
-  background-color: #8e44ad;
-  border-color: #8e44ad;
-} */
-.custom-form .form-group {
-  position: relative;
-  padding-top: 16px;
-  margin-bottom: 16px;
-}
-.custom-form .form-group .animated-label {
-  position: absolute;
-  top: 20px;
-  left: 0px;
-  bottom: 0;
-  z-index: 2;
-  /* width: 100%; */
-  font-weight: 300;
-  opacity: 0.5;
-  cursor: text;
-  transition: 0.2s ease all;
-  margin: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-.custom-form .form-group .animated-label:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 45%;
-  height: 2px;
-  width: 10px;
-  visibility: hidden;
-  background-color: #8e44ad;
-  transition: 0.2s ease all;
-}
-.custom-form .form-group.not-empty .animated-label {
-  top: 0;
-  font-size: 12px;
-}
-.custom-form .form-group .form-control {
-  position: relative;
-  z-index: 1;
-  border-radius: 0;
-  border-width: 0 0 1px;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
-  height: auto;
-  padding: 3px 0 5px;
-  width: 260px;
-}
-.custom-form .form-group .form-control:focus {
-  box-shadow: none;
-  border-bottom-color: rgba(0, 0, 0, 0.12);
-}
-.custom-form .form-group .form-control:focus ~ .animated-label {
-  top: 0;
-  opacity: 1;
-  color: #8e44ad;
-  font-size: 12px;
-}
-.custom-form .form-group .form-control:focus ~ .animated-label:after {
-  visibility: visible;
-  width: 260px;
-  left: 0;
-}
-
 /* 
----------------------------
-    Animation
----------------------------
-*/
-@keyframes slideright {
-  0% {
-    clip: rect(0, 385px, var(--form-height), 0);
-  }
-  30% {
-    clip: rect(0, 480px, var(--form-height), 0);
-  }
-  /*  we want the width to be slightly larger here  */
-  50% {
-    clip: rect(
-      0px,
-      calc(var(--form-width) / 2 + 480px / 2),
-      var(--form-height),
-      calc(var(--form-width) / 2 - 480px / 2)
-    );
-  }
-  80% {
-    clip: rect(
-      0px,
-      var(--form-width),
-      var(--form-height),
-      calc(var(--form-width) - 480px)
-    );
-  }
-  100% {
-    clip: rect(
-      0px,
-      var(--form-width),
-      var(--form-height),
-      calc(var(--form-width) - 385px)
-    );
-  }
-}
 
-@keyframes slideleft {
-  100% {
-    clip: rect(0, 385px, var(--form-height), 0);
-  }
-  70% {
-    clip: rect(0, 480px, var(--form-height), 0);
-  }
-  /*  we want the width to be slightly larger here  */
-  50% {
-    clip: rect(
-      0px,
-      calc(var(--form-width) / 2 + 480px / 2),
-      var(--form-height),
-      calc(var(--form-width) / 2 - 480px / 2)
-    );
-  }
-  30% {
-    clip: rect(
-      0px,
-      var(--form-width),
-      var(--form-height),
-      calc(var(--form-width) - 480px)
-    );
-  }
-  0% {
-    clip: rect(
-      0px,
-      var(--form-width),
-      var(--form-height),
-      calc(var(--form-width) - 385px)
-    );
-  }
-}
 
-@keyframes text-slide-in-left {
-  0% {
-    padding-left: 20px;
-  }
-  100% {
-    padding-left: 50px;
-  }
-}
 
-@keyframes text-slide-in-right {
-  0% {
-    padding-right: 20px;
-  }
-  100% {
-    padding-right: 50px;
-  }
-}
 
-@keyframes text-slide-out-left {
-  0% {
-    padding-left: 50px;
-  }
-  100% {
-    padding-left: 20px;
-  }
-}
-
-@keyframes text-slide-out-right {
-  0% {
-    padding-right: 50px;
-  }
-  100% {
-    padding-right: 20px;
-  }
-}
-
-@keyframes form-slide-in-right {
-  0% {
-    padding-right: 100px;
-  }
-  100% {
-    padding-right: 50px;
-  }
-}
-
-@keyframes form-slide-in-left {
-  0% {
-    padding-left: 100px;
-  }
-  100% {
-    padding-left: 50px;
-  }
-}
-
-@keyframes form-slide-out-right {
-  0% {
-    padding-right: 50px;
-  }
-  100% {
-    padding-right: 80px;
-  }
-}
-
-@keyframes form-slide-out-left {
-  0% {
-    padding-left: 50px;
-  }
-  100% {
-    padding-left: 80px;
-  }
-}
 
 /* milestones css */
 .first-mile {

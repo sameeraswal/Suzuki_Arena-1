@@ -1,10 +1,33 @@
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Search from "./search";
-
+import "./registration.scss";
+import { useEffect, useState } from "react";
+import response from "./RegistrationData.json";
 function Registration() {
-  // const search = require("./search.svg");
   const arena = require("./maruti-suzuki-arena.webp");
+  const [state, setState] = useState({}); //edit
+
+  //add
+  useEffect(() => {
+    response.map((resp) =>
+      setState((state) => ({ ...state, [resp.fieldName]: resp.value }))
+    );
+    return () => {};
+  }, []);
+
+  const handleChange = (e, field) => {
+    setState({
+      ...state,
+      [field]: e.target.value, //edit
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(state);
+  };
+
   return (
     <div>
       <div className="nav-center">
@@ -13,80 +36,36 @@ function Registration() {
 
       <div className="container">
         <img src={arena} alt="arena" className="arena-img" />
-        <div class="form">
-          <div class="sign-in" id="sign-in-info">
-            <h1>Registration</h1>
-            <form id="sign-in-form">
-              <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
-              <p class="forgot-password">Forgot your password?</p>
-              <button class="control-button in">Sign In</button>
-            </form>
-          </div>
-          <div className="sign-up" id="sign-up-info">
-            <h1>Registration</h1>
+
+        <div className="form-container">
+          <h1 className="reg-heading">Registration</h1>
+          <form onSubmit={handleSubmit}>
             <button className="search-icon">
               <Search />
             </button>
-            <form action="#" class="custom-form">
-              <div class="form-group" ng-class="{'not-empty': userName.length}">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="MSPIN"
-                  id="MSPIN"
-                  ng-model="MSPIN"
-                  autoFocus
-                />
 
-                <label for="MSPIN" class="animated-label">
-                  MSPIN
-                </label>
-              </div>
-
-              <div class="form-group" ng-class="{'not-empty': passWord.length}">
+            {response.map((resp) => (
+              <div class="form" key={resp.id}>
                 <input
-                  type="text"
-                  class="form-control"
-                  name="Name"
-                  id="Name"
-                  ng-model="Name"
+                  type={resp.type}
+                  class="form__input"
+                  onChange={(e) => {
+                    handleChange(e, resp.fieldName);
+                  }}
+                  value={state[resp.fieldName]}
+                  placeholder=" "
                 />
-                <label for="Name" class="animated-label">
-                  Name
-                </label>
+                <label class="form__label">{resp.fieldName}</label>
               </div>
-              <div class="form-group" ng-class="{'not-empty': userName.length}">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="Dealership"
-                  id="Dealership"
-                  ng-model="Dealership"
-                />
-                <label for="Dealership" class="animated-label">
-                  Dealership
-                </label>
-              </div>
-              <div class="form-group" ng-class="{'not-empty': userName.length}">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="Registration Number"
-                  id="Registration Number"
-                  ng-model="Registration Number"
-                />
-                <label for="Registration Number" class="animated-label">
-                  Registration Number
-                </label>
-              </div>
-              <div class="submit">
-                <Link to="/login">
-                  <button className="control-button up third icon-conatiner">Register</button>
-                </Link>
-              </div>
-            </form>
-          </div>
+            ))}
+            <div class="submit">
+              <Link to="/login">
+                <button className="control-button up third icon-conatiner">
+                  Register
+                </button>
+              </Link>
+            </div>
+          </form>
         </div>
       </div>
     </div>

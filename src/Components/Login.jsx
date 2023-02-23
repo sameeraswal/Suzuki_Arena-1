@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import Search from "./search";
 
 const Login = () => {
   const arena = require("./maruti-suzuki-arena.webp");
@@ -11,52 +12,41 @@ const Login = () => {
 
       <div className="container">
         <img src={arena} alt="" className="arena-img" />
-        <div class="form">
-          <div class="sign-in" id="sign-in-info">
-            <h1>Sign In</h1>
 
-            <p class="small">or use your email account:</p>
-            <form id="sign-in-form">
-              <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
-              <p class="forgot-password">Forgot your password?</p>
-              <button class="control-button in">Sign In</button>
-            </form>
+        <div className="form-container">
+          <h1 className="reg-heading">Login</h1>
+
+          <div class="form">
+            <input
+              type="text"
+              id="MSPIN"
+              class="form__input"
+              autocomplete="off"
+              placeholder=" "
+            />
+            <label for="MSPIN" class="form__label">
+              MSPIN
+            </label>
           </div>
-          <div class="sign-up" id="sign-up-info">
-            <h1>Login</h1>
-            <form action="#" class="custom-form">
-              <div class="form-group" ng-class="{'not-empty': userName.length}">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="MSPIN"
-                  id="MSPIN"
-                  ng-model="MSPIN"
-                  autoFocus
-                />
-                <label for="MSPIN" class="animated-label">
-                  MSPIN
-                </label>
-              </div>
-              <div class="form-group" ng-class="{'not-empty': userName.length}">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="RegistrationNumber"
-                  id="RegistrationNumber"
-                  ng-model="RegistrationNumber"
-                />
-                <label for="RegistrationNumber" class="animated-label">
-                  Registration Number
-                </label>
-              </div>
-              <Link to="/dashboard">
-                {" "}
-                <button class="control-button up third icon-conatiner">Join Now</button>
-              </Link>
-            </form>
+
+          <div class="form">
+            <input
+              type="text"
+              id="name"
+              class="form__input"
+              autocomplete="off"
+              placeholder=" "
+            />
+            <label for="name" class="form__label">
+              Registration Number
+            </label>
           </div>
+
+          <Link to="/dashboard">
+            <button class="control-button up third icon-conatiner">
+              Join Now
+            </button>
+          </Link>
         </div>
       </div>
     </>
