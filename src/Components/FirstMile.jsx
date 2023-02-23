@@ -37,12 +37,8 @@ const FirstMile = () => {
         >
           <h2>The First Mile</h2>
         </motion.button>
-        {/* <motion.button>
-       
-          <h1 className="first-mile">The First Mile</h1>
-
-      </motion.button> */}
       </div>
+      
 
       <AnimatePresence
         // Disable any initial animations on children that

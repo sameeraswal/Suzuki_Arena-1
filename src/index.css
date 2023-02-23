@@ -100,14 +100,14 @@
   width: 95%;
   display: flex;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--arena-color);
   padding: 10px;
   font-size: 35px;
   font-weight: bold;
   margin: auto;
   margin-top: 20px;
   border-radius: 8px;
-  color: var(--arena-color);
+  color:#fff;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
@@ -139,7 +139,6 @@
     display: flex;
     justify-content: ;
 } */
-
 
 .guide-close-modal {
   position: absolute;
@@ -355,14 +354,18 @@
   display: block;
   position: relative;
   box-sizing: content-box;
-  width: calc(var(--wheel-size) + 2 * var(--wheel-border-size));
-  height: calc(var(--wheel-size) + 2 * var(--wheel-border-size));
-  padding: 3px;
+  width: 60%;
+  height: 55vh;
+  padding: 40px;
   margin: auto;
+  border-radius: 25px;
   background-color: var(--neutral-color);
-  /* border: solid var(--wheel-color) 3px; */
-  border-radius: 50%;
   user-select: none;
+  /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    /* box-shadow: #F8EDE3 5px 5px, #DFD3C3 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, #D0B8A8 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px; */
+    /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
 }
 
 .wheel-container::before,
@@ -473,11 +476,11 @@
 }
 
 .wheel-stand {
-  margin-top: 97px;
-  margin-top: 26px;
-  margin-left: -4px;
-  height: 99%;
-  width: 99%;
+  /* margin-top: 97px; */
+  /* margin-top: -300px; */
+  margin-left: 273px;
+  height: 40%;
+  width: 40%;
 }
 
 /* cards flexbox */
@@ -667,7 +670,7 @@
 }
 .search-icon {
   position: absolute;
-  margin-top: 12px;
+  margin-top: 2px;
   right: 76px;
   border: none;
   background-color: transparent;
@@ -773,11 +776,13 @@ input:focus {
 /* wheel marker */
 .marker {
   transform: rotate(90deg);
-  margin-top: -361px;
-  margin-left: 345px;
+    margin-top: -255px;
+    margin-left: 542px;
+    /* height: 50px; */
+    width: 202px;
 }
 .wheel-container {
-  margin-top: 100px;
+  margin-top: 44px;
 }
 
 .timer-div {
@@ -785,12 +790,15 @@ input:focus {
   width: 120px;
   /* background-color: #0e5c91; */
   border: 1px solid gray;
-  border-radius: 4px;
+  border-radius: 12px;
   padding-left: 10px;
   padding-top: 5px;
   display: flex;
   float: right;
-  margin-right: 50px;
+  margin-right: 36px;
+  margin-top: 37px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .clock-img {
   height: 25px;
@@ -832,6 +840,7 @@ input:focus {
   display: flex;
   justify-content: center;
   padding-top: 37px;
+  margin-left: 135px;
 }
 
 ul li {
@@ -889,7 +898,7 @@ ul {
   border-radius: 15px;
   margin: auto;
   margin-left: 46%;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 /* Grow effects */

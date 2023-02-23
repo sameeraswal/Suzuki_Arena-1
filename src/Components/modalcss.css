@@ -1,5 +1,4 @@
 @import-normalize;
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap);
 
 :root {
   --dark: #101315;
@@ -23,14 +22,14 @@ h1 {
   color: #ff9d00;
   font-size: 175%;
   font-weight: 400;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h2 {
   font-weight: 500;
   font-size: 150%;
   letter-spacing: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h3 {
@@ -39,7 +38,7 @@ h3 {
   font-weight: 700;
   font-size: 2rem;
   letter-spacing: 1px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 2rem 0 1.5rem 0;
   margin: 0;
   text-transform: capitalize;
@@ -52,7 +51,7 @@ h5 {
   font-size: 130%;
   text-align: justify;
   letter-spacing: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 0;
   line-height: 125%;
   margin: 0;
@@ -84,7 +83,7 @@ button {
   font-size: 1.25rem;
   letter-spacing: 1.25px;
   cursor: default;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .backdrop {
@@ -176,7 +175,7 @@ input {
   color: #ff9d00;
   font-size: 1.25rem;
   font-weight: 400;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 ::placeholder {
@@ -184,7 +183,7 @@ input {
 }
 
 
-ul,
+/* ul,
 li {
   padding: 0;
   margin: 0;
@@ -199,7 +198,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
+} */
 
 .bottom {
   justify-content: flex-end;
@@ -227,7 +226,7 @@ li {
   font-size: 100%;
   font-weight: 600;
   letter-spacing: 0.25px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .add-button {

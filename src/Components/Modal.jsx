@@ -50,12 +50,13 @@ const Modal = ({ handleClose, text, type }) => {
 
 const ModalText = ({ text }) => (
   <div className="modal-text">
-    <h3>{text}</h3>
+    <h3>The First Mile- Guidelines</h3>
     <h5>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laboriosam
-      labore, totam expedita voluptates tempore asperiores sequi, alias cum
-      veritatis, minima dolor iste similique eos id. Porro, culpa? Officiis,
-      placeat?
+    ⚫ First round will be based on images or videos in which 5 questions would display as per randomizer. The duration of this round would be 1 minute per question
+    </h5>
+    <br />
+    <h5>
+    ⚫ Each question carries 10 marks
     </h5>
   </div>
 );
