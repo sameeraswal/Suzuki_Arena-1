@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Dashboard from "./Components/Dashboard";
 import "./index.css";
 import FirstMile from "./Components/FirstMile";
-import Guildeline from "./Components/Guideline";
 import Randomizer from "./Components/Randomizer";
 import Dice from "./Components/Dice";
 import Wheel from "./Components/Wheel";
@@ -47,7 +46,6 @@ const App = () => {
           <Route path="/wheel" element={<Wheel items={places} />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/firstmile" element={<FirstMile />}></Route>
-          <Route path="/guideline" element={<Guildeline />}></Route>
           <Route path="/randomizer" element={<Randomizer />}></Route>
           <Route path="/dice" element={<Dice />}></Route>
           <Route path="/leaderboard" element={<Leaderboard />}></Route>

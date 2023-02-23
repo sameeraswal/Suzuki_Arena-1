@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "fieldName": "MSPIN",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": 2,
+    "fieldName": "Registration Number",
+    "type": "text",
+    "value": ""
+  }
+]
