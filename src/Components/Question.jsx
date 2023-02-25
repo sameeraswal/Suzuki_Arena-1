@@ -4,7 +4,7 @@ import Timer from "./Timer";
 import { data } from "./data";
 import Blankcomp from "./Blankcomp";
 import ImageQuestion from "./ImageQuestion";
-import wheel from './wheel-pointer.png'
+import wheel from "./wheel-pointer.png";
 
 const Question = () => {
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -34,7 +34,9 @@ const Question = () => {
         {video && (
           <div className="question-video">
             {/* {console.log(v.video)} */}
-            <iframe width="520" height="225" src={video}>.</iframe>
+            <iframe width="520" height="225" src={video}>
+              .
+            </iframe>
           </div>
         )}
 
@@ -63,7 +65,7 @@ const Question = () => {
                       className="selected-answer icon-conatiner hvr-grow option-img-div"
                     >
                       {item.name}
-                     <img src={item.src} alt="wheel" height={150} width={150} />
+                      <img src={item.src} alt="car" height={150} width={150} />
                     </li>
                   )}
                 </>
