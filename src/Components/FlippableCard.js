@@ -6,8 +6,7 @@ import useDidMountEffect from "./Custumhook";
 import { fal } from "./Afterflip";
 function FlippableCard({ title, key }) {
   const [showFront, setShowFront] = useState(true);
-  const [pappu, setPappu] = useState(true);
-
+  
   // console.log("showFront");
   const [color, setColor] = useState("#110781");
 
@@ -34,7 +33,7 @@ function FlippableCard({ title, key }) {
           title={title}
           value={key}
           onClick={() => {
-            setShowFront((v) => !v);
+            // setShowFront((v) => !v);
             setColor("#A8A8A8");
             setShowFront(false);
           }}

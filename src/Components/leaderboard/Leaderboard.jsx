@@ -26,7 +26,7 @@ const Leaderboard = () => {
                 <tr>
                   <td>1</td>
                   <td>
-                    <p id="winner">A</p>
+                    <p id="winner">Name-1</p>
                   </td>
                   <td>239</td>
                   <td>12.54</td>
@@ -35,7 +35,7 @@ const Leaderboard = () => {
                 <tr>
                   <td>2</td>
                   <td>
-                    <p id="runner-up">B</p>
+                    <p id="runner-up">Name-2</p>
                   </td>
                   <td>209</td>
                   <td>10.2</td>
@@ -44,7 +44,7 @@ const Leaderboard = () => {
                 <tr>
                   <td>3</td>
                   <td>
-                    <p id="second-runner-up">C</p>
+                    <p id="second-runner-up">Name-3</p>
                   </td>
                   <td>154</td>
                   <td>8.4</td>

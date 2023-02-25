@@ -1,52 +1,72 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
-import {data}  from "./data";
+import { data } from "./data";
+import Blankcomp from "./Blankcomp";
+import ImageQuestion from "./ImageQuestion";
+import wheel from './wheel-pointer.png'
 
 const Question = () => {
   const [activeQuestion, setActiveQuestion] = useState(0);
   const { questions } = data;
-
-  const { question, choices, video } = questions[activeQuestion];
+  //id variable
+  const { question, choices, video, id } = questions[activeQuestion];
+  const { name, cID, src } = choices;
 
   const [selectop, setSelectOp] = useState("#fff");
   const onClickNext = () => {
-    setActiveQuestion((prev) => prev + 1);
+    //HTTP call
+    setActiveQuestion((id) => id + 1);
   };
 
   const correctHandler = () => {
-    setSelectOp("#B2FFB2");
+    setSelectOp("#00FF00");
+    //save option id in var
   };
-
-  //  console.log(video)
   return (
     <>
       <Navbar />
-
+      <div className="round-box">Rounds</div>
+      {/* {video && ( */}
       <div className="question-container">
         <Timer />
 
-        
-          
-          <div className="question-video" >
-          {/* {console.log(v.video)} */}
-            <iframe width="320" height="215" src={video}></iframe>
+        {video && (
+          <div className="question-video">
+            {/* {console.log(v.video)} */}
+            <iframe width="520" height="225" src={video}>.</iframe>
           </div>
-      
+        )}
 
         <div className="question-box">
-          <div className="question-div">
-            <h2>{question}</h2>
+          <div className="question-div ">
+            <h2 key={id}>{question}</h2>
           </div>
           <div className="option-div">
             <ul>
               {choices.map((item) => (
-                <li
-                  onClick={correctHandler}
-                  className="selected-answer icon-conatiner hvr-grow"
-                >
-                  {item}
-                </li>
+                <>
+                  {!item.src ? (
+                    <li
+                      //value = cid
+                      //onClick={correctHandler}//function with parameter
+
+                      className="selected-answer icon-conatiner hvr-grow"
+                    >
+                      {item.name}
+                    </li>
+                  ) : (
+                    <li
+                      //value = cid
+                      //onClick={correctHandler}//function with parameter
+
+                      className="selected-answer icon-conatiner hvr-grow"
+                    >
+                      {item.name}
+                     <img src={wheel} alt="" />
+                    </li>
+                  )}
+                </>
               ))}
             </ul>
           </div>

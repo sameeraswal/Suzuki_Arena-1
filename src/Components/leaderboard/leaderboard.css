@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   margin-top: 75px;
+  
 }
 
 .leaderboard {
@@ -20,6 +21,10 @@
   border-radius: 20px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    background-color: #e5e5f7;
+opacity: 0.8;
+background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+background-size: 10px 10px;
 }
 .theme-img {
   width: 20em;
@@ -31,14 +36,14 @@
   /* margin: 1em; */
   color: black;
   /* transform: translateY(-5em); */
-  margin-left: 300px;
+  margin-left: 259px;
   font-size: 40px;
- 
 }
 
-.description h3{
+.description h3 {
   font-weight: bolder;
-  font-size: 40px;
+  font-size: 50px;
+  color: var(--arena-color);
 }
 
 table {
