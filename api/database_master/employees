@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "63fa3389724a0ba8c3c0aef1"
+  },
+  "mspin": "123",
+  "name": "rakesh",
+  "dealaership": "xyz",
+  "registrationNumber": "22"
+},{
+  "_id": {
+    "$oid": "63fa344a724a0ba8c3c0aef2"
+  },
+  "mspin": "124",
+  "name": "gaurav",
+  "dealarship": "abc",
+  "registrationNumber": "23"
+},{
+  "_id": {
+    "$oid": "63fa344a724a0ba8c3c0aef3"
+  },
+  "mspin": "125",
+  "name": "aman sharma",
+  "dealarship": "qwe",
+  "registrationNumber": "24"
+}]
