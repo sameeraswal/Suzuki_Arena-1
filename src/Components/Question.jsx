@@ -60,10 +60,10 @@ const Question = () => {
                       //value = cid
                       //onClick={correctHandler}//function with parameter
 
-                      className="selected-answer icon-conatiner hvr-grow"
+                      className="selected-answer icon-conatiner hvr-grow option-img-div"
                     >
                       {item.name}
-                     <img src={wheel} alt="" />
+                     <img src={item.src} alt="wheel" height={150} width={150} />
                     </li>
                   )}
                 </>

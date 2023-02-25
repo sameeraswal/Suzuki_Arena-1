@@ -941,3 +941,10 @@ ul {
 .hvr-grow:active {
   transform: scale(1.06);
 }
+.option-img-div {
+  width: 370px;
+  height: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+}

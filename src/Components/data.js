@@ -147,7 +147,7 @@ export const data = {
         {
           name: "(D) Maruti Suzuki Dzire",
           cID: 3,
-          src: "https://imgd.aeplcdn.com/1280x720/n/igarsua_1561261.jpg?q=75",
+          src: "https://www.thrustzone.com/wp-content/uploads/2017/04/maruti-suzuki-dzire-2017-new-model-2.jpg",
         },
       ],
     },
