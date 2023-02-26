@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import Backdrop from "../Components/backdrop/Backdrop";
+import Backdrop from "./backdrop/Backdrop";
 import { stateLogger } from "../stateLogger";
 
 const dropIn = {
@@ -24,7 +24,7 @@ const dropIn = {
   },
 };
 
-const Modal = ({ handleClose, text, type }) => {
+const ModalFrammer = ({ handleClose, text, type }) => {
   // Log state
   useEffect(() => {
     stateLogger("Modal", true);
@@ -52,12 +52,12 @@ const ModalText = ({ text }) => (
   <div className="modal-text">
     <h3>The First Mile- Guidelines</h3>
     <h5>
-    ⚫ First round will be based on images or videos in which 5 questions would display as per randomizer. The duration of this round would be 1 minute per question
+      ⚫ First round will be based on images or videos in which 5 questions
+      would display as per randomizer. The duration of this round would be 1
+      minute per question
     </h5>
     <br />
-    <h5>
-    ⚫ Each question carries 10 marks
-    </h5>
+    <h5>⚫ Each question carries 10 marks</h5>
   </div>
 );
 
@@ -73,4 +73,4 @@ const ModalButton = ({ onClick, label }) => (
   </motion.button>
 );
 
-export default Modal;
+export default ModalFrammer;

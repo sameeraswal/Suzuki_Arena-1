@@ -8,7 +8,7 @@ import { useState } from "react";
 // import { framerLogger } from "./stateLogger";
 // import Notification from "./components/Notification";
 // import Input from "./components/Input";
-import Modal from "./Modal";
+import ModalFrammer from "./ModalFrammer";
 // import { add } from "./arr-utils";
 import "./modalcss.css";
 import useModal from "./hooks/useModal";
@@ -38,7 +38,6 @@ const FirstMile = () => {
           <h2>The First Mile</h2>
         </motion.button>
       </div>
-      
 
       <AnimatePresence
         // Disable any initial animations on children that
@@ -51,7 +50,9 @@ const FirstMile = () => {
         // Fires when all exiting nodes have completed animating out
         onExitComplete={() => null}
       >
-        {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+        {modalOpen && (
+          <ModalFrammer modalOpen={modalOpen} handleClose={close} />
+        )}
       </AnimatePresence>
     </div>
   );

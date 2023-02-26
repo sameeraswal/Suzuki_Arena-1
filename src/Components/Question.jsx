@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
 import { data } from "./data";
-import Blankcomp from "./Blankcomp";
-import ImageQuestion from "./ImageQuestion";
-import wheel from "./wheel-pointer.png";
+import { Modal } from "react-responsive-modal";
 
 const Question = () => {
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -16,6 +14,7 @@ const Question = () => {
   const [selectop, setSelectOp] = useState("#fff");
   const onClickNext = () => {
     //HTTP call
+
     setActiveQuestion((id) => id + 1);
   };
 
@@ -23,6 +22,10 @@ const Question = () => {
     setSelectOp("#00FF00");
     //save option id in var
   };
+  const [open, setOpen] = useState(false);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
   return (
     <>
       <Navbar />
@@ -74,12 +77,34 @@ const Question = () => {
           </div>
 
           <div>
-            <button
-              onClick={onClickNext}
-              className="third question-btn icon-conatiner"
-            >
-              Next
-            </button>
+            {id !== 4 ? (
+              <button
+                onClick={onClickNext}
+                className="third question-btn icon-conatiner"
+              >
+                Next
+              </button>
+            ) : (
+              <>
+                <button onClick={onOpenModal}>Open modal</button>
+                <Modal open={open} onClose={onCloseModal} center>
+                  <h2>Simple centered modal</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam pulvinar risus non risus hendrerit venenatis.
+                    Pellentesque sit amet hendrerit risus, sed porttitor quam.
+                  </p>
+                </Modal>
+              </>
+              /* <Link to="/dashboard">
+                <button
+                  onClick={onClickNext}
+                  className="third question-btn icon-conatiner"
+                >
+                  Next
+                </button>
+              </Link> */
+            )}
           </div>
         </div>
       </div>
