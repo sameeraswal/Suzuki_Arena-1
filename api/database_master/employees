@@ -4,22 +4,22 @@
   },
   "mspin": "123",
   "name": "rakesh",
-  "dealaership": "xyz",
-  "registrationNumber": "22"
+  "registrationNumber": "22",
+  "dealership": "xyz"
 },{
   "_id": {
     "$oid": "63fa344a724a0ba8c3c0aef2"
   },
   "mspin": "124",
   "name": "gaurav",
-  "dealarship": "abc",
-  "registrationNumber": "23"
+  "registrationNumber": "23",
+  "dealership": "abc"
 },{
   "_id": {
     "$oid": "63fa344a724a0ba8c3c0aef3"
   },
   "mspin": "125",
   "name": "aman sharma",
-  "dealarship": "qwe",
-  "registrationNumber": "24"
+  "registrationNumber": "24",
+  "dealership": "qwe"
 }]
