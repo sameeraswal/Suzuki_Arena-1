@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "9eaf5c0f-11a7-48fe-9b85-bac96ab3b9e6",
+		"name": "suzukiApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get single round details by round id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4500/api/round/A-1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"round",
+						"A-1"
+					]
+				},
+				"description": "Round details"
+			},
+			"response": []
+		},
+		{
+			"name": "employee log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mspin\" : \"123\",\n    \"regNumber\": \"22\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4500/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Check Log in "
+			},
+			"response": []
+		},
+		{
+			"name": "get all rounds lists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4500/api/roundlists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"roundlists"
+					]
+				},
+				"description": "Round lists"
+			},
+			"response": []
+		},
+		{
+			"name": "get name and dealarship by mspin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4500/api/124",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"124"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
