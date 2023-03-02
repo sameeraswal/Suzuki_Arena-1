@@ -3,6 +3,8 @@ import Navbar from "./Navbar";
 import Timer from "./Timer";
 import { data } from "./data";
 import { Modal } from "react-responsive-modal";
+import { Link, useNavigate } from "react-router-dom";
+import Finishround from "./Finish Round/Finishround";
 
 const Question = () => {
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -26,6 +28,7 @@ const Question = () => {
 
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
+
   return (
     <>
       <Navbar />
@@ -51,7 +54,7 @@ const Question = () => {
             <ul>
               {choices.map((item) => (
                 <>
-                  {!item.src ? (
+                  {
                     <li
                       //value = cid
                       //onClick={correctHandler}//function with parameter
@@ -60,17 +63,7 @@ const Question = () => {
                     >
                       {item.name}
                     </li>
-                  ) : (
-                    <li
-                      //value = cid
-                      //onClick={correctHandler}//function with parameter
-
-                      className="selected-answer icon-conatiner hvr-grow option-img-div"
-                    >
-                      {item.name}
-                      <img src={item.src} alt="car" height={150} width={150} />
-                    </li>
-                  )}
+                  }
                 </>
               ))}
             </ul>
@@ -86,24 +79,15 @@ const Question = () => {
               </button>
             ) : (
               <>
-                <button onClick={onOpenModal}>Open modal</button>
-                <Modal open={open} onClose={onCloseModal} center>
-                  <h2>Simple centered modal</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam pulvinar risus non risus hendrerit venenatis.
-                    Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                  </p>
-                </Modal>
+                <Link to="/finish">
+                  <button
+                    
+                    className="third question-btn icon-conatiner"
+                  >
+                    Next
+                  </button>
+                </Link>
               </>
-              /* <Link to="/dashboard">
-                <button
-                  onClick={onClickNext}
-                  className="third question-btn icon-conatiner"
-                >
-                  Next
-                </button>
-              </Link> */
             )}
           </div>
         </div>

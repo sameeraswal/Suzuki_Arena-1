@@ -1,0 +1,22 @@
+.timer-container{
+    background-color: red;
+    height: 190px;
+    width: 332px;
+    margin: auto;
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.stopwatch-card{
+   font-size: 50px;
+   font-weight: bold;
+}
+
+.start-btn{
+    width: 150px;
+    border-radius: 15px;
+}
+

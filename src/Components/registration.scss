@@ -26,11 +26,10 @@ $radius: 0.5rem;
 }
 .reg-heading {
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 32px;
   color: var(--arena-color);
   font-weight: bold;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+ 
 }
 .form {
   position: relative;
@@ -91,4 +90,14 @@ reduce the size of the label and move upwards
   font-size: 0.8rem;
   left: 0.8rem;
   z-index: 2;
+}
+
+.login-admin-img{
+  margin: auto;
+  margin-left: 124px;
+}
+
+.reg-admin-img{
+  margin: auto;
+  margin-left: 130px;
 }

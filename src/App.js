@@ -14,6 +14,11 @@ import Login from "./Components/Login";
 import Afterflip from "./Components/Afterflip";
 import Leaderboard from "./Components/leaderboard/Leaderboard";
 import Question from "./Components/Question";
+import Finishround from "./Components/Finish Round/Finishround";
+import Chasethemaze from "./Components/Chasethemaze";
+import Random from "./Components/Random Number/Randomnumber";
+import Timermin from "./Components/Timersection/Timermin";
+import Timersection from "./Components/Timersection/Timersection";
 
 const App = () => {
   const data = [
@@ -84,7 +89,11 @@ const App = () => {
 
           <Route path="/flipcard" element=<Cards />></Route>
           <Route path="/question" element=<Question />></Route>
-
+          <Route path="/finish" element=<Finishround/>></Route>
+          <Route path="/chasethemaze" element={<Chasethemaze />}></Route>
+          <Route path="/randomnum" element={<Random />}></Route>
+          <Route path="/timersection" element={<Timersection />}></Route>
+          
         </Routes>
       </div>
     </Router>

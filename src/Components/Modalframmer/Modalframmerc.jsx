@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import Backdrop from "./backdrop/Backdrop";
-import { stateLogger } from "../stateLogger";
+import Backdrop from "../backdrop/Backdrop";
+import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
 
 const dropIn = {
@@ -25,7 +25,7 @@ const dropIn = {
   },
 };
 
-const ModalFrammer = ({ handleClose, text, type }) => {
+const ModalFrammerc = ({ handleClose, text, type }) => {
   // Log state
   useEffect(() => {
     stateLogger("Modal", true);
@@ -42,7 +42,7 @@ const ModalFrammer = ({ handleClose, text, type }) => {
         animate="visible"
         exit="exit"
       >
-        <ModalText text={text} />
+        <ModalText1 text={text} />
         <ModalButton onClick={handleClose} label="Close" />
       </motion.div>
     </Backdrop>
@@ -76,7 +76,7 @@ const ModalText1 = () => (
 );
 
 const ModalButton = ({ onClick, label }) => (
-  <Link to='/question'> <motion.button
+  <Link to='/'> <motion.button
     className="modal-button cls-btn"
     type="button"
     whileHover={{ scale: 1.1 }}
@@ -89,4 +89,4 @@ const ModalButton = ({ onClick, label }) => (
 
 );
 
-export default ModalFrammer;
+export default ModalFrammerc;

@@ -18,7 +18,8 @@ const Dashboard = () => {
             </Link>
           </div>
           <div className="flexbox-item flexbox-item-1 icon-conatiner">
-            <button className="btn">1B</button>
+            <button className="btn">1-B</button>
+            
             {/* {isLocked && (<img */}
             <img
               src={lock}
