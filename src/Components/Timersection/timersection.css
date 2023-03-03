@@ -1,7 +1,7 @@
 :root {
   --gradient: linear-gradient(10deg, #e8d5c4, #b4e4ff);
   --gradient2: linear-gradient(15deg, #04ea00, #00d17d);
-  --gradient3: linear-gradient(15deg, #b648ff, #ef5dff);
+  --gradient3: linear-gradient(15deg, #cca9e3, #c06ec9);
 }
 .timer-container {
   /* background-color: red ; */

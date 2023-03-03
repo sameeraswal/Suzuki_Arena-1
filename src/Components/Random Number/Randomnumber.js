@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./randomnum.css";
 import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
+import randomnumimg from '../randomnum.avif'
 
 export default function Random() {
   // const [minVal, setMinVal] = useState(0);
@@ -20,7 +21,10 @@ export default function Random() {
     <>
       <Navbar />
       <div className="hero">
+      <img src={randomnumimg} alt="" height={400} width={400} style={{marginLeft:"30px"}}
+        />
         <div className="container">
+        
           <div className="randomNum">
             <p>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

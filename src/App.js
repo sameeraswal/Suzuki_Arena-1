@@ -24,6 +24,13 @@ import Puzzlechoice from "./Components/Puzzlepage/Puzzlechoice";
 import Finishround1B from "./Components/Finish Round/Finishround1B";
 import Eyeforaneye from "./Components/eyeforaneye";
 import Bespokesalespitch from "./Components/Bespokesalespitch";
+import Leaderboardth from "./Components/leaderboard3/leaderboardth";
+import Puzzlequestion from "./Components/Puzzle4/Puzzlequestion";
+import Enterscore from "./Components/Enterscore";
+import Askexpress from "./Components/Askexpress";
+import Listthetwist from "./Components/Listthetwist";
+import Judgesround from "./Components/Judgesround";
+import Solutionsonly from "./Components/Solutiononly";
 
 const App = () => {
   const data = [
@@ -115,9 +122,18 @@ const App = () => {
           <Route path="/puzzle" element={<Puzzle />}></Route>
           <Route path="/puzzlechoice" element={<Puzzlechoice />}></Route>
           <Route path="/eyeforaneye" element={<Eyeforaneye />}></Route>
-          <Route path="/bespokesalespitch" element={<Bespokesalespitch />}></Route>
+          <Route
+            path="/bespokesalespitch"
+            element={<Bespokesalespitch />}
+          ></Route>
+          <Route path="/puzzlequestion" element={<Puzzlequestion />}></Route>
+          <Route path="/enterscore" element=<Enterscore />></Route>
+          <Route path="/askexpress" element=<Askexpress />></Route>
+          <Route path="/listthetwist" element=<Listthetwist />></Route>
+          <Route path="/judgesround" element=<Judgesround />></Route>
+          <Route path="/solutionsonly" element=<Solutionsonly />></Route>
 
-          
+          <Route path="/leaderboardth" element={<Leaderboardth />}></Route>
         </Routes>
       </div>
     </Router>

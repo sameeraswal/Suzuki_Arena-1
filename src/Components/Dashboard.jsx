@@ -57,37 +57,43 @@ const Dashboard = () => {
             </Link>
           </div>
           <div className="flexbox-item flexbox-item-1 icon-conatiner">
-            <button className="btn">4</button>
-            <img
-              src={lock}
-              alt="lock"
-              height={20}
-              width={20}
-              className="lock-div"
-            />
+            <Link to="/solutionsonly">
+              <button className="btn">4</button>
+              <img
+                src={lock}
+                alt="lock"
+                height={20}
+                width={20}
+                className="lock-div"
+              />
+            </Link>
           </div>
           <div className="flexbox-item flexbox-item-1 icon-conatiner">
-            <button className="btn">5</button>
-            <img
-              src={lock}
-              alt="lock"
-              height={20}
-              width={20}
-              className="lock-div"
-            />
+            <Link to="/askexpress">
+              <button className="btn">5</button>
+              <img
+                src={lock}
+                alt="lock"
+                height={20}
+                width={20}
+                className="lock-div"
+              />
+            </Link>
           </div>
           <div className="flexbox-item flexbox-item-1 icon-conatiner">
-            <button className="btn">6</button>
-            <img
-              src={lock}
-              alt="lock"
-              height={20}
-              width={20}
-              className="lock-div"
-            />
+            <Link to="/listthetwist">
+              <button className="btn">6</button>
+              <img
+                src={lock}
+                alt="lock"
+                height={20}
+                width={20}
+                className="lock-div"
+              />
+            </Link>
           </div>
           <div className="flexbox-item flexbox-item-1 icon-conatiner">
-            <Link to="/flipcard">
+            <Link to="/judgesround">
               <button className="btn">7</button>
               <img
                 src={lock}

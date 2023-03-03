@@ -3,19 +3,12 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-// import { AnimatePresence } from "framer-motion";
-// import useModal from "./hooks/useModal";
-// import { framerLogger } from "./stateLogger";
-// import Notification from "./components/Notification";
-// import Input from "./components/Input";
-import ModalFrammer from "./ModalFrammer";
-// import { add } from "./arr-utils";
-import "./modalcss.css";
-import useModal from "./hooks/useModal";
-import { framerLogger } from "../stateLogger";
-import modalImg from "./thefirstmile.jpeg";
 
-const FirstMile = () => {
+import "./modalcss.css";
+
+import ModalFrammere from "./Modalframmer/Modalframmere";
+import Modalframmerj from "./Modalframmer/Modalframmerj";
+const Judgesround = () => {
   // Modal state
   //
   const [modalOpen, setModalOpen] = useState(false);
@@ -31,22 +24,13 @@ const FirstMile = () => {
     <div>
       <Navbar />
       <div className="">
-        <div></div>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="save-button modal-container"
           onClick={() => (modalOpen ? close() : open())}
         >
-          <img
-            src={modalImg}
-            alt=""
-            height={550}
-            width={1090}
-            style={{ marginTop: "10px", position: "absolute", marginLeft:"-10px", borderRadius:"16px"}}
-          />
-
-          <h2>The First Mile</h2>
+          <h2>Judges Round</h2>
         </motion.button>
       </div>
 
@@ -62,11 +46,11 @@ const FirstMile = () => {
         onExitComplete={() => null}
       >
         {modalOpen && (
-          <ModalFrammer modalOpen={modalOpen} handleClose={close} />
+          <Modalframmerj modalOpen={modalOpen} handleClose={close} />
         )}
       </AnimatePresence>
     </div>
   );
 };
 
-export default FirstMile;
+export default Judgesround;

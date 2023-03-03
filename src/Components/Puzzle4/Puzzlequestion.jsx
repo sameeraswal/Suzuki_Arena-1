@@ -1,10 +1,10 @@
 import React from "react";
 import wordpattern from "../wordpattern.jpg";
 import Navbar from "../Navbar";
-import "./puzzlepage.css";
+import "../Puzzlepage/Puzzlechoice";
 import { useState } from "react";
 
-const Puzzlechoice = () => {
+const Puzzlequestion = () => {
   const timeOutFun = () => {
     setTimeout(() => window.open("/finish1b", "_self"), 3000);
   };
@@ -64,19 +64,19 @@ const Puzzlechoice = () => {
         <div className="round-box-dashboard">Puzzle</div>
         <div className="puzzle-box">
           <div>
-            <img
+            {/* <img
               src={wordpattern}
               alt="pattern"
               height={400}
               width={400}
               className="puzzle-img"
               //   style={{ marginLeft: "37%", marginTop: "30px" }}
-            />
+            /> */}
           </div>
 
-          <div className="wordslct">
+          <div className="wordslct justify">
             <div className="wordyes">
-              <span>Word 1</span>
+              <span>Given a string, reverse each word in the sentence</span>
               <button
                 onClick={handleClick1}
                 style={{ backgroundColor: active1 ? "#00ff00" : "#F0F0F0" }}
@@ -93,7 +93,7 @@ const Puzzlechoice = () => {
               </button>
             </div>
             <div className="wordyes">
-              <span>Word 2</span>
+              <span>Given a string, reverse each word in the sentence</span>
               <button
                 className="yes-btn icon-conatiner"
                 onClick={handleClick3}
@@ -110,7 +110,7 @@ const Puzzlechoice = () => {
               </button>
             </div>
             <div className="wordyes">
-              <span>Word 3</span>
+              <span>Given a string, reverse each word in the sentence</span>
               <button
                 className="yes-btn icon-conatiner"
                 onClick={handleClick5}
@@ -127,7 +127,7 @@ const Puzzlechoice = () => {
               </button>
             </div>
             <div className="wordyes">
-              <span>Word 4</span>
+              <span>Given a string, reverse each word in the sentence</span>
               <button
                 className="yes-btn icon-conatiner"
                 onClick={handleClick7}
@@ -144,7 +144,7 @@ const Puzzlechoice = () => {
               </button>
             </div>
             <div className="wordyes">
-              <span>Word 5</span>
+              <span>Given a string, reverse each word in the sentence</span>
               <button
                 className="yes-btn icon-conatiner"
                 onClick={handleClick9}
@@ -161,7 +161,7 @@ const Puzzlechoice = () => {
               </button>
             </div>
             <div className="wordyes">
-              <span>Word 6</span>
+              <span>Given a string, reverse each word in the sentence</span>
 
               <button
                 className="yes-btn icon-conatiner"
@@ -176,7 +176,7 @@ const Puzzlechoice = () => {
               <button
                 className="yes-btn icon-conatiner"
                 onClick={() => {
-                  handleClick1();
+                  handleClick12();
                   timeOutFun();
                 }}
                 style={{ backgroundColor: active12 ? "red" : "#F0F0F0" }}
@@ -191,4 +191,4 @@ const Puzzlechoice = () => {
   );
 };
 
-export default Puzzlechoice;
+export default Puzzlequestion;

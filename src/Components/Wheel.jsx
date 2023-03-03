@@ -47,27 +47,26 @@ export default class Wheel extends React.Component {
         {/* <div className="round-box">Wheel</div> */}
         <div className="wheel-container" onClick={this.timeOutFun}>
           <div className="wheel-background"></div>
-            <img src={marker} alt="marker" className="wheel-marker" />
-            <div className="body-img">
-              <img src={bodyImg} alt="img" height={630} width={520} />
-            </div>
+          <img src={marker} alt="marker" className="wheel-marker" />
+          <div className="body-img">
+            <img src={bodyImg} alt="img" height={630} width={520} />
+          </div>
 
-            <div
-              className={`wheel ${spinning}`}
-              style={wheelVars}
-              onClick={this.selectItem}
-            >
-              {items.map((item, index) => (
-                <div
-                  className="wheel-item"
-                  key={index}
-                  style={{ "--item-nb": index }}
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-          
+          <div
+            className={`wheel ${spinning}`}
+            style={ wheelVars}
+            onClick={this.selectItem}
+          >
+            {items.map((item, index) => (
+              <div
+                className="wheel-item"
+                key={index}
+                style={{ "--item-nb": index }}
+              >
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       </>
     );

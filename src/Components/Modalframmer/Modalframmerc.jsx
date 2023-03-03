@@ -43,6 +43,7 @@ const ModalFrammerc = ({ handleClose, text, type }) => {
         exit="exit"
       >
         <ModalText1 text={text} />
+        
         <ModalButton onClick={handleClose} label="Close" />
       </motion.div>
     </Backdrop>
@@ -62,6 +63,8 @@ const ModalText = () => (
     <h5>◉&nbsp; Each question carries 10 marks</h5>
   </div>
 );
+
+
 
 const ModalText1 = () => (
   <div className="modal-text">
