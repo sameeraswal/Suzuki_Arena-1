@@ -519,6 +519,14 @@
   margin-top: -100px;
 }
 
+.wheel-marker{
+  height: 70px;
+  width: 50px;
+  margin-left: 48.3%;
+  margin-top: -12px;
+  position: absolute;
+  z-index: 1;
+}
 /* cards flexbox */
 
 .flex-container-child {
@@ -532,6 +540,7 @@
   /* margin: 10px 0 0 10px; */
   flex-grow: 1;
 }
+
 
 /* Form  */
 :root {

@@ -3,7 +3,8 @@ import { Navigate, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
 // import WheelStand from './wheelstand.svg'
-import bodyImg from './3552-[Converted].png'
+import marker from './wheelmarker.png'
+import bodyImg from "./3552-[Converted].png";
 
 export default class Wheel extends React.Component {
   constructor(props) {
@@ -26,9 +27,9 @@ export default class Wheel extends React.Component {
       setTimeout(this.selectItem, 500);
     }
   }
-  timeOutFun () {
-    setTimeout(() => window.open("/dashboard","_self"), 8000);
-  };
+  timeOutFun() {
+    setTimeout(() => window.open("/dashboard", "_self"), 8000);
+  }
   render() {
     const { selectedItem } = this.state;
     const { items } = this.props;
@@ -41,13 +42,14 @@ export default class Wheel extends React.Component {
     // const img1 = require('./wheel-pointer.png')
     return (
       <>
-      <Navbar></Navbar>
-      {/* <div className="round-box">Wheel</div> */}
+        <Navbar></Navbar>
+        {/* <div className="round-box">Wheel</div> */}
         <div className="wheel-container" onClick={this.timeOutFun}>
-        <div className="body-img">
-        <img src={bodyImg} alt="img" height={630} width={520}/>
-        </div>
-        
+        <img src={marker} alt="marker"  className="wheel-marker"/>
+          <div className="body-img">
+            <img src={bodyImg} alt="img" height={630} width={520} />
+          </div>
+
           <div
             className={`wheel ${spinning}`}
             style={wheelVars}
@@ -61,13 +63,9 @@ export default class Wheel extends React.Component {
               >
                 {item}
               </div>
-
             ))}
-            
-         
           </div>
-          
-         </div>
+        </div>
       </>
     );
   }
