@@ -76,7 +76,7 @@ const ModalText1 = () => (
 );
 
 const ModalButton = ({ onClick, label }) => (
-  <Link to='/'> <motion.button
+  <Link to='/randomnum'> <motion.button
     className="modal-button cls-btn"
     type="button"
     whileHover={{ scale: 1.1 }}

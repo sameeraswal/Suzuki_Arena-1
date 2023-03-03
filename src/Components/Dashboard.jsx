@@ -18,8 +18,9 @@ const Dashboard = () => {
             </Link>
           </div>
           <div className="flexbox-item flexbox-item-1 icon-conatiner">
-            <button className="btn">1-B</button>
-            
+            <Link to="/chasethemaze">
+              <button className="btn">1-B</button>
+            </Link>
             {/* {isLocked && (<img */}
             <img
               src={lock}
@@ -29,7 +30,6 @@ const Dashboard = () => {
               className="lock-div"
             />
             {/* )} */}
-            
           </div>
           <div className="flexbox-item flexbox-item-1 icon-conatiner">
             <button className="btn">2</button>

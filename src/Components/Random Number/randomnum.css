@@ -7,14 +7,16 @@
     background: #5555ab;
   }
   .hero .container {
-    width: 100%;
-    max-width: 400px;
+    width: 400px;
+    height: 200px;
+    
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 48px;
     color: #fff;
     background: #04042b;
     border-radius: 5px;
+   margin-top: 223px;
   }
   .hero .container .randomNum {
     background: #181831;

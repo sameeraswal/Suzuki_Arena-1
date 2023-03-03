@@ -20,6 +20,7 @@ import Random from "./Components/Random Number/Randomnumber";
 import Timermin from "./Components/Timersection/Timermin";
 import Timersection from "./Components/Timersection/Timersection";
 import Puzzle from "./Components/Puzzle";
+import Puzzlechoice from "./Components/Puzzlepage/Puzzlechoice";
 
 const App = () => {
   const data = [
@@ -95,6 +96,7 @@ const App = () => {
           <Route path="/randomnum" element={<Random />}></Route>
           <Route path="/timersection" element={<Timersection />}></Route>
           <Route path="/puzzle" element={<Puzzle />}></Route>
+          <Route path="/puzzlechoice" element={<Puzzlechoice />}></Route>
           
         </Routes>
       </div>

@@ -1,15 +1,18 @@
-import React from 'react'
-import Navbar from '../Navbar'
+import React from "react";
+import { Link } from "react-router-dom";
+import Navbar from "../Navbar";
 
 const Finishround = (prop) => {
   return (
     <>
-    <Navbar/>
-    <div className="finish-page container">
-        <h1 className='finish-text'>Finish 1-A</h1>
-    </div>
+      <Navbar />
+      <Link to="/dashboard">
+        <div className="finish-page container">
+          <h1 className="finish-text">Finish 1-A</h1>
+        </div>
+      </Link>
     </>
-  )
-}
+  );
+};
 
-export default Finishround
+export default Finishround;

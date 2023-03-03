@@ -422,8 +422,11 @@
 .wheel {
   display: block;
   position: relative;
+  margin-top: 10px;
   box-sizing: content-box;
   margin: auto;
+  margin-top: 9px;
+  margin-left: 532px;
   width: var(--wheel-size);
   height: var(--wheel-size);
   overflow: hidden;
@@ -433,6 +436,7 @@
   transition: transform var(--reset-duration);
   transform: rotate(0deg);
   cursor: pointer;
+  
 }
 
 .wheel.spinning {
@@ -1007,9 +1011,9 @@ ul {
    height: 70px;
    border-radius: 10px;
    margin-top: 20px;
-   margin-left: 600px;
+   margin-left: 583px;
 }
 .puzzle-img{
-   margin-left: 20px;
+   margin-left: 4px;
    margin-top: 30px;
 }
