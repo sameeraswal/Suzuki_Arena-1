@@ -385,14 +385,14 @@
   /* background-image: url(./Components/BG.png); */
   height: 90vh;
   width: 100%;
-  /* margin-top: -50px; */
+  
   padding-top: 100px;
 }
 
 .body-img {
   position: absolute;
   margin-left: 33%;
-  margin-top: -1%;
+  margin-top: -44%;
 }
 
 .wheel-container::before,
@@ -421,12 +421,12 @@
 
 .wheel {
   display: block;
-  position: relative;
+  position: absolute;
   margin-top: 10px;
   box-sizing: content-box;
   margin: auto;
-  margin-top: 9px;
-  margin-left: 532px;
+  margin-top: -42.3%;
+  margin-left: 528px;
   width: var(--wheel-size);
   height: var(--wheel-size);
   overflow: hidden;
@@ -436,7 +436,6 @@
   transition: transform var(--reset-duration);
   transform: rotate(0deg);
   cursor: pointer;
-  
 }
 
 .wheel.spinning {
@@ -519,13 +518,21 @@
   margin-top: -100px;
 }
 
-.wheel-marker{
+.wheel-marker {
   height: 70px;
   width: 50px;
-  margin-left: 48.3%;
-  margin-top: -12px;
+  margin-left: 48.5%;
+  margin-top: -44%;
   position: absolute;
   z-index: 1;
+}
+.wheel-background{
+  background: url(./Components/wheelbackground.png);
+  height: 120%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -50px;
 }
 /* cards flexbox */
 
@@ -540,7 +547,6 @@
   /* margin: 10px 0 0 10px; */
   flex-grow: 1;
 }
-
 
 /* Form  */
 :root {
@@ -801,6 +807,7 @@
   border-radius: 8px;
   margin-bottom: 3px;
   border: none;
+  margin-left: 13px;
 }
 
 .card-btn-style {
@@ -810,7 +817,7 @@
   border: 1px solid #85cdfd;
   font-size: 16px;
   color: white;
-
+  margin-right: 13px;
   height: 32px;
 }
 input:focus {
@@ -852,7 +859,7 @@ input:focus {
   margin-top: 2px;
 }
 
-.timer-center{
+.timer-center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -860,7 +867,7 @@ input:focus {
   height: 20vh;
   font-size: larger;
 }
-.clock-img-timer-section{
+.clock-img-timer-section {
   width: 100px;
   height: 100px;
 }
@@ -879,7 +886,6 @@ input:focus {
   color: var(--arena-color);
   font-weight: 600;
 }
-
 
 /* question */
 
@@ -1000,29 +1006,32 @@ ul {
   align-items: center;
 }
 
-.finish-text{
+.finish-text {
   /* font-size: large; */
   font-weight: bold;
   color: var(--arena-color);
 }
 
-
 /* puzzle */
 
-.puzzle-position{
+.puzzle-position {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.scoring-btn{
-   width: 300px;
-   height: 70px;
-   border-radius: 10px;
-   margin-top: 20px;
-   margin-left: 583px;
+.scoring-btn {
+  width: 300px;
+  height: 70px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 583px;
 }
-.puzzle-img{
-   margin-left: 4px;
-   margin-top: 30px;
+.puzzle-img {
+  margin-left: 4px;
+  margin-top: 30px;
+}
+
+.btn-width {
+  width: 200px;
 }

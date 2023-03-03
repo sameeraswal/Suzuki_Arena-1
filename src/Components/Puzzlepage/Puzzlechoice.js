@@ -5,6 +5,9 @@ import "./puzzlepage.css";
 import { useState } from "react";
 
 const Puzzlechoice = () => {
+  const timeOutFun = () => {
+    setTimeout(() => window.open("/finish1b", "_self"), 3000);
+  };
   const [active1, setActive1] = useState(false);
   const [active2, setActive2] = useState(false);
   const [active3, setActive3] = useState(false);
@@ -159,16 +162,23 @@ const Puzzlechoice = () => {
             </div>
             <div className="wordyes">
               <span>Word 6</span>
+
               <button
                 className="yes-btn icon-conatiner"
-                onClick={handleClick11}
+                onClick={() => {
+                  handleClick11();
+                  timeOutFun();
+                }}
                 style={{ backgroundColor: active11 ? "#00ff00" : "#F0F0F0" }}
               >
                 Yes
               </button>
               <button
                 className="yes-btn icon-conatiner"
-                onClick={handleClick12}
+                onClick={() => {
+                  handleClick12();
+                  timeOutFun();
+                }}
                 style={{ backgroundColor: active12 ? "red" : "#F0F0F0" }}
               >
                 No

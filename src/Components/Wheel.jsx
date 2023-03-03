@@ -3,8 +3,9 @@ import { Navigate, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
 // import WheelStand from './wheelstand.svg'
-import marker from './wheelmarker.png'
+import marker from "./wheelmarker.png";
 import bodyImg from "./3552-[Converted].png";
+import wheelbackground from "./wheelbackground.png";
 
 export default class Wheel extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ export default class Wheel extends React.Component {
     }
   }
   timeOutFun() {
-    setTimeout(() => window.open("/dashboard", "_self"), 8000);
+    setTimeout(() => window.open("/flipcard", "_self"), 8000);
   }
   render() {
     const { selectedItem } = this.state;
@@ -45,26 +46,28 @@ export default class Wheel extends React.Component {
         <Navbar></Navbar>
         {/* <div className="round-box">Wheel</div> */}
         <div className="wheel-container" onClick={this.timeOutFun}>
-        <img src={marker} alt="marker"  className="wheel-marker"/>
-          <div className="body-img">
-            <img src={bodyImg} alt="img" height={630} width={520} />
-          </div>
+          <div className="wheel-background"></div>
+            <img src={marker} alt="marker" className="wheel-marker" />
+            <div className="body-img">
+              <img src={bodyImg} alt="img" height={630} width={520} />
+            </div>
 
-          <div
-            className={`wheel ${spinning}`}
-            style={wheelVars}
-            onClick={this.selectItem}
-          >
-            {items.map((item, index) => (
-              <div
-                className="wheel-item"
-                key={index}
-                style={{ "--item-nb": index }}
-              >
-                {item}
-              </div>
-            ))}
-          </div>
+            <div
+              className={`wheel ${spinning}`}
+              style={wheelVars}
+              onClick={this.selectItem}
+            >
+              {items.map((item, index) => (
+                <div
+                  className="wheel-item"
+                  key={index}
+                  style={{ "--item-nb": index }}
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          
         </div>
       </>
     );

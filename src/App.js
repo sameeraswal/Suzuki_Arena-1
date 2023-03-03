@@ -21,6 +21,9 @@ import Timermin from "./Components/Timersection/Timermin";
 import Timersection from "./Components/Timersection/Timersection";
 import Puzzle from "./Components/Puzzle";
 import Puzzlechoice from "./Components/Puzzlepage/Puzzlechoice";
+import Finishround1B from "./Components/Finish Round/Finishround1B";
+import Eyeforaneye from "./Components/eyeforaneye";
+import Bespokesalespitch from "./Components/Bespokesalespitch";
 
 const App = () => {
   const data = [
@@ -33,7 +36,20 @@ const App = () => {
     { id: 6, cardName: "Width" },
     { id: 7, cardName: "Wheelbase" },
   ];
-  const places = ["1", "2", "3", "4", "5", "6","7","8","9","10","11","12"];
+  const places = [
+    "S presso Vs Kwid",
+    "WagonR Vs Tiago",
+    "Alto K10 Vs Kwid RXT",
+    "Celerio Vs Tiago",
+    "Swift Vs i20",
+    "Swift Vs Grand i10",
+    "Desire Vs Amaze",
+    "Desire Vs Tiger",
+    "Brezza ZXI+MT Vs XUV",
+    "Ertiga Vs Carens",
+    "Ertiga Vs Triber",
+    "Desire Vs Aura SX+",
+  ];
   const [showFront, setShowFront] = useState(true);
   useEffect(() => {
     const data = window.localStorage.getItem("cardState");
@@ -91,12 +107,16 @@ const App = () => {
 
           <Route path="/flipcard" element=<Cards />></Route>
           <Route path="/question" element=<Question />></Route>
-          <Route path="/finish" element=<Finishround/>></Route>
+          <Route path="/finish" element=<Finishround />></Route>
+          <Route path="/finish1b" element=<Finishround1B />></Route>
           <Route path="/chasethemaze" element={<Chasethemaze />}></Route>
           <Route path="/randomnum" element={<Random />}></Route>
           <Route path="/timersection" element={<Timersection />}></Route>
           <Route path="/puzzle" element={<Puzzle />}></Route>
           <Route path="/puzzlechoice" element={<Puzzlechoice />}></Route>
+          <Route path="/eyeforaneye" element={<Eyeforaneye />}></Route>
+          <Route path="/bespokesalespitch" element={<Bespokesalespitch />}></Route>
+
           
         </Routes>
       </div>

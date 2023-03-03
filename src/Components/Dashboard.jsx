@@ -31,8 +31,11 @@ const Dashboard = () => {
             />
             {/* )} */}
           </div>
+
           <div className="flexbox-item flexbox-item-1 icon-conatiner">
-            <button className="btn">2</button>
+            <Link to="/eyeforaneye">
+              <button className="btn">2</button>
+            </Link>
             <img
               src={lock}
               alt="lock"
@@ -42,7 +45,7 @@ const Dashboard = () => {
             />
           </div>
           <div className="flexbox-item flexbox-item-1 icon-conatiner">
-            <Link to="/dice">
+            <Link to="/bespokesalespitch">
               <button className="btn">3</button>
               <img
                 src={lock}

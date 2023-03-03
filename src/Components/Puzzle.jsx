@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import wordpattern from "./wordpattern.jpg";
 // import openbook from "./open-book.svg";
@@ -21,10 +22,13 @@ const Puzzle = () => {
           />
         </div>
 
-        <button className="third icon-conatiner scoring-btn">
-          <p>Open Scoring Sheet</p>
-          <FontAwesomeIcon icon="fa-solid fa-book-open" />
-        </button>
+        <Link to="/puzzlechoice">
+          {" "}
+          <button className="third icon-conatiner scoring-btn">
+            <p>Open Scoring Sheet</p>
+            <FontAwesomeIcon icon="fa-solid fa-book-open" />
+          </button>
+        </Link>
       </div>
     </div>
   );

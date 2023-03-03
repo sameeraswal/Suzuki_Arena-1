@@ -7,7 +7,8 @@ import { useState } from "react";
 import "./modalcss.css";
 
 import ModalFrammerc from "./Modalframmer/Modalframmerc";
-const Chasethemaze = () => {
+import ModalFrammers from "./Modalframmer/Modalframmers";
+const Bespokesalespitch = () => {
   // Modal state
   //
   const [modalOpen, setModalOpen] = useState(false);
@@ -29,7 +30,7 @@ const Chasethemaze = () => {
           className="save-button modal-container"
           onClick={() => (modalOpen ? close() : open())}
         >
-          <h2>Chase the maze</h2>
+          <h2>Bespoke Sales Pitch</h2>
         </motion.button>
       </div>
 
@@ -45,11 +46,11 @@ const Chasethemaze = () => {
         onExitComplete={() => null}
       >
         {modalOpen && (
-          <ModalFrammerc modalOpen={modalOpen} handleClose={close} />
+          <ModalFrammers modalOpen={modalOpen} handleClose={close} />
         )}
       </AnimatePresence>
     </div>
   );
 };
 
-export default Chasethemaze;
+export default Bespokesalespitch;

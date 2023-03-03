@@ -25,7 +25,7 @@ const dropIn = {
   },
 };
 
-const ModalFrammerc = ({ handleClose, text, type }) => {
+const ModalFrammers = ({ handleClose, text, type }) => {
   // Log state
   useEffect(() => {
     stateLogger("Modal", true);
@@ -42,7 +42,7 @@ const ModalFrammerc = ({ handleClose, text, type }) => {
         animate="visible"
         exit="exit"
       >
-        <ModalText1 text={text} />
+        <ModalText text={text} />
         <ModalButton onClick={handleClose} label="Close" />
       </motion.div>
     </Backdrop>
@@ -51,7 +51,7 @@ const ModalFrammerc = ({ handleClose, text, type }) => {
 
 const ModalText = () => (
   <div className="modal-text">
-    <h3>The First Mile- Guidelines</h3>
+    <h3>Bespoke - Sales Pitch</h3>
     <h5>
       ◉ First round will be based on images or videos in which 5 questions
       &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;would display as per randomizer. The
@@ -65,7 +65,7 @@ const ModalText = () => (
 
 const ModalText1 = () => (
   <div className="modal-text">
-    <h3>Chase The Maze - Guidelines</h3>
+    <h3>Bespoke - Sales Pitch</h3>
     <h5>
       ◉ First round will be based on images or videos in which 5 questions
       &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;would display as per randomizer. The
@@ -78,7 +78,7 @@ const ModalText1 = () => (
 );
 
 const ModalButton = ({ onClick, label }) => (
-  <Link to="/randomnum">
+  <Link to="/dice">
     {" "}
     <motion.button
       className="modal-button cls-btn"
@@ -92,4 +92,4 @@ const ModalButton = ({ onClick, label }) => (
   </Link>
 );
 
-export default ModalFrammerc;
+export default ModalFrammers;
