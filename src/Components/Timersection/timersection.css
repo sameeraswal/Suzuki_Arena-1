@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     
+    
 }
 
 .stopwatch-card{
@@ -18,5 +19,5 @@
 .start-btn{
     width: 150px;
     border-radius: 15px;
+   
 }
-

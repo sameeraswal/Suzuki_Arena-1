@@ -19,6 +19,7 @@ import Chasethemaze from "./Components/Chasethemaze";
 import Random from "./Components/Random Number/Randomnumber";
 import Timermin from "./Components/Timersection/Timermin";
 import Timersection from "./Components/Timersection/Timersection";
+import Puzzle from "./Components/Puzzle";
 
 const App = () => {
   const data = [
@@ -93,6 +94,7 @@ const App = () => {
           <Route path="/chasethemaze" element={<Chasethemaze />}></Route>
           <Route path="/randomnum" element={<Random />}></Route>
           <Route path="/timersection" element={<Timersection />}></Route>
+          <Route path="/puzzle" element={<Puzzle />}></Route>
           
         </Routes>
       </div>

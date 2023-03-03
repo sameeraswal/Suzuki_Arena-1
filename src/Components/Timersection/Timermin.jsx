@@ -17,7 +17,7 @@ const Timermin = () => {
     handlePause,
     handleResume,
     handleReset,
-  } = useTimer(10);
+  } = useTimer(240);
 
   return (
     <div className="timer-app">
