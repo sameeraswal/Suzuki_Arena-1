@@ -348,7 +348,7 @@
   --wheel-slice-spacing: 50px;
   --wheel-border-size: 10px;
   --wheel-color: #fff;
-  --neutral-color: var(--arena-color);
+  --neutral-color: red;
   --PI: 3.6;
   --nb-item: 0;
   --item-nb: 0;
@@ -453,6 +453,7 @@
   position: absolute;
   content: "";
   background-color: var(--neutral-color);
+  
   width: 25px;
   height: 25px;
   z-index: 2;
@@ -473,7 +474,6 @@
   transform-origin: center left;
   transform: translateY(-50%)
     rotate(calc(var(--item-nb) * (360deg / var(--nb-item, 1))));
-
   color: var(--neutral-color);
   text-align: right;
   padding: 0 25px 0 50px;
@@ -493,7 +493,6 @@
   transform: translate(-50%, -50%);
   padding-left: 0px;
   opacity: 0.25;
-
   --slice-max-width: calc(
     var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
   );

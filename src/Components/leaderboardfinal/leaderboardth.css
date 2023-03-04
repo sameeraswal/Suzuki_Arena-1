@@ -1,0 +1,46 @@
+.description {
+  display: inline-block;
+  text-align: center;
+  /* margin: 1em; */
+  color: black;
+  /* transform: translateY(-5em); */
+  margin-left: 22%;
+  margin-top: 30px;
+}
+.bg-img {
+  background: #d6d9f8;
+  height: 89.2vh;
+}
+.first{
+    height: 220px;
+    width: 500px;
+    display: block;
+    margin: auto;
+}
+.second{
+    height: 200px;
+    width: 450px;
+    margin-left: 10%;
+}
+.thirdlast{
+    height: 200px;
+    width: 450px;
+    margin-left: 20%;
+}
+.position-text{
+    color: white;
+    font: 700;
+    position: absolute;
+}
+.align-lead-1{
+    margin-left: 41%;
+    margin-top: -115px;
+}
+.align-lead-2{
+    margin-left: 18%;
+    margin-top: -110px;
+}
+.align-lead-3{
+    margin-left: 67%;
+    margin-top: -110px;
+}

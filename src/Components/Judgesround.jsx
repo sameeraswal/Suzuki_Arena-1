@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-
+import modalImg from '../Components/ModalImages/Judges-Round.png'
 import "./modalcss.css";
 
 import ModalFrammere from "./Modalframmer/Modalframmere";
@@ -30,6 +30,18 @@ const Judgesround = () => {
           className="save-button modal-container"
           onClick={() => (modalOpen ? close() : open())}
         >
+         <img
+            src={modalImg}
+            alt=""
+            height={550}
+            width={1090}
+            style={{
+              marginTop: "10px",
+              position: "absolute",
+              marginLeft: "-10px",
+              borderRadius: "16px",
+            }}
+            />
           <h2>Judges Round</h2>
         </motion.button>
       </div>

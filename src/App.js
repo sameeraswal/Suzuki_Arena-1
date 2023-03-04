@@ -24,7 +24,7 @@ import Puzzlechoice from "./Components/Puzzlepage/Puzzlechoice";
 import Finishround1B from "./Components/Finish Round/Finishround1B";
 import Eyeforaneye from "./Components/eyeforaneye";
 import Bespokesalespitch from "./Components/Bespokesalespitch";
-import Leaderboardth from "./Components/leaderboard3/leaderboardth";
+import Leaderboardth from "./Components/leaderboardfinal/leaderboardth";
 import Puzzlequestion from "./Components/Puzzle4/Puzzlequestion";
 import Enterscore from "./Components/Enterscore";
 import Askexpress from "./Components/Askexpress";
@@ -44,7 +44,6 @@ const App = () => {
     { id: 7, cardName: "Wheelbase" },
   ];
   const places = [
-    "S presso Vs Kwid",
     "WagonR Vs Tiago",
     "Alto K10 Vs Kwid RXT",
     "Celerio Vs Tiago",
@@ -73,7 +72,7 @@ const App = () => {
           <Route exact path="/" element={<Registration />}></Route>
           <Route path="/login" element={<Login />}></Route>
 
-          <Route path="/wheel" element={<Wheel items={places} />}></Route>
+          <Route path="/wheel" element={<Wheel items={places}/>}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/firstmile" element={<FirstMile />}></Route>
           <Route path="/randomizer" element={<Randomizer />}></Route>

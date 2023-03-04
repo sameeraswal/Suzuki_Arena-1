@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-
+import modalImg from '../Components/ModalImages/Eye-for-an-Eye_v2.png'
 import "./modalcss.css";
 
 import ModalFrammere from "./Modalframmer/Modalframmere";
@@ -29,6 +29,13 @@ const Eyeforaneye = () => {
           className="save-button modal-container"
           onClick={() => (modalOpen ? close() : open())}
         >
+        <img
+            src={modalImg}
+            alt=""
+            height={550}
+            width={1090}
+            style={{ marginTop: "10px", position: "absolute", marginLeft:"-10px", borderRadius:"16px"}}
+          />
           <h2>Eye for an eye</h2>
         </motion.button>
       </div>

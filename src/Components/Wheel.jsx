@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
@@ -7,6 +7,18 @@ import marker from "./wheelmarker.png";
 import bodyImg from "./3552-[Converted].png";
 import wheelbackground from "./wheelbackground.png";
 
+// const [activeQuestion, setActiveQuestion] = useState(0);
+// const { questions } = data;
+// //id variable
+// const { question, choices, video, id } = questions[activeQuestion];
+// const { name, cID, src } = choices;
+
+// const [selectop, setSelectOp] = useState("#fff");
+// const onClickNext = () => {
+//   //HTTP call
+
+//   setActiveQuestion((id) => id + 1);
+// };
 export default class Wheel extends React.Component {
   constructor(props) {
     super(props);
@@ -54,16 +66,16 @@ export default class Wheel extends React.Component {
 
           <div
             className={`wheel ${spinning}`}
-            style={ wheelVars}
+            style={wheelVars}
             onClick={this.selectItem}
           >
             {items.map((item, index) => (
               <div
                 className="wheel-item"
                 key={index}
-                style={{ "--item-nb": index }}
+                style={{ "--item-nb": index}}
               >
-                {item}
+                {item.name}
               </div>
             ))}
           </div>

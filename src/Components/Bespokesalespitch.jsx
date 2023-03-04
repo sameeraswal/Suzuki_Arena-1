@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-
+import modalImg from '../Components/ModalImages/Bespoke---Sales-Pitch.png'
 import "./modalcss.css";
 
 import ModalFrammerc from "./Modalframmer/Modalframmerc";
@@ -30,6 +30,13 @@ const Bespokesalespitch = () => {
           className="save-button modal-container"
           onClick={() => (modalOpen ? close() : open())}
         >
+        <img
+            src={modalImg}
+            alt=""
+            height={550}
+            width={1090}
+            style={{ marginTop: "10px", position: "absolute", marginLeft:"-10px", borderRadius:"16px"}}
+          />
           <h2>Bespoke Sales Pitch</h2>
         </motion.button>
       </div>
