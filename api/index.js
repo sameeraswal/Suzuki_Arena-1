@@ -1,6 +1,8 @@
 const dotenv = require("dotenv");
 const express = require("express");
 const app = express();
+var cors = require("cors");
+app.use(cors());
 dotenv.config({ path: "./config.env" });
 const port = process.env.PORT || 4500;
 require("./db/connection");
@@ -11,5 +13,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(require("./router/routes"));
 
 app.listen(port, () => {
-    console.log(`application is listing to port ${port}`);
+  console.log(`application is listing to port ${port}`);
 });

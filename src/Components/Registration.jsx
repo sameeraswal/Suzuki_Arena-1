@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Search from "./search";
 import "./registration.scss";
 import loginImg from './loginicon.png'
+import { Axios } from "axios";
 function Registration() {
   const arena = require("./maruti-suzuki-arena.webp");
 

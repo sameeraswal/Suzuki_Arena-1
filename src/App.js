@@ -72,7 +72,7 @@ const App = () => {
           <Route exact path="/" element={<Registration />}></Route>
           <Route path="/login" element={<Login />}></Route>
 
-          <Route path="/wheel" element={<Wheel items={places}/>}></Route>
+          <Route path="/wheel" element={<Wheel items={places} />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/firstmile" element={<FirstMile />}></Route>
           <Route path="/randomizer" element={<Randomizer />}></Route>

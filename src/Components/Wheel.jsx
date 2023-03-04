@@ -31,6 +31,9 @@ export default class Wheel extends React.Component {
   selectItem() {
     if (this.state.selectedItem === null) {
       const selectedItem = Math.floor(Math.random() * this.props.items.length);
+      {
+        alert(selectedItem, this.props.items[selectedItem]);
+      }
       if (this.props.onSelectItem) {
         this.props.onSelectItem(selectedItem);
       }
@@ -73,9 +76,9 @@ export default class Wheel extends React.Component {
               <div
                 className="wheel-item"
                 key={index}
-                style={{ "--item-nb": index}}
+                style={{ "--item-nb": index }}
               >
-                {item.name}
+                {item}
               </div>
             ))}
           </div>
