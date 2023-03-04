@@ -3,7 +3,7 @@
 :root {
   --dark: #101315;
   --light: #eeeeee;
-  --gradient: linear-gradient(10deg, var(--arena-color), #B4E4FF);
+  --gradient: linear-gradient(10deg, #E8D5C4, #b4e4ff);
   --gradient2: linear-gradient(15deg, #04ea00, #00d17d);
   --gradient3: linear-gradient(15deg, #b648ff, #ef5dff);
   font-size: 1rem;
@@ -47,8 +47,8 @@ h3 {
 h5 {
   text-align: center;
   color: var(--dark);
-  font-weight: 500;
-  font-size: 130%;
+  font-weight: 700;
+  font-size: 135%;
   text-align: justify;
   letter-spacing: 0;
   font-family: "Roboto", sans-serif;
@@ -137,7 +137,7 @@ button {
   padding: 0 3rem;
   min-height: 3rem;
   margin: auto auto 0 auto;
-  background: var(--dark);
+  background: var(--arena-color);
   color: var(--light);
 }
 
@@ -181,7 +181,6 @@ input {
 ::placeholder {
   font-style: italic;
 }
-
 
 /* ul,
 li {
@@ -260,16 +259,16 @@ li {
 }
 
 .modal-container {
-    display: grid;
-    place-items: center;
-    height: 540px;
-    width: 70%;
-    border-radius: 30px;
-    margin: auto;
-    margin-top: 60px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  }
+  display: grid;
+  place-items: center;
+  height: 540px;
+  width: 70%;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 60px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
 
 @media screen and (min-width: 960px) {
   button {
@@ -287,4 +286,8 @@ li {
     color: #ff9d00;
     font-size: 250%;
   }
+}
+
+.cls-btn {
+  margin-top: 40px;
 }

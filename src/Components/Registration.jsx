@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Search from "./search";
 import "./registration.scss";
+import loginImg from './loginicon.png'
 function Registration() {
   const arena = require("./maruti-suzuki-arena.webp");
 
@@ -35,6 +36,8 @@ function Registration() {
         <img src={arena} alt="arena" className="arena-img" />
 
         <div className="form-container">
+          <img src={loginImg} alt="login" height={60} width={60} className="reg-admin-img"
+          />
           <h1 className="reg-heading">Registration</h1>
           <form>
             <button className="search-icon">

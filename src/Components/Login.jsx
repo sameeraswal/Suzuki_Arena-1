@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Search from "./search";
+import loginImg from './loginicon.png'
 
 const Login = () => {
   const arena = require("./maruti-suzuki-arena.webp");
@@ -12,9 +13,11 @@ const Login = () => {
       </div>
 
       <div className="container">
+        
         <img src={arena} alt="" className="arena-img" />
 
         <div className="form-container">
+        <img src={loginImg} alt="login" height={70} width={70} className="login-admin-img"/>
           <h1 className="reg-heading">Login</h1>
           <form>
             <div class="form">

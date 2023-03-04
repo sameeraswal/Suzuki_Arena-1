@@ -8,11 +8,13 @@ import { useState } from "react";
 // import { framerLogger } from "./stateLogger";
 // import Notification from "./components/Notification";
 // import Input from "./components/Input";
-import Modal from "./Modal";
+import ModalFrammer from "./ModalFrammer";
 // import { add } from "./arr-utils";
 import "./modalcss.css";
 import useModal from "./hooks/useModal";
 import { framerLogger } from "../stateLogger";
+import modalImg from "../Components/ModalImages/thefirstmile.jpeg";
+
 const FirstMile = () => {
   // Modal state
   //
@@ -29,16 +31,24 @@ const FirstMile = () => {
     <div>
       <Navbar />
       <div className="">
+        <div></div>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="save-button modal-container"
           onClick={() => (modalOpen ? close() : open())}
         >
+          <img
+            src={modalImg}
+            alt=""
+            height={550}
+            width={1090}
+            style={{ marginTop: "10px", position: "absolute", marginLeft:"-10px", borderRadius:"16px"}}
+          />
+
           <h2>The First Mile</h2>
         </motion.button>
       </div>
-      
 
       <AnimatePresence
         // Disable any initial animations on children that
@@ -51,7 +61,9 @@ const FirstMile = () => {
         // Fires when all exiting nodes have completed animating out
         onExitComplete={() => null}
       >
-        {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+        {modalOpen && (
+          <ModalFrammer modalOpen={modalOpen} handleClose={close} />
+        )}
       </AnimatePresence>
     </div>
   );

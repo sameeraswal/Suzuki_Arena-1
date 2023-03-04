@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
 import { data } from "./data";
-import Blankcomp from "./Blankcomp";
-import ImageQuestion from "./ImageQuestion";
-import wheel from "./wheel-pointer.png";
+import { Modal } from "react-responsive-modal";
+import { Link, useNavigate } from "react-router-dom";
+import Finishround from "./Finish Round/Finishround";
 
 const Question = () => {
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -16,6 +16,7 @@ const Question = () => {
   const [selectop, setSelectOp] = useState("#fff");
   const onClickNext = () => {
     //HTTP call
+
     setActiveQuestion((id) => id + 1);
   };
 
@@ -23,6 +24,11 @@ const Question = () => {
     setSelectOp("#00FF00");
     //save option id in var
   };
+  const [open, setOpen] = useState(false);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
   return (
     <>
       <Navbar />
@@ -48,7 +54,7 @@ const Question = () => {
             <ul>
               {choices.map((item) => (
                 <>
-                  {!item.src ? (
+                  {
                     <li
                       //value = cid
                       //onClick={correctHandler}//function with parameter
@@ -57,29 +63,32 @@ const Question = () => {
                     >
                       {item.name}
                     </li>
-                  ) : (
-                    <li
-                      //value = cid
-                      //onClick={correctHandler}//function with parameter
-
-                      className="selected-answer icon-conatiner hvr-grow option-img-div"
-                    >
-                      {item.name}
-                      <img src={item.src} alt="car" height={150} width={150} />
-                    </li>
-                  )}
+                  }
                 </>
               ))}
             </ul>
           </div>
 
           <div>
-            <button
-              onClick={onClickNext}
-              className="third question-btn icon-conatiner"
-            >
-              Next
-            </button>
+            {id !== 4 ? (
+              <button
+                onClick={onClickNext}
+                className="third question-btn icon-conatiner"
+              >
+                Next
+              </button>
+            ) : (
+              <>
+                <Link to="/finish">
+                  <button
+                    
+                    className="third question-btn icon-conatiner"
+                  >
+                    Next
+                  </button>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>

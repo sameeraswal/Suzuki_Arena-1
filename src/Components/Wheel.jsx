@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
-import WheelStand from './wheelstand.svg'
+// import WheelStand from './wheelstand.svg'
+import marker from "./wheelmarker.png";
+import bodyImg from "./3552-[Converted].png";
+import wheelbackground from "./wheelbackground.png";
 
+// const [activeQuestion, setActiveQuestion] = useState(0);
+// const { questions } = data;
+// //id variable
+// const { question, choices, video, id } = questions[activeQuestion];
+// const { name, cID, src } = choices;
+
+// const [selectop, setSelectOp] = useState("#fff");
+// const onClickNext = () => {
+//   //HTTP call
+
+//   setActiveQuestion((id) => id + 1);
+// };
 export default class Wheel extends React.Component {
   constructor(props) {
     super(props);
@@ -25,9 +40,9 @@ export default class Wheel extends React.Component {
       setTimeout(this.selectItem, 500);
     }
   }
-  timeOutFun () {
-    setTimeout(() => window.open("/dashboard","_self"), 8000);
-  };
+  timeOutFun() {
+    setTimeout(() => window.open("/flipcard", "_self"), 8000);
+  }
   render() {
     const { selectedItem } = this.state;
     const { items } = this.props;
@@ -37,12 +52,18 @@ export default class Wheel extends React.Component {
       "--selected-item": selectedItem,
     };
     const spinning = selectedItem !== null ? "spinning" : "";
-    const img1 = require('./wheel-pointer.png')
+    // const img1 = require('./wheel-pointer.png')
     return (
       <>
-      <Navbar></Navbar>
-      <div className="round-box">Wheel</div>
+        <Navbar></Navbar>
+        {/* <div className="round-box">Wheel</div> */}
         <div className="wheel-container" onClick={this.timeOutFun}>
+          <div className="wheel-background"></div>
+          <img src={marker} alt="marker" className="wheel-marker" />
+          <div className="body-img">
+            <img src={bodyImg} alt="img" height={630} width={520} />
+          </div>
+
           <div
             className={`wheel ${spinning}`}
             style={wheelVars}
@@ -52,19 +73,12 @@ export default class Wheel extends React.Component {
               <div
                 className="wheel-item"
                 key={index}
-                style={{ "--item-nb": index }}
+                style={{ "--item-nb": index}}
               >
-                {item}
+                {item.name}
               </div>
-
             ))}
-            
-
           </div>
-          <div className="marker">
-            <img src={img1} alt="img" height={200} width={200}/>
-            </div>
-            <img src={WheelStand} alt="" className="wheel-stand"/>
         </div>
       </>
     );

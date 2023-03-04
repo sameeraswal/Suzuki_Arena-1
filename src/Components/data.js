@@ -36,7 +36,7 @@ export const data = {
     },
     {
       id: 1,
-      video: "",
+      video: "https://www.youtube.com/embed/Q5ZpKQFcC0U",
       question:
         "Which of the following keywords is used to define a variable in Javascript?",
       choices: [
@@ -66,7 +66,7 @@ export const data = {
     },
     {
       id: 2,
-      video: "",
+      video: "https://www.youtube.com/embed/Q5ZpKQFcC0U",
       question:
         "Which of the following methods can be used to display data in some form using Javascript?",
       choices: [
@@ -96,7 +96,7 @@ export const data = {
     },
     {
       id: 3,
-      video: "",
+      video: "https://www.youtube.com/embed/Q5ZpKQFcC0U",
       question: "How can a datatype be declared to be a constant type?",
       choices: [
         {
@@ -125,7 +125,7 @@ export const data = {
     },
     {
       id: 4,
-      video: "",
+      video: "https://www.youtube.com/embed/Q5ZpKQFcC0U",
       question: "Maruti Suzuki INSURANCE advantage and benefits are?",
       choices: [
         {
