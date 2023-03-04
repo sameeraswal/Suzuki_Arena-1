@@ -6,6 +6,7 @@ import Timer from "./Timer";
 import marker from "./wheelmarker.png";
 import bodyImg from "./3552-[Converted].png";
 import wheelbackground from "./wheelbackground.png";
+import './wheel.scss'
 
 // const [activeQuestion, setActiveQuestion] = useState(0);
 // const { questions } = data;
@@ -49,7 +50,6 @@ export default class Wheel extends React.Component {
   render() {
     const { selectedItem } = this.state;
     const { items } = this.props;
-
     const wheelVars = {
       "--nb-item": items.length,
       "--selected-item": selectedItem,
@@ -76,9 +76,11 @@ export default class Wheel extends React.Component {
               <div
                 className="wheel-item"
                 key={index}
-                style={{ "--item-nb": index }}
+                style={{
+                  "--item-nb": index,
+                }}
               >
-                {item}
+                {item.title}
               </div>
             ))}
           </div>

@@ -6,14 +6,24 @@ import loginImg from "./loginicon.png";
 import axios from "axios";
 
 const Login = () => {
+  const [mspin, setMspin] = useState("");
+  const [regno, setRegno] = useState("");
+  const [message, setMessage] = useState("");
+  const handleChangemspin = (event) => {
+    setMspin(event.target.value);
+  };
+  const handleChangeregno = (event) => {
+    setRegno(event.target.value);
+  };
   const fetchData = () => {
     axios
       .post("http://localhost:4500/api/v1/login", {
-        mspin: "123",
-        regNumber: "22",
+        mspin: mspin,
+        regNumber: regno,
       })
       .then((res) => {
-        console.log(res.data);
+        console.log(res.data.message);
+        setMessage(res.data.message);
       });
     return false;
   };
@@ -39,16 +49,34 @@ const Login = () => {
           <h1 className="reg-heading">Login</h1>
           <form>
             <div class="form">
-              <input type="text" class="form__input" placeholder=" " />
+              <input
+                type="text"
+                class="form__input"
+                placeholder=" "
+                value={mspin}
+                onChange={handleChangemspin}
+              />
               <label class="form__label">MSPIN</label>
             </div>
             <div className="form">
-              <input type="text" class="form__input" placeholder=" " />
+              <input
+                type="text"
+                class="form__input"
+                placeholder=" "
+                value={regno}
+                onChange={handleChangeregno}
+              />
               <label class="form__label">Registration Number</label>
             </div>
             {/* <Link to="/dashboard"> */}
             <input
-              class="control-button up third icon-conatiner"
+              type="text"
+              class="form__input invisible"
+              placeholder=" "
+              value={message}
+            />
+            <input
+              class="control-button up third icon-conatiner btn-bottom"
               onClick={fetchData}
               type="button"
               value="Join Now"
