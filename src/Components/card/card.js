@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { reactLocalStorage } from "reactjs-localstorage";
 
+
 function Card({ onClick, title }) {
   const flipImg = require("../flipcard-img.jpg");
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ function Card({ onClick, title }) {
   return (
     <>
       <div className="card" onClick={onClick}>
-        <div className="card-back">{title}</div>
+        <div className="card-back card-back-border">{title}</div>
 
         <div className="card-front front-icon">
           <button

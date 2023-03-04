@@ -9,7 +9,7 @@ const Remaincard = () => {
   
 
   // useEffect(() => {
-  //   console.log('I am gandu')
+  //   console.log('I am')
   // //  setCount(6)
   //   // window.localStorage.setItem("cardcount", JSON.stringify(count-1));
   //   setCount(count-1)

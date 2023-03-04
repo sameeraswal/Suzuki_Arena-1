@@ -2,69 +2,56 @@ import { React, useEffect, useState } from "react";
 import FlippableCard from "./FlippableCard";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
-import Remaincard from "./Remaincard";
+// import Remaincard from "./Remaincard";
+import bgImg from './leaderboardfinal/05.png'
 
 const Cards = () => {
-  const data = [
-    { id: 0, cardName: "Height" },
-    { id: 1, cardName: "Length" },
-    { id: 2, cardName: "Power" },
-    { id: 3, cardName: "Torque" },
-    { id: 4, cardName: "Bootspace" },
-    { id: 5, cardName: "Mileage" },
-    { id: 6, cardName: "Width" },
-    { id: 7, cardName: "Wheelbase" },
-  ];
+  const [count, setCount] = useState(5);
+  let response = {
+    status: true,
+    data: [
+      { id: 0, cardName: "Height" },
+      { id: 1, cardName: "Length" },
+      { id: 2, cardName: "Power" },
+      { id: 3, cardName: "Torque" },
+      { id: 4, cardName: "Bootspace" },
+      { id: 5, cardName: "Mileage" },
+      { id: 6, cardName: "Width" },
+      { id: 7, cardName: "Wheelbase" },
+      { id: 8, cardName: "Wheelbase" },
+      { id: 9, cardName: "Wheelbase" },
+    ],
+  };
+
+  // useEffect(() => {
+  //    setCount(count-1);
+  // }, [count])
+
+  let cards = response.data;
 
   return (
     <>
       <Navbar></Navbar>
-      <div className="round-box">Flip a Card</div>
+      <img src={bgImg} alt="" className="flip-bg"/>
+      <div className="round-box bg-correct">Flip a Card</div>
       {/* {showBack && ( */}
-      <div className="flex-container">
-        <Remaincard />
+      <div className="flex-container bg-correct">
+      
+        <div className="remain-container bg-correct">
+          <p>Cards</p>
+          <p>Remaining: {count}</p>
+        </div>
 
-        <div className="flex-container-child">
-          <div className="flex-child">
-            <FlippableCard title={data[0].cardName} />
-          </div>
-
-          <div className="flex-child">
-            <FlippableCard title={data[1].cardName} />
-          </div>
-
-          <div className="flex-child">
-            <FlippableCard title={data[2].cardName} />
-          </div>
-
-          <div className="flex-child">
-            <FlippableCard title={data[3].cardName} />
-          </div>
-
-          <div className="flex-child">
-            <FlippableCard title={data[4].cardName} />
-          </div>
-
-          <div className="flex-child">
-            <FlippableCard title={data[5].cardName} />
-          </div>
-
-          <div className="flex-child">
-            <FlippableCard title={data[6].cardName} />
-          </div>
-
-          <div className="flex-child">
-            <FlippableCard title={data[7].cardName} />
-          </div>
-          <div className="flex-child">
-            <FlippableCard title={data[7].cardName} />
-          </div>
-          <div className="flex-child">
-            <FlippableCard title={data[7].cardName} />
-          </div>
+        <div className="flex-container-child bg-correct">
+          {cards.map((item) => (
+            <>
+              <div className="flex-child bg-correct">
+                <FlippableCard title={item.cardName} />
+              </div>
+            </>
+          ))}
         </div>
       </div>
-      {/* )} */}
     </>
   );
 };

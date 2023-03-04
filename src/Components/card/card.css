@@ -52,6 +52,11 @@
   transform: rotateY(180deg);
 }
 
+.card-back-border{
+  outline: 2px dashed white;
+  outline-offset: -10px;
+}
+
 .middle {
   font-size: 0;
   cursor: pointer;

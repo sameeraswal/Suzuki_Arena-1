@@ -113,6 +113,14 @@
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
+.bg-correct{
+  position: relative;
+}
+
+.flip-bg{
+  position: absolute;
+}
+
 .round-box-dashboard {
   width: 100%;
   display: flex;

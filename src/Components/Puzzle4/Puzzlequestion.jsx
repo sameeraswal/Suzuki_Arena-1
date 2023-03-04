@@ -5,6 +5,28 @@ import "../Puzzlepage/Puzzlechoice";
 import { useState } from "react";
 
 const Puzzlequestion = () => {
+  let response = {
+    status: true,
+    data: [
+      {
+        question: "Given a string, reverse each word in the sentence",
+        isActive: false,
+        index: 0
+        
+     },
+     {
+      question: "Question 2 he sentence",
+      isActive: false,
+      index: 1
+   }
+      
+      
+    ],
+  };
+
+  let questions = response.data;
+
+
   const timeOutFun = () => {
     setTimeout(() => window.open("/finish1b", "_self"), 3000);
   };
@@ -56,6 +78,11 @@ const Puzzlequestion = () => {
   const handleClick12 = () => {
     setActive12(!active12);
   };
+ const [value, setValue] = useState(false);
+  
+  const genHandleClick = (val) => {
+   setValue(!val)
+  }
 
   return (
     <>
@@ -78,7 +105,7 @@ const Puzzlequestion = () => {
             <div className="wordyes">
               <span>Given a string, reverse each word in the sentence</span>
               <button
-                onClick={handleClick1}
+                onClick={() => setActive1(!active1)}
                 style={{ backgroundColor: active1 ? "#00ff00" : "#F0F0F0" }}
                 className="yes-btn icon-conatiner"
               >
@@ -92,6 +119,34 @@ const Puzzlequestion = () => {
                 No
               </button>
             </div>
+
+            {/* map */}
+            {questions.map((item) => (
+            <>
+            <div className="wordyes">
+              <span>{item.question}</span>
+              <button
+                onClick={() => {
+                  genHandleClick(item.isActive)
+                }}
+                style={{ backgroundColor: value ? "#00ff00" : "#F0F0F0" }}
+                className="yes-btn icon-conatiner"
+              >
+                Yes
+              </button>
+              <button
+                className="yes-btn icon-conatiner"
+                onClick={!active1 && handleClick2}
+                style={{ backgroundColor: active2 ? "red" : "#F0F0F0" }}
+              >
+                No
+              </button>
+            </div>
+            </>
+          ))}
+
+
+
             <div className="wordyes">
               <span>Given a string, reverse each word in the sentence</span>
               <button
