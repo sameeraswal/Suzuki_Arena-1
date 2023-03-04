@@ -15,10 +15,10 @@ const employeeSchema = new mongoose.Schema({
     },
     registrationNumber: {
         type: String,
-        required: true,
+        required: true
     }
 });
 
-const Employee = mongoose.model("EMPLOYEE", employeeSchema);
+const Employee = mongoose.model("Employee", employeeSchema);
 
 module.exports = Employee;

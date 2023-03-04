@@ -1,6 +1,17 @@
 require("../db/connection");
 const Employee = require("../model/employeeSchema");
+//const jwt = require("jsonwebtoken");
+//const secretKey = "secretKeycccccccccccc"
 
+
+// exports.verifyToken = async(req,res,next)=>{
+//     const token = req.headers.Authorization;
+//     const decoded = jwt.verify(token,secretKey);
+//     req.decoded = decoded;
+//     next();
+
+
+// }
 exports.getEmployeeDetails = async (req, res) => {
     let status = false;
     const mspin = req.params.mspin;
@@ -41,6 +52,7 @@ exports.checkLogin = async (req, res) => {
         const emloyeeLogin = await Employee.findOne({ mspin: mspin, registrationNumber: regNumber });
         if (emloyeeLogin) {
             status = true;
+            //const token = jwt.sign({ mspin, regNumber }, secretKey);
             res.status(201).json({
                 status: status,
                 message: "Employee logged in succesfully"

@@ -1,9 +1,9 @@
 const dotenv = require("dotenv");
+dotenv.config({ path: "./config.env" });
+require("./db/connection");
+const port = process.env.PORT || 4500;
 const express = require("express");
 const app = express();
-dotenv.config({ path: "./config.env" });
-const port = process.env.PORT || 4500;
-require("./db/connection");
 const bodyParser = require("body-parser");
 
 app.use(express.json());

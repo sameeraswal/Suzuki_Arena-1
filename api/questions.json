@@ -1,0 +1,145 @@
+{
+    "status": true,
+    "data": {
+        "_id": "63fafdc514ae384290c81e04",
+        "roundName": "1-A",
+        "questions": [
+            {
+                "_id": "63fb615286be2ec1a80f7cb1",
+                "id": 1,
+                "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                "question": "Which function is used to serialize an object into a JSON string in Javascript",
+                "choices": [
+                    {
+                        "_id": "63fb615286be2ec1a80f7cb2",
+                        "cId": 1,
+                        "name": "stringify()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "_id": "63fb615286be2ec1a80f7cb3",
+                        "cId": 2,
+                        "name": "parse()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "_id": "63fb615286be2ec1a80f7cb4",
+                        "cId": 3,
+                        "name": "convert()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "_id": "63fb615286be2ec1a80f7cb5",
+                        "cId": 4,
+                        "name": "None of the above",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    }
+                ],
+                "type": "MCQs",
+                "correctAnswer": 1
+            },
+            {
+                "_id": "63fb615286be2ec1a80f7cb6",
+                "id": 2,
+                "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                "question": "Which of the following keywords is used to define a variable in Javascript?",
+                "choices": [
+                    {
+                        "_id": "63fb615286be2ec1a80f7cb7",
+                        "cId": 1,
+                        "name": "var",
+                        "img": ""
+                    },
+                    {
+                        "_id": "63fb615286be2ec1a80f7cb8",
+                        "cId": 2,
+                        "name": "let",
+                        "img": ""
+                    },
+                    {
+                        "_id": "63fb615286be2ec1a80f7cb9",
+                        "cId": 3,
+                        "name": "var and let",
+                        "img": ""
+                    },
+                    {
+                        "_id": "63fb615286be2ec1a80f7cba",
+                        "cId": 4,
+                        "name": "None of the above",
+                        "img": ""
+                    }
+                ],
+                "type": "MCQs",
+                "correctAnswer": 3
+            },
+            {
+                "_id": "63fb615286be2ec1a80f7cbb",
+                "id": 3,
+                "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                "question": "Which of the following methods can be used to display data in some form using Javascript?",
+                "choices": [
+                    {
+                        "_id": "63fb615286be2ec1a80f7cbc",
+                        "cId": 1,
+                        "name": "document.write()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "_id": "63fb615286be2ec1a80f7cbd",
+                        "cId": 2,
+                        "name": "console.log()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "_id": "63fb615286be2ec1a80f7cbe",
+                        "cId": 3,
+                        "name": "window.alert",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "_id": "63fb615286be2ec1a80f7cbf",
+                        "cId": 4,
+                        "name": "All of the above",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    }
+                ],
+                "type": "MCQs",
+                "correctAnswer": 4
+            },
+            {
+                "_id": "63fb615286be2ec1a80f7cc0",
+                "id": 4,
+                "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                "question": "How can a data type be declared to be a constant type?",
+                "choices": [
+                    {
+                        "_id": "63fb615286be2ec1a80f7cc1",
+                        "cId": 1,
+                        "name": "const",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "_id": "63fb615286be2ec1a80f7cc2",
+                        "cId": 2,
+                        "name": "var",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "_id": "63fb615286be2ec1a80f7cc3",
+                        "cId": 3,
+                        "name": "let",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "_id": "63fb615286be2ec1a80f7cc4",
+                        "cId": 4,
+                        "name": "constant",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    }
+                ],
+                "type": "MCQs",
+                "correctAnswer": 4
+            }
+        ]
+    }
+}
