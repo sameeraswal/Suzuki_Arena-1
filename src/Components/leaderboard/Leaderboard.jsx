@@ -6,6 +6,69 @@ import text from "./01.png";
 import trophy from "./09.png";
 
 const Leaderboard = () => {
+  let response = {
+    status: true,
+    data: [
+      {
+        regNo: "1",
+        name: "parth",
+        rank: "2",
+        round: "1",
+        score: "100",
+        class: "lower-cut"
+      },
+      {
+        regNo: "2",
+        name: "parth1",
+        rank: "3",
+        round: "4",
+        score: "80",
+        class: "lower-cut"
+      },
+      {
+        regNo: "2",
+        name: "parth1",
+        rank: "3",
+        round: "4",
+        score: "80",
+        class: "upper-cut"
+      },
+      {
+        regNo: "2",
+        name: "parth1",
+        rank: "3",
+        round: "4",
+        score: "80",
+        class: "lower-cut"
+      },
+      {
+        regNo: "2",
+        name: "parth1",
+        rank: "3",
+        round: "4",
+        score: "80",
+        class: "upper-cut"
+      },
+      {
+        regNo: "2",
+        name: "parth1",
+        rank: "3",
+        round: "4",
+        score: "80",
+        class: "lower-cut"
+      },
+      {
+        regNo: "2",
+        name: "parth1",
+        rank: "3",
+        round: "4",
+        score: "80",
+        class: "upper-cut"
+      },
+    ],
+  };
+  let rounds = response.data;
+
   return (
     <>
       <Navbar></Navbar>
@@ -40,196 +103,23 @@ const Leaderboard = () => {
 
               <tbody>
                 <br />
-                <tr>
-                  <td className="lower-cut">1</td>
-                  <td className="lower-cut">
-                    <p id="winner">Name-1</p>
-                  </td>
-                  <td className="lower-cut">2</td>
-                  <td className="lower-cut">4</td>
-                  <td className="lower-cut">100</td>
-                </tr>
+                
 
-                <tr>
-                  <td className="upper-cut">2</td>
-                  <td className="upper-cut">
-                    <p id="runner-up">Name-2</p>
-                  </td>
-                  <td className="upper-cut">2</td>
-                  <td className="upper-cut">4</td>
-                  <td className="upper-cut">100</td>
-                </tr>
+                {rounds.map((item) => (
+                  <>
+                    <tr>
+                      <td className={item.class}>{item.regNo}</td>
+                      <td className={item.class}>
+                        <p id="winner">{item.name}</p>
+                      </td>
+                      <td className={item.class}>{item.rank}</td>
+                      <td className={item.class}>{item.round}</td>
+                      <td className={item.class}>{item.score}</td>
+                    </tr>
+                  </>
+                ))}
 
-                <tr>
-                  <td className="lower-cut">3</td>
-                  <td className="lower-cut">
-                    <p id="second-runner-up">Name-3</p>
-                  </td>
-                  <td className="lower-cut">2</td>
-                  <td className="lower-cut">4</td>
-                  <td className="lower-cut">100</td>
-                </tr>
-
-                <tr>
-                  <td className="upper-cut">4</td>
-                  <td className="upper-cut">
-                    <p>D</p>
-                  </td>
-                  <td className="upper-cut">2</td>
-                  <td className="upper-cut">4</td>
-                  <td className="upper-cut">100</td>
-                </tr>
-
-                <tr>
-                  <td className="lower-cut">5</td>
-                  <td className="lower-cut">
-                    <p>E</p>
-                  </td>
-                  <td className="lower-cut">2</td>
-                  <td className="lower-cut">4</td>
-                  <td className="lower-cut">100</td>
-                </tr>
-
-                <tr>
-                  <td className="upper-cut">6</td>
-                  <td className="upper-cut">
-                    <p>E</p>
-                  </td>
-                  <td className="upper-cut">2</td>
-                  <td className="upper-cut">4</td>
-                  <td className="upper-cut">100</td>
-                </tr>
-
-                <tr>
-                  <td className="lower-cut">7</td>
-                  <td className="lower-cut">
-                    <p>E</p>
-                  </td>
-                  <td className="lower-cut">2</td>
-                  <td className="lower-cut">4</td>
-                  <td className="lower-cut">100</td>
-                </tr>
-
-                <tr>
-                  <td className="upper-cut">8</td>
-                  <td className="upper-cut">
-                    <p>E</p>
-                  </td>
-                  <td className="upper-cut">2</td>
-                  <td className="upper-cut">4</td>
-                  <td className="upper-cut">100</td>
-                </tr>
-
-                <tr>
-                  <td>8</td>
-                  <td>
-                    <p>E</p>
-                  </td>
-                  <td>2</td>
-                  <td>4</td>
-                  <td>100</td>
-                </tr>
-                <br />
-                <tr>
-                  <td>8</td>
-                  <td>
-                    <p>E</p>
-                  </td>
-                  <td>2</td>
-                  <td>4</td>
-                  <td>100</td>
-                </tr>
-                <br />
-                <tr>
-                  <td>8</td>
-                  <td>
-                    <p>E</p>
-                  </td>
-                  <td>2</td>
-                  <td>4</td>
-                  <td>100</td>
-                </tr>
-                <br />
-                <tr>
-                  <td>8</td>
-                  <td>
-                    <p>E</p>
-                  </td>
-                  <td>2</td>
-                  <td>4</td>
-                  <td>100</td>
-                </tr>
-                <br />
-                <tr>
-                  <td>8</td>
-                  <td>
-                    <p>E</p>
-                  </td>
-                  <td>2</td>
-                  <td>4</td>
-                  <td>100</td>
-                </tr>
-                <br />
-                <tr>
-                  <td>8</td>
-                  <td>
-                    <p>E</p>
-                  </td>
-                  <td>2</td>
-                  <td>4</td>
-                  <td>100</td>
-                </tr>
-                <br />
-                <tr>
-                  <td>8</td>
-                  <td>
-                    <p>E</p>
-                  </td>
-                  <td>2</td>
-                  <td>4</td>
-                  <td>100</td>
-                </tr>
-                <br />
-                <tr>
-                  <td>8</td>
-                  <td>
-                    <p>E</p>
-                  </td>
-                  <td>2</td>
-                  <td>4</td>
-                  <td>100</td>
-                </tr>
-                <br />
-                <tr>
-                  <td>8</td>
-                  <td>
-                    <p>E</p>
-                  </td>
-                  <td>2</td>
-                  <td>4</td>
-                  <td>100</td>
-                </tr>
-                <br />
-                <tr>
-                  <td>8</td>
-                  <td>
-                    <p>E</p>
-                  </td>
-                  <td>2</td>
-                  <td>4</td>
-                  <td>100</td>
-                </tr>
-                <br />
-                <tr>
-                  <td>8</td>
-                  <td>
-                    <p>E</p>
-                  </td>
-                  <td>2</td>
-                  <td>4</td>
-                  <td>100</td>
-                </tr>
-                <br />
+                
               </tbody>
             </table>
           </div>

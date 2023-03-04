@@ -19,6 +19,8 @@
   display: flex;
   justify-content: space-evenly;
   text-align: center;
+  color: var(--arena-color);
+  font-weight: bold;
 }
 .yes-btn {
   width: 90px;
