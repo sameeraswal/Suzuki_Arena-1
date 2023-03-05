@@ -355,13 +355,13 @@
   --wheel-size: 450px;
   --wheel-slice-spacing: 50px;
   --wheel-border-size: 10px;
-  --wheel-color: #fff;
+  --wheel-color: #F7C04A;
   --neutral-color: blue;
   --PI: 3.6;
   --nb-item: 0;
   --item-nb: 0;
   --selected-item: 0;
-  --nb-turn: 5;
+  --nb-turn: 35;
   --spinning-duration: 4s;
   --reset-duration: 0.25s;
   --arena-color: #003091;
@@ -447,7 +447,7 @@
 }
 
 .wheel.spinning {
-  transition: transform var(--spinning-duration);
+  transition: transform 15s;
   transform: rotate(
     calc(
       var(--nb-turn) * 360deg +

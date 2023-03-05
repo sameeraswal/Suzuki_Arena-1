@@ -1,15 +1,10 @@
-// colors
-// $themeColours: (
-//    #dc51ac,
-//    #d64651,
-//    #00ff00,
-// );
+
 :root {
   --wheel-font: "Lato", "Quicksand", sans-serif;
   --wheel-size: 450px;
   --wheel-slice-spacing: 50px;
   --wheel-border-size: 10px;
-  --wheel-color: #fff;
+  --wheel-color: #F7F1E5;
   --neutral-color: blue;
   --PI: 3.6;
   --nb-item: 0;
@@ -23,21 +18,6 @@
   --gradient2: linear-gradient(15deg, #04ea00, #00d17d);
   --gradient3: linear-gradient(15deg, #b648ff, #ef5dff);
 }
-
-$my-colors: 
-//   "green",
-  #008000 //   "blue",
-  #0000ff //   "orange",
-  #fca644 //   "green",
-  #008000 //   "blue",
-  #0000ff //   "orange",
-  #fca644
-  #008000 //   "blue",
-  #0000ff //   "orange",
-  #fca644 //   "green",
-  #008000 //   "blue",
-  #0000ff //   "orange",
-  #fca644;
 
 // loop!
 
@@ -62,15 +42,94 @@ $my-colors:
   );
   border: solid transparent calc(var(--slice-width) / 2);
   border-left: solid transparent 0;
-  // border-right: solid red calc(var(--wheel-size) / 2);
+  border-right: solid #ef5dff calc(var(--wheel-size) / 2);
   //   @each $themeColour, $i in $themeColours {
   //     &{
   //       border-right: solid $i calc(var(--wheel-size) / 2);
   //     }
   //   }
 }
-@each $color in $my-colors{
-  .wheel-item:before {
-    border-right: solid $color calc(var(--wheel-size) / 2);
-  }
+.wheel-color::before {
+  // width: calc(var(--wheel-size) / 2);
+  // background-color: red;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  // border-right: solid #051937 calc(var(--wheel-size) / 2);
+  border-right: solid orange calc(var(--wheel-size) / 2);
+}
+.wheel-color1::before {
+  // width: calc(var(--wheel-size) / 2);
+  // background-color: red;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  // border-right: solid #051937 calc(var(--wheel-size) / 2);
+  border-right: solid red calc(var(--wheel-size) / 2);
+}
+.wheel-color2::before {
+  // width: calc(var(--wheel-size) / 2);
+  // background-color: red;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  // border-right: solid #051937 calc(var(--wheel-size) / 2);
+  border-right: solid green calc(var(--wheel-size) / 2);
+}
+.wheel-color3::before {
+  // width: calc(var(--wheel-size) / 2);
+  // background-color: red;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  // border-right: solid #051937 calc(var(--wheel-size) / 2);
+  border-right: solid mediumturquoise calc(var(--wheel-size) / 2);
+}
+.wheel-color4::before {
+  // width: calc(var(--wheel-size) / 2);
+  // background-color: red;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  // border-right: solid #051937 calc(var(--wheel-size) / 2);
+  border-right: solid brown calc(var(--wheel-size) / 2);
+}
+.wheel-color5::before {
+  // width: calc(var(--wheel-size) / 2);
+  // background-color: red;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  // border-right: solid #051937 calc(var(--wheel-size) / 2);
+  border-right: solid #051937 calc(var(--wheel-size) / 2);
 }

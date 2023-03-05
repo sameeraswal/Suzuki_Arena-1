@@ -9,80 +9,89 @@ const Puzzlequestion = () => {
     status: true,
     data: [
       {
+        id: 1,
+        cid: 1,
         question: "Given a string, reverse each word in the sentence",
         isActive: false,
-        index: 0
-        
-     },
-     {
-      question: "Question 2 he sentence",
-      isActive: false,
-      index: 1
-   }
-      
-      
+      },
+      {
+        id: 2,
+        cid: 2,
+        question: "Question 2 he sentence",
+        isActive: false,
+      },
     ],
   };
 
   let questions = response.data;
 
-
   const timeOutFun = () => {
     setTimeout(() => window.open("/finish1b", "_self"), 3000);
   };
-  const [active1, setActive1] = useState(false);
+
   const [active2, setActive2] = useState(false);
-  const [active3, setActive3] = useState(false);
-  const [active4, setActive4] = useState(false);
-  const [active5, setActive5] = useState(false);
-  const [active6, setActive6] = useState(false);
-  const [active7, setActive7] = useState(false);
-  const [active8, setActive8] = useState(false);
-  const [active9, setActive9] = useState(false);
-  const [active10, setActive10] = useState(false);
-  const [active11, setActive11] = useState(false);
-  const [active12, setActive12] = useState(false);
+  const [active1, setActive1] = useState(false);
+
+  // const [active3, setActive3] = useState(false);
+  // const [active4, setActive4] = useState(false);
+  // const [active5, setActive5] = useState(false);
+  // const [active6, setActive6] = useState(false);
+  // const [active7, setActive7] = useState(false);
+  // const [active8, setActive8] = useState(false);
+  // const [active9, setActive9] = useState(false);
+  // const [active10, setActive10] = useState(false);
+  // const [active11, setActive11] = useState(false);
+  // const [active12, setActive12] = useState(false);
+
   const handleClick1 = () => {
     setActive1(!active1);
   };
   const handleClick2 = () => {
     setActive2(!active2);
   };
-  const handleClick3 = () => {
-    setActive3(!active3);
-  };
-  const handleClick4 = () => {
-    setActive4(!active4);
-  };
-  const handleClick5 = () => {
-    setActive5(!active5);
-  };
-  const handleClick6 = () => {
-    setActive6(!active6);
-  };
-  const handleClick7 = () => {
-    setActive7(!active7);
-  };
-  const handleClick8 = () => {
-    setActive8(!active8);
-  };
-  const handleClick9 = () => {
-    setActive9(!active9);
-  };
-  const handleClick10 = () => {
-    setActive10(!active10);
-  };
-  const handleClick11 = () => {
-    setActive11(!active11);
-  };
-  const handleClick12 = () => {
-    setActive12(!active12);
-  };
- const [value, setValue] = useState(false);
-  
+  // const handleClick3 = () => {
+  //   setActive3(!active3);
+  // };
+  // const handleClick4 = () => {
+  //   setActive4(!active4);
+  // };
+  // const handleClick5 = () => {
+  //   setActive5(!active5);
+  // };
+  // const handleClick6 = () => {
+  //   setActive6(!active6);
+  // };
+  // const handleClick7 = () => {
+  //   setActive7(!active7);
+  // };
+  // const handleClick8 = () => {
+  //   setActive8(!active8);
+  // };
+  // const handleClick9 = () => {
+  //   setActive9(!active9);
+  // };
+  // const handleClick10 = () => {
+  //   setActive10(!active10);
+  // };
+  // const handleClick11 = () => {
+  //   setActive11(!active11);
+  // };
+  // const handleClick12 = () => {
+  //   setActive12(!active12);
+  // };
+  const [value, setValue] = useState(false);
+
   const genHandleClick = (val) => {
-   setValue(!val)
-  }
+    setValue(!val);
+  };
+  const [selected, setSelected] = useState(0);
+  const handleColor = (row) => {
+    setSelected(row.id);
+  };
+  const [selected1, setSelected1] = useState(0);
+  const handleColor1 = (col) => {
+    setSelected1(col.id);
+  };
 
   return (
     <>
@@ -102,7 +111,7 @@ const Puzzlequestion = () => {
           </div>
 
           <div className="wordslct justify">
-            <div className="wordyes">
+            {/* <div className="wordyes">
               <span>Given a string, reverse each word in the sentence</span>
               <button
                 onClick={() => setActive1(!active1)}
@@ -118,36 +127,39 @@ const Puzzlequestion = () => {
               >
                 No
               </button>
-            </div>
+            </div> */}
 
             {/* map */}
             {questions.map((item) => (
-            <>
-            <div className="wordyes">
-              <span>{item.question}</span>
-              <button
-                onClick={() => {
-                  genHandleClick(item.isActive)
-                }}
-                style={{ backgroundColor: value ? "#00ff00" : "#F0F0F0" }}
-                className="yes-btn icon-conatiner"
-              >
-                Yes
-              </button>
-              <button
-                className="yes-btn icon-conatiner"
-                onClick={!active1 && handleClick2}
-                style={{ backgroundColor: active2 ? "red" : "#F0F0F0" }}
-              >
-                No
-              </button>
-            </div>
-            </>
-          ))}
+              <>
+                <div className="wordyes">
+                  <span key={item.id}>{item.question}</span>
+                  <button
+                    key={item.id}
+                    onClick={() => handleColor(item)}
+                    style={{
+                      backgroundColor:
+                        item.id === selected ? "#00ff00" : "#F0F0F0",
+                    }}
+                    className="yes-btn icon-conatiner"
+                  >
+                    Yes
+                  </button>
+                  <button
+                    key={item.id+1}
+                    className="yes-btn icon-conatiner"
+                    onClick={() => handleColor1(item)}
+                    style={{
+                      backgroundColor: item.id+1 === selected1 ? "red" : "#F0F0F0",
+                    }}
+                  >
+                    No
+                  </button>
+                </div>
+              </>
+            ))}
 
-
-
-            <div className="wordyes">
+            {/* <div className="wordyes">
               <span>Given a string, reverse each word in the sentence</span>
               <button
                 className="yes-btn icon-conatiner"
@@ -163,8 +175,8 @@ const Puzzlequestion = () => {
               >
                 No
               </button>
-            </div>
-            <div className="wordyes">
+            </div> */}
+            {/* <div className="wordyes">
               <span>Given a string, reverse each word in the sentence</span>
               <button
                 className="yes-btn icon-conatiner"
@@ -238,7 +250,7 @@ const Puzzlequestion = () => {
               >
                 No
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
