@@ -8,17 +8,31 @@ import Finishround from "./Finish Round/Finishround";
 
 const Question = () => {
   const [activeQuestion, setActiveQuestion] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState('')
+  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null)
   const { questions } = data;
   //id variable
   const { question, choices, video, id } = questions[activeQuestion];
-  const { name, cID, src } = choices;
+ 
 
   const [selectop, setSelectOp] = useState("#fff");
+
+  //next question function
   const onClickNext = () => {
     //HTTP call
 
     setActiveQuestion((id) => id + 1);
   };
+
+  //correct answer logic
+  // const onAnswerSelected = (answer, index) => {
+  //   setSelectedAnswerIndex(index)
+  //   if (answer === correctAnswer) {
+  //     setSelectedAnswer(true)
+  //   } else {
+  //     setSelectedAnswer(false)
+  //   }
+  // }
 
   const correctHandler = () => {
     setSelectOp("#00FF00");
@@ -33,7 +47,7 @@ const Question = () => {
     <>
       <Navbar />
       <div className="round-box">Rounds</div>
-      {/* {video && ( */}
+      
       <div className="question-container">
         <Timer />
 
@@ -52,14 +66,14 @@ const Question = () => {
           </div>
           <div className="option-div">
             <ul>
-              {choices.map((item) => (
+              {choices.map((item, index) => (
                 <>
                   {
                     <li
                       //value = cid
-                      //onClick={correctHandler}//function with parameter
-
-                      className="selected-answer icon-conatiner hvr-grow"
+                      onClick={correctHandler}
+                      className={selectedAnswerIndex === index ? "selected-answer icon-conatiner hvr-grow" : " icon-conatiner hvr-grow"}>
+                      {/* className="selected-answer icon-conatiner hvr-grow" */}
                     >
                       {item.name}
                     </li>
