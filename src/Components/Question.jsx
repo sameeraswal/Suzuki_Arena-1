@@ -18,7 +18,7 @@ const Question = () => {
     setModalOpen(true);
   };
   const [activeQuestion, setActiveQuestion] = useState(0);
-  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null)
+  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const { questions } = data;
   //id variable
   const { question, choices, video, id } = questions[activeQuestion];
@@ -32,6 +32,15 @@ const Question = () => {
     setActiveQuestion((id) => id + 1);
   };
 
+  const [func, setFunc] = useState(true);
+  const handleClick = (event) => {
+    console.log(func);
+    func
+      ? (event.target.style.background = "#00ff00")
+      : (event.target.style.background = "#fff");
+    setFunc(!func);
+    // event.target.style.background = "#fff";
+  };
   // const correctHandler = () => {
   //   setSelectOp("#00FF00");
   //   //save option id in var
