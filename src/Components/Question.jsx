@@ -30,14 +30,15 @@ const Question = () => {
     setActiveQuestion((id) => id + 1);
   };
 
-  const correctHandler = () => {
-    setSelectOp("#00FF00");
-    //save option id in var
+  const [func, setFunc] = useState(true);
+  const handleClick = (event) => {
+    console.log(func);
+    func
+      ? (event.target.style.background = "#00ff00")
+      : (event.target.style.background = "#fff");
+    setFunc(!func);
+    // event.target.style.background = "#fff";
   };
-  // const [open, setOpen] = useState(false);
-
-  // const onOpenModal = () => setOpen(true);
-  // const onCloseModal = () => setOpen(false);
 
   return (
     <>
@@ -67,9 +68,10 @@ const Question = () => {
                   {
                     <li
                       //value = cid
-                      //onClick={correctHandler}//function with parameter
-
-                      className="selected-answer icon-conatiner hvr-grow"
+                      key={item.cID}
+                      // onClick={correctHandler}
+                      onClick={handleClick} //function with parameter
+                      className={`selected-answer icon-conatiner hvr-grow`}
                     >
                       {item.name}
                     </li>
