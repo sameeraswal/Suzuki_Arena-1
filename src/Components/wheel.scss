@@ -1,0 +1,76 @@
+// colors
+// $themeColours: (
+//    #dc51ac,
+//    #d64651,
+//    #00ff00,
+// );
+:root {
+  --wheel-font: "Lato", "Quicksand", sans-serif;
+  --wheel-size: 450px;
+  --wheel-slice-spacing: 50px;
+  --wheel-border-size: 10px;
+  --wheel-color: #fff;
+  --neutral-color: blue;
+  --PI: 3.6;
+  --nb-item: 0;
+  --item-nb: 0;
+  --selected-item: 0;
+  --nb-turn: 5;
+  --spinning-duration: 4s;
+  --reset-duration: 0.25s;
+  --arena-color: #003091;
+  --gradient: linear-gradient(10deg, #e8d5c4, #b4e4ff);
+  --gradient2: linear-gradient(15deg, #04ea00, #00d17d);
+  --gradient3: linear-gradient(15deg, #b648ff, #ef5dff);
+}
+
+$my-colors: 
+//   "green",
+  #008000 //   "blue",
+  #0000ff //   "orange",
+  #fca644 //   "green",
+  #008000 //   "blue",
+  #0000ff //   "orange",
+  #fca644
+  #008000 //   "blue",
+  #0000ff //   "orange",
+  #fca644 //   "green",
+  #008000 //   "blue",
+  #0000ff //   "orange",
+  #fca644;
+
+// loop!
+
+.wheel-item:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 0px;
+  opacity: 0.25;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  // border-right: solid red calc(var(--wheel-size) / 2);
+  //   @each $themeColour, $i in $themeColours {
+  //     &{
+  //       border-right: solid $i calc(var(--wheel-size) / 2);
+  //     }
+  //   }
+}
+@each $color in $my-colors{
+  .wheel-item:before {
+    border-right: solid $color calc(var(--wheel-size) / 2);
+  }
+}

@@ -2,31 +2,31 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Search from "./search";
 import "./registration.scss";
-import loginImg from './loginicon.png'
-import { Axios } from "axios";
+import loginImg from "./loginicon.png";
+import axios from "axios";
+import { useState } from "react";
 function Registration() {
   const arena = require("./maruti-suzuki-arena.webp");
 
-  //add
-  // useEffect(() => {
-  //   response.map((resp) =>
-  //     setState((state) => ({ ...state, [resp.fieldName]: resp.value }))
-  //   );
-  //   return () => {};
-  // }, []);
+  const handleEntailmentRequest = (e) => {
+    e.preventDefault();
+  };
+  const [name, setName] = useState("");
+  const [dealership, setDearlership] = useState("");
+  const [update, setUpdate] = useState("");
+  const handleChange = (event) => {
+    setUpdate(event.target.value);
+  };
 
-  // const handleChange = (e, field) => {
-  //   setState({
-  //     ...state,
-  //     [field]: e.target.value, //edit
-  //   });
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(state);
-  // };
-
+  const getData = () => {
+    axios
+      .get(`http://localhost:4500/api/v1/mspin/${update}`)
+      .then((res) => {
+        setName(res.data.data.name);
+        setDearlership(res.data.data.dealership);
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <div>
       <div className="nav-center">
@@ -37,25 +37,39 @@ function Registration() {
         <img src={arena} alt="arena" className="arena-img" />
 
         <div className="form-container">
-          <img src={loginImg} alt="login" height={60} width={60} className="reg-admin-img"
+          <img
+            src={loginImg}
+            alt="login"
+            height={60}
+            width={60}
+            className="reg-admin-img"
           />
           <h1 className="reg-heading">Registration</h1>
           <form>
-            <button className="search-icon">
+            <button
+              className="search-icon"
+              onClick={(e) => {
+                handleEntailmentRequest(e);
+                getData();
+              }}
+            >
               <Search />
             </button>
-
             <div class="form">
-              <input type="text" class="form__input" placeholder=" " />
+              <input
+                type="text"
+                class="form__input"
+                placeholder=" "
+                onChange={handleChange}
+                value={update}
+              />
               <label class="form__label">MSPIN</label>
             </div>
             <div class="form">
               <input
                 type="text"
                 class="form__input"
-                // onChange={(e) => {
-                //   handleChange(e, resp.fieldName);
-                // }}
+                value={name}
                 placeholder=" "
               />
               <label class="form__label">Name</label>
@@ -64,30 +78,24 @@ function Registration() {
               <input
                 type="text"
                 class="form__input"
-                // onChange={(e) => {
-                //   handleChange(e, resp.fieldName);
-                // }}
-
                 placeholder=" "
+                value={dealership}
               />
               <label class="form__label">Dealership</label>
             </div>
             <div class="form">
-              <input
-                type="text"
-                class="form__input"
-                // onChange={(e) => {
-                //   handleChange(e, resp.fieldName);
-                // }}
-
-                placeholder=" "
-              />
+              <input type="text" class="form__input" placeholder=" " />
               <label class="form__label">Registration Number</label>
             </div>
 
             <div class="submit">
               <Link to="/login">
-                <button className="control-button up third icon-conatiner">
+                <button
+                  className="control-button up third icon-conatiner"
+                  onClick={(e) => {
+                    handleEntailmentRequest(e);
+                  }}
+                >
                   Register
                 </button>
               </Link>
