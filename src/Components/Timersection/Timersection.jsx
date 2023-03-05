@@ -35,11 +35,9 @@ const Timersection = () => {
               }}
             />
           </div>
-          {show && (
-            <input type="text" placeholder="score" className="input-correct" />
-          )}
+  
           {/* {data && ( */}
-          {/* <Link to="/puzzle"> */}
+          <Link to="/puzzle">
           <button
             className="third icon-conatiner btn-width"
             onClick={() => {
@@ -49,7 +47,7 @@ const Timersection = () => {
           >
             Enter Score
           </button>
-          {/* </Link> */}
+          </Link>
           {/* )} */}
         </div>
       </div>

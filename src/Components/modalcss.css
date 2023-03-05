@@ -3,7 +3,7 @@
 :root {
   --dark: #101315;
   --light: #eeeeee;
-  --gradient: linear-gradient(10deg, #E8D5C4, #b4e4ff);
+  --gradient: linear-gradient(10deg, #e8d5c4, #b4e4ff);
   --gradient2: linear-gradient(15deg, #04ea00, #00d17d);
   --gradient3: linear-gradient(15deg, #b648ff, #ef5dff);
   font-size: 1rem;
@@ -290,4 +290,28 @@ li {
 
 .cls-btn {
   margin-top: 40px;
+}
+
+.last-question-btn {
+  width: 100px;
+  height: 20px;
+}
+.backdrop-finish {
+  position: absolute;
+  top: 60px;
+  left: -15%;
+  height: 87vh;
+  width: 97vw;
+  
+  background: rgba(0,0,0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-y: hidden;
+  opacity: 0.01;
+  margin-top: -40%;
+}
+.hand{
+  margin-left: 18%;
+  margin-top: -20px;
 }
