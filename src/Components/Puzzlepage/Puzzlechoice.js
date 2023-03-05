@@ -11,6 +11,7 @@ const Puzzlechoice = () => {
     status: true,
     data: [
       {
+        name: 'word-1',
         class1: "green-btn",
         class2: "red-btn",
         btn1: "yes",
