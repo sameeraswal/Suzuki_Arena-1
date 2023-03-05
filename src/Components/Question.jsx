@@ -18,12 +18,14 @@ const Question = () => {
     setModalOpen(true);
   };
   const [activeQuestion, setActiveQuestion] = useState(0);
+  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const { questions } = data;
   //id variable
   const { question, choices, video, id } = questions[activeQuestion];
-  const { name, cID, src } = choices;
 
-  const [selectop, setSelectOp] = useState("#fff");
+  // const [selectop, setSelectOp] = useState("#fff");
+
+  //next question function
   const onClickNext = () => {
     //HTTP call
 
@@ -39,12 +41,16 @@ const Question = () => {
     setFunc(!func);
     // event.target.style.background = "#fff";
   };
+  // const correctHandler = () => {
+  //   setSelectOp("#00FF00");
+  //   //save option id in var
+  // };
 
   return (
     <>
       <Navbar />
       <div className="round-box">Rounds</div>
-      {/* {video && ( */}
+
       <div className="question-container">
         <Timer />
 
@@ -68,10 +74,8 @@ const Question = () => {
                   {
                     <li
                       //value = cid
-                      key={item.cID}
-                      // onClick={correctHandler}
-                      onClick={handleClick} //function with parameter
-                      className={`selected-answer icon-conatiner hvr-grow`}
+                      // onClick={}
+                      className="selected-answer icon-conatiner hvr-grow"
                     >
                       {item.name}
                     </li>
@@ -81,13 +85,14 @@ const Question = () => {
             </ul>
           </div>
 
+          {/* modal */}
           <div>
             {id !== 4 ? (
               <button
                 onClick={onClickNext}
                 className="third question-btn icon-conatiner"
               >
-                Next
+                Submit
               </button>
             ) : (
               <>

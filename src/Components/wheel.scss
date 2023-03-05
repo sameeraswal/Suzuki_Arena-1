@@ -1,12 +1,12 @@
 
 :root {
-  --wheel-font: "Lato", "Quicksand", sans-serif;
+  --wheel-font: "Roboto", "Quicksand", sans-serif;
   --wheel-size: 450px;
   --wheel-slice-spacing: 50px;
   --wheel-border-size: 10px;
-  --wheel-color: #F7F1E5;
+  --wheel-color: #ECF2FF;
   --neutral-color: blue;
-  --PI: 3.6;
+  --PI: 3.75; //before 3.6
   --nb-item: 0;
   --item-nb: 0;
   --selected-item: 0;
@@ -33,7 +33,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding-left: 0px;
-  opacity: 0.25;
+  opacity: 0.4;
   --slice-max-width: calc(
     var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
   );
@@ -42,7 +42,7 @@
   );
   border: solid transparent calc(var(--slice-width) / 2);
   border-left: solid transparent 0;
-  border-right: solid #ef5dff calc(var(--wheel-size) / 2);
+  border-right: solid #e302fc calc(var(--wheel-size) / 2);
   //   @each $themeColour, $i in $themeColours {
   //     &{
   //       border-right: solid $i calc(var(--wheel-size) / 2);
@@ -89,7 +89,7 @@
   border: solid transparent calc(var(--slice-width) / 2);
   border-left: solid transparent 0;
   // border-right: solid #051937 calc(var(--wheel-size) / 2);
-  border-right: solid green calc(var(--wheel-size) / 2);
+  border-right: solid rgb(3, 252, 3) calc(var(--wheel-size) / 2);
 }
 .wheel-color3::before {
   // width: calc(var(--wheel-size) / 2);
@@ -103,7 +103,7 @@
   border: solid transparent calc(var(--slice-width) / 2);
   border-left: solid transparent 0;
   // border-right: solid #051937 calc(var(--wheel-size) / 2);
-  border-right: solid mediumturquoise calc(var(--wheel-size) / 2);
+  border-right: solid rgb(36, 2, 254) calc(var(--wheel-size) / 2);
 }
 .wheel-color4::before {
   // width: calc(var(--wheel-size) / 2);
@@ -117,7 +117,7 @@
   border: solid transparent calc(var(--slice-width) / 2);
   border-left: solid transparent 0;
   // border-right: solid #051937 calc(var(--wheel-size) / 2);
-  border-right: solid brown calc(var(--wheel-size) / 2);
+  border-right: solid rgb(228, 249, 2) calc(var(--wheel-size) / 2);
 }
 .wheel-color5::before {
   // width: calc(var(--wheel-size) / 2);
@@ -131,5 +131,5 @@
   border: solid transparent calc(var(--slice-width) / 2);
   border-left: solid transparent 0;
   // border-right: solid #051937 calc(var(--wheel-size) / 2);
-  border-right: solid #051937 calc(var(--wheel-size) / 2);
+  border-right: solid #0267fe calc(var(--wheel-size) / 2);
 }

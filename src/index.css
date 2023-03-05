@@ -1087,3 +1087,8 @@ ul {
 .btn-bottom{
   margin-top: 70px;
 }
+
+/* question */
+.selected-answer{
+  background-color: green;
+}
