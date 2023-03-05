@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const employeeAnswers = new mongoose.Schema({
+const empRoundScoreSchema = new mongoose.Schema({
     mspin: {
         type: String,
         required: true
@@ -13,13 +13,12 @@ const employeeAnswers = new mongoose.Schema({
         type: String,
         required: true
     },
-    empAnswers :{
-        type : Object,
-        default :{}
+    totalScore :{
+        type:Number
     }
 },{timestamps :true}
 );
 
-const EmployeeAnswer = mongoose.model("EmployeeAnswer", employeeAnswers);
+const EmpRoundScore = mongoose.model("EmpRoundScore", empRoundScoreSchema);
 
-module.exports = EmployeeAnswer;
+module.exports = EmpRoundScore;

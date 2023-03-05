@@ -23,7 +23,6 @@ const employeeReportSchema = new mongoose.Schema({
     }
 },{timestamps :true}
 );
-
 const Report = mongoose.model("Report", employeeReportSchema);
 
 module.exports = Report;

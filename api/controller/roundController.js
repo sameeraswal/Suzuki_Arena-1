@@ -125,9 +125,10 @@ const Round = require("../model/roundsSchema");
 exports.getRoundLists = async (req, res) => {
     let status = false;
     try {
-        const rounds = await Round.find().select({ roundName: 1, _id: 0 });
+        const rounds = await Round.find({}).select({ roundName: 1, _id: 0 });
         //const rounds = await Round.find().select("roundName -_id");
-        if (rounds) {
+        //console.log(rounds)
+        if (rounds.length) {
             status = true;
             res.status(201).json({
                 status: status,
@@ -153,7 +154,8 @@ exports.getRoundDetails = async (req, res) => {
     try {
         //const rounds = await Round.find({ roundName: round }, { roundName: 1, questions: 1 });
         const rounds = await Round.find({ roundName: round }).select("roundName questions");
-        if (!rounds) {
+        console.log(rounds);
+        if (!rounds.length) {
             res.status(400).json({
                 status: status,
                 message: "data not found"
