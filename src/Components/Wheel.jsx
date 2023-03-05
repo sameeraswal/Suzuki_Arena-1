@@ -47,11 +47,11 @@ export default class Wheel extends React.Component {
   }
 
   titleToggle() {
-    setTimeout(this.setState({ seltitle: true }), 900);
+    setTimeout(() => this.setState({ seltitle: true }), 200);
   }
-  // timeOutFun() {
-  //   setTimeout(() => window.open("/flipcard", "_self"), 8000);
-  // }
+  timeOutFun() {
+    setTimeout(() => window.open("/flipcard", "_self"), 18000);
+  }
 
   render() {
     const { selectedItem } = this.state;
@@ -67,7 +67,7 @@ export default class Wheel extends React.Component {
       <>
         <Navbar></Navbar>
         {/* {console.log(items[selectedItem].title)} */}
-        {seltitle ? <h1>{car}</h1> : ""}
+         <h1>{car}</h1> 
         {console.log(seltitle)}
         {/* <div className="round-box">Wheel</div> */}
         <div className="wheel-container" onClick={this.timeOutFun}>
@@ -83,6 +83,7 @@ export default class Wheel extends React.Component {
             onClick={() => {
               this.selectItem();
               this.titleToggle();
+              // this.timeOutFun();
             }}
           >
             <div

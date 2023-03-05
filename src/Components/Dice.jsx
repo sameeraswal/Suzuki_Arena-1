@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
 const Dice = () => {
@@ -13,10 +13,6 @@ const Dice = () => {
     } else {
       randomDice();
     }
-  };
-
-  const timeOutFun = () => {
-    setTimeout(() => navigate("/dashboard"), 10000);
   };
 
   const rollDice = (random) => {
@@ -78,11 +74,16 @@ const Dice = () => {
           className="roll third icon-conatiner"
           onClick={() => {
             randomDice();
-            timeOutFun();
           }}
         >
           Roll Dice
         </button>
+        <Link to="/puzzlequestion">
+          {" "}
+          <button className="third icon-conatiner btn-width">
+            Enter Score
+          </button>
+        </Link>
       </div>
     </div>
   );

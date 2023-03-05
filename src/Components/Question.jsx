@@ -2,11 +2,21 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
 import { data } from "./data";
-import { Modal } from "react-responsive-modal";
-import { Link, useNavigate } from "react-router-dom";
-import Finishround from "./Finish Round/Finishround";
+
+import { motion, AnimatePresence } from "framer-motion";
+import ModalFrammer from "./ModalFrammer";
+import "./modalcss.css";
+import Finishmodal from "./Modalframmer/finishmodal";
 
 const Question = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => {
+    setModalOpen(false);
+  };
+  const open = () => {
+    setModalOpen(true);
+  };
   const [activeQuestion, setActiveQuestion] = useState(0);
   const { questions } = data;
   //id variable
@@ -24,10 +34,10 @@ const Question = () => {
     setSelectOp("#00FF00");
     //save option id in var
   };
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
-  const onOpenModal = () => setOpen(true);
-  const onCloseModal = () => setOpen(false);
+  // const onOpenModal = () => setOpen(true);
+  // const onCloseModal = () => setOpen(false);
 
   return (
     <>
@@ -79,14 +89,39 @@ const Question = () => {
               </button>
             ) : (
               <>
-                <Link to="/finish">
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="third question-btn icon-conatiner"
+                  onClick={() => (modalOpen ? close() : open())}
+                >
+                  Next
+                </motion.button>
+
+                <AnimatePresence
+                  // Disable any initial animations on children that
+                  // are present when the component is first rendered
+                  initial={false}
+                  // Only render one component at a time.
+                  // The exiting component will finish its exit
+                  // animation before entering component is rendered
+                  exitBeforeEnter={true}
+                  // Fires when all exiting nodes have completed animating out
+                  onExitComplete={() => null}
+                >
+                  {modalOpen && (
+                    <Finishmodal modalOpen={modalOpen} handleClose={close} />
+                  )}
+                </AnimatePresence>
+
+                {/* <Link to="/finish">
                   <button
                     
                     className="third question-btn icon-conatiner"
                   >
-                    Next
+                    
                   </button>
-                </Link>
+                </Link> */}
               </>
             )}
           </div>

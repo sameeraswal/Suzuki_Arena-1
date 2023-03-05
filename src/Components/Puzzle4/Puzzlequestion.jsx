@@ -150,7 +150,7 @@ const Puzzlequestion = () => {
                     className="yes-btn icon-conatiner"
                     onClick={() => handleColor1(item)}
                     style={{
-                      backgroundColor: item.id+1 === selected1 ? "red" : "#F0F0F0",
+                      backgroundColor: item.id === selected ? "red" : "#F0F0F0",
                     }}
                   >
                     No
