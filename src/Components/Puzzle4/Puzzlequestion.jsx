@@ -9,13 +9,13 @@ const Puzzlequestion = () => {
     status: true,
     data: [
       {
-        id: 1,
+        id: 0,
         cid: 1,
         question: "Given a string, reverse each word in the sentence",
         isActive: false,
       },
       {
-        id: 2,
+        id: 1,
         cid: 2,
         question: "Question 2 he sentence",
         isActive: false,
@@ -84,13 +84,13 @@ const Puzzlequestion = () => {
   const genHandleClick = (val) => {
     setValue(!val);
   };
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(-1);
   const handleColor = (row) => {
-    setSelected(row.id);
+    setSelected(row - 1);
   };
-  const [selected1, setSelected1] = useState(0);
+  const [selected1, setSelected1] = useState(-1);
   const handleColor1 = (col) => {
-    setSelected1(col.id);
+    setSelected1(col);
   };
 
   return (
@@ -135,26 +135,26 @@ const Puzzlequestion = () => {
                 <div className="wordyes">
                   <span key={item.id}>{item.question}</span>
                   <button
-                    key={item.id}
-                    onClick={() => handleColor(item)}
+                    onClick={() => handleColor(item.id)}
                     style={{
                       backgroundColor:
                         item.id === selected ? "#00ff00" : "#F0F0F0",
                     }}
                     className="yes-btn icon-conatiner"
                   >
+                    {console.log(`${item.id} and selected is ${selected}`)}
                     Yes
                   </button>
-                  <button
-                    key={item.id+1}
+                  {/* <button
+                    key={item.cid}
                     className="yes-btn icon-conatiner"
-                    onClick={() => handleColor1(item)}
+                    onClick={() => handleColor1(item.cid)}
                     style={{
-                      backgroundColor: item.id === selected ? "red" : "#F0F0F0",
+                      backgroundColor: item.cid === selected1 ? "red" : "#F0F0F0",
                     }}
                   >
                     No
-                  </button>
+                  </button> */}
                 </div>
               </>
             ))}

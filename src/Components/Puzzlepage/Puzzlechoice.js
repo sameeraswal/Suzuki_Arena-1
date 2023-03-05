@@ -11,26 +11,32 @@ const Puzzlechoice = () => {
     status: true,
     data: [
       {
-        class1: "green-btn",
-        class2: "red-btn",
+        name: "Word-1",
         btn1: "yes",
         btn2: "no",
       },
       {
-        class1: "green-btn",
-        class2: "red-btn",
+        name: "Word-2",
         btn1: "yes",
         btn2: "no",
       },
       {
-        class1: "green-btn",
-        class2: "red-btn",
+        name: "Word-3",
         btn1: "yes",
         btn2: "no",
       },
       {
-        class1: "green-btn",
-        class2: "red-btn",
+        name: "Word-4",
+        btn1: "yes",
+        btn2: "no",
+      },
+      {
+        name: "Word-5",
+        btn1: "yes",
+        btn2: "no",
+      },
+      {
+        name: "Word-6",
         btn1: "yes",
         btn2: "no",
       },
@@ -67,9 +73,9 @@ const Puzzlechoice = () => {
                 <div className="wordyes">
                   <span>{item.name}</span>
 
-                  <Buttonp key={i} name={item.class1} />
+                  <Buttonp key={i} name={item.btn1} />
 
-                  <Buttonn key={i} name={item.class2} />
+                  <Buttonn key={i} name={item.btn2} />
                 </div>
               </>
             ))}

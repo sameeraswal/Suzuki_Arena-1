@@ -31,6 +31,7 @@ import Askexpress from "./Components/Askexpress";
 import Listthetwist from "./Components/Listthetwist";
 import Judgesround from "./Components/Judgesround";
 import Solutionsonly from "./Components/Solutiononly";
+import Cardscasestudy from "./Components/case study flipcard/Cardscasestudy";
 
 const App = () => {
   const places = [
@@ -174,6 +175,8 @@ const App = () => {
           ></Route>
 
           <Route path="/flipcard" element=<Cards />></Route>
+          <Route path="/flipcardcasestudy" element=<Cardscasestudy />></Route>
+
           <Route path="/question" element=<Question />></Route>
           <Route path="/finish" element=<Finishround />></Route>
           <Route path="/finish1b" element=<Finishround1B />></Route>
