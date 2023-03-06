@@ -328,3 +328,16 @@ li {
   overflow-y: hidden;
   opacity: 0.01;
 }
+.modal-text h5 {
+  display: flex;
+}
+
+/* finish round  */
+@media screen and (max-width: 768px) {
+  .backdrop-finish {
+    top: -158px;
+    left: -20%;
+    height: 93vh;
+    width: 100vw;
+  }
+}

@@ -350,8 +350,6 @@
   background: #b33951;
 }
 
-
-
 /* Wheel */
 
 :root {
@@ -1153,8 +1151,63 @@ ul {
   height: 40px;
 }
 
-
-.btn-enter-score{
+.btn-enter-score {
   margin-left: -1%;
   margin-top: 8%;
+}
+
+/* media Queries */
+/* Potrait */
+@media screen and (max-width: 768px) {
+  /* Registration page  */
+  .container {
+    width: 88vw;
+  }
+  .arena-img {
+    height: 548px;
+    width: 341px;
+  }
+  .search-icon {
+    right: 20px;
+  }
+
+  /* login page  */
+  .invisible {
+    top: 70px;
+    margin-left: 53%;
+  }
+
+  /* dashboard  */
+  .flexbox-container {
+    gap: 1em;
+  }
+  .btn {
+    font-size: 60px;
+  }
+
+  /* round 1 A  */
+  .modal-container img {
+    width: 650px;
+  }
+  .modal-text h5 {
+    font-size: 20px;
+    display: flex;
+  }
+
+  /* Questions */
+  .round-box {
+    width: 80%;
+  }
+  .timer-div {
+    width: 20%;
+    margin-right: 13px;
+  }
+  .question-video {
+    width: 50%;
+    height: 35%;
+  }
+  .question-btn{
+    margin-left: 240px;
+  }
+  
 }

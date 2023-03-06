@@ -57,9 +57,7 @@ const Question = () => {
         {video && (
           <div className="question-video">
             {/* {console.log(v.video)} */}
-            <iframe width="520" height="225" src={video}>
-              .
-            </iframe>
+            <object width="520" height="225" data={video}></object>
           </div>
         )}
 
