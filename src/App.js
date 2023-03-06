@@ -36,13 +36,24 @@ import Casestudy from "./Components/Casestudy";
 import Afterflipcasestudy from "./Components/case study flipcard/Afterflipcasestudy";
 import Brewsuv from "./Components/Flipcardspages/Brevsxuv";
 import Altovskwid from "./Components/Flipcardspages/Altovskwid";
+import Desirevsamaze from "./Components/Flipcardspages/Desirevsamaze";
+import Desirevstiger from "./Components/Flipcardspages/Desirevstiger";
+import CelvsTia from "./Components/Flipcardspages/CelvsTia";
+import Ertvstrib from "./Components/Flipcardspages/Ertvstrib";
+import Desvsaura from "./Components/Flipcardspages/Desvsaura";
+import Ertvscare from "./Components/Flipcardspages/Ertvscare";
+import Sprevskwid from "./Components/Flipcardspages/Sprevskwid";
+import Swifvsi20 from "./Components/Flipcardspages/Swifvsi20";
+import Wagovstiago from "./Components/Flipcardspages/Wagovstiago";
+
+import Swiftvsgrandi10 from "./Components/Flipcardspages/Swiftvsgrandi10";
 
 const App = () => {
   const places = [
     {
       id: 0,
       title: "S presso Vs Kwid",
-      class: "wheel-color"
+      class: "wheel-color",
     },
     {
       id: 1,
@@ -57,47 +68,47 @@ const App = () => {
     {
       id: 3,
       title: "Celerio Vs Tiago",
-      class: "wheel-color3"
+      class: "wheel-color3",
     },
     {
       id: 4,
       title: "Swift Vs i20",
-      class: "wheel-color4"
+      class: "wheel-color4",
     },
     {
       id: 5,
       title: "Swift Vs Grand i10",
-      class: "wheel-color5"
+      class: "wheel-color5",
     },
     {
       id: 6,
       title: "Desire Vs Amaze",
-      class: "wheel-color6"
+      class: "wheel-color6",
     },
     {
       id: 7,
       title: "Desire Vs Tiger",
-      class: "wheel-color"
+      class: "wheel-color",
     },
     {
       id: 8,
       title: "Brezza ZXI+MT Vs XUV",
-      class: "wheel-color1"
+      class: "wheel-color1",
     },
     {
       id: 9,
       title: "Ertiga Vs Carens",
-      class: "wheel-color2"
+      class: "wheel-color2",
     },
     {
       id: 10,
       title: "Ertiga Vs Triber",
-      class: "wheel-color3"
+      class: "wheel-color3",
     },
     {
       id: 11,
       title: "Desire Vs Aura SX+",
-      class: "wheel-color4"
+      class: "wheel-color4",
     },
   ];
 
@@ -196,12 +207,14 @@ const App = () => {
           <Route path="/casestudy" element={<Casestudy />}></Route>
 
           {/* flipcard routes after wheel */}
-          <Route path="/afterflipcasestudy" element={<Afterflipcasestudy />}></Route>
+          <Route
+            path="/afterflipcasestudy"
+            element={<Afterflipcasestudy />}
+          ></Route>
 
-          
           <Route path="/brewsuv" element={<Brewsuv />}></Route>
           <Route path="/altovskwid" element={<Altovskwid />}></Route>
-          <Route path="/celvstia" element={<Celvstia />}></Route>
+          <Route path="/celvstia" element={<CelvsTia />}></Route>
           <Route path="/desirevsamaze" element={<Desirevsamaze />}></Route>
           <Route path="/desirevstiger" element={<Desirevstiger />}></Route>
           <Route path="/desvsaura" element={<Desvsaura />}></Route>
@@ -211,7 +224,6 @@ const App = () => {
           <Route path="/swiftvsgrandi10" element={<Swiftvsgrandi10 />}></Route>
           <Route path="/swifvsi20" element={<Swifvsi20 />}></Route>
           <Route path="/wagovstiago" element={<Wagovstiago />}></Route>
-          
         </Routes>
       </div>
     </Router>
