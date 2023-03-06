@@ -80,7 +80,7 @@ const Dice = () => {
         </button>
         <Link to="/puzzlequestion">
           {" "}
-          <button className="third icon-conatiner btn-width">
+          <button className="third icon-conatiner btn-width  btn-enter-score">
             Enter Score
           </button>
         </Link>

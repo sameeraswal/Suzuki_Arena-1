@@ -5,14 +5,10 @@ import React, { useEffect, useState } from "react";
 import useDidMountEffect from "./Custumhook";
 import { fal } from "./Afterflip";
 
-
-
 function FlippableCard({ title, key }) {
   const [showFront, setShowFront] = useState(true);
-  
-  
+
   // console.log("showFront");
-  
 
   // useEffect(() => {
   //   const data = window.localStorage.getItem("cardState");
@@ -31,17 +27,14 @@ function FlippableCard({ title, key }) {
 
   return (
     <div className="flippable-card-container">
-    
       <CSSTransition in={showFront} timeout={300} classNames="flip">
         <Card
-          
           title={title}
           value={key}
           onClick={() => {
             // setShowFront((v) => !v);
-            
+
             setShowFront(false);
-            
           }}
         />
       </CSSTransition>

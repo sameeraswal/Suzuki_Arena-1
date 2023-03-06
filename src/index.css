@@ -350,6 +350,8 @@
   background: #b33951;
 }
 
+
+
 /* Wheel */
 
 :root {
@@ -1152,3 +1154,7 @@ ul {
 }
 
 
+.btn-enter-score{
+  margin-left: -1%;
+  margin-top: 8%;
+}

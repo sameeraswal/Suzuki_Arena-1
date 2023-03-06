@@ -11,7 +11,7 @@ function Card({ onClick, title }) {
   const flipImg = require("../flipcard-img.jpg");
   const navigate = useNavigate();
   const timeOutFun = (e) => {
-    setTimeout(() => window.open(`../afterflip/ ${title}`), 400);
+    setTimeout(() => window.open(`../afterflip/${title}`), 400);
     // console.log(title);
   };
   
