@@ -33,6 +33,7 @@ import Judgesround from "./Components/Judgesround";
 import Solutionsonly from "./Components/Solutiononly";
 import Cardscasestudy from "./Components/case study flipcard/Cardscasestudy";
 import Casestudy from "./Components/Casestudy";
+import Brewsuv from "./Components/Flipcardspages/Brevsxuv";
 
 const App = () => {
   const places = [
@@ -191,7 +192,8 @@ const App = () => {
 
           <Route path="/leaderboardth" element={<Leaderboardth />}></Route>
           <Route path="/casestudy" element={<Casestudy />}></Route>
-
+          <Route path="/brewsuv" element={<Brewsuv />}></Route>
+         
         </Routes>
       </div>
     </Router>

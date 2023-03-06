@@ -12,7 +12,7 @@ function FlippableCard({ title, key }) {
   
   
   // console.log("showFront");
-  const [color, setColor] = useState("#110781");
+  
 
   // useEffect(() => {
   //   const data = window.localStorage.getItem("cardState");
@@ -39,7 +39,7 @@ function FlippableCard({ title, key }) {
           value={key}
           onClick={() => {
             // setShowFront((v) => !v);
-            setColor("#A8A8A8");
+            
             setShowFront(false);
             
           }}

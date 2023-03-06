@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 // import Remaincard from "./Remaincard";
 import bgImg from "../leaderboardfinal/05.png";
 
-const Brewsuv = () => {
+const Wagovstiago = () => {
   const [count, setCount] = useState(5);
   let response = {
     status: true,
@@ -54,4 +54,5 @@ const Brewsuv = () => {
   );
 };
 
-export default Brewsuv;
+export default Wagovstiago;
+
