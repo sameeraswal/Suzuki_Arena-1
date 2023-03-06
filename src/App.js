@@ -34,6 +34,7 @@ import Solutionsonly from "./Components/Solutiononly";
 import Cardscasestudy from "./Components/case study flipcard/Cardscasestudy";
 import Casestudy from "./Components/Casestudy";
 import Afterflipcasestudy from "./Components/case study flipcard/Afterflipcasestudy";
+import Brewsuv from "./Components/Flipcardspages/Brevsxuv";
 
 const App = () => {
   const places = [
@@ -195,6 +196,8 @@ const App = () => {
           <Route path="/afterflipcasestudy" element={<Afterflipcasestudy />}></Route>
 
           
+          <Route path="/brewsuv" element={<Brewsuv />}></Route>
+         
         </Routes>
       </div>
     </Router>

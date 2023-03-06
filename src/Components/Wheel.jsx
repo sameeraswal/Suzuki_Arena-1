@@ -7,6 +7,7 @@ import marker from "./wheelmarker.png";
 import bodyImg from "./3552-[Converted].png";
 import wheelbackground from "./wheelbackground.png";
 import "./wheel.scss";
+import {Link} from 'react-router-dom'
 
 // const [activeQuestion, setActiveQuestion] = useState(0);
 // const { questions } = data;
@@ -49,9 +50,9 @@ export default class Wheel extends React.Component {
   titleToggle() {
     setTimeout(() => this.setState({ seltitle: true }), 200);
   }
-  // timeOutFun() {
-  //   setTimeout(() => window.open("/flipcard", "_self"), 18000);
-  // }
+  timeOutFun() {
+    setTimeout(() => window.open("/flipcard", "_self"), 18000);
+  }
 
   render() {
     const { selectedItem } = this.state;
@@ -84,13 +85,14 @@ export default class Wheel extends React.Component {
             onClick={() => {
               this.selectItem();
               this.titleToggle();
-              // this.timeOutFun();
+              this.timeOutFun();
             }}
           >
 
 
             {items.map((item, i) => (
               <>
+             
                 <div
                   key={i}
                   className={`wheel-item ${item.class}`}
@@ -100,6 +102,7 @@ export default class Wheel extends React.Component {
                 >
                   {item.title}
                 </div>
+                
               </>
             ))}
 
