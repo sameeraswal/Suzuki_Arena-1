@@ -41,6 +41,7 @@ const ModalFrammerc = ({ handleClose, text, type }) => {
         initial="hidden"
         animate="visible"
         exit="exit"
+        style={{height:"75%"}}
       >
         <ModalText text={text} />
         <ModalButton onClick={handleClose} label="Close" />
@@ -53,13 +54,29 @@ const ModalText = () => (
   <div className="modal-text">
     <h3>Eye for an Eye- Guidelines</h3>
     <h5>
-      ◉ First round will be based on images or videos in which 5 questions
-      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;would display as per randomizer. The
-      duration of this round would be 1 &nbsp; &nbsp;&nbsp;&nbsp;minute per
-      question
+      ◉ Participants would spin the wheel digitally to select the competition &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp; comparison
+      <br></br>◉ Inverted cards with benefit statements would be shown on the
+      screen
+      <br></br>◉ Participants would choose the correct card with mentioned
+      parameter &nbsp;&nbsp; of dominance over the shown competition vehicle out of the cards
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;displayed
+      <br></br>
+      ◉ The number of cards would drop after A choice, whether correct or  
+      <br></br>
+      &nbsp; &nbsp; &nbsp;incorrect
+      <br></br>◉ Out of 8 cards 5 cards would be flipped by the participant,
+      which is an
+      <br></br> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;advantage over the competition; the duration of this round
+      will be 
+      <br></br>
+      &nbsp; &nbsp; &nbsp;1 minute per question
+      <br></br>◉ Value would be entered as per the card chosen
+      <br></br>
+      ◉ And each question carries 10 marks
     </h5>
     <br />
-    <h5>◉&nbsp; Each question carries 10 marks</h5>
   </div>
 );
 

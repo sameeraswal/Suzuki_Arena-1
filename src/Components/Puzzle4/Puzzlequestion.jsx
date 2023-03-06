@@ -11,18 +11,16 @@ const Puzzlequestion = () => {
     status: true,
     data: [
       {
-        
         question: "Given a string, reverse each word in the sentence",
-        
-        btn1: 'yes',
-        btn2: 'no'
+
+        btn1: "Yes",
+        btn2: "No",
       },
       {
-       
         question: "Question 2 he sentence",
-       
-        btn1: 'yes',
-        btn2: 'no'
+
+        btn1: "Yes",
+        btn2: "No",
       },
     ],
   };
@@ -32,8 +30,6 @@ const Puzzlequestion = () => {
   const timeOutFun = () => {
     setTimeout(() => window.open("/finish1b", "_self"), 3000);
   };
-
-  
 
   return (
     <>
@@ -53,14 +49,12 @@ const Puzzlequestion = () => {
           </div>
 
           <div className="wordslct justify">
-           
-
             {/* map */}
             {questions.map((item, i) => (
               <>
                 <div className="wordyes">
                   <span key={i}>{item.question}</span>
-                  <Buttonp key={i} name={item.btn1}/>
+                  <Buttonp key={i} name={item.btn1} />
                   {/* <button
                     key={item.id}
                     onClick={() => handleColor(item)}
@@ -73,7 +67,7 @@ const Puzzlequestion = () => {
                     {console.log(`${item.id} and selected is ${selected}`)}
                     Yes
                   </button> */}
-                  <Buttonn key={i} name={item.btn2}/>
+                  <Buttonn key={i} name={item.btn2} />
                   {/* <button
                     key={item.id+1}
                     className="yes-btn icon-conatiner"
@@ -87,8 +81,6 @@ const Puzzlequestion = () => {
                 </div>
               </>
             ))}
-
-            
           </div>
         </div>
       </div>

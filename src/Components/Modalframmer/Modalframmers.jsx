@@ -41,6 +41,7 @@ const ModalFrammers = ({ handleClose, text, type }) => {
         initial="hidden"
         animate="visible"
         exit="exit"
+        style={{height:"45%"}}
       >
         <ModalText text={text} />
         <ModalButton onClick={handleClose} label="Close" />
@@ -53,13 +54,17 @@ const ModalText = () => (
   <div className="modal-text">
     <h3>Bespoke - Sales Pitch</h3>
     <h5>
-      ◉ First round will be based on images or videos in which 5 questions
-      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;would display as per randomizer. The
-      duration of this round would be 1 &nbsp; &nbsp;&nbsp;&nbsp;minute per
-      question
+      ◉ Throw of Dice: To get a random scenario that carries 15 marks
+      <br />
+      ◉ Participant would be given a scenario with a specific customer profile,
+      &nbsp;&nbsp;&nbsp;&nbsp; including his/her usage & needs
+      <br />
+      ◉ Stage 1: Self + Brand Introduction Pitch
+      <br />
+      ◉ Stage 2: Understanding of Customers' Needs & Aspirations
+      <br />
+      ◉ The duration of this scenario is 10 minutes
     </h5>
-    <br />
-    <h5>◉&nbsp; Each question carries 10 marks</h5>
   </div>
 );
 

@@ -53,13 +53,16 @@ const ModalText = () => (
   <div className="modal-text">
     <h3>Solutions Only- Guidelines</h3>
     <h5>
-      ◉ First round will be based on images or videos in which 5 questions
-      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;would display as per randomizer. The
-      duration of this round would be 1 &nbsp; &nbsp;&nbsp;&nbsp;minute per
-      question
+      ◉ Pick a card to get a random scenario related to Calculate pricing & 
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;discount, MS Subscribe feasibility, MS Smart finance that carries
+      <br />
+      &nbsp;&nbsp;&nbsp; 15 marks
+      <br />
+      ◉ Duration of this round is 15 minutes
+
     </h5>
-    <br />
-    <h5>◉&nbsp; Each question carries 10 marks</h5>
+    
   </div>
 );
 
