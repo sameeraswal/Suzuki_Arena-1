@@ -1141,3 +1141,10 @@ ul {
 .case-study-btn{
   margin-top: 5%;
 }
+.case-study-text-afterflip{
+  font-size: 50px;
+}
+.case-study-read-btn{
+  width: 120px;
+  height: 40px;
+}
