@@ -32,6 +32,7 @@ import Listthetwist from "./Components/Listthetwist";
 import Judgesround from "./Components/Judgesround";
 import Solutionsonly from "./Components/Solutiononly";
 import Cardscasestudy from "./Components/case study flipcard/Cardscasestudy";
+import Casestudy from "./Components/Casestudy";
 
 const App = () => {
   const places = [
@@ -95,19 +96,8 @@ const App = () => {
       title: "Desire Vs Aura SX+",
       color: "#571608",
     },
-
-    // "WagonR Vs Tiago",
-    // "Alto K10 Vs Kwid RXT",
-    // "Celerio Vs Tiago",
-    // "Swift Vs i20",
-    // "Swift Vs Grand i10",
-    // "Desire Vs Amaze",
-    // "Desire Vs Tiger",
-    // "Brezza ZXI+MT Vs XUV",
-    // "Ertiga Vs Carens",
-    // "Ertiga Vs Triber",
-    // "Desire Vs Aura SX+",
   ];
+
   const data = [
     { id: 0, cardName: "Height" },
     { id: 1, cardName: "Length" },
@@ -117,6 +107,8 @@ const App = () => {
     { id: 5, cardName: "Mileage" },
     { id: 6, cardName: "Width" },
     { id: 7, cardName: "Wheelbase" },
+    { id: 8, cardName: "BC" },
+    { id: 9, cardName: "FTC" },
   ];
 
   const [showFront, setShowFront] = useState(true);
@@ -198,6 +190,8 @@ const App = () => {
           <Route path="/solutionsonly" element=<Solutionsonly />></Route>
 
           <Route path="/leaderboardth" element={<Leaderboardth />}></Route>
+          <Route path="/casestudy" element={<Casestudy />}></Route>
+
         </Routes>
       </div>
     </Router>

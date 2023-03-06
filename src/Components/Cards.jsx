@@ -3,7 +3,7 @@ import FlippableCard from "./FlippableCard";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 // import Remaincard from "./Remaincard";
-import bgImg from './leaderboardfinal/05.png'
+import bgImg from "./leaderboardfinal/05.png";
 
 const Cards = () => {
   const [count, setCount] = useState(5);
@@ -18,8 +18,8 @@ const Cards = () => {
       { id: 5, cardName: "Mileage" },
       { id: 6, cardName: "Width" },
       { id: 7, cardName: "Wheelbase" },
-      { id: 8, cardName: "Wheelbase" },
-      { id: 9, cardName: "Wheelbase" },
+      { id: 8, cardName: "BC" },
+      { id: 9, cardName: "FTC" },
     ],
   };
 
@@ -32,11 +32,9 @@ const Cards = () => {
   return (
     <>
       <Navbar></Navbar>
-      <img src={bgImg} alt="" className="flip-bg"/>
+      <img src={bgImg} alt="" className="flip-bg" />
       <div className="round-box bg-correct">Flip a Card</div>
-      {/* {showBack && ( */}
       <div className="flex-container bg-correct">
-      
         <div className="remain-container bg-correct">
           <p>Cards</p>
           <p>Remaining: {count}</p>

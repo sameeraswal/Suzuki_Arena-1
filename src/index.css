@@ -26,7 +26,6 @@
   margin-left: 35px;
   margin-right: 35px;
   margin-top: 34px;
-  
 }
 
 .flexbox-item {
@@ -114,11 +113,11 @@
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-.bg-correct{
+.bg-correct {
   position: relative;
 }
 
-.flip-bg{
+.flip-bg {
   position: absolute;
   width: 100%;
   height: 89%;
@@ -358,7 +357,7 @@
   --wheel-size: 450px;
   --wheel-slice-spacing: 50px;
   --wheel-border-size: 10px;
-  --wheel-color: #F7C04A;
+  --wheel-color: #f7c04a;
   --neutral-color: blue;
   --PI: 3.6;
   --nb-item: 0;
@@ -1061,7 +1060,6 @@ ul {
 }
 
 .enter-score-container {
- 
   /* display: grid;
   place-items: center; */
   position: relative;
@@ -1076,41 +1074,37 @@ ul {
   background: linear-gradient(to bottom, #b8a1df 0%, #e9b4c1 100%);
 }
 
-.enter-score-container img{
+.enter-score-container img {
   width: 100%;
   height: 100%;
   background-size: cover;
- 
 }
 
-.score-bg-img{
+.score-bg-img {
   position: relative;
- 
- 
 }
 
 /* top position with max-height can be done */
-.vector-img{
+.vector-img {
   position: absolute;
   max-width: 25%;
- max-height: 60%; 
- right: 130px;
- top: 40px;
+  max-height: 60%;
+  right: 130px;
+  top: 40px;
 }
 
-.scorepage-btn{
+.scorepage-btn {
   position: absolute;
   right: 190px;
-  bottom: 80px
+  bottom: 80px;
 }
 
-.inputscore-btn{
+.inputscore-btn {
   position: absolute;
   bottom: 150px;
   right: 150px;
   width: 20%;
 }
-
 
 .invisible {
   background: #f6f6f5;
@@ -1123,11 +1117,27 @@ ul {
   margin-top: 42%;
   color: #00ff00;
 }
-.btn-bottom{
+.btn-bottom {
   margin-top: 70px;
 }
 
 /* question */
-.selected-answer{
+.selected-answer {
   background-color: green;
+}
+
+/* Case Study */
+.case-study-text {
+  display: flex;
+  width: 90vw;
+  background: #003091;
+  margin: auto;
+  margin-top: 5%;
+  padding: 30px;
+  border-radius: 10px;
+  background: linear-gradient(#f5f7f6, #5ca0f2);
+  border: 1px solid black;
+}
+.case-study-btn{
+  margin-top: 5%;
 }
