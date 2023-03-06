@@ -49,14 +49,15 @@ export default class Wheel extends React.Component {
   titleToggle() {
     setTimeout(() => this.setState({ seltitle: true }), 200);
   }
-  timeOutFun() {
-    setTimeout(() => window.open("/flipcard", "_self"), 18000);
-  }
+  // timeOutFun() {
+  //   setTimeout(() => window.open("/flipcard", "_self"), 18000);
+  // }
 
   render() {
     const { selectedItem } = this.state;
     const { seltitle } = this.state;
     const { items } = this.props;
+
     const wheelVars = {
       "--nb-item": items.length,
       "--selected-item": selectedItem,
@@ -67,8 +68,8 @@ export default class Wheel extends React.Component {
       <>
         <Navbar></Navbar>
         {/* {console.log(items[selectedItem].title)} */}
-         <h1>{car}</h1> 
-        {console.log(seltitle)}
+        <h1>{car}</h1>
+        
         {/* <div className="round-box">Wheel</div> */}
         <div className="wheel-container" onClick={this.timeOutFun}>
           <div className="wheel-background"></div>
@@ -86,114 +87,23 @@ export default class Wheel extends React.Component {
               // this.timeOutFun();
             }}
           >
-            <div
-              className="wheel-item wheel-color"
-              // key={index}
-              style={{
-                "--item-nb": 1,
-              }}
-            >
-              {items[0].title}
-            </div>
-            <div
-              className="wheel-item wheel-color1"
-              // key={index}
-              style={{
-                "--item-nb": 2,
-              }}
-            >
-              {items[1].title}
-            </div>
-            <div
-              className="wheel-item wheel-color2"
-              // key={index}
-              style={{
-                "--item-nb": 3,
-              }}
-            >
-              {items[2].title}
-            </div>
-            <div
-              className="wheel-item wheel-color3"
-              // key={index}
-              style={{
-                "--item-nb": 4,
-              }}
-            >
-              {items[3].title}
-            </div>
-            <div
-              className="wheel-item wheel-color4"
-              // key={index}
-              style={{
-                "--item-nb": 5,
-              }}
-            >
-              {items[4].title}
-            </div>
-            <div
-              className="wheel-item wheel-color5"
-              // key={index}
-              style={{
-                "--item-nb": 6,
-              }}
-            >
-              {items[5].title}
-            </div>
-            <div
-              className="wheel-item wheel-color6"
-              // key={index}
-              style={{
-                "--item-nb": 7,
-              }}
-            >
-              {items[6].title}
-            </div>
-            <div
-              className="wheel-item wheel-color"
-              // key={index}
-              style={{
-                "--item-nb": 8,
-              }}
-            >
-              {items[7].title}
-            </div>
-            <div
-              className="wheel-item wheel-color1"
-              // key={index}
-              style={{
-                "--item-nb": 9,
-              }}
-            >
-              {items[8].title}
-            </div>
-            <div
-              className="wheel-item wheel-color2"
-              // key={index}
-              style={{
-                "--item-nb": 10,
-              }}
-            >
-              {items[9].title}
-            </div>
-            <div
-              className="wheel-item wheel-color3"
-              // key={index}
-              style={{
-                "--item-nb": 11,
-              }}
-            >
-              {items[10].title}
-            </div>
-            <div
-              className="wheel-item wheel-color4"
-              // key={index}
-              style={{
-                "--item-nb": 12,
-              }}
-            >
-              {items[11].title}
-            </div>
+
+
+            {items.map((item, i) => (
+              <>
+                <div
+                  key={i}
+                  className={`wheel-item ${item.class}`}
+                  style={{
+                    "--item-nb": i,
+                  }}
+                >
+                  {item.title}
+                </div>
+              </>
+            ))}
+
+            
           </div>
         </div>
       </>

@@ -27,7 +27,7 @@ function Card({ onClick, title }) {
               timeOutFun();
             }}
           >
-            hiii
+            button
           </button>
           <p
             onClick={() => {

@@ -39,62 +39,62 @@ const App = () => {
     {
       id: 0,
       title: "S presso Vs Kwid",
-      color: "red",
+      class: "wheel-color"
     },
     {
       id: 1,
       title: "WagonR Vs Tiago",
-      color: "black",
+      class: "wheel-color1",
+    },
+    {
+      id: 2,
+      title: "Alto K10 Vs Kwid RXT",
+      class: "wheel-color2",
     },
     {
       id: 3,
-      title: "Alto K10 Vs Kwid RXT",
-      color: "green",
+      title: "Celerio Vs Tiago",
+      class: "wheel-color3"
     },
     {
       id: 4,
-      title: "Celerio Vs Tiago",
-      color: "#fff",
+      title: "Swift Vs i20",
+      class: "wheel-color4"
     },
     {
       id: 5,
-      title: "Swift Vs i20",
-      color: "#000",
+      title: "Swift Vs Grand i10",
+      class: "wheel-color5"
     },
     {
       id: 6,
-      title: "Swift Vs Grand i10",
-      color: "#00ff00",
+      title: "Desire Vs Amaze",
+      class: "wheel-color6"
     },
     {
       id: 7,
-      title: "Desire Vs Amaze",
-      color: "#a8a8a8",
+      title: "Desire Vs Tiger",
+      class: "wheel-color"
     },
     {
       id: 8,
-      title: "Desire Vs Tiger",
-      color: "#0f0f0f",
+      title: "Brezza ZXI+MT Vs XUV",
+      class: "wheel-color1"
     },
     {
       id: 9,
-      title: "Brezza ZXI+MT Vs XUV",
-      color: "#FF5733",
+      title: "Ertiga Vs Carens",
+      class: "wheel-color2"
     },
     {
       id: 10,
-      title: "Ertiga Vs Carens",
-      color: "#FF5736",
+      title: "Ertiga Vs Triber",
+      class: "wheel-color3"
     },
     {
       id: 11,
-      title: "Ertiga Vs Triber",
-      color: "#FE5733",
-    },
-    {
-      id: 12,
       title: "Desire Vs Aura SX+",
-      color: "#571608",
+      class: "wheel-color4"
     },
   ];
 
