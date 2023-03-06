@@ -133,3 +133,9 @@
   // border-right: solid #051937 calc(var(--wheel-size) / 2);
   border-right: solid #0267fe calc(var(--wheel-size) / 2);
 }
+
+.car-name-from-wheel{
+  position: absolute;
+  margin-left: 100px;
+  margin-top: -100px;
+}

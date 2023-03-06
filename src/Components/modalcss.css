@@ -302,8 +302,8 @@ li {
   left: -15%;
   height: 87vh;
   width: 97vw;
-  
-  background: rgba(0,0,0, 0.7);
+
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -311,7 +311,20 @@ li {
   opacity: 0.01;
   margin-top: -40%;
 }
-.hand{
+.hand {
   margin-left: 18%;
   margin-top: -20px;
+}
+.backdrop-finish-1b {
+  position: absolute;
+  top: 79px;
+  left: 0%;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-y: hidden;
+  opacity: 0.01;
 }

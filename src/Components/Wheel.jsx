@@ -7,7 +7,7 @@ import marker from "./wheelmarker.png";
 import bodyImg from "./3552-[Converted].png";
 import wheelbackground from "./wheelbackground.png";
 import "./wheel.scss";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 // const [activeQuestion, setActiveQuestion] = useState(0);
 // const { questions } = data;
@@ -40,7 +40,7 @@ export default class Wheel extends React.Component {
         this.props.onSelectItem(selectedItem);
       }
       this.setState({ selectedItem });
-      car = this.props.items[selectedItem - 4].title;
+      car = this.props.items[selectedItem - 3].title;
     } else {
       this.setState({ selectedItem: null });
       setTimeout(this.selectItem, 800);
@@ -69,8 +69,7 @@ export default class Wheel extends React.Component {
       <>
         <Navbar></Navbar>
         {/* {console.log(items[selectedItem].title)} */}
-        <h1>{car}</h1>
-        
+
         {/* <div className="round-box">Wheel</div> */}
         <div className="wheel-container" onClick={this.timeOutFun}>
           <div className="wheel-background"></div>
@@ -88,11 +87,8 @@ export default class Wheel extends React.Component {
               this.timeOutFun();
             }}
           >
-
-
             {items.map((item, i) => (
               <>
-             
                 <div
                   key={i}
                   className={`wheel-item ${item.class}`}
@@ -102,12 +98,10 @@ export default class Wheel extends React.Component {
                 >
                   {item.title}
                 </div>
-                
               </>
             ))}
-
-            
           </div>
+          <h1 className="car-name-from-wheel">{car}</h1>
         </div>
       </>
     );

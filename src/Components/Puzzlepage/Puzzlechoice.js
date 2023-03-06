@@ -5,6 +5,12 @@ import "./puzzlepage.css";
 import { useState } from "react";
 import Buttonp from "./Buttonp";
 import Buttonn from "./Buttonn";
+import Finishmodal from "../Modalframmer/finishmodal";
+import { motion, AnimatePresence } from "framer-motion";
+
+// import ModalFrammer from "./ModalFrammer";
+import "../modalcss.css";
+import Finishmodal1b from "../Modalframmer/finishmodal1b";
 
 const Puzzlechoice = () => {
   let response = {
@@ -12,35 +18,44 @@ const Puzzlechoice = () => {
     data: [
       {
         name: "Word-1",
-        btn1: "yes",
-        btn2: "no",
+        btn1: "Yes",
+        btn2: "No",
       },
       {
         name: "Word-2",
-        btn1: "yes",
-        btn2: "no",
+        btn1: "Yes",
+        btn2: "No",
       },
       {
         name: "Word-3",
-        btn1: "yes",
-        btn2: "no",
+        btn1: "Yes",
+        btn2: "No",
       },
       {
         name: "Word-4",
-        btn1: "yes",
-        btn2: "no",
+        btn1: "Yes",
+        btn2: "No",
       },
       {
         name: "Word-5",
-        btn1: "yes",
-        btn2: "no",
+        btn1: "Yes",
+        btn2: "No",
       },
       {
         name: "Word-6",
-        btn1: "yes",
-        btn2: "no",
+        btn1: "Yes",
+        btn2: "No",
       },
     ],
+  };
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => {
+    setModalOpen(false);
+  };
+  const open = () => {
+    setModalOpen(true);
   };
 
   let choices = response.data;
@@ -79,6 +94,30 @@ const Puzzlechoice = () => {
                 </div>
               </>
             ))}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="third icon-conatiner finish-btn"
+              onClick={() => (modalOpen ? close() : open())}
+            >
+              Finish Round
+            </motion.button>
+
+            <AnimatePresence
+              // Disable any initial animations on children that
+              // are present when the component is first rendered
+              initial={false}
+              // Only render one component at a time.
+              // The exiting component will finish its exit
+              // animation before entering component is rendered
+              exitBeforeEnter={true}
+              // Fires when all exiting nodes have completed animating out
+              onExitComplete={() => null}
+            >
+              {modalOpen && (
+                <Finishmodal1b modalOpen={modalOpen} handleClose={close} />
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>

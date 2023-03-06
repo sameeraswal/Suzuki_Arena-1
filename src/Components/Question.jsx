@@ -32,15 +32,15 @@ const Question = () => {
     setActiveQuestion((id) => id + 1);
   };
 
-  const [func, setFunc] = useState(true);
-  const handleClick = (event) => {
-    console.log(func);
-    func
-      ? (event.target.style.background = "#00ff00")
-      : (event.target.style.background = "#fff");
-    setFunc(!func);
-    // event.target.style.background = "#fff";
-  };
+  // const [func, setFunc] = useState(true);
+  // const handleClick = (event) => {
+  //   console.log(func);
+  //   func
+  //     ? (event.target.style.background = "#00ff00")
+  //     : (event.target.style.background = "#fff");
+  //   setFunc(!func);
+  //   // event.target.style.background = "#fff";
+  // };
   // const correctHandler = () => {
   //   setSelectOp("#00FF00");
   //   //save option id in var
@@ -75,7 +75,7 @@ const Question = () => {
                     <li
                       //value = cid
                       // onClick={}
-                      className="selected-answer icon-conatiner hvr-grow"
+                      className="icon-conatiner hvr-grow"
                     >
                       {item.name}
                     </li>

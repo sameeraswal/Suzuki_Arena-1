@@ -18,12 +18,12 @@ const Timersection = () => {
   return (
     <div>
       <Navbar />
-      <div>
-        <div className="round-box">Timer</div>
-        <div className="container1">
+      <div className=" bg-timer-section">
+        <div className="round-box" style={{marginTop:"20px", position:"absolute", marginLeft:"40px"}}>Timer</div>
+        <div className="">
           <div className="timer-container">
             <Timermin />
-            <img
+            {/* <img
               src={stopwatch}
               alt="stop"
               height={50}
@@ -33,7 +33,7 @@ const Timersection = () => {
                 marginLeft: "250px",
                 position: "absolute",
               }}
-            />
+            /> */}
           </div>
   
           {/* {data && ( */}

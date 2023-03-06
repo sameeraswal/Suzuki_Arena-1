@@ -16,7 +16,7 @@ const Dashboard = () => {
       {
         roundName: "1-B",
         route: "/chasethemaze",
-        isLocked: true,
+        isLocked: false,
       },
       {
         roundName: "2",
@@ -26,7 +26,27 @@ const Dashboard = () => {
       {
         roundName: "3",
         route: "/bespokesalespitch",
-        isLocked: false,
+        isLocked: true,
+      },
+      {
+        roundName: "4",
+        route: "/solutionsonly",
+        isLocked: true,
+      },
+      {
+        roundName: "5",
+        route: "/askexpress",
+        isLocked: true,
+      },
+      {
+        roundName: "6",
+        route: "/listthetwist",
+        isLocked: true,
+      },
+      {
+        roundName: "7",
+        route: "/judgesround",
+        isLocked: true,
       },
     ],
   };
@@ -65,10 +85,7 @@ const Dashboard = () => {
               </div>
             </>
           ))}
-
-          
-          </div>
-        
+        </div>
       </div>
     </>
   );

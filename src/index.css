@@ -1045,6 +1045,8 @@ ul {
 
 .btn-width {
   width: 200px;
+  margin-top: 39%;
+  margin-left: 44.5%;
 }
 .full-height {
   height: 1100px;
@@ -1138,13 +1140,15 @@ ul {
   background: linear-gradient(#f5f7f6, #5ca0f2);
   border: 1px solid black;
 }
-.case-study-btn{
+.case-study-btn {
   margin-top: 5%;
 }
-.case-study-text-afterflip{
+.case-study-text-afterflip {
   font-size: 50px;
 }
-.case-study-read-btn{
+.case-study-read-btn {
   width: 120px;
   height: 40px;
 }
+
+
