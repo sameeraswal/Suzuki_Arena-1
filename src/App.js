@@ -35,6 +35,7 @@ import Cardscasestudy from "./Components/case study flipcard/Cardscasestudy";
 import Casestudy from "./Components/Casestudy";
 import Afterflipcasestudy from "./Components/case study flipcard/Afterflipcasestudy";
 import Brewsuv from "./Components/Flipcardspages/Brevsxuv";
+import Altovskwid from "./Components/Flipcardspages/Altovskwid";
 
 const App = () => {
   const places = [
@@ -199,17 +200,17 @@ const App = () => {
 
           
           <Route path="/brewsuv" element={<Brewsuv />}></Route>
-          <Route path="/" element={<Brewsuv />}></Route>
-          <Route path="/brewsuv" element={<Brewsuv />}></Route>
-          <Route path="/brewsuv" element={<Brewsuv />}></Route>
-          <Route path="/brewsuv" element={<Brewsuv />}></Route>
-          <Route path="/brewsuv" element={<Brewsuv />}></Route>
-          <Route path="/brewsuv" element={<Brewsuv />}></Route>
-          <Route path="/brewsuv" element={<Brewsuv />}></Route>
-          <Route path="/brewsuv" element={<Brewsuv />}></Route>
-          <Route path="/brewsuv" element={<Brewsuv />}></Route>
-          <Route path="/brewsuv" element={<Brewsuv />}></Route>
-          <Route path="/brewsuv" element={<Brewsuv />}></Route>
+          <Route path="/altovskwid" element={<Altovskwid />}></Route>
+          <Route path="/celvstia" element={<Celvstia />}></Route>
+          <Route path="/desirevsamaze" element={<Desirevsamaze />}></Route>
+          <Route path="/desirevstiger" element={<Desirevstiger />}></Route>
+          <Route path="/desvsaura" element={<Desvsaura />}></Route>
+          <Route path="/ertvscare" element={<Ertvscare />}></Route>
+          <Route path="/ertvstrib" element={<Ertvstrib />}></Route>
+          <Route path="/sprevskwid" element={<Sprevskwid />}></Route>
+          <Route path="/swiftvsgrandi10" element={<Swiftvsgrandi10 />}></Route>
+          <Route path="/swifvsi20" element={<Swifvsi20 />}></Route>
+          <Route path="/wagovstiago" element={<Wagovstiago />}></Route>
           
         </Routes>
       </div>
