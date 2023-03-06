@@ -10,7 +10,7 @@
 
   /* Styling */
   border-radius: 5px;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
 
   user-select: none;
   cursor: pointer;
@@ -34,11 +34,11 @@
   align-items: center;
 
   /* Content Styling */
-  font-family: Montserrat;
-  font-weight: 800;
-  font-size: 30px;
-  color: #fff;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 20px;
+  color: rgb(184, 184, 184);
+  /* text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9); */
   /* text-shadow: 1px 0 black, -1px 0 black, 0 1px black, 0 -1px black, */
              /* 0.5px 0.5px black, -0.5px -0.5px black, -0.5px -0.5px black, -0.5px -0.5px black; */
 }
@@ -65,10 +65,133 @@
   z-index: 1;
   color: var(--arena-color);
   text-shadow: none;
-  font-size: 25px;
+  font-size: 20px;
+  margin-top: 100px;
 }
-.front-icon {
-  background: url(../flipcard-img.jpg);
+
+
+/* front images */
+.front-icon1{
+  background: url(../cardsImages/height\ colour.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* background-position: -2px; */
+}
+
+.front-icon2 {
+  background: url(../cardsImages/length\ colour.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+
+.front-icon3 {
+  background: url(../cardsImages/power\ colour.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+
+.front-icon4 {
+  background: url(../cardsImages/torque\ colour.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.front-icon5 {
+  background: url(../cardsImages/boot\ capacity\ colour.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.front-icon6 {
+  background: url(../cardsImages/mileage\ colour.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.front-icon7 {
+  background: url(../cardsImages/infotainment\ system\ colour.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.front-icon8 {
+  background: url(../cardsImages/wheelbase\ colour.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.front-icon9 {
+  background: url(../cardsImages/FTC\ colour.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.front-icon10 {
+  background: url(../cardsImages/FTC\ colour.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+
+/* back images */
+.back-1{
+  background: url(../cardsImages/height.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.back-2{
+  background: url(../cardsImages/length.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.back-3{
+  background: url(../cardsImages/power.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.back-4{
+  background: url(../cardsImages/torque.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.back-5{
+  background: url(../cardsImages/boot\ capacity.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.back-6{
+  background: url(../cardsImages/mileage.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.back-7{
+  background: url(../cardsImages/infotainment\ system.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.back-8{
+  background: url(../cardsImages/wheelbase.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.back-9{
+  background: url(../cardsImages/height.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
+.back-10{
+  background: url(../cardsImages/FTC.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: -2px;

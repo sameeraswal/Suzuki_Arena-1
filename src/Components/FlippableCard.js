@@ -5,9 +5,9 @@ import React, { useEffect, useState } from "react";
 import useDidMountEffect from "./Custumhook";
 import { fal } from "./Afterflip";
 
-function FlippableCard({ title, key }) {
+function FlippableCard({ title }) {
   const [showFront, setShowFront] = useState(true);
-
+  
   // console.log("showFront");
 
   // useEffect(() => {
@@ -26,11 +26,11 @@ function FlippableCard({ title, key }) {
   // }, [showFront]);
 
   return (
-    <div className="flippable-card-container">
+    <div className="flippable-card-container ">
       <CSSTransition in={showFront} timeout={300} classNames="flip">
         <Card
           title={title}
-          value={key}
+          
           onClick={() => {
             // setShowFront((v) => !v);
 
