@@ -6,7 +6,7 @@ const Casestudy = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="round-box">Case Study</div>
+      <div className="round-box">VAS Case Study</div>
       <div className="case-study-text">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,

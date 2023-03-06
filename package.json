@@ -23,6 +23,7 @@
     "react-responsive-modal": "^6.4.1",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
+    "react-shuffle": "^2.1.0",
     "react-transition-group": "^4.4.5",
     "react-wheel-of-prizes": "^1.0.9",
     "reactjs-localstorage": "^1.0.1",
