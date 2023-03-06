@@ -67,7 +67,7 @@ const ModalText = () => (
 );
 
 const ModalButton = ({ onClick, label }) => (
-  <Link to="/flipcard">
+  <Link to="/flipcardcasestudy">
     {" "}
     <motion.button
       className="modal-button cls-btn"

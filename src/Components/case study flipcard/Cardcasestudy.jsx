@@ -5,7 +5,7 @@ import "../card/flip-transition.css";
 
 function Cardcasestudy({ onClick, title }) {
   const timeOutFun = (e) => {
-    setTimeout(() => window.open("../afterflip/" + title), 400);
+    setTimeout(() => window.open("../afterflipcasestudy/"), 400);
     // console.log(title);
   };
 
