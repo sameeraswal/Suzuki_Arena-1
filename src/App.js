@@ -192,8 +192,21 @@ const App = () => {
 
           <Route path="/leaderboardth" element={<Leaderboardth />}></Route>
           <Route path="/casestudy" element={<Casestudy />}></Route>
+
+          {/* flipcard routes after wheel */}
           <Route path="/brewsuv" element={<Brewsuv />}></Route>
-         
+          <Route path="/" element={<Brewsuv />}></Route>
+          <Route path="/brewsuv" element={<Brewsuv />}></Route>
+          <Route path="/brewsuv" element={<Brewsuv />}></Route>
+          <Route path="/brewsuv" element={<Brewsuv />}></Route>
+          <Route path="/brewsuv" element={<Brewsuv />}></Route>
+          <Route path="/brewsuv" element={<Brewsuv />}></Route>
+          <Route path="/brewsuv" element={<Brewsuv />}></Route>
+          <Route path="/brewsuv" element={<Brewsuv />}></Route>
+          <Route path="/brewsuv" element={<Brewsuv />}></Route>
+          <Route path="/brewsuv" element={<Brewsuv />}></Route>
+          <Route path="/brewsuv" element={<Brewsuv />}></Route>
+          
         </Routes>
       </div>
     </Router>
