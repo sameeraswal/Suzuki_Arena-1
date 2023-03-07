@@ -328,8 +328,12 @@ li {
   overflow-y: hidden;
   opacity: 0.01;
 }
-.modal-text h5 {
+.modal-text h5 div {
   display: flex;
+  flex-direction: row;
+}
+.resp-tablet {
+  height: 50%;
 }
 
 /* finish round  */
@@ -339,5 +343,22 @@ li {
     left: -20%;
     height: 93vh;
     width: 100vw;
+  }
+
+  /* chasethemaze */
+  .resp-tablet {
+    height: 39%;
+  }
+
+  /* eyeforeye */
+  .modal-text h5 {
+    display: flex;
+    flex-direction: column;
+  }
+  .resp-tablet-e-f-e{
+    height: 60%;
+  }
+  .resp-tablet-b-s-s-p{
+    height: 40%;
   }
 }

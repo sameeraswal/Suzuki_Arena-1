@@ -1206,8 +1206,68 @@ ul {
     width: 50%;
     height: 35%;
   }
-  .question-btn{
+  .question-btn {
     margin-left: 240px;
   }
-  
+
+  /* chasethemaze */
+  .bg-timer-section {
+    height: 92vh;
+    width: 100vw;
+  }
+
+  .bg-timer-section .round-box {
+    width: 91%;
+  }
+  .timer-container {
+    height: 418px;
+    width: 701px;
+    margin-left: 1%;
+  }
+  .btn-width {
+    margin-top: 82%;
+    margin-left: 40%;
+  }
+  .scoring-btn {
+    margin-top: 67px;
+    margin-left: 219px;
+  }
+  .wordslct {
+    width: 40%;
+  }
+  .wordyes span {
+    font-size: 18px;
+    width: 65%;
+    margin-right: 50px;
+  }
+  .yes-btn {
+    margin-right: 10px;
+  }
+  .wordslct .finish-btn {
+    margin-left: 5%;
+  }
+
+  /* eyeforeye */
+  /* wheel  */
+  .body-img {
+    position: absolute;
+    margin-left: 15%;
+    margin-top: -105%;
+  }
+  .wheel {
+    margin-top: -102.3%;
+    margin-left: 142px;
+  }
+  .wheel-marker {
+    margin-left: 45.5%;
+    margin-top: -105%;
+  }
+
+  /* flipcard */
+
+  /* bespokesales */
+  .container1 .btn-enter-score {
+    margin-top: 13%;
+    margin-left: 1%;
+  }
 }

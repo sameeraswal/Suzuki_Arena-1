@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Backdrop from "../backdrop/Backdrop";
 import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
-import modalimg from '../modal1.jpeg'
+import modalimg from "../modal1.jpeg";
 
 const dropIn = {
   hidden: {
@@ -44,7 +44,7 @@ const Modalframmeras = ({ handleClose, text, type }) => {
         exit="exit"
       >
         <ModalText text={text} />
-        
+
         <ModalButton onClick={handleClose} label="Close" />
       </motion.div>
     </Backdrop>
@@ -55,16 +55,21 @@ const ModalText = () => (
   <div className="modal-text">
     <h3>Ask Express- Guidelines</h3>
     <h5>
-      ◉ 15 Questions in 60 seconds for each participant  (1 mark per question)
-      <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Participant has the option to answer or pass
-Total duration of this
-<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;round is 25 minutes
+      <div>
+        <div>◉</div>
 
+        <div>
+          15 Questions in 60 seconds for each participant (1 mark per question)
+          Participant has the option to answer or pass Total duration of this
+          round is 25 minutes
+        </div>
+      </div>
+      <div>
+        <div>◉</div>
+
+        <div>Each question carries 10 marks</div>
+      </div>
     </h5>
-    <br />
-    <h5>◉&nbsp; Each question carries 10 marks</h5>
   </div>
 );
 

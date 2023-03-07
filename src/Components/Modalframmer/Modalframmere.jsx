@@ -36,12 +36,11 @@ const ModalFrammerc = ({ handleClose, text, type }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient"
+        className="modal orange-gradient resp-tablet-e-f-e"
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
-        style={{height:"75%"}}
       >
         <ModalText text={text} />
         <ModalButton onClick={handleClose} label="Close" />
@@ -54,29 +53,52 @@ const ModalText = () => (
   <div className="modal-text">
     <h3>Eye for an Eye- Guidelines</h3>
     <h5>
-      ◉ Participants would spin the wheel digitally to select the competition &nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp; comparison
-      <br></br>◉ Inverted cards with benefit statements would be shown on the
-      screen
-      <br></br>◉ Participants would choose the correct card with mentioned
-      parameter &nbsp;&nbsp; of dominance over the shown competition vehicle out of the cards
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;displayed
-      <br></br>
-      ◉ The number of cards would drop after A choice, whether correct or  
-      <br></br>
-      &nbsp; &nbsp; &nbsp;incorrect
-      <br></br>◉ Out of 8 cards 5 cards would be flipped by the participant,
-      which is an
-      <br></br> 
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;advantage over the competition; the duration of this round
-      will be 
-      <br></br>
-      &nbsp; &nbsp; &nbsp;1 minute per question
-      <br></br>◉ Value would be entered as per the card chosen
-      <br></br>
-      ◉ And each question carries 10 marks
+      <div>
+        <div>◉ </div>
+        <div>
+          Participants would spin the wheel digitally to select the competition
+          comparison
+        </div>
+      </div>
+      <div>
+        <div>◉</div>
+        <div>
+          Inverted cards with benefit statements would be shown on the screen
+        </div>
+      </div>
+      <div>
+        <div>◉</div>
+        <div>
+          {" "}
+          Participants would choose the correct card with mentioned parameter of
+          dominance over the shown competition vehicle out of the cards
+          displayed
+        </div>
+      </div>
+      <div>
+        <div> ◉</div>
+        <div>
+          The number of cards would drop after A choice, whether correct or
+          incorrect{" "}
+        </div>
+      </div>
+      <div>
+        <div> ◉</div>
+        <div>
+          Out of 8 cards 5 cards would be flipped by the participant, which is
+          an advantage over the competition; the duration of this round will be
+          1 minute per question
+        </div>
+      </div>
+      <div>
+        <div> ◉</div>
+        <div> Value would be entered as per the card chosen</div>
+      </div>
+      <div>
+        <div>◉ </div>
+        <div> And each question carries 10 marks</div>
+      </div>
     </h5>
-    <br />
   </div>
 );
 

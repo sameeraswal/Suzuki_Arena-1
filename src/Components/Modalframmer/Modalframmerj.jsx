@@ -53,11 +53,19 @@ const ModalText = () => (
   <div className="modal-text">
     <h3>Judges Round- Guidelines</h3>
     <h5>
-      ◉ One question would be asked to each participant by the Jury members.
-      <br />
-     &nbsp;&nbsp;&nbsp;&nbsp; Average score would be considered as final marks for the round 
-      <br />
-      ◉ Total duration of Jury round is for 20 minutes
+      <div>
+        <div>◉</div>
+
+        <div>
+          One question would be asked to each participant by the Jury members.
+          Average score would be considered as final marks for the round
+        </div>
+      </div>
+      <div>
+        <div>◉</div>
+
+        <div>Total duration of Jury round is for 20 minutes</div>
+      </div>
     </h5>
   </div>
 );

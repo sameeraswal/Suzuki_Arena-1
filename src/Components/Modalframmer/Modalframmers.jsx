@@ -36,12 +36,12 @@ const ModalFrammers = ({ handleClose, text, type }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient"
+        className="modal orange-gradient resp-tablet-b-s-s-p"
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
-        style={{height:"45%"}}
+        
       >
         <ModalText text={text} />
         <ModalButton onClick={handleClose} label="Close" />
@@ -54,16 +54,33 @@ const ModalText = () => (
   <div className="modal-text">
     <h3>Bespoke - Sales Pitch</h3>
     <h5>
-      ◉ Throw of Dice: To get a random scenario that carries 15 marks
-      <br />
-      ◉ Participant would be given a scenario with a specific customer profile,
-      &nbsp;&nbsp;&nbsp;&nbsp; including his/her usage & needs
-      <br />
-      ◉ Stage 1: Self + Brand Introduction Pitch
-      <br />
-      ◉ Stage 2: Understanding of Customers' Needs & Aspirations
-      <br />
-      ◉ The duration of this scenario is 10 minutes
+      <div>
+        <div>◉</div>
+
+        <div>
+          {" "}
+          Throw of Dice: To get a random scenario that carries 15 marks
+        </div>
+      </div>
+      <div>
+        <div>◉</div>
+        <div>
+          Participant would be given a scenario with a specific customer
+          profile, including his/her usage & needs
+        </div>
+      </div>
+      <div>
+        <div>◉</div>
+        <div>Stage 1: Self + Brand Introduction Pitch</div>
+      </div>
+      <div>
+        <div>◉</div>
+        <div>Stage 2: Understanding of Customers' Needs & Aspirations</div>
+      </div>
+      <div>
+        <div>◉</div>
+        <div>The duration of this scenario is 10 minutes</div>
+      </div>
     </h5>
   </div>
 );

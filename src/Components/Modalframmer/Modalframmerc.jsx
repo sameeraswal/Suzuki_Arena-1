@@ -36,12 +36,11 @@ const ModalFrammerc = ({ handleClose, text, type }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient"
+        className="modal orange-gradient resp-tablet"
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
-        style={{height:"50%"}}
       >
         <ModalText text={text} />
 

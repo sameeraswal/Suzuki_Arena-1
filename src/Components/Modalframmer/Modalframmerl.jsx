@@ -53,15 +53,22 @@ const ModalText = () => (
   <div className="modal-text">
     <h3>List the twist- Guidelines</h3>
     <h5>
-      ◉ Question in the form of riddles will be displayed on the screen.
-      <br />
-      ◉ Participant first to push buzzer gets a chance to answer
-____Questions 
-<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in ___ seconds for each participant that carries 1 mark per question
-<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total duration of this round is 20 minutes
+      <div>
+        <div>◉</div>
 
+        <div>
+          Question in the form of riddles will be displayed on the screen.
+        </div>
+      </div>
+      <div>
+        <div>◉</div>
+
+        <div>
+          Participant first to push buzzer gets a chance to answer ____Questions
+          in ___ seconds for each participant that carries 1 mark per question
+          Total duration of this round is 20 minutes
+        </div>
+      </div>
     </h5>
   </div>
 );

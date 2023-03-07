@@ -54,11 +54,13 @@ const ModalText = () => (
   <div className="modal-text">
     <h3>The First Mile- Guidelines</h3>
     <h5>
-      <div>◉ </div>
       <div>
-       First round will be based on images or videos in which 5 questions would
-        display as per randomizer. The duration of this round would be 1 minute
-        per question
+        <div>◉ </div>
+        <div>
+          First round will be based on images or videos in which 5 questions
+          would display as per randomizer. The duration of this round would be 1
+          minute per question
+        </div>
       </div>
     </h5>
     <br />
@@ -66,19 +68,6 @@ const ModalText = () => (
   </div>
 );
 
-const ModalText1 = () => (
-  <div className="modal-text">
-    <h3>Chase The Maze - Guidelines</h3>
-    <h5>
-      ◉ First round will be based on images or videos in which 5 questions
-      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;would display as per randomizer. The
-      duration of this round would be 1 &nbsp; &nbsp;&nbsp;&nbsp;minute per
-      question
-    </h5>
-    <br />
-    <h5>◉&nbsp; Each question carries 10 marks</h5>
-  </div>
-);
 const ModalButton = ({ onClick, label }) => (
   <Link to="/question">
     {" "}
