@@ -6,19 +6,19 @@ const Casestudy = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="round-box">VAS Case Study</div>
+      <div className="round-box">Case 2 Extended warranty + Rewards</div>
       <div className="case-study-text">
         <p>
-          Mr. Ramesh Sharma is a corporate (28 yrs) and stays in the city with
-          his wife (working in the same office) and 1 kid (4 Years). He
-          currently owns an Alto 800 (2019) and now has decided to buy Swift
-          Lxi. He is very unsure of which bank to apply a loan from as there is
-          slight difference in offering of each bank. Mr. Sharma is keen to pick
-          up the new vehicle at lowest possible EMI. After delivery, he plans to
-          take the vehicle to a local accessories shop and get the following
-          accessories Alloy wheels | Leatherette Seat covers | Steering wheel
-          cover | Projector headlamps Assure the customer using Maruti Suzuki
-          Value Added Services.
+          Mr. Ranjan Dalal owns a garment shop in the local city market. He is
+          upgrading from his Wagon R (2017) to Brezza Vxi AMT and he wants a
+          bigger vehicle for his family. He wants to keep service and
+          maintenance costs low. He is worried that upgrading to a larger
+          vehicle will attract big bills on service, spares parts and accidental
+          damages (out of scope of warranty). He fears that most of the problems
+          come right after the vehicle is out of its warranty period. Despite
+          spending additionally on warranty and service coverages there is no
+          consideration from the brand.
+          Assure the customer using Maruti Suzuki Value Added Services.
         </p>
       </div>
 
