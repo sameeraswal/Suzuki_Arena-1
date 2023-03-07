@@ -71,6 +71,15 @@
 
 
 /* front images */
+.front-icon{
+  background: url(../card-back.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+
+
 .front-icon1{
   background: url(../cardsImages/height\ colour.png);
   background-repeat: no-repeat;
