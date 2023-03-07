@@ -50,7 +50,7 @@ export default class Wheel extends React.Component {
   titleToggle() {
     setTimeout(() => this.setState({ seltitle: true }), 200);
   }
-  timeOutFun(car) {
+  timeOutFun() {
     console.log(car,`/${car}`)
     setTimeout(() => window.open(`/${car}`, "_self"), 18000);
   }
@@ -85,7 +85,7 @@ export default class Wheel extends React.Component {
             onClick={() => {
               this.selectItem();
               this.titleToggle();
-              this.timeOutFun(car);
+              this.timeOutFun();
             }}
           >
             {items.map((item, i) => (
