@@ -5,6 +5,7 @@
     width: 100%;
     height: 100vh;
     background: #5555ab;
+    
   }
   .hero .container {
     width: 400px;
@@ -21,9 +22,15 @@
   .hero .container .randomNum {
     background: #181831;
     padding: 20px;
+    
   }
+
+
+  
+
   .hero .container .randomNum p span {
     color: #9cff9c;
+    
     font-weight: 600;
   }
   .hero .numContainer {
@@ -52,4 +59,5 @@
     padding: 14px;
     width: 100%;
     cursor: pointer;
+    
   }

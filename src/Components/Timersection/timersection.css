@@ -5,20 +5,27 @@
 }
 .timer-container {
   /* background-color: red ; */
-  height: 190px;
-  width: 350px;
+  height: 428px;
+  width: 724px;
   margin: auto;
-  margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--gradient3);
+  /* background: var(--gradient3); */
   border-radius: 12px;
+  background: url(./02.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 140px;
+  margin-left: 25%;
 }
 
 .stopwatch-card {
   font-size: 50px;
   font-weight: bold;
+  margin-left: 77px;
+  margin-top: 77px;
 }
 
 .start-btn {
@@ -26,9 +33,15 @@
   border-radius: 15px;
 }
 
-.input-correct{
-    width: 100px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: -20px;
+.input-correct {
+  width: 100px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+.bg-timer-section {
+  background: url(./01.png);
+  height: 89vh;
+  width: 100vw;
+  margin-top: -0.5px;
 }

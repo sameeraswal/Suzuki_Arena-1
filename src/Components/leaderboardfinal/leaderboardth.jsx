@@ -13,8 +13,8 @@ const Leaderboardth = () => {
       <Navbar />
       <div className=" bg-img">
         <div className="description">
-          <img src={trophy} alt="" /> <img src={text} alt="" />
-          <img src={trophy} alt="" />
+          <img src={trophy} alt="" className="resp-trophy resp-trophy-1"/> <img src={text} alt="" className="resp-text" />
+          <img src={trophy} alt="" className="resp-trophy"/>
         </div>
         <img src={f} alt="" className="first"/>
         <h1 className="position-text align-lead-1">Anvesh Mishra</h1>

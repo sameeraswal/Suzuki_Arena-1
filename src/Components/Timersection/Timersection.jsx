@@ -18,12 +18,12 @@ const Timersection = () => {
   return (
     <div>
       <Navbar />
-      <div>
-        <div className="round-box">Timer</div>
-        <div className="container1">
+      <div className=" bg-timer-section">
+        <div className="round-box" style={{marginTop:"20px", position:"absolute", marginLeft:"40px"}}>Timer</div>
+        <div className="">
           <div className="timer-container">
             <Timermin />
-            <img
+            {/* <img
               src={stopwatch}
               alt="stop"
               height={50}
@@ -33,13 +33,11 @@ const Timersection = () => {
                 marginLeft: "250px",
                 position: "absolute",
               }}
-            />
+            /> */}
           </div>
-          {show && (
-            <input type="text" placeholder="score" className="input-correct" />
-          )}
+  
           {/* {data && ( */}
-          {/* <Link to="/puzzle"> */}
+          <Link to="/puzzle">
           <button
             className="third icon-conatiner btn-width"
             onClick={() => {
@@ -49,7 +47,7 @@ const Timersection = () => {
           >
             Enter Score
           </button>
-          {/* </Link> */}
+          </Link>
           {/* )} */}
         </div>
       </div>

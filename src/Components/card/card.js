@@ -6,27 +6,28 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { reactLocalStorage } from "reactjs-localstorage";
 
+
 function Card({ onClick, title }) {
   const flipImg = require("../flipcard-img.jpg");
   const navigate = useNavigate();
   const timeOutFun = (e) => {
-    setTimeout(() => window.open("../afterflip/" + title), 400);
+    setTimeout(() => window.open(`../afterflip/${title.cardName}`), 400);
     // console.log(title);
   };
-
+  
   return (
     <>
       <div className="card" onClick={onClick}>
-        <div className="card-back">{title}</div>
+        <div className={`card-back text-on-card-back ${title.classBack}`}>{title.cardName}</div>
 
-        <div className="card-front front-icon">
+        <div className="card-front ">
           <button
-            className="middle card-front front-icon"
+            className={`middle card-front ${title.class}`}
             onClick={() => {
               timeOutFun();
             }}
           >
-            hiii
+            button
           </button>
           <p
             onClick={() => {
@@ -34,7 +35,7 @@ function Card({ onClick, title }) {
             }}
             className="text-on-card"
           >
-            {title}
+            {title.cardName}
           </p>
         </div>
       </div>

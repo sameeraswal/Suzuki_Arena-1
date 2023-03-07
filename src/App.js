@@ -14,14 +14,14 @@ import Login from "./Components/Login";
 import Afterflip from "./Components/Afterflip";
 import Leaderboard from "./Components/leaderboard/Leaderboard";
 import Question from "./Components/Question";
-import Finishround from "./Components/Finish Round/Finishround";
+
 import Chasethemaze from "./Components/Chasethemaze";
 import Random from "./Components/Random Number/Randomnumber";
 import Timermin from "./Components/Timersection/Timermin";
 import Timersection from "./Components/Timersection/Timersection";
 import Puzzle from "./Components/Puzzle";
 import Puzzlechoice from "./Components/Puzzlepage/Puzzlechoice";
-import Finishround1B from "./Components/Finish Round/Finishround1B";
+
 import Eyeforaneye from "./Components/eyeforaneye";
 import Bespokesalespitch from "./Components/Bespokesalespitch";
 import Leaderboardth from "./Components/leaderboardfinal/leaderboardth";
@@ -31,8 +31,89 @@ import Askexpress from "./Components/Askexpress";
 import Listthetwist from "./Components/Listthetwist";
 import Judgesround from "./Components/Judgesround";
 import Solutionsonly from "./Components/Solutiononly";
+import Cardscasestudy from "./Components/case study flipcard/Cardscasestudy";
+import Casestudy from "./Components/Casestudy";
+import Afterflipcasestudy from "./Components/case study flipcard/Afterflipcasestudy";
+import Brewsuv from "./Components/Flipcardspages/Brevsxuv";
+import Altovskwid from "./Components/Flipcardspages/Altovskwid";
+import Desirevsamaze from "./Components/Flipcardspages/Desirevsamaze";
+import Desirevstiger from "./Components/Flipcardspages/Desirevstiger";
+import CelvsTia from "./Components/Flipcardspages/CelvsTia";
+import Ertvstrib from "./Components/Flipcardspages/Ertvstrib";
+import Desvsaura from "./Components/Flipcardspages/Desvsaura";
+import Ertvscare from "./Components/Flipcardspages/Ertvscare";
+import Sprevskwid from "./Components/Flipcardspages/Sprevskwid";
+import Swifvsi20 from "./Components/Flipcardspages/Swifvsi20";
+import Wagovstiago from "./Components/Flipcardspages/Wagovstiago";
+import Swiftvsgrandi10 from "./Components/Flipcardspages/Swiftvsgrandi10";
+import Finishmodal from "./Components/Modalframmer/finishmodal";
+import Enterertiga from "./Components/Entercorepages/Enterertiga";
+import Enterbrezza from "./Components/Entercorepages/Enterbrezza";
 
 const App = () => {
+  const places = [
+    {
+      id: 0,
+      title: "S presso Vs Kwid",
+      class: "wheel-color",
+    },
+    {
+      id: 1,
+      title: "WagonR Vs Tiago",
+      class: "wheel-color1",
+    },
+    {
+      id: 2,
+      title: "Alto K10 Vs Kwid RXT",
+      class: "wheel-color2",
+    },
+    {
+      id: 3,
+      title: "Celerio Vs Tiago",
+      class: "wheel-color3",
+    },
+    {
+      id: 4,
+      title: "Swift Vs i20",
+      class: "wheel-color4",
+    },
+    {
+      id: 5,
+      title: "Swift Vs Grand i10",
+      class: "wheel-color5",
+    },
+    {
+      id: 6,
+      title: "Desire Vs Amaze",
+      class: "wheel-color6",
+    },
+    {
+      id: 7,
+      title: "Desire Vs Tiger",
+      class: "wheel-color",
+    },
+    {
+      id: 8,
+      title: "Brezza ZXI+MT Vs XUV",
+      class: "wheel-color1",
+    },
+    {
+      id: 9,
+      title: "Ertiga Vs Carens",
+      class: "wheel-color2",
+    },
+    {
+      id: 10,
+      title: "Ertiga Vs Triber",
+      class: "wheel-color3",
+    },
+    {
+      id: 11,
+      title: "Desire Vs Aura SX+",
+      class: "wheel-color4",
+    },
+  ];
+
   const data = [
     { id: 0, cardName: "Height" },
     { id: 1, cardName: "Length" },
@@ -42,20 +123,10 @@ const App = () => {
     { id: 5, cardName: "Mileage" },
     { id: 6, cardName: "Width" },
     { id: 7, cardName: "Wheelbase" },
+    { id: 8, cardName: "BC" },
+    { id: 9, cardName: "FTC" },
   ];
-  const places = [
-    "WagonR Vs Tiago",
-    "Alto K10 Vs Kwid RXT",
-    "Celerio Vs Tiago",
-    "Swift Vs i20",
-    "Swift Vs Grand i10",
-    "Desire Vs Amaze",
-    "Desire Vs Tiger",
-    "Brezza ZXI+MT Vs XUV",
-    "Ertiga Vs Carens",
-    "Ertiga Vs Triber",
-    "Desire Vs Aura SX+",
-  ];
+
   const [showFront, setShowFront] = useState(true);
   useEffect(() => {
     const data = window.localStorage.getItem("cardState");
@@ -72,7 +143,7 @@ const App = () => {
           <Route exact path="/" element={<Registration />}></Route>
           <Route path="/login" element={<Login />}></Route>
 
-          <Route path="/wheel" element={<Wheel items={places}/>}></Route>
+          <Route path="/wheel" element={<Wheel items={places} />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/firstmile" element={<FirstMile />}></Route>
           <Route path="/randomizer" element={<Randomizer />}></Route>
@@ -112,9 +183,9 @@ const App = () => {
           ></Route>
 
           <Route path="/flipcard" element=<Cards />></Route>
+          <Route path="/flipcardcasestudy" element=<Cardscasestudy />></Route>
+
           <Route path="/question" element=<Question />></Route>
-          <Route path="/finish" element=<Finishround />></Route>
-          <Route path="/finish1b" element=<Finishround1B />></Route>
           <Route path="/chasethemaze" element={<Chasethemaze />}></Route>
           <Route path="/randomnum" element={<Random />}></Route>
           <Route path="/timersection" element={<Timersection />}></Route>
@@ -133,6 +204,31 @@ const App = () => {
           <Route path="/solutionsonly" element=<Solutionsonly />></Route>
 
           <Route path="/leaderboardth" element={<Leaderboardth />}></Route>
+          <Route path="/casestudy" element={<Casestudy />}></Route>
+          <Route path="/finishmodal" element={<Finishmodal />}></Route>
+
+
+          {/* flipcard routes after wheel */}
+          <Route
+            path="/afterflipcasestudy"
+            element={<Afterflipcasestudy />}
+          ></Route>
+
+          <Route path="/brezzazxi+mtvsxuv" element={<Brewsuv />}></Route>
+          <Route path="/altok10vskwidrxt" element={<Altovskwid />}></Route>
+          <Route path="/celeriovstiago" element={<CelvsTia />}></Route>
+          <Route path="/desirevsamaze" element={<Desirevsamaze />}></Route>
+          <Route path="/desirevstiger" element={<Desirevstiger />}></Route>
+          <Route path="/desvsaura" element={<Desvsaura />}></Route>
+          <Route path="/ertigavscarens" element={<Ertvscare />}></Route>
+          <Route path="/ertigavstriber" element={<Ertvstrib />}></Route>
+          <Route path="/spressovskwid" element={<Sprevskwid />}></Route>
+          <Route path="/swiftvsgrandi10" element={<Swiftvsgrandi10 />}></Route>
+          <Route path="/swiftvsi20" element={<Swifvsi20 />}></Route>
+          <Route path="/wagonrvstiago" element={<Wagovstiago />}></Route>
+          <Route path="/enterertiga" element={<Enterertiga />}></Route>
+
+          <Route path="/enterbrezza" element={<Enterbrezza />}></Route>
         </Routes>
       </div>
     </Router>

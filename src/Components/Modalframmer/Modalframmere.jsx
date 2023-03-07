@@ -36,7 +36,7 @@ const ModalFrammerc = ({ handleClose, text, type }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient"
+        className="modal orange-gradient resp-tablet-e-f-e resp-desktop"
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -53,13 +53,52 @@ const ModalText = () => (
   <div className="modal-text">
     <h3>Eye for an Eye- Guidelines</h3>
     <h5>
-      ◉ First round will be based on images or videos in which 5 questions
-      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;would display as per randomizer. The
-      duration of this round would be 1 &nbsp; &nbsp;&nbsp;&nbsp;minute per
-      question
+      <div>
+        <div>◉ </div>
+        <div>
+          Participants would spin the wheel digitally to select the competition
+          comparison
+        </div>
+      </div>
+      <div>
+        <div>◉</div>
+        <div>
+          Inverted cards with benefit statements would be shown on the screen
+        </div>
+      </div>
+      <div>
+        <div>◉</div>
+        <div>
+          {" "}
+          Participants would choose the correct card with mentioned parameter of
+          dominance over the shown competition vehicle out of the cards
+          displayed
+        </div>
+      </div>
+      <div>
+        <div> ◉</div>
+        <div>
+          The number of cards would drop after A choice, whether correct or
+          incorrect{" "}
+        </div>
+      </div>
+      <div>
+        <div> ◉</div>
+        <div>
+          Out of 8 cards 5 cards would be flipped by the participant, which is
+          an advantage over the competition; the duration of this round will be
+          1 minute per question
+        </div>
+      </div>
+      <div>
+        <div> ◉</div>
+        <div> Value would be entered as per the card chosen</div>
+      </div>
+      <div>
+        <div>◉ </div>
+        <div> And each question carries 10 marks</div>
+      </div>
     </h5>
-    <br />
-    <h5>◉&nbsp; Each question carries 10 marks</h5>
   </div>
 );
 
@@ -87,7 +126,7 @@ const ModalButton = ({ onClick, label }) => (
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
     >
-      Close
+     Let's begin
     </motion.button>
   </Link>
 );

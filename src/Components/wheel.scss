@@ -1,0 +1,141 @@
+
+:root {
+  --wheel-font: "Roboto", "Quicksand", sans-serif;
+  --wheel-size: 450px;
+  --wheel-slice-spacing: 50px;
+  --wheel-border-size: 10px;
+  --wheel-color: #ECF2FF;
+  --neutral-color: blue;
+  --PI: 3.75; //before 3.6
+  --nb-item: 0;
+  --item-nb: 0;
+  --selected-item: 0;
+  --nb-turn: 5;
+  --spinning-duration: 4s;
+  --reset-duration: 0.25s;
+  --arena-color: #003091;
+  --gradient: linear-gradient(10deg, #e8d5c4, #b4e4ff);
+  --gradient2: linear-gradient(15deg, #04ea00, #00d17d);
+  --gradient3: linear-gradient(15deg, #b648ff, #ef5dff);
+}
+
+// loop!
+
+.wheel-item:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 0px;
+  opacity: 0.4;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  border-right: solid #e302fc calc(var(--wheel-size) / 2);
+  //   @each $themeColour, $i in $themeColours {
+  //     &{
+  //       border-right: solid $i calc(var(--wheel-size) / 2);
+  //     }
+  //   }
+}
+.wheel-color::before {
+  // width: calc(var(--wheel-size) / 2);
+  // background-color: red;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  // border-right: solid #051937 calc(var(--wheel-size) / 2);
+  border-right: solid orange calc(var(--wheel-size) / 2);
+}
+.wheel-color1::before {
+  // width: calc(var(--wheel-size) / 2);
+  // background-color: red;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  // border-right: solid #051937 calc(var(--wheel-size) / 2);
+  border-right: solid red calc(var(--wheel-size) / 2);
+}
+.wheel-color2::before {
+  // width: calc(var(--wheel-size) / 2);
+  // background-color: red;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  // border-right: solid #051937 calc(var(--wheel-size) / 2);
+  border-right: solid rgb(3, 252, 3) calc(var(--wheel-size) / 2);
+}
+.wheel-color3::before {
+  // width: calc(var(--wheel-size) / 2);
+  // background-color: red;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  // border-right: solid #051937 calc(var(--wheel-size) / 2);
+  border-right: solid rgb(36, 2, 254) calc(var(--wheel-size) / 2);
+}
+.wheel-color4::before {
+  // width: calc(var(--wheel-size) / 2);
+  // background-color: red;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  // border-right: solid #051937 calc(var(--wheel-size) / 2);
+  border-right: solid rgb(228, 249, 2) calc(var(--wheel-size) / 2);
+}
+.wheel-color5::before {
+  // width: calc(var(--wheel-size) / 2);
+  // background-color: red;
+  --slice-max-width: calc(
+    var(--PI) * var(--wheel-size) + var(--wheel-size) / 2
+  );
+  --slice-width: calc(
+    (var(--slice-max-width) / var(--nb-item)) - var(--wheel-slice-spacing)
+  );
+  border: solid transparent calc(var(--slice-width) / 2);
+  border-left: solid transparent 0;
+  // border-right: solid #051937 calc(var(--wheel-size) / 2);
+  border-right: solid #0267fe calc(var(--wheel-size) / 2);
+}
+
+.car-name-from-wheel{
+  position: absolute;
+  margin-left: 100px;
+  margin-top: -100px;
+}

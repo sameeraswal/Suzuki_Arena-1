@@ -11,5 +11,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(require("./router/routes"));
 
 app.listen(port, () => {
-    console.log(`application is listing to port ${port}`);
+  console.log(`application is listing to port ${port}`);
 });

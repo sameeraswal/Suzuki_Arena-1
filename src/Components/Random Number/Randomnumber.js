@@ -20,15 +20,18 @@ export default function Random() {
   return (
     <>
       <Navbar />
+      
       <div className="hero">
+      {/* <div className="round-box ">Number Generator</div> */}
+      {/* <div className="round-box">Random Number Generator</div> */}
       <img src={randomnumimg} alt="" height={400} width={400} style={{marginLeft:"30px"}}
         />
         <div className="container">
         
           <div className="randomNum">
-            <p>
+            <p className="txt-bold">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              Random Numer: <span>{randomNum}</span>
+             <b> Random Number :</b> <span> {randomNum} </span>
             </p>
           </div>
 

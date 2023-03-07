@@ -2,47 +2,63 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
 import { data } from "./data";
-import { Modal } from "react-responsive-modal";
-import { Link, useNavigate } from "react-router-dom";
-import Finishround from "./Finish Round/Finishround";
+
+import { motion, AnimatePresence } from "framer-motion";
+import ModalFrammer from "./ModalFrammer";
+import "./modalcss.css";
+import Finishmodal from "./Modalframmer/finishmodal";
 
 const Question = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => {
+    setModalOpen(false);
+  };
+  const open = () => {
+    setModalOpen(true);
+  };
   const [activeQuestion, setActiveQuestion] = useState(0);
+  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const { questions } = data;
   //id variable
   const { question, choices, video, id } = questions[activeQuestion];
-  const { name, cID, src } = choices;
 
-  const [selectop, setSelectOp] = useState("#fff");
+  // const [selectop, setSelectOp] = useState("#fff");
+
+  //next question function
   const onClickNext = () => {
     //HTTP call
 
     setActiveQuestion((id) => id + 1);
   };
 
-  const correctHandler = () => {
-    setSelectOp("#00FF00");
-    //save option id in var
-  };
-  const [open, setOpen] = useState(false);
-
-  const onOpenModal = () => setOpen(true);
-  const onCloseModal = () => setOpen(false);
+  // const [func, setFunc] = useState(true);
+  // const handleClick = (event) => {
+  //   console.log(func);
+  //   func
+  //     ? (event.target.style.background = "#00ff00")
+  //     : (event.target.style.background = "#fff");
+  //   setFunc(!func);
+  //   // event.target.style.background = "#fff";
+  // };
+  // const correctHandler = () => {
+  //   setSelectOp("#00FF00");
+  //   //save option id in var
+  // };
 
   return (
     <>
       <Navbar />
       <div className="round-box">Rounds</div>
-      {/* {video && ( */}
+
       <div className="question-container">
+      <div className="ques-number">{`${activeQuestion+1}/5`}</div>
         <Timer />
 
         {video && (
           <div className="question-video">
             {/* {console.log(v.video)} */}
-            <iframe width="520" height="225" src={video}>
-              .
-            </iframe>
+            <object width="520" height="225" data={video}></object>
           </div>
         )}
 
@@ -57,9 +73,8 @@ const Question = () => {
                   {
                     <li
                       //value = cid
-                      //onClick={correctHandler}//function with parameter
-
-                      className="selected-answer icon-conatiner hvr-grow"
+                      // onClick={}
+                      className="icon-conatiner hvr-grow"
                     >
                       {item.name}
                     </li>
@@ -69,24 +84,50 @@ const Question = () => {
             </ul>
           </div>
 
+          {/* modal */}
           <div>
             {id !== 4 ? (
               <button
                 onClick={onClickNext}
                 className="third question-btn icon-conatiner"
               >
-                Next
+                Submit
               </button>
             ) : (
               <>
-                <Link to="/finish">
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="third question-btn icon-conatiner"
+                  onClick={() => (modalOpen ? close() : open())}
+                >
+                  Submit
+                </motion.button>
+
+                <AnimatePresence
+                  // Disable any initial animations on children that
+                  // are present when the component is first rendered
+                  initial={false}
+                  // Only render one component at a time.
+                  // The exiting component will finish its exit
+                  // animation before entering component is rendered
+                  exitBeforeEnter={true}
+                  // Fires when all exiting nodes have completed animating out
+                  onExitComplete={() => null}
+                >
+                  {modalOpen && (
+                    <Finishmodal modalOpen={modalOpen} handleClose={close} />
+                  )}
+                </AnimatePresence>
+
+                {/* <Link to="/finish">
                   <button
                     
                     className="third question-btn icon-conatiner"
                   >
-                    Next
+                    
                   </button>
-                </Link>
+                </Link> */}
               </>
             )}
           </div>

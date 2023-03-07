@@ -53,13 +53,23 @@ const ModalText = () => (
   <div className="modal-text">
     <h3>List the twist- Guidelines</h3>
     <h5>
-      ◉ First round will be based on images or videos in which 5 questions
-      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;would display as per randomizer. The
-      duration of this round would be 1 &nbsp; &nbsp;&nbsp;&nbsp;minute per
-      question
+      <div>
+        <div>◉</div>
+
+        <div>
+          Question in the form of riddles will be displayed on the screen.
+        </div>
+      </div>
+      <div>
+        <div>◉</div>
+
+        <div>
+          Participant first to push buzzer gets a chance to answer ____Questions
+          in ___ seconds for each participant that carries 1 mark per question
+          Total duration of this round is 20 minutes
+        </div>
+      </div>
     </h5>
-    <br />
-    <h5>◉&nbsp; Each question carries 10 marks</h5>
   </div>
 );
 
@@ -73,7 +83,7 @@ const ModalButton = ({ onClick, label }) => (
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
     >
-      Close
+      Let's begin
     </motion.button>
   </Link>
 );

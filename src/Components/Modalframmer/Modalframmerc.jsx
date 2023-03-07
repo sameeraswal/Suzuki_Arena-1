@@ -36,14 +36,14 @@ const ModalFrammerc = ({ handleClose, text, type }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient"
+        className="modal orange-gradient resp-tablet"
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
-        <ModalText1 text={text} />
-        
+        <ModalText text={text} />
+
         <ModalButton onClick={handleClose} label="Close" />
       </motion.div>
     </Backdrop>
@@ -52,19 +52,23 @@ const ModalFrammerc = ({ handleClose, text, type }) => {
 
 const ModalText = () => (
   <div className="modal-text">
-    <h3>The First Mile- Guidelines</h3>
+    <h3>Chase The Maze- Guidelines</h3>
     <h5>
-      ◉ First round will be based on images or videos in which 5 questions
-      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;would display as per randomizer. The
-      duration of this round would be 1 &nbsp; &nbsp;&nbsp;&nbsp;minute per
-      question
+      ◉ Participants would roll the dice digitally
+      <br />
+      ◉ Participants to show dice number to the trainer
+      <br />
+      ◉ Participants would get puzzle paper as per dice number
+      <br />
+      ◉ Participant would read the tab and find the answer in the maze
+      <br />◉ Number of questions is 6 and the duration of this round will
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <br></br>
+      &nbsp;&nbsp;&nbsp;&nbsp; be 1 minute per question.
+      <br />◉ And each question carries 10 marks
     </h5>
-    <br />
-    <h5>◉&nbsp; Each question carries 10 marks</h5>
   </div>
 );
-
-
 
 const ModalText1 = () => (
   <div className="modal-text">
@@ -90,7 +94,7 @@ const ModalButton = ({ onClick, label }) => (
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
     >
-      Close
+      Let's begin
     </motion.button>
   </Link>
 );

@@ -4,7 +4,6 @@ import Backdrop from "./backdrop/Backdrop";
 import { stateLogger } from "../stateLogger";
 import { Link } from "react-router-dom";
 
-
 const dropIn = {
   hidden: {
     y: "-100vh",
@@ -44,7 +43,7 @@ const ModalFrammer = ({ handleClose, text, type }) => {
         exit="exit"
       >
         <ModalText text={text} />
-        
+
         <ModalButton onClick={handleClose} label="Close" />
       </motion.div>
     </Backdrop>
@@ -55,39 +54,33 @@ const ModalText = () => (
   <div className="modal-text">
     <h3>The First Mile- Guidelines</h3>
     <h5>
-    ◉ First round will be based on images or videos in which 5 questions
-         &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;would display as per randomizer. The duration of this round would be 1
-         &nbsp; &nbsp;&nbsp;&nbsp;minute per question
+      <div>
+        <div>◉ </div>
+        <div>
+          First round will be based on images or videos in which 5 questions
+          would display as per randomizer. The duration of this round would be 1
+          minute per question
+        </div>
+      </div>
     </h5>
     <br />
-    <h5>◉&nbsp; Each question carries 10 marks</h5>
+    <h5>◉Each question carries 10 marks</h5>
   </div>
 );
 
-const ModalText1 = () => (
-  <div className="modal-text">
-    <h3>Chase The Maze - Guidelines</h3>
-    <h5>
-    ◉ First round will be based on images or videos in which 5 questions
-         &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;would display as per randomizer. The duration of this round would be 1
-         &nbsp; &nbsp;&nbsp;&nbsp;minute per question
-    </h5>
-    <br />
-    <h5>◉&nbsp; Each question carries 10 marks</h5>
-  </div>
-);
 const ModalButton = ({ onClick, label }) => (
-  <Link to='/question'> <motion.button
-    className="modal-button cls-btn"
-    type="button"
-    whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.95 }}
-    onClick={onClick}
-  >
-    Close
-  </motion.button>
-  </Link> 
-
+  <Link to="/question">
+    {" "}
+    <motion.button
+      className="modal-button cls-btn"
+      type="button"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={onClick}
+    >
+      Let's begin
+    </motion.button>
+  </Link>
 );
 
 export default ModalFrammer;

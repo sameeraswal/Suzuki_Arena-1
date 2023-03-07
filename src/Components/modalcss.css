@@ -3,7 +3,7 @@
 :root {
   --dark: #101315;
   --light: #eeeeee;
-  --gradient: linear-gradient(10deg, #E8D5C4, #b4e4ff);
+  --gradient: linear-gradient(10deg, #e8d5c4, #b4e4ff);
   --gradient2: linear-gradient(15deg, #04ea00, #00d17d);
   --gradient3: linear-gradient(15deg, #b648ff, #ef5dff);
   font-size: 1rem;
@@ -290,4 +290,80 @@ li {
 
 .cls-btn {
   margin-top: 40px;
+}
+
+.last-question-btn {
+  width: 100px;
+  height: 20px;
+}
+.backdrop-finish {
+  position: absolute;
+  top: 60px;
+  left: -15%;
+  height: 87vh;
+  width: 97vw;
+
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-y: hidden;
+  opacity: 0.01;
+  margin-top: -40%;
+}
+.hand {
+  margin-left: 18%;
+  margin-top: -20px;
+}
+.backdrop-finish-1b {
+  position: absolute;
+  top: 79px;
+  left: 0%;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-y: hidden;
+  opacity: 0.01;
+}
+.modal-text h5 div {
+  display: flex;
+  flex-direction: row;
+}
+.resp-tablet {
+  height: 50%;
+}
+.resp-desktop{
+  height: 70%;
+}
+.resp-desktop-b-s-sp{
+  height: 45%;
+}
+/* finish round  */
+@media screen and (max-width: 768px) {
+  .backdrop-finish {
+    top: -158px;
+    left: -20%;
+    height: 93vh;
+    width: 100vw;
+  }
+
+  /* chasethemaze */
+  .resp-tablet {
+    height: 39%;
+  }
+
+  /* eyeforeye */
+  .modal-text h5 {
+    display: flex;
+    flex-direction: column;
+  }
+  .resp-tablet-e-f-e{
+    height: 80%;
+  }
+  .resp-tablet-b-s-s-p{
+    height: 40%;
+  }
 }

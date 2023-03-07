@@ -16,9 +16,11 @@
 }
 
 .wordyes {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
+  /* display: flex;
+  justify-content: space-evenly; */
+  /* text-align: center; */
+  color: var(--arena-color);
+  font-weight: bold;
 }
 .yes-btn {
   width: 90px;
@@ -26,9 +28,25 @@
   border-radius: 8px;
   cursor: pointer;
   border: 1px solid gray;
+  margin-right: 47px;
 }
 
 .wordyes span {
   font-size: 20px;
   margin-top: 4px;
+}
+.YES {
+  background-color: green;
+}
+
+.NO {
+  background-color: red;
+}
+/* Finishbtn */
+.finish-btn {
+  margin-top: 6px;
+  margin-left: 45%;
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
