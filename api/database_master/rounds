@@ -1,180 +1,5 @@
 [{
   "_id": {
-    "$oid": "64065cd2144a5b613c575cef"
-  },
-  "roundName": "1-A",
-  "isRoundLocked": false,
-  "questions": [
-    {
-      "questionId": 1,
-      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
-      "question": "(round 4)Which function is used to serialize an object into a JSON string in Javascript",
-      "choices": [
-        {
-          "cId": 1,
-          "name": "stringify()",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        },
-        {
-          "cId": 2,
-          "name": "parse()",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        },
-        {
-          "cId": 3,
-          "name": "convert()",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        },
-        {
-          "cId": 4,
-          "name": "None of the above",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        }
-      ],
-      "type": "MCQs",
-      "correctAnswer": 1
-    },
-    {
-      "questionId": 2,
-      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
-      "question": "Which of the following keywords is used to define a variable in Javascript?",
-      "choices": [
-        {
-          "cId": 1,
-          "name": "var",
-          "img": ""
-        },
-        {
-          "cId": 2,
-          "name": "let",
-          "img": ""
-        },
-        {
-          "cId": 3,
-          "name": "var and let",
-          "img": ""
-        },
-        {
-          "cId": 4,
-          "name": "None of the above",
-          "img": ""
-        }
-      ],
-      "type": "MCQs",
-      "correctAnswer": 3
-    },
-    {
-      "questionId": 3,
-      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
-      "question": "Which of the following methods can be used to display data in some form using Javascript?",
-      "choices": [
-        {
-          "cId": 1,
-          "name": "document.write()",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        },
-        {
-          "cId": 2,
-          "name": "console.log()",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        },
-        {
-          "cId": 3,
-          "name": "window.alert",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        },
-        {
-          "cId": 4,
-          "name": "All of the above",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        }
-      ],
-      "type": "MCQs",
-      "correctAnswer": 4
-    },
-    {
-      "questionId": 4,
-      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
-      "question": "Which function is used to serialize an object into a JSON string in Javascript",
-      "choices": [
-        {
-          "cId": 1,
-          "name": "stringify()",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        },
-        {
-          "cId": 2,
-          "name": "parse()",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        },
-        {
-          "cId": 3,
-          "name": "convert()",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        },
-        {
-          "cId": 4,
-          "name": "None of the above",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        }
-      ],
-      "type": "MCQs",
-      "correctAnswer": 1
-    },
-    {
-      "questionId": 5,
-      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
-      "question": "Which function is used to serialize an object into a JSON string in Javascript",
-      "choices": [
-        {
-          "cId": 1,
-          "name": "stringify()",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        },
-        {
-          "cId": 2,
-          "name": "parse()",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        },
-        {
-          "cId": 3,
-          "name": "convert()",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        },
-        {
-          "cId": 4,
-          "name": "None of the above",
-          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
-        }
-      ],
-      "type": "MCQs",
-      "correctAnswer": 1
-    }
-  ],
-  "correctAnswers": [
-    {
-      "questionId": 1,
-      "cId": 3
-    },
-    {
-      "questionId": 2,
-      "cId": 1
-    },
-    {
-      "questionId": 3,
-      "cId": 2
-    },
-    {
-      "questionId": 4,
-      "cId": 4
-    },
-    {
-      "questionId": 5,
-      "cId": 2
-    }
-  ]
-},{
-  "_id": {
     "$oid": "64065cd2144a5b613c575cf0"
   },
   "roundName": "4",
@@ -1031,6 +856,132 @@
           "cId": "49 kW @ 5500 rpm"
         }
       ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "64073aba144a5b613c575cf9"
+  },
+  "roundName": "1-A",
+  "isRoundLocked": false,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionUrl": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Identify the variant from which the feature shown above is available ?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "LXi"
+        },
+        {
+          "cId": 2,
+          "name": "VXi"
+        },
+        {
+          "cId": 3,
+          "name": "ZXi"
+        },
+        {
+          "cId": 4,
+          "name": "ZXi"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 2,
+      "questionUrl": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of these is an 'Active safety' feature?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "seat belt",
+          "choiceUrl": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "ABS",
+          "choiceUrl": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "HEARTECT",
+          "choiceUrl": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "Airbag",
+          "choiceUrl": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 3,
+      "questionUrl": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "What is the maximum power output of Brezza in Petrol? (kW @rpm)",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "83 @ 6000"
+        },
+        {
+          "cId": 2,
+          "name": "76.8 @ 6000"
+        },
+        {
+          "cId": 3,
+          "name": "81 @ 6000 "
+        },
+        {
+          "cId": 4,
+          "name": "75.8 @ 6000"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 4,
+      "questionUrl": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "The technology shown above is in which of following vehicles",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "Alto K10"
+        },
+        {
+          "cId": 2,
+          "name": "Brezza"
+        },
+        {
+          "cId": 3,
+          "name": "Wagon R"
+        },
+        {
+          "cId": 4,
+          "name": "Swift"
+        }
+      ],
+      "type": "MCQs"
+    }
+  ],
+  "correctAnswers": [
+    {
+      "questionId": 1,
+      "cId": 1
+    },
+    {
+      "questionId": 2,
+      "cId": 2
+    },
+    {
+      "questionId": 3,
+      "cId": 4
+    },
+    {
+      "questionId": 4,
+      "cId": 2
     }
   ]
 }]
