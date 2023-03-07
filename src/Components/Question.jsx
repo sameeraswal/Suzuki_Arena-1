@@ -52,6 +52,7 @@ const Question = () => {
       <div className="round-box">Rounds</div>
 
       <div className="question-container">
+      <div className="ques-number">{`${activeQuestion+1}/5`}</div>
         <Timer />
 
         {video && (
