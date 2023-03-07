@@ -8,25 +8,25 @@ export const data = {
       id: 0,
       video: "https://www.youtube.com/embed/Q5ZpKQFcC0U",
       question:
-        "Which function is used to serialize an object into a JSON string in Javascript?",
+        "What is the turning radius of S-Presso",
       choices: [
         {
-          name: "stringify()",
+          name: "(A) 4.5m",
           cID: 0,
           src: "",
         },
         {
-          name: "parse()",
+          name: "(B) 4.6m",
           cID: 1,
           src: "",
         },
         {
-          name: "convert()",
+          name: "(C) 4.4m",
           cID: 2,
           src: "",
         },
         {
-          name: "None of the above",
+          name: "(D) 4.9m",
           cID: 3,
           src: "",
         },
@@ -38,25 +38,25 @@ export const data = {
       id: 1,
       video: "https://www.youtube.com/embed/Q5ZpKQFcC0U",
       question:
-        "Which of the following keywords is used to define a variable in Javascript?",
+        "Which of these is an 'Active Safety' feature",
       choices: [
         {
-          name: "var",
+          name: "(A) Crumple Zones",
           cID: 0,
           src: "",
         },
         {
-          name: "let",
+          name: "(B) TECT",
           cID: 1,
           src: "",
         },
         {
-          name: "var and let",
+          name: "(C) Head Restraint",
           cID: 2,
           src: "",
         },
         {
-          name: "None of the above",
+          name: "(D) Hill Hold Assist",
           cID: 3,
           src: "",
         },
@@ -68,25 +68,25 @@ export const data = {
       id: 2,
       video: "https://www.youtube.com/embed/Q5ZpKQFcC0U",
       question:
-        "Which of the following methods can be used to display data in some form using Javascript?",
+        "Which of these is an 'Passive Safety' feature?",
       choices: [
         {
-          name: "document.write()",
+          name: "(A) HHA",
           cID: 0,
           src: "",
         },
         {
-          name: "console.log()",
+          name: "(B) Crumple Zones",
           cID: 1,
           src: "",
         },
         {
-          name: "window.alert",
+          name: "(C) ESC",
           cID: 2,
           src: "",
         },
         {
-          name: "All of the above",
+          name: "(D) ABS",
           cID: 3,
           src: "",
         },
@@ -97,25 +97,25 @@ export const data = {
     {
       id: 3,
       video: "https://www.youtube.com/embed/Q5ZpKQFcC0U",
-      question: "How can a datatype be declared to be a constant type?",
+      question: "What is the length of S-Presso(mm)",
       choices: [
         {
-          name: "const",
+          name: "(A) 3565",
           cID: 0,
           src: "",
         },
         {
-          name: "var",
+          name: "(B) 3560",
           cID: 1,
           src: "",
         },
         {
-          name: "let",
+          name: "(C) 3675",
           cID: 2,
           src: "",
         },
         {
-          name: "constant",
+          name: "(D) 3670",
           cID: 3,
           src: "",
         },
@@ -126,26 +126,26 @@ export const data = {
     {
       id: 4,
       video: "https://www.youtube.com/embed/Q5ZpKQFcC0U",
-      question: "Maruti Suzuki INSURANCE advantage and benefits are?",
+      question: "What is the turning radius of WagonR?(m)",
       choices: [
         {
-          name: "(A) Maruti Suzuki Wagonr",
+          name: "(A) 4.8",
           cID: 0,
           src: "https://images.hindustantimes.com/auto/img/2022/02/25/600x338/2022n_Maruti_Suzuki_WagonR_1645794277854_1645794286129.jpg",
         },
 
         {
-          name: "(B) Maruti Suzuki Brezza",
+          name: "(B) 4.6",
           cID: 1,
           src: "https://marutisuzukiarenaprodcdn.azureedge.net/-/media/images/maruti/marutisuzuki/car/car-detail/new-brezza-launch-2022/specs/brezza.webp?rev=e93bbb36497d4e63a0fdc0d1aa82167f",
         },
         {
-          name: "(C) Maruti Suzuki Ertiga",
+          name: "(C) 4.5",
           cID: 2,
           src: "https://marutisuzukiarenaprodcdn.azureedge.net/-/media/images/maruti/marutisuzuki/car/car-profile-shots/ertiga-new/red.webp?rev=ea94d57b25a1489abdc1eebd27fb976e",
         },
         {
-          name: "(D) Maruti Suzuki Dzire",
+          name: "(D) 4.7",
           cID: 3,
           src: "https://www.thrustzone.com/wp-content/uploads/2017/04/maruti-suzuki-dzire-2017-new-model-2.jpg",
         },

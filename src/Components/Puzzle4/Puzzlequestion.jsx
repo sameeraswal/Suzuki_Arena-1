@@ -13,65 +13,36 @@ const Puzzlequestion = () => {
     status: true,
     data: [
       {
-        question: "Q.1} Given a string, reverse each word in the sentence",
+        question: "Q.1} Made reference of his observation",
 
         btn1: "YES",
         btn2: "NO",
       },
       {
-        question: "Q.2} Given a string, reverse each word in the sentence",
+        question: "Q.2} Mentioned about Importance (impact) of the topic",
 
         btn1: "YES",
         btn2: "NO",
       },
       {
-        question: "Q.3} Question 2 he sentence reverse each word in the sentence",
+        question: "Q.3} Explained in an easy to understand/Interesting way",
 
         btn1: "YES",
         btn2: "NO",
       },
       {
-        question: "Q.4} Which of the following keywords is used to define a variable in Javascript?",
+        question: "Q.4} Concluded the Coaching with a summary (points to remember)",
 
         btn1: "YES",
         btn2: "NO",
       },
       {
-        question: "Q.5} Which of the following keywords is used to define a variable in Javascript?",
+        question: "Q.5} Checked understanding of the RM",
 
         btn1: "YES",
         btn2: "NO",
       },
-      {
-        question: "Q.6} Which of the following keywords is used to define a variable in Javascript?",
-
-        btn1: "YES",
-        btn2: "NO",
-      },
-      {
-        question: "Q.7} Which of the following keywords is used to define a variable in Javascript?",
-
-        btn1: "YES",
-        btn2: "NO",
-      },
-      {
-        question: "Q.8} Which of the following keywords is used to define a variable in Javascript?",
-
-        btn1: "YES",
-        btn2: "NO",
-      },
-      {
-        question: "Q.9} Which of the following keywords is used to define a variable in Javascript?",
-
-        btn1: "YES",
-        btn2: "NO",
-      },
-      {
-        question: "Q.10} Which of the following keywords is used to define a variable in Javascript?",
-
-        btn1: "YES",
-        btn2: "NO",
-      },
+      
     ],
   };
 

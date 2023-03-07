@@ -102,7 +102,7 @@ export default class Wheel extends React.Component {
               </>
             ))}
           </div>
-          <h1 className="car-name-from-wheel">{car}</h1>
+          {/* <h1 className="car-name-from-wheel">{car}</h1> */}
         </div>
       </>
     );
