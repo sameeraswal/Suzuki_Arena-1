@@ -75,8 +75,8 @@ const Leaderboard = () => {
       <div className="leaderboard-container">
         <div className="leaderboard">
           <div className="description">
-            <img src={trophy} alt="" /> <img src={text} alt="" />
-            <img src={trophy} alt="" />
+            <img src={trophy} alt="" className="resp-trophy resp-trophy-1" /> <img src={text} alt="" className="resp-text"/>
+            <img src={trophy} alt="" className="resp-trophy" />
           </div>
 
           <div className="table-div">

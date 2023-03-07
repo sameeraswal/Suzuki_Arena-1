@@ -161,7 +161,7 @@ table td:nth-child(1) {
   margin-left: 50px;
   width: 160px;
 }
-.text-on-img{
+.text-on-img {
   position: absolute;
   color: #fff;
   font-size: 17px;
@@ -178,7 +178,7 @@ table td:nth-child(1) {
   margin-left: 15px;
   width: 160px;
 }
-.text-on-img2{
+.text-on-img2 {
   position: absolute;
   color: #fff;
   font-size: 17px;
@@ -187,7 +187,7 @@ table td:nth-child(1) {
   margin-left: 503px;
   margin-top: 10px;
 }
-.text-on-img3{
+.text-on-img3 {
   position: absolute;
   color: #fff;
   font-size: 17px;
@@ -195,7 +195,8 @@ table td:nth-child(1) {
   margin: auto;
   margin-left: 715px;
   margin-top: 10px;
-}.text-on-img4{
+}
+.text-on-img4 {
   position: absolute;
   color: #fff;
   font-size: 17px;
@@ -203,7 +204,8 @@ table td:nth-child(1) {
   margin: auto;
   margin-left: 870px;
   margin-top: 10px;
-}.text-on-img5{
+}
+.text-on-img5 {
   position: absolute;
   color: #fff;
   font-size: 17px;
@@ -211,4 +213,22 @@ table td:nth-child(1) {
   margin: auto;
   margin-left: 1035px;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .resp-trophy {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 15px;
+  }
+  .resp-text {
+    height: 100px;
+    width: 400px;
+  }
+  .resp-trophy-1 {
+    margin-left: -20px;
+  }
+  table {
+    max-width: 94vw
+  }
 }
