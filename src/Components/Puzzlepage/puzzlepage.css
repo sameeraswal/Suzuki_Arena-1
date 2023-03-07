@@ -16,9 +16,9 @@
 }
 
 .wordyes {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
+  /* display: flex;
+  justify-content: space-evenly; */
+  /* text-align: center; */
   color: var(--arena-color);
   font-weight: bold;
 }

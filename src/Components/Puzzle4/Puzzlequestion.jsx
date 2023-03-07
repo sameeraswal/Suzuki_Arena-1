@@ -5,19 +5,69 @@ import "../Puzzlepage/Puzzlechoice";
 import { useState } from "react";
 import Buttonp from "../Puzzlepage/Buttonp";
 import Buttonn from "../Puzzlepage/Buttonn";
+import './puzzleques.css'
+import bgImg from '../leaderboardfinal/05.png'
 
 const Puzzlequestion = () => {
   let response = {
     status: true,
     data: [
       {
-        question: "Given a string, reverse each word in the sentence",
+        question: "Q.1} Given a string, reverse each word in the sentence",
 
         btn1: "Yes",
         btn2: "No",
       },
       {
-        question: "Question 2 he sentence",
+        question: "Q.2} Given a string, reverse each word in the sentence",
+
+        btn1: "Yes",
+        btn2: "No",
+      },
+      {
+        question: "Q.3} Question 2 he sentence reverse each word in the sentence",
+
+        btn1: "Yes",
+        btn2: "No",
+      },
+      {
+        question: "Q.4} Which of the following keywords is used to define a variable in Javascript?",
+
+        btn1: "Yes",
+        btn2: "No",
+      },
+      {
+        question: "Q.5} Which of the following keywords is used to define a variable in Javascript?",
+
+        btn1: "Yes",
+        btn2: "No",
+      },
+      {
+        question: "Q.6} Which of the following keywords is used to define a variable in Javascript?",
+
+        btn1: "Yes",
+        btn2: "No",
+      },
+      {
+        question: "Q.7} Which of the following keywords is used to define a variable in Javascript?",
+
+        btn1: "Yes",
+        btn2: "No",
+      },
+      {
+        question: "Q.8} Which of the following keywords is used to define a variable in Javascript?",
+
+        btn1: "Yes",
+        btn2: "No",
+      },
+      {
+        question: "Q.9} Which of the following keywords is used to define a variable in Javascript?",
+
+        btn1: "Yes",
+        btn2: "No",
+      },
+      {
+        question: "Q.10} Which of the following keywords is used to define a variable in Javascript?",
 
         btn1: "Yes",
         btn2: "No",
@@ -35,49 +85,22 @@ const Puzzlequestion = () => {
     <>
       <Navbar />
       <div className="dashboard-container full-height">
-        <div className="round-box-dashboard">Puzzle</div>
+      <img src={bgImg} alt="" className="ques-bg"/>
+        <div className="round-box-dashboard">Questions</div>
+        
         <div className="puzzle-box">
-          <div>
-            {/* <img
-              src={wordpattern}
-              alt="pattern"
-              height={400}
-              width={400}
-              className="puzzle-img"
-              //   style={{ marginLeft: "37%", marginTop: "30px" }}
-            /> */}
-          </div>
+          
 
-          <div className="wordslct justify">
+          <div className="wordslct1">
             {/* map */}
             {questions.map((item, i) => (
               <>
-                <div className="wordyes">
+                <div className="wordyes1">
                   <span key={i}>{item.question}</span>
                   <Buttonp key={i} name={item.btn1} />
-                  {/* <button
-                    key={item.id}
-                    onClick={() => handleColor(item)}
-                    style={{
-                      backgroundColor:
-                        item.id === selected ? "#00ff00" : "#F0F0F0",
-                    }}
-                    className="yes-btn icon-conatiner"
-                  >
-                    {console.log(`${item.id} and selected is ${selected}`)}
-                    Yes
-                  </button> */}
+                 
                   <Buttonn key={i} name={item.btn2} />
-                  {/* <button
-                    key={item.id+1}
-                    className="yes-btn icon-conatiner"
-                    onClick={() => handleColor1(item.cid)}
-                    style={{
-                      backgroundColor: item.cid === selected1 ? "red" : "#F0F0F0",
-                    }}
-                  >
-                    No
-                  </button> */}
+                 
                 </div>
               </>
             ))}
