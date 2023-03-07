@@ -7,8 +7,22 @@ import Buttonp from "../Puzzlepage/Buttonp";
 import Buttonn from "../Puzzlepage/Buttonn";
 import './puzzleques.css'
 import bgImg from '../leaderboardfinal/05.png'
+import { motion, AnimatePresence } from "framer-motion";
+import ModalFrammer from "../ModalFrammer";
+import Finishmodal from "../Modalframmer/finishmodal";
+import "../modalcss.css";
 
 const Puzzlequestion = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+
+  const close = () => {
+    setModalOpen(false);
+  };
+  const open = () => {
+    setModalOpen(true);
+  };
+
   let response = {
     status: true,
     data: [
@@ -75,6 +89,33 @@ const Puzzlequestion = () => {
                 </div>
               </>
             ))}
+            <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="third question-btn icon-conatiner"
+                  onClick={() => (modalOpen ? close() : open())}
+                >
+                  Submit
+                </motion.button>
+
+                <AnimatePresence
+                  // Disable any initial animations on children that
+                  // are present when the component is first rendered
+                  initial={false}
+                  // Only render one component at a time.
+                  // The exiting component will finish its exit
+                  // animation before entering component is rendered
+                  exitBeforeEnter={true}
+                  // Fires when all exiting nodes have completed animating out
+                  onExitComplete={() => null}
+                >
+                  {modalOpen && (
+                    <Finishmodal modalOpen={modalOpen} handleClose={close} />
+                  )}
+                </AnimatePresence>
+
+               
+             
           </div>
         </div>
       </div>
