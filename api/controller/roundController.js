@@ -125,11 +125,11 @@ const Round = require("../model/roundsSchema");
 exports.getRoundLists = async (req, res) => {
     let status = false;
     try {
-        const rounds = await Round.find({}).select({ roundName: 1, isRoundLocked:1, _id: 0 });
+        const rounds = await Round.find({}).select({ roundName: 1, isRoundLocked: 1, _id: 0 });
         //const rounds = await Round.find().select("roundName -_id");
         //console.log(rounds)
         if (rounds.length) {
-            rounds.push({title:"ROUNDS"});
+            rounds.push({ title: "ROUNDS" });
             status = true;
             res.status(201).json({
                 status: status,
@@ -154,6 +154,7 @@ exports.getRoundDetails = async (req, res) => {
     const round = req.params.roundName;
     try {
         //const rounds = await Round.find({ roundName: round }, { roundName: 1, questions: 1 });
+        //const rounds = await Round.find({ roundName: round }, { roundName: 1, questions: 1, isRoundLocked: 1});
         const rounds = await Round.find({ roundName: round }).select("roundName questions isRoundLocked");
         console.log("==============")
         console.log(rounds);
