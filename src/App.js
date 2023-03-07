@@ -47,6 +47,8 @@ import Swifvsi20 from "./Components/Flipcardspages/Swifvsi20";
 import Wagovstiago from "./Components/Flipcardspages/Wagovstiago";
 
 import Swiftvsgrandi10 from "./Components/Flipcardspages/Swiftvsgrandi10";
+import Enterertiga from "./Components/Entercorepages/Enterertiga";
+import Enterbrezza from "./Components/Entercorepages/Enterbrezza";
 
 const App = () => {
   const places = [
@@ -224,6 +226,9 @@ const App = () => {
           <Route path="/swiftvsgrandi10" element={<Swiftvsgrandi10 />}></Route>
           <Route path="/swifvsi20" element={<Swifvsi20 />}></Route>
           <Route path="/wagovstiago" element={<Wagovstiago />}></Route>
+          <Route path="/enterertiga" element={<Enterertiga />}></Route>
+
+          <Route path="/enterbrezza" element={<Enterbrezza />}></Route>
         </Routes>
       </div>
     </Router>
