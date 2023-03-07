@@ -1,5 +1,24 @@
 const mongoose = require("mongoose");
 
+// const roundsSchema = new mongoose.Schema({
+//     roundName: {
+//         type: String,
+//         required: true
+//     },
+//     isRoundLocked:{
+//         type:Boolean
+
+//     },
+//     rundTitle:{
+//         type:String
+//     },
+//     questions:[{
+//         tyep :Array,
+//         default :[]
+//     }],
+//     correctAnswers: {}
+// });
+
 const roundsSchema = new mongoose.Schema({
     roundName: {
         type: String,

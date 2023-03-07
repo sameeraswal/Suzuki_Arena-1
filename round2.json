@@ -1,0 +1,156 @@
+{
+    
+    "roundName": "2",
+    "isRoundLocked": true,
+    "questions": [
+        {
+            "wheelQuestiontitle": "S presso Vs Kwid",
+            "wheelQuestionId": 1,
+            "cardsRemaining": 5,
+            "cardQuestions": [
+                {
+                    "cardQuestionId": 1,
+                    "isCardLocked" : false,
+                    "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                    "cardtitle": "Height",
+                    "cardQuestion": "what is the height of car",
+                    "correctAnswer": "1567 mm"
+                },
+                {
+                    "cardQuestionId": 2,
+                    "isCardLocked" : true,
+                    "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                    "cardTitle": "Length",
+                    "cardQuestion": "what is the length of car?",
+                    "correctAnswer": "3731 mm"
+                },
+                {
+                    "cardQuestionId": 3,
+                    "isCardLocked" : true,
+                    "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                    "cardTitle": "Power",
+                    "cardQuestion": "what is the power of wagonr?",
+                    "correctAnswer": "49 kW @ 5500 rpm"
+                }
+            ]
+        },
+        {
+            "wheelQuestiontitle": "WagonR vs Tiago",
+            "wheelQuestionId": 2,
+            "cardsRemaining": 5,
+            "cardQuestions": [
+                {
+                    "cardQuestionId": 1,
+                    "isCardLocked" : false,
+                    "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                    "cardTitle": "Height",
+                    "cardQuestion": "what is the height of car",
+                    "correctAnswer": "1675 mm"
+                },
+                {
+                    "cardQuestionId": 2,
+                    "isCardLocked" : true,
+                    "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                    "cardTitle": "Length",
+                    "cardQuestion": "what is the length of car?",
+                    "correctAnswer": "3765 mm"
+                },
+                {
+                    "cardQuestionId": 3,
+                    "isCardLocked" : true,
+                    "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                    "cardTitle": "Power",
+                    "cardQuestion": "what is the power of wagonr on petrol mode?",
+                    "correctAnswer": "66.0 kW @ 6000 rpm"
+                }
+            ]
+        },
+        {
+            "wheelQuestiontitle": "Alto K10 vs Kwid RXT",
+            "wheelQuestionId": 3,
+            "cardsRemaining": 5,
+            "cardQuestions": [
+                {
+                    "cardQuestionId": 1,
+                    "isCardLocked" : false,
+                    "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                    "cardTitle": "Height",
+                    "cardQuestion": "what is the height of car",
+                    "correctAnswer": "1520 mm"
+                },
+                {
+                    "cardQuestionId": 2,
+                    "isCardLocked" : true,
+                    "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                    "cardTitle": "Length",
+                    "cardQuestion": "what is the length of Kwid RXT?",
+                    "correctAnswer": "3731 mm"
+                },
+                {
+                    "cardQuestionId": 3,
+                    "isCardLocked" : true,
+                    "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                    "cardTitle": "Power",
+                    "cardQuestion": "what is the power of wagonr on petrol mode?",
+                    "correctAnswer": "49 kW @ 5500 rpm"
+                }
+            ]
+        }
+    ],
+    "correctAnswers": [
+        {
+            "wheelQuestiontitle": "S presso Vs Kwid",
+            "wheelQuestionId": 1,
+            "questions": [
+                {
+                    "cardQuestionId": 1,
+                    "cId": "1567 mm"
+                },
+                {
+                    "cardQuestionId": 2,
+                    "cId": "3731 mm"
+                },
+                {
+                    "cardQuestionId": 3,
+                    "cId": "49 kW @ 5500 rpm"
+                }
+            ]
+        },
+        {
+            "wheelQuestiontitle": "Alto K10 Vs Kwid RXT",
+            "wheelQuestionId": 2,
+            "questions": [
+                {
+                    "cardQuestionId": 1,
+                    "cId": "1675 mm"
+                },
+                {
+                    "cardQuestionId": 2,
+                    "cId": "3765 mm"
+                },
+                {
+                    "cardQuestionId": 3,
+                    "cId": "66.0 kW @ 6000 rpm"
+                }
+            ]
+        },
+        {
+            "wheelQuestiontitle": "Celerio Vs Tiago",
+            "wheelQuestionId": 3,
+            "questions": [
+                {
+                    "cardQuestionId": 1,
+                    "cId": "1520 mm"
+                },
+                {
+                    "cardQuestionId": 2,
+                    "cId": "3731 mm"
+                },
+                {
+                    "cardQuestionId": 3,
+                    "cId": "49 kW @ 5500 rpm"
+                }
+            ]
+        }
+    ]
+}

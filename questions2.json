@@ -1,0 +1,156 @@
+{
+    "roundName": "6",
+        "questions": [
+            {
+                "id": 1,
+                "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                "question": "(round 6)Which function is used to serialize an object into a JSON string in Javascript",
+                "choices": [
+                    {
+                        "cId": 1,
+                        "name": "stringify()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                       "cId": 2,
+                        "name": "parse()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "cId": 3,
+                        "name": "convert()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                       "cId": 4,
+                        "name": "None of the above",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    }
+                ],
+                "type": "MCQs",
+                "correctAnswer": 1
+            },
+            {
+                "id": 2,
+                "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                "question": "Which of the following keywords is used to define a variable in Javascript?",
+                "choices": [
+                    {
+                        "cId": 1,
+                        "name": "var",
+                        "img": ""
+                    },
+                    {
+                       "cId": 2,
+                        "name": "let",
+                        "img": ""
+                    },
+                    {
+                        "cId": 3,
+                        "name": "var and let",
+                        "img": ""
+                    },
+                    {
+                        "cId": 4,
+                        "name": "None of the above",
+                        "img": ""
+                    }
+                ],
+                "type": "MCQs",
+                "correctAnswer": 3
+            },
+            {
+                "id": 3,
+                "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                "question": "Which of the following methods can be used to display data in some form using Javascript?",
+                "choices": [
+                    {
+                       "cId": 1,
+                        "name": "document.write()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "cId": 2,
+                        "name": "console.log()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "cId": 3,
+                        "name": "window.alert",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "cId": 4,
+                        "name": "All of the above",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    }
+                ],
+                "type": "MCQs",
+                "correctAnswer": 4
+            },{
+                "id": 4,
+                "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                "question": "Which function is used to serialize an object into a JSON string in Javascript",
+                "choices": [
+                    {
+                        "cId": 1,
+                        "name": "stringify()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                       "cId": 2,
+                        "name": "parse()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "cId": 3,
+                        "name": "convert()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                       "cId": 4,
+                        "name": "None of the above",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    }
+                ],
+                "type": "MCQs",
+                "correctAnswer": 1
+            },
+            {
+                "id": 5,
+                "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+                "question": "Which function is used to serialize an object into a JSON string in Javascript",
+                "choices": [
+                    {
+                        "cId": 1,
+                        "name": "stringify()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                       "cId": 2,
+                        "name": "parse()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                        "cId": 3,
+                        "name": "convert()",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    },
+                    {
+                       "cId": 4,
+                        "name": "None of the above",
+                        "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+                    }
+                ],
+                "type": "MCQs",
+                "correctAnswer": 1
+            }
+        ],
+            "correctAnswers" :{
+                "1":2,
+                "2":1,
+                "3":3,
+                "4":1,
+                "5":4
+            }
+    }
