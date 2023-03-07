@@ -335,7 +335,12 @@ li {
 .resp-tablet {
   height: 50%;
 }
-
+.resp-desktop{
+  height: 70%;
+}
+.resp-desktop-b-s-sp{
+  height: 45%;
+}
 /* finish round  */
 @media screen and (max-width: 768px) {
   .backdrop-finish {
@@ -356,7 +361,7 @@ li {
     flex-direction: column;
   }
   .resp-tablet-e-f-e{
-    height: 60%;
+    height: 80%;
   }
   .resp-tablet-b-s-s-p{
     height: 40%;

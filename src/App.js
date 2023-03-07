@@ -14,14 +14,14 @@ import Login from "./Components/Login";
 import Afterflip from "./Components/Afterflip";
 import Leaderboard from "./Components/leaderboard/Leaderboard";
 import Question from "./Components/Question";
-import Finishround from "./Components/Finish Round/Finishround";
+
 import Chasethemaze from "./Components/Chasethemaze";
 import Random from "./Components/Random Number/Randomnumber";
 import Timermin from "./Components/Timersection/Timermin";
 import Timersection from "./Components/Timersection/Timersection";
 import Puzzle from "./Components/Puzzle";
 import Puzzlechoice from "./Components/Puzzlepage/Puzzlechoice";
-import Finishround1B from "./Components/Finish Round/Finishround1B";
+
 import Eyeforaneye from "./Components/eyeforaneye";
 import Bespokesalespitch from "./Components/Bespokesalespitch";
 import Leaderboardth from "./Components/leaderboardfinal/leaderboardth";
@@ -45,8 +45,8 @@ import Ertvscare from "./Components/Flipcardspages/Ertvscare";
 import Sprevskwid from "./Components/Flipcardspages/Sprevskwid";
 import Swifvsi20 from "./Components/Flipcardspages/Swifvsi20";
 import Wagovstiago from "./Components/Flipcardspages/Wagovstiago";
-
 import Swiftvsgrandi10 from "./Components/Flipcardspages/Swiftvsgrandi10";
+import Finishmodal from "./Components/Modalframmer/finishmodal";
 import Enterertiga from "./Components/Entercorepages/Enterertiga";
 import Enterbrezza from "./Components/Entercorepages/Enterbrezza";
 
@@ -186,8 +186,6 @@ const App = () => {
           <Route path="/flipcardcasestudy" element=<Cardscasestudy />></Route>
 
           <Route path="/question" element=<Question />></Route>
-          <Route path="/finish" element=<Finishround />></Route>
-          <Route path="/finish1b" element=<Finishround1B />></Route>
           <Route path="/chasethemaze" element={<Chasethemaze />}></Route>
           <Route path="/randomnum" element={<Random />}></Route>
           <Route path="/timersection" element={<Timersection />}></Route>
@@ -207,6 +205,8 @@ const App = () => {
 
           <Route path="/leaderboardth" element={<Leaderboardth />}></Route>
           <Route path="/casestudy" element={<Casestudy />}></Route>
+          <Route path="/finishmodal" element={<Finishmodal />}></Route>
+
 
           {/* flipcard routes after wheel */}
           <Route
