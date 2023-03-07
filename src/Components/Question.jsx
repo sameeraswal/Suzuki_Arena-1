@@ -101,7 +101,7 @@ const Question = () => {
                   className="third question-btn icon-conatiner"
                   onClick={() => (modalOpen ? close() : open())}
                 >
-                  Next
+                  Submit
                 </motion.button>
 
                 <AnimatePresence

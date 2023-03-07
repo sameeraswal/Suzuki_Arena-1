@@ -15,7 +15,7 @@ const Leaderboard = () => {
         rank: "2",
         round: "1",
         score: "100",
-        class: "lower-cut"
+        class: "lower-cut",
       },
       {
         regNo: "2",
@@ -23,7 +23,7 @@ const Leaderboard = () => {
         rank: "3",
         round: "4",
         score: "80",
-        class: "lower-cut"
+        class: "lower-cut",
       },
       {
         regNo: "2",
@@ -31,7 +31,7 @@ const Leaderboard = () => {
         rank: "3",
         round: "4",
         score: "80",
-        class: "upper-cut"
+        class: "upper-cut",
       },
       {
         regNo: "2",
@@ -39,7 +39,7 @@ const Leaderboard = () => {
         rank: "3",
         round: "4",
         score: "80",
-        class: "lower-cut"
+        class: "lower-cut",
       },
       {
         regNo: "2",
@@ -47,7 +47,7 @@ const Leaderboard = () => {
         rank: "3",
         round: "4",
         score: "80",
-        class: "upper-cut"
+        class: "upper-cut",
       },
       {
         regNo: "2",
@@ -55,7 +55,7 @@ const Leaderboard = () => {
         rank: "3",
         round: "4",
         score: "80",
-        class: "lower-cut"
+        class: "lower-cut",
       },
       {
         regNo: "2",
@@ -63,7 +63,7 @@ const Leaderboard = () => {
         rank: "3",
         round: "4",
         score: "80",
-        class: "upper-cut"
+        class: "upper-cut",
       },
     ],
   };
@@ -75,51 +75,62 @@ const Leaderboard = () => {
       <div className="leaderboard-container">
         <div className="leaderboard">
           <div className="description">
-            <img src={trophy} alt="" className="resp-trophy resp-trophy-1" /> <img src={text} alt="" className="resp-text"/>
+            <img src={trophy} alt="" className="resp-trophy resp-trophy-1" />{" "}
+            <img src={text} alt="" className="resp-text" />
             <img src={trophy} alt="" className="resp-trophy" />
           </div>
 
           <div className="table-div">
-            <img src={bg} alt="" className="bg bg1" />
-            <h1 className="text-on-img">Registration No</h1>
-            <img src={bg} alt="" className="bg bg2" />
-            <h1 className="text-on-img2">Name</h1>
-            <img src={bg} alt="" className="bg bg3" />
-            <h1 className="text-on-img3">Rank</h1>
-            <img src={bg} alt="" className="bg bg4" />
-            <h1 className="text-on-img4">Rounds</h1>
-            <img src={bg} alt="" className="bg bg5" />
-            <h1 className="text-on-img5">Total Score</h1>
-            <table>
-              {/* <thead>
-                <tr>
-                  <td className="lead-head bg"></td>
-                  <td className="lead-head bg1">Name</td>
-                  <td className="lead-head bg">Rank</td>
-                  <td className="lead-head bg">Rounds</td>
-                  <td className="lead-head bg">Total Score</td>
-                </tr>
-              </thead> */}
+            <div className="table-heading">
+              <img src={bg} alt="" className="bg bg1" />
+              <h1 className="text-on-img">Registration No</h1>
+              <img src={bg} alt="" className="bg bg2" />
+              <h1 className="text-on-img2">Name</h1>
 
+              <img src={bg} alt="" className="bg bg4" />
+              <h1 className="text-on-img3">Round 1-A</h1>
+              <img src={bg} alt="" className="bg bg5" />
+              <h1 className="text-on-img4">Round 1-B</h1>
+              <img src={bg} alt="" className="bg bg6" />
+              <h1 className="text-on-img5">Round 2</h1>
+              <img src={bg} alt="" className="bg bg7" />
+              <h1 className="text-on-img6">Round 3</h1>
+              <img src={bg} alt="" className="bg bg8" />
+              <h1 className="text-on-img7">Round 4</h1>
+              <img src={bg} alt="" className="bg bg9" />
+              <h1 className="text-on-img8">Round 5</h1>
+              <img src={bg} alt="" className="bg bg10" />
+              <h1 className="text-on-img9">Round 6</h1>
+              <img src={bg} alt="" className="bg bg11" />
+              <h1 className="text-on-img10">Round 7</h1>
+
+              <img src={bg} alt="" className="bg bg5" />
+              <h1 className="text-on-img11">Total Score</h1>
+              <img src={bg} alt="" className="bg bg3" />
+              <h1 className="text-on-img12">Rank</h1>
+            </div>
+            <table>
               <tbody>
                 <br />
-                
 
                 {rounds.map((item) => (
                   <>
                     <tr>
                       <td className={item.class}>{item.regNo}</td>
-                      <td className={item.class}>
-                        <p id="winner">{item.name}</p>
-                      </td>
-                      <td className={item.class}>{item.rank}</td>
+                      <td className={item.class}>{item.name}</td>
+                      <td className={item.class}>{item.round}</td>
+                      <td className={item.class}>{item.round}</td>
+                      <td className={item.class}>{item.round}</td>
+                      <td className={item.class}>{item.round}</td>
+                      <td className={item.class}>{item.round}</td>
+                      <td className={item.class}>{item.round}</td>
+                      <td className={item.class}>{item.round}</td>
                       <td className={item.class}>{item.round}</td>
                       <td className={item.class}>{item.score}</td>
+                      <td className={item.class}>{item.rank}</td>
                     </tr>
                   </>
                 ))}
-
-                
               </tbody>
             </table>
           </div>
