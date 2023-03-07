@@ -25,7 +25,7 @@ const roundsSchema = new mongoose.Schema({
         required: true
     },
     questions: [{
-        id: {
+        questionId: {
             type: Number,
             required: true
         },
@@ -59,9 +59,12 @@ const roundsSchema = new mongoose.Schema({
             type: Number,
             required: true
         }
-    }]
+    }],
+    correctAnswers :{}
 });
 
 const ROUND = mongoose.model("ROUND", roundsSchema);
+
+
 
 module.exports = ROUND;
