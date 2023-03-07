@@ -226,9 +226,59 @@ table td:nth-child(1) {
     width: 400px;
   }
   .resp-trophy-1 {
-    margin-left: -20px;
+    margin-left: -66px;
   }
   table {
-    max-width: 94vw
+    max-width: 94vw;
+  }
+  .bg1 {
+    margin-left: 21px;
+    width: 126px;
+  }
+  .bg2 {
+    margin-left: 18px;
+    width: 148px;
+  }
+  .bg3 {
+    margin-left: 24px;
+    width: 116px;
+  }
+  .bg4 {
+    margin-left: 10px;
+    width: 109px;
+  }
+  .bg5 {
+    margin-left: 10px;
+    width: 142px;
+  }
+  .text-on-img {
+    color: #fff;
+    font-size: 15px;
+    margin-left: 35px;
+    margin-top: 14px;
+  }
+  .text-on-img2 {
+    font-size: 15px;
+    margin-left: 215px;
+    margin-top: 12px;
+  }
+  .text-on-img3 {
+    font-size: 15px;
+    margin-left: 376px;
+    margin-top: 12px;
+  }
+  .text-on-img4 {
+    font-size: 15px;
+    margin-left: 491px;
+    margin-top: 14px;
+  }
+  .text-on-img5 {
+    font-size: 15px;
+    margin-left: 614px;
+    margin-top: 13px;
+  }
+  .leaderboard{
+    height: 100vh;
+
   }
 }

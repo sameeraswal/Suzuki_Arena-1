@@ -13,7 +13,7 @@ const Enterscore = () => {
         <img src={bgImg} alt="" className="score-bg-img"/>
         <img src={bgImg1} alt="" className="vector-img" height={5} width={5} />
         {show && (
-          <input type="text" placeholder="score" className="input-correct" className="inputscore-btn"/>
+          <input type="text" placeholder="score" className="input-correct inputscore-btn"/>
         )}
         {/* {data && ( */}
         {/* <Link to="/puzzle"> */}
