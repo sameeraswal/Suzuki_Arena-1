@@ -79,7 +79,7 @@ const Login = () => {
               class="control-button up third icon-conatiner btn-bottom"
               onClick={fetchData}
               type="button"
-              value="Join Now"
+              value="Login"
             />
 
             {/* </Link> */}

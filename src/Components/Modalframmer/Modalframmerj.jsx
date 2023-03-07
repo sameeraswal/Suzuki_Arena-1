@@ -80,7 +80,7 @@ const ModalButton = ({ onClick, label }) => (
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
     >
-      Close
+      Let's begin
     </motion.button>
   </Link>
 );
