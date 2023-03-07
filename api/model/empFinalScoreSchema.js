@@ -9,6 +9,13 @@ const empFinalScoreSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    name:{
+        type:String
+    },
+    roundScore:[{
+        type:Array,
+        default:{}
+    }],
     finalScore :{
         type : Number
     }

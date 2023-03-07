@@ -1,0 +1,27 @@
+{
+    "mspin": "120",
+    "registrationNumber":"25",
+    "score": [
+        {
+            "roundname": "1",
+            "totalscore": "20"
+        },
+        {
+            "roundname": "2",
+            "totalscore": "50"
+        },
+        {
+            "roundname": "3",
+            "totalscore": "30"
+        },
+        {
+            "roundname": "4",
+            "totalscore": "20"
+        },
+        {
+            "roundname": "5",
+            "totalscore": "60"
+        }
+    ],
+    "finascore":"100"
+}
