@@ -45,3 +45,15 @@
   width: 100vw;
   margin-top: -0.5px;
 }
+.input-correct {
+  width: 100px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+.inputscore-btn {
+  position: absolute;
+  bottom: 173px;
+  right: 123px;
+  width: 20%;
+}

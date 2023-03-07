@@ -1,5 +1,5 @@
 import React from "react";
-import wordpattern from "../wordpattern.jpg";
+import wordpattern from "../Puzzleanswer.png";
 import Navbar from "../Navbar";
 import "./puzzlepage.css";
 import { useState } from "react";

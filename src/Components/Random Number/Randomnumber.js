@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./randomnum.css";
 import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
-import randomnumimg from '../randomnum.avif'
+import randomnumimg from './saucer final (1).mp4'
 
 export default function Random() {
   // const [minVal, setMinVal] = useState(0);
@@ -13,7 +13,7 @@ export default function Random() {
     setRandomNum(Math.floor(Math.random() * (18 - 1 + 1) + 1));
   };
   const timeOutFun = (e) => {
-    setTimeout(() => window.open("/timersection","_self"), 2000);
+    setTimeout(() => window.open("/timersection","_self"),  5000);
     // console.log(title);
   };
 
@@ -24,8 +24,8 @@ export default function Random() {
       <div className="hero">
       {/* <div className="round-box ">Number Generator</div> */}
       {/* <div className="round-box">Random Number Generator</div> */}
-      <img src={randomnumimg} alt="" height={400} width={400} style={{marginLeft:"30px"}}
-        />
+      <iframe src={randomnumimg} alt="" height={200} width={300} style={{marginLeft:"30px", marginBottom:"70px"}}>
+      </iframe>
         <div className="container">
         
           <div className="randomNum">
