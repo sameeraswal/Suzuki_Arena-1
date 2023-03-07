@@ -18,33 +18,33 @@ const Puzzlechoice = () => {
     data: [
       {
         name: "Word-1",
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         name: "Word-2",
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         name: "Word-3",
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         name: "Word-4",
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         name: "Word-5",
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         name: "Word-6",
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
     ],
   };

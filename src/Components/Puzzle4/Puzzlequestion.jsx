@@ -15,62 +15,62 @@ const Puzzlequestion = () => {
       {
         question: "Q.1} Given a string, reverse each word in the sentence",
 
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         question: "Q.2} Given a string, reverse each word in the sentence",
 
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         question: "Q.3} Question 2 he sentence reverse each word in the sentence",
 
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         question: "Q.4} Which of the following keywords is used to define a variable in Javascript?",
 
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         question: "Q.5} Which of the following keywords is used to define a variable in Javascript?",
 
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         question: "Q.6} Which of the following keywords is used to define a variable in Javascript?",
 
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         question: "Q.7} Which of the following keywords is used to define a variable in Javascript?",
 
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         question: "Q.8} Which of the following keywords is used to define a variable in Javascript?",
 
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         question: "Q.9} Which of the following keywords is used to define a variable in Javascript?",
 
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
       {
         question: "Q.10} Which of the following keywords is used to define a variable in Javascript?",
 
-        btn1: "Yes",
-        btn2: "No",
+        btn1: "YES",
+        btn2: "NO",
       },
     ],
   };
