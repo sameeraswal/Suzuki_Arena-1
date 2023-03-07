@@ -214,18 +214,18 @@ const App = () => {
             element={<Afterflipcasestudy />}
           ></Route>
 
-          <Route path="/brewsuv" element={<Brewsuv />}></Route>
-          <Route path="/altovskwid" element={<Altovskwid />}></Route>
-          <Route path="/celvstia" element={<CelvsTia />}></Route>
+          <Route path="/brezzazxi+mtvsxuv" element={<Brewsuv />}></Route>
+          <Route path="/altok10vskwidrxt" element={<Altovskwid />}></Route>
+          <Route path="/celeriovstiago" element={<CelvsTia />}></Route>
           <Route path="/desirevsamaze" element={<Desirevsamaze />}></Route>
           <Route path="/desirevstiger" element={<Desirevstiger />}></Route>
           <Route path="/desvsaura" element={<Desvsaura />}></Route>
-          <Route path="/ertvscare" element={<Ertvscare />}></Route>
-          <Route path="/ertvstrib" element={<Ertvstrib />}></Route>
-          <Route path="/sprevskwid" element={<Sprevskwid />}></Route>
+          <Route path="/ertigavscarens" element={<Ertvscare />}></Route>
+          <Route path="/ertigavstriber" element={<Ertvstrib />}></Route>
+          <Route path="/spressovskwid" element={<Sprevskwid />}></Route>
           <Route path="/swiftvsgrandi10" element={<Swiftvsgrandi10 />}></Route>
-          <Route path="/swifvsi20" element={<Swifvsi20 />}></Route>
-          <Route path="/wagovstiago" element={<Wagovstiago />}></Route>
+          <Route path="/swiftvsi20" element={<Swifvsi20 />}></Route>
+          <Route path="/wagonrvstiago" element={<Wagovstiago />}></Route>
           <Route path="/enterertiga" element={<Enterertiga />}></Route>
 
           <Route path="/enterbrezza" element={<Enterbrezza />}></Route>

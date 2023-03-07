@@ -40,7 +40,7 @@ export default class Wheel extends React.Component {
         this.props.onSelectItem(selectedItem);
       }
       this.setState({ selectedItem });
-      car = this.props.items[selectedItem - 3].title;
+      car = (this.props.items[selectedItem - 3].title).replace(/ /g,'').toLowerCase();
     } else {
       this.setState({ selectedItem: null });
       setTimeout(this.selectItem, 800);
@@ -50,8 +50,9 @@ export default class Wheel extends React.Component {
   titleToggle() {
     setTimeout(() => this.setState({ seltitle: true }), 200);
   }
-  timeOutFun() {
-    setTimeout(() => window.open("/flipcard", "_self"), 18000);
+  timeOutFun(car) {
+    console.log(car,`/${car}`)
+    setTimeout(() => window.open(`/${car}`, "_self"), 18000);
   }
 
   render() {
@@ -84,7 +85,7 @@ export default class Wheel extends React.Component {
             onClick={() => {
               this.selectItem();
               this.titleToggle();
-              this.timeOutFun();
+              this.timeOutFun(car);
             }}
           >
             {items.map((item, i) => (
