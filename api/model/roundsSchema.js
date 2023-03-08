@@ -11,6 +11,9 @@ const roundsSchema = new mongoose.Schema({
     isRoundLocked: {
         type: Boolean
     },
+    isDisabled: {
+        type: Boolean
+    },
     questions: [{
         default :{}
     }],
