@@ -7,7 +7,7 @@ import Buttonp from "./Buttonp";
 import Buttonn from "./Buttonn";
 import Finishmodal from "../Modalframmer/finishmodal";
 import { motion, AnimatePresence } from "framer-motion";
-import { Space, Switch} from 'antd'
+
 
 
 // import ModalFrammer from "./ModalFrammer";
