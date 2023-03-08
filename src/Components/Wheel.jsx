@@ -35,12 +35,21 @@ export default class Wheel extends React.Component {
   selectItem() {
     if (this.state.selectedItem === null) {
       const selectedItem = Math.floor(Math.random() * this.props.items.length);
-
+      console.log(selectedItem);
       if (this.props.onSelectItem) {
         this.props.onSelectItem(selectedItem);
       }
       this.setState({ selectedItem });
-      car = (this.props.items[selectedItem - 3].title).replace(/ /g,'').toLowerCase();
+      let num = selectedItem - 3;
+      if (num === -3) {
+        num = 9;
+      } else if (num === -2) {
+        num = 10;
+      } else if (num === -1) {
+        num = 11;
+      }
+      car = this.props.items[num].title.replace(/ /g, "").toLowerCase();
+      // alert(this.props.items[10].title)
     } else {
       this.setState({ selectedItem: null });
       setTimeout(this.selectItem, 800);
@@ -51,7 +60,7 @@ export default class Wheel extends React.Component {
     setTimeout(() => this.setState({ seltitle: true }), 200);
   }
   timeOutFun() {
-    console.log(car,`/${car}`)
+    // console.log(car,`/${car}`)
     setTimeout(() => window.open(`/${car}`, "_self"), 18000);
   }
 
