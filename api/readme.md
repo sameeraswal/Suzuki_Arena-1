@@ -1,13 +1,16 @@
-install all packages by running "npn install" command
-server is running on port is runnng on 4500
+Entry point or file is index.js in this project
+Install all packages by running "npn install" command
+Server is runnng on port 4500
 
-import two collection which is inside database_master folder
-import json file for 2 documents for mongo database . 2 json files attached
-databse name should be suzukiQuiz
-two collection inside this db are  employees and rounds. import these two colections files 
+Create database name as suzukiQuiz in mongodb
+Create two collections as "employees" and "rounds" inside this "suzukiQuiz" database.
 
-3 apis are in it
-for all the urls ,postman api collection json file is attached inside suzukiApis folder.you can import this folder on postman
+Two json files "employees" and "rounds" are inside api/database_master folder.
+Imort employees file inside employees collection
+Import rounds file inside rounds collection
 
+There are 4 apis in this project
+For all the urls , api collection json file suzukiApi.postman_collection.json is attached inside api/suzukiApis folder.you can import This folder on postman
 
-
+Run the following command to run this project
+node index

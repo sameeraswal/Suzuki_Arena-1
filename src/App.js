@@ -51,7 +51,13 @@ import Enterertiga from "./Components/Entercorepages/Enterertiga";
 import Enterbrezza from "./Components/Entercorepages/Enterbrezza";
 import Popupexample from "./Components/flipcard popup/Popup";
 
+export const APIURL = "http://localhost:4500";
 const App = () => {
+  // API URLs
+
+  
+ 
+
   const places = [
     {
       id: 0,
@@ -208,7 +214,6 @@ const App = () => {
           <Route path="/casestudy" element={<Casestudy />}></Route>
           <Route path="/finishmodal" element={<Finishmodal />}></Route>
 
-
           {/* flipcard routes after wheel */}
           <Route
             path="/afterflipcasestudy"
@@ -231,8 +236,6 @@ const App = () => {
 
           <Route path="/enterbrezza" element={<Enterbrezza />}></Route>
           <Route path="/popupexample" element={<Popupexample />}></Route>
-
-          
         </Routes>
       </div>
     </Router>

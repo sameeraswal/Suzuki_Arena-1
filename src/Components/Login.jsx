@@ -35,10 +35,10 @@ const Login = () => {
         console.log(res, "Response");
 
         if (res.data.status === true) {
-          setRes(res.data.status);
+          // setRes(res.data.status);
           setMessage(res.data.message);
 
-          console.log(res.data.status, res.data.message);
+          // console.log(res.data.status, res.data.message);
           // setLoginStatus(true);
           alert("admin login successfull");
         } else {
@@ -89,22 +89,22 @@ const Login = () => {
               />
               <label class="form__label">Registration Number</label>
             </div>
-            {res && (
-              <Link to="/dashboard">
-                <input
-                  type="text"
-                  class="form__input invisible"
-                  placeholder=" "
-                  value={message}
-                />
-                <input
-                  class="control-button up third icon-conatiner btn-bottom"
-                  onClick={fetchData}
-                  type="button"
-                  value="Login"
-                />
-              </Link>
-            )}
+            {/* {res && ( */}
+            <Link to="/dashboard">
+            <input
+              type="text"
+              class="form__input invisible"
+              placeholder=" "
+              value={message}
+            />
+            <input
+              class="control-button up third icon-conatiner btn-bottom"
+              onClick={fetchData}
+              type="button"
+              value="Login"
+            />
+            </Link>
+            {/* )} */}
           </form>
         </div>
       </div>
