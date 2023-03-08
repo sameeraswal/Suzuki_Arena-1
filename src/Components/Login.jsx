@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Search from "./search";
 import loginImg from "./loginicon.png";
 import axios from "axios";
+import { APIURL } from "../App";
 
 const Login = () => {
   const [mspin, setMspin] = useState("");
@@ -20,7 +21,7 @@ const Login = () => {
 
   const fetchData = () => {
     axios
-      .post("http://localhost:4500/api/v1/login", {
+      .post(`${APIURL}/api/v1/login`, {
         mspin: mspin,
         regNumber: regno,
       })

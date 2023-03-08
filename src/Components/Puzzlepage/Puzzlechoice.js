@@ -9,7 +9,6 @@ import Finishmodal from "../Modalframmer/finishmodal";
 import { motion, AnimatePresence } from "framer-motion";
 
 
-
 // import ModalFrammer from "./ModalFrammer";
 import "../modalcss.css";
 import Finishmodal1b from "../Modalframmer/finishmodal1b";
