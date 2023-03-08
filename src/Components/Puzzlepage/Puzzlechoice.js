@@ -7,12 +7,16 @@ import Buttonp from "./Buttonp";
 import Buttonn from "./Buttonn";
 import Finishmodal from "../Modalframmer/finishmodal";
 import { motion, AnimatePresence } from "framer-motion";
+import { Space, Switch} from 'antd'
+
 
 // import ModalFrammer from "./ModalFrammer";
 import "../modalcss.css";
 import Finishmodal1b from "../Modalframmer/finishmodal1b";
 
 const Puzzlechoice = () => {
+  
+  
   let response = {
     status: true,
     data: [
@@ -66,7 +70,9 @@ const Puzzlechoice = () => {
 
   return (
     <>
+    
       <Navbar />
+     
       <div className="dashboard-container full-height">
         <div className="round-box-dashboard">Puzzle</div>
         <div className="puzzle-box">
@@ -85,15 +91,16 @@ const Puzzlechoice = () => {
             {/* map */}
             {choices.map((item, i) => (
               <>
-                <div className="wordyes">
+                <div className="wordyes" >
                   <span>{item.name}</span>
+                  
+                  <Buttonp key={i} name1={item.btn1} name2={item.btn2}/>
 
-                  <Buttonp key={i} name={item.btn1} />
-
-                  <Buttonn key={i} name={item.btn2} />
+                 
                 </div>
               </>
             ))}
+            
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}

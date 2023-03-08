@@ -5,16 +5,16 @@ import "../Puzzlepage/Puzzlechoice";
 import { useState } from "react";
 import Buttonp from "../Puzzlepage/Buttonp";
 import Buttonn from "../Puzzlepage/Buttonn";
-import './puzzleques.css'
-import bgImg from '../leaderboardfinal/05.png'
+import "./puzzleques.css";
+import bgImg from "../leaderboardfinal/05.png";
 import { motion, AnimatePresence } from "framer-motion";
 import ModalFrammer from "../ModalFrammer";
 import Finishmodal from "../Modalframmer/finishmodal";
 import "../modalcss.css";
 
+
 const Puzzlequestion = () => {
   const [modalOpen, setModalOpen] = useState(false);
-
 
   const close = () => {
     setModalOpen(false);
@@ -45,7 +45,8 @@ const Puzzlequestion = () => {
         btn2: "NO",
       },
       {
-        question: "Q.4} Concluded the Coaching with a summary (points to remember)",
+        question:
+          "Q.4} Concluded the Coaching with a summary (points to remember)",
 
         btn1: "YES",
         btn2: "NO",
@@ -56,7 +57,6 @@ const Puzzlequestion = () => {
         btn1: "YES",
         btn2: "NO",
       },
-      
     ],
   };
 
@@ -69,53 +69,50 @@ const Puzzlequestion = () => {
   return (
     <>
       <Navbar />
+     
       <div className="dashboard-container full-height">
-      <img src={bgImg} alt="" className="ques-bg"/>
+        <img src={bgImg} alt="" className="ques-bg" />
         <div className="round-box-dashboard">Questions</div>
-        
-        <div className="puzzle-box">
-          
 
+        <div className="puzzle-box">
           <div className="wordslct1">
             {/* map */}
             {questions.map((item, i) => (
               <>
                 <div className="wordyes1">
                   <span key={i}>{item.question}</span>
-                  <Buttonp key={i} name={item.btn1} />
                  
-                  <Buttonn key={i} name={item.btn2} />
+                  <Buttonp key={i} name1={item.btn1} name2={item.btn2}/>
                  
+                  
                 </div>
               </>
             ))}
+            
             <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="third question-btn icon-conatiner"
-                  onClick={() => (modalOpen ? close() : open())}
-                >
-                  Submit
-                </motion.button>
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="third question-btn icon-conatiner"
+              onClick={() => (modalOpen ? close() : open())}
+            >
+              Submit
+            </motion.button>
 
-                <AnimatePresence
-                  // Disable any initial animations on children that
-                  // are present when the component is first rendered
-                  initial={false}
-                  // Only render one component at a time.
-                  // The exiting component will finish its exit
-                  // animation before entering component is rendered
-                  exitBeforeEnter={true}
-                  // Fires when all exiting nodes have completed animating out
-                  onExitComplete={() => null}
-                >
-                  {modalOpen && (
-                    <Finishmodal modalOpen={modalOpen} handleClose={close} />
-                  )}
-                </AnimatePresence>
-
-               
-             
+            <AnimatePresence
+              // Disable any initial animations on children that
+              // are present when the component is first rendered
+              initial={false}
+              // Only render one component at a time.
+              // The exiting component will finish its exit
+              // animation before entering component is rendered
+              exitBeforeEnter={true}
+              // Fires when all exiting nodes have completed animating out
+              onExitComplete={() => null}
+            >
+              {modalOpen && (
+                <Finishmodal modalOpen={modalOpen} handleClose={close} />
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>

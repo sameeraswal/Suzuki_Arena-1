@@ -4,6 +4,7 @@ import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
 import randomnumimg from './saucer final (1).mp4'
 
+
 export default function Random() {
   // const [minVal, setMinVal] = useState(0);
   // const [maxVal, setMaxVal] = useState(10);
@@ -20,6 +21,7 @@ export default function Random() {
   return (
     <>
       <Navbar />
+     
       
       <div className="hero">
       {/* <div className="round-box ">Number Generator</div> */}

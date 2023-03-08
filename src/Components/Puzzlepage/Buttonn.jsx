@@ -1,8 +1,10 @@
 import React from 'react'
+import {useState} from 'react'
 
 const Buttonn = (props) => {
   const [color, setColors] = React.useState("");
   const [active, setActive] = React.useState(false);
+  
   const handleClickButton = (name) => {
     setActive(true);
     setColors(name);
@@ -12,12 +14,15 @@ const Buttonn = (props) => {
     }
   };
 
+  
+
 
 
   return (
     <button
     className={`yes-btn icon-conatiner ${color}`}
-    onClick={() => handleClickButton(props.name)}
+    onClick={() => {handleClickButton(props.name)
+    }}
   >
     {props.name}
   </button>
