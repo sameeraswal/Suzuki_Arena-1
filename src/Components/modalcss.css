@@ -341,6 +341,13 @@ li {
 .resp-desktop-b-s-sp{
   height: 45%;
 }
+
+.enter-score-finish-btn{
+  margin-top: -5%;
+  margin-left: 49%;
+  position: absolute;
+  z-index: 1;
+}
 /* finish round  */
 @media screen and (max-width: 768px) {
   .backdrop-finish {

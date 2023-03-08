@@ -49,6 +49,7 @@ import Swiftvsgrandi10 from "./Components/Flipcardspages/Swiftvsgrandi10";
 import Finishmodal from "./Components/Modalframmer/finishmodal";
 import Enterertiga from "./Components/Entercorepages/Enterertiga";
 import Enterbrezza from "./Components/Entercorepages/Enterbrezza";
+import Popupexample from "./Components/flipcard popup/Popup";
 
 const App = () => {
   const places = [
@@ -229,6 +230,9 @@ const App = () => {
           <Route path="/enterertiga" element={<Enterertiga />}></Route>
 
           <Route path="/enterbrezza" element={<Enterbrezza />}></Route>
+          <Route path="/popupexample" element={<Popupexample />}></Route>
+
+          
         </Routes>
       </div>
     </Router>

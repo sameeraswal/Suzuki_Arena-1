@@ -27,6 +27,7 @@
     "react-transition-group": "^4.4.5",
     "react-wheel-of-prizes": "^1.0.9",
     "reactjs-localstorage": "^1.0.1",
+    "reactjs-popup": "^2.0.5",
     "redux-persist": "^6.0.0",
     "sass": "^1.58.1",
     "web-vitals": "^2.1.4"
