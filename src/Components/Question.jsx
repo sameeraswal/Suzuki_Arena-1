@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
-import { data } from "./data";
 
 import { motion, AnimatePresence } from "framer-motion";
 import ModalFrammer from "./ModalFrammer";
@@ -20,13 +19,6 @@ const Question = () => {
     setModalOpen(true);
   };
   const [activeQuestion, setActiveQuestion] = useState(0);
-  // const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
-  // const { questions } = data;
-  //id variable
-
-  // const [selectop, setSelectOp] = useState("#fff");
-
-  //next question function
 
   const [func, setFunc] = useState(true);
   const handleClick = (event) => {
@@ -37,11 +29,7 @@ const Question = () => {
     setFunc(!func);
     // event.target.style.background = "#fff";
   };
-  // const correctHandler = () => {
-  //   setSelectOp("#00FF00");
-  //   //save option id in var
-  // };
-  // let q, i, c, v;
+  
   let [i, setI] = useState([]);
   let [c, setC] = useState([]);
   let [v, setV] = useState([]);
@@ -68,12 +56,13 @@ const Question = () => {
         console.log(res.data.data[0].questions[activeQuestion].questionId, "ID ");
       })
       .catch((error) => console.log(error, "error is here"));
-  }, []);
+  }, [activeQuestion]);
 
   const onClickNext = () => {
     //HTTP call
     
     setActiveQuestion((i) => i + 1);
+    console.log(activeQuestion)
   };
   return (
     <>

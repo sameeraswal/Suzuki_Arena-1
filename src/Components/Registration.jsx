@@ -5,6 +5,7 @@ import "./registration.scss";
 import loginImg from "./loginicon.png";
 import axios from "axios";
 import { useState } from "react";
+import { APIURL } from "../App";
 function Registration() {
   const arena = require("./maruti-suzuki-arena.webp");
 
@@ -28,7 +29,7 @@ function Registration() {
 
   const getData = () => {
     axios
-      .get(`http://localhost:4500/api/v1/mspin/${update}`)
+      .get(`${APIURL}/api/v1/mspin/${update}`)
 
       .then((res) => {
         setName(res.data.data.name);
@@ -39,7 +40,7 @@ function Registration() {
   const postData = () => {
     console.log(mspin,name,dealership,regno)
     axios
-      .post(`http://localhost:4500/api/v1/employee/register`, {
+      .post(`${APIURL}/api/v1/employee/register`, {
         mspin: update,
         name: name,
         dealership: dealership,
