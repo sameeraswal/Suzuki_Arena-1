@@ -100,20 +100,29 @@ exports.submitAnswerOfQuestion = async (req, res) => {
                 console.log("not exits. save the answer")
                 let checked = await checkAnswer();
                 const roundReport = new EmployeeAnswer({ mspin, registrationNumber, name, roundName, empAnswers: checked });
-                await roundReport.save();
-                res.status(201).json({
-                    status: "success",
-                    message: "answer is submitted",
-                    Employee_result: {
-                        employeeMspin: mspin,
-                        employeeRegistrationNumber: registrationNumber,
-                        name,
-                        roundName,
-                        employeeReport: checked,
-                        correctQuestionsAnswers
+                const ansSubmitted= await roundReport.save();
+                if(ansSubmitted){
+                    res.status(201).json({
+                        status: "success",
+                        message: "answer is submitted",
+                        Employee_result: {
+                            employeeMspin: mspin,
+                            employeeRegistrationNumber: registrationNumber,
+                            name,
+                            roundName,
+                            employeeReport: checked,
+                            correctQuestionsAnswers
+    
+                        }
+                    });
 
-                    }
-                });
+                }else{
+                    return res.status(404).json({
+                        status: status,
+                        message: "error during submition"
+                    })
+
+                }
             }
 
         } else {
