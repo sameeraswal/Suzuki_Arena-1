@@ -17,10 +17,7 @@ const roundsSchema = new mongoose.Schema({
     isDisabled: {
         type: Boolean
     },
-    questions: [{
-        type:Array,
-        default :{}
-    }],
+    questions: {},
     correctAnswers: {}
 });
 
