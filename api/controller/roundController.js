@@ -125,57 +125,41 @@ const Roundunlocked = require("../model/employeeUnlockedRound");
 // }
 
 exports.getRoundLists = async (req, res) => {
+    console.log("came....")
     let status = false;
     try {
         const mspin = req.body.mspin;
         const name = req.body.name;
-        //const roundName= req.body.roundName;
-        //const rounds = await Round.find({}).select({ roundName: 1, isRoundLocked: 1, _id: 0 });
-        const rounds = await Round.find({}).select({ roundName: 1, _id: 0 }).sort({ roundOrder: 1 });
-        //const rounds = await Round.find().select("roundName -_id");
+        const rounds = await Round.find({}).select({ roundName: 1, roundOrder:1, _id: 0 }).sort({ roundOrder: 1 });
         console.log("rounds before updataion=========", rounds)
         if (rounds.length) {
             status = true;
-
             let disabledRound = await Roundunlocked.findOne({ mspin: mspin, name: name }).select({ disabled: 1 });
-            //console.log("disabledRounddddddddddddd==========",disabledRound)
             if (disabledRound) {
                 let disabledRounds = disabledRound.disabled;
-                //console.log(disabledRounds)
-                console.log("disabledRoundssssss from collection==========", disabledRounds)
-
-
                 rounds.forEach((round, index, rounds) => {
-                    //console.log("inside foreach loop rounddddddd=======", round)
                     let checkRoundNameExists = disabledRounds.includes(round.roundName)
-
                     if (checkRoundNameExists) {
                         rounds[index]["isRoundLocked"] = true;
-                        //round["isRoundLocked"] = false;
                     } else {
                         rounds[index]["isRoundLocked"] = false;
-                        //round["isRoundLocked"] = true;
                     }
                 })
                 console.log("rounds aftrer updataion=========", rounds)
-                // disabledRounds.push(roundName);
-                
-                // disabledRound.shift();
-                // console.log(disabledRounds);
 
-                res.status(201).json({
-                    status: status,
-                    data: rounds
+            } else {//When we don't have any data in Roundunlocked for the given mspin
+                rounds.forEach((round, index, rounds) => {
+                    if(rounds[index]["roundOrder"]==1){//Keep the first round unlocked
+                        rounds[index]["isRoundLocked"] = false;
+                    }else{//other round will be locked
+                        rounds[index]["isRoundLocked"] = true;
+                    }
                 })
-
-            } else {
-                status = false
-                res.status(401).json({
-                    status: status,
-                    message: "data not found"
-                })
-
             }
+            res.status(201).json({
+                status: status,
+                data: rounds
+            })
         } else {
             res.status(404).json({
                 status: status,
