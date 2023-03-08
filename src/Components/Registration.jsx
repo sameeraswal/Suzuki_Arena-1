@@ -13,6 +13,14 @@ function Registration() {
   };
   const [name, setName] = useState("");
   const [dealership, setDearlership] = useState("");
+  const [mspin, setMspin] = useState("");
+  const [regno, setRegno] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleChangeregno = (event) => {
+    console.log(event.target.value)
+    setRegno(event.target.value);
+  };
   const [update, setUpdate] = useState("");
   const handleChange = (event) => {
     setUpdate(event.target.value);
@@ -21,11 +29,29 @@ function Registration() {
   const getData = () => {
     axios
       .get(`http://localhost:4500/api/v1/mspin/${update}`)
+
       .then((res) => {
         setName(res.data.data.name);
         setDearlership(res.data.data.dealership);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error, "error is here"));
+  };
+  const postData = () => {
+    console.log(mspin,name,dealership,regno)
+    axios
+      .post(`http://localhost:4500/api/v1/employee/register`, {
+        mspin: update,
+        name: name,
+        dealership: dealership,
+        registrationNumber: regno,
+      })
+    
+      .then((res) => {
+        
+        console.log(res.data.message, "Message is hewre");
+        alert(res.data.message);
+      })
+      .catch((error) => console.log(error, "error is here"));
   };
   return (
     <div>
@@ -84,21 +110,27 @@ function Registration() {
               <label class="form__label">Dealership</label>
             </div>
             <div class="form">
-              <input type="text" class="form__input" placeholder=" " />
+              <input
+                type="text"
+                class="form__input"
+                placeholder=" "
+                onChange={handleChangeregno}
+              />
               <label class="form__label">Registration Number</label>
             </div>
 
             <div class="submit">
-              <Link to="/login">
-                <button
-                  className="control-button up third icon-conatiner"
-                  onClick={(e) => {
-                    handleEntailmentRequest(e);
-                  }}
-                >
-                  Register
-                </button>
-              </Link>
+              {/* <Link to="/login"> */}
+              <button
+                className="control-button up third icon-conatiner"
+                onClick={(e) => {
+                  handleEntailmentRequest(e);
+                  postData();
+                }}
+              >
+                Register
+              </button>
+              {/* </Link> */}
             </div>
           </form>
         </div>

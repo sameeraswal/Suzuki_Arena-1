@@ -1293,3 +1293,9 @@ ul {
     margin-left: 1%;
   }
 }
+.full-bg{
+  height: 88vh;
+  width: 99.5vw;
+  background-size: cover;
+  z-index: 1;
+}

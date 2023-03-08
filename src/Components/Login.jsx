@@ -8,6 +8,8 @@ import axios from "axios";
 const Login = () => {
   const [mspin, setMspin] = useState("");
   const [regno, setRegno] = useState("");
+  const [res, setRes] = useState(true);
+
   const [message, setMessage] = useState("");
   const handleChangemspin = (event) => {
     setMspin(event.target.value);
@@ -15,6 +17,7 @@ const Login = () => {
   const handleChangeregno = (event) => {
     setRegno(event.target.value);
   };
+
   const fetchData = () => {
     axios
       .post("http://localhost:4500/api/v1/login", {
@@ -22,10 +25,28 @@ const Login = () => {
         regNumber: regno,
       })
       .then((res) => {
-        console.log(res.data.message);
-        setMessage(res.data.message);
-      });
-    return false;
+        // console.log(res.data.status, "Response is here");
+        // setMessage(res.data.message);
+        // {
+        //   res.status == "false"
+        //     ? alert("False status")
+        //     : alert("message");
+        // }
+        console.log(res, "Response");
+
+        if (res.data.status === true) {
+          setRes(res.data.status);
+          setMessage(res.data.message);
+
+          console.log(res.data.status, res.data.message);
+          // setLoginStatus(true);
+          alert("admin login successfull");
+        } else {
+          setMessage(res.data.message);
+        }
+      })
+      .catch((error) => setMessage(error.response.data.message));
+    // return false;
   };
 
   const arena = require("./maruti-suzuki-arena.webp");
@@ -68,21 +89,22 @@ const Login = () => {
               />
               <label class="form__label">Registration Number</label>
             </div>
-            {/* <Link to="/dashboard"> */}
-            <input
-              type="text"
-              class="form__input invisible"
-              placeholder=" "
-              value={message}
-            />
-            <input
-              class="control-button up third icon-conatiner btn-bottom"
-              onClick={fetchData}
-              type="button"
-              value="Login"
-            />
-
-            {/* </Link> */}
+            {res && (
+              <Link to="/dashboard">
+                <input
+                  type="text"
+                  class="form__input invisible"
+                  placeholder=" "
+                  value={message}
+                />
+                <input
+                  class="control-button up third icon-conatiner btn-bottom"
+                  onClick={fetchData}
+                  type="button"
+                  value="Login"
+                />
+              </Link>
+            )}
           </form>
         </div>
       </div>

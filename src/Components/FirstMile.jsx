@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+// import {modalImg}
 // import { AnimatePresence } from "framer-motion";
 // import useModal from "./hooks/useModal";
 // import { framerLogger } from "./stateLogger";
@@ -28,10 +29,13 @@ const FirstMile = () => {
   };
 
   return (
-    <div>
+    <>
       <Navbar />
       <div className="">
-        <div></div>
+        {/* <div>
+          <img src={modalImg} alt="" className="full-bg"/>
+        </div> */}
+
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -65,7 +69,7 @@ const FirstMile = () => {
           <ModalFrammer modalOpen={modalOpen} handleClose={close} />
         )}
       </AnimatePresence>
-    </div>
+    </>
   );
 };
 
