@@ -33,6 +33,7 @@ router.get("/api/v1/round/roundname/:roundName/wheeltitles", roundController.get
 router.get("/api/v1/round/roundname/:roundName/wheel/:wheelQuestionId/cardstitles", roundController.getCardsTitles);
 
 router.get("/api/v1/quiz/finalscore/leaderboard", employeeReportController.getScoreOfEveryone);
+router.post("/api/v1/finishround", roundController.finishRound);
 
 
 //router.get("/api/v1/quiz/mspin/:mspin/finalscore", employeeReportController.getFinalScore); //this should be get or post?
