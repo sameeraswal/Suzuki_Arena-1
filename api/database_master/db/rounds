@@ -1,0 +1,1399 @@
+[{
+  "_id": {
+    "$oid": "6408cb3a5af2802059a23dac"
+  },
+  "roundName": "1-A",
+  "roundOrder": 1,
+  "route": "/firstmile",
+  "isRoundLocked": false,
+  "questions": [
+    {
+      "questionId": 1,
+      "questionUrl": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Identify the variant from which the feature shown above is available ?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "LXi"
+        },
+        {
+          "cId": 2,
+          "name": "VXi"
+        },
+        {
+          "cId": 3,
+          "name": "ZXi"
+        },
+        {
+          "cId": 4,
+          "name": "ZXi"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 2,
+      "questionUrl": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of these is an 'Active safety' feature?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "seat belt",
+          "choiceUrl": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "ABS",
+          "choiceUrl": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "HEARTECT",
+          "choiceUrl": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "Airbag",
+          "choiceUrl": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 3,
+      "questionUrl": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "What is the maximum power output of Brezza in Petrol? (kW @rpm)",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "83 @ 6000"
+        },
+        {
+          "cId": 2,
+          "name": "76.8 @ 6000"
+        },
+        {
+          "cId": 3,
+          "name": "81 @ 6000"
+        },
+        {
+          "cId": 4,
+          "name": "75.8 @ 6000"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 4,
+      "questionUrl": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "The technology shown above is in which of following vehicles",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "Alto K10"
+        },
+        {
+          "cId": 2,
+          "name": "Brezza"
+        },
+        {
+          "cId": 3,
+          "name": "Wagon R"
+        },
+        {
+          "cId": 4,
+          "name": "Swift"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 5,
+      "questionUrl": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "What is the turning radius of the S-Presso?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "4.5 m"
+        },
+        {
+          "cId": 2,
+          "name": "4.6 m"
+        },
+        {
+          "cId": 3,
+          "name": "4.9 m"
+        },
+        {
+          "cId": 4,
+          "name": "4.4 m"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 6,
+      "questionUrl": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Identify the variant from which the feature shown above is available.",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "LXi"
+        },
+        {
+          "cId": 2,
+          "name": "ZXi"
+        },
+        {
+          "cId": 3,
+          "name": "VXi"
+        },
+        {
+          "cId": 4,
+          "name": "ZX+"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 7,
+      "questionUrl": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of these is an 'Active safety' feature?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "Crumple Zones",
+          "choiceUrl": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "TECT",
+          "choiceUrl": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "Head Restraint",
+          "choiceUrl": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "Hill Hold Assist",
+          "choiceUrl": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    }
+  ],
+  "correctAnswers": [
+    {
+      "questionId": 1,
+      "cId": 1
+    },
+    {
+      "questionId": 2,
+      "cId": 2
+    },
+    {
+      "questionId": 3,
+      "cId": 4
+    },
+    {
+      "questionId": 4,
+      "cId": 2
+    },
+    {
+      "questionId": 5,
+      "cId": 1
+    },
+    {
+      "questionId": 6,
+      "cId": 2
+    },
+    {
+      "questionId": 7,
+      "cId": 4
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6408cb3a5af2802059a23dad"
+  },
+  "roundName": "1-B",
+  "roundOrder": 2,
+  "route": "/chasethemaze",
+  "isRoundLocked": true,
+  "questions": [
+    {
+      "questionId": 1,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "(round 1-A)Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 2,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of the following keywords is used to define a variable in Javascript?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "var",
+          "img": ""
+        },
+        {
+          "cId": 2,
+          "name": "let",
+          "img": ""
+        },
+        {
+          "cId": 3,
+          "name": "var and let",
+          "img": ""
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": ""
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 3,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of the following methods can be used to display data in some form using Javascript?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "document.write()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "console.log()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "window.alert",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "All of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 4,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 5,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    }
+  ],
+  "correctAnswers": [
+    {
+      "questionId": 1,
+      "cId": 2
+    },
+    {
+      "questionId": 2,
+      "cId": 1
+    },
+    {
+      "questionId": 3,
+      "cId": 3
+    },
+    {
+      "questionId": 4,
+      "cId": 2
+    },
+    {
+      "questionId": 5,
+      "cId": 4
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6408cb3a5af2802059a23dae"
+  },
+  "roundName": "2",
+  "roundOrder": 3,
+  "route": "/eyeforaneye",
+  "isRoundLocked": true,
+  "questions": [
+    {
+      "wheelQuestiontitle": "S presso Vs Kwid",
+      "wheelQuestionId": 1,
+      "cardsRemaining": 5,
+      "cardQuestions": [
+        {
+          "cardQuestionId": 1,
+          "isCardLocked": false,
+          "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+          "cardtitle": "Height",
+          "cardQuestion": "what is the height of car"
+        },
+        {
+          "cardQuestionId": 2,
+          "isCardLocked": true,
+          "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+          "cardTitle": "Length",
+          "cardQuestion": "what is the length of car?"
+        },
+        {
+          "cardQuestionId": 3,
+          "isCardLocked": true,
+          "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+          "cardTitle": "Power",
+          "cardQuestion": "what is the power of wagonr?"
+        }
+      ]
+    },
+    {
+      "wheelQuestiontitle": "WagonR vs Tiago",
+      "wheelQuestionId": 2,
+      "cardsRemaining": 5,
+      "cardQuestions": [
+        {
+          "cardQuestionId": 1,
+          "isCardLocked": false,
+          "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+          "cardTitle": "Height",
+          "cardQuestion": "what is the height of car"
+        },
+        {
+          "cardQuestionId": 2,
+          "isCardLocked": true,
+          "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+          "cardTitle": "Length",
+          "cardQuestion": "what is the length of car?"
+        },
+        {
+          "cardQuestionId": 3,
+          "isCardLocked": true,
+          "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+          "cardTitle": "Power",
+          "cardQuestion": "what is the power of wagonr on petrol mode?"
+        }
+      ]
+    },
+    {
+      "wheelQuestiontitle": "Alto K10 vs Kwid RXT",
+      "wheelQuestionId": 3,
+      "cardsRemaining": 5,
+      "cardQuestions": [
+        {
+          "cardQuestionId": 1,
+          "isCardLocked": false,
+          "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+          "cardTitle": "Height",
+          "cardQuestion": "what is the height of car"
+        },
+        {
+          "cardQuestionId": 2,
+          "isCardLocked": true,
+          "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+          "cardTitle": "Length",
+          "cardQuestion": "what is the length of Kwid RXT?"
+        },
+        {
+          "cardQuestionId": 3,
+          "isCardLocked": true,
+          "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+          "cardTitle": "Power",
+          "cardQuestion": "what is the power of wagonr on petrol mode?"
+        }
+      ]
+    }
+  ],
+  "correctAnswers": [
+    {
+      "wheelQuestiontitle": "S presso Vs Kwid",
+      "wheelQuestionId": 1,
+      "questions": [
+        {
+          "cardQuestionId": 1,
+          "cId": "1567 mm"
+        },
+        {
+          "cardQuestionId": 2,
+          "cId": "3731 mm"
+        },
+        {
+          "cardQuestionId": 3,
+          "cId": "49 kW @ 5500 rpm"
+        }
+      ]
+    },
+    {
+      "wheelQuestiontitle": "Alto K10 Vs Kwid RXT",
+      "wheelQuestionId": 2,
+      "questions": [
+        {
+          "cardQuestionId": 1,
+          "cId": "1675 mm"
+        },
+        {
+          "cardQuestionId": 2,
+          "cId": "3765 mm"
+        },
+        {
+          "cardQuestionId": 3,
+          "cId": "66.0 kW @ 6000 rpm"
+        }
+      ]
+    },
+    {
+      "wheelQuestiontitle": "Celerio Vs Tiago",
+      "wheelQuestionId": 3,
+      "questions": [
+        {
+          "cardQuestionId": 1,
+          "cId": "1520 mm"
+        },
+        {
+          "cardQuestionId": 2,
+          "cId": "3731 mm"
+        },
+        {
+          "cardQuestionId": 3,
+          "cId": "49 kW @ 5500 rpm"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6408cb3a5af2802059a23daf"
+  },
+  "roundName": "3",
+  "roundOrder": 4,
+  "route": "/bespokesalespitch",
+  "isRoundLocked": true,
+  "questions": [
+    {
+      "questionId": 1,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "(round 31111)Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 2,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of the following keywords is used to define a variable in Javascript?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "var",
+          "img": ""
+        },
+        {
+          "cId": 2,
+          "name": "let",
+          "img": ""
+        },
+        {
+          "cId": 3,
+          "name": "var and let",
+          "img": ""
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": ""
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 3,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of the following methods can be used to display data in some form using Javascript?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "document.write()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "console.log()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "window.alert",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "All of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 4,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 5,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    }
+  ],
+  "correctAnswers": [
+    {
+      "questionId": 1,
+      "cId": 2
+    },
+    {
+      "questionId": 2,
+      "cId": 4
+    },
+    {
+      "questionId": 3,
+      "cId": 1
+    },
+    {
+      "questionId": 4,
+      "cId": 3
+    },
+    {
+      "questionId": 5,
+      "cId": 4
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6408cb3a5af2802059a23db0"
+  },
+  "roundName": "4",
+  "roundOrder": 5,
+  "route": "/solutionsonly",
+  "isRoundLocked": true,
+  "questions": [
+    {
+      "questionId": 1,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "(round 4)Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 2,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of the following keywords is used to define a variable in Javascript?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "var",
+          "img": ""
+        },
+        {
+          "cId": 2,
+          "name": "let",
+          "img": ""
+        },
+        {
+          "cId": 3,
+          "name": "var and let",
+          "img": ""
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": ""
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 3,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of the following methods can be used to display data in some form using Javascript?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "document.write()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "console.log()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "window.alert",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "All of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 4,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 5,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    }
+  ],
+  "correctAnswers": [
+    {
+      "questionId": 1,
+      "cId": 3
+    },
+    {
+      "questionId": 2,
+      "cId": 1
+    },
+    {
+      "questionId": 3,
+      "cId": 2
+    },
+    {
+      "questionId": 4,
+      "cId": 4
+    },
+    {
+      "questionId": 5,
+      "cId": 2
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6408cb3a5af2802059a23db1"
+  },
+  "roundName": "5",
+  "roundOrder": 6,
+  "route": "/askexpress",
+  "isRoundLocked": true,
+  "questions": [
+    {
+      "questionId": 1,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "(round 5)Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 2,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of the following keywords is used to define a variable in Javascript?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "var",
+          "img": ""
+        },
+        {
+          "cId": 2,
+          "name": "let",
+          "img": ""
+        },
+        {
+          "cId": 3,
+          "name": "var and let",
+          "img": ""
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": ""
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 3,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of the following methods can be used to display data in some form using Javascript?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "document.write()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "console.log()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "window.alert",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "All of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 4,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 5,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    }
+  ],
+  "correctAnswers": [
+    {
+      "questionId": 1,
+      "cId": 3
+    },
+    {
+      "questionId": 2,
+      "cId": 4
+    },
+    {
+      "questionId": 3,
+      "cId": 1
+    },
+    {
+      "questionId": 4,
+      "cId": 2
+    },
+    {
+      "questionId": 5,
+      "cId": 4
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6408cb3a5af2802059a23db2"
+  },
+  "roundName": "6",
+  "roundOrder": 7,
+  "route": "/listthetwist",
+  "isRoundLocked": true,
+  "questions": [
+    {
+      "questionId": 1,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "(round 6)Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 2,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of the following keywords is used to define a variable in Javascript?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "var",
+          "img": ""
+        },
+        {
+          "cId": 2,
+          "name": "let",
+          "img": ""
+        },
+        {
+          "cId": 3,
+          "name": "var and let",
+          "img": ""
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": ""
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 3,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of the following methods can be used to display data in some form using Javascript?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "document.write()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "console.log()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "window.alert",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "All of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 4,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 5,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    }
+  ],
+  "correctAnswers": [
+    {
+      "questionId": 1,
+      "cId": 3
+    },
+    {
+      "questionId": 2,
+      "cId": 4
+    },
+    {
+      "questionId": 3,
+      "cId": 1
+    },
+    {
+      "questionId": 4,
+      "cId": 2
+    },
+    {
+      "questionId": 5,
+      "cId": 4
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6408cb3a5af2802059a23db3"
+  },
+  "roundName": "7",
+  "roundOrder": 8,
+  "route": "/judgesround",
+  "isRoundLocked": true,
+  "questions": [
+    {
+      "questionId": 1,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "(round 7)Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 2,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of the following keywords is used to define a variable in Javascript?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "var",
+          "img": ""
+        },
+        {
+          "cId": 2,
+          "name": "let",
+          "img": ""
+        },
+        {
+          "cId": 3,
+          "name": "var and let",
+          "img": ""
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": ""
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 3,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which of the following methods can be used to display data in some form using Javascript?",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "document.write()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "console.log()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "window.alert",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "All of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 4,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    },
+    {
+      "questionId": 5,
+      "video": "https://www.youtube.com/embed/Q5ZpKQFcC0U",
+      "question": "Which function is used to serialize an object into a JSON string in Javascript",
+      "choices": [
+        {
+          "cId": 1,
+          "name": "stringify()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 2,
+          "name": "parse()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 3,
+          "name": "convert()",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        },
+        {
+          "cId": 4,
+          "name": "None of the above",
+          "img": "https://imgd.aeplcdn.com/227x128/n/cw/ec/101055/virtus-exterior-right-front-three-quarter.jpeg?isig=0&q=75"
+        }
+      ],
+      "type": "MCQs"
+    }
+  ],
+  "correctAnswers": [
+    {
+      "questionId": 1,
+      "cId": 3
+    },
+    {
+      "questionId": 2,
+      "cId": 4
+    },
+    {
+      "questionId": 3,
+      "cId": 1
+    },
+    {
+      "questionId": 4,
+      "cId": 2
+    },
+    {
+      "questionId": 5,
+      "cId": 4
+    }
+  ]
+}]

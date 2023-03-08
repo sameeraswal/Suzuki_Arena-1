@@ -8,10 +8,17 @@ const roundsSchema = new mongoose.Schema({
     roundOrder:{
         type:Number
     },
+    route : {
+        type:String
+    },
     isRoundLocked: {
         type: Boolean
     },
+    isDisabled: {
+        type: Boolean
+    },
     questions: [{
+        type:Array,
         default :{}
     }],
     correctAnswers: {}
