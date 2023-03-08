@@ -30,6 +30,8 @@ const Question = () => {
   //   setFunc(!func);
   //   // event.target.style.background = "#fff";
   // };
+  const [openModel, setOpenModal] = useState(true);
+
   const handleToggleClasslistRef = (ref) => {
     if (!ref.current) {
       return;
@@ -45,15 +47,14 @@ const Question = () => {
   let [i, setI] = useState([]);
   let [c, setC] = useState([]);
   let [v, setV] = useState([]);
+  let [rn, setRN] = useState([]);
+  let [cid, setCID] = useState(0);
 
   let [question, setQuestion] = useState("");
-  const timeOutFun = () => {
-    // console.log(car,`/${car}`)
-    setTimeout(() => window.open("/popupexample", "_self"), 6000);
-  };
+
   useEffect(() => {
     // alert("Page is running");
-    timeOutFun();
+
     axios
       .get(`${APIURL}/api/v1/roundname/1-A`)
       .then((res) => {
@@ -70,14 +71,47 @@ const Question = () => {
         setC(res.data.data[0].questions[activeQuestion].choices);
         // console.log(choices, "Choices");
         setV(res.data.data[0].questions[activeQuestion].questionUrl);
-        console.log(
-          res.data.data[0].questions[activeQuestion].questionId,
-          "ID "
-        );
+        setRN(res.data.data[0].questions[activeQuestion]);
+        setCID(res.data.data[0].questions[activeQuestion].choices);
+        // console.log(res.data.data[0].questions[activeQuestion], "ID ");
       })
       .catch((error) => console.log(error, "error is here"));
   }, [activeQuestion]);
+  const [mspin, setMspin] = useState("");
+  const [regno, setRegno] = useState("");
 
+  useEffect(() => {
+    const mspin = JSON.parse(localStorage.getItem("mspin"));
+    const regno = JSON.parse(localStorage.getItem("regNo"));
+
+    if (mspin) {
+      setMspin(mspin);
+    }
+    if (regno) {
+      setRegno(regno);
+    }
+  }, []);
+
+  const fetchAnswer = () => {
+    axios
+      .post(`${APIURL}/api/v1/round/submitanswer`, {
+        mspin: mspin,
+        registrationNumber: regno,
+        name: "akshay verma",
+        roundName: "1-A",
+        questionId: i,
+        cId: cid,
+      })
+      .then((res) => {
+        console.log(res, "Response");
+        // setStatus(res.data.status);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  {
+    console.log(cid, "CID is changing");
+  }
   const onClickNext = () => {
     //HTTP call
 
@@ -117,6 +151,7 @@ const Question = () => {
                         event.stopPropagation();
                         ref.current = event.target;
                         handleToggleClasslistRef(ref);
+                        setCID(item.cId);
                       }}
                       className="icon-conatiner"
                     >
@@ -130,9 +165,12 @@ const Question = () => {
 
           {/* modal */}
           <div>
-            {i !== 4 ? (
+            {i !== 5 ? (
               <button
-                onClick={onClickNext}
+                onClick={() => {
+                  onClickNext();
+                  fetchAnswer();
+                }}
                 className="third question-btn icon-conatiner"
               >
                 Submit

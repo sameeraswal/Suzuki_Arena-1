@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Search from "./search";
 import loginImg from "./loginicon.png";
@@ -7,6 +7,7 @@ import axios from "axios";
 import { APIURL } from "../App";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [mspin, setMspin] = useState("");
   const [regno, setRegno] = useState("");
   const [res, setRes] = useState(true);
@@ -18,6 +19,7 @@ const Login = () => {
   const handleChangeregno = (event) => {
     setRegno(event.target.value);
   };
+  const [status, setStatus] = useState(false);
 
   const fetchData = () => {
     axios
@@ -34,14 +36,14 @@ const Login = () => {
         //     : alert("message");
         // }
         console.log(res, "Response");
-
+        setStatus(res.data.status);
         if (res.data.status === true) {
           // setRes(res.data.status);
           setMessage(res.data.message);
 
           // console.log(res.data.status, res.data.message);
           // setLoginStatus(true);
-          alert("admin login successfull");
+          // alert("admin login successfull");
         } else {
           setMessage(res.data.message);
         }
@@ -51,6 +53,18 @@ const Login = () => {
   };
 
   const arena = require("./maruti-suzuki-arena.webp");
+  const navigateLogin = () => {
+    console.log(status, "Status is here");
+    if (status) {
+      navigate("/login");
+    }
+  };
+  // const [mspin, setMspin] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem("mspin", JSON.stringify(mspin));
+    localStorage.setItem("regNo", JSON.stringify(regno));
+  }, [mspin,regno]);
   return (
     <>
       <div className="nav-center">
@@ -91,7 +105,7 @@ const Login = () => {
               <label class="form__label">Registration Number</label>
             </div>
             {/* {res && ( */}
-            <Link to="/dashboard">
+            {/* <Link to="/dashboard"> */}
             <input
               type="text"
               class="form__input invisible"
@@ -100,11 +114,14 @@ const Login = () => {
             />
             <input
               class="control-button up third icon-conatiner btn-bottom"
-              onClick={fetchData}
+              onClick={() => {
+                fetchData();
+                navigateLogin();
+              }}
               type="button"
               value="Login"
             />
-            </Link>
+            {/* </Link> */}
             {/* )} */}
           </form>
         </div>

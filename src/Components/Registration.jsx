@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import Navbar from "./Navbar";
 import Search from "./search";
 import "./registration.scss";
@@ -6,20 +7,24 @@ import loginImg from "./loginicon.png";
 import axios from "axios";
 import { useState } from "react";
 import { APIURL } from "../App";
+
 function Registration() {
+  const navigate = useNavigate();
   const arena = require("./maruti-suzuki-arena.webp");
 
   const handleEntailmentRequest = (e) => {
     e.preventDefault();
   };
+
   const [name, setName] = useState("");
   const [dealership, setDearlership] = useState("");
   const [mspin, setMspin] = useState("");
   const [regno, setRegno] = useState("");
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState(false);
 
   const handleChangeregno = (event) => {
-    console.log(event.target.value)
+    console.log(event.target.value);
     setRegno(event.target.value);
   };
   const [update, setUpdate] = useState("");
@@ -32,13 +37,14 @@ function Registration() {
       .get(`${APIURL}/api/v1/mspin/${update}`)
 
       .then((res) => {
+        setStatus(res.data.status);
         setName(res.data.data.name);
         setDearlership(res.data.data.dealership);
       })
       .catch((error) => console.log(error, "error is here"));
   };
   const postData = () => {
-    console.log(mspin,name,dealership,regno)
+    console.log(mspin, name, dealership, regno);
     axios
       .post(`${APIURL}/api/v1/employee/register`, {
         mspin: update,
@@ -46,13 +52,20 @@ function Registration() {
         dealership: dealership,
         registrationNumber: regno,
       })
-    
+
       .then((res) => {
+        setMessage(res.data.message);
         
-        console.log(res.data.message, "Message is hewre");
+        console.log(res.data, "Message is hewre");
         alert(res.data.message);
       })
       .catch((error) => console.log(error, "error is here"));
+  };
+  const navigateLogin = () => {
+    console.log(status , "Status is here")
+    if (status) {
+      navigate("/login");
+    }
   };
   return (
     <div>
@@ -121,17 +134,16 @@ function Registration() {
             </div>
 
             <div class="submit">
-              {/* <Link to="/login"> */}
               <button
                 className="control-button up third icon-conatiner"
                 onClick={(e) => {
                   handleEntailmentRequest(e);
                   postData();
+                  navigateLogin();
                 }}
               >
                 Register
               </button>
-              {/* </Link> */}
             </div>
           </form>
         </div>

@@ -4,70 +4,84 @@ import "./leaderboard.css";
 import bg from "./02.png";
 import text from "./01.png";
 import trophy from "./09.png";
+import { APIURL } from "../../App";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const Leaderboard = () => {
-  let response = {
-    status: true,
-    data: [
-      {
-        regNo: "1",
-        name: "parth",
-        rank: "2",
-        round: "1",
-        score: "100",
-        class: "lower-cut",
-      },
-      {
-        regNo: "2",
-        name: "parth1",
-        rank: "3",
-        round: "4",
-        score: "80",
-        class: "lower-cut",
-      },
-      {
-        regNo: "2",
-        name: "parth1",
-        rank: "3",
-        round: "4",
-        score: "80",
-        class: "upper-cut",
-      },
-      {
-        regNo: "2",
-        name: "parth1",
-        rank: "3",
-        round: "4",
-        score: "80",
-        class: "lower-cut",
-      },
-      {
-        regNo: "2",
-        name: "parth1",
-        rank: "3",
-        round: "4",
-        score: "80",
-        class: "upper-cut",
-      },
-      {
-        regNo: "2",
-        name: "parth1",
-        rank: "3",
-        round: "4",
-        score: "80",
-        class: "lower-cut",
-      },
-      {
-        regNo: "2",
-        name: "parth1",
-        rank: "3",
-        round: "4",
-        score: "80",
-        class: "upper-cut",
-      },
-    ],
-  };
-  let rounds = response.data;
+  // let response = {
+  //   status: true,
+  //   data: [
+  //     {
+  //       regNo: "1",
+  //       name: "parth",
+  //       rank: "2",
+  //       round: "1",
+  //       score: "100",
+  //       class: "lower-cut",
+  //     },
+  //     {
+  //       regNo: "2",
+  //       name: "parth1",
+  //       rank: "3",
+  //       round: "4",
+  //       score: "80",
+  //       class: "lower-cut",
+  //     },
+  //     {
+  //       regNo: "2",
+  //       name: "parth1",
+  //       rank: "3",
+  //       round: "4",
+  //       score: "80",
+  //       class: "upper-cut",
+  //     },
+  //     {
+  //       regNo: "2",
+  //       name: "parth1",
+  //       rank: "3",
+  //       round: "4",
+  //       score: "80",
+  //       class: "lower-cut",
+  //     },
+  //     {
+  //       regNo: "2",
+  //       name: "parth1",
+  //       rank: "3",
+  //       round: "4",
+  //       score: "80",
+  //       class: "upper-cut",
+  //     },
+  //     {
+  //       regNo: "2",
+  //       name: "parth1",
+  //       rank: "3",
+  //       round: "4",
+  //       score: "80",
+  //       class: "lower-cut",
+  //     },
+  //     {
+  //       regNo: "2",
+  //       name: "parth1",
+  //       rank: "3",
+  //       round: "4",
+  //       score: "80",
+  //       class: "upper-cut",
+  //     },
+  //   ],
+  // };
+  // let rounds = response.data;
+  const [round, setRound] = useState([]);
+  useEffect(() => {
+    // alert("Page is running");
+    axios
+      .get(`${APIURL}/api/v1/quiz/finalscore/leaderboard`)
+      .then((res) => {
+        setRound(res.data.data.leaderboard);
+        console.log(res);
+      })
+      .catch((error) => console.log(error, "error is here"));
+  }, []);
 
   return (
     <>
@@ -113,20 +127,20 @@ const Leaderboard = () => {
               <tbody>
                 <br />
 
-                {rounds.map((item) => (
+                {round.map((item) => (
                   <>
                     <tr>
-                      <td className={item.class}>{item.regNo}</td>
+                      <td className={item.class}>{item.registrationNumber}</td>
                       <td className={item.class}>{item.name}</td>
+                      {/* <td className={item.class}>{item.round}</td>
                       <td className={item.class}>{item.round}</td>
                       <td className={item.class}>{item.round}</td>
                       <td className={item.class}>{item.round}</td>
                       <td className={item.class}>{item.round}</td>
                       <td className={item.class}>{item.round}</td>
                       <td className={item.class}>{item.round}</td>
-                      <td className={item.class}>{item.round}</td>
-                      <td className={item.class}>{item.round}</td>
-                      <td className={item.class}>{item.score}</td>
+                      <td className={item.class}>{item.round}</td> */}
+                      <td className={item.class}>{item.finalScore}</td>
                       <td className={item.class}>{item.rank}</td>
                     </tr>
                   </>
