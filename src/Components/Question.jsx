@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
 
@@ -20,16 +20,31 @@ const Question = () => {
   };
   const [activeQuestion, setActiveQuestion] = useState(0);
 
-  const [func, setFunc] = useState(true);
-  const handleClick = (event) => {
-    console.log(func);
-    func
-      ? (event.target.style.background = "#00ff00")
-      : (event.target.style.background = "#fff");
-    setFunc(!func);
-    // event.target.style.background = "#fff";
+  // const [func, setFunc] = useState(true);
+  const ref = useRef(null);
+  // const handleClick = (event) => {
+  //   console.log(func);
+  //   func
+  //     ? (event.target.style.background = "#00ff00")
+  //     : (event.target.style.background = "#fff");
+  //   setFunc(!func);
+  //   // event.target.style.background = "#fff";
+  // };
+
+  const handleToggleClasslistRef = (ref) => {
+    if (!ref.current) {
+      return;
+    }
+    if (!ref.current.classList.contains("YES")) {
+      ref.current.classList.add("YES");
+    } else {
+      ref.current.classList.remove("YES");
+      ref.current = null;
+    }
   };
+
   
+
   let [i, setI] = useState([]);
   let [c, setC] = useState([]);
   let [v, setV] = useState([]);
@@ -41,10 +56,10 @@ const Question = () => {
       .get(`${APIURL}/api/v1/roundname/1-A`)
       .then((res) => {
         // setRounds(res.data.data[0].questions);
-        console.log(res.data.data[0].questions[activeQuestion] , "data");
+        console.log(res.data.data[0].questions[activeQuestion], "data");
         setQuestion(res.data.data[0].questions[activeQuestion].question);
         console.log(question);
-        
+
         // const { question, choices, video, id } = question;
         // setQ(question);
         // console.log(question, "Question");
@@ -53,16 +68,20 @@ const Question = () => {
         setC(res.data.data[0].questions[activeQuestion].choices);
         // console.log(choices, "Choices");
         setV(res.data.data[0].questions[activeQuestion].questionUrl);
-        console.log(res.data.data[0].questions[activeQuestion].questionId, "ID ");
+        console.log(
+          res.data.data[0].questions[activeQuestion].questionId,
+          "ID "
+        );
       })
       .catch((error) => console.log(error, "error is here"));
   }, [activeQuestion]);
 
   const onClickNext = () => {
     //HTTP call
-    
+
     setActiveQuestion((i) => i + 1);
-    console.log(activeQuestion)
+    console.log(activeQuestion);
+    handleToggleClasslistRef(ref);
   };
   return (
     <>
@@ -91,8 +110,13 @@ const Question = () => {
                   {
                     <li
                       //value = cid
-                      onClick={handleClick}
-                      className="icon-conatiner hvr-grow"
+                      onClick={(event) => {
+                        handleToggleClasslistRef(ref);
+                        event.stopPropagation();
+                        ref.current = event.target;
+                        handleToggleClasslistRef(ref);
+                      }}
+                      className="icon-conatiner"
                     >
                       {item.name}
                     </li>
