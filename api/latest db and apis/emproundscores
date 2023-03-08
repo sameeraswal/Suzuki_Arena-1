@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "6403bc68de0ecdabf2b0f5d2"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "roundName": "3",
+  "totalScore": 0,
+  "createdAt": {
+    "$date": "2023-03-04T21:47:20.065Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-04T21:47:20.065Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403c2b314a112bc0d662dcd"
+  },
+  "mspin": "125",
+  "registrationNumber": "25",
+  "roundName": "3",
+  "totalScore": 20,
+  "createdAt": {
+    "$date": "2023-03-04T22:14:11.216Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-04T22:14:11.216Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403d113a41ef55f171c2220"
+  },
+  "mspin": "125",
+  "registrationNumber": "25",
+  "roundName": "2",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-04T23:15:31.499Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-04T23:15:31.499Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6404f930b282b44a7c9efe55"
+  },
+  "mspin": "125",
+  "registrationNumber": "25",
+  "roundName": "4",
+  "totalScore": 10,
+  "createdAt": {
+    "$date": "2023-03-05T20:18:56.824Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-05T20:18:56.824Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640764abcddc5990a208aff7"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "roundName": "4",
+  "totalScore": 10,
+  "createdAt": {
+    "$date": "2023-03-07T16:22:03.974Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-07T16:22:03.974Z"
+  },
+  "__v": 0
+}]

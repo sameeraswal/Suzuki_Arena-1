@@ -1,0 +1,445 @@
+[{
+  "_id": {
+    "$oid": "6406157cc8fb29e98eb29f2c"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "name": "rahul yadav",
+  "roundName": "2",
+  "empAnswers": {
+    "questionId": "5",
+    "cId": "2",
+    "isCorrect": false,
+    "score": 0
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:31:56.669Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:31:56.669Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64061589c8fb29e98eb29f30"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "name": "rahul yadav",
+  "roundName": "2",
+  "empAnswers": {
+    "questionId": "1",
+    "cId": "1",
+    "isCorrect": true,
+    "score": 10
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:32:09.543Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:32:09.543Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64061590c8fb29e98eb29f34"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "name": "rahul yadav",
+  "roundName": "2",
+  "empAnswers": {
+    "questionId": "2",
+    "cId": "3",
+    "isCorrect": true,
+    "score": 10
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:32:16.607Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:32:16.607Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6406159ac8fb29e98eb29f38"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "name": "rahul yadav",
+  "roundName": "2",
+  "empAnswers": {
+    "questionId": "3",
+    "cId": "4",
+    "isCorrect": true,
+    "score": 10
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:32:26.180Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:32:26.180Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640615d0c8fb29e98eb29f40"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "name": "rahul yadav",
+  "roundName": "3",
+  "empAnswers": {
+    "questionId": "1",
+    "cId": "4",
+    "isCorrect": false,
+    "score": 0
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:33:20.749Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:33:20.749Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640615d5c8fb29e98eb29f44"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "name": "rahul yadav",
+  "roundName": "3",
+  "empAnswers": {
+    "questionId": "2",
+    "cId": "4",
+    "isCorrect": true,
+    "score": 10
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:33:25.122Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:33:25.122Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640615e0c8fb29e98eb29f48"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "name": "rahul yadav",
+  "roundName": "3",
+  "empAnswers": {
+    "questionId": "3",
+    "cId": "1",
+    "isCorrect": true,
+    "score": 10
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:33:36.080Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:33:36.080Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640615e8c8fb29e98eb29f4c"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "name": "rahul yadav",
+  "roundName": "3",
+  "empAnswers": {
+    "questionId": "4",
+    "cId": "1",
+    "isCorrect": false,
+    "score": 0
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:33:44.342Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:33:53.452Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6406162ec8fb29e98eb29f5a"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "name": "rahul yadav",
+  "roundName": "3",
+  "empAnswers": {
+    "questionId": "5",
+    "cId": "4",
+    "isCorrect": true,
+    "score": 10
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:34:54.879Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:35:32.821Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64061668c8fb29e98eb29f64"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "name": "rahul yadav",
+  "roundName": "4",
+  "empAnswers": {
+    "questionId": "1",
+    "cId": "4",
+    "isCorrect": false,
+    "score": 0
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:35:52.786Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:35:52.786Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6406168ec8fb29e98eb29f68"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "name": "rahul yadav",
+  "roundName": "4",
+  "empAnswers": {
+    "questionId": "2",
+    "cId": "4",
+    "isCorrect": false,
+    "score": 0
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:36:30.770Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:37:06.358Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640616b7c8fb29e98eb29f75"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "name": "rahul yadav",
+  "roundName": "4",
+  "empAnswers": {
+    "questionId": "3",
+    "cId": "4",
+    "isCorrect": false,
+    "score": 0
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:37:11.532Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:37:20.106Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640616e1c8fb29e98eb29f7c"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "name": "rahul yadav",
+  "roundName": "4",
+  "empAnswers": {
+    "questionId": "4",
+    "cId": "4",
+    "isCorrect": true,
+    "score": 10
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:37:53.716Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:38:32.398Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64061978c8fb29e98eb29f8f"
+  },
+  "mspin": "141",
+  "registrationNumber": "41",
+  "name": "akshay verma",
+  "roundName": "2",
+  "empAnswers": {
+    "questionId": "1",
+    "cId": "1",
+    "isCorrect": true,
+    "score": 10
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:48:56.110Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:49:16.648Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6406199cc8fb29e98eb29f96"
+  },
+  "mspin": "141",
+  "registrationNumber": "41",
+  "name": "akshay verma",
+  "roundName": "2",
+  "empAnswers": {
+    "questionId": "2",
+    "cId": "1",
+    "isCorrect": false,
+    "score": 0
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:49:32.947Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:49:32.947Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640619a0c8fb29e98eb29f9a"
+  },
+  "mspin": "141",
+  "registrationNumber": "41",
+  "name": "akshay verma",
+  "roundName": "2",
+  "empAnswers": {
+    "questionId": "3",
+    "cId": "1",
+    "isCorrect": false,
+    "score": 0
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:49:36.649Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:49:36.649Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640619a7c8fb29e98eb29f9e"
+  },
+  "mspin": "141",
+  "registrationNumber": "41",
+  "name": "akshay verma",
+  "roundName": "3",
+  "empAnswers": {
+    "questionId": "2",
+    "cId": "1",
+    "isCorrect": false,
+    "score": 0
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:49:43.853Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:49:43.853Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640619b4c8fb29e98eb29fa2"
+  },
+  "mspin": "141",
+  "registrationNumber": "41",
+  "name": "akshay verma",
+  "roundName": "3",
+  "empAnswers": {
+    "questionId": "3",
+    "cId": "1",
+    "isCorrect": true,
+    "score": 10
+  },
+  "createdAt": {
+    "$date": "2023-03-06T16:49:56.254Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T16:50:06.649Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64066c691267c3aafb8602b1"
+  },
+  "mspin": "141",
+  "registrationNumber": "41",
+  "name": "akshay verma",
+  "roundName": "4",
+  "empAnswers": {
+    "questionId": "1",
+    "cId": "3",
+    "isCorrect": true,
+    "score": 10
+  },
+  "createdAt": {
+    "$date": "2023-03-06T22:42:49.859Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-07T14:48:37.971Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64066e31427fd5eddd9d93d0"
+  },
+  "mspin": "141",
+  "registrationNumber": "41",
+  "name": "akshay verma",
+  "roundName": "20",
+  "createdAt": {
+    "$date": "2023-03-06T22:50:25.873Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T22:50:25.873Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64066e6a427fd5eddd9d93d4"
+  },
+  "mspin": "141",
+  "registrationNumber": "41",
+  "name": "akshay verma",
+  "roundName": "20",
+  "createdAt": {
+    "$date": "2023-03-06T22:51:22.766Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-06T22:51:22.766Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640712abb5108f192953e62d"
+  },
+  "mspin": "141",
+  "registrationNumber": "41",
+  "name": "akshay verma",
+  "roundName": "20",
+  "createdAt": {
+    "$date": "2023-03-07T10:32:11.584Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-07T10:32:11.584Z"
+  },
+  "__v": 0
+}]

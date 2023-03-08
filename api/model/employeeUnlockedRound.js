@@ -1,20 +1,22 @@
 const mongoose = require("mongoose");
 
-const roundsSchema = new mongoose.Schema({
-    roundName: {
+const roundunlockedschema = new mongoose.Schema({
+    mspin: {
         type: String,
         required: true
     },
-    roundOrder:{
-        type:Number
+    registrationNumber: {
+        type: String
+        
     },
-    isRoundLocked: {
-        type: Boolean
+    name: {
+        type: String,
+        required: true
     },
-    questions: [{
-        default :{}
-    }],
-    correctAnswers: {}
+    disabled: [],
+    unlocked:{
+        type:String
+    }
 });
 
 // const roundsSchema = new mongoose.Schema({
@@ -61,8 +63,8 @@ const roundsSchema = new mongoose.Schema({
 //     correctAnswers :{}
 // });
 
-const ROUND = mongoose.model("ROUND", roundsSchema);
+const Roundunlocked = mongoose.model("Roundunlocked", roundunlockedschema);
 
 
 
-module.exports = ROUND;
+module.exports = Roundunlocked;

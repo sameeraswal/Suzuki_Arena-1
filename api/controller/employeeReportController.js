@@ -368,7 +368,7 @@ exports.calculateScoreOfOneRound = async (req, res) => {
                 roundAnswerDetail.forEach((empObj) => {
                     let checkAns = empObj.empAnswers.isCorrect;
                     if (checkAns == true) {
-                        score = empObj.empAnswers.score;
+                        let score = empObj.empAnswers.score;
                         console.log(score)
                         total = total + score;
 
