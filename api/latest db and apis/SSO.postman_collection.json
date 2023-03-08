@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "da171803-56c9-43ec-b5db-0cc1654e3f9c",
+		"name": "SSO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createAuthorizationCode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"response_type\"         : \"code\",\n\"client_id\"             : \"43a72d77-6351-4119-8a39-736652f06f11\",\n\"redirect_uri\"          : \"https://www.paisabazaar.com/payit/login\",\n\"state\"                 : \"9d00ac4a-45f8-11ea-b77f-2e728ce88125\",\n\"scope\"                 : \"payitSitePlatformApi\",\n\"auth_type\"             : \"glss_token\",\n\"glss_token\"            : \"93d8af64-c047-455c-b0b1-6c670e9e7f79\"\n}"
+				},
+				"url": {
+					"raw": "https://staging-accounts.paisabazaar.com/SSOSP/api/v1/oauth/authorize",
+					"protocol": "https",
+					"host": [
+						"staging-accounts",
+						"paisabazaar",
+						"com"
+					],
+					"path": [
+						"SSOSP",
+						"api",
+						"v1",
+						"oauth",
+						"authorize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cache-control",
+						"value": "no-cache",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "accessToken",
+						"value": "cc3b50fe-3cac-4965-89b2-dcf1b56ea651",
+						"type": "text"
+					},
+					{
+						"key": "postman-token",
+						"value": "3c87d7cc-f15a-ce5a-d1b6-332603d44ccc",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"accountNumber\"         : \"1234567891234567\",\n        \"userName\"              : \"abhishek singh\",\n        \"amount\"                : \"12345\",\n        \"institutionCode\"       : \"YESB\",\n        \"emailId\"               : \"abhi@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "http://10.0.12.137:8090/TESTPG/createOrder",
+					"protocol": "http",
+					"host": [
+						"10",
+						"0",
+						"12",
+						"137"
+					],
+					"port": "8090",
+					"path": [
+						"TESTPG",
+						"createOrder"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
