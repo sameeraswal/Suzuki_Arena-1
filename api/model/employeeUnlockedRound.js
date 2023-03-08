@@ -13,7 +13,8 @@ const roundunlockedschema = new mongoose.Schema({
         type: String,
         required: true
     },
-    disabled: [],
+    disabled: {type:[String]},
+
     unlocked:{
         type:String
     }
