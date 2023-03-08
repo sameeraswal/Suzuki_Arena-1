@@ -127,8 +127,9 @@ const Roundunlocked = require("../model/employeeUnlockedRound");
 exports.getRoundLists = async (req, res) => {
     let status = false;
     try {
-        const mspin = req.body.mspin;
-        const name = req.body.name;
+        console.log("inside")
+        // const mspin = req.body.mspin;
+        // const name = req.body.name;
         //const roundName= req.body.roundName;
         //const rounds = await Round.find({}).select({ roundName: 1, isRoundLocked: 1, _id: 0 });
         const rounds = await Round.find({}).select({ roundName: 1, _id: 0 }).sort({ roundOrder: 1 });
@@ -137,45 +138,49 @@ exports.getRoundLists = async (req, res) => {
         if (rounds.length) {
             status = true;
 
-            let disabledRound = await Roundunlocked.findOne({ mspin: mspin, name: name }).select({ disabled: 1 });
-            //console.log("disabledRounddddddddddddd==========",disabledRound)
-            if (disabledRound) {
-                let disabledRounds = disabledRound.disabled;
-                //console.log(disabledRounds)
-                console.log("disabledRoundssssss from collection==========", disabledRounds)
+            // let disabledRound = await Roundunlocked.findOne({ mspin: mspin, name: name }).select({ disabled: 1 });
+            // console.log("disabledRounddddddddddddd==========",disabledRound)
+            // if (disabledRound) {
+            //     let disabledRounds = disabledRound.disabled;
+            //     //console.log(disabledRounds)
+            //     console.log("disabledRoundssssss from collection==========", disabledRounds)
 
 
-                rounds.forEach((round, index, rounds) => {
-                    //console.log("inside foreach loop rounddddddd=======", round)
-                    let checkRoundNameExists = disabledRounds.includes(round.roundName)
+            //     rounds.forEach((round, index, rounds) => {
+            //         //console.log("inside foreach loop rounddddddd=======", round)
+            //         let checkRoundNameExists = disabledRounds.includes(round.roundName)
 
-                    if (checkRoundNameExists) {
-                        rounds[index]["isRoundLocked"] = true;
-                        //round["isRoundLocked"] = false;
-                    } else {
-                        rounds[index]["isRoundLocked"] = false;
-                        //round["isRoundLocked"] = true;
-                    }
-                })
-                console.log("rounds aftrer updataion=========", rounds)
-                // disabledRounds.push(roundName);
-                
-                // disabledRound.shift();
-                // console.log(disabledRounds);
+            //         if (checkRoundNameExists) {
+            //             rounds[index]["isRoundLocked"] = true;
+            //             //round["isRoundLocked"] = false;
+            //         } else {
+            //             rounds[index]["isRoundLocked"] = false;
+            //             //round["isRoundLocked"] = true;
+            //         }
+            //     })
+            //     console.log("rounds aftrer updataion=========", rounds)
+            //     // disabledRounds.push(roundName);
 
-                res.status(201).json({
-                    status: status,
-                    data: rounds
-                })
+            //     // disabledRound.shift();
+            //     // console.log(disabledRounds);
 
-            } else {
-                status = false
-                res.status(401).json({
-                    status: status,
-                    message: "data not found"
-                })
+            //     res.status(201).json({
+            //         status: status,
+            //         data: rounds
+            //     })
 
-            }
+            // } else {
+            //     status = false
+            //     res.status(401).json({
+            //         status: status,
+            //         message: "dataaa not found"
+            //     })
+
+            // }
+            res.status(201).json({
+                status: status,
+                data: rounds
+            })
         } else {
             res.status(404).json({
                 status: status,
@@ -196,7 +201,7 @@ exports.getRoundDetails = async (req, res) => {
     try {
         //const rounds = await Round.find({ roundName: round }, { roundName: 1, questions: 1 });
         //const rounds = await Round.find({ roundName: round }, { roundName: 1, questions: 1, isRoundLocked: 1});
-        const rounds = await Round.find({ roundName: round }).select("roundName questions isRoundLocked");
+        const rounds = await Round.find({ roundName: round }).select({ roundName: 1, route: 1, questions: 1, isRoundLocked: 1, _id: 0 });
         console.log("==============")
         console.log(rounds);
         if (!rounds.length) {
@@ -214,7 +219,7 @@ exports.getRoundDetails = async (req, res) => {
 
         }
     } catch (error) {
-        res.json({
+        res.status(404).json({
             status: status,
             error: error
         })

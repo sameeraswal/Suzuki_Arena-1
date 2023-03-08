@@ -11,8 +11,8 @@ const roundController = require("../controller/roundController");
 router.get("/api/v1/mspin/:mspin", employeeController.getEmployeeDetails);
 router.post("/api/v1/employee/register", employeeController.registerEmployee);
 router.post("/api/v1/login", employeeController.checkLogin);
-router.post("/api/v1/roundlists", roundController.getRoundLists);
-router.get("/api/v1/roundname/:roundName", roundController.getRoundDetails);
+router.get("/api/v1/roundlists", roundController.getRoundLists);
+router.get("/api/v1/quiz/roundname/:roundName", roundController.getRoundDetails);
 router.post("/api/v1/round/submitanswer", employeeReportController.submitAnswerOfQuestion);
 //submit round 2 Card Answer
 router.post("/api/v1/round/submitcardanswer", employeeReportController.submitAnswerOfCardQuestion);
