@@ -30,28 +30,30 @@ const Question = () => {
   //   setFunc(!func);
   //   // event.target.style.background = "#fff";
   // };
-
   const handleToggleClasslistRef = (ref) => {
     if (!ref.current) {
       return;
     }
-    if (!ref.current.classList.contains("YES")) {
-      ref.current.classList.add("YES");
+    if (!ref.current.classList.contains("question-option-color")) {
+      ref.current.classList.add("question-option-color");
     } else {
-      ref.current.classList.remove("YES");
+      ref.current.classList.remove("question-option-color");
       ref.current = null;
     }
   };
-
-  
 
   let [i, setI] = useState([]);
   let [c, setC] = useState([]);
   let [v, setV] = useState([]);
 
   let [question, setQuestion] = useState("");
+  const timeOutFun = () => {
+    // console.log(car,`/${car}`)
+    setTimeout(() => window.open("/popupexample", "_self"), 6000);
+  };
   useEffect(() => {
     // alert("Page is running");
+    timeOutFun();
     axios
       .get(`${APIURL}/api/v1/roundname/1-A`)
       .then((res) => {

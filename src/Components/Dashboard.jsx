@@ -56,7 +56,7 @@ const Dashboard = () => {
   let [rounds, setRounds] = useState([]);
   // let d;
   useEffect(() => {
-    alert("Page is running");
+    // alert("Page is running");
     axios
       .get(`${APIURL}/api/v1/roundlists`)
       .then((res) => {
