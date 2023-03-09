@@ -56,7 +56,7 @@ const Question = () => {
     // alert("Page is running");
 
     axios
-      .get(`${APIURL}/api/v1/roundname/1-A`)
+      .get(`${APIURL}/api/v1/quiz/roundname/1-A`)
       .then((res) => {
         // setRounds(res.data.data[0].questions);
         console.log(res.data.data[0].questions[activeQuestion], "data");
