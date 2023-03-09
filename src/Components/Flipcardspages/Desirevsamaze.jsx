@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 // import Remaincard from "./Remaincard";
 import bgImg from "../leaderboardfinal/05.png";
 
-const Desirevsamaze = () => {
+const Dezirevsamaze = () => {
   const [count, setCount] = useState(5);
   let response = {
     status: true,
@@ -54,7 +54,7 @@ const Desirevsamaze = () => {
   );
 };
 
-export default Desirevsamaze;
+export default Dezirevsamaze;
 
 
 

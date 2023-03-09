@@ -40,7 +40,7 @@
   /* margin: 1em; */
   color: black;
   /* transform: translateY(-5em); */
-  margin-left: 19%;
+  margin-left: 17%;
 }
 
 .description h3 {
@@ -152,16 +152,16 @@ table td:nth-child(1) {
   margin-bottom: -50px;
 }
 .bg1 {
-  margin-left: 13px;
+  margin-left: 133px;
   width: 112px;
   position: relative;
 }
 .bg2 {
-  margin-left: 4px;
+  margin-left: 247px;
   width: 160px;
 }
 .bg3 {
-  margin-left: 2px;
+  margin-left: 184px;
   width: 110px;
 }
 .bg4 {
@@ -169,7 +169,7 @@ table td:nth-child(1) {
   width: 103px;
 }
 .bg5 {
-  margin-left: 9px;
+  margin-left: 249px;
   width: 116px;
 }
 .bg6 {
@@ -210,7 +210,7 @@ table td:nth-child(1) {
   font-size: 12px;
   font-weight: bold;
   margin: auto;
-  margin-left: 33px;
+  margin-left: 147px;
   margin-top: 17px;
 }
 .text-on-img2 {
@@ -219,7 +219,7 @@ table td:nth-child(1) {
   font-size: 13px;
   font-weight: bold;
   margin: auto;
-  margin-left: 193px;
+  margin-left: 552px;
   margin-top: 15px;
 }
 .text-on-img3 {
@@ -300,7 +300,7 @@ table td:nth-child(1) {
   font-size: 13px;
   font-weight: bold;
   margin: auto;
-  margin-left: 1206px;
+  margin-left: 61%;
   margin-top: 14px;
 }
 .text-on-img12 {
@@ -309,8 +309,12 @@ table td:nth-child(1) {
   font-size: 13px;
   font-weight: bold;
   margin: auto;
-  margin-left: 1341px;
+  margin-left: 1245px;
   margin-top: 14px;
+}
+.resp-text {
+  width: 73%;
+  height: 100px;
 }
 @media screen and (max-width: 768px) {
   .resp-trophy {
