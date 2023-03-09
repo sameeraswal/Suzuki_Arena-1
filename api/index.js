@@ -1,5 +1,5 @@
 const dotenv = require("dotenv");
-dotenv.config({ path: "./var/config.env" });
+dotenv.config({ path: "./config.env" });
 require("./db/connection");
 
 const port = process.env.PORT || 4500;
