@@ -10,7 +10,9 @@ const Dashboard = () => {
   useEffect(() => {
     // alert("Page is running");
     axios
-      .get(`${APIURL}/api/v1/roundlists`)
+      .post(`${APIURL}/api/v1/roundlists`,{
+        mspin: JSON.parse(localStorage.getItem("mspin"))
+      })
       .then((res) => {
         setRounds(res.data.data);
       })

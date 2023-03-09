@@ -3,126 +3,6 @@ const Round = require("../model/roundsSchema");
 //const employeeUnlockedRound = require("../model/employeeUnlockedRound"); Roundunlocked
 const Roundunlocked = require("../model/employeeUnlockedRound");
 
-// exports.addRound = async(req,res) =>{
-//     const quizName = new Round({
-//         roundName: "7",
-//         questions: [{
-//             id : "1",
-//             video: "wwww.google.com",
-//             question: "what is the capital of india ?",
-//             choices: [
-//                 {
-//                     cId: "1",
-//                     name: "haryana",
-//                     image: "xyz"
-//                 }, {
-//                     cId: "2",
-//                     name: "kota",
-//                     image: "xyz"
-//                 },
-//                 {
-//                     cId: "3",
-//                     name: "delhi",
-//                     image: "xyz"
-//                 },
-//                 {
-//                     cId: "4",
-//                     name: "mumbai",
-//                     image: "xyz"
-//                 }
-//             ],
-//             type : "MCQS",
-//             correctAnswer : "2"
-//         },
-//         {
-//             id : "2",
-//             video: "wwww.google.com",
-//             question: "what is json ?",
-//             choices: [
-//                 {
-//                     cId: "1",
-//                     name: "data type",
-//                     image: "xyz"
-//                 }, {
-//                     cId: "2",
-//                     name: "datat type 2",
-//                     image: "xyz"
-//                 },
-//                 {
-//                     cId: "3",
-//                     name: "data type 3",
-//                     image: "xyz"
-//                 },
-//                 {
-//                     cId: "4",
-//                     name: "datat type 4",
-//                     image: "xyz"
-//                 }
-//             ],
-//             type : "MCQS",
-//             correctAnswer : "3"
-//         },
-//         {
-//             id : "3",
-//             video: "wwww.google.com",
-//             question: "what is json ?",
-//             choices: [
-//                 {
-//                     cId: "1",
-//                     name: "data type",
-//                     image: "xyz"
-//                 }, {
-//                     cId: "2",
-//                     name: "datat type 2",
-//                     image: "xyz"
-//                 },
-//                 {
-//                     cId: "3",
-//                     name: "data type 3",
-//                     image: "xyz"
-//                 },
-//                 {
-//                     cId: "4",
-//                     name: "datat type 4",
-//                     image: "xyz"
-//                 }
-//             ],
-//             type : "MCQS",
-//             correctAnswer : "4"
-//         }],
-//         correctAnswers :{
-//             1:2,
-//             2:3,
-//             3:4
-
-//         }
-//     });
-
-//     const addround = await quizName.save();
-//     try {
-//         if(!addround){
-//             console.log("error during saving data")
-//             res.status(401).json({
-//                 error : "error"
-//             })
-
-//         }else{
-//             console.log("employee added succesfully")
-//             res.status(201).json({
-//                 status : "success",
-//                 message :"employee addes succesfully"
-//             })
-
-//         }
-
-//     } catch (error) {
-//         res.status(401).json({
-//             error : error
-//         })
-
-//     }
-
-// }
 
 exports.getRoundLists = async (req, res) => {
     let status = false;
@@ -138,7 +18,8 @@ exports.getRoundLists = async (req, res) => {
             })
             status = true;
             let disabledRound = await Roundunlocked.findOne({ mspin: mspin }).select({ disabled: 1, unlocked: 1 });
-            if (disabledRound && disabledRound.length > 0) {
+            console.log("disabledRound:",{ mspin: mspin },disabledRound)
+            if (disabledRound) {
                 let disabledRounds = disabledRound.disabled;
                 rounds.forEach((round, index, rounds) => {
                     let checkRoundNameExists = disabledRounds.includes(round.roundName)
