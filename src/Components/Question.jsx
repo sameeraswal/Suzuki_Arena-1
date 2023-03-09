@@ -59,7 +59,7 @@ const Question = () => {
     axios
       .get(`${APIURL}/api/v1/quiz/roundname/1-A`)
       .then((res) => {
-        console.log(res.data.data[0].questions.sort(() => Math.random() - 0.5));
+        // console.log(res.data.data[0].questions.sort(() => Math.random() - 0.5));
         console.log(res.data.data[0].questions[activeQuestion], "data");
         setQuestion(res.data.data[0].questions[activeQuestion].question);
         console.log(question);
@@ -102,7 +102,7 @@ const Question = () => {
         cId: cid,
       })
       .then((res) => {
-        // console.log(res, "Response");
+        console.log(res, "Response");
         // setStatus(res.data.status);
       })
       .catch((error) => console.log(error));
