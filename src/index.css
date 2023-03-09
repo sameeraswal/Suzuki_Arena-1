@@ -17,7 +17,7 @@
 
 .nav_img {
   margin-left: 10px;
-  z-index: 999;
+ 
 }
 
 .flexbox-container {
@@ -100,7 +100,7 @@
 }
 
 .round-box {
-  width: 80%;
+  width: 95%;
   display: flex;
   justify-content: center;
   background-color: white;
