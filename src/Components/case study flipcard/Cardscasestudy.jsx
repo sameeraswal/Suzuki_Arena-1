@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import bgImg from "../leaderboardfinal/05.png";
 
 const Cardscasestudy = () => {
-  const [count, setCount] = useState(5);
+ 
   let response = {
     status: true,
     data: [
@@ -36,10 +36,10 @@ const Cardscasestudy = () => {
       <div className="round-box bg-correct">Flip a Card</div>
       {/* {showBack && ( */}
       <div className="flex-container bg-correct">
-        <div className="remain-container bg-correct">
+        {/* <div className="remain-container bg-correct">
           <p>Cards</p>
           <p>Remaining: {count}</p>
-        </div>
+        </div> */}
 
         <div className="flex-container-child bg-correct">
           {cards.map((item) => (
