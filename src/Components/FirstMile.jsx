@@ -14,11 +14,10 @@ import ModalFrammer from "./ModalFrammer";
 import "./modalcss.css";
 import useModal from "./hooks/useModal";
 import { framerLogger } from "../stateLogger";
-import modalImg from "../Components/ModalImages/thefirstmile.jpeg";
+import modalImg from "../Components/firstmile.jpeg";
 
 const FirstMile = () => {
-  // Modal state
-  //
+ 
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => {

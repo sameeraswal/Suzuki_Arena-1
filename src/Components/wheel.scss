@@ -43,7 +43,7 @@
   );
   border: solid transparent calc(var(--slice-width) / 2);
   border-left: solid transparent 0;
-  border-right: solid #e302fc calc(var(--wheel-size) / 2);
+  border-right: solid rgb(252, 165, 3) calc(var(--wheel-size) / 2);
   //   @each $themeColour, $i in $themeColours {
   //     &{
   //       border-right: solid $i calc(var(--wheel-size) / 2);
@@ -62,7 +62,7 @@
   border: solid transparent calc(var(--slice-width) / 2);
   border-left: solid transparent 0;
   // border-right: solid #051937 calc(var(--wheel-size) / 2);
-  border-right: solid orange calc(var(--wheel-size) / 2);
+  border-right: solid rgb(254, 225, 2)  calc(var(--wheel-size) / 2);
  
 }
 .wheel-color1::before {
@@ -98,7 +98,7 @@
   border: solid transparent calc(var(--slice-width) / 2);
   border-left: solid transparent 0;
   // border-right: solid #051937 calc(var(--wheel-size) / 2);
-  border-right: solid rgb(3, 252, 3) calc(var(--wheel-size) / 2);
+  border-right: solid #02fe95 calc(var(--wheel-size) / 2);
 }
 .wheel-color3::before {
   // width: calc(var(--wheel-size) / 2);
@@ -112,7 +112,7 @@
   border: solid transparent calc(var(--slice-width) / 2);
   border-left: solid transparent 0;
   // border-right: solid #051937 calc(var(--wheel-size) / 2);
-  border-right: solid rgb(36, 2, 254) calc(var(--wheel-size) / 2);
+  border-right: solid orange calc(var(--wheel-size) / 2);
 }
 .wheel-color4::before {
   // width: calc(var(--wheel-size) / 2);
@@ -126,7 +126,7 @@
   border: solid transparent calc(var(--slice-width) / 2);
   border-left: solid transparent 0;
   // border-right: solid #051937 calc(var(--wheel-size) / 2);
-  border-right: solid rgb(228, 249, 2) calc(var(--wheel-size) / 2);
+  border-right: solid rgb(36, 2, 254) calc(var(--wheel-size) / 2);
 }
 .wheel-color5::before {
   // width: calc(var(--wheel-size) / 2);
@@ -140,8 +140,10 @@
   border: solid transparent calc(var(--slice-width) / 2);
   border-left: solid transparent 0;
   // border-right: solid #051937 calc(var(--wheel-size) / 2);
-  border-right: solid #0267fe calc(var(--wheel-size) / 2);
+  border-right: solid red calc(var(--wheel-size) / 2);
 }
+
+
 
 .car-name-from-wheel{
   position: absolute;

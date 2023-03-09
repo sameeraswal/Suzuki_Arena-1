@@ -6,6 +6,7 @@ import { CSSTransition } from "react-transition-group";
 import { useEffect, useState } from "react";
 import Cardcasestudy from "./Cardcasestudy";
 
+
 const Flippablecasestudy = () => {
   const [showFront, setShowFront] = useState(true);
 
@@ -13,6 +14,7 @@ const Flippablecasestudy = () => {
   const [color, setColor] = useState("#110781");
 
   return (
+  
     <div className="flippable-card-container">
       <CSSTransition in={showFront} timeout={300} classNames="flip">
         <Cardcasestudy

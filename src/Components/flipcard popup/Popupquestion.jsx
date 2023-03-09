@@ -12,11 +12,11 @@ function Popupquestion({ setOpenModal }) {
               setOpenModal(false);
             }}
           >
-            X
+           
           </button>
         </div>
         <div className="title">
-          <h1>Oops! You choose the wrong card</h1>
+          <h1 style={{color: 'blue'}}>Oops! You choose the wrong card</h1>
         </div>
         <div className="footer">
           <button
