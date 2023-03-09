@@ -59,6 +59,7 @@ const Timer = () => {
       <div className="timer-div">
         <h2>{timer}</h2>
         <img src={imgsrc} alt="" className="clock-img" />
+        
       </div>
       <div>
         {timer === "00:00" && openModel && (

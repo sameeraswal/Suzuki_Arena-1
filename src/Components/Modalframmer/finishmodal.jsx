@@ -5,6 +5,8 @@ import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
 import modalimg from "../Likethumb.webp";
 import FinishBackdrop from "./finishbackdrop";
+import axios from "axios";
+import { APIURL } from "../../App";
 
 const dropIn = {
   hidden: {
@@ -27,13 +29,27 @@ const dropIn = {
   },
 };
 
-const Finishmodal = ({ handleClose, text, type }) => {
+const Finishmodal = ({ handleClose, text, roundName }) => {
   // Log state
   useEffect(() => {
     stateLogger("Modal", true);
     return () => stateLogger("Modal", false);
   }, []);
+  const getData = () => {
+    axios
+      .post(`${APIURL}/api/v1/finishround`, {
+        mspin: JSON.parse(localStorage.getItem("mspin")),
+        roundName: roundName,
+      })
+      .then((res) => {
+        console.log(JSON.parse(localStorage.getItem("mspin")), "MSPIN");
+        console.log(res, "Response of roundlist");
+        console.log(roundName, "Response of RoundName");
 
+      })
+      .catch((error) => console.log(error.response.data.message));
+    // return false;
+  };
   return (
     <FinishBackdrop onClick={handleClose}>
       <motion.div
@@ -46,7 +62,7 @@ const Finishmodal = ({ handleClose, text, type }) => {
       >
         <ModalText text={text} />
 
-        <ModalButton onClick={handleClose} label="Close" />
+        <ModalButton onClick={handleClose} label="Close" getData={getData} />
       </motion.div>
     </FinishBackdrop>
   );
@@ -54,13 +70,13 @@ const Finishmodal = ({ handleClose, text, type }) => {
 
 const ModalText = () => (
   <div className="modal-text hand-with-text">
-    <img src={modalimg} alt="" height={180} width={180} className="hand"/>
+    <img src={modalimg} alt="" height={180} width={180} className="hand" />
     <h5>Thank you for completing the round</h5>
     <br />
   </div>
 );
 
-const ModalButton = ({ onClick, label }) => (
+const ModalButton = ({ onClick, label, getData }) => (
   <Link to="/dashboard">
     {" "}
     <motion.button
@@ -68,7 +84,10 @@ const ModalButton = ({ onClick, label }) => (
       type="button"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      onClick={onClick}
+      onClick={() => {
+        onClick();
+        getData();
+      }}
     >
       Back to Home
     </motion.button>

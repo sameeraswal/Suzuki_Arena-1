@@ -72,11 +72,13 @@ const Leaderboard = () => {
   // };
   // let rounds = response.data;
   const [round, setRound] = useState([]);
+  const [finalscore, setFinalscore] = useState([]);
+
   // const round1A="1-A";
   const mspin = JSON.parse(localStorage.getItem("mspin"));
   // const fetchData = async () => {
-    // const player1 = `${APIURL}/api/v1/round/roundscore`;
-    // const player2 = `${APIURL}/api/v1/quiz/employee/currentscore`;
+  // const player1 = `${APIURL}/api/v1/round/roundscore`;
+  // const player2 = `${APIURL}/api/v1/quiz/employee/currentscore`;
   //   const player3 = `${APIURL}/api/v1/quiz/finalscore/leaderboard`;
   //   const getPlayer2 = axios.post(player2, {
   //     mspin: mspin,
@@ -98,6 +100,9 @@ const Leaderboard = () => {
       .get(`${APIURL}/api/v1/quiz/finalscore/leaderboard`)
       .then((res) => {
         setRound(res.data.data.leaderboard);
+        // setFinalscore(res.data.data.leaderboard.finalScore)
+        // console.log(res.data.data.leaderboard[1].finalScore)
+
         console.log(res);
       })
       .catch((error) => console.log(error, "error is here"));
