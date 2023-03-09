@@ -4,6 +4,8 @@ import Navbar from "../Navbar";
 import { useNavigate } from "react-router-dom";
 // import Remaincard from "./Remaincard";
 import bgImg from "../leaderboardfinal/05.png";
+import './casestudy.css'
+import bgImg1 from '../NewImages/Spin-Wheel_BG.png'
 
 const Cardscasestudy = () => {
  
@@ -18,8 +20,7 @@ const Cardscasestudy = () => {
       { id: 5, cardName: "" },
       { id: 6, cardName: "" },
       { id: 7, cardName: "" },
-      { id: 8, cardName: "" },
-      { id: 9, cardName: "" },
+      
     ],
   };
 
@@ -32,7 +33,8 @@ const Cardscasestudy = () => {
   return (
     <>
       <Navbar></Navbar>
-      <img src={bgImg} alt="" className="flip-bg" />
+      <img src={bgImg1} alt="" className="flip-bg"/>
+      {/* <img src={bgImg} alt="" className="flip-bg" /> */}
       <div className="round-box bg-correct">Flip a Card</div>
       {/* {showBack && ( */}
       <div className="flex-container bg-correct">
@@ -41,7 +43,7 @@ const Cardscasestudy = () => {
           <p>Remaining: {count}</p>
         </div> */}
 
-        <div className="flex-container-child bg-correct">
+        <div className="flex-container-child bg-correct case-study-container">
           {cards.map((item) => (
             <>
               <div className="flex-child bg-correct">

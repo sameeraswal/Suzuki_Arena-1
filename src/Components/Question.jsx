@@ -8,6 +8,7 @@ import "./modalcss.css";
 import Finishmodal from "./Modalframmer/finishmodal";
 import axios from "axios";
 import { APIURL } from "../App";
+import {bgImg} from './NewImages/Spin-Wheel_BG.png'
 
 const Question = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -122,6 +123,7 @@ const Question = () => {
   return (
     <>
       <Navbar />
+      
       <div className="round-box">Round 1-A</div>
 
       <div className="question-container">
