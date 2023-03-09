@@ -41,7 +41,7 @@ export default function Random() {
           <button
             onClick={() => {
               handleRandomNum();
-              // timeOutFun();
+              timeOutFun();
             }}
             className="icon-conatiner random-no"
           >

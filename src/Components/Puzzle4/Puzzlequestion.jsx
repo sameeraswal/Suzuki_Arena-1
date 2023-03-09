@@ -11,6 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ModalFrammer from "../ModalFrammer";
 import Finishmodal from "../Modalframmer/finishmodal";
 import "../modalcss.css";
+import Finishmodal3 from "../Modalframmer/finishmodal3";
 
 
 const Puzzlequestion = () => {
@@ -110,7 +111,7 @@ const Puzzlequestion = () => {
               onExitComplete={() => null}
             >
               {modalOpen && (
-                <Finishmodal modalOpen={modalOpen} handleClose={close} />
+                <Finishmodal3 modalOpen={modalOpen} handleClose={close} />
               )}
             </AnimatePresence>
           </div>

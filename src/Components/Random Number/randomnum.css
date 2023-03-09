@@ -52,21 +52,30 @@
 }
 .hero .containerx button {
   border: none;
-    outline: none;
-    background: #292977;
-    color: #fff;
-    padding: 7px;
-    width: 34%;
-    cursor: pointer;
-    margin-left: 119%;
-    margin-top: -108%;
+  outline: none;
+  background: #292977;
+  color: #fff;
+  padding: 7px;
+  width: 34%;
+  cursor: pointer;
+  margin-left: 119%;
+  margin-top: -20%;
 }
 .random_no_alignment {
-  margin-left: -215%;
-  margin-top: 70%;
+  margin-left: 15%;
+  margin-top: -25%;
   color: white;
-  font-size: 18px;
+  font-size: 29px;
+  font-weight: bold;
 }
 .random-no {
-  margin-top: -180px;
+  border: none;
+  outline: none;
+  background: #292977;
+  color: #fff;
+  padding: 7px;
+  width: 34%;
+  cursor: pointer;
+  margin-left: 119%;
+  margin-top: -108%;
 }

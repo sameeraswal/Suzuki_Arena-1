@@ -63,9 +63,6 @@ const Puzzlechoice = () => {
 
   let choices = response.data;
 
-  const timeOutFun = () => {
-    setTimeout(() => window.open("/finish1b", "_self"), 3000);
-  };
 
   return (
     <>
