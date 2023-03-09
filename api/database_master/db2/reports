@@ -1,0 +1,1059 @@
+[{
+  "_id": {
+    "$oid": "63fcf0d45cbd73a7105277a8"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "2",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fcf13c7a8ac9c9e23cc489"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "2",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fcfa75dcec30dc475fb04a"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "2",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd05dbedd3beceffa40aa6"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "2",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd0639b0eaf9984f5d7ce8"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "2",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd08f6b0eaf9984f5d7ced"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "2",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd0902b0eaf9984f5d7cf0"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd09dca2e9b682fb33b4a6"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd09e8a2e9b682fb33b4a9"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "0",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd0a0ba2e9b682fb33b4ac"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "0",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd0a1ca2e9b682fb33b4af"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd0a2aa2e9b682fb33b4b2"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd0a2fa2e9b682fb33b4b5"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd0a49acc70f8119a9c697"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd1c1b1ad827c7cb70c3b0"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd1c271ad827c7cb70c3b3"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "2",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd1c331ad827c7cb70c3b6"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fd40fb578406d75ce5f12c"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fe005ee10455cae747c286"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fe008452691977c3ee0bc9"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fe0128cd0deaef7c02bfbe"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fe0152067864807e04c187"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fe4381067864807e04c18a"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fe4399067864807e04c18d"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63fe43c0067864807e04c190"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ff3ab2231b293407d122d2"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ff3aee231b293407d122d5"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "1",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ff3af3231b293407d122d8"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "0",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ff3b53231b293407d122dc"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "0",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ff3bbc6ad650e93d78d625"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "0",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ff3bd61357dc1e881f43f5"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "0",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ff3c061357dc1e881f43f8"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "0",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ff3c88509f821b1041186f"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "0",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ff3cd8979cacaa5edf6b5d"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "0",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ff3d0fb0334a0e6094871a"
+  },
+  "mspin": "123",
+  "registrationNumber": "22",
+  "roundName": "7",
+  "score": "0",
+  "total": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ffa605b929cba18290e543"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "1",
+  "total": "5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ffa63cb929cba18290e546"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "0",
+  "total": "5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ffa6b1a9c896aa2812e1e6"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "0",
+  "total": "5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ffa6d0a9c896aa2812e1e9"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "1",
+  "total": "5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ffaf5c7368c3595f3db3b4"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "1",
+  "total": "5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ffafa10c091b2ff27fffd9"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "1",
+  "total": "5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ffbb5d439f117b784b0778"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "1",
+  "total": "5",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ffbe678edf00d4388aa5a1"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "1",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-01T21:06:47.241Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-01T21:06:47.241Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ffbf2fb0f8c4b74f4367d2"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "createdAt": {
+    "$date": "2023-03-01T21:10:07.994Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-01T21:10:07.994Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ffc1b14cbd1eb3c2e75193"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "1",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-01T21:20:49.984Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-01T21:20:49.984Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64004fdd697a9e615d86ef0d"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "1",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T07:27:25.840Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T07:27:25.840Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640050b0a6c1ff19b76326f1"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "1",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T07:30:56.324Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T07:30:56.324Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64005168686cad91171419e9"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "1",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T07:34:00.778Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T07:34:00.778Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64005273f9df7724e7bce87c"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "0",
+  "total": "1",
+  "createdAt": {
+    "$date": "2023-03-02T07:38:27.670Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T07:38:27.670Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400527cf9df7724e7bce87f"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "0",
+  "total": "1",
+  "createdAt": {
+    "$date": "2023-03-02T07:38:36.098Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T07:38:36.098Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640052cfdb622ca5e707a511"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "2",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T07:39:59.351Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T07:39:59.351Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640052e4db622ca5e707a514"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "3",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T07:40:20.059Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T07:40:20.059Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640052ffb019730264271adb"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "3",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T07:40:47.309Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T07:40:47.309Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400a4778684fbef2e6fd695"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T13:28:23.536Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T13:28:23.536Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400c66a1f3e3424897f6056"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "3",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T15:53:14.381Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T15:53:14.381Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400c7f81f3e3424897f6059"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "3",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T15:59:52.045Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T15:59:52.045Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400c82b1f3e3424897f605c"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "2",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T16:00:43.609Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T16:00:43.609Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400c8941f3e3424897f605f"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "2",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T16:02:28.185Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T16:02:28.185Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400d39606a5666a3802f08e"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "1",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T16:49:26.254Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T16:49:26.254Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400df08a2c7f5fb92824bf0"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "6",
+  "score": "1",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T17:38:16.277Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T17:38:16.277Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400df71a2c7f5fb92824bf3"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T17:40:01.055Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T17:40:01.055Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400df95a2c7f5fb92824bf6"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T17:40:37.002Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T17:40:37.002Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400dfba51db76544149db96"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T17:41:14.045Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T17:41:14.045Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e02d373023822259f0a2"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T17:43:09.348Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T17:43:09.348Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e0f4373023822259f0a5"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T17:46:28.687Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T17:46:28.687Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e1401e3e7d6df99552d1"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T17:47:44.724Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T17:47:44.724Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e1981c7160cec202cd7b"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T17:49:12.098Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T17:49:12.098Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e25d8f3135539afc01a1"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T17:52:29.873Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T17:52:29.873Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e297b525c5c6bcc9eb3c"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T17:53:27.134Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T17:53:27.134Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e2d7bac9e0cfcbb53db2"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T17:54:31.755Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T17:54:31.755Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e2e2bac9e0cfcbb53db5"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T17:54:42.370Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T17:54:42.370Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e33a060b837fe7bb1d55"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T17:56:10.175Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T17:56:10.175Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e440c26b6376c354c6a9"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T18:00:32.170Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T18:00:32.170Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e473c26b6376c354c6ac"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T18:01:23.455Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T18:01:23.455Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e4b168963f6a95f151ef"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T18:02:25.626Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T18:02:25.626Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e4da2e0d0b06af92191b"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T18:03:06.122Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T18:03:06.122Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e57939e7762ee731aa15"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "0",
+  "createdAt": {
+    "$date": "2023-03-02T18:05:45.020Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T18:05:45.020Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e591c259c1b680f70dc9"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "0",
+  "createdAt": {
+    "$date": "2023-03-02T18:06:09.136Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T18:06:09.136Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e6a2dff417e397a65096"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "0",
+  "createdAt": {
+    "$date": "2023-03-02T18:10:42.301Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T18:10:42.301Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e6bbabb8eeff1e393fe6"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "0",
+  "createdAt": {
+    "$date": "2023-03-02T18:11:07.109Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T18:11:07.109Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e6cbd50d2144e719bd66"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "0",
+  "createdAt": {
+    "$date": "2023-03-02T18:11:23.712Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T18:11:23.712Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6400e70e5673a792ff69fcc4"
+  },
+  "mspin": "124",
+  "registrationNumber": "23",
+  "roundName": "4",
+  "score": "0",
+  "total": "5",
+  "createdAt": {
+    "$date": "2023-03-02T18:12:30.500Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-02T18:12:30.500Z"
+  },
+  "__v": 0
+}]
