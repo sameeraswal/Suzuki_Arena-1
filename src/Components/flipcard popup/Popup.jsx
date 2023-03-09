@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from "react";
 import "./Modal.css";
 
-function Popupexample() {
+function Popupexample({}) {
 //   useEffect(() => {
 //     setOpenModal(false);
 //   }, [openModel]);
@@ -18,11 +18,11 @@ function Popupexample() {
                   setOpenModal(false);
                 }}
               >
-                &#10006;
+               
               </button>
             </div>
             <div className="title">
-              <h1>Timeover click continue button to move to the next question</h1>
+              <h1>Time's up! Click on continue to move to the next question</h1>
             </div>
             <div className="footer">
               <button

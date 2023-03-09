@@ -49,8 +49,8 @@ import Swiftvsgrandi10 from "./Components/Flipcardspages/Swiftvsgrandi10";
 import Finishmodal from "./Components/Modalframmer/finishmodal";
 import Enterertiga from "./Components/Entercorepages/Enterertiga";
 import Enterbrezza from "./Components/Entercorepages/Enterbrezza";
+import Popupquestion from "./Components/flipcard popup/Popupquestion";
 import Popupexample from "./Components/flipcard popup/Popup";
-import Popup from "./Components/flipcard popup/Popup";
 
 
 
@@ -94,12 +94,12 @@ const App = () => {
     },
     {
       id: 6,
-      title: "Desire Vs Amaze",
+      title: "Dezire Vs Amaze",
       class: "wheel-color6",
     },
     {
       id: 7,
-      title: "Desire Vs Tiger",
+      title: "Dezire Vs Tiger",
       class: "wheel-color",
     },
     {
@@ -119,7 +119,7 @@ const App = () => {
     },
     {
       id: 11,
-      title: "Desire Vs Aura SX+",
+      title: "Dezire Vs Aura SX+",
       class: "wheel-color4",
     },
   ];
@@ -238,8 +238,8 @@ const App = () => {
           <Route path="/enterertiga" element={<Enterertiga />}></Route>
 
           <Route path="/enterbrezza" element={<Enterbrezza />}></Route>
+          <Route path="/popupquestion" element={<Popupquestion />}></Route>
           <Route path="/popupexample" element={<Popupexample />}></Route>
-          <Route path="/popup" element={<Popup />}></Route>
 
         </Routes>
       </div>
