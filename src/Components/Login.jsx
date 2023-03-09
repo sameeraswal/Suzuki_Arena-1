@@ -37,6 +37,8 @@ const Login = () => {
         // }
         console.log(res, "Response");
         setStatus(res.data.status);
+        console.log(res.data.status, "Response");
+
         if (res.data.status === true) {
           // setRes(res.data.status);
           setMessage(res.data.message);
@@ -54,17 +56,22 @@ const Login = () => {
 
   const arena = require("./maruti-suzuki-arena.webp");
   const navigateLogin = () => {
-    console.log(status, "Status is here");
-    if (status) {
-      navigate("/login");
-    }
+    console.log(status, "status hai");
+    setTimeout(
+      () => (status ? window.open("./dashboard", "_self") : status),
+      2000
+    );
+    // setTimeout(()=>{
+    // if (status) {
+    //   navigate("/dashboard");
+    // }}),200);
   };
   // const [mspin, setMspin] = useState([]);
 
   useEffect(() => {
     localStorage.setItem("mspin", JSON.stringify(mspin));
     localStorage.setItem("regNo", JSON.stringify(regno));
-  }, [mspin,regno]);
+  }, [mspin, regno]);
   return (
     <>
       <div className="nav-center">

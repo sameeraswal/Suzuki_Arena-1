@@ -1321,3 +1321,10 @@ ul {
   color: white;
   font-weight: bold;
 }
+
+/* btn grey out  */
+.btn-grey-out{
+  background: #D3D3D3;
+  opacity: 0.5;
+  pointer-events: none;
+}
