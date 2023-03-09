@@ -18,7 +18,6 @@ router.post("/api/v1/round/submitanswer", employeeReportController.submitAnswerO
 router.post("/api/v1/round/submitcardanswer", employeeReportController.submitAnswerOfCardQuestion);
 
 router.post("/api/v1/quiz/employee/currentscore", employeeReportController.calculateCurrentScoreOfEmp);
-
 router.post("/api/v1/round/roundscore", employeeReportController.calculateScoreOfOneRound); //this should be get or post?
 
 router.post("/api/v1/finishround", roundController.finishRound); //this should be get or post?

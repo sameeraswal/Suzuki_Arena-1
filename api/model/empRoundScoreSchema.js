@@ -5,6 +5,9 @@ const empRoundScoreSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    name:{
+        type:String
+    },
     registrationNumber: {
         type: String,
         required: true

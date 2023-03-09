@@ -115,7 +115,7 @@ exports.checkLogin = async (req, res) => {
     if (!mspin || !regNumber) {
       return res.status(400).json({
         status: status,
-        error: "please fill all the fields",
+        error: "Please fill all the fields",
       });
     }
     const emloyeeLogin = await Employee.findOne({
