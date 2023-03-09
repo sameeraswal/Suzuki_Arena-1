@@ -118,7 +118,7 @@ const Puzzlechoice = () => {
               onExitComplete={() => null}
             >
               {modalOpen && (
-                <Finishmodal1b modalOpen={modalOpen} handleClose={close} />
+                <Finishmodal1b modalOpen={modalOpen} handleClose={close} roundName={"1-B"}/>
               )}
             </AnimatePresence>
           </div>
