@@ -191,7 +191,7 @@ exports.finishRound = async (req, res) => {
             }
             res.status(400).json({
                 status: true,
-                message: "Updated"
+                message: "next round is unlocked"
             })
 
         } else {
