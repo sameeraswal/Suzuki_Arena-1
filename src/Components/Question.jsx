@@ -59,7 +59,7 @@ const Question = () => {
     axios
       .get(`${APIURL}/api/v1/quiz/roundname/1-A`)
       .then((res) => {
-        // setRounds(res.data.data[0].questions);
+        console.log(res.data.data[0].questions.sort(() => Math.random() - 0.5));
         console.log(res.data.data[0].questions[activeQuestion], "data");
         setQuestion(res.data.data[0].questions[activeQuestion].question);
         console.log(question);
@@ -102,15 +102,15 @@ const Question = () => {
         cId: cid,
       })
       .then((res) => {
-        console.log(res, "Response");
+        // console.log(res, "Response");
         // setStatus(res.data.status);
       })
       .catch((error) => console.log(error));
   };
 
-  {
-    console.log(cid, "CID is changing");
-  }
+  // {
+  //   console.log(cid, "CID is changing");
+  // }
   const onClickNext = () => {
     //HTTP call
 
@@ -198,7 +198,11 @@ const Question = () => {
                   onExitComplete={() => null}
                 >
                   {modalOpen && (
-                    <Finishmodal modalOpen={modalOpen} handleClose={close} />
+                    <Finishmodal
+                      modalOpen={modalOpen}
+                      handleClose={close}
+                      roundName={"1-A"}
+                    />
                   )}
                 </AnimatePresence>
 
