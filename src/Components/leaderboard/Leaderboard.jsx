@@ -72,8 +72,28 @@ const Leaderboard = () => {
   // };
   // let rounds = response.data;
   const [round, setRound] = useState([]);
+  // const round1A="1-A";
+  const mspin = JSON.parse(localStorage.getItem("mspin"));
+  // const fetchData = async () => {
+    // const player1 = `${APIURL}/api/v1/round/roundscore`;
+    // const player2 = `${APIURL}/api/v1/quiz/employee/currentscore`;
+  //   const player3 = `${APIURL}/api/v1/quiz/finalscore/leaderboard`;
+  //   const getPlayer2 = axios.post(player2, {
+  //     mspin: mspin,
+  //   });
+  //   const getPlayer3 = axios.get(player3);
+  //   axios.all([getPlayer2, getPlayer3]).then(
+  //     axios.spread((...allData) => {
+  //       const allPlayer1 = allData[0];
+  //       const allPlayer2 = allData[1];
+  //       console.log(allPlayer1);
+  //       console.log(allPlayer2);
+  //     })
+  //   );
+  // };
   useEffect(() => {
     // alert("Page is running");
+    // fetchData();
     axios
       .get(`${APIURL}/api/v1/quiz/finalscore/leaderboard`)
       .then((res) => {
@@ -132,8 +152,8 @@ const Leaderboard = () => {
                     <tr>
                       <td className={item.class}>{item.registrationNumber}</td>
                       <td className={item.class}>{item.name}</td>
-                      {/* <td className={item.class}>{item.round}</td>
-                      <td className={item.class}>{item.round}</td>
+                      {/* <td className={item.class}>{round1A}</td> */}
+                      {/*<td className={item.class}>{item.round}</td>
                       <td className={item.class}>{item.round}</td>
                       <td className={item.class}>{item.round}</td>
                       <td className={item.class}>{item.round}</td>

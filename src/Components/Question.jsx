@@ -122,11 +122,11 @@ const Question = () => {
   return (
     <>
       <Navbar />
-      <div className="round-box">Rounds</div>
+      <div className="round-box">Round 1-A</div>
 
       <div className="question-container">
         <div className="ques-number">{`${activeQuestion + 1}/5`}</div>
-        <Timer />
+        <Timer setOpenModal={setOpenModal}/>
 
         {v && (
           <div className="question-video">

@@ -13,7 +13,6 @@ const Dashboard = () => {
       .get(`${APIURL}/api/v1/roundlists`)
       .then((res) => {
         setRounds(res.data.data);
-        console.log(res);
       })
       .catch((error) => console.log(error, "error is here"));
   }, []);
@@ -27,13 +26,18 @@ const Dashboard = () => {
         <div className="flexbox-container">
           {rounds.map((item) => (
             <>
+              {/* {console.log(item.route)} */}
               <div className="flexbox-item flexbox-item-1 icon-conatiner">
                 {!item.isRoundLocked ? (
-                  <Link to="/question">
+                  <Link to={item.route}>
                     <button className="btn">{item.roundName}</button>
                   </Link>
                 ) : (
-                  <button className="btn btn-grey-out">{item.roundName}</button>
+                  <Link to={item.route}>
+                    <button className="btn btn-grey-out">
+                      {item.roundName}
+                    </button>
+                  </Link>
                 )}
 
                 {item.isRoundLocked && (

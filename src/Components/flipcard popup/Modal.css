@@ -5,6 +5,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left:-15% ;
+ 
+
   z-index: 999;
   margin-left: -175px;
   margin-top: -129px;
@@ -32,6 +35,7 @@
 .titleCloseBtn {
   display: flex;
   justify-content: flex-end;
+  
 }
 
 .titleCloseBtn button {
@@ -39,6 +43,7 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
+  
 }
 
 .modalContainer .body {
@@ -48,6 +53,7 @@
   align-items: center;
   font-size: 1rem;
   text-align: center;
+  
 }
 
 .modalContainer .footer {
@@ -67,6 +73,8 @@
   border-radius: 8px;
   font-size: 20px;
   cursor: pointer;
+  
+  z-index: 1;
 }
 
 #cancelBtn {

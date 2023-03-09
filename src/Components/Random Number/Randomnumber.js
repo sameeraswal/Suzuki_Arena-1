@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./randomnum.css";
 import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
-import randomnumimg from './saucer final (1).mp4'
-
+import randomnumimg from "./saucer final (1).mp4";
 
 export default function Random() {
   // const [minVal, setMinVal] = useState(0);
@@ -11,40 +10,42 @@ export default function Random() {
   const [randomNum, setRandomNum] = useState("");
 
   const handleRandomNum = () => {
-    setRandomNum(Math.floor(Math.random() * (18 - 1 + 1) + 1));
+    setTimeout(() => {
+      setRandomNum(Math.floor(Math.random() * (18 - 1 + 1) + 1));
+    },18000);
   };
   const timeOutFun = (e) => {
-    setTimeout(() => window.open("/timersection","_self"),  5000);
+    setTimeout(() => window.open("/timersection", "_self"), 5000);
     // console.log(title);
   };
 
   return (
     <>
       <Navbar />
-     
-      
+
       <div className="hero">
-      {/* <div className="round-box ">Number Generator</div> */}
-      {/* <div className="round-box">Random Number Generator</div> */}
-      <iframe src={randomnumimg} alt="" height={200} width={300} style={{marginLeft:"30px", marginBottom:"70px"}}>
-      </iframe>
+        {/* <div className="round-box ">Number Generator</div> */}
+        {/* <div className="round-box">Random Number Generator</div> */}
+        <iframe
+          src={randomnumimg}
+          alt=""
+          height={470}
+          width={800}
+          style={{ marginLeft: "30px", marginBottom: "70px" }}
+        ></iframe>
         <div className="container">
-        
-          <div className="randomNum">
-            <p className="txt-bold">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-             <b> Random Number :</b> <span> {randomNum} </span>
-            </p>
-          </div>
+          {/* <div className="randomNum"> */}
+          <h1 className="txt-bold random_no_alignment">{randomNum}</h1>
+          {/* </div> */}
 
           <button
             onClick={() => {
               handleRandomNum();
-              timeOutFun();
+              // timeOutFun();
             }}
-            className="icon-conatiner"
+            className="icon-conatiner random-no"
           >
-            Get Random Numer
+            Get Random Number
           </button>
         </div>
       </div>
