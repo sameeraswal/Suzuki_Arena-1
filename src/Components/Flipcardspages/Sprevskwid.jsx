@@ -35,7 +35,7 @@ const Sprevskwid = () => {
     <>
       <Navbar></Navbar>
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">S presso Vs Kwid</div>
+      <div className="round-box bg-correct">S presso VXi+ Vs Kwid RXL (o) 1L</div>
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>

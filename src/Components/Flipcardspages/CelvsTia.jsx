@@ -40,7 +40,7 @@ const CelvsTia = () => {
       <Navbar></Navbar>
      
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">Celerio Vs Tiago</div>
+      <div className="round-box bg-correct">Celerio ZXi+ MT Vs Tiago XZ+ MT</div>
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>

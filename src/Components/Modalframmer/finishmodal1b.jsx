@@ -63,7 +63,6 @@ const ModalText = () => (
 
 const ModalButton = ({ onClick, label }) => (
   <Link to="/login">
-    {" "}
     <motion.button
       className="modal-button cls-btn finish-modal-btn"
       type="button"

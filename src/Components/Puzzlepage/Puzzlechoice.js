@@ -73,7 +73,7 @@ const Puzzlechoice = () => {
       <Navbar />
      
       <div className="dashboard-container full-height">
-        <div className="round-box-dashboard">Puzzle</div>
+        <div className="round-box-dashboard">Puzzle - 17</div>
         <div className="puzzle-box">
           <div>
             <img

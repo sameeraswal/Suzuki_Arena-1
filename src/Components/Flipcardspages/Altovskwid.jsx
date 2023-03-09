@@ -37,7 +37,7 @@ const Altovskwid = () => {
     <>
       <Navbar></Navbar>
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">Alto K10 Vs Kwid RXT</div>
+      <div className="round-box bg-correct">Alto K10 VXi+ Vs Kwid RXT</div>
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>

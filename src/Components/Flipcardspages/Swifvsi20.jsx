@@ -37,7 +37,7 @@ const Swifvsi20 = () => {
     <>
       <Navbar></Navbar>
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">Swift Vs i20</div>
+      <div className="round-box bg-correct">Swift ZXi+ AMT Vs Altroz XZ (o)</div>
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>

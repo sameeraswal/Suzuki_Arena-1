@@ -38,7 +38,7 @@ const Wagovstiago = () => {
     <>
       <Navbar></Navbar>
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">WagonR Vs Tiago</div>
+      <div className="round-box bg-correct">WagonR ZXi+ Vs Tiago XZ</div>
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>

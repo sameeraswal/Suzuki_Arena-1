@@ -38,7 +38,7 @@ const Desvsaura = () => {
     <>
       <Navbar></Navbar>
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">Desire Vs Aura SX+</div>
+      <div className="round-box bg-correct">Dzire ZXi+ Vs Aura SX+</div>
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>
