@@ -77,7 +77,7 @@ const ModalText = () => (
 );
 
 const ModalButton = ({ onClick, label, getData }) => (
-  <Link to="/dashboard">
+  <Link to="/login">
     {" "}
     <motion.button
       className="modal-button cls-btn finish-modal-btn"

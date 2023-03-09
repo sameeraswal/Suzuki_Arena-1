@@ -1,13 +1,30 @@
 import { React, useEffect, useState } from "react";
 import FlippableCard from "../FlippableCard";
 import Navbar from "../Navbar";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import Remaincard from "./Remaincard";
 import bgImg from "../leaderboardfinal/05.png";
 import Popupquestion from "../flipcard popup/Popupquestion";
 import { motion, AnimatePresence } from "framer-motion";
+import Finishmodalenter from "../Modalframmer/finishmodalenter";
 import Finishmodal1b from "../Modalframmer/finishmodal1b";
+import axios from "axios";
+import { APIURL } from "../../App";
 
+export const getData = () => {
+  axios
+    .post(`${APIURL}/api/v1/finishround`, {
+      mspin: JSON.parse(localStorage.getItem("mspin")),
+      roundName: "2",
+    })
+    .then((res) => {
+      console.log(JSON.parse(localStorage.getItem("mspin")), "MSPIN");
+      console.log(res, "Response of roundlist");
+      // console.log(roundName, "Response of RoundName");
+    })
+    .catch((error) => console.log(error.response.data.message));
+  // return false;
+};
 const Altovskwid = () => {
   const [count, setCount] = useState(5);
   const [openModal, setOpenModal] = useState(false);
@@ -131,34 +148,15 @@ const Altovskwid = () => {
               )}
             </>
           ))}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="roll icon-conatiner finish-btn"
-            onClick={() => (modalOpen ? close() : open())}
+        </div>
+        <Link to="/login">
+          <button
+            className="roll icon-conatiner finish-card"
+            onClick={getData()}
           >
             Finish Round
-          </motion.button>
-          <AnimatePresence
-            // Disable any initial animations on children that
-            // are present when the component is first rendered
-            initial={false}
-            // Only render one component at a time.
-            // The exiting component will finish its exit
-            // animation before entering component is rendered
-            exitBeforeEnter={true}
-            // Fires when all exiting nodes have completed animating out
-            onExitComplete={() => null}
-          >
-            {modalOpen && (
-              <Finishmodal1b
-                modalOpen={modalOpen}
-                handleClose={close}
-                roundName={"2"}
-              />
-            )}
-          </AnimatePresence>
-        </div>
+          </button>
+        </Link>
       </div>
     </>
   );
