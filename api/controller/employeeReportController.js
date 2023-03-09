@@ -383,8 +383,8 @@ exports.submitScoreForRound = async (req, res) => {
 
         let questionId = 1;
         let cId = 1;
-        let score = req.score;
-        
+        let score = parseInt(req.body.score);
+
         const checkemployeeExists = await Employee.findOne({ mspin: mspin });
         if (!checkemployeeExists) {
             return res.status(404).json({
@@ -422,6 +422,8 @@ exports.submitScoreForRound = async (req, res) => {
                                     correctQuestionsAnswers
                                 }
                             });
+                            await calculateScoreOfOneRoundHelper(mspin, roundName);
+                            await calculateCurrentScoreOfEmpHelper(mspin);
 
                         } catch (error) {
                             res.status(400).json({
@@ -448,7 +450,7 @@ exports.submitScoreForRound = async (req, res) => {
 
                             }
                         });
-                        await calculateScoreOfOneRoundHelper(mspin,roundName);
+                        await calculateScoreOfOneRoundHelper(mspin, roundName);
                         await calculateCurrentScoreOfEmpHelper(mspin);
 
                     } else {
@@ -518,12 +520,12 @@ const calculateScoreOfOneRoundHelper = async (mspin, roundName) => {
             })
             console.log(total)
             console.log("regNumber", regNumber)
-            const checkRoundScoreExists = await EmpRoundScore.find({ mspin: mspin }).select("totalScore");
+            const checkRoundScoreExists = await EmpRoundScore.find({ mspin: mspin,roundName:roundName}).select("totalScore");
             if (checkRoundScoreExists.length) {
 
                 try {
                     console.log("inside if roundscore already exists")
-                    await EmpRoundScore.updateOne({ mspin: mspin }, { "$set": { totalScore: total } });
+                    await EmpRoundScore.updateOne({ mspin: mspin,roundName:roundName}, { "$set": { totalScore: total } });
                     response['status'] = true;
                     response['data'] = {
                         mspin,
