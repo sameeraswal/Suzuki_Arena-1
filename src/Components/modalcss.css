@@ -315,6 +315,11 @@ li {
   margin-left: 18%;
   margin-top: -20px;
 }
+.enter-hand {
+  margin-left: -15%;
+  margin-top: -336px;
+}
+
 .backdrop-finish-1b {
   position: absolute;
   top: 79px;
@@ -332,21 +337,47 @@ li {
   display: flex;
   flex-direction: row;
 }
+.modal-text-enter h5 div {
+  display: flex;
+  flex-direction: row;
+}
 .resp-tablet {
   height: 50%;
 }
-.resp-desktop{
+.resp-desktop {
   height: 70%;
 }
-.resp-desktop-b-s-sp{
+.resp-desktop-b-s-sp {
   height: 45%;
 }
 
-.enter-score-finish-btn{
+.enter-score-finish-btn {
   margin-top: -5%;
   margin-left: 49%;
   position: absolute;
   z-index: 1;
+}
+.backdrop-finish-enter {
+  position: absolute;
+  top: 20px;
+  left: 0%;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-y: hidden;
+  opacity: 0.01;
+}
+.enter-hand h5 {
+  margin-left: -15%;
+  margin-top: 36px;
+}
+.hand-with-text-enter {
+  margin-top: 134px;
+
+  margin-bottom: -160px;
 }
 /* finish round  */
 @media screen and (max-width: 768px) {
@@ -367,10 +398,10 @@ li {
     display: flex;
     flex-direction: column;
   }
-  .resp-tablet-e-f-e{
+  .resp-tablet-e-f-e {
     height: 80%;
   }
-  .resp-tablet-b-s-s-p{
+  .resp-tablet-b-s-s-p {
     height: 40%;
   }
 }
