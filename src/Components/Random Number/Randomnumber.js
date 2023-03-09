@@ -4,7 +4,9 @@ import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
 import randomnumimg from "./saucer final (1) (online-video-cutter.com).mp4";
 
+// const randNo=0;
 export default function Random() {
+  const [rand, setRand] = useState("");
   // const [minVal, setMinVal] = useState(0);
   // const [maxVal, setMaxVal] = useState(10);
   const [randomNum, setRandomNum] = useState("");
@@ -18,6 +20,7 @@ export default function Random() {
     setTimeout(() => window.open("/timersection", "_self"), 22000);
     // console.log(title);
   };
+
 
   const [play, setPlay] = useState(false);
 
@@ -58,3 +61,4 @@ export default function Random() {
     </>
   );
 }
+
