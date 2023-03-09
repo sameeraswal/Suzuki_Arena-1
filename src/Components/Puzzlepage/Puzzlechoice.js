@@ -103,7 +103,7 @@ const Puzzlechoice = () => {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="third icon-conatiner finish-btn"
+              className="roll icon-conatiner finish-btn"
               onClick={() => (modalOpen ? close() : open())}
             >
               Finish Round

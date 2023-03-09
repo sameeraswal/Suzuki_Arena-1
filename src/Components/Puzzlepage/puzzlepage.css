@@ -19,7 +19,7 @@
   /* display: flex;
   justify-content: space-evenly; */
   /* text-align: center; */
-  color: var(--arena-color);
+  color:white;
   font-weight: bold;
 }
 .yes-btn {
@@ -47,6 +47,6 @@
   margin-top: 6px;
   margin-left: 45%;
   width: 200px;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  /* padding-top: 10px; */
+  padding-bottom: 10px;
 }

@@ -92,7 +92,7 @@ const Puzzlequestion = () => {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="third question-btn icon-conatiner"
+              className="roll icon-conatiner sbt-btn"
               onClick={() => (modalOpen ? close() : open())}
             >
               Submit

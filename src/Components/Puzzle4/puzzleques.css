@@ -24,6 +24,7 @@
   width: 60%;
   font-size: 20px;
   margin-top: 4px;
+  color: white;
 }
 
 .ques-bg {
@@ -33,4 +34,9 @@
   height: 145%;
 }
 
-
+.full-height{
+  background: url('../New Images/Spin-Wheel_BG.png');
+}
+.sbt-btn{
+  margin-left: 70%;
+}

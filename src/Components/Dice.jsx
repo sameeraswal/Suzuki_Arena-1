@@ -83,9 +83,9 @@ const Dice = () => {
         >
           Roll Dice
         </button>
-        <Link to="/puzzlequestion icon-conatiner">
+        <Link to="/puzzlequestion">
           {" "}
-          <button className="roll">
+          <button className="roll icon-conatiner">
             Enter Score
           </button>
         </Link>
