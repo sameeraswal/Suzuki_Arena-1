@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   /* margin-top: 75px; */
-  background: url(./leaderboardbg.png);
+  background: url(../NewImages/Spin-Wheel_BG.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -26,6 +26,9 @@
   background-color: #e5e5f7;
 
   opacity: 0.8;
+  background: url(../NewImages/Spin-Wheel_BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   /* background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px); */
   /* background-size: 10px 10px; */
   /* width: 1000px; */
@@ -40,7 +43,7 @@
   /* margin: 1em; */
   color: black;
   /* transform: translateY(-5em); */
-  margin-left: 17%;
+  margin-left: 10%;
 }
 
 .description h3 {
@@ -70,6 +73,7 @@ table td {
   padding: 0.5em;
   text-align: center;
   font-size: 20px;
+  color: white;
 }
 
 tbody tr:hover {
@@ -315,6 +319,10 @@ table td:nth-child(1) {
 .resp-text {
   width: 73%;
   height: 100px;
+  margin-bottom: 68px;
+}
+.resp-trophy{
+  margin-bottom: 68px;
 }
 @media screen and (max-width: 768px) {
   .resp-trophy {

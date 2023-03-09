@@ -38,7 +38,7 @@ const Ertvscare = () => {
     <>
       <Navbar></Navbar>
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">Ertiga Vs Carens</div>
+      <div className="round-box bg-correct">Ertiga ZXi+ Vs Carens 1.5 Prestige MT</div>
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>

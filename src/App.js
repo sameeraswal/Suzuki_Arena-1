@@ -54,19 +54,14 @@ import Popupexample from "./Components/flipcard popup/Popup";
 import Dezirevsamaze from "./Components/Flipcardspages/Desirevsamaze";
 import Dezirevstiger from "./Components/Flipcardspages/Desirevstiger";
 
-
-
 export const APIURL = "http://localhost:4500";
 const App = () => {
   // API URLs
 
-  
- 
-
   const places = [
     {
       id: 0,
-      title: "S presso Vs Kwid",
+      title: "Spresso Vs Kwid",
       class: "wheel-color",
     },
     {
@@ -76,7 +71,7 @@ const App = () => {
     },
     {
       id: 2,
-      title: "Alto K10 Vs Kwid RXT",
+      title: "Alto K10 Vs Kwid",
       class: "wheel-color2",
     },
     {
@@ -86,27 +81,27 @@ const App = () => {
     },
     {
       id: 4,
-      title: "Swift Vs i20",
+      title: "Swift Vs Altroz",
       class: "wheel-color4",
     },
     {
       id: 5,
-      title: "Swift Vs Grand i10",
+      title: "Swift Vs Grand i10 Nios",
       class: "wheel-color5",
     },
     {
       id: 6,
-      title: "Dezire Vs Amaze",
+      title: "Dzire Vs Amaze",
       class: "wheel-color6",
     },
     {
       id: 7,
-      title: "Dezire Vs Tiger",
+      title: "Dzire Vs Tigor",
       class: "wheel-color",
     },
     {
       id: 8,
-      title: "Brezza ZXI+MT Vs XUV",
+      title: "Brezza Vs XUV 300",
       class: "wheel-color1",
     },
     {
@@ -121,7 +116,7 @@ const App = () => {
     },
     {
       id: 11,
-      title: "Dezire Vs Aura SX+",
+      title: "Dzire Vs Aura",
       class: "wheel-color4",
     },
   ];
@@ -242,7 +237,6 @@ const App = () => {
           <Route path="/enterbrezza" element={<Enterbrezza />}></Route>
           <Route path="/popupquestion" element={<Popupquestion />}></Route>
           <Route path="/popupexample" element={<Popupexample />}></Route>
-
         </Routes>
       </div>
     </Router>

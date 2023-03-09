@@ -10,7 +10,7 @@ const Puzzle = () => {
     <div>
       <Navbar />
       <div className="dashboard-container">
-        <div className="round-box-dashboard">Puzzle</div>
+        <div className="round-box-dashboard">Puzzle - 17</div>
         <div className="puzzle-position">
           <img
             src={wordpattern}

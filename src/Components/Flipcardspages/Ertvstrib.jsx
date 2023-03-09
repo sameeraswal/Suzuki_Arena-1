@@ -36,7 +36,7 @@ const Ertvstrib = () => {
     <>
       <Navbar></Navbar>
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">Ertiga Vs Triber</div>
+      <div className="round-box bg-correct">Ertiga ZXi+ AT Vs Triber RXZ</div>
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>

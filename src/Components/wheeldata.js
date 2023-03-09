@@ -32,12 +32,12 @@ export const wheeldata = {
     },
     {
       id: 7,
-      title: "Desire Vs Amaze",
+      title: "Dzire ZXi+ Vs Amaze",
       color: "#a8a8a8",
     },
     {
       id: 8,
-      title: "Desire Vs Tiger",
+      title: "Dzire ZXi+ Vs Tiger",
       color: "#0f0f0f",
     },
     {
@@ -57,7 +57,7 @@ export const wheeldata = {
     },
     {
       id: 12,
-      title: "Desire Vs Aura SX+",
+      title: "Dzire ZXi+ Vs Aura SX+",
       color: "#571608",
     },
   ],

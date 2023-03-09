@@ -54,7 +54,7 @@ const Login = () => {
     // return false;
   };
 
-  const arena = require("./RegImage.jpeg");
+  const arena = require("./Pratham.png");
   const navigateLogin = () => {
     console.log(status, "status hai");
     setTimeout(

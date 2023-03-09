@@ -28,7 +28,7 @@ const dropIn = {
   },
 };
 
-const Finishmodal1b = ({ handleClose, text, type }) => {
+const Finishmodal3 = ({ handleClose, text, type }) => {
   // Log state
   useEffect(() => {
     stateLogger("Modal", true);
@@ -75,4 +75,4 @@ const ModalButton = ({ onClick, label }) => (
   </Link>
 );
 
-export default Finishmodal1b;
+export default Finishmodal3;

@@ -10,7 +10,7 @@ import { APIURL } from "../App";
 
 function Registration() {
   const navigate = useNavigate();
-  const arena = require("./RegImage.jpeg");
+  const arena = require("./Pratham.png");
 
   const handleEntailmentRequest = (e) => {
     e.preventDefault();

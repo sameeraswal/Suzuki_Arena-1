@@ -37,7 +37,7 @@ const Swiftvsgrandi10 = () => {
     <>
       <Navbar></Navbar>
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">Swift Vs Grand i10</div>
+      <div className="round-box bg-correct">Swift ZXi+ AMT Vs Grand i10 NIOS Asta</div>
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>

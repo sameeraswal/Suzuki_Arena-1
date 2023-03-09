@@ -12,10 +12,10 @@ export default function Random() {
   const handleRandomNum = () => {
     setTimeout(() => {
       setRandomNum(Math.floor(Math.random() * (18 - 1 + 1) + 1));
-    },18000);
+    }, 18000);
   };
   const timeOutFun = (e) => {
-    setTimeout(() => window.open("/timersection", "_self"), 5000);
+    setTimeout(() => window.open("/timersection", "_self"), 22000);
     // console.log(title);
   };
 
@@ -29,11 +29,11 @@ export default function Random() {
         <iframe
           src={randomnumimg}
           alt=""
-          height={470}
-          width={800}
-          style={{ marginLeft: "30px", marginBottom: "70px" }}
+          height={550}
+          width={1000}
+          style={{ marginLeft: "-30px", marginBottom: "-350px" }}
         ></iframe>
-        <div className="container">
+        <div className="containerx" >
           {/* <div className="randomNum"> */}
           <h1 className="txt-bold random_no_alignment">{randomNum}</h1>
           {/* </div> */}
@@ -41,11 +41,11 @@ export default function Random() {
           <button
             onClick={() => {
               handleRandomNum();
-              // timeOutFun();
+              timeOutFun();
             }}
             className="icon-conatiner random-no"
           >
-            Get Random Number
+           Spin
           </button>
         </div>
       </div>
