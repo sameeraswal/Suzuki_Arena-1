@@ -29,7 +29,7 @@ const Dashboard = () => {
             <>
               <div className="flexbox-item flexbox-item-1 icon-conatiner">
                 {!item.isRoundLocked ? (
-                  <Link to="/question">
+                  <Link to={item.route}>
                     <button className="btn">{item.roundName}</button>
                   </Link>
                 ) : (

@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
-import bgImg from './New Images/Spin-Wheel_BG.png'
+import bgImg from './NewImages/Spin-Wheel_BG.png'
 
 const Dice = () => {
   const navigate = useNavigate();

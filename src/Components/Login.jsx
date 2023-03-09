@@ -58,8 +58,8 @@ const Login = () => {
   const navigateLogin = () => {
     console.log(status, "status hai");
     setTimeout(
-      () => (status ? window.open("./dashboard", "_self") : status),
-      2000
+      () => (!status ? window.open("./dashboard", "_self") : status),
+      3000
     );
     // setTimeout(()=>{
     // if (status) {

@@ -55,24 +55,23 @@ function Registration() {
 
       .then((res) => {
         setMessage(res.data.message);
-        
+
         console.log(res.data, "Message is hewre");
         alert(res.data.message);
       })
       .catch((error) => console.log(error, "error is here"));
   };
   const navigateLogin = () => {
-    console.log(status , "Status is here")
+    console.log(status, "Status is here");
     if (status) {
       navigate("/login");
     }
   };
   return (
-    <div>
+    <>
       <div className="nav-center">
         <Navbar />
       </div>
-
       <div className="container">
         <img src={arena} alt="arena" className="arena-img" />
 
@@ -148,7 +147,7 @@ function Registration() {
           </form>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

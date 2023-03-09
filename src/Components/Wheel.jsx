@@ -8,7 +8,7 @@ import bodyImg from "./3552-[Converted].png";
 
 import "./wheel.scss";
 import { Link } from "react-router-dom";
-import bgImg from './New Images/Spin-Wheel_BG.png'
+import bgImg from './NewImages/Spin-Wheel_BG.png'
 
 // const [activeQuestion, setActiveQuestion] = useState(0);
 // const { questions } = data;

@@ -19,7 +19,7 @@ const Timersection = () => {
     <div>
       <Navbar />
       <div className=" bg-timer-section">
-        <div className="round-box" style={{marginTop:"20px", position:"absolute", marginLeft:"40px"}}>Timer</div>
+        <div className="round-box" style={{marginTop:"20px", position:"absolute", marginLeft:"160px"}}>Timer</div>
         <div className="">
           <div className="timer-container">
             <Timermin />
