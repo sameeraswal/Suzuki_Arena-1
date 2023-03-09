@@ -11,11 +11,8 @@ function FlippableCard({ title }) {
   // console.log("showFront");
 
   // useEffect(() => {
-  //   const data = window.localStorage.getItem("cardState");
-  //   if (data !== null) {
-  //     setShowFront(JSON.parse(data));
-  //   }
-  // }, []);
+  //  setShowFront(false)
+  // }, [showFront]);
 
   // // useDidMountEffect(() => {
   // //   window.localStorage.setItem("cardState", JSON.stringify(false));

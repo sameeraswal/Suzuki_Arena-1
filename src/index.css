@@ -10,12 +10,16 @@
 .nav__img {
   display: flex;
   margin-left: 0px;
+  z-index: 999;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+
 }
 
 .nav_img {
   margin-left: 10px;
+  z-index: 999;
 }
 
 .flexbox-container {
@@ -213,10 +217,17 @@
   padding: 80px 0 40px;
   border-radius: 30px;
   margin: auto;
-  margin-top: 60px;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+  /* margin-top: 60px; */
+  /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  background: linear-gradient(to bottom, #EECDA3 0%, #f36fa8 100%);
+  background: linear-gradient(to bottom, #EECDA3 0%, #f36fa8 100%); */
+}
+
+
+.dice-btn-pos{
+  display: flex;
+  justify-content: center;
+ 
 }
 
 /*
@@ -331,23 +342,24 @@
 .roll {
   cursor: pointer;
   color: #b33951;
-  margin-top: 60px;
+  margin: 0 20px;
   padding: 6px 12px;
   border-radius: 3px;
-  font: 700 16px "Montserrat";
-  border: 2px solid #b33951;
+  font: 700 16px;
+  
   transition: 0.4s;
-  background-color: #0e5c91;
+  background-color: var(--arena-color);
   border: 1px solid #85cdfd;
   width: 170px;
   height: 40px;
   border-radius: 8px;
   color: white;
+  font-family: 'Roboto';
 }
 
 .roll:hover {
   color: #fff;
-  background: #b33951;
+  background: #0e5c91;
 }
 
 /* Wheel */

@@ -70,21 +70,24 @@ const Dice = () => {
           <div className="face right"></div>
           <div className="face left"></div>
         </div>
-        <button
-          className="roll third icon-conatiner"
+      
+      </div>
+      <div className="dice-btn-pos">
+      <button
+          className="roll icon-conatiner"
           onClick={() => {
             randomDice();
           }}
         >
           Roll Dice
         </button>
-        <Link to="/puzzlequestion">
+        <Link to="/puzzlequestion icon-conatiner">
           {" "}
-          <button className="third icon-conatiner btn-width  btn-enter-score">
+          <button className="roll">
             Enter Score
           </button>
         </Link>
-      </div>
+        </div>
     </div>
   );
 };
