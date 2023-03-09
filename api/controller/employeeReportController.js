@@ -16,13 +16,15 @@ exports.submitAnswerOfQuestion = async (req, res) => {
         const roundName = req.body.roundName;
         const mspin = req.body.mspin;
 
-        calculateScoreOfOneRoundHelper()
+        //calculateScoreOfOneRoundHelper()
+        
 
         // const registrationNumber = req.body.registrationNumber;
         // const name = req.body.name;
 
         let questionId = req.body.questionId;
         let cId = req.body.cId;
+        
         console.log(roundName);
         const checkemployeeExists = await Employee.findOne({ mspin: mspin });
         if (!checkemployeeExists) {
@@ -145,6 +147,8 @@ exports.submitAnswerOfQuestion = async (req, res) => {
             }
 
         }
+        await calculateScoreOfOneRoundHelper(mspin,roundName);
+        await calculateCurrentScoreOfEmpHelper(mspin);
 
 
     } catch (error) {
@@ -423,6 +427,7 @@ const calculateScoreOfOneRoundHelper = async (mspin,roundName) => {
                 totalScoreOfThisRound: total
 
             }
+            console.log("roundReport=============",roundReport)
             response['status']=true;
             response['data']=roundReport;
         } else {
