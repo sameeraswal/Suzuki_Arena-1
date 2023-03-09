@@ -9,6 +9,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import ModalFrammer from "./ModalFrammer";
 
 import "./modalcss.css";
+import Finishmodal3 from "./Modalframmer/finishmodal3";
+import Finishmodalenter from "./Modalframmer/finishmodalenter";
 
 const Enterscore = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -62,7 +64,7 @@ const Enterscore = () => {
                   onExitComplete={() => null}
                 >
                   {modalOpen && (
-                    <Finishmodal modalOpen={modalOpen} handleClose={close} />
+                    <Finishmodalenter modalOpen={modalOpen} handleClose={close} />
                   )}
                 </AnimatePresence>
       </div>
