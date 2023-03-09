@@ -392,7 +392,7 @@ const calculateScoreOfOneRoundHelper = async (mspin,roundName) => {
     try{
         const roundAnswerDetail = await EmployeeAnswer.find({ mspin: mspin, roundName: roundName });
         if(!roundAnswerDetail.length){
-            response[message] = "data not found";
+            response['message'] = "data not found";
             return response;
         }
         let name = "";
@@ -426,10 +426,10 @@ const calculateScoreOfOneRoundHelper = async (mspin,roundName) => {
             response['status']=true;
             response['data']=roundReport;
         } else {
-            response[message] = "Error in query";
+            response['message'] = "Error in query";
         }
     }catch(error){
-        response[message] = error.message;
+        response['message'] = error.message;
     }
     return response;
     
