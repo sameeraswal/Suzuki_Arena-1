@@ -1,0 +1,412 @@
+{
+	"info": {
+		"_postman_id": "9eaf5c0f-11a7-48fe-9b85-bac96ab3b9e6",
+		"name": "suzukiApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get single round details by round id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4500/api/v1/quiz/roundname/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"quiz",
+						"roundname",
+						"2"
+					]
+				},
+				"description": "Round details"
+			},
+			"response": []
+		},
+		{
+			"name": "check employee log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mspin\" : \"130\",\n    \"regNumber\": \"31222\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4500/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				},
+				"description": "Check Log in "
+			},
+			"response": []
+		},
+		{
+			"name": "get all rounds lists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtc3BpbiI6IjEyMyIsInJlZ051bWJlciI6IjIyIiwiaWF0IjoxNjc3NTI2MjcyfQ.aOEDhlOwTIB2kdJnPiPeLN7Yg8umzzrPtnbrbDiodL8",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4500/api/v1/roundlists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"roundlists"
+					]
+				},
+				"description": "Round lists"
+			},
+			"response": []
+		},
+		{
+			"name": "get name and dealarship by mspin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4500/api/v1/mspin/125",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"mspin",
+						"125"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submit and get result of each question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mspin\": \"130\",\n    \"roundName\": \"3\",\n    \"questionId\": \"3\",\n    \"cId\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4500/api/v1/round/submitanswer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"round",
+						"submitanswer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calculate total score of each round",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mspin\":\"130\",\n    \"roundname\":\"3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4500/api/v1/round/roundscore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"round",
+						"roundscore"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calculate current or final score of all rounds",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"mspin\":\"130\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4500/api/v1/quiz/employee/currentscore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"quiz",
+						"employee",
+						"currentscore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"mspin\":\"130\",\n \"name\":\"rahul yadav\",\n \"dealership\":\"rrr\",\n \"registrationNumber\":\"30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4500/api/v1/employee/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get total score of round(old)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4500/api/v1/round/roundscore/mspin/125/roundname/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"round",
+						"roundscore",
+						"mspin",
+						"125",
+						"roundname",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get final score of all rounds by mspin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4500/api/v1/quiz/finalscore/mspin/130",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"quiz",
+						"finalscore",
+						"mspin",
+						"130"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leaderboard api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4500/api/v1/quiz/finalscore/leaderboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"quiz",
+						"finalscore",
+						"leaderboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submitcardanswer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mspin\": \"141\",\n    \"roundName\": \"2\",\n    \"wheelQuestionId\":\"3\",\n    \"cardQuestionId\": \"3\",\n    \"userAnswer\": \"49 kW @ 5500 rpm\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4500/api/v1/round/submitcardanswer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"round",
+						"submitcardanswer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get wheel titles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4500/api/v1/round/roundname/2/wheeltitles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"round",
+						"roundname",
+						"2",
+						"wheeltitles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finish round",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"roundName\":\"1-A\",\n    \"mspin\":\"140\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4500/api/v1/finishround",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"v1",
+						"finishround"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

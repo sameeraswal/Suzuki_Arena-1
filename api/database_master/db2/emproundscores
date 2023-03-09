@@ -1,0 +1,421 @@
+[{
+  "_id": {
+    "$oid": "6403c2b314a112bc0d662dcd"
+  },
+  "mspin": "125",
+  "registrationNumber": "25",
+  "roundName": "3",
+  "totalScore": 20,
+  "createdAt": {
+    "$date": "2023-03-04T22:14:11.216Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-04T22:14:11.216Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6403d113a41ef55f171c2220"
+  },
+  "mspin": "125",
+  "registrationNumber": "25",
+  "roundName": "2",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-04T23:15:31.499Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-04T23:15:31.499Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6404f930b282b44a7c9efe55"
+  },
+  "mspin": "125",
+  "registrationNumber": "25",
+  "roundName": "4",
+  "totalScore": 10,
+  "createdAt": {
+    "$date": "2023-03-05T20:18:56.824Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-05T20:18:56.824Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64090db6db1d7a68ab5bea22"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "roundName": "3",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-08T22:35:34.049Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T22:35:34.049Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64090deddb1d7a68ab5bea25"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "roundName": "3",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-08T22:36:29.075Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T22:36:29.075Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64090e31db1d7a68ab5bea28"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "roundName": "2",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-08T22:37:37.202Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T22:37:37.202Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64091118db1d7a68ab5bea2b"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "roundName": "2",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-08T22:50:00.594Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T22:50:00.594Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6409129dbd2dbb898c7dfe66"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "roundName": "2",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-08T22:56:29.620Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T22:56:29.620Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640913b10fb06add46bb77eb"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "roundName": "2",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-08T23:01:05.369Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T23:01:05.369Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640913b60fb06add46bb77ee"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "roundName": "3",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-08T23:01:10.974Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T23:01:10.974Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640919ded3aae8168d04f5b6"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "roundName": "3",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-08T23:27:26.125Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T23:27:26.125Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64091a1ad3aae8168d04f5b9"
+  },
+  "mspin": "130",
+  "registrationNumber": "30",
+  "roundName": "3",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-08T23:28:26.288Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T23:28:26.288Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64091addf46508bf512a8390"
+  },
+  "mspin": "130",
+  "name": "rahul yadav",
+  "registrationNumber": "30",
+  "roundName": "3",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-08T23:31:41.214Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T23:31:41.214Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64091b6ccdd0ca2fd1e838ad"
+  },
+  "mspin": "130",
+  "name": "rahul yadav",
+  "registrationNumber": "30",
+  "roundName": "3",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-08T23:34:04.046Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-08T23:34:04.046Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64097ad48cf517ef05c7b941"
+  },
+  "mspin": "141",
+  "name": "akshay verma",
+  "registrationNumber": "41",
+  "roundName": "3",
+  "totalScore": 10,
+  "createdAt": {
+    "$date": "2023-03-09T06:21:08.138Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T06:21:08.138Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640984d97279c8f504568d40"
+  },
+  "mspin": "141",
+  "name": "akshay verma",
+  "registrationNumber": "41",
+  "roundName": "3",
+  "totalScore": 10,
+  "createdAt": {
+    "$date": "2023-03-09T07:03:53.073Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T07:03:53.073Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640985007279c8f504568d44"
+  },
+  "mspin": "141",
+  "name": "akshay verma",
+  "registrationNumber": "41",
+  "roundName": "3",
+  "totalScore": 10,
+  "createdAt": {
+    "$date": "2023-03-09T07:04:32.386Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T07:04:32.386Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6409859b7279c8f504568d47"
+  },
+  "mspin": "141",
+  "name": "akshay verma",
+  "registrationNumber": "41",
+  "roundName": "3",
+  "totalScore": 10,
+  "createdAt": {
+    "$date": "2023-03-09T07:07:07.533Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T07:07:07.533Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640985f17279c8f504568d4a"
+  },
+  "mspin": "141",
+  "name": "akshay verma",
+  "registrationNumber": "41",
+  "roundName": "2",
+  "totalScore": 10,
+  "createdAt": {
+    "$date": "2023-03-09T07:08:33.605Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T07:08:33.605Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640985fd7279c8f504568d4e"
+  },
+  "mspin": "141",
+  "name": "akshay verma",
+  "registrationNumber": "41",
+  "roundName": "1-A",
+  "totalScore": 0,
+  "createdAt": {
+    "$date": "2023-03-09T07:08:45.695Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T07:08:45.695Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640986037279c8f504568d51"
+  },
+  "mspin": "141",
+  "name": "akshay verma",
+  "registrationNumber": "41",
+  "roundName": "4",
+  "totalScore": 10,
+  "createdAt": {
+    "$date": "2023-03-09T07:08:51.969Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T07:08:51.969Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640989bb7279c8f504568d5a"
+  },
+  "mspin": "141",
+  "name": "akshay verma",
+  "registrationNumber": "41",
+  "roundName": "4",
+  "totalScore": 10,
+  "createdAt": {
+    "$date": "2023-03-09T07:24:43.919Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T07:24:43.919Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "640989fd7279c8f504568d5d"
+  },
+  "mspin": "141",
+  "name": "akshay verma",
+  "registrationNumber": "41",
+  "roundName": "4",
+  "totalScore": 10,
+  "createdAt": {
+    "$date": "2023-03-09T07:25:49.871Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T07:25:49.871Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64098b6f7279c8f504568d92"
+  },
+  "mspin": "130",
+  "name": "rahul yadav",
+  "registrationNumber": "30",
+  "roundName": "1-A",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-09T07:31:59.750Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T07:31:59.750Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64098b797279c8f504568d95"
+  },
+  "mspin": "130",
+  "name": "rahul yadav",
+  "registrationNumber": "30",
+  "roundName": "1-B",
+  "totalScore": 0,
+  "createdAt": {
+    "$date": "2023-03-09T07:32:09.808Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T07:32:09.808Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64098b897279c8f504568d98"
+  },
+  "mspin": "130",
+  "name": "rahul yadav",
+  "registrationNumber": "30",
+  "roundName": "2",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-09T07:32:25.162Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T07:32:25.162Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64098b8d7279c8f504568d9b"
+  },
+  "mspin": "130",
+  "name": "rahul yadav",
+  "registrationNumber": "30",
+  "roundName": "3",
+  "totalScore": 30,
+  "createdAt": {
+    "$date": "2023-03-09T07:32:29.789Z"
+  },
+  "updatedAt": {
+    "$date": "2023-03-09T07:32:29.789Z"
+  },
+  "__v": 0
+}]
