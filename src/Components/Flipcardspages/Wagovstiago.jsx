@@ -23,7 +23,7 @@ const Wagovstiago = () => {
       { id: 5, cardName: "Mileage",class: "front-icon6", classBack: "back-6", isCorrect: true },
       { id: 6, cardName: "Width",class: "front-icon7", classBack: "back-7", isCorrect: false },
       { id: 7, cardName: "Wheelbase",class: "front-icon8", classBack: "back-8", isCorrect: true },
-      { id: 8, cardName: "BC",class: "front-icon9", classBack: "back-9", isCorrect: false },
+      { id: 8, cardName: "Engine",class: "front-icon9", classBack: "back-9", isCorrect: false },
       { id: 9, cardName: "FTC",class: "front-icon10", classBack: "back-10", isCorrect: false },
     ],
   };
