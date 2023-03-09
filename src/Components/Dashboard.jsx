@@ -34,7 +34,7 @@ const Dashboard = () => {
                   </Link>
                 ) : (
                   <Link to={item.route}>
-                    <button className="btn btn-grey-out">
+                    <button className="btn">
                       {item.roundName}
                     </button>
                   </Link>

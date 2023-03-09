@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from ".././Navbar";
 import "./leaderboard.css";
 import bg from "./02.png";
-import text from "./01.png";
+import text from "./Scoreboard.png";
 import trophy from "./09.png";
 import { APIURL } from "../../App";
 import axios from "axios";
@@ -109,7 +109,7 @@ const Leaderboard = () => {
       <div className="leaderboard-container">
         <div className="leaderboard">
           <div className="description">
-            <img src={trophy} alt="" className="resp-trophy resp-trophy-1" />{" "}
+            <img src={trophy} alt="" className="resp-trophy resp-trophy-1" />
             <img src={text} alt="" className="resp-text" />
             <img src={trophy} alt="" className="resp-trophy" />
           </div>
@@ -121,7 +121,7 @@ const Leaderboard = () => {
               <img src={bg} alt="" className="bg bg2" />
               <h1 className="text-on-img2">Name</h1>
 
-              <img src={bg} alt="" className="bg bg4" />
+              {/* <img src={bg} alt="" className="bg bg4" />
               <h1 className="text-on-img3">Round 1-A</h1>
               <img src={bg} alt="" className="bg bg5" />
               <h1 className="text-on-img4">Round 1-B</h1>
@@ -136,7 +136,7 @@ const Leaderboard = () => {
               <img src={bg} alt="" className="bg bg10" />
               <h1 className="text-on-img9">Round 6</h1>
               <img src={bg} alt="" className="bg bg11" />
-              <h1 className="text-on-img10">Round 7</h1>
+              <h1 className="text-on-img10">Round 7</h1> */}
 
               <img src={bg} alt="" className="bg bg5" />
               <h1 className="text-on-img11">Total Score</h1>

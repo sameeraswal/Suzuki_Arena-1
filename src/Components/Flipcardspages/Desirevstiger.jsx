@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import bgImg from "../leaderboardfinal/05.png";
 import Popupquestion from "../flipcard popup/Popupquestion";
 
-const Desirevstiger = () => {
+const Dezirevstiger = () => {
   const [count, setCount] = useState(5);
   const [openModal, setOpenModal] = useState(false);
 
@@ -61,20 +61,4 @@ const Desirevstiger = () => {
   );
 };
 
-export default Desirevstiger;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default Dezirevstiger;

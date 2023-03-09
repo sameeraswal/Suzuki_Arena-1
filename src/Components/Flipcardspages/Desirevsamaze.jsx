@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import bgImg from "../leaderboardfinal/05.png";
 import Popupquestion from "../flipcard popup/Popupquestion";
 
-const Desirevsamaze = () => {
+const Dezirevsamaze = () => {
   const [count, setCount] = useState(5);
   const [openModal, setOpenModal] = useState(false);
 
@@ -62,7 +62,7 @@ const Desirevsamaze = () => {
   );
 };
 
-export default Desirevsamaze;
+export default Dezirevsamaze;
 
 
 

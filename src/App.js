@@ -51,6 +51,8 @@ import Enterertiga from "./Components/Entercorepages/Enterertiga";
 import Enterbrezza from "./Components/Entercorepages/Enterbrezza";
 import Popupquestion from "./Components/flipcard popup/Popupquestion";
 import Popupexample from "./Components/flipcard popup/Popup";
+import Dezirevsamaze from "./Components/Flipcardspages/Desirevsamaze";
+import Dezirevstiger from "./Components/Flipcardspages/Desirevstiger";
 
 
 
@@ -226,9 +228,9 @@ const App = () => {
           <Route path="/brezzazxi+mtvsxuv" element={<Brewsuv />}></Route>
           <Route path="/altok10vskwidrxt" element={<Altovskwid />}></Route>
           <Route path="/celeriovstiago" element={<CelvsTia />}></Route>
-          <Route path="/desirevsamaze" element={<Desirevsamaze />}></Route>
-          <Route path="/desirevstiger" element={<Desirevstiger />}></Route>
-          <Route path="/desvsaura" element={<Desvsaura />}></Route>
+          <Route path="/dezirevsamaze" element={<Dezirevsamaze />}></Route>
+          <Route path="/dezirevstiger" element={<Dezirevstiger />}></Route>
+          <Route path="/dezirevsaurasx+" element={<Desvsaura />}></Route>
           <Route path="/ertigavscarens" element={<Ertvscare />}></Route>
           <Route path="/ertigavstriber" element={<Ertvstrib />}></Route>
           <Route path="/spressovskwid" element={<Sprevskwid />}></Route>
