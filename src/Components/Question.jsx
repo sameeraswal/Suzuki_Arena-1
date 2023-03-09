@@ -8,7 +8,7 @@ import "./modalcss.css";
 import Finishmodal from "./Modalframmer/finishmodal";
 import axios from "axios";
 import { APIURL } from "../App";
-import {bgImg} from './NewImages/Spin-Wheel_BG.png'
+import { bgImg } from "./NewImages/Spin-Wheel_BG.png";
 
 const Question = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -97,8 +97,6 @@ const Question = () => {
     axios
       .post(`${APIURL}/api/v1/round/submitanswer`, {
         mspin: mspin,
-        registrationNumber: regno,
-        name: "akshay verma",
         roundName: "1-A",
         questionId: i,
         cId: cid,
@@ -123,12 +121,12 @@ const Question = () => {
   return (
     <>
       <Navbar />
-      
+
       <div className="round-box">Round 1-A</div>
 
       <div className="question-container">
         <div className="ques-number">{`${activeQuestion + 1}/5`}</div>
-        <Timer setOpenModal={setOpenModal}/>
+        <Timer setOpenModal={setOpenModal} />
 
         {v && (
           <div className="question-video">
