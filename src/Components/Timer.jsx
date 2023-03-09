@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
+import Popupexample from "./flipcard popup/Popup";
+import Popupquestion from "./flipcard popup/Popupquestion";
 
 const Timer = () => {
- 
+  const [openModel, setOpenModal] = useState(true);
   const imgsrc = require("./stop.png");
   const Ref = useRef(null);
 
@@ -23,7 +25,6 @@ const Timer = () => {
   const startTimer = (e) => {
     let { total, minutes, seconds } = getTimeRemaining(e);
     if (total >= 0) {
-      
       setTimer(
         (minutes > 9 ? minutes : "0" + minutes) +
           ":" +
@@ -33,10 +34,8 @@ const Timer = () => {
   };
 
   const clearTimer = (e) => {
-   
     setTimer("01:00");
 
-    
     if (Ref.current) clearInterval(Ref.current);
     const id = setInterval(() => {
       startTimer(e);
@@ -47,23 +46,26 @@ const Timer = () => {
   const getDeadTime = () => {
     let deadline = new Date();
 
-    
     deadline.setSeconds(deadline.getSeconds() + 60);
     return deadline;
   };
 
-  
   useEffect(() => {
     clearTimer(getDeadTime());
   }, []);
 
-  
-
   return (
-    <div className="timer-div">
-      <h2>{timer}</h2>
-      <img src={imgsrc} alt="" className="clock-img"/>
-    </div>
+    <>
+      <div className="timer-div">
+        <h2>{timer}</h2>
+        <img src={imgsrc} alt="" className="clock-img" />
+      </div>
+      <div>
+        {timer === "00:00" && openModel && (
+          <Popupexample setOpenModal={setOpenModal} />
+        )}
+      </div>
+    </>
   );
 };
 

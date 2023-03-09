@@ -126,7 +126,7 @@ const Question = () => {
 
       <div className="question-container">
         <div className="ques-number">{`${activeQuestion + 1}/5`}</div>
-        <Timer />
+        <Timer setOpenModal={setOpenModal}/>
 
         {v && (
           <div className="question-video">
