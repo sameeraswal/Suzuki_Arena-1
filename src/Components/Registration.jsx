@@ -10,7 +10,7 @@ import { APIURL } from "../App";
 
 function Registration() {
   const navigate = useNavigate();
-  const arena = require("./maruti-suzuki-arena.webp");
+  const arena = require("./RegImage.jpeg");
 
   const handleEntailmentRequest = (e) => {
     e.preventDefault();

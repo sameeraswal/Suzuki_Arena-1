@@ -54,7 +54,7 @@ const Login = () => {
     // return false;
   };
 
-  const arena = require("./maruti-suzuki-arena.webp");
+  const arena = require("./RegImage.jpeg");
   const navigateLogin = () => {
     console.log(status, "status hai");
     setTimeout(
