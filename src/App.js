@@ -61,62 +61,62 @@ const App = () => {
   const places = [
     {
       id: 0,
-      title: "Spresso Vs Kwid",
+      title: "S presso VXi+ Vs Kwid RXL (o) 1L",
       class: "wheel-color",
     },
     {
       id: 1,
-      title: "WagonR Vs Tiago",
+      title: "WagonR ZXi+ Vs Tiago XZ",
       class: "wheel-color1",
     },
     {
       id: 2,
-      title: "Alto K10 Vs Kwid",
+      title: "Alto K10 VXi+ Vs Kwid RXT",
       class: "wheel-color2",
     },
     {
       id: 3,
-      title: "Celerio Vs Tiago",
+      title: "Celerio ZXi+ MT Vs Tiago XZ+ MT",
       class: "wheel-color3",
     },
     {
       id: 4,
-      title: "Swift Vs Altroz",
+      title: "Swift ZXi+ AMT Vs Altroz XZ (o)",
       class: "wheel-color4",
     },
     {
       id: 5,
-      title: "Swift Vs Grand i10 Nios",
+      title: "Swift ZXi+ AMT Vs Grand i10 NIOS Asta",
       class: "wheel-color5",
     },
     {
       id: 6,
-      title: "Dzire Vs Amaze",
+      title: "Dzire ZXi+ Vs Amaze VX",
       class: "wheel-color6",
     },
     {
       id: 7,
-      title: "Dzire Vs Tigor",
+      title: "Dzire ZXi+ Vs Tigor XZ+",
       class: "wheel-color",
     },
     {
       id: 8,
-      title: "Brezza Vs XUV 300",
+      title: "Brezza ZXi+ MT Vs XUV 300 W8(o) AMT",
       class: "wheel-color1",
     },
     {
       id: 9,
-      title: "Ertiga Vs Carens",
+      title: "Ertiga ZXi+ Vs Carens 1.5 Prestige MT",
       class: "wheel-color2",
     },
     {
       id: 10,
-      title: "Ertiga Vs Triber",
+      title: "Ertiga ZXi+ AT Vs Triber RXZ",
       class: "wheel-color3",
     },
     {
       id: 11,
-      title: "Dzire Vs Aura",
+      title: "Dzire ZXi+ Vs Aura SX+",
       class: "wheel-color4",
     },
   ];
@@ -220,18 +220,18 @@ const App = () => {
             element={<Afterflipcasestudy />}
           ></Route>
 
-          <Route path="/brezzazxi+mtvsxuv" element={<Brewsuv />}></Route>
-          <Route path="/altok10vskwidrxt" element={<Altovskwid />}></Route>
-          <Route path="/celeriovstiago" element={<CelvsTia />}></Route>
-          <Route path="/dezirevsamaze" element={<Dezirevsamaze />}></Route>
-          <Route path="/dezirevstiger" element={<Dezirevstiger />}></Route>
-          <Route path="/dezirevsaurasx+" element={<Desvsaura />}></Route>
-          <Route path="/ertigavscarens" element={<Ertvscare />}></Route>
-          <Route path="/ertigavstriber" element={<Ertvstrib />}></Route>
-          <Route path="/spressovskwid" element={<Sprevskwid />}></Route>
-          <Route path="/swiftvsgrandi10" element={<Swiftvsgrandi10 />}></Route>
-          <Route path="/swiftvsi20" element={<Swifvsi20 />}></Route>
-          <Route path="/wagonrvstiago" element={<Wagovstiago />}></Route>
+          <Route path="/brezzazxi+mtvsxuv300w8(o)amt" element={<Brewsuv />}></Route>
+          <Route path="/altok10vxi+vskwidrxt" element={<Altovskwid />}></Route>
+          <Route path="/celeriozxi+mtvstiagoxz+mt" element={<CelvsTia />}></Route>
+          <Route path="/dzirezxi+vsamazevx" element={<Dezirevsamaze />}></Route>
+          <Route path="/dzirezxi+vstigorxz+" element={<Dezirevstiger />}></Route>
+          <Route path="/dzirezxi+vsaurasx+" element={<Desvsaura />}></Route>
+          <Route path="/ertigazxi+vscarens1.5prestigemt" element={<Ertvscare />}></Route>
+          <Route path="/ertigazxi+atvstriberrxz" element={<Ertvstrib />}></Route>
+          <Route path="/spressovxi+vskwidrxl(o)1l" element={<Sprevskwid />}></Route>
+          <Route path="/swiftzxi+amtvsgrandi10niosasta" element={<Swiftvsgrandi10 />}></Route>
+          <Route path="/swiftzxi+amtvsaltrozxz(o)" element={<Swifvsi20 />}></Route>
+          <Route path="/wagonrzxi+vstiagoxz" element={<Wagovstiago />}></Route>
           <Route path="/enterertiga" element={<Enterertiga />}></Route>
 
           <Route path="/enterbrezza" element={<Enterbrezza />}></Route>
