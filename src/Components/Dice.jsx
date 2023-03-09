@@ -2,6 +2,8 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
+import bgImg from './New Images/Spin-Wheel_BG.png'
+
 const Dice = () => {
   const navigate = useNavigate();
 
@@ -59,7 +61,7 @@ const Dice = () => {
   return (
     <div>
       <Navbar />
-
+      <img src={bgImg} alt="" className="background-image"/>
       <div className="round-box">Dice</div>
       <div className="container1">
         <div className="dice">
