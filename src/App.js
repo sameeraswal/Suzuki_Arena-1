@@ -50,6 +50,9 @@ import Finishmodal from "./Components/Modalframmer/finishmodal";
 import Enterertiga from "./Components/Entercorepages/Enterertiga";
 import Enterbrezza from "./Components/Entercorepages/Enterbrezza";
 import Popupexample from "./Components/flipcard popup/Popup";
+import Popup from "./Components/flipcard popup/Popup";
+
+
 
 export const APIURL = "http://localhost:4500";
 const App = () => {
@@ -236,6 +239,8 @@ const App = () => {
 
           <Route path="/enterbrezza" element={<Enterbrezza />}></Route>
           <Route path="/popupexample" element={<Popupexample />}></Route>
+          <Route path="/popup" element={<Popup />}></Route>
+
         </Routes>
       </div>
     </Router>
