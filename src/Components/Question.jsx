@@ -265,7 +265,7 @@ const Question = () => {
 
           {/* modal */}
           <div>
-            {i !== 5 ? (
+            {activeQuestion !== 4 ? (
               <button
                 onClick={() => {
                   onClickNext();

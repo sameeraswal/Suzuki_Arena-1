@@ -34,7 +34,7 @@ const Enterscore = () => {
     axios
       .post(`${APIURL}/api/v1/round/submitScoreForRound`, {
         mspin: JSON.parse(localStorage.getItem("mspin")),
-        roundName: "6",
+        roundName: "5",
         score: score,
       })
       .then((res) => {
