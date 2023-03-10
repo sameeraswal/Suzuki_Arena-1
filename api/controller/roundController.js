@@ -62,6 +62,63 @@ exports.getRoundLists = async (req, res) => {
         })
     }
 }
+exports.getWheelRoundLists = async (req, res) => {
+    let status = false;
+    try {
+        const mspin = req.body.mspin;
+        const rounds = await WheelRounds.find({}).select({ roundName: 1,route:1, roundOrder: 1, _id: 0 }).sort({ roundOrder: 1 });
+        console.log("1111111111 rounds before updataion=========", rounds)
+
+        if (rounds.length) {
+            rounds.forEach((round, index, rounds) => {
+                rounds[index]["isDisabled"] = false;
+            })
+            status = true;
+            let disabledRound = await Roundunlocked.findOne({ mspin: mspin }).select({ disabled: 1, unlocked: 1 });
+            console.log("disabledRound:",{ mspin: mspin },disabledRound)
+            if (disabledRound) {
+                let disabledRounds = disabledRound.disabled;
+                rounds.forEach((round, index, rounds) => {
+                    let checkRoundNameExists = disabledRounds.includes(round.roundName)
+                    if (checkRoundNameExists) {
+                        rounds[index]["isDisabled"] = true;
+                    } else {
+                        rounds[index]["isDisabled"] = false;
+                    }
+                    if (disabledRound.unlocked && disabledRound.unlocked === rounds[index]["roundName"]) {
+                        rounds[index]["isRoundLocked"] = false;
+                    } else {
+                        rounds[index]["isRoundLocked"] = true;
+                    }
+                })
+                console.log("rounds aftrer updataion=========", rounds)
+
+            } else {//When we don't have any data in Roundunlocked for the given mspin
+                rounds.forEach((round, index, rounds) => {
+                    if (rounds[index]["roundOrder"] == 1) {//Keep the first round unlocked
+                        rounds[index]["isRoundLocked"] = false;
+                    } else {//other round will be locked
+                        rounds[index]["isRoundLocked"] = true;
+                    }
+                })
+            }
+            res.status(201).json({
+                status: status,
+                data: rounds
+            })
+        } else {
+            res.status(404).json({
+                status: status,
+                message: "data not found"
+            })
+        }
+    } catch (error) {
+        res.status(404).json({
+            status: status,
+            error: error
+        })
+    }
+}
 const getRandomNFromArr = (arr,n)=>{
     n = Math.min(n,arr.length);
     let shuffled = arr.sort(function(){return .5 - Math.random()});

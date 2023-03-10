@@ -7,6 +7,7 @@ const roundController = require("../controller/roundController");
 
 
 
+
 //router.post("/api/v1/addround", roundController.addRound) 
 router.get("/api/v1/mspin/:mspin", employeeController.getEmployeeDetails);
 router.post("/api/v1/employee/register", employeeController.registerEmployee);
@@ -23,7 +24,7 @@ router.post("/api/v1/round/roundscore", employeeReportController.calculateScoreO
 
 router.post("/api/v1/finishround", roundController.finishRound); //this should be get or post?
 
-
+router.post("/api/v1/wheelRoundlists", roundController.getWheelRoundLists);
 
 
 router.get("/api/v1/round/roundscore/mspin/:mspin/roundname/:roundname", employeeReportController.getRoundScore); //this should be get or post?
