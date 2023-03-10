@@ -13,16 +13,9 @@ import Finishmodal3 from "./Modalframmer/finishmodal3";
 import Finishmodalenter from "./Modalframmer/finishmodalenter";
 import axios from "axios";
 import { APIURL } from "../App";
+import { Link } from "react-router-dom";
 
-const Enterscore = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const close = () => {
-    setModalOpen(false);
-  };
-  const open = () => {
-    setModalOpen(true);
-  };
+const Enterscore6 = () => {
   const [score, setScore] = useState("");
 
   const [show, setShow] = useState(false);
@@ -30,11 +23,11 @@ const Enterscore = () => {
     setScore(event.target.value);
   };
   const fetchData = () => {
-    console.log(score,JSON.parse(localStorage.getItem("mspin")))
+    console.log(score, JSON.parse(localStorage.getItem("mspin")));
     axios
       .post(`${APIURL}/api/v1/round/submitScoreForRound`, {
         mspin: JSON.parse(localStorage.getItem("mspin")),
-        roundName: "5",
+        roundName: "6",
         score: score,
       })
       .then((res) => {
@@ -59,43 +52,24 @@ const Enterscore = () => {
         {/* {data && ( */}
         {/* <Link to="/puzzle"> */}
         <button
-          className="third icon-conatiner btn-width scorepage-btn"
+          className="roll icon-conatiner btn-width scorepage-btn"
           onClick={() => {
             setShow(true);
           }}
         >
           Enter Score
         </button>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="third question-btn icon-conatiner enter-score-finish-btn"
-          onClick={() => {
-            modalOpen ? close() : open();
-            fetchData();
-          }}
-        >
-          Submit
-        </motion.button>
-
-        <AnimatePresence
-          // Disable any initial animations on children that
-          // are present when the component is first rendered
-          initial={false}
-          // Only render one component at a time.
-          // The exiting component will finish its exit
-          // animation before entering component is rendered
-          exitBeforeEnter={true}
-          // Fires when all exiting nodes have completed animating out
-          onExitComplete={() => null}
-        >
-          {modalOpen && (
-            <Finishmodalenter modalOpen={modalOpen} handleClose={close} />
-          )}
-        </AnimatePresence>
       </div>
+      <Link to="/">
+        <button
+          className="roll icon-conatiner finish-card finish-btn-enter-score"
+          onClick={fetchData()}
+        >
+          Finish Round
+        </button>
+      </Link>
     </div>
   );
 };
 
-export default Enterscore;
+export default Enterscore6;

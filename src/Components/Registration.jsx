@@ -64,7 +64,7 @@ function Registration() {
   const navigateLogin = () => {
     console.log(status, "Status is here");
     if (status) {
-      navigate("/login");
+      navigate("/");
     }
   };
   return (
