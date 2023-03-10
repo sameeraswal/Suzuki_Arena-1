@@ -57,7 +57,7 @@ const Swifvsi20 = () => {
             </>
           ))}
         </div>
-        <Link to="/login">
+        <Link to="/">
           <button
             className="roll icon-conatiner finish-card"
             onClick={getData()}
