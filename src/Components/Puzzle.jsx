@@ -36,7 +36,7 @@ const Puzzle = () => {
 
         <Link to="/puzzlechoice">
           {" "}
-          <button className="roll icon-conatiner scoring-btn">
+          <button className="roll icon-conatiner scoring-btn puzzle-scoring-btn">
             <p>Open Scoring Sheet</p>
             <FontAwesomeIcon icon="fa-solid fa-book-open" />
           </button>

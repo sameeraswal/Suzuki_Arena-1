@@ -14,7 +14,7 @@ export default function Random() {
     setTimeout(() => {
       setRandomNum(Math.floor(Math.random() * (18 - 1 + 1) + 1));
     }, 16000);
-    // setTimeout(() => window.open("/timersection", "_self"), 30000);
+    setTimeout(() => window.open("/timersection", "_self"), 30000);
   }, []);
 
   // const handleRandomNum = () => {};
