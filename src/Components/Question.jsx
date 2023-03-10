@@ -88,6 +88,7 @@ const Question = () => {
 
   const handleToggleClasslistRef = (ref) => {
     if (!ref.current) {
+     
       return;
     }
     if (!ref.current.classList.contains("question-option-color")) {
@@ -131,6 +132,7 @@ const Question = () => {
       })
       .catch((error) => console.log(error, "error is here"));
   }, [activeQuestion]);
+  
   const [mspin, setMspin] = useState("");
   const [regno, setRegno] = useState("");
 
@@ -171,6 +173,7 @@ const Question = () => {
     console.log(activeQuestion);
     handleToggleClasslistRef(ref);
   };
+
   return (
     <>
       <Navbar />
@@ -179,12 +182,13 @@ const Question = () => {
 
       <div className="question-container">
         <div className="ques-number">{`${activeQuestion + 1}/5`}</div>
-        {/* <Timer setOpenModal={setOpenModal}/> */}
+
         <div className="timer-div">
           <h2>{timer}</h2>
           <img src={imgsrc} alt="" className="clock-img" />
         </div>
         <div>
+          {/* {console.log(openModel)} */}
           {timer === "00:00" && openModel && (
             <>
               <div
@@ -206,7 +210,7 @@ const Question = () => {
                   </div>
                   <div className="title">
                     <h1 style={{ color: "blue" }}>
-                      Time's up! Click on continue to move to next question
+                      Time is up! Click on Continue to move to next question
                     </h1>
                   </div>
                   <div className="footer">
@@ -225,6 +229,8 @@ const Question = () => {
                   </div>
                 </div>
               </div>
+
+              {console.log(openModel, !openModel)}
             </>
           )}
         </div>
@@ -241,7 +247,7 @@ const Question = () => {
           </div>
           <div className="option-div">
             <ul>
-              {c.map((item) => (
+              {c.map((item, i) => (
                 <>
                   {
                     <li
@@ -254,6 +260,7 @@ const Question = () => {
                         setCID(item.cId);
                       }}
                       className="icon-conatiner"
+                      
                     >
                       {item.name}
                     </li>
@@ -265,17 +272,24 @@ const Question = () => {
 
           {/* modal */}
           <div>
-            {i !== 5 ? (
-              <button
-                onClick={() => {
-                  onClickNext();
-                  fetchAnswer();
-                  onClickReset();
-                }}
-                className="third question-btn icon-conatiner"
-              >
-                Submit
-              </button>
+            {activeQuestion !== 4 ? (
+              cid > 0 ? (
+                <button
+                  onClick={() => {
+                    onClickNext();
+                    fetchAnswer();
+                    onClickReset();
+                    setOpenModal(true);
+                  }}
+                  className="third question-btn icon-conatiner"
+                >
+                  Submit
+                </button>
+              ) : (
+                <button className="third question-btn icon-conatiner please-chose">
+                  Please Chose an Option
+                </button>
+              )
             ) : (
               <>
                 <motion.button
@@ -288,12 +302,7 @@ const Question = () => {
                 </motion.button>
 
                 <AnimatePresence
-                  // Disable any initial animations on children that
-                  // are present when the component is first rendered
                   initial={false}
-                  // Only render one component at a time.
-                  // The exiting component will finish its exit
-                  // animation before entering component is rendered
                   exitBeforeEnter={true}
                   // Fires when all exiting nodes have completed animating out
                   onExitComplete={() => null}
@@ -306,15 +315,6 @@ const Question = () => {
                     />
                   )}
                 </AnimatePresence>
-
-                {/* <Link to="/finish">
-                  <button
-                    
-                    className="third question-btn icon-conatiner"
-                  >
-                    
-                  </button>
-                </Link> */}
               </>
             )}
           </div>

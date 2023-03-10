@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./randomnum.css";
 import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
@@ -10,17 +10,21 @@ export default function Random() {
   // const [minVal, setMinVal] = useState(0);
   // const [maxVal, setMaxVal] = useState(10);
   const [randomNum, setRandomNum] = useState("");
-
-  const handleRandomNum = () => {
+  useEffect(() => {
     setTimeout(() => {
       setRandomNum(Math.floor(Math.random() * (18 - 1 + 1) + 1));
     }, 16000);
-  };
-  const timeOutFun = (e) => {
-    setTimeout(() => window.open("/timersection", "_self"), 22000);
-    // console.log(title);
-  };
+    setTimeout(() => window.open("/timersection", "_self"), 30000);
+  }, []);
 
+  // const handleRandomNum = () => {};
+  // const timeOutFun = (e) => {
+    
+  //   // console.log(title);
+  // };
+  useEffect(() => {
+      localStorage.setItem('random', JSON.stringify(randomNum))
+  },[randomNum])
 
   const [play, setPlay] = useState(false);
 
@@ -39,14 +43,15 @@ export default function Random() {
           height={550}
           width={1000}
           allow="autoplay;"
-          style={{ marginLeft: "-30px", marginBottom: "-350px" }}
+          style={{ marginLeft: "-30px", marginBottom: "-350px", paddingLeft:"-300px" }}
+          className="randomno-video"
         ></iframe>
         <div className="containerx">
           {/* <div className="randomNum"> */}
           <h1 className="txt-bold random_no_alignment">{randomNum}</h1>
           {/* </div> */}
 
-          <button
+          {/* <button
             onClick={() => {
               handleRandomNum();
               timeOutFun();
@@ -55,10 +60,9 @@ export default function Random() {
             className="icon-conatiner random-no"
           >
             Spin
-          </button>
+          </button> */}
         </div>
       </div>
     </>
   );
 }
-

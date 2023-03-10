@@ -1,0 +1,42 @@
+.wordslct1 {
+  /* background-color: blue; */
+  height: 500px;
+  width: 80%;
+  /* position: absolute; */
+  display: flex;
+
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 50px;
+}
+
+.wordyes1 {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  /* text-align: center; */
+  color: var(--arena-color);
+  font-weight: bold;
+  margin-left: 60px;
+}
+
+.wordyes1 span {
+  width: 60%;
+  font-size: 20px;
+  margin-top: 4px;
+  color: white;
+}
+
+.ques-bg {
+  position: absolute;
+  z-index: -1;
+  width: 96%;
+  height: 145%;
+}
+
+.full-height{
+  background: url('../NewImages/Spin-Wheel_BG.png');
+}
+.sbt-btn{
+  margin-left: 70%;
+}

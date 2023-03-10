@@ -62,8 +62,8 @@
   margin-top: -20%;
 }
 .random_no_alignment {
-  margin-left: 18%;
-  margin-top: -25%;
+  margin-left: 15.2%;
+  margin-top: -32%;
   color: white;
   font-size: 29px;
   font-weight: bold;
@@ -78,4 +78,9 @@
   cursor: pointer;
   margin-left: 119%;
   margin-top: -108%;
+}
+.randomno-video{
+  width: 99vw;
+  height: 89%;
+  margin-top: -72px;
 }

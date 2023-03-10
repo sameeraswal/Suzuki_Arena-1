@@ -74,7 +74,7 @@ const ModalText = () => (
 );
 
 const ModalButton = ({ onClick, label }) => (
-  <Link to="/enterscore">
+  <Link to="/enterscore6">
     {" "}
     <motion.button
       className="modal-button cls-btn"

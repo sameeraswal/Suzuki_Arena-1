@@ -1,6 +1,7 @@
 import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import bgImg1 from '../NewImages/Spin-Wheel_BG.png'
 // import { useBetween } from 'use-between';
 export const fal = false;
 const Afterflipcasestudy = ({ title }) => {
@@ -59,6 +60,7 @@ const Afterflipcasestudy = ({ title }) => {
   return (
     <>
       <Navbar></Navbar>
+      <img src={bgImg1} alt="" className="background-image"/>
       <div className="round-box">Case Study</div>
       <div className="outer-div">
         <div className="actual-card">

@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 import Backdrop from "./finishbackdrop";
 import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
-import modalimg from "../Likethumb.webp";
+import modalimg from "../../Assets/Completion.png";
 import FinishBackdrop from "./finishbackdrop";
 import FinishBackdrop1b from "./finishbackdrop1b";
-import FinishBackdropenter from "./finishbackdropenter";
 import axios from "axios";
 import { APIURL } from "../../App";
 
@@ -37,26 +36,12 @@ const Finishmodalenter = ({ handleClose, text, type }) => {
     stateLogger("Modal", true);
     return () => stateLogger("Modal", false);
   }, []);
-  const getData = () => {
-    axios
-      .post(`${APIURL}/api/v1/finishround`, {
-        mspin: JSON.parse(localStorage.getItem("mspin")),
-        roundName: "5",
-      })
-      .then((res) => {
-        console.log(JSON.parse(localStorage.getItem("mspin")), "MSPIN");
-        console.log(res, "Response of roundlist");
-        // console.log(roundName, "Response of RoundName");
-      })
-      .catch((error) => console.log(error.response.data.message));
-    // return false;
-  };
 
   return (
-    <FinishBackdropenter onClick={handleClose}>
+    <FinishBackdrop1b onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient"
+        className=""
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -64,22 +49,20 @@ const Finishmodalenter = ({ handleClose, text, type }) => {
       >
         <ModalText text={text} />
 
-        <ModalButton onClick={handleClose} label="Close" getData={getData} />
+        <ModalButton onClick={handleClose} label="Close"/>
       </motion.div>
-    </FinishBackdropenter>
+    </FinishBackdrop1b>
   );
 };
 
 const ModalText = () => (
-  <div className="modal-text-enter hand-with-text-enter">
-    <img src={modalimg} alt="" className="enter-hand" />
-    <h5>Thank you for completing the round</h5>
-    <br />
+  <div className="modal-text hand-with-text">
+    <img src={modalimg} alt="" height={480} width={700} />
   </div>
 );
 
 const ModalButton = ({ onClick, label, getData }) => (
-  <Link to="/login">
+  <Link to="/">
     <motion.button
       className="modal-button cls-btn finish-modal-btn"
       type="button"
@@ -87,7 +70,6 @@ const ModalButton = ({ onClick, label, getData }) => (
       whileTap={{ scale: 0.95 }}
       onClick={() => {
         onClick();
-        getData();
       }}
     >
       Back to Home

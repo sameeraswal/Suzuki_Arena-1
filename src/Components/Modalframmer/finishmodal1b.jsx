@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Backdrop from "./finishbackdrop";
 import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
-import modalimg from "../Likethumb.webp";
+import modalimg from "../../Assets/Completion.png";
 import FinishBackdrop from "./finishbackdrop";
 import FinishBackdrop1b from "./finishbackdrop1b";
 import axios from "axios";
@@ -51,11 +51,13 @@ const Finishmodal1b = ({ handleClose, text, roundName }) => {
       .catch((error) => console.log(error.response.data.message));
     // return false;
   };
+
+
   return (
     <FinishBackdrop1b onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient"
+        className=""
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -70,15 +72,14 @@ const Finishmodal1b = ({ handleClose, text, roundName }) => {
 };
 
 const ModalText = () => (
-  <div className="modal-text hand-with-text">
-    <img src={modalimg} alt="" height={180} width={180} className="hand" />
-    <h5>Thank you for completing the round</h5>
+  <div className="">
+    <img src={modalimg} alt=""  height={480} width={700} />
     <br />
   </div>
 );
 
 const ModalButton = ({ onClick, label,getData }) => (
-  <Link to="/login">
+  <Link to="/">
     <motion.button
       className="modal-button cls-btn finish-modal-btn"
       type="button"
