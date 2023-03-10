@@ -16,12 +16,13 @@ router.get("/api/v1/quiz/roundname/:roundName", roundController.getRoundDetails)
 router.post("/api/v1/round/submitanswer", employeeReportController.submitAnswerOfQuestion);
 router.post("/api/v1/round/submitScoreForRound", employeeReportController.submitScoreForRound);
 //submit round 2 Card Answer
+//router.post("/api/v1/round/submitcardanswer", employeeReportController.submitAnswersOfCardQuestion);
 router.post("/api/v1/round/submitcardanswer", employeeReportController.submitAnswerOfCardQuestion);
 
 router.post("/api/v1/quiz/employee/currentscore", employeeReportController.calculateCurrentScoreOfEmpController);
 router.post("/api/v1/round/roundscore", employeeReportController.calculateScoreOfOneRoundController); //this should be get or post?
 
-router.post("/api/v1/finishround", roundController.finishRound); //this should be get or post?
+//router.post("/api/v1/finishround", roundController.finishRound); //this should be get or post?
 
 
 
@@ -31,10 +32,6 @@ router.get("/api/v1/quiz/finalscore/mspin/:mspin", employeeReportController.getF
 
 router.get("/api/v1/quiz/finalscore/leaderboard", employeeReportController.getScoreOfEveryone);
 router.post("/api/v1/finishround", roundController.finishRound);
-
-//router.get("/api/v1/quiz/mspin/:mspin/finalscore", employeeReportController.getFinalScore); //this should be get or post?
-//router.post("/api/v1/round/saveEachAnswer", employeeReportController.saveEachAnswer)
-//router.post("/api/v2/round/submitOneAnswer", employeeReportController.submitOneAnswer)
 
 
 module.exports = router;

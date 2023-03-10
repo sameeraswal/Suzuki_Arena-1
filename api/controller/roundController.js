@@ -2,6 +2,7 @@ require("../db/connection");
 const Round = require("../model/roundsSchema");
 //const employeeUnlockedRound = require("../model/employeeUnlockedRound"); Roundunlocked
 const Roundunlocked = require("../model/employeeUnlockedRound");
+const wheelRound = require("../model/wheelRoundsSchema");
 
 
 exports.getRoundLists = async (req, res) => {
