@@ -205,3 +205,10 @@
   background-size: contain;
   background-position: -2px;
 }
+
+.back-case-study{
+  background: url(../Flip-a-Card_Back_Card_BG.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -2px;
+}
