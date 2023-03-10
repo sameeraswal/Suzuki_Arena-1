@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./randomnum.css";
 import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
@@ -18,6 +18,10 @@ export default function Random() {
     setTimeout(() => window.open("/timersection", "_self"), 22000);
     // console.log(title);
   };
+
+  useEffect(() => {
+      localStorage.setItem('random', JSON.stringify(randomNum))
+  },[randomNum])
 
   const [play, setPlay] = useState(false);
 

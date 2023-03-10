@@ -241,7 +241,7 @@ const Question = () => {
           </div>
           <div className="option-div">
             <ul>
-              {c.map((item) => (
+              {c.map((item,i) => (
                 <>
                   {
                     <li

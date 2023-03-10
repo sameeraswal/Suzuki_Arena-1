@@ -13,8 +13,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import "../modalcss.css";
 import Finishmodal1b from "../Modalframmer/finishmodal1b";
 
+function randomnum(){
+  const random = localStorage.getItem('random')
+  return random;
+}
+
 const Puzzlechoice = () => {
-  
+  const [num, setNum] = useState(randomnum)
   
   let response = {
     status: true,
@@ -23,31 +28,37 @@ const Puzzlechoice = () => {
         name: "Word-1",
         btn1: "YES",
         btn2: "NO",
+        index: 0
       },
       {
         name: "Word-2",
         btn1: "YES",
         btn2: "NO",
+        index: 1
       },
       {
         name: "Word-3",
         btn1: "YES",
         btn2: "NO",
+        index: 2
       },
       {
         name: "Word-4",
         btn1: "YES",
         btn2: "NO",
+        index: 3
       },
       {
         name: "Word-5",
         btn1: "YES",
         btn2: "NO",
+        index: 4
       },
       {
         name: "Word-6",
         btn1: "YES",
         btn2: "NO",
+        index: 5
       },
     ],
   };
@@ -70,7 +81,7 @@ const Puzzlechoice = () => {
       <Navbar />
      
       <div className="dashboard-container full-height">
-        <div className="round-box-dashboard">Puzzle - 17</div>
+        <div className="round-box-dashboard">Puzzle - {num}</div>
         <div className="puzzle-box">
           <div>
             <img
@@ -90,7 +101,7 @@ const Puzzlechoice = () => {
                 <div className="wordyes" >
                   <span>{item.name}</span>
                   
-                  <Buttonp key={i} name1={item.btn1} name2={item.btn2}/>
+                  <Buttonp key={i} index={item.index} name1={item.btn1} name2={item.btn2}/>
 
                  
                 </div>
