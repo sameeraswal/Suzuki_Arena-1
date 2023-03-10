@@ -13,6 +13,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "../modalcss.css";
 import Finishmodal1b from "../Modalframmer/finishmodal1b";
 
+let x = [0,0,0,0,0,0];
 function randomnum(){
   const random = localStorage.getItem('random')
   return random;
@@ -75,6 +76,20 @@ const Puzzlechoice = () => {
 
   let choices = response.data;
 
+  const handleClick = (index) => {
+    console.log('from click', index)
+    x[index] = 1
+    console.log('array', x);
+  }
+
+  const handleClick1 = (index) => {
+    console.log('from click', index)
+    x[index] = 0
+    console.log('array', x);
+  }
+
+
+
 
   return (
     <>
@@ -102,7 +117,7 @@ const Puzzlechoice = () => {
                 <div className="wordyes" >
                   <span>{item.name}</span>
                   
-                  <Buttonp key={i} index={item.index} name1={item.btn1} name2={item.btn2}/>
+                  <Buttonp key={i} index={item.index} name1={item.btn1} name2={item.btn2} handleClick={handleClick} handleClick1={handleClick1}/>
 
                  
                 </div>
