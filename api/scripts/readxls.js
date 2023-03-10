@@ -22,6 +22,8 @@ for(let i=0;i<xlData.length;i++){
     }
     let question={};
     question.questionId = xlData[i]["sNo"];
+    question.question = xlData[i]["question"];
+    question.fileType = xlData[i]["type"];
     question.questionUrl = xlData[i]["filename"];
     question.type = "MCQs";
     question.choices=[];
