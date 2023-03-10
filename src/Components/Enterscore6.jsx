@@ -18,6 +18,15 @@ import { Link } from "react-router-dom";
 const Enterscore6 = () => {
   const [score, setScore] = useState("");
 
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => {
+    setModalOpen(false);
+  };
+  const open = () => {
+    setModalOpen(true);
+  };
+
   const [show, setShow] = useState(false);
   const handleChangescore = (event) => {
     setScore(event.target.value);
@@ -73,17 +82,29 @@ const Enterscore6 = () => {
           Enter Score
         </button>
       </div>
-      <Link to="/">
-        <button
-          className="roll icon-conatiner finish-card finish-btn-enter-score"
-          onClick={() => {
-            fetchData();
-            getData();
-          }}
-        >
-          Finish Round
-        </button>
-      </Link>
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="roll icon-conatiner finish-card finish-btn-enter-score"
+        onClick={() => {
+          modalOpen ? close() : open();
+          fetchData();
+          getData();
+        }}
+      >
+        Finish Round
+      </motion.button>
+
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        // Fires when all exiting nodes have completed animating out
+        onExitComplete={() => null}
+      >
+        {modalOpen && (
+          <Finishmodalenter modalOpen={modalOpen} handleClose={close} />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

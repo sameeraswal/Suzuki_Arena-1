@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Backdrop from "./finishbackdrop";
 import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
-import modalimg from "../Likethumb.webp";
+import modalimg from "../../Assets/Completion.png";
 import FinishBackdrop from "./finishbackdrop";
 import axios from "axios";
 import { APIURL } from "../../App";
@@ -45,7 +45,6 @@ const Finishmodal = ({ handleClose, text, roundName }) => {
         console.log(JSON.parse(localStorage.getItem("mspin")), "MSPIN");
         console.log(res, "Response of roundlist");
         console.log(roundName, "Response of RoundName");
-
       })
       .catch((error) => console.log(error.response.data.message));
     // return false;
@@ -54,7 +53,7 @@ const Finishmodal = ({ handleClose, text, roundName }) => {
     <FinishBackdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient"
+        className=""
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -69,10 +68,8 @@ const Finishmodal = ({ handleClose, text, roundName }) => {
 };
 
 const ModalText = () => (
-  <div className="modal-text hand-with-text">
-    <img src={modalimg} alt="" height={180} width={180} className="hand" />
-    <h5>Thank you for completing the round</h5>
-    <br />
+  <div className="">
+    <img src={modalimg} alt="" height={480} width={700} />
   </div>
 );
 

@@ -22,6 +22,16 @@ const Enterscore5 = () => {
   const handleChangescore = (event) => {
     setScore(event.target.value);
   };
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => {
+    setModalOpen(false);
+  };
+  const open = () => {
+    setModalOpen(true);
+  };
+
   const fetchData = () => {
     console.log(score, JSON.parse(localStorage.getItem("mspin")));
     axios
@@ -73,8 +83,7 @@ const Enterscore5 = () => {
           Enter Score
         </button>
       </div>
-      <Link to="/">
-        <button
+      {/* <button
           className="roll icon-conatiner finish-card finish-btn-enter-score"
           onClick={() => {
             fetchData();
@@ -82,8 +91,31 @@ const Enterscore5 = () => {
           }}
         >
           Finish Round
-        </button>
-      </Link>
+        </button> */}
+
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="roll icon-conatiner finish-card finish-btn-enter-score"
+        onClick={() => {
+          modalOpen ? close() : open();
+          fetchData();
+          getData();
+        }}
+      >
+        Finish Round
+      </motion.button>
+
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        // Fires when all exiting nodes have completed animating out
+        onExitComplete={() => null}
+      >
+        {modalOpen && (
+          <Finishmodalenter modalOpen={modalOpen} handleClose={close} />
+        )}
+      </AnimatePresence>
     </div>
   );
 };
