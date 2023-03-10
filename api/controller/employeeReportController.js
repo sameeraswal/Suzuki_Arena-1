@@ -7,8 +7,8 @@ const EmployeeAnswer = require("../model/employeeAnswers");
 const EmpRoundScore = require("../model/empRoundScoreSchema");
 
 const EmpFinalScore = require("../model/empFinalScoreSchema");
-const Employee = require("../model/employeeSchema")
-const WheelRounds = require("../model/wheelRoundsSchema")
+const Employee = require("../model/employeeSchema");
+const WheelRounds = require("../model/wheelRoundsSchema");
 
 // submit answer of each round
 exports.submitAnswerOfQuestion = async (req, res) => {

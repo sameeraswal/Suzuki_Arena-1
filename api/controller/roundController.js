@@ -1,10 +1,10 @@
 require("../db/connection");
 const Round = require("../model/roundsSchema");
-const WheelRounds = require("../model/wheelRounds");
+const WheelRounds = require("../model/wheelRoundsSchema");
 console.log("WheelRounds",WheelRounds)
 //const employeeUnlockedRound = require("../model/employeeUnlockedRound"); Roundunlocked
 const Roundunlocked = require("../model/employeeUnlockedRound");
-const wheelRound = require("../model/wheelRoundsSchema");
+
 const WheelRoundLocked = require("../model/employeeWheelUnlockedRound");
 
 
