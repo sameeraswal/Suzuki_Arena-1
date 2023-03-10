@@ -367,6 +367,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                             employeeAnswer["score"] = score;
 
                         } else if (!!cId && questions[questionId - 1] !== questionId && correctQuestionsAnswers[questionId] !== cId) {
+                            console.log("cId,questionId,roundOrder",cId,questionId,roundOrder)
                             return res.status(404).json({
                                 message: "dddata not found"
                             })
@@ -420,19 +421,21 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                         console.log("roundReport", roundReport)
                         const ansSubmitted = await roundReport.save();
                         if (ansSubmitted) {
-                            //let lockThisCard = { questionId: questionId, isLocked: true };
-                            // const roundLockInfo = await wheelroundlocks.findOne({ mspin: mspin, roundOrder: roundOrder });
-                            // if (roundLockInfo) {
-                            //     roundLockInfo.disabledQuestions[questionId] = 1;
-                            //     const resultoflock = await wheelroundlocks.updateOne({ mspin: mspin, roundOrder: roundOrder }, { $set: { disabledQuestions: disabledQuestions } });
-                            //      console.log("resultoflock=====",resultoflock)
-                            // } else {
-                            //     let roundLockObj = new wheelroundlocks({ mspin: mspin, roundOrder: roundOrder, disabledQuestion: { questionId: 1 } })
-                            //     await roundLockObj.save();
-                            // }
-                            //const resultoflock = await wheelroundlocks.updateOne({ mspin: mspin, roundName: roundName, name: name }, { $setOnInsert: { disabledQuestions: lockThisCard } }, { upsert: true });
-
-                            
+                            //START mark this card as used
+                            const roundLockInfo = await wheelroundlocks.findOne({ mspin: mspin, roundOrder: roundOrder });
+                            if (roundLockInfo) {
+                                roundLockInfo.disabledQuestions[questionId] = 1;
+                                const resultoflock = await wheelroundlocks.updateOne({ mspin: mspin, roundOrder: roundOrder }, { $set: { disabledQuestions: roundLockInfo.disabledQuestions } });
+                            } else {
+                                let roundLockInfo = {};
+                                roundLockInfo['mspin'] = mspin;
+                                roundLockInfo['roundOrder'] = roundOrder;
+                                roundLockInfo['disabledQuestions'] = {};
+                                roundLockInfo['disabledQuestions'][questionId]=1;
+                                let roundLockObj = new wheelroundlocks(roundLockInfo)
+                                await roundLockObj.save();
+                            }
+                            //END mark this card as used
                             
                             res.status(201).json({
                                 status: "success",
