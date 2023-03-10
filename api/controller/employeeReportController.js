@@ -324,7 +324,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                 });
             } else {
                 const roundName = roundNameOfWheel.roundName;
-                console.log("roundNameOfWheellllllllllll",roundNameOfWheel)
+                console.log("roundNameOfWheellllllllllll", roundNameOfWheel)
                 const round = await WheelRounds.findOne({ roundName: roundName }, { correctAnswers: 1, _id: 0 });
 
                 if (round) {
@@ -420,13 +420,20 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                         console.log("roundReport", roundReport)
                         const ansSubmitted = await roundReport.save();
                         if (ansSubmitted) {
-                            let lockThisCard = { questionId: questionId, isLocked: true };
-                            const resultoflock = await wheelroundlocks.updateOne({ mspin: mspin, roundName: roundName, name: name }, { $setOnInsert: { disabledQuestions: lockThisCard } }, { upsert: true });
-                            console.log("resultoflockkkkkkkkkkk", resultoflock)
-                            if (resultoflock) {
-                                console.log(resultoflock)
-
+                            //let lockThisCard = { questionId: questionId, isLocked: true };
+                            const roundLockInfo = await wheelroundlocks.findOne({ mspin: mspin, roundOrder: roundOrder });
+                            if (roundLockInfo) {
+                                roundLockInfo.disabledQuestions[questionId] = 1;
+                                const resultoflock = await wheelroundlocks.updateOne({ mspin: mspin, roundOrder: roundOrder }, { $set: { disabledQuestions: disabledQuestions } });
+                                 console.log("resultoflock=====",resultoflock)
+                            } else {
+                                let roundLockObj = new wheelroundlocks({ mspin: mspin, roundOrder: roundOrder, disabledQuestion: { questionId: 1 } })
+                                await roundLockObj.save();
                             }
+                            //const resultoflock = await wheelroundlocks.updateOne({ mspin: mspin, roundName: roundName, name: name }, { $setOnInsert: { disabledQuestions: lockThisCard } }, { upsert: true });
+
+                            
+                            
                             res.status(201).json({
                                 status: "success",
                                 message: "answer is submitted",
