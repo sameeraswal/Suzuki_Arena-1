@@ -1,0 +1,237 @@
+sl.no.,question,option 1,option 2,option 3,option 4,correct option,question type (img/video),asset name
+1,"Identify the variant from which the feature shown above is available.
+(Inset image of ""Tilt steering : Dzire"")",LXi,VXi,ZXi,ZXi,LXi,image,81.mp4
+2,"Which of these is an ""Active safety"" feature?
+(Inset 4 images of the options)",Seat Belt,ABS,HEARTECT,Airbag,ABS,image,82.mp4
+3,"What is the maximum power output of Brezza in Petrol? (kW @rpm)
+(Inset image of ""Brezza"")",83 @ 6000,76.8 @ 6000,81 @ 6000 ,75.8 @ 6000,75.8 @ 6000,image,83.mp4
+4,"The technology shown above is in which of following vehicles. 
+(Inset image of ""Smart Hybrid"")",Alto K10,Brezza,Wagon R,Swift,Brezza,image,84.mp4
+5,What is the turning radius of the S-Presso?,4.5 m,4.6 m,4.9 m ,4.4 m,4.5 m,image,85.mp4
+6,"Identify the variant from which the feature shown above is available.
+(Inset image of ""Remote Keyless Entry: Celerio"")",LXi,ZXi,VXi,ZXi+,ZXi,image,86.mp4
+7,"Which of these is an ""Active safety"" feature?
+(Inset 4 images of the options)",Crumple Zones,TECT,Head Restraint,Hill Hold Assist,Hill Hold Assist,image,87.mp4
+8,"What is the maximum torque output of Ertiga in Petrol? (Nm@RPM)
+(Inset image of ""Ertiga"")",134.8 @ 4400,135.8 @ 4400,136.8 @ 4400,137.8 @ 4400,136.8 @ 4400,image,88.mp4
+9,"Name this feature of Wagon R.
+(Inset image of ""Floating Roof Design"")",Sporty Roof ,Hanging Roof,Aerodynamic Roof,Floating Roof  Design,Floating Roof  Design,image,89.mp4
+10,"What is the size of the wheel shown in the image in inches?
+(Inset image of Swift Zxi+ wheel)",16,13,15,14,15,image,90.mp4
+11,"Identify the variant from which the feature shown above is available.
+(Inset image of ""Auto AC: Ertiga"")",LXi,VXi,ZXi+,ZXi,ZXi,image,91.mp4
+12,"Which of these is a ""Passive Safety"" feature?
+(Inset 4 images of the options)",HHA,Crumple Zones,ESC,ABS,Crumple Zones,image,92.mp4
+13,"What is the maximum power output of Alto in Petrol? (kW @rpm)
+(Inset image of ""Alto"")",65 @ 3500 ,70 @ 3500 ,89 @ 3500 ,69 @ 3500 ,69 @ 3500 ,image,93.mp4
+14,"This feature shown above is in which of following vehicles. 
+(Inset image of ""Rear Defogger"")",Alto ,S-Presso,Wagon R,Eeco,Wagon R,image,94.mp4
+15,Dual LED projector healdlamps come from which variant of Brezza?,VXi,ZXi,ZXi+,LXi,ZXi,image,95.mp4
+16,"Identify the variant from which the feature shown above is available.
+(Inset image of ""SmartPlay Studio: Alto"")",LXi,VXi,VXi+,STD,VXi+,image,96.mp4
+17,"Which of these is a ""Passive Safety"" feature?
+(Inset 4 images of the options)",ISOFIX,ABS,Reverse Parking Camera,Brake Assist,ISOFIX,image,97.mp4
+18,Bi-Halogen Projector Headlamps are available in which variants of Brezza?,VXi & ZXi,ZXi & ZXI+,LXi & VXi,Only ZXI+,LXi & VXi,image,98.mp4
+19,"This feature shown above is in which of following vehicles. 
+(Inset image of ""ISOFIX"")",Wagon R,Celerio,S-Presso,Swift,Swift,image,99.mp4
+20,"What is the length of S-Presso? (mm)
+(Inset image of ""S-Presso"")",3565,3560,3675,3670,3565,image,100.mp4
+21,"Identify the variant of Brezza?
+(Inset image of Brezza Zxi - Painted Alloy Wheel)",LXi,ZXi,Zxi+,VXi,ZXi,image,101.mp4
+22,"Which of these is a ""Convenience"" feature?
+(Inset 4 images of the options)",Wireless Charging Dock,Projector Headlamps,Side Door Cladding,Glovebox,Wireless Charging Dock,image,102.mp4
+23,"Identify the variant of Brezza onwards which you get this feature.
+(Inset image of LED Fog Lamps)",VXi & ZXi,ZXi & ZXI+,LXi & VXi, ZXI+, ZXI+,image,103.mp4
+24,"What is the turning radius of WagonR? (m)
+(Inset image of ""WagonR"")",4.8,4.5,4.7,4.6,4.7,image,104.mp4
+25,"What is the mileage of Eeco in Petrol? (kmpl)
+(Inset image of ""Eeco"")",18.71,19.71,19.9,20.4,19.71,image,105.mp4
+26,"Identify the variant from which the feature shown above is available.
+(Inset image of ""Interior Ambient Lights: Brezza"")",LXi,VXi,ZXi,ZXi+,ZXi+,image,106.mp4
+27,"Which of these is a ""Comfort"" feature?
+(Inset 4 images of the options)",Rear AC Vents,Roof End Spoiler,Wheel Arch Cladding,Cabin Lamp,Rear AC Vents,image,107.mp4
+28,"What is the engine capacity of Wagon R? (cc)
+(Inset image of ""Wagon R"")",998,1098,898,995,998,image,108.mp4
+29,"This feature shown above is in which of following vehicles. 
+(Inset image of ""Gear Shift and position Indicator"")",Alto,Celerio,Eeco,Alto K10,Celerio,image,109.mp4
+30,"Whats is the size of the wheel shown in the image.
+(Inset image of Brezza LXI wheel)",15,17,16,14,16,image,110.mp4
+31,"Identify the variant from which the feature shown above is available.
+(Inset image of ""Wheel Cover: Dzire"")",LXi,VXi,ZXi,ZXi+,VXi,image,111.mp4
+32,"Which of these is a ""Convenience"" feature?
+(Inset 4 images of the options)",Speakers,Over the Air Update,Seatbelt Reminders,Rear Parcel Tray,Rear Parcel Tray,image,112.mp4
+33,"What is the engine capacity of Eeco? (cc)
+(Inset image of ""Eeco"")",1100,1197,1190,1180,1197,image,113.mp4
+34,"This feature shown above is in which of following vehicles. 
+(Inset image of ""360 View Camera"")",S-Presso,Dzire,Brezza,Ertiga,Brezza,image,114.mp4
+35,"What is the turning radius of Ertiga? (m)
+(Inset image of ""Ertiga"")",5.1,4.9,5.3,5.2,5.2,image,115.mp4
+36,"Identify the variant from which the feature shown above is available.
+(Inset image of ""SmartPlay Dock: S-Presso"")",LXi,VXi,STD,VXi+,VXi,image,116.mp4
+37,"Which of these is a ""Convenience"" feature?
+(Inset 4 images of the options)",Day and night adjustable IRVM,Digital Clock,Rear Wiper & Washer,Tail Lamps,Day and night adjustable IRVM,image,117.mp4
+38,"What is the bootspace of Swift? (L)
+(Inset image of ""Swift"")",260,270,268,265,268,image,118.mp4
+39,"This feature shown above is in which of following vehicles. 
+(Inset image of ""Multi Tripmeter"")",Alto,Eeco,Alto K10,Celerio,Eeco,image,119.mp4
+40,"What is the Mileage of Ertiga in Petrol? (kmpl)
+(Inset image of ""Ertiga"")",22.56 MT,21.3 MT,20.51 MT,20.3 MT,20.51 MT,image,120.mp4
+41,"Identify the variant from which the feature shown above is available.
+(Inset image of ""60:40 Split Rear Seat: Swift"")",LXi,VXi,ZXi+,ZXi,VXi,image,81.mp4
+42,"Which of these is a ""Comfort"" feature?
+(Inset 4 images of the options)",Electric Sunroof,Steering Lock,Airbag,Immobilizer,Electric Sunroof,image,82.mp4
+43,"What is the maximum power output of Celerio in CNG? (kW@rpm)
+(Inset image of ""Celerio"")",43.2 @ 5300,40.2 @ 5300,41.7 @ 5500,41.7 @ 5300,41.7 @ 5300,image,83.mp4
+44,"This feature shown above is in which of following vehicles. 
+(Inset image of ""Feather Touch Audio System"")",Eeco,Celerio,Dzire,Wagon R,Dzire,image,84.mp4
+45,"What is the Mileage of S-Presso in CNG? (km/kg)
+(Inset image of ""S-Presso)",24.12,32.73,25.3,24.76,32.73,image,85.mp4
+46,"What is the engine capacity of Dzire? (cc)
+(Inset image of ""Dzire"")",998,996,1190,1197,1197,image,86.mp4
+47,"Which of these is a ""Comfort"" feature?
+(Inset 4 images of the options)",Air Filter,Roof lining,Headrest,Side Impact Beams,Headrest,image,87.mp4
+48,"What is the Mileage of Alto K10 in Petrol? (kmpl)
+(Inset image of ""Alto K10"")",24.39 MT,20.39 MT,26.30 MT,25.39 MT,24.39 MT,image,88.mp4
+49,"This technology shown above is in which of following vehicles. 
+(Inset image of ""K15C"")",Dzire,Eeco,S-Presso,Brezza,Brezza,image,89.mp4
+50,"What is the name of the grille shown in the image above?
+(Inset image of Dzire Grille)",Premium single aperture Grille,High Gloss Grille,Sporty Accent Grille,Aerodynamic Grille,Premium single aperture Grille,image,90.mp4
+51,"Identify the variant from which the feature shown above is available.
+(Inset image of ""Rear Parking Camera: Ertiga"")",LXi,VXi,ZXi+,ZXi,ZXi+,image,91.mp4
+52,"Which of these is a ""Comfort"" feature?
+(Inset 4 images of the options)",Airbag,Reverse Parking Sensors,Gear Shift Indicator,Power Steering,Power Steering,image,92.mp4
+53,"What is the engine capacity of Dzire? (cc)
+(Inset image of ""Dzire"")",998,1197,1198,997,1197,image,93.mp4
+54,"This technology shown above is in which of the following vehicles. 
+(Inset image of ""Auto Gear Shift"")",Eeco,Brezza,Alto K10,Ertiga,Alto K10,image,94.mp4
+55,"What is the turning radius of Eeco? (m)
+(Inset image of ""Eeco"")",4.1,4.5,4.4,4.2,4.5,image,95.mp4
+56,"Identify the variant from which the feature shown above is available.
+(Inset image of ""LED Projector Headlamps and Daylight Running Lamps: Dzire"")",LXi,VXi,ZXi,ZXi+,ZXi+,image,96.mp4
+57,"Which of these is a ""Comfort"" feature?
+(Inset 4 images of the options)",Auto AC,Alarm,Paddle Shifters,Cruise Control,Auto AC,image,97.mp4
+58,"What is the Mileage of Swift in CNG? (km/kg)
+(Inset image of ""Swift"")",30.1,29.2,30.9,22.5,30.9,image,98.mp4
+59,"What is the Mileage of Eeco in CNG? (km/kg)
+(Inset image of ""Eeco"")",26.78,19.7,25.3,22.4,26.78,image,99.mp4
+60,"What is the Mileage of S-Presso in AGS Petrol? (kmpl)
+(Inset image of ""S-Presso"")",24.12,24.76,25.3,24.2,25.3,image,100.mp4
+61,"Identify the variant from which the feature shown above is available.
+(Inset image of ""Feather Touch Audio System: Swift"")",LXi,VXi,ZXi,ZXi+,VXi,image,101.mp4
+62,"Which of these is a ""Convenience"" feature?
+(Inset 4 images of the options)",Power & Tilt Steering,Auto Gear Shift,Speed Alert,Rear Wiper,Power & Tilt Steering,image,102.mp4
+63,"What is the Mileage of Celerio in CNG? (km/kg)
+(Inset image of ""Celerio"")",30.6,25.4,32.2,35.6,35.6,image,103.mp4
+64,"What is the number of valves in the engine shown above?
+(Inset image of ""4 Cylinder"")",4,16,8,3,16,image,104.mp4
+65,"What is the Mileage of WagonR in CNG? (km/kg)
+(Inset image of ""WagonR"")",30.05,32.05,24.43,34.05,34.05,image,105.mp4
+66,"From which variant of Brezza is the feature shown above available.
+(Inset image of ""Onboard Voice Assistant: Brezza"")",LXi,VXi,ZXi,All of the above,ZXi,image,106.mp4
+67,"Which of these is a ""Comfort"" feature?
+(Inset 4 images of the options)",Cruise Control,Tweeters,Roof Antenna,Security Alarm,Cruise Control,image,107.mp4
+68,"What is the maximum power output of Ertiga in CNG? (kW@rpm)
+(Inset image of ""Ertiga"")",120.5 @ 4500,121.5 @ 4500,"64.6 @ 5500		",60.6 @ 5500,"64.6 @ 5500		",image,108.mp4
+69,What is the application shown above?,Binance,NaviMaps,Google Maps,AHA Radio,NaviMaps,image,109.mp4
+70,"What is the Mileage of WagonR in 1 L AGS Petrol? (kmpl)
+(Inset image of ""WagonR"")",34.05,24.35,25.19,32.05,25.19,image,110.mp4
+71,"Identify the variant from which the feature shown above is available.
+(Inset image of ""Rear Parcel Tray: S-Presso"")",VXi+,VXi,STD,Lxi,VXi+,image,111.mp4
+72,"Which of these is a ""Passive Safety"" feature?
+(Inset 4 images of the options)",ESP,HHA,Seatbelt Pre-Tensioner & Force Limiter,ABS,Seatbelt Pre-Tensioner & Force Limiter,image,112.mp4
+73,"What is the torque output of S-Presso in CNG? (Nm@RPM)
+(Inset image of ""S-Presso"")",82.1 @ 3500,82.1 @ 3400 ,80.1 @ 5500,82.5 @ 3400,82.1 @ 3400 ,image,113.mp4
+74,"This technology/feature shown above is in which of following vehicles. 
+(Inset image of ""K15C Smart Hybrid"")",Eeco,Celerio,Swift,Brezza,Brezza,image,114.mp4
+75,"What is the engine capacity of Brezza? (cc)
+(Inset image of ""Brezza"")",1450,1462,998,1197,1462,image,115.mp4
+76,"Identify the variant from which the feature shown above is available.
+(Inset image of ""Front Fog Lamps: Wagon R"")",LXi,VXi,ZXi+,ZXi,ZXi+,image,116.mp4
+77,"Which of these is an ""Active Safety"" feature?
+(Inset 4 images of the options)",TECT,Airbag,Head Restraint,ABS with EBD,ABS with EBD,image,117.mp4
+78,"What is the Mileage of Dzire in Petrol? (kmpl)
+(Inset image of ""Dzire"")",22.41 MT,22.61 MT,24.56 MT,20.60 MT,22.41 MT,image,118.mp4
+79,"This technology/feature shown above is in which of following vehicles. 
+(Inset image of ""Rear Defogger"")",Eeco,Wagon R,Alto K10,Alto,Wagon R,image,119.mp4
+80,"What is the Mileage of Alto in CNG? (km/kg)
+(Inset image of ""Alto"")",31.59,22.05,24.5,30.59,31.59,image,120.mp4
+81,"Identify the stroke shown in the snippet.
+(Snippet of Power stroke)",Intake,Compression,Power,Exhaust,Power,video,81.mp4
+82,"Identify the stroke shown in the snippet.
+(Snippet of Intake stroke)",Intake,Compression,Power,Exhaust,Intake,video,82.mp4
+83,"Identify the stroke shown in the snippet.
+(Snippet of Exhaust stroke)",Intake,Compression,Power,Exhaust,Exhaust,video,83.mp4
+84,"Identify the stroke shown in the snippet.
+(Snippet of Compression stroke)",Intake,Compression,Power,Exhaust,Compression,video,84.mp4
+85,"The engine of this vehicle has __ valves.
+(Snippet of Ertiga)",12,32,16,8,16,video,85.mp4
+86,"The engine of this vehicle has __ valves.
+(Snippet of Swift)",32,16,8,12,16,video,86.mp4
+87,"In which vehicle will you find the technology shown?
+(VVT, Cam phasing)",Alto K10,Wagon R,Swift,All of the above,All of the above,video,87.mp4
+88,"The engine of this vehicle is also available in______
+(Show snippet of  Alto K-10)",Celerio,Ertiga,Swift,Brezza,Celerio,video,88.mp4
+89,"The engine of this vehicle is also available in______
+(Show snippet of Swift)",S-Presso,Brezza,Dzire,Celerio,Dzire,video,89.mp4
+90,"The engine of this vehicle is also available in______
+(Show snippet of Brezza)",Alto K-10,Ertiga,Swift,Dzire,Ertiga,video,90.mp4
+91,"The engine of this vehicle has __ valves.
+(Snippet of Celerio)",32,16,8,12,12,video,91.mp4
+92,"The feature/ technology shown in the snippet is available in which vehicle?
+(AT)",Ertiga,Celerio,Swift,S-Presso,Ertiga,video,92.mp4
+93,"The feature/ technology shown in the snippet is available in which vehicle?
+(AGS)",Ertiga,Wagon R,Alto 800,Brezza,Wagon R,video,93.mp4
+94,"Identify the feature/ technology shown in the snippet.
+(ABS)",ABS,EBD,ESP,HHA,ABS,video,94.mp4
+95,"Identify the feature/ technology of shown in the snippet.
+(EBD)",ESP,HHA,EBD,ABS,EBD,video,95.mp4
+96,"Identify the feature/ technology of shown in the snippet.
+(ESP)",ABS,EBD,HHA,ESP,ESP,video,96.mp4
+97,"Identify the feature/ technology of shown in the snippet.
+(HHA)",ESP,HHA,EBD,ABS,HHA,video,97.mp4
+98,"From which variant of Brezza is this feature available.
+(Head-Up display)",VXi,LXi,Zxi+,ZXi,Zxi+,video,98.mp4
+99,"How many active safety features were shown in the snippet?
+(Snippet of ABS, ESP, HHA, Airbags)",1,2,3,4,3,video,99.mp4
+100,"How many passive safety features were shown in the snippet?
+(Snippet of ABS, EBD, Seat belt, Airbags)",1,2,3,4,2,video,100.mp4
+101,"How many active safety features were shown in the snippet?
+(Snippet of ABS, EBD, Seat belt, Airbags)",1,2,3,4,2,video,101.mp4
+102,"How many passive safety features were shown in the snippet?
+(Snippet of ABS, Crumple zone, Sealtbelt, Airbags)",1,2,3,4,3,video,102.mp4
+103,"Identify the feature of SmartPlay Studio shown in the snippet.
+(Tuner)",Smart phone linkage,Vehicle Function,Tuner,Media,Tuner,video,103.mp4
+104,"Identify the feature of SmartPlay Studio shown in the snippet.
+(Media)",Media,Tuner,Vehicle Function,Smart phone linkage,Media,video,104.mp4
+105,"Identify the feature of SmartPlay Studio shown in the snippet.
+(Smart phone linkage)",Vehicle Function,Smart phone linkage,Media,Tuner,Smart phone linkage,video,105.mp4
+106,"Identify the feature of SmartPlay Studio shown in the snippet.
+(Vehicle Function)",Media,Tuner,Smart phone linkage,Vehicle Function,Vehicle Function,video,106.mp4
+107,"Identify the App shown in the snippet.
+(AHA Radio)",Aha Radio,SmartPlay Remote,Navigation (NaviMaps),None of the above,Aha Radio,video,107.mp4
+108,"Identify the App shown in the snippet.
+(Navigation)",SmartPlay Remote,Navigation (NaviMaps),Aha Radio,None of the above,Navigation (NaviMaps),video,108.mp4
+109,"Identify the App shown in the snippet.
+(SmartPlay remote)",Navigation (NaviMaps),Aha Radio,SmartPlay Remote,None of the above,SmartPlay Remote,video,109.mp4
+110,"How many comfort/conveninece features were shown in the snippet?
+(Steering mounted controls, Seatbelts, Cooled glovebox, Projector headlamps)",2,1,3,4,2,video,110.mp4
+111,"How many comfort/conveninece features were shown in the snippet?
+(Tilt steering, Cooled glovebox, Projector headlamps, Steering mounted controls)",1,4,3,2,3,video,111.mp4
+112,"How many comfort/conveninece features were shown in the snippet?
+(Steering mounted controls, Telescopic steering, Engine push start/stop, Projector headlamps)",2,3,4,1,3,video,112.mp4
+113,"How many comfort/conveninece features were shown in the snippet?
+(Electric fold ORVMS, Shark Fin Antenna, Rear A/C vents, Rear Wiper And Washer)",1,2,3,4,3,video,113.mp4
+114,"How many comfort/conveninece features were shown in the snippet?
+(Electric sunroof, Seatbelts, Cooled glovebox, Projector headlamps)",4,3,1,2,2,video,114.mp4
+115,"How many comfort/conveninece features were shown in the snippet?
+(Rear Wiper And Washer, Dual tone dashboard, 60:40 Split Rear Seat, Shark fin antenna)",2,4,3,1,2,video,115.mp4
+116,"How many comfort/conveninece features were shown in the snippet?
+(Steering mounted controls, reverse parking camera, Cooled glovebox, Skid plate garnish)",4,3,1,2,3,video,116.mp4
+117,"How many comfort/conveninece features were shown in the snippet?
+(360 view camera, Side Airbags, ABS with EBD, Electric Sunroof)",3,1,2,4,2,video,117.mp4
+118,"How many comfort/conveninece features were shown in the snippet?
+(Head-up display, ESP, Wireless charger, Projector headlamps)",4,1,3,2,2,video,118.mp4
+119,"How many comfort/conveninece features were shown in the snippet?
+HHA, Telescopic steering, Fast chargeing USB Post, Steering mounted controls)",1,3,2,4,3,video,119.mp4
+120,"How many comfort/conveninece features were shown in the snippet?
+(Projector headlamps, Voice Command, Cooled glovebox, Rear demister)",2,1,4,3,2,video,120.mp4
