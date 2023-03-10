@@ -28,32 +28,32 @@ const Puzzlequestion = () => {
     status: true,
     data: [
       {
-        question: "Q.1} Made reference of his observation",
+        question: "Q.1) Made reference of his observation",
 
         btn1: "YES",
         btn2: "NO",
       },
       {
-        question: "Q.2} Mentioned about Importance (impact) of the topic",
+        question: "Q.2) Mentioned about Importance (impact) of the topic",
 
         btn1: "YES",
         btn2: "NO",
       },
       {
-        question: "Q.3} Explained in an easy to understand/Interesting way",
+        question: "Q.3) Explained in an easy to understand/Interesting way",
 
         btn1: "YES",
         btn2: "NO",
       },
       {
         question:
-          "Q.4} Concluded the Coaching with a summary (points to remember)",
+          "Q.4) Concluded the Coaching with a summary (points to remember)",
 
         btn1: "YES",
         btn2: "NO",
       },
       {
-        question: "Q.5} Checked understanding of the RM",
+        question: "Q.5) Checked understanding of the RM",
 
         btn1: "YES",
         btn2: "NO",

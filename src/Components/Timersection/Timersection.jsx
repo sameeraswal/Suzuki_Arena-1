@@ -42,7 +42,6 @@ const Timersection = () => {
             className="third icon-conatiner btn-width"
             onClick={() => {
               setShow(true);
-              timeOutFun();
             }}
           >
             Enter Score
