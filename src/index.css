@@ -1075,7 +1075,7 @@ ul {
 .btn-width {
   width: 250px;
   margin-top: 39%;
-  margin-left: 54.5%;
+  margin-left: 43.5%;
 }
 
 .full-height {
@@ -1175,6 +1175,8 @@ ul {
 }
 .case-study-btn {
   margin-top: 5%;
+  margin-left: 41%;
+  width: 18%;
 }
 .case-study-text-afterflip {
   font-size: 50px;
@@ -1335,4 +1337,14 @@ ul {
   margin-top: -4%;
   margin-left: 70.1%;
   width: 16%;
+}
+
+.puzzle-scoring-btn {
+  margin-left: 39%;
+  width: 20%;
+  margin-top: -80%;
+}
+.please-chose{
+  width: 40%;
+  margin-left: 30%;
 }

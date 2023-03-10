@@ -8,21 +8,21 @@ import Buttonn from "../Puzzle4/Buttonn";
 import Finishmodal from "../Modalframmer/finishmodal";
 import { motion, AnimatePresence } from "framer-motion";
 
-
 // import ModalFrammer from "./ModalFrammer";
 import "../modalcss.css";
 import Finishmodal1b from "../Modalframmer/finishmodal1b";
+import axios from "axios";
+import { APIURL } from "../../App";
 
-let x = [0,0,0,0,0,0];
-function randomnum(){
-  const random = localStorage.getItem('random')
+let x = [0, 0, 0, 0, 0, 0];
+function randomnum() {
+  const random = localStorage.getItem("random");
   return random;
 }
 
 const Puzzlechoice = () => {
   const [num, setNum] = useState(randomnum);
-  
-  
+
   let response = {
     status: true,
     data: [
@@ -30,37 +30,37 @@ const Puzzlechoice = () => {
         name: "Word-1",
         btn1: "YES",
         btn2: "NO",
-        index: 0
+        index: 0,
       },
       {
         name: "Word-2",
         btn1: "YES",
         btn2: "NO",
-        index: 1
+        index: 1,
       },
       {
         name: "Word-3",
         btn1: "YES",
         btn2: "NO",
-        index: 2
+        index: 2,
       },
       {
         name: "Word-4",
         btn1: "YES",
         btn2: "NO",
-        index: 3
+        index: 3,
       },
       {
         name: "Word-5",
         btn1: "YES",
         btn2: "NO",
-        index: 4
+        index: 4,
       },
       {
         name: "Word-6",
         btn1: "YES",
         btn2: "NO",
-        index: 5
+        index: 5,
       },
     ],
   };
@@ -77,25 +77,49 @@ const Puzzlechoice = () => {
   let choices = response.data;
 
   const handleClick = (index) => {
-    console.log('from click', index)
-    x[index] = 1
-    console.log('array', x);
-  }
+    console.log("from click", index);
+    x[index] = 1;
+    console.log("array", x);
+  };
 
   const handleClick1 = (index) => {
-    console.log('from click', index)
-    x[index] = 0
-    console.log('array', x);
-  }
+    console.log("from click", index);
+    x[index] = 0;
+    console.log("array", x);
+  };
 
+  let count=0;
+  let newCount;
 
-
+  const noOfCount = (count) => {
+    for (let i = 0; i < x.length; i++) {
+      if (x[i] === 1) {
+        count++;
+      }
+      console.log(x[i], "xx[i]")
+      console.log(count);
+    }
+    newCount=count*10;
+    console.log(newCount,"newCount")
+  };
+  const fetchData = () => {
+    // console.log(score, JSON.parse(localStorage.getItem("mspin")));
+    axios
+      .post(`${APIURL}/api/v1/round/submitScoreForRound`, {
+        mspin: JSON.parse(localStorage.getItem("mspin")),
+        roundName: "1-B",
+        score: newCount,
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <>
-    
       <Navbar />
-     
+
       <div className="dashboard-container full-height">
         <div className="round-box-dashboard">Puzzle - {num}</div>
         <div className="puzzle-box">
@@ -114,23 +138,32 @@ const Puzzlechoice = () => {
             {/* map */}
             {choices.map((item, i) => (
               <>
-                <div className="wordyes" >
+                <div className="wordyes">
                   <span>{item.name}</span>
-                  
-                  <Buttonp key={i} index={item.index} name1={item.btn1} name2={item.btn2} handleClick={handleClick} handleClick1={handleClick1}/>
 
-                 
+                  <Buttonp
+                    key={i}
+                    index={item.index}
+                    name1={item.btn1}
+                    name2={item.btn2}
+                    handleClick={handleClick}
+                    handleClick1={handleClick1}
+                  />
                 </div>
               </>
             ))}
-            
+
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="roll icon-conatiner finish-btn"
-              onClick={() => (modalOpen ? close() : open())}
+              onClick={() => {
+                modalOpen ? close() : open();
+                noOfCount(count);
+                fetchData();
+              }}
             >
-              Finish Round
+              Finish
             </motion.button>
 
             <AnimatePresence
@@ -145,7 +178,11 @@ const Puzzlechoice = () => {
               onExitComplete={() => null}
             >
               {modalOpen && (
-                <Finishmodal1b modalOpen={modalOpen} handleClose={close} roundName={"1-B"}/>
+                <Finishmodal1b
+                  modalOpen={modalOpen}
+                  handleClose={close}
+                  roundName={"1-B"}
+                />
               )}
             </AnimatePresence>
           </div>

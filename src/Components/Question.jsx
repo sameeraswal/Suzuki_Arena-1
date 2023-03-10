@@ -179,10 +179,10 @@ const Question = () => {
       <Navbar />
 
       <div className="round-box">Round 1-A</div>
-      
+
       <div className="question-container">
         <div className="ques-number">{`${activeQuestion + 1}/5`}</div>
-        
+
         <div className="timer-div">
           <h2>{timer}</h2>
           <img src={imgsrc} alt="" className="clock-img" />
@@ -273,17 +273,23 @@ const Question = () => {
           {/* modal */}
           <div>
             {activeQuestion !== 4 ? (
-              <button
-                onClick={() => {
-                  onClickNext();
-                  fetchAnswer();
-                  onClickReset();
-                  setOpenModal(true);
-                }}
-                className="third question-btn icon-conatiner"
-              >
-                Submit
-              </button>
+              cid > 0 ? (
+                <button
+                  onClick={() => {
+                    onClickNext();
+                    fetchAnswer();
+                    onClickReset();
+                    setOpenModal(true);
+                  }}
+                  className="third question-btn icon-conatiner"
+                >
+                  Submit
+                </button>
+              ) : (
+                <button className="third question-btn icon-conatiner please-chose">
+                  Please Chose an Option
+                </button>
+              )
             ) : (
               <>
                 <motion.button
@@ -296,9 +302,7 @@ const Question = () => {
                 </motion.button>
 
                 <AnimatePresence
-                 
                   initial={false}
-                 
                   exitBeforeEnter={true}
                   // Fires when all exiting nodes have completed animating out
                   onExitComplete={() => null}
