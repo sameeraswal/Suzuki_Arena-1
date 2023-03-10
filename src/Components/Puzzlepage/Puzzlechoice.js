@@ -90,7 +90,7 @@ const Puzzlechoice = () => {
 
   let count=0;
   let newCount;
-
+  
   const noOfCount = (count) => {
     for (let i = 0; i < x.length; i++) {
       if (x[i] === 1) {

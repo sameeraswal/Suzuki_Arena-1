@@ -14,14 +14,12 @@ import Login from "./Components/Login";
 import Afterflip from "./Components/Afterflip";
 import Leaderboard from "./Components/leaderboard/Leaderboard";
 import Question from "./Components/Question";
-
 import Chasethemaze from "./Components/Chasethemaze";
 import Random from "./Components/Random Number/Randomnumber";
 import Timermin from "./Components/Timersection/Timermin";
 import Timersection from "./Components/Timersection/Timersection";
 import Puzzle from "./Components/Puzzle";
 import Puzzlechoice from "./Components/Puzzlepage/Puzzlechoice";
-
 import Eyeforaneye from "./Components/eyeforaneye";
 import Bespokesalespitch from "./Components/Bespokesalespitch";
 import Leaderboardth from "./Components/leaderboardfinal/leaderboardth";
@@ -55,6 +53,7 @@ import Dezirevstiger from "./Components/Flipcardspages/Desirevstiger";
 import Enterscore7 from "./Components/Enterscore7";
 import Enterscore5 from "./Components/Enterscore5";
 import Enterscore6 from "./Components/Enterscore6";
+import Puzzlecase from "./Components/puzzlecase/Puzzlecase";
 
 export const APIURL = "http://localhost:4500";
 const App = () => {
@@ -197,6 +196,8 @@ const App = () => {
           <Route path="/timersection" element={<Timersection />}></Route>
           <Route path="/puzzle" element={<Puzzle />}></Route>
           <Route path="/puzzlechoice" element={<Puzzlechoice />}></Route>
+          <Route path="/puzzlecase" element={<Puzzlecase />}></Route>
+
           <Route path="/eyeforaneye" element={<Eyeforaneye />}></Route>
           <Route
             path="/bespokesalespitch"
