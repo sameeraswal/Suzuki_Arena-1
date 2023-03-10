@@ -12,7 +12,7 @@ function Cardcasestudy({ onClick, title }) {
   return (
     <>
       <div className="card" onClick={onClick}>
-        <div className="card-back back-1">{title}</div>
+        <div className="card-back back-case-study">{title}</div>
 
         <div className="card-front front-icon">
           <button

@@ -176,10 +176,10 @@ const Question = () => {
       <Navbar />
 
       <div className="round-box">Round 1-A</div>
-
+      
       <div className="question-container">
         <div className="ques-number">{`${activeQuestion + 1}/5`}</div>
-        {/* <Timer setOpenModal={setOpenModal}/> */}
+        
         <div className="timer-div">
           <h2>{timer}</h2>
           <img src={imgsrc} alt="" className="clock-img" />
@@ -271,6 +271,7 @@ const Question = () => {
                   onClickNext();
                   fetchAnswer();
                   onClickReset();
+                  setOpenModal(true);
                 }}
                 className="third question-btn icon-conatiner"
               >
@@ -288,12 +289,9 @@ const Question = () => {
                 </motion.button>
 
                 <AnimatePresence
-                  // Disable any initial animations on children that
-                  // are present when the component is first rendered
+                 
                   initial={false}
-                  // Only render one component at a time.
-                  // The exiting component will finish its exit
-                  // animation before entering component is rendered
+                 
                   exitBeforeEnter={true}
                   // Fires when all exiting nodes have completed animating out
                   onExitComplete={() => null}
@@ -306,15 +304,6 @@ const Question = () => {
                     />
                   )}
                 </AnimatePresence>
-
-                {/* <Link to="/finish">
-                  <button
-                    
-                    className="third question-btn icon-conatiner"
-                  >
-                    
-                  </button>
-                </Link> */}
               </>
             )}
           </div>
