@@ -1,10 +1,11 @@
 import { React, useEffect, useState } from "react";
 import FlippableCard from "../FlippableCard";
 import Navbar from "../Navbar";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import Remaincard from "./Remaincard";
 import bgImg from "../leaderboardfinal/05.png";
 import Popupquestion from "../flipcard popup/Popupquestion";
+import { getData } from "./Altovskwid";
 
 const Dezirevsamaze = () => {
   const [count, setCount] = useState(5);
@@ -57,6 +58,14 @@ const Dezirevsamaze = () => {
             </>
           ))}
         </div>
+        <Link to="/login">
+          <button
+            className="roll icon-conatiner finish-card"
+            onClick={getData()}
+          >
+            Finish Round
+          </button>
+        </Link>
       </div>
     </>
   );

@@ -62,6 +62,12 @@ exports.getRoundLists = async (req, res) => {
         })
     }
 }
+const getRandomNFromArr = (arr,n)=>{
+    n = Math.min(n,arr.length);
+    let shuffled = arr.sort(function(){return .5 - Math.random()});
+    let selected = shuffled.slice(0,n);
+    return selected;
+}
 
 exports.getRoundDetails = async (req, res) => {
     let status = false;
@@ -79,6 +85,8 @@ exports.getRoundDetails = async (req, res) => {
             })
 
         } else {
+            //Return random 5 questions 
+            rounds[0].questions = getRandomNFromArr(rounds[0].questions,5);
             status = true;
             res.status(201).json({
                 status: status,

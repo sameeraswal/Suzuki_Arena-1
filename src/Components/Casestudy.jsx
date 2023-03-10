@@ -1,8 +1,24 @@
+import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
+import { APIURL } from "../App";
 import Navbar from "./Navbar";
 
 const Casestudy = () => {
+  const getData = () => {
+    axios
+      .post(`${APIURL}/api/v1/finishround`, {
+        mspin: JSON.parse(localStorage.getItem("mspin")),
+        roundName: "4",
+      })
+      .then((res) => {
+        console.log(JSON.parse(localStorage.getItem("mspin")), "MSPIN");
+        console.log(res, "Response of roundlist");
+        // console.log(roundName, "Response of RoundName");
+      })
+      .catch((error) => console.log(error.response.data.message));
+    // return false;
+  };
   return (
     <div>
       <Navbar></Navbar>
@@ -17,13 +33,16 @@ const Casestudy = () => {
           damages (out of scope of warranty). He fears that most of the problems
           come right after the vehicle is out of its warranty period. Despite
           spending additionally on warranty and service coverages there is no
-          consideration from the brand.
-          Assure the customer using Maruti Suzuki Value Added Services.
+          consideration from the brand. Assure the customer using Maruti Suzuki
+          Value Added Services.
         </p>
       </div>
 
       <Link to="/puzzlequestion">
-        <button className="third icon-conatiner scoring-btn case-study-btn">
+        <button
+          className="third icon-conatiner scoring-btn case-study-btn"
+          onClick={getData}
+        >
           Enter Score
         </button>
       </Link>

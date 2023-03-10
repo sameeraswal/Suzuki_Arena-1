@@ -1330,3 +1330,7 @@ ul {
   opacity: 0.5;
   pointer-events: none;
 }
+.finish-card{
+  margin-top: -55%;
+  margin-left: 45%;
+}

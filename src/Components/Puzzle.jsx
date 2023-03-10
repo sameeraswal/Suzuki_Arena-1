@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import { x } from "./Random Number/Randomnumber";
 import wordpattern from "./wordpattern.jpg";
 // import openbook from "./open-book.svg";
 import bgImg from './NewImages/Spin-Wheel_BG.png'

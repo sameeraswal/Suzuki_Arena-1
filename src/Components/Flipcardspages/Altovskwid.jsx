@@ -1,29 +1,107 @@
 import { React, useEffect, useState } from "react";
 import FlippableCard from "../FlippableCard";
 import Navbar from "../Navbar";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import Remaincard from "./Remaincard";
 import bgImg from "../leaderboardfinal/05.png";
 import Popupquestion from "../flipcard popup/Popupquestion";
+import { motion, AnimatePresence } from "framer-motion";
+import Finishmodalenter from "../Modalframmer/finishmodalenter";
+import Finishmodal1b from "../Modalframmer/finishmodal1b";
+import axios from "axios";
+import { APIURL } from "../../App";
 
+export const getData = () => {
+  axios
+    .post(`${APIURL}/api/v1/finishround`, {
+      mspin: JSON.parse(localStorage.getItem("mspin")),
+      roundName: "2",
+    })
+    .then((res) => {
+      console.log(JSON.parse(localStorage.getItem("mspin")), "MSPIN");
+      console.log(res, "Response of roundlist");
+      // console.log(roundName, "Response of RoundName");
+    })
+    .catch((error) => console.log(error.response.data.message));
+  // return false;
+};
 const Altovskwid = () => {
   const [count, setCount] = useState(5);
   const [openModal, setOpenModal] = useState(false);
 
-
   let response = {
     status: true,
     data: [
-      { id: 0, cardName: "Height",class: "front-icon1", classBack: "back-1", isCorrect: true },
-      { id: 1, cardName: "Length",class: "front-icon2", classBack: "back-2", isCorrect: false },
-      { id: 2, cardName: "Power",class: "front-icon3", classBack: "back-3", isCorrect: false },
-      { id: 3, cardName: "Torque",class: "front-icon4", classBack: "back-4", isCorrect: true },
-      { id: 4, cardName: "Bootspace",class: "front-icon5", classBack: "back-5", isCorrect: true },
-      { id: 5, cardName: "Mileage",class: "front-icon6", classBack: "back-6", isCorrect: true },
-      { id: 6, cardName: "Width",class: "front-icon7", classBack: "back-7", isCorrect: true },
-      { id: 7, cardName: "Wheelbase",class: "front-icon8", classBack: "back-8", isCorrect: false },
-      { id: 8, cardName: "Engine",class: "front-icon9", classBack: "back-9", isCorrect: false },
-      { id: 9, cardName: "FTC",class: "front-icon10", classBack: "back-10", isCorrect: true },
+      {
+        id: 0,
+        cardName: "Height",
+        class: "front-icon1",
+        classBack: "back-1",
+        isCorrect: true,
+      },
+      {
+        id: 1,
+        cardName: "Length",
+        class: "front-icon2",
+        classBack: "back-2",
+        isCorrect: false,
+      },
+      {
+        id: 2,
+        cardName: "Power",
+        class: "front-icon3",
+        classBack: "back-3",
+        isCorrect: false,
+      },
+      {
+        id: 3,
+        cardName: "Torque",
+        class: "front-icon4",
+        classBack: "back-4",
+        isCorrect: true,
+      },
+      {
+        id: 4,
+        cardName: "Bootspace",
+        class: "front-icon5",
+        classBack: "back-5",
+        isCorrect: true,
+      },
+      {
+        id: 5,
+        cardName: "Mileage",
+        class: "front-icon6",
+        classBack: "back-6",
+        isCorrect: true,
+      },
+      {
+        id: 6,
+        cardName: "Width",
+        class: "front-icon7",
+        classBack: "back-7",
+        isCorrect: true,
+      },
+      {
+        id: 7,
+        cardName: "Wheelbase",
+        class: "front-icon8",
+        classBack: "back-8",
+        isCorrect: false,
+      },
+      {
+        id: 8,
+        cardName: "Engine",
+        class: "front-icon9",
+        classBack: "back-9",
+        isCorrect: false,
+      },
+      {
+        id: 9,
+        cardName: "FTC",
+        class: "front-icon10",
+        classBack: "back-10",
+        isCorrect: true,
+      },
     ],
   };
 
@@ -32,6 +110,13 @@ const Altovskwid = () => {
   // }, [count])
 
   let cards = response.data;
+  const [modalOpen, setModalOpen] = useState(false);
+  const close = () => {
+    setModalOpen(false);
+  };
+  const open = () => {
+    setModalOpen(true);
+  };
 
   return (
     <>
@@ -47,20 +132,34 @@ const Altovskwid = () => {
         <div className="flex-container-child bg-correct">
           {cards.map((item) => (
             <>
-            <div className="flex-child bg-correct" onClick={() => {{count>0?setCount(count-1):setCount(0)}
-              setOpenModal(!item.isCorrect)
-              }}>
+              <div
+                className="flex-child bg-correct"
+                onClick={() => {
+                  {
+                    count > 0 ? setCount(count - 1) : setCount(0);
+                  }
+                  setOpenModal(!item.isCorrect);
+                }}
+              >
                 <FlippableCard title={item} />
               </div>
-              {openModal && !item.isCorrect && <Popupquestion setOpenModal={setOpenModal}/>}
+              {openModal && !item.isCorrect && (
+                <Popupquestion setOpenModal={setOpenModal} />
+              )}
             </>
           ))}
         </div>
+        <Link to="/login">
+          <button
+            className="roll icon-conatiner finish-card"
+            onClick={getData()}
+          >
+            Finish Round
+          </button>
+        </Link>
       </div>
     </>
   );
 };
 
 export default Altovskwid;
-
-

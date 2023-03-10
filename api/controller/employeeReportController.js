@@ -16,13 +16,15 @@ exports.submitAnswerOfQuestion = async (req, res) => {
         const roundName = req.body.roundName;
         const mspin = req.body.mspin;
 
-        calculateScoreOfOneRoundHelper()
+        //calculateScoreOfOneRoundHelper()
+
 
         // const registrationNumber = req.body.registrationNumber;
         // const name = req.body.name;
 
         let questionId = req.body.questionId;
         let cId = req.body.cId;
+
         console.log(roundName);
         const checkemployeeExists = await Employee.findOne({ mspin: mspin });
         if (!checkemployeeExists) {
@@ -127,6 +129,8 @@ exports.submitAnswerOfQuestion = async (req, res) => {
 
                             }
                         });
+                        await calculateScoreOfOneRoundHelper(mspin, roundName);
+                        await calculateCurrentScoreOfEmpHelper(mspin);
 
                     } else {
                         return res.status(404).json({
@@ -145,6 +149,8 @@ exports.submitAnswerOfQuestion = async (req, res) => {
             }
 
         }
+        // await calculateScoreOfOneRoundHelper(mspin,roundName);
+        // await calculateCurrentScoreOfEmpHelper(mspin);
 
 
     } catch (error) {
@@ -161,7 +167,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
         const roundName = req.body.roundName;
         const mspin = req.body.mspin;
         //Calling these APIs to update score and leaderboard
-        await calculateScoreOfOneRoundHelper(mspin,roundName);
+        await calculateScoreOfOneRoundHelper(mspin, roundName);
         await calculateCurrentScoreOfEmpHelper(mspin);
 
         let cardQuestionId = req.body.cardQuestionId;
@@ -368,17 +374,120 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
     }
 }
 
+// submit score for question
+exports.submitScoreForRound = async (req, res) => {
+    let status = false;
+    try {
+        const roundName = req.body.roundName;
+        const mspin = req.body.mspin;
+
+        let questionId = 1;
+        let cId = 1;
+        let score = parseInt(req.body.score);
+
+        const checkemployeeExists = await Employee.findOne({ mspin: mspin });
+        if (!checkemployeeExists) {
+            return res.status(404).json({
+                status: status,
+                message: "employee does not exists with this given employee details"
+            });
+        } else {
+            let name = checkemployeeExists.name;
+            let registrationNumber = checkemployeeExists.registrationNumber;
+            //const round = await Round.find({ roundName: roundName }, { correctAnswers: 1, _id: 0 });
+            const round = await Round.findOne({ roundName: roundName }, { correctAnswers: 1, _id: 0 });
+
+            if (round) {
+                let correctQuestionsAnswers = {}
+                status = true;
+                let checked = {};
+                checked["questionId"] = questionId;
+                checked["cId"] = cId;
+                checked["isCorrect"] = true;
+                checked["score"] = score;
+                const employeeAnsExists = await EmployeeAnswer.find({ mspin: mspin, roundName: roundName, "empAnswers.questionId": questionId });
+                if (employeeAnsExists.length) {
+                    const updateQuery = async () => {
+                        try {
+                            await EmployeeAnswer.updateOne({ mspin: mspin, roundName: roundName, "empAnswers.questionId": questionId }, { "$set": { empAnswers: checked } });
+                            res.status(201).json({
+                                status: status,
+                                message: "answer is submitted",
+                                Employee_result: {
+                                    employeeMspin: mspin,
+                                    employeeRegistrationNumber: registrationNumber,
+                                    roundName,
+                                    name,
+                                    employeeReport: checked,
+                                    correctQuestionsAnswers
+                                }
+                            });
+                            await calculateScoreOfOneRoundHelper(mspin, roundName);
+                            await calculateCurrentScoreOfEmpHelper(mspin);
+
+                        } catch (error) {
+                            res.status(400).json({
+                                message: error.message
+                            })
+                        }
+                    }
+                    updateQuery();
+                } else {
+                    console.log("not exits. save the answer")
+                    const roundReport = new EmployeeAnswer({ mspin, registrationNumber, name, roundName, empAnswers: checked });
+                    const ansSubmitted = await roundReport.save();
+                    if (ansSubmitted) {
+                        res.status(201).json({
+                            status: "success",
+                            message: "answer is submitted",
+                            Employee_result: {
+                                employeeMspin: mspin,
+                                employeeRegistrationNumber: registrationNumber,
+                                name,
+                                roundName,
+                                employeeReport: checked,
+                                correctQuestionsAnswers
+
+                            }
+                        });
+                        await calculateScoreOfOneRoundHelper(mspin, roundName);
+                        await calculateCurrentScoreOfEmpHelper(mspin);
+
+                    } else {
+                        return res.status(404).json({
+                            status: status,
+                            message: "error during submition"
+                        })
+
+                    }
+                }
+
+            } else {
+                return res.status(404).json({
+                    status: status,
+                    message: "data not found 1"
+                })
+            }
+
+        }
+
+    } catch (error) {
+        res.status(404).json({
+            message: "data not found 2"
+        })
+    }
+}
 //calculate and save score of each round
 exports.calculateScoreOfOneRoundController = async (req, res) => {
     const mspin = req.body.mspin;
     const roundName = req.body.roundname;
-    let response = await calculateScoreOfOneRoundHelper(mspin,roundName);
-    if(response['status']===true){
+    let response = await calculateScoreOfOneRoundHelper(mspin, roundName);
+    if (response['status'] === true) {
         return res.status(201).json({
             status: response['status'],
             data: response['data']
         })
-    }else{
+    } else {
         return res.status(404).json({
             status: response['status'],
             message: response['message']
@@ -386,66 +495,94 @@ exports.calculateScoreOfOneRoundController = async (req, res) => {
     }
 }
 
-const calculateScoreOfOneRoundHelper = async (mspin,roundName) => {
+const calculateScoreOfOneRoundHelper = async (mspin, roundName) => {
+    console.log("INSIDE===============", mspin, roundName)
     let response = [];
     response['status'] = false;
-    try{
+    try {
         const roundAnswerDetail = await EmployeeAnswer.find({ mspin: mspin, roundName: roundName });
-        if(!roundAnswerDetail.length){
+        if (!roundAnswerDetail.length) {
             response['message'] = "data not found";
             return response;
-        }
-        let name = "";
-        let regNumber = "";
-        let total = 0;
-        roundAnswerDetail.forEach((empObj) => {
-            name = empObj.name;
-            regNumber = empObj.registrationNumber;
-            let checkAns = empObj.empAnswers.isCorrect;
-            if (checkAns == true) {
-                let score = empObj.empAnswers.score;
-                console.log(score)
-                total = total + score;
-            }
-        })
-        console.log(total)
-        console.log("regNumber", regNumber)
-
-        const roundScore = new EmpRoundScore({ mspin: mspin, name: name, registrationNumber: regNumber, roundName: roundName, totalScore: total })
-
-        const savedRoundScore = await roundScore.save();
-        if (savedRoundScore) {
-            let roundReport = {
-                mspin,
-                name,
-                registrationNumber: regNumber,
-                roundName,
-                totalScoreOfThisRound: total
-
-            }
-            response['status']=true;
-            response['data']=roundReport;
         } else {
-            response['message'] = "Error in query";
+            let name = "";
+            let regNumber = "";
+            let total = 0;
+            roundAnswerDetail.forEach((empObj) => {
+                name = empObj.name;
+                regNumber = empObj.registrationNumber;
+                let checkAns = empObj.empAnswers.isCorrect;
+                if (checkAns == true) {
+                    let score = empObj.empAnswers.score;
+                    console.log(score)
+                    total = total + score;
+                }
+            })
+            console.log(total)
+            console.log("regNumber", regNumber)
+            const checkRoundScoreExists = await EmpRoundScore.find({ mspin: mspin,roundName:roundName}).select("totalScore");
+            if (checkRoundScoreExists.length) {
+
+                try {
+                    console.log("inside if roundscore already exists")
+                    await EmpRoundScore.updateOne({ mspin: mspin,roundName:roundName}, { "$set": { totalScore: total } });
+                    response['status'] = true;
+                    response['data'] = {
+                        mspin,
+                        name,
+                        registrationNumber: regNumber,
+                        roundName,
+                        totalScoreOfThisRound: total
+                    }
+                    console.log("returned response first block", response)
+                    return response;
+                } catch (error) {
+                    response['message'] = error.message;
+                    return response;
+                }
+            } else {
+                console.log("inside if roundscore does not exists")
+                const roundScore = new EmpRoundScore({ mspin: mspin, name: name, registrationNumber: regNumber, roundName: roundName, totalScore: total })
+
+                const savedRoundScore = await roundScore.save();
+                if (savedRoundScore) {
+                    let roundReport = {
+                        mspin,
+                        name,
+                        registrationNumber: regNumber,
+                        roundName,
+                        totalScoreOfThisRound: total
+
+                    }
+                    console.log("roundReport=============", roundReport)
+                    response['status'] = true;
+                    response['data'] = roundReport;
+                } else {
+                    response['message'] = "Error in query";
+                }
+            }
         }
-    }catch(error){
+
+
+
+    } catch (error) {
         response['message'] = error.message;
     }
     return response;
-    
+
 }
 
 exports.calculateCurrentScoreOfEmpController = async (req, res) => {
     const mspin = req.body.mspin;
     console.log("calling calculateCurrentScoreOfEmpHelper")
     let response = await calculateCurrentScoreOfEmpHelper(mspin);
-    console.log("response from calculateCurrentScoreOfEmpHelper",response)
-    if(response['status']===true){
+    console.log("response from calculateCurrentScoreOfEmpHelper", response)
+    if (response['status'] === true) {
         return res.status(201).json({
             status: response['status'],
             data: response['data']
         })
-    }else{
+    } else {
         return res.status(404).json({
             status: response['status'],
             message: response['message']
@@ -454,6 +591,7 @@ exports.calculateCurrentScoreOfEmpController = async (req, res) => {
 }
 
 const calculateCurrentScoreOfEmpHelper = async (mspin) => {
+    console.log("zzzzzzzzzzz", mspin)
     let response = [];
     response['status'] = false;
     try {
@@ -500,9 +638,9 @@ const calculateCurrentScoreOfEmpHelper = async (mspin) => {
             if (checkFinalScoreExists.length) {
                 let scoreCalcultedRespone = await calculateFinalScore();
                 let scoreCalculted;
-                if(scoreCalcultedRespone['status']===true){
+                if (scoreCalcultedRespone['status'] === true) {
                     scoreCalculted = scoreCalcultedRespone['data'];
-                }else{
+                } else {
                     response['message'] = scoreCalcultedRespone['message'];
                     return response;
                 }
@@ -517,7 +655,7 @@ const calculateCurrentScoreOfEmpHelper = async (mspin) => {
                         name,
                         finalScore
                     }
-                    console.log("returned response first block",response)
+                    console.log("returned response first block", response)
                     return response;
                 } catch (error) {
                     response['message'] = error.message;
@@ -526,29 +664,29 @@ const calculateCurrentScoreOfEmpHelper = async (mspin) => {
             } else {
                 let scoreCalcultedRespone = await calculateFinalScore();
                 let scoreCalculted;
-                if(scoreCalcultedRespone['status']===true){
+                if (scoreCalcultedRespone['status'] === true) {
                     scoreCalculted = scoreCalcultedRespone['data'];
-                }else{
+                } else {
                     response['message'] = scoreCalcultedRespone['message'];
                     return response;
                 }
                 console.log(scoreCalculted)
                 let finalScore = scoreCalculted.finalScore;
-                
+
                 const finalResult = new EmpFinalScore({ mspin: mspin, registrationNumber: registrationNumber, name: name, finalScore: finalScore })
                 console.log(finalResult)
                 const savedFinalScore = await finalResult.save();
                 console.log(savedFinalScore)
                 if (savedFinalScore) {
                     console.log("final score saved")
-                    response['status']=true;
+                    response['status'] = true;
                     response['data'] = {
                         mspin,
                         registrationNumber,
                         name,
                         finalScore
                     };
-                    console.log("returned response",response)
+                    console.log("returned response", response)
                     return response;
                 } else {
                     console.log("err during saving final score")

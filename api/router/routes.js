@@ -14,6 +14,7 @@ router.post("/api/v1/login", employeeController.checkLogin);
 router.post("/api/v1/roundlists", roundController.getRoundLists);
 router.get("/api/v1/quiz/roundname/:roundName", roundController.getRoundDetails);
 router.post("/api/v1/round/submitanswer", employeeReportController.submitAnswerOfQuestion);
+router.post("/api/v1/round/submitScoreForRound", employeeReportController.submitScoreForRound);
 //submit round 2 Card Answer
 router.post("/api/v1/round/submitcardanswer", employeeReportController.submitAnswerOfCardQuestion);
 
