@@ -20,17 +20,17 @@ const Timermin = () => {
   } = useTimer(240);
 
   return (
-    <div className="timer-app">
+    <div className="timer-app time-container">
       
       <div className="stopwatch-card">
-        <p>{formatTime(timer)}</p>
+        <p className="timer-txt">{formatTime(timer)}</p>
         <div className="buttons">
           {!isActive && !isPaused ? (
-            <button onClick={handleStart} className="third contanir start-btn">Start</button>
+            <button onClick={handleStart} className="roll icon-conatiner timer-margin">Start</button>
           ) : isPaused ? (
-            <button onClick={handlePause} className="third contanir start-btn">Pause</button>
+            <button onClick={handlePause} className="roll icon-conatiner timer-margin">Pause</button>
           ) : (
-            <button onClick={handleResume} className="third contanir start-btn">Resume</button>
+            <button onClick={handleResume} className="roll icon-conatiner timer-margin">Resume</button>
           )}
         </div>
       </div>
