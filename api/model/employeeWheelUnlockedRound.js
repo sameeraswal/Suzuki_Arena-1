@@ -15,12 +15,8 @@ const wheelRoundunLockedSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    roundName:{
+    roundOrder:{
         type: String
-    },
-    name: {
-        type: String,
-        required: true
     },
     disabledQuestions: {}
 });
