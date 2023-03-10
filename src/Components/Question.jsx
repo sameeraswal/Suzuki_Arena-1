@@ -171,6 +171,7 @@ const Question = () => {
     console.log(activeQuestion);
     handleToggleClasslistRef(ref);
   };
+
   return (
     <>
       <Navbar />
@@ -185,6 +186,7 @@ const Question = () => {
           <img src={imgsrc} alt="" className="clock-img" />
         </div>
         <div>
+          {/* {console.log(openModel)} */}
           {timer === "00:00" && openModel && (
             <>
               <div
@@ -206,7 +208,7 @@ const Question = () => {
                   </div>
                   <div className="title">
                     <h1 style={{ color: "blue" }}>
-                      Time's up! Click on continue to move to next question
+                      Time is up! Click on Continue to move to next question
                     </h1>
                   </div>
                   <div className="footer">
@@ -225,6 +227,8 @@ const Question = () => {
                   </div>
                 </div>
               </div>
+
+              {console.log(openModel, !openModel)}
             </>
           )}
         </div>
@@ -241,7 +245,7 @@ const Question = () => {
           </div>
           <div className="option-div">
             <ul>
-              {c.map((item,i) => (
+              {c.map((item, i) => (
                 <>
                   {
                     <li

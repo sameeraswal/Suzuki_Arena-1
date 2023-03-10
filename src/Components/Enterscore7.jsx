@@ -35,6 +35,19 @@ const Enterscore7 = () => {
       })
       .catch((error) => console.log(error));
   };
+  const getData = () => {
+    axios
+      .post(`${APIURL}/api/v1/finishround`, {
+        mspin: JSON.parse(localStorage.getItem("mspin")),
+        roundName: "7",
+      })
+      .then((res) => {
+        console.log(JSON.parse(localStorage.getItem("mspin")), "MSPIN");
+        console.log(res, "Response of roundlist");
+      })
+      .catch((error) => console.log(error.response.data.message));
+    // return false;
+  };
   return (
     <div>
       <Navbar></Navbar>
@@ -63,7 +76,10 @@ const Enterscore7 = () => {
       <Link to="/">
         <button
           className="roll icon-conatiner finish-card finish-btn-enter-score"
-          onClick={fetchData()}
+          onClick={() => {
+            fetchData();
+            getData();
+          }}
         >
           Finish Round
         </button>
