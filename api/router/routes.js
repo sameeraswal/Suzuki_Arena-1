@@ -5,9 +5,6 @@ const employeeController = require("../controller/employeeController");
 const employeeReportController = require("../controller/employeeReportController");
 const roundController = require("../controller/roundController");
 
-
-
-
 //router.post("/api/v1/addround", roundController.addRound) 
 router.get("/api/v1/mspin/:mspin", employeeController.getEmployeeDetails);
 router.post("/api/v1/employee/register", employeeController.registerEmployee);
