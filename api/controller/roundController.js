@@ -1,7 +1,11 @@
 require("../db/connection");
 const Round = require("../model/roundsSchema");
+const WheelRounds = require("../model/wheelRoundsSchema");
+console.log("WheelRounds",WheelRounds)
 //const employeeUnlockedRound = require("../model/employeeUnlockedRound"); Roundunlocked
 const Roundunlocked = require("../model/employeeUnlockedRound");
+
+const WheelRoundLocked = require("../model/employeeWheelUnlockedRound");
 
 
 exports.getRoundLists = async (req, res) => {
@@ -44,6 +48,45 @@ exports.getRoundLists = async (req, res) => {
                         rounds[index]["isRoundLocked"] = true;
                     }
                 })
+            }
+            res.status(201).json({
+                status: status,
+                data: rounds
+            })
+        } else {
+            res.status(404).json({
+                status: status,
+                message: "data not found"
+            })
+        }
+    } catch (error) {
+        res.status(404).json({
+            status: status,
+            error: error
+        })
+    }
+}
+exports.wheelRoundQuestions = async (req, res) => {
+    let status = false;
+    try {
+        const mspin = req.body.mspin;
+        const roundOrder = req.body.roundOrder;
+        const rounds = await WheelRounds.findOne({roundOrder:roundOrder}).select({ roundName: 1,route:1, roundOrder: 1, questions:1, _id: 0 }).sort({ "questions.cardQuestionId": 1 });
+        if (rounds) {
+            status = true;
+            let disabledQuestionInfo = await WheelRoundLocked.findOne({ mspin: mspin,roundOrder:roundOrder }).select({ disabledQuestions: 1});
+            if (disabledQuestionInfo) {
+                let disabledQuestions = disabledQuestionInfo.disabledQuestions;
+                console.log("disabledQuestions",disabledQuestions)
+                rounds.questions.forEach((question, index, rounds) => {
+                    let checkQuestionDisabled = disabledQuestions[question["cardQuestionId"]];
+                    if (checkQuestionDisabled!==undefined) {
+                        rounds[index]["isCardQuestionDidabled"] = true;
+                    } else {
+                        rounds[index]["isCardQuestionDidabled"] = false;
+                    }
+                })
+
             }
             res.status(201).json({
                 status: status,
