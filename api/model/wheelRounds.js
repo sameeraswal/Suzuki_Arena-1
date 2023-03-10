@@ -8,17 +8,11 @@ const wheelRounds = new mongoose.Schema({
     roundOrder:{
         type:Number
     },
-    isRoundLocked: {
-        type: Boolean
-    },
-    isDisabled: {
-        type: Boolean
-    },
     questions: {},
     correctAnswers: {}
 });
 
-const WHEEL_ROUND = mongoose.model("WHEEL_ROUND", wheelRounds);
+const WHEEL_ROUND = mongoose.model("wheelrounds", wheelRounds);
 
 
 

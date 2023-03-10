@@ -24,7 +24,7 @@ router.post("/api/v1/round/roundscore", employeeReportController.calculateScoreO
 
 router.post("/api/v1/finishround", roundController.finishRound); //this should be get or post?
 
-router.post("/api/v1/wheelRoundlists", roundController.getWheelRoundLists);
+router.post("/api/v1/wheelRoundQuestions", roundController.wheelRoundQuestions);
 
 
 router.get("/api/v1/round/roundscore/mspin/:mspin/roundname/:roundname", employeeReportController.getRoundScore); //this should be get or post?

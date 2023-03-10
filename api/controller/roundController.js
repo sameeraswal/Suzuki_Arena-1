@@ -1,7 +1,10 @@
 require("../db/connection");
 const Round = require("../model/roundsSchema");
+const WheelRounds = require("../model/wheelRounds");
+console.log("WheelRounds",WheelRounds)
 //const employeeUnlockedRound = require("../model/employeeUnlockedRound"); Roundunlocked
 const Roundunlocked = require("../model/employeeUnlockedRound");
+const WheelRoundLocked = require("../model/employeeWheelUnlockedRound");
 
 
 exports.getRoundLists = async (req, res) => {
@@ -62,45 +65,27 @@ exports.getRoundLists = async (req, res) => {
         })
     }
 }
-exports.getWheelRoundLists = async (req, res) => {
+exports.wheelRoundQuestions = async (req, res) => {
     let status = false;
     try {
         const mspin = req.body.mspin;
-        const rounds = await WheelRounds.find({}).select({ roundName: 1,route:1, roundOrder: 1, _id: 0 }).sort({ roundOrder: 1 });
-        console.log("1111111111 rounds before updataion=========", rounds)
-
-        if (rounds.length) {
-            rounds.forEach((round, index, rounds) => {
-                rounds[index]["isDisabled"] = false;
-            })
+        const roundOrder = req.body.roundOrder;
+        const rounds = await WheelRounds.findOne({roundOrder:roundOrder}).select({ roundName: 1,route:1, roundOrder: 1, questions:1, _id: 0 }).sort({ "questions.cardQuestionId": 1 });
+        if (rounds) {
             status = true;
-            let disabledRound = await Roundunlocked.findOne({ mspin: mspin }).select({ disabled: 1, unlocked: 1 });
-            console.log("disabledRound:",{ mspin: mspin },disabledRound)
-            if (disabledRound) {
-                let disabledRounds = disabledRound.disabled;
-                rounds.forEach((round, index, rounds) => {
-                    let checkRoundNameExists = disabledRounds.includes(round.roundName)
-                    if (checkRoundNameExists) {
-                        rounds[index]["isDisabled"] = true;
+            let disabledQuestionInfo = await WheelRoundLocked.findOne({ mspin: mspin,roundOrder:roundOrder }).select({ disabledQuestions: 1});
+            if (disabledQuestionInfo) {
+                let disabledQuestions = disabledQuestionInfo.disabledQuestions;
+                console.log("disabledQuestions",disabledQuestions)
+                rounds.questions.forEach((question, index, rounds) => {
+                    let checkQuestionDisabled = disabledQuestions[question["cardQuestionId"]];
+                    if (checkQuestionDisabled!==undefined) {
+                        rounds[index]["isCardQuestionDidabled"] = true;
                     } else {
-                        rounds[index]["isDisabled"] = false;
-                    }
-                    if (disabledRound.unlocked && disabledRound.unlocked === rounds[index]["roundName"]) {
-                        rounds[index]["isRoundLocked"] = false;
-                    } else {
-                        rounds[index]["isRoundLocked"] = true;
+                        rounds[index]["isCardQuestionDidabled"] = false;
                     }
                 })
-                console.log("rounds aftrer updataion=========", rounds)
 
-            } else {//When we don't have any data in Roundunlocked for the given mspin
-                rounds.forEach((round, index, rounds) => {
-                    if (rounds[index]["roundOrder"] == 1) {//Keep the first round unlocked
-                        rounds[index]["isRoundLocked"] = false;
-                    } else {//other round will be locked
-                        rounds[index]["isRoundLocked"] = true;
-                    }
-                })
             }
             res.status(201).json({
                 status: status,
