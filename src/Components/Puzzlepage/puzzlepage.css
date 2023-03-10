@@ -51,8 +51,12 @@
 /* Finishbtn */
 .finish-btn {
   margin-top: 6px;
-  margin-left: 45%;
+  margin-left: 41%;
   width: 200px;
   /* padding-top: 10px; */
   padding-bottom: 10px;
+}
+
+.puzzle-img{
+  margin: 100px;
 }

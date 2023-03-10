@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useState,useRef } from "react";
 import useEffect from "react";
 
 const Buttonp = (props) => {
-  console.log(props.name);
+  console.log(props);
   const [color, setColors] = React.useState("");
   const [active, setActive] = React.useState(false);
   const [color1, setColors1] = React.useState("");
   const [active1, setActive1] = React.useState(false);
 
+  const result = useRef([0,0,0,0,0,0]);
+
   const handleClickButton = (name) => {
     setActive(true);
     setColors(name);
+    // result[props.index] = 1;
+    result.current[props.index] = 1
     if (active1 === true) {
       setActive1(false);
       setColors1("button");
@@ -19,12 +23,13 @@ const Buttonp = (props) => {
       setActive(false);
       setColors("button");
     }
+    console.log(result);
   };
 
   const handleClickButton1 = (name) => {
     setActive1(true);
     setColors1(name);
-   
+    // result[props.index] = 0;
     if (active === true) {
       setActive(false);
       setColors("button");
@@ -33,9 +38,8 @@ const Buttonp = (props) => {
       setActive1(false);
       setColors1("button");
     }
+    console.log(result);
   };
-
-  
 
   return (
     <>
@@ -43,6 +47,7 @@ const Buttonp = (props) => {
         className={`yes-btn icon-conatiner ${color}`}
         onClick={() => {
           handleClickButton(props.name1);
+          
         }}
       >
         {props.name1}
@@ -51,6 +56,7 @@ const Buttonp = (props) => {
         className={`yes-btn icon-conatiner ${color1}`}
         onClick={() => {
           handleClickButton1(props.name2);
+         
         }}
       >
         {props.name2}

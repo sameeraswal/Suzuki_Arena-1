@@ -22,6 +22,9 @@ export default function Random() {
     
   //   // console.log(title);
   // };
+  useEffect(() => {
+      localStorage.setItem('random', JSON.stringify(randomNum))
+  },[randomNum])
 
   const [play, setPlay] = useState(false);
 
