@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import wordpattern from "../Puzzleanswer.png";
 import Navbar from "../Navbar";
 import "./puzzlepage.css";
@@ -19,7 +19,8 @@ function randomnum(){
 }
 
 const Puzzlechoice = () => {
-  const [num, setNum] = useState(randomnum)
+  const [num, setNum] = useState(randomnum);
+  
   
   let response = {
     status: true,

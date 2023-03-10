@@ -1,6 +1,8 @@
 import React, { useState,useRef } from "react";
 import useEffect from "react";
 
+
+let x = [0,0,0,0,0,0];
 const Buttonp = (props) => {
   console.log(props);
   const [color, setColors] = React.useState("");
@@ -8,13 +10,14 @@ const Buttonp = (props) => {
   const [color1, setColors1] = React.useState("");
   const [active1, setActive1] = React.useState(false);
 
-  const result = useRef([0,0,0,0,0,0]);
+  // const result = useRef([0,0,0,0,0,0]);
 
   const handleClickButton = (name) => {
     setActive(true);
     setColors(name);
-    // result[props.index] = 1;
-    result.current[props.index] = 1
+    x[props.index] = 1;
+    
+    // result.current[props.index] = 1
     if (active1 === true) {
       setActive1(false);
       setColors1("button");
@@ -23,13 +26,13 @@ const Buttonp = (props) => {
       setActive(false);
       setColors("button");
     }
-    console.log(result);
+    console.log(x);
   };
 
   const handleClickButton1 = (name) => {
     setActive1(true);
     setColors1(name);
-    // result[props.index] = 0;
+    x[props.index] = 0;
     if (active === true) {
       setActive(false);
       setColors("button");
@@ -38,7 +41,7 @@ const Buttonp = (props) => {
       setActive1(false);
       setColors1("button");
     }
-    console.log(result);
+    console.log(x);
   };
 
   return (
