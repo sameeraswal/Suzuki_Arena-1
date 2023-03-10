@@ -4,7 +4,7 @@ import Navbar from "../Navbar";
 import "./puzzlepage.css";
 import { useState } from "react";
 import Buttonp from "./Buttonp";
-import Buttonn from "./Buttonn";
+import Buttonn from "../Puzzle4/Buttonn";
 import Finishmodal from "../Modalframmer/finishmodal";
 import { motion, AnimatePresence } from "framer-motion";
 

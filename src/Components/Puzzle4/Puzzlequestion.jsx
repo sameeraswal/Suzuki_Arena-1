@@ -3,8 +3,8 @@ import wordpattern from "../wordpattern.jpg";
 import Navbar from "../Navbar";
 import "../Puzzlepage/Puzzlechoice";
 import { useState } from "react";
-import Buttonp from "../Puzzlepage/Buttonp";
-
+// import Buttonp from "../Puzzlepage/Buttonp";
+import Buttonn from "./Buttonn";
 import "./puzzleques.css";
 import bgImg from "../leaderboardfinal/05.png";
 import { motion, AnimatePresence } from "framer-motion";
@@ -13,7 +13,7 @@ import Finishmodal from "../Modalframmer/finishmodal";
 import "../modalcss.css";
 import Finishmodal3 from "../Modalframmer/finishmodal3";
 
-
+let x = [0, 0, 0, 0, 0];
 const Puzzlequestion = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -32,18 +32,21 @@ const Puzzlequestion = () => {
 
         btn1: "YES",
         btn2: "NO",
+        index: 0,
       },
       {
         question: "Q.2) Mentioned about Importance (impact) of the topic",
 
         btn1: "YES",
         btn2: "NO",
+        index: 1,
       },
       {
         question: "Q.3) Explained in an easy to understand/Interesting way",
 
         btn1: "YES",
         btn2: "NO",
+        index: 2,
       },
       {
         question:
@@ -51,14 +54,28 @@ const Puzzlequestion = () => {
 
         btn1: "YES",
         btn2: "NO",
+        index: 3,
       },
       {
         question: "Q.5) Checked understanding of the RM",
 
         btn1: "YES",
         btn2: "NO",
+        index: 4,
       },
     ],
+  };
+
+  const handleClick = (index) => {
+    console.log("from click", index);
+    x[index] = 1;
+    console.log("array", x);
+  };
+
+  const handleClick1 = (index) => {
+    console.log("from click", index);
+    x[index] = 0;
+    console.log("array", x);
   };
 
   let questions = response.data;
@@ -70,7 +87,7 @@ const Puzzlequestion = () => {
   return (
     <>
       <Navbar />
-     
+
       <div className="dashboard-container full-height">
         <img src={bgImg} alt="" className="ques-bg" />
         <div className="round-box-dashboard">Questions</div>
@@ -82,14 +99,19 @@ const Puzzlequestion = () => {
               <>
                 <div className="wordyes1">
                   <span key={i}>{item.question}</span>
-                 
-                  <Buttonp key={i} name1={item.btn1} name2={item.btn2}/>
-                 
-                  
+
+                  <Buttonn
+                    key={i}
+                    index={item.index}
+                    name1={item.btn1}
+                    name2={item.btn2}
+                    handleClick={handleClick}
+                    handleClick1={handleClick1}
+                  />
                 </div>
               </>
             ))}
-            
+
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
