@@ -10,10 +10,6 @@ import { Link } from "react-router-dom";
 const Timersection = () => {
   const [show, setShow] = useState(false);
   const [data, setData] = useState(true);
-  const timeOutFun = (e) => {
-    setTimeout(() => window.open("/puzzle","_self"), 9000);
-    // console.log(title);
-  };
 
   return (
     <div>
@@ -23,17 +19,6 @@ const Timersection = () => {
         <div className="">
           <div className="timer-container">
             <Timermin />
-            {/* <img
-              src={stopwatch}
-              alt="stop"
-              height={50}
-              width={50}
-              style={{
-                marginTop: "-90px",
-                marginLeft: "250px",
-                position: "absolute",
-              }}
-            /> */}
           </div>
   
           {/* {data && ( */}

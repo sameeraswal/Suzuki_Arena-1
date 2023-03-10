@@ -50,7 +50,7 @@ export default class Wheel extends React.Component {
         num = 11;
       }
       car = this.props.items[num].title.replace(/ /g, "").toLowerCase();
-      // alert(this.props.items[10].title)
+      // alert(car)
     } else {
       this.setState({ selectedItem: null });
       setTimeout(this.selectItem, 800);
