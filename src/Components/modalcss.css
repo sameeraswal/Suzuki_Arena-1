@@ -379,6 +379,12 @@ li {
 
   margin-bottom: -160px;
 }
+.finish-modal-btn {
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 33%;
+  bottom: 2%;
+}
 /* finish round  */
 @media screen and (max-width: 768px) {
   .backdrop-finish {
