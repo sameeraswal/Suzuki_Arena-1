@@ -9,6 +9,7 @@ const EmpRoundScore = require("../model/empRoundScoreSchema");
 const EmpFinalScore = require("../model/empFinalScoreSchema");
 const Employee = require("../model/employeeSchema");
 const WheelRounds = require("../model/wheelRoundsSchema");
+const WheelRoundLocked = require("../model/employeeWheelUnlockedRound");
 
 // submit answer of each round
 exports.submitAnswerOfQuestion = async (req, res) => {
@@ -296,13 +297,14 @@ exports.submitAnswersOfCardQuestion = async (req, res) => {
 exports.submitAnswerOfCardQuestion = async (req, res) => {
     let status = false;
     try {
-        const roundName = req.body.roundName;
+        //const roundName = req.body.roundName;
         const mspin = req.body.mspin;
+        const roundOrder = req.body.roundOrder;
         let questionId = req.body.questionId;
         let cId = req.body.cId;
-        console.log(mspin, roundName, questionId, cId)
+        //console.log(mspin, roundName, questionId, cId)
 
-        console.log(roundName);
+        //console.log(roundName);
         const checkemployeeExists = await Employee.findOne({ mspin: mspin });
         if (!checkemployeeExists) {
             return res.status(404).json({
@@ -324,7 +326,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
             //         });
 
             //     }
-            const round = await WheelRounds.findOne({ roundName: roundName }, { correctAnswers: 1, _id: 0 });
+            const round = await WheelRounds.findOne({ roundOrder: roundOrder }, { correctAnswers: 1, _id: 0 });
 
             if (round) {
                 console.log("round fromwheel round schema", round)
@@ -374,7 +376,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                     return employeeAnswer;
                 }
 
-                const employeeAnsExists = await EmployeeAnswer.find({ mspin: mspin, roundName: roundName, "empAnswers.questionId": questionId });
+                const employeeAnsExists = await EmployeeAnswer.find({ mspin: mspin, roundName: roundOrder, "empAnswers.questionId": questionId });
                 if (employeeAnsExists.length) {
                     console.log("employee is already exits")
                     let checked = await checkAnswer();
@@ -384,20 +386,20 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
 
                     const updateQuery = async () => {
                         try {
-                            await EmployeeAnswer.updateOne({ mspin: mspin, roundName: roundName, "empAnswers.questionId": questionId }, { "$set": { empAnswers: checked } });
+                            await EmployeeAnswer.updateOne({ mspin: mspin, roundName: roundOrder, "empAnswers.questionId": questionId }, { "$set": { empAnswers: checked } });
                             res.status(201).json({
                                 status: status,
                                 message: "updated answer is submitted",
                                 Employee_result: {
                                     employeeMspin: mspin,
                                     employeeRegistrationNumber: registrationNumber,
-                                    roundName,
+                                    roundOrder,
                                     name,
                                     employeeReport: checked,
                                     correctQuestionsAnswers
                                 }
                             });
-                            await calculateScoreOfOneRoundHelper(mspin, roundName);
+                            await calculateScoreOfOneRoundHelper(mspin, roundOrder);
                             await calculateCurrentScoreOfEmpHelper(mspin);
 
                         } catch (error) {
@@ -413,7 +415,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                     let checked = await checkAnswer();
 
                     console.log("checked++++", checked)
-                    const roundReport = new EmployeeAnswer({ mspin, registrationNumber, name, roundName, empAnswers: checked });
+                    const roundReport = new EmployeeAnswer({ mspin, registrationNumber, name, roundName:roundOrder, empAnswers: checked });
                     console.log("roundReport", roundReport)
                     const ansSubmitted = await roundReport.save();
                     if (ansSubmitted) {
@@ -424,13 +426,13 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                                 employeeMspin: mspin,
                                 employeeRegistrationNumber: registrationNumber,
                                 name,
-                                roundName,
+                                roundOrder,
                                 employeeReport: checked,
                                 correctQuestionsAnswers
 
                             }
                         });
-                        await calculateScoreOfOneRoundHelper(mspin, roundName);
+                        await calculateScoreOfOneRoundHelper(mspin, roundOrder);
                         await calculateCurrentScoreOfEmpHelper(mspin);
 
                     } else {
