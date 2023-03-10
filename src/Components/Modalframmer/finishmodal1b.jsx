@@ -51,6 +51,8 @@ const Finishmodal1b = ({ handleClose, text, roundName }) => {
       .catch((error) => console.log(error.response.data.message));
     // return false;
   };
+
+
   return (
     <FinishBackdrop1b onClick={handleClose}>
       <motion.div
