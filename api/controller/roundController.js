@@ -88,6 +88,7 @@ exports.wheelRoundQuestions = async (req, res) => {
                 })
 
             }
+            rounds.questions = getRandomNFromArr(rounds.questions,rounds.questions.length);
             res.status(201).json({
                 status: status,
                 data: rounds
