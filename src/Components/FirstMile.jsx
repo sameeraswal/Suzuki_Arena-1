@@ -14,9 +14,11 @@ import ModalFrammer from "./ModalFrammer";
 import "./modalcss.css";
 import useModal from "./hooks/useModal";
 import { framerLogger } from "../stateLogger";
-import modalImg from "../Assets/The-First-Mile.png";
+import modalImg from "../Components/ModalImages/thefirstmile.jpeg";
 
 const FirstMile = () => {
+  // Modal state
+  //
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => {
@@ -34,12 +36,22 @@ const FirstMile = () => {
           <img src={modalImg} alt="" className="full-bg"/>
         </div> */}
 
-        <img
-          src={modalImg}
-          alt=""
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="save-button modal-container"
+          onClick={() => (modalOpen ? close() : open())}
+        >
+          <img
+            src={modalImg}
+            alt=""
+            height={550}
+            width={1090}
+            style={{ marginTop: "10px", position: "absolute", marginLeft:"-10px", borderRadius:"16px"}}
+          />
 
-          className="bg-img guidelines-img"
-        />
+          <h2>The First Mile</h2>
+        </motion.button>
       </div>
 
       <AnimatePresence
