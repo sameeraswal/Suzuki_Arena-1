@@ -27,6 +27,7 @@ const Altovskwid = () => {
         console.log(res, "Respnse");
       })
       .catch((error) => console.log(error.response.data.message));
+      
   }, []);
 
   const getData = () => {

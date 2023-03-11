@@ -12,6 +12,8 @@ import { APIURL } from "../../App";
 
 const Wagovstiago = () => {
   const [count, setCount] = useState(5);
+  const [questionid, setQuestionid] = useState(0);
+
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
   useEffect(() => {
@@ -25,6 +27,7 @@ const Wagovstiago = () => {
         console.log(res, "Respnse");
       })
       .catch((error) => console.log(error.response.data.message));
+
   }, []);
 
   const getData = () => {
@@ -64,10 +67,15 @@ const Wagovstiago = () => {
                   {
                     count > 0 ? setCount(count - 1) : setCount(0);
                   }
+                  setQuestionid(item.cardQuestionId)
                   setOpenModal(!item.isCorrect);
+                  localStorage.setItem("qid", JSON.stringify(questionid));
+
+                  console.log(questionid, "questionid")
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
+
 
                 <FlippableCard
                   title={item.cardTitle}
@@ -79,8 +87,8 @@ const Wagovstiago = () => {
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
               {openModal && !item.isCorrect && (
-                <Popupquestion setOpenModal={setOpenModal} />
-               )}
+                <Popupquestion setOpenModal={setOpenModal}/>
+              )}
             </>
           ))}
         </div>
