@@ -7,24 +7,25 @@ import { useEffect, useState } from "react";
 import { reactLocalStorage } from "reactjs-localstorage";
 import Popupexample from "../flipcard popup/Popup";
 
-
-function Card({ onClick, title }) {
+function Card({ onClick, title, isCorrect,cardQuestion}) {
   const [cardRemain, setCardRemain] = useState(5);
   const flipImg = require("../flipcard-img.jpg");
   const navigate = useNavigate();
   const timeOutFun = (e) => {
-    if(title.isCorrect){
-      setTimeout(() => window.open(`../afterflip/${title.cardName}`), 400);
+    if (isCorrect) {
+      // setTimeout(() => window.open(`../afterflip/${title}`), 400);
+      setTimeout(() => window.open(`../afterflip/${title}?question=${cardQuestion}`), 400);
     }
-    
+
     // console.log(title);
   };
- 
+
   return (
     <>
-     
       <div className="card" onClick={onClick}>
-        <div className={`card-back text-on-card-back ${title.classBack}`}>{title.cardName}</div>
+        <div className={`card-back text-on-card-back ${title.classBack}`}>
+          {title}
+        </div>
 
         <div className="card-front ">
           <button
@@ -41,7 +42,7 @@ function Card({ onClick, title }) {
             }}
             className="text-on-card"
           >
-            {title.cardName}
+            {title}
           </p>
         </div>
       </div>
