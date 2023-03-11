@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { APIURL } from "../../App";
 import "./Modal.css";
 
-function Popupquestion({ setOpenModal, questionId }) {
+function Popupquestion({ setOpenModal }) {
   const postData = () => {
     // console.log(mspin, name, dealership, regno);
     axios
@@ -25,6 +25,9 @@ function Popupquestion({ setOpenModal, questionId }) {
       .catch((error) => console.log(error, "error is here"));
   };
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
   return (
     <div className="modalBackground">
       <div className="modalContainer">
@@ -43,6 +46,7 @@ function Popupquestion({ setOpenModal, questionId }) {
             onClick={() => {
               setOpenModal(false);
               postData();
+              refreshPage();
             }}
             id="cancelBtn"
             className="icon-conatiner"

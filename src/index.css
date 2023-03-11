@@ -1024,6 +1024,7 @@ ul {
   margin: auto;
   margin-left: 46%;
   margin-top: 10px;
+  position: absolute;
 }
 
 .question-margin {
@@ -1034,6 +1035,7 @@ ul {
 .submit-margin{
   margin-top: 20px;
   margin-left: 334px;
+  position: absolute;
 }
 
 .question-design-container{
@@ -1043,13 +1045,13 @@ ul {
 }
 
 .head-question-design{
-  width: 240%;
-  margin-top: -130px;
+  width: 131vw;
+  margin-top: -260px;
   position: absolute;
-  height: 480px;
-  margin-left: -950px;
- 
+  height: 116vh;
+  margin-left: -144%;
 }
+ 
 
 
 /* Grow effects */
@@ -1171,11 +1173,11 @@ ul {
   border: none;
   height: 18px;
   width: 311px;
-  font-size: 16px;
+  font-size: 18px;
   margin: auto;
   margin-left: 61%;
   margin-top: 42%;
-  color: #00ff00;
+  color: red;
 }
 .btn-bottom {
   margin-top: 70px;

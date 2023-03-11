@@ -12,6 +12,8 @@ import { APIURL } from "../../App";
 
 const Dezirevsamaze = () => {
   const [count, setCount] = useState(5);
+  const [questionid, setQuestionid] = useState(0);
+
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
   useEffect(() => {
@@ -68,6 +70,12 @@ const Dezirevsamaze = () => {
                     count > 0 ? setCount(count - 1) : setCount(0);
                   }
                   setOpenModal(!item.isCorrect);
+                  setQuestionid(
+                    localStorage.setItem(
+                      "qid",
+                      JSON.stringify(item.cardQuestionId)
+                    )
+                  );
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}

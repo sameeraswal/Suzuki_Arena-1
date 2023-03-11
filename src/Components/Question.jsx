@@ -181,7 +181,7 @@ const Question = () => {
       <div className="round-box">Round 1-A</div>
 
       <div className="">
-        <div className="ques-number">{`${activeQuestion + 1}/5`}</div>
+        <div className="ques-number">{`${(activeQuestion + 1)}/5`}</div>
 
         <div className="timer-div">
           <h2>{timer}</h2>

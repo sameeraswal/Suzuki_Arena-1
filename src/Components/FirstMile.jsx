@@ -12,7 +12,7 @@ import { useState } from "react";
 import ModalFrammer from "./ModalFrammer";
 // import { add } from "./arr-utils";
 import "./modalcss.css";
-import useModal from "./hooks/useModal";
+import useModal from "./leaderboard/hooks/useModal";
 import { framerLogger } from "../stateLogger";
 import modalImg from "../Assets/The-First-Mile.png";
 

@@ -56,8 +56,8 @@ import Enterscore6 from "./Components/Enterscore6";
 import Puzzlecase from "./Components/puzzlecase/Puzzlecase";
 
 export const APIURL = "http://localhost:4500";
-export const APIURLLOCAL="http://localhost:3000"
-export const QUESTIONIMAGEPATH="../Assets/Questions/Round1-A/"
+export const APIURLLOCAL = "http://localhost:3000";
+export const QUESTIONIMAGEPATH = "../Assets/Questions/Round1-A/";
 const App = () => {
   // API URLs
 
@@ -221,41 +221,20 @@ const App = () => {
             path="/afterflipcasestudy"
             element={<Afterflipcasestudy />}
           ></Route>
-          <Route
-            path="/brezzavsxuv300"
-            element={<Brewsuv />}
-          ></Route>
+          <Route path="/brezzavsxuv300" element={<Brewsuv />}></Route>
           <Route path="/altok10vskwid" element={<Altovskwid />}></Route>
-          <Route
-            path="/celeriovstiago"
-            element={<CelvsTia />}
-          ></Route>
+          <Route path="/celeriovstiago" element={<CelvsTia />}></Route>
           <Route path="/dzirevsamaze" element={<Dezirevsamaze />}></Route>
-          <Route
-            path="/dzirevstigor"
-            element={<Dezirevstiger />}
-          ></Route>
+          <Route path="/dzirevstigor" element={<Dezirevstiger />}></Route>
           <Route path="/dzirevsaura" element={<Desvsaura />}></Route>
-          <Route
-            path="/ertigavscarens"
-            element={<Ertvscare />}
-          ></Route>
-          <Route
-            path="/ertigavstriber"
-            element={<Ertvstrib />}
-          ></Route>
-          <Route
-            path="/spressovskwid"
-            element={<Sprevskwid />}
-          ></Route>
+          <Route path="/ertigavscarens" element={<Ertvscare />}></Route>
+          <Route path="/ertigavstriber" element={<Ertvstrib />}></Route>
+          <Route path="/spressovskwid" element={<Sprevskwid />}></Route>
           <Route
             path="/swiftvsgrandi10nios"
             element={<Swiftvsgrandi10 />}
           ></Route>
-          <Route
-            path="/swiftvsaltroz"
-            element={<Swifvsi20 />}
-          ></Route>
+          <Route path="/swiftvsaltroz" element={<Swifvsi20 />}></Route>
           <Route path="/wagonrvstiago" element={<Wagovstiago />}></Route>
           <Route path="/enterertiga" element={<Enterertiga />}></Route>
           <Route path="/enterbrezza" element={<Enterbrezza />}></Route>

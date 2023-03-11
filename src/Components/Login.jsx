@@ -56,15 +56,12 @@ const Login = () => {
 
   const arena = require("./Pratham.png");
   const navigateLogin = () => {
-    console.log(status, "status hai");
-    setTimeout(
-      () => (!status ? window.open("./dashboard", "_self") : status),
-      3000
-    );
-    // setTimeout(()=>{
-    // if (status) {
-    //   navigate("/dashboard");
-    // }}),200);
+    mspin &&
+      regno ? (
+      setTimeout(
+        () => (!status ? window.open("./dashboard", "_self") : status),
+        2000
+      )) : (setMessage("Please Enter details"));
   };
   // const [mspin, setMspin] = useState([]);
 
