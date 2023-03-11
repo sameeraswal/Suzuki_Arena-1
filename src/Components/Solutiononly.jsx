@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import modalImg from '../Components/ModalImages/Solutions-Only (1).png'
+import modalImg from '../Assets/Solutions-Only.png'
 import "./modalcss.css";
 import Modalframmerso from "./Modalframmer/Modalframmerso";
 const Solutionsonly = () => {
@@ -21,26 +21,15 @@ const Solutionsonly = () => {
   return (
     <div>
       <Navbar />
+      <img src={modalImg} alt="" className="background-image"/>
       <div className="">
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="save-button modal-container"
+          className="save-button modal-guide-btn"
           onClick={() => (modalOpen ? close() : open())}
         >
-          <img
-            src={modalImg}
-            alt=""
-            height={550}
-            width={1090}
-            style={{
-              marginTop: "10px",
-              position: "absolute",
-              marginLeft: "-10px",
-              borderRadius: "16px",
-            }}
-          />
-          <h2>Solutions Only</h2>
+          Guidelines
         </motion.button>
       </div>
 
