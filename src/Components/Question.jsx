@@ -8,7 +8,8 @@ import "./modalcss.css";
 import Finishmodal from "./Modalframmer/finishmodal";
 import axios from "axios";
 import { APIURL, QUESTIONIMAGEPATH } from "../App";
-import { bgImg } from "./NewImages/Spin-Wheel_BG.png";
+import bgImg from "../Assets/Question/01.png";
+import bgImg1 from "../Assets/Question/04.png"
 
 const Question = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -88,7 +89,6 @@ const Question = () => {
 
   const handleToggleClasslistRef = (ref) => {
     if (!ref.current) {
-     
       return;
     }
     if (!ref.current.classList.contains("question-option-color")) {
@@ -132,7 +132,7 @@ const Question = () => {
       })
       .catch((error) => console.log(error, "error is here"));
   }, [activeQuestion]);
-  
+
   const [mspin, setMspin] = useState("");
   const [regno, setRegno] = useState("");
 
@@ -177,10 +177,10 @@ const Question = () => {
   return (
     <>
       <Navbar />
-
+      <img src={bgImg} alt="" className="background-image" />
       <div className="round-box">Round 1-A</div>
 
-      <div className="question-container">
+      <div className="">
         <div className="ques-number">{`${activeQuestion + 1}/5`}</div>
 
         <div className="timer-div">
@@ -235,43 +235,49 @@ const Question = () => {
             </>
           )}
         </div>
-        {v && (
-          <div className="question-video">
-            {/* {console.log(v.video)} */}
-            <iframe width="520" height="225" src={QUESTIONIMAGEPATH+v}></iframe>
-          </div>
-        )}
 
-        <div className="question-box">
-          <div className="question-div ">
-            <h2 key={i}>{question}</h2>
-          </div>
-          <div className="option-div">
-            <ul>
-              {c.map((item, i) => (
-                <>
-                  {
-                    <li
-                      //value = cid
-                      onClick={(event) => {
-                        handleToggleClasslistRef(ref);
-                        event.stopPropagation();
-                        ref.current = event.target;
-                        handleToggleClasslistRef(ref);
-                        setCID(item.cId);
-                      }}
-                      className="icon-conatiner"
-                      
-                    >
-                      {item.name}
-                    </li>
-                  }
-                </>
-              ))}
-            </ul>
-          </div>
+        <div className="question-design-container">
+          {v && (
+            <div className="question-video">
+              {/* {console.log(v.video)} */}
+              <iframe
+                width="430"
+                height="305"
+                src={QUESTIONIMAGEPATH + v}
+              ></iframe>
+            </div>
+          )}
 
-          <div>
+          <div className="question-box">
+          <img src={bgImg1} alt="" className="head-question-design"/>
+            <div className="question-div ">
+              <h2 key={i}>{question}</h2>
+            </div>
+            <div className="">
+              <ul>
+                {c.map((item, i) => (
+                  <>
+                    {
+                      <li
+                        //value = cid
+                        onClick={(event) => {
+                          handleToggleClasslistRef(ref);
+                          event.stopPropagation();
+                          ref.current = event.target;
+                          handleToggleClasslistRef(ref);
+                          setCID(item.cId);
+                        }}
+                        className="icon-conatiner option-width"
+                      >
+                        {item.name}
+                      </li>
+                    }
+                  </>
+                ))}
+              </ul>
+            </div>
+
+            <div></div>
             {activeQuestion !== 4 ? (
               cid > 0 ? (
                 <button
