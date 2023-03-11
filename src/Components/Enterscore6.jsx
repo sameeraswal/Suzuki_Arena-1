@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 // import enterscore from "./enterscore.jpeg";
-import bgImg from "./scorebg.png";
-import bgImg1 from "./score02.png";
+import bgImg from '../Assets/Enter-Score.png'
 import Finishmodal from "./Modalframmer/finishmodal";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -60,21 +59,23 @@ const Enterscore6 = () => {
   return (
     <div>
       <Navbar></Navbar>
+      <img src={bgImg} alt="" className="background-image"/>
       <div className="enter-score-container">
-        <img src={bgImg} alt="" className="score-bg-img" />
-        <img src={bgImg1} alt="" className="vector-img" height={5} width={5} />
+
+      <h1 className="score-text">Enter score</h1>
+       
         {show && (
           <input
             type="text"
             placeholder="score"
-            className="input-correct inputscore-btn"
+            className="input-correct1 input-crct"
             onChange={handleChangescore}
           />
         )}
         {/* {data && ( */}
         {/* <Link to="/puzzle"> */}
         <button
-          className="roll icon-conatiner btn-width scorepage-btn"
+          className="roll icon-conatiner inputscore-btn1"
           onClick={() => {
             setShow(true);
           }}
@@ -85,7 +86,7 @@ const Enterscore6 = () => {
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="roll icon-conatiner finish-card finish-btn-enter-score"
+        className="roll icon-conatiner finish-score-btn"
         onClick={() => {
           modalOpen ? close() : open();
           fetchData();
