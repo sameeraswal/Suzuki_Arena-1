@@ -13,99 +13,16 @@ import { APIURL } from "../../App";
 const CelvsTia = () => {
   const [count, setCount] = useState(5);
   const [openModal, setOpenModal] = useState(false);
-
-  let response = {
-    status: true,
-    data: [
-      {
-        id: 0,
-        cardName: "Height",
-        class: "front-icon1",
-        classBack: "back-1",
-        isCorrect: true,
-      },
-      {
-        id: 1,
-        cardName: "Length",
-        class: "front-icon2",
-        classBack: "back-2",
-        isCorrect: false,
-      },
-      {
-        id: 2,
-        cardName: "Power",
-        class: "front-icon3",
-        classBack: "back-3",
-        isCorrect: true,
-      },
-      {
-        id: 3,
-        cardName: "Torque",
-        class: "front-icon4",
-        classBack: "back-4",
-        isCorrect: false,
-      },
-      {
-        id: 4,
-        cardName: "Bootspace",
-        class: "front-icon5",
-        classBack: "back-5",
-        isCorrect: true,
-      },
-      {
-        id: 5,
-        cardName: "Mileage",
-        class: "front-icon6",
-        classBack: "back-6",
-        isCorrect: false,
-      },
-      {
-        id: 6,
-        cardName: "Width",
-        class: "front-icon7",
-        classBack: "back-7",
-        isCorrect: false,
-      },
-      {
-        id: 7,
-        cardName: "Wheelbase",
-        class: "front-icon8",
-        classBack: "back-8",
-        isCorrect: true,
-      },
-      {
-        id: 8,
-        cardName: "Engine",
-        class: "front-icon9",
-        classBack: "back-9",
-        isCorrect: true,
-      },
-      {
-        id: 9,
-        cardName: "FTC",
-        class: "front-icon10",
-        classBack: "back-10",
-        isCorrect: false,
-      },
-    ],
-  };
-
-
-  // useEffect(() => {
-  //    setCount(count-1);
-  // }, [count])
-  // let result = [];
   const [result, setResult] = useState([]);
   useEffect(() => {
     axios
       .post(`${APIURL}/api/v1/wheelRoundQuestions`, {
-        // mspin: JSON.parse(localStorage.getItem("mspin")),
-        mspin: "123",
-        roundOrder: "1",
+        mspin: JSON.parse(localStorage.getItem("mspin")),
+        roundOrder: JSON.parse(localStorage.getItem("roundName")),
       })
       .then((res) => {
         setResult(res.data.data.questions);
-        console.log(result, "Respnse");
+        console.log(res, "Respnse");
       })
       .catch((error) => console.log(error.response.data.message));
   }, []);
@@ -145,6 +62,7 @@ const CelvsTia = () => {
                   isCorrect={item.isCorrect}
                   cardQuestion={item.cardQuestion}
                   isCardQuestionDidabled={item.isCardQuestionDidabled}
+                  cardQuestionId={item.cardQuestionId}
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
@@ -157,7 +75,7 @@ const CelvsTia = () => {
         <Link to="/">
           <button
             className="roll icon-conatiner finish-card"
-            onClick={getData()}
+            // onClick={getData()}
           >
             Finish Round
           </button>

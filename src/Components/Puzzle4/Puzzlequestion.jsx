@@ -12,6 +12,8 @@ import ModalFrammer from "../ModalFrammer";
 import Finishmodal from "../Modalframmer/finishmodal";
 import "../modalcss.css";
 import Finishmodal3 from "../Modalframmer/finishmodal3";
+import axios from "axios";
+import { APIURL } from "../../App";
 
 let x = [0, 0, 0, 0, 0];
 const Puzzlequestion = () => {
@@ -83,6 +85,33 @@ const Puzzlequestion = () => {
   const timeOutFun = () => {
     setTimeout(() => window.open("/finish1b", "_self"), 3000);
   };
+  let count = 0;
+  let newCount;
+
+  const noOfCount = (count) => {
+    for (let i = 0; i < x.length; i++) {
+      if (x[i] === 1) {
+        count++;
+      }
+      console.log(x[i], "xx[i]");
+      console.log(count);
+    }
+    newCount = count * 10;
+    console.log(newCount, "newCount");
+  };
+  const fetchData = () => {
+    // console.log(score, JSON.parse(localStorage.getItem("mspin")));
+    axios
+      .post(`${APIURL}/api/v1/round/submitScoreForRound`, {
+        mspin: JSON.parse(localStorage.getItem("mspin")),
+        roundName: "3",
+        score: newCount,
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <>
@@ -116,7 +145,11 @@ const Puzzlequestion = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="roll icon-conatiner sbt-btn"
-              onClick={() => (modalOpen ? close() : open())}
+              onClick={() => {
+                modalOpen ? close() : open();
+                noOfCount(count);
+                fetchData();
+              }}
             >
               Submit
             </motion.button>
