@@ -1,7 +1,7 @@
 require("../db/connection");
 const Round = require("../model/roundsSchema");
 var XLSX = require('xlsx')
-var workbook = XLSX.readFile('files/round_A-1.xlsx');
+var workbook = XLSX.readFile('files/round_1-A.xlsx');
 var sheet_name_list = workbook.SheetNames;
 var xlData = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
 console.log(xlData);
@@ -9,7 +9,7 @@ console.log(xlData);
 let formated=[];
 let round={};
 round.roundName = "1-A";
-round.roudOrder = 1;
+round.roundOrder = 1;
 round.route = "/firstmile";
 round.isRoundLocked = false;
 round.questions = [];
@@ -39,7 +39,7 @@ for(let i=0;i<xlData.length;i++){
             "cId":3,
             "name":xlData[i]["option3"]
         },{
-            "cId":3,
+            "cId":4,
             "name":xlData[i]["option4"]
         }
     );
