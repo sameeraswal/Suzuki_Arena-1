@@ -67,7 +67,7 @@ const Swifvsi20 = () => {
                   {
                     count > 0 ? setCount(count - 1) : setCount(0);
                   }
-                  // setOpenModal(!item.isCorrect);
+                  setOpenModal(!item.isCorrect);
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
@@ -81,9 +81,9 @@ const Swifvsi20 = () => {
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
-              {/* {openModal && !item.isCorrect && (
+              {openModal && !item.isCorrect && (
                 <Popupquestion setOpenModal={setOpenModal} />
-               )} */}
+               )}
             </>
           ))}
         </div>
