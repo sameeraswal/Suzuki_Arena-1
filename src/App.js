@@ -56,6 +56,7 @@ import Enterscore6 from "./Components/Enterscore6";
 import Puzzlecase from "./Components/puzzlecase/Puzzlecase";
 
 export const APIURL = "http://localhost:4500";
+export const QUESTIONIMAGEPATH="../Assets/Questions/Round1-A/"
 const App = () => {
   // API URLs
 

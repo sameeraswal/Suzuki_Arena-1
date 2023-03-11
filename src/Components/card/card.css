@@ -50,6 +50,7 @@
 .card-back {
   background-color: #a8a8a8;
   transform: rotateY(180deg);
+  color: black;
 }
 
 .card-back-border{

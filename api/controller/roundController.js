@@ -73,6 +73,9 @@ exports.wheelRoundQuestions = async (req, res) => {
         const roundOrder = req.body.roundOrder;
         const rounds = await WheelRounds.findOne({roundOrder:roundOrder}).select({ roundName: 1,route:1, roundOrder: 1, questions:1, _id: 0 }).sort({ "questions.cardQuestionId": 1 });
         if (rounds) {
+            rounds.questions.forEach((question, index, rounds) => {//set all cards as open by default
+                rounds[index]["isCardQuestionDidabled"] = false;
+            })
             status = true;
             let disabledQuestionInfo = await WheelRoundLocked.findOne({ mspin: mspin,roundOrder:roundOrder }).select({ disabledQuestions: 1});
             if (disabledQuestionInfo) {
@@ -88,6 +91,7 @@ exports.wheelRoundQuestions = async (req, res) => {
                 })
 
             }
+            //rounds.questions = getRandomNFromArr(rounds.questions,rounds.questions.length);
             res.status(201).json({
                 status: status,
                 data: rounds

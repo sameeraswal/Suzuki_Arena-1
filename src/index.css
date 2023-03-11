@@ -1350,7 +1350,12 @@ ul {
   background-color: var(--arena-color);
   color: #fff;
 }
-.please-chose{
+.please-chose {
   width: 40%;
   margin-left: 30%;
+}
+.guidelines-img {
+  width: 98.9vw;
+  background-repeat: no-repeat;
+  background-size: contain;
 }

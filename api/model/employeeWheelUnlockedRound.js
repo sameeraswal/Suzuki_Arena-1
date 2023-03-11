@@ -18,15 +18,13 @@ const wheelRoundunLockedSchema = new mongoose.Schema({
     roundOrder:{
         type: String
     },
-    name: {
-        type: String,
-        required: true
-    },
     disabledQuestions: {}
 });
 
-const emplyeeWheelUnlockedRound = mongoose.model("wheelroundlocks", wheelRoundunLockedSchema);
+//const emplyeeWheelUnlockedRound = mongoose.model("wheelroundlocks", wheelRoundunLockedSchema);
+const wheelroundlocks = mongoose.model("wheelroundlocks", wheelRoundunLockedSchema);
 
-console.log("emplyeeWheelUnlockedRound",emplyeeWheelUnlockedRound)
+//console.log("wheelroundlocks",emplyeeWheelUnlockedRound)
 
-module.exports = emplyeeWheelUnlockedRound;
+//module.exports = emplyeeWheelUnlockedRound;
+module.exports = wheelroundlocks;
