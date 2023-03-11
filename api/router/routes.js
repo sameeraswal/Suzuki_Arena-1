@@ -29,6 +29,8 @@ router.get("/api/v1/round/roundscore/mspin/:mspin/roundname/:roundname", employe
 router.get("/api/v1/quiz/finalscore/mspin/:mspin", employeeReportController.getFinalScoreOfAllRounds);
 
 router.get("/api/v1/quiz/finalscore/leaderboard", employeeReportController.getScoreOfEveryone);
+
+router.get("/api/v1/quiz/scoreboard", employeeReportController.getScoreBoardRoundLevel);
 router.post("/api/v1/finishround", roundController.finishRound);
 
 
