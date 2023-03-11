@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { reactLocalStorage } from "reactjs-localstorage";
 import Popupexample from "../flipcard popup/Popup";
 
-function Card({ onClick, title, isCorrect, cardQuestion }) {
+function Card({ onClick, title, isCorrect, cardQuestion,cardQuestionId }) {
   const metaData = {};
   metaData["Height"] = {
     classFront: "front-icon1",
@@ -49,6 +49,9 @@ function Card({ onClick, title, isCorrect, cardQuestion }) {
     classFront: "front-icon10",
     classBack: "back-10",
   };
+  let link=JSON.parse(localStorage.getItem("carRoute"));
+  // let cardQuestionId=JSON.parse(localStorage.getItem("cardQuestionId"));
+
   const [cardRemain, setCardRemain] = useState(5);
   const flipImg = require("../flipcard-img.jpg");
   const navigate = useNavigate();
@@ -56,7 +59,11 @@ function Card({ onClick, title, isCorrect, cardQuestion }) {
     if (isCorrect) {
       // setTimeout(() => window.open(`../afterflip/${title}`), 400);
       setTimeout(
-        () => window.open(`../afterflip/${title}?question=${cardQuestion}`),
+        () =>
+          window.open(
+            `../afterflip/${title}?question=${cardQuestion}&link=${link}&Id=${cardQuestionId}`,
+            "_self"
+          ),
         400
       );
     }

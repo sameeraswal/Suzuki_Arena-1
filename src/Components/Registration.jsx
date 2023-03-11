@@ -44,7 +44,6 @@ function Registration() {
       .catch((error) => console.log(error, "error is here"));
   };
   const postData = () => {
-    console.log(mspin, name, dealership, regno);
     axios
       .post(`${APIURL}/api/v1/employee/register`, {
         mspin: update,

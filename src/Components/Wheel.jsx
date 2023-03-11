@@ -13,18 +13,6 @@ import axios from "axios";
 import { APIURL } from "../App";
 import Sprevskwid from "./Flipcardspages/Sprevskwid";
 
-// const [activeQuestion, setActiveQuestion] = useState(0);
-// const { questions } = data;
-// //id variable
-// const { question, choices, video, id } = questions[activeQuestion];
-// const { name, cID, src } = choices;
-
-// const [selectop, setSelectOp] = useState("#fff");
-// const onClickNext = () => {
-//   //HTTP call
-
-//   setActiveQuestion((id) => id + 1);
-// };
 let car;
 let randomWheelNo;
 export default class Wheel extends React.Component {
@@ -45,8 +33,7 @@ export default class Wheel extends React.Component {
         this.props.onSelectItem(selectedItem);
       }
       this.setState({ selectedItem });
-      // let num = selectedItem - 3;
-      let num = 3;
+      let num = selectedItem - 3;
       if (num === -3) {
         num = 9;
       } else if (num === -2) {
@@ -56,8 +43,9 @@ export default class Wheel extends React.Component {
       }
       car = this.props.items[num].title.replace(/ /g, "").toLowerCase();
       // alert(car)
-      // randomWheelNo = selectedItem - 3;
-      randomWheelNo = 3;
+      console.log(this.props.items[num].title)
+      randomWheelNo = num;
+      // randomWheelNo = 3;
     } else {
       this.setState({ selectedItem: null });
       setTimeout(this.selectItem, 800);
@@ -71,7 +59,9 @@ export default class Wheel extends React.Component {
   timeOutFun() {
     // console.log(car,`/${car}`)
     localStorage.setItem("roundName", JSON.stringify(randomWheelNo));
-    setTimeout(() => window.open(`/${car}`, "_self"), 18000);
+    localStorage.setItem("carRoute", JSON.stringify(car));
+
+    // setTimeout(() => window.open(`/${car}`, "_self"), 18000);
   }
 
   render() { 

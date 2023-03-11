@@ -1,6 +1,8 @@
 import Navbar from "./Navbar";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { APIURL, APIURLLOCAL } from "../App";
+import axios from "axios";
 // import { useBetween } from 'use-between';
 export const fal = false;
 const Afterflip = ({ title }) => {
@@ -17,6 +19,40 @@ const Afterflip = ({ title }) => {
   // const params = new URLSearchParams(window.location.pathname);
   const location = useLocation();
   const params = new URLSearchParams(location.search);
+
+  const [score, setScore] = useState("");
+
+  const handleChangescore = (event) => {
+    console.log(event.target.value);
+    setScore(event.target.value);
+  };
+
+  const timeout = () => {
+    // 👇️ redirects to an external URL
+    setTimeout(
+      () => window.open(`${APIURLLOCAL}/${params.get("link")}`, "_self"),
+      400
+    );
+  };
+  const postData = () => {
+    // console.log(mspin, name, dealership, regno);
+    axios
+      .post(`${APIURL}/api/v1/round/submitcardanswer`, {
+        mspin: JSON.parse(localStorage.getItem("mspin")),
+        roundOrder: JSON.parse(localStorage.getItem("roundName")),
+        questionId: params.get("Id"),
+        cId: score,
+      })
+
+      .then((res) => {
+        // setMessage(res.data.message);
+
+        console.log(res.data, "Message is hewre");
+        // alert(res.data.message);
+      })
+      .catch((error) => console.log(error, "error is here"));
+  };
+
   const img = require("./wagon_spec.webp");
   return (
     <>
@@ -33,12 +69,19 @@ const Afterflip = ({ title }) => {
                   className="width-input"
                   placeholder="Enter Answer"
                   required
+                  onChange={handleChangescore}
                 />
-                <Link to={params.get("question")}>
-                  <button className="card-btn-style" onClick={() => {}}>
-                    Submit
-                  </button>
-                </Link>
+                {/* <Link to={params.get("link")}> */}
+                <button
+                  className="card-btn-style"
+                  onClick={() => {
+                    postData();
+                    timeout();
+                  }}
+                >
+                  Submit
+                </button>
+                {/* </Link> */}
               </div>
             </div>
           </div>
