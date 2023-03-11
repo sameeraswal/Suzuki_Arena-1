@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import wordpattern from "../Puzzleanswer.png";
+import wordpattern from "./WhatsApp Image 2023-03-11 at 18.53.10.jpeg";
 import Navbar from "../Navbar";
 import "./puzzlepage.css";
 import { useState } from "react";

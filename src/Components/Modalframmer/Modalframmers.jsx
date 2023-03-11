@@ -59,27 +59,27 @@ const ModalText = () => (
 
         <div>
           {" "}
-          Throw of Dice: To get a random scenario that carries 15 marks
+          &nbsp;Throw of Dice: To get a random scenario that carries 15 marks
         </div>
       </div>
       <div>
         <div>◉</div>
         <div>
-          Participant would be given a scenario with a specific customer
-          profile, including his/her usage & needs
+        &nbsp;Participant would be given a scenario with a specific customer
+          profile,  &nbsp;including his/her usage & needs
         </div>
       </div>
       <div>
         <div>◉</div>
-        <div>Stage 1: Self + Brand Introduction Pitch</div>
+        <div> &nbsp;Stage 1: Self + Brand Introduction Pitch</div>
       </div>
       <div>
         <div>◉</div>
-        <div>Stage 2: Understanding of Customers' Needs & Aspirations</div>
+        <div> &nbsp;Stage 2: Understanding of Customers' Needs & Aspirations</div>
       </div>
       <div>
         <div>◉</div>
-        <div>The duration of this scenario is 10 minutes</div>
+        <div> &nbsp;The duration of this scenario is 10 minutes</div>
       </div>
     </h5>
   </div>

@@ -59,15 +59,15 @@ const ModalText = () => (
         <div>◉</div>
 
         <div>
-          15 Questions in 60 seconds for each participant (1 mark per question)
-          Participant has the option to answer or pass Total duration of this
-          round is 25 minutes
+        &nbsp;15 Questions in 60 seconds for each participant (1 mark per question)
+        &nbsp;Participant has the option to answer or pass Total duration of this
+        &nbsp;round is 25 minutes
         </div>
       </div>
       <div>
         <div>◉</div>
 
-        <div>Each question carries 10 marks</div>
+        <div>&nbsp;Each question carries 10 marks</div>
       </div>
     </h5>
   </div>
