@@ -38,7 +38,7 @@ const Casestudy = () => {
         </p>
       </div>
 
-      <Link to="/puzzlequestion">
+      <Link to="/puzzlecase">
         <button
           className="third icon-conatiner scoring-btn case-study-btn"
           onClick={getData}

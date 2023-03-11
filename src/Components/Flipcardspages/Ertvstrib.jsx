@@ -28,6 +28,20 @@ const Ertvstrib = () => {
       })
       .catch((error) => console.log(error.response.data.message));
   }, []);
+  const getData = () => {
+    axios
+      .post(`${APIURL}/api/v1/finishround`, {
+        mspin: JSON.parse(localStorage.getItem("mspin")),
+        roundName: "2",
+      })
+      .then((res) => {
+        console.log(JSON.parse(localStorage.getItem("mspin")), "MSPIN");
+        console.log(res, "Response of roundlist");
+        console.log(2, "Response of RoundName");
+      })
+      .catch((error) => console.log(error.response.data.message));
+    // return false;
+  };
 
   return (
     <>
@@ -77,7 +91,7 @@ const Ertvstrib = () => {
         <Link to="/">
           <button
             className="roll icon-conatiner finish-card"
-            // onClick={getData()}
+            onClick={getData()}
           >
             Finish Round
           </button>
