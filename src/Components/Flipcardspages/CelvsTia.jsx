@@ -90,6 +90,7 @@ const CelvsTia = () => {
     ],
   };
 
+
   // useEffect(() => {
   //    setCount(count-1);
   // }, [count])
@@ -100,7 +101,7 @@ const CelvsTia = () => {
       .post(`${APIURL}/api/v1/wheelRoundQuestions`, {
         // mspin: JSON.parse(localStorage.getItem("mspin")),
         mspin: "123",
-        roundOrder: "3",
+        roundOrder: "1",
       })
       .then((res) => {
         setResult(res.data.data.questions);
@@ -139,7 +140,12 @@ const CelvsTia = () => {
               >
                 {console.log(item.cardTitle, "before Card Title")}
 
-                <FlippableCard title={item.cardTitle} isCorrect={item.isCorrect} cardQuestion={item.cardQuestion}/>
+                <FlippableCard
+                  title={item.cardTitle}
+                  isCorrect={item.isCorrect}
+                  cardQuestion={item.cardQuestion}
+                  isCardQuestionDidabled={item.isCardQuestionDidabled}
+                />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
               {/* {openModal && !item.isCorrect && (
