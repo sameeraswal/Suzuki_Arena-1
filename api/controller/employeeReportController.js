@@ -436,7 +436,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                                 await roundLockObj.save();
                             }
                             //END mark this card as used
-                            
+
                             res.status(201).json({
                                 status: "success",
                                 message: "answer is submitted",
@@ -495,8 +495,8 @@ exports.submitScoreForRound = async (req, res) => {
     try {
         const roundName = req.body.roundName;
         const mspin = req.body.mspin;
+        let questionId = req.body.questionId || 1;
 
-        let questionId = 1;
         let cId = 1;
         let score = parseInt(req.body.score);
 
