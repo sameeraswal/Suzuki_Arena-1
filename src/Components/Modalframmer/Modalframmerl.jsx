@@ -57,16 +57,16 @@ const ModalText = () => (
         <div>◉</div>
 
         <div>
-          Question in the form of riddles will be displayed on the screen.
+        &nbsp;Question in the form of riddles will be displayed on the screen.
         </div>
       </div>
       <div>
         <div>◉</div>
 
         <div>
-          Participant first to push buzzer gets a chance to answer ____Questions
-          in ___ seconds for each participant that carries 1 mark per question
-          Total duration of this round is 20 minutes
+        &nbsp;Participant first to push buzzer gets a chance to answer ____Questions
+        &nbsp;in ___ seconds for each participant that carries 1 mark per question
+        &nbsp;Total duration of this round is 20 minutes
         </div>
       </div>
     </h5>

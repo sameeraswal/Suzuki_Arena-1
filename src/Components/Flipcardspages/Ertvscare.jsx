@@ -12,6 +12,8 @@ import { APIURL } from "../../App";
 
 const Ertvscare = () => {
   const [count, setCount] = useState(5);
+  const [questionid, setQuestionid] = useState(0);
+
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
   useEffect(() => {
@@ -66,7 +68,13 @@ const Ertvscare = () => {
                   {
                     count > 0 ? setCount(count - 1) : setCount(0);
                   }
-                  // setOpenModal(!item.isCorrect);
+                  setOpenModal(!item.isCorrect);
+                  setQuestionid(
+                    localStorage.setItem(
+                      "qid",
+                      JSON.stringify(item.cardQuestionId)
+                    )
+                  );
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
@@ -80,9 +88,9 @@ const Ertvscare = () => {
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
-              {/* {openModal && !item.isCorrect && (
+              {openModal && !item.isCorrect && (
                 <Popupquestion setOpenModal={setOpenModal} />
-               )} */}
+               )}
             </>
           ))}
         </div>

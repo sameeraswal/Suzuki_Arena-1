@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import modalImg from '../Components/ModalImages/Ask-Express.png'
+import modalImg from '../Assets/Ask-Express.png'
 import "./modalcss.css";
 
 import ModalFrammere from "./Modalframmer/Modalframmere";
@@ -23,21 +23,15 @@ const Askexpress = () => {
   return (
     <div>
       <Navbar />
+      <img src={modalImg} alt="" className="background-image"/>
       <div className="">
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="save-button modal-container"
+          className="save-button modal-guide-btn"
           onClick={() => (modalOpen ? close() : open())}
         >
-        <img
-            src={modalImg}
-            alt=""
-            height={550}
-            width={1090}
-            style={{ marginTop: "10px", position: "absolute", marginLeft:"-10px", borderRadius:"16px"}}
-          />
-          <h2>Ask Express</h2>
+       Guidelines
         </motion.button>
       </div>
 

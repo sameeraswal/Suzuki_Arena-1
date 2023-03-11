@@ -12,8 +12,11 @@ import { APIURL } from "../../App";
 
 const Altovskwid = () => {
   const [count, setCount] = useState(5);
+  const [questionid, setQuestionid] = useState(0);
+
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
+  localStorage.setItem("co", JSON.stringify(5));
 
   useEffect(() => {
     axios
@@ -42,15 +45,17 @@ const Altovskwid = () => {
       .catch((error) => console.log(error.response.data.message));
     // return false;
   };
+
+  // const getCardCount = () => {
+  //   localStorage.setItem("co", JSON.stringify(setCount(count - 1)));
+  // };
   return (
     <>
       <Navbar></Navbar>
 
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">
-      Alto K10 VXi+ Vs Kwid RXT
-      </div>
+      <div className="round-box bg-correct">Alto K10 VXi+ Vs Kwid RXT</div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
@@ -67,7 +72,14 @@ const Altovskwid = () => {
                   {
                     count > 0 ? setCount(count - 1) : setCount(0);
                   }
-                  // setOpenModal(!item.isCorrect);
+
+                  setOpenModal(!item.isCorrect);
+                  setQuestionid(
+                    localStorage.setItem(
+                      "qid",
+                      JSON.stringify(item.cardQuestionId)
+                    )
+                  );
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
@@ -81,9 +93,9 @@ const Altovskwid = () => {
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
-              {/* {openModal && !item.isCorrect && (
+              {openModal && !item.isCorrect && (
                 <Popupquestion setOpenModal={setOpenModal} />
-               )} */}
+              )}
             </>
           ))}
         </div>

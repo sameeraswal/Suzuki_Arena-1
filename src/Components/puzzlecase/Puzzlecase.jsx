@@ -13,6 +13,7 @@ import "../modalcss.css";
 import Finishmodal3 from "../Modalframmer/finishmodal3";
 import axios from "axios";
 import { APIURL } from "../../App";
+import Finishmodal4 from "../Modalframmer/finsishmodal4";
 
 let x = [0, 0, 0, 0, 0];
 const Puzzlecase = () => {
@@ -166,7 +167,7 @@ const Puzzlecase = () => {
               onExitComplete={() => null}
             >
               {modalOpen && (
-                <Finishmodal3 modalOpen={modalOpen} handleClose={close} />
+                <Finishmodal4 modalOpen={modalOpen} handleClose={close} />
               )}
             </AnimatePresence>
           </div>

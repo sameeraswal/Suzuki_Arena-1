@@ -142,12 +142,21 @@ button {
 }
 
 .save-button {
-  padding: 0;
+  padding: 10px;
   margin: 2rem auto auto 0;
   background: var(--gradient);
-  color: var(--dark);
-  width: 100%;
+  color: var(--arena-color);
+  width: 13%;
   height: 150%;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+
+.modal-guide-btn{
+   margin-top: 400px;
+  margin-left: 170px;
+ 
 }
 
 .close-button {

@@ -58,15 +58,15 @@ const ModalText = () => (
 
         <div>
           {" "}
-          Pick a card to get a random scenario related to Calculate pricing &
-          discount, MS Subscribe feasibility, MS Smart finance that carries 15
-          marks
+          &nbsp;Pick a card to get a random scenario related to Calculate pricing &
+          &nbsp;discount, MS Subscribe feasibility, MS Smart finance that carries 15
+          &nbsp;&nbsp;marks
         </div>
       </div>
       <div>
         <div>◉</div>
 
-        <div>Duration of this round is 15 minutes</div>
+        <div>&nbsp;Duration of this round is 15 minutes</div>
       </div>
     </h5>
   </div>

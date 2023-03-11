@@ -12,9 +12,9 @@ import { useState } from "react";
 import ModalFrammer from "./ModalFrammer";
 // import { add } from "./arr-utils";
 import "./modalcss.css";
-import useModal from "./hooks/useModal";
+import useModal from "./leaderboard/hooks/useModal";
 import { framerLogger } from "../stateLogger";
-import modalImg from "../Components/ModalImages/thefirstmile.jpeg";
+import modalImg from "../Assets/The-First-Mile.png";
 
 const FirstMile = () => {
   // Modal state
@@ -31,6 +31,7 @@ const FirstMile = () => {
   return (
     <>
       <Navbar />
+      <img src={modalImg} alt="" className="background-image"/>
       <div className="">
         {/* <div>
           <img src={modalImg} alt="" className="full-bg"/>
@@ -39,18 +40,12 @@ const FirstMile = () => {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="save-button modal-container"
+          className="save-button modal-guide-btn"
           onClick={() => (modalOpen ? close() : open())}
         >
-          <img
-            src={modalImg}
-            alt=""
-            height={550}
-            width={1090}
-            style={{ marginTop: "10px", position: "absolute", marginLeft:"-10px", borderRadius:"16px"}}
-          />
+         
 
-          <h2>The First Mile</h2>
+        Guidelines
         </motion.button>
       </div>
 

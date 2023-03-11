@@ -872,14 +872,14 @@ input:focus {
 .timer-div {
   height: 40px;
   width: 120px;
-  /* background-color: #0e5c91; */
+  background-color: white;
   border: 1px solid gray;
   border-radius: 12px;
   padding-left: 10px;
   padding-top: 5px;
   display: flex;
   float: right;
-  margin-right: 36px;
+  margin-right: 48px;
   margin-top: 37px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -915,7 +915,7 @@ input:focus {
   float: left;
   margin-left: 36px;
   margin-top: 37px;
-  color: var(--arena-color);
+  color: white;
   font-weight: bold;
   justify-content: center;
   align-items: center;
@@ -952,10 +952,10 @@ input:focus {
   position: relative;
 }
 .question-video {
-  display: flex;
-  justify-content: center;
+  width: 100px;
+  margin-top: 130px;
   padding-top: 37px;
-  margin-left: 135px;
+  margin-left: 10px;
 }
 
 ul li {
@@ -986,8 +986,15 @@ ul li {
   /* padding: 20px; */
   display: flex;
   justify-content: center;
-  color: var(--arena-color);
+  color: white;
+  margin-bottom: 30px;
 }
+
+.question-div h2{
+  text-align: center;
+}
+
+
 
 ul {
   display: flex;
@@ -995,16 +1002,17 @@ ul {
   justify-content: space-evenly;
 }
 .question-box {
-  width: 75vw;
+  /* this */
+  width: 50vw; 
   height: 30vh;
   /* border: 4px solid red; */
   margin: auto;
-  margin-top: 50px;
+  margin-top: 140px;
   /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
   border-radius: 10px;
   position: absolute;
-  margin-left: 38px;
+  margin-left: 560px;
 }
 
 .question-btn {
@@ -1016,6 +1024,7 @@ ul {
   margin: auto;
   margin-left: 46%;
   margin-top: 10px;
+  position: absolute;
 }
 
 .question-margin {
@@ -1024,10 +1033,25 @@ ul {
 }
 
 .submit-margin{
-  margin-top: 10px;
-  margin-left: 514px;
+  margin-top: 20px;
+  margin-left: 334px;
+  position: absolute;
 }
 
+.question-design-container{
+  display: flex;
+  /* justify-content: flex-start; */
+  flex-direction: column;
+}
+
+.head-question-design{
+  width: 131vw;
+  margin-top: -260px;
+  position: absolute;
+  height: 116vh;
+  margin-left: -144%;
+}
+ 
 
 
 /* Grow effects */
@@ -1054,6 +1078,10 @@ ul {
   display: flex;
   justify-content: flex-start;
   align-items: start;
+}
+
+.option-width{
+  width: 20vw;
 }
 
 /* finish page */
@@ -1145,11 +1173,11 @@ ul {
   border: none;
   height: 18px;
   width: 311px;
-  font-size: 16px;
+  font-size: 18px;
   margin: auto;
   margin-left: 61%;
   margin-top: 42%;
-  color: #00ff00;
+  color: red;
 }
 .btn-bottom {
   margin-top: 70px;
@@ -1236,6 +1264,7 @@ ul {
   .timer-div {
     width: 20%;
     margin-right: 13px;
+    background-color: white;
   }
   .question-video {
     width: 50%;
@@ -1348,8 +1377,9 @@ ul {
   color: #fff;
 }
 .please-chose {
-  width: 40%;
-  margin-left: 30%;
+  width: 45%;
+  margin-left: 29%;
+  margin-top: 20px;
   padding-bottom: 40px;
 }
 .guidelines-img {
@@ -1357,3 +1387,6 @@ ul {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+
+
