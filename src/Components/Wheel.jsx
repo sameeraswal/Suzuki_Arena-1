@@ -65,7 +65,7 @@ export default class Wheel extends React.Component {
     setTimeout(() => window.open(`/${car}`, "_self"), 18000);
   }
 
-  render() {
+  render() { 
     const { selectedItem } = this.state;
     const { seltitle } = this.state;
     const { items } = this.props;
