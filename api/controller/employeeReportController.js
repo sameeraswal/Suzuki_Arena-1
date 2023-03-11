@@ -906,6 +906,23 @@ exports.getScoreOfEveryone = async (req, res) => {
                 return { mspin, registrationNumber, name, rank, finalScore };
 
             })
+            const roundlScoreOfEveryone = await EmpRoundScore.find({}).sort({ totalScore: -1 });
+            if (roundlScoreOfEveryone.length) {
+                console.log("inside")
+                status = true;
+                //let rank = 0;
+                let finalResultOfEachRound = roundlScoreOfEveryone.map((empScoreObj) => {
+                    //rank = ++rank;
+                    let mspin = empScoreObj.mspin;
+                    let roundName = empScoreObj.roundName;
+                    let registrationNumber = empScoreObj.registrationNumber;
+                    let name = empScoreObj.name;
+                    let totalScore = empScoreObj.totalScore;
+    
+                    return { mspin, roundName,registrationNumber, name, totalScore };
+    
+                })
+
             //  let mspinlists = finalScoreOfEveryone.map((empScoreObj) => {
 
             //     return empScoreObj.mspin;
@@ -938,10 +955,11 @@ exports.getScoreOfEveryone = async (req, res) => {
             return res.status(201).json({
                 status: status,
                 data: {
-                    leaderboard: finalResult
+                    leaderboard: finalResult,
+                    roundScore:finalResultOfEachRound
                 }
             })
-        } else {
+        }} else {
             console.log("outside")
             return res.status(401).json({
                 status: status,
