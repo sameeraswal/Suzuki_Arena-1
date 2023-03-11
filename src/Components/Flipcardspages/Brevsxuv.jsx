@@ -1,4 +1,3 @@
-
 import { React, useEffect, useState } from "react";
 import FlippableCard from "../FlippableCard";
 import Navbar from "../Navbar";
@@ -50,7 +49,7 @@ const Brewsuv = () => {
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
       <div className="round-box bg-correct">
-      Brezza ZXi+ MT Vs XUV 300 W8(o) AMT
+        Brezza ZXi+ MT Vs XUV 300 W8(o) AMT
       </div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">
@@ -68,13 +67,13 @@ const Brewsuv = () => {
                   {
                     count > 0 ? setCount(count - 1) : setCount(0);
                   }
-                  // setOpenModal(!item.isCorrect);
+                  setOpenModal(!item.isCorrect);
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
 
                 <FlippableCard
-               title={item.cardTitle}
+                  title={item.cardTitle}
                   isCorrect={item.isCorrect}
                   cardQuestion={item.cardQuestion}
                   isCardQuestionDidabled={item.isCardQuestionDidabled}
@@ -82,9 +81,9 @@ const Brewsuv = () => {
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
-              {/* {openModal && !item.isCorrect && (
+              {openModal && !item.isCorrect && (
                 <Popupquestion setOpenModal={setOpenModal} />
-               )} */}
+              )}
             </>
           ))}
         </div>

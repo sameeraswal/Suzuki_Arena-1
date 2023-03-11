@@ -42,15 +42,16 @@ const Altovskwid = () => {
       .catch((error) => console.log(error.response.data.message));
     // return false;
   };
+  // const getCardCount = () => {
+  //   localStorage.setItem("co", JSON.stringify(setCount(count - 1)));
+  // };
   return (
     <>
       <Navbar></Navbar>
 
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">
-      Alto K10 VXi+ Vs Kwid RXT
-      </div>
+      <div className="round-box bg-correct">Alto K10 VXi+ Vs Kwid RXT</div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
@@ -67,7 +68,8 @@ const Altovskwid = () => {
                   {
                     count > 0 ? setCount(count - 1) : setCount(0);
                   }
-                  // setOpenModal(!item.isCorrect);
+
+                  setOpenModal(!item.isCorrect);
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
@@ -81,9 +83,9 @@ const Altovskwid = () => {
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
-              {/* {openModal && !item.isCorrect && (
+              {openModal && !item.isCorrect && (
                 <Popupquestion setOpenModal={setOpenModal} />
-               )} */}
+              )}
             </>
           ))}
         </div>
