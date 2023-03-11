@@ -50,9 +50,9 @@ const Afterflipcasestudy = ({ title }) => {
             </div>
           </div>
         </div>
-        <div className="right-img">
+        {/* <div className="right-img">
           <img src={img} alt="img" />
-        </div>
+        </div> */}
       </div>
     </>
   );

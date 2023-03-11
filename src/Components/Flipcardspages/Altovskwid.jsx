@@ -14,6 +14,7 @@ const Altovskwid = () => {
   const [count, setCount] = useState(5);
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
+  localStorage.setItem("co", JSON.stringify(5));
 
   useEffect(() => {
     axios
@@ -42,6 +43,7 @@ const Altovskwid = () => {
       .catch((error) => console.log(error.response.data.message));
     // return false;
   };
+
   // const getCardCount = () => {
   //   localStorage.setItem("co", JSON.stringify(setCount(count - 1)));
   // };

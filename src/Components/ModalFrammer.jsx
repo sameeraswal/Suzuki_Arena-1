@@ -57,14 +57,14 @@ const ModalText = () => (
       <div>
         <div>◉ </div>
         <div>
-          First round will be based on images or videos in which 5 questions
+          &nbsp;First round will be based on images or videos in which 5 questions
           would display as per randomizer. The duration of this round would be 1
           minute per question
         </div>
       </div>
     </h5>
     <br />
-    <h5>◉Each question carries 10 marks</h5>
+    <h5>◉  &nbsp;Each question carries 10 marks</h5>
   </div>
 );
 
