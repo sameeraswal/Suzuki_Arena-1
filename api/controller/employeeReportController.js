@@ -367,7 +367,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                             employeeAnswer["score"] = score;
 
                         } else if (!!cId && questions[questionId - 1] !== questionId && correctQuestionsAnswers[questionId] !== cId) {
-                            console.log("cId,questionId,roundOrder",cId,questionId,roundOrder)
+                            console.log("cId,questionId,roundOrder", cId, questionId, roundOrder)
                             return res.status(404).json({
                                 message: "dddata not found"
                             })
@@ -431,7 +431,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                                 roundLockInfo['mspin'] = mspin;
                                 roundLockInfo['roundOrder'] = roundOrder;
                                 roundLockInfo['disabledQuestions'] = {};
-                                roundLockInfo['disabledQuestions'][questionId]=1;
+                                roundLockInfo['disabledQuestions'][questionId] = 1;
                                 let roundLockObj = new wheelroundlocks(roundLockInfo)
                                 await roundLockObj.save();
                             }
@@ -883,7 +883,8 @@ exports.getFinalScoreOfAllRounds = async (req, res) => {
         })
     }
 }
-// leaderboard 
+
+// scorebaord
 exports.getScoreOfEveryone = async (req, res) => {
 
     let status = false;
@@ -906,23 +907,6 @@ exports.getScoreOfEveryone = async (req, res) => {
                 return { mspin, registrationNumber, name, rank, finalScore };
 
             })
-            const roundlScoreOfEveryone = await EmpRoundScore.find({}).sort({ totalScore: -1 });
-            if (roundlScoreOfEveryone.length) {
-                console.log("inside")
-                status = true;
-                //let rank = 0;
-                let finalResultOfEachRound = roundlScoreOfEveryone.map((empScoreObj) => {
-                    //rank = ++rank;
-                    let mspin = empScoreObj.mspin;
-                    let roundName = empScoreObj.roundName;
-                    let registrationNumber = empScoreObj.registrationNumber;
-                    let name = empScoreObj.name;
-                    let totalScore = empScoreObj.totalScore;
-    
-                    return { mspin, roundName,registrationNumber, name, totalScore };
-    
-                })
-
             //  let mspinlists = finalScoreOfEveryone.map((empScoreObj) => {
 
             //     return empScoreObj.mspin;
@@ -955,11 +939,10 @@ exports.getScoreOfEveryone = async (req, res) => {
             return res.status(201).json({
                 status: status,
                 data: {
-                    leaderboard: finalResult,
-                    roundScore:finalResultOfEachRound
+                    leaderboard: finalResult
                 }
             })
-        }} else {
+        } else {
             console.log("outside")
             return res.status(401).json({
                 status: status,
@@ -975,3 +958,83 @@ exports.getScoreOfEveryone = async (req, res) => {
     }
 
 }
+
+
+// scorerboard  round level
+exports.getScoreBoardRoundLevel = async (req, res) => {
+
+    let status = false;
+    try {
+        const roundScoreOfEveryone = await EmpRoundScore.find({}).select("mspin name roundName totalScore");
+        if (roundScoreOfEveryone.length) {
+            console.log("roundScoreOfEveryone=====", roundScoreOfEveryone)
+            console.log("inside")
+            status = true;
+            const parentRound = {};
+            parentRound['1-A'] = true;
+            parentRound['1-B'] = true;
+            parentRound['2'] = true;
+            parentRound['3'] = true;
+            parentRound['4'] = true;
+            parentRound['5'] = true;
+            parentRound['6'] = true;
+            parentRound['7'] = true;
+            parentRound['8'] = true;
+            const result = roundScoreOfEveryone.reduce((result, currentValue) => {
+                let mspin = currentValue.mspin;
+                let name = currentValue.name;
+                let totalScore = currentValue.totalScore;
+                let roundName = currentValue.roundName;
+                if (parentRound[roundName] === undefined) {
+                    roundName = "2";
+                }
+                if (result[mspin] === undefined) {
+                    result[mspin] = {};
+                    result[mspin].mspin = mspin;
+                    result[mspin].name = name;
+                    result[mspin].totalScoreOfAllRounds = totalScore;
+                    result[mspin]['rounds'] = {};
+                    result[mspin]['rounds'][roundName] = totalScore;
+                } else {
+                    result[mspin].totalScoreOfAllRounds += totalScore;
+                    if (result[mspin]['rounds'][roundName] === undefined) {
+                        result[mspin]['rounds'][roundName] = totalScore;
+                    } else {
+                        result[mspin]['rounds'][roundName] += totalScore;
+                    }
+                }
+                return result;
+            },
+                {}
+            );
+
+            let scoreBoardReport = [];
+            for (let key in result) {
+                scoreBoardReport.push(result[key])
+            }
+            scoreBoardReport.sort(function (a, b) {
+                return b['totalScoreOfAllRounds'] - a['totalScoreOfAllRounds'];
+            })
+
+            return res.status(201).json({
+                status: status,
+                data: {
+                    scoreBoard: scoreBoardReport
+                }
+            })
+        } else {
+            return res.status(401).json({
+                status: status,
+                message: "data not found"
+            })
+        }
+    } catch (error) {
+        res.status(404).json({
+            status: status,
+            error: error
+        })
+
+    }
+
+}
+
