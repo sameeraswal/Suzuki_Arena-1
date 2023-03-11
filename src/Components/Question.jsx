@@ -7,7 +7,7 @@ import ModalFrammer from "./ModalFrammer";
 import "./modalcss.css";
 import Finishmodal from "./Modalframmer/finishmodal";
 import axios from "axios";
-import { APIURL } from "../App";
+import { APIURL, QUESTIONIMAGEPATH } from "../App";
 import { bgImg } from "./NewImages/Spin-Wheel_BG.png";
 
 const Question = () => {
@@ -237,7 +237,7 @@ const Question = () => {
         {v && (
           <div className="question-video">
             {/* {console.log(v.video)} */}
-            <iframe width="520" height="225" src={v}></iframe>
+            <iframe width="520" height="225" src={QUESTIONIMAGEPATH+v}></iframe>
           </div>
         )}
 

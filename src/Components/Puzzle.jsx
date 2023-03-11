@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import { x } from "./Random Number/Randomnumber";
 import wordpattern from "./wordpattern.jpg";
 // import openbook from "./open-book.svg";
-import bgImg from './NewImages/Spin-Wheel_BG.png'
+import bgImg from '../Assets/Open-Scoring-Sheet.png'
 import {useState} from 'react'
 
 function randomnum(){
@@ -21,18 +21,7 @@ const Puzzle = () => {
     <div>
       <Navbar />
       <img src={bgImg} alt="" className="background-image"/>
-      <div className="dashboard-container">
-        <div className="round-box">Puzzle - {num}</div>
-        <div className="puzzle-position">
-          <img
-            src={wordpattern}
-            alt="pattern"
-            height={400}
-            width={400}
-            className="puzzle-img"
-            //   style={{ marginLeft: "37%", marginTop: "30px" }}
-          />
-        </div>
+      
 
         <Link to="/puzzlechoice">
           {" "}
@@ -42,7 +31,7 @@ const Puzzle = () => {
           </button>
         </Link>
       </div>
-    </div>
+    
   );
 };
 

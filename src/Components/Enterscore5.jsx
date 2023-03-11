@@ -39,6 +39,7 @@ const Enterscore5 = () => {
         mspin: JSON.parse(localStorage.getItem("mspin")),
         roundName: "5",
         score: score,
+        // questionId: 1+1(index+1) //todo replce in case study Flipcard
       })
       .then((res) => {
         console.log(res);

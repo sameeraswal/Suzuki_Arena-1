@@ -8,7 +8,10 @@ import bodyImg from "./3552-[Converted].png";
 
 import "./wheel.scss";
 import { Link } from "react-router-dom";
-import bgImg from './NewImages/Spin-Wheel_BG.png'
+import bgImg from "./NewImages/Spin-Wheel_BG.png";
+import axios from "axios";
+import { APIURL } from "../App";
+import Sprevskwid from "./Flipcardspages/Sprevskwid";
 
 // const [activeQuestion, setActiveQuestion] = useState(0);
 // const { questions } = data;
@@ -23,6 +26,7 @@ import bgImg from './NewImages/Spin-Wheel_BG.png'
 //   setActiveQuestion((id) => id + 1);
 // };
 let car;
+let randomWheelNo;
 export default class Wheel extends React.Component {
   constructor(props) {
     super(props);
@@ -41,7 +45,8 @@ export default class Wheel extends React.Component {
         this.props.onSelectItem(selectedItem);
       }
       this.setState({ selectedItem });
-      let num = selectedItem - 3;
+      // let num = selectedItem - 3;
+      let num = 3;
       if (num === -3) {
         num = 9;
       } else if (num === -2) {
@@ -51,6 +56,8 @@ export default class Wheel extends React.Component {
       }
       car = this.props.items[num].title.replace(/ /g, "").toLowerCase();
       // alert(car)
+      // randomWheelNo = selectedItem - 3;
+      randomWheelNo = 3;
     } else {
       this.setState({ selectedItem: null });
       setTimeout(this.selectItem, 800);
@@ -60,12 +67,14 @@ export default class Wheel extends React.Component {
   titleToggle() {
     setTimeout(() => this.setState({ seltitle: true }), 200);
   }
+
   timeOutFun() {
     // console.log(car,`/${car}`)
+    localStorage.setItem("roundName", JSON.stringify(randomWheelNo));
     setTimeout(() => window.open(`/${car}`, "_self"), 18000);
   }
 
-  render() {
+  render() { 
     const { selectedItem } = this.state;
     const { seltitle } = this.state;
     const { items } = this.props;
@@ -80,7 +89,7 @@ export default class Wheel extends React.Component {
       <>
         <Navbar></Navbar>
         {/* {console.log(items[selectedItem].title)} */}
-        <img src={bgImg} alt="" className="background-image"/>
+        <img src={bgImg} alt="" className="background-image" />
 
         {/* <div className="round-box">Wheel</div> */}
         <div className="wheel-container" onClick={this.timeOutFun}>
@@ -119,3 +128,4 @@ export default class Wheel extends React.Component {
     );
   }
 }
+export { randomWheelNo };

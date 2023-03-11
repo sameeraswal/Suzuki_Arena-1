@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
-import lock from "./Lock.png";
+import lock from "../Assets/03.png";
 import axios from "axios";
 import { APIURL } from "../App";
+import bgImg from '../Assets/Dice_BG.png'
+
+
 const Dashboard = () => {
   let [rounds, setRounds] = useState([]);
   // let d;
@@ -22,9 +25,9 @@ const Dashboard = () => {
   return (
     <>
       <Navbar />
-
-      <div className="dashboard-container">
-        <div className="round-box-dashboard">Rounds</div>
+      <img src={bgImg} alt="" className="background-image"/>
+      <div className="">
+        <div className="round-box">Rounds</div>
         <div className="flexbox-container">
           {rounds.map((item) => (
             <>

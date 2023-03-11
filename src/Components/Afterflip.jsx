@@ -1,8 +1,8 @@
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 // import { useBetween } from 'use-between';
-export const fal=false;
+export const fal = false;
 const Afterflip = ({ title }) => {
   // const useShareableState = () => {
   //   const [username, setUsername] = useState(true);
@@ -13,6 +13,10 @@ const Afterflip = ({ title }) => {
   // }
   // const [change]
   // const { username, setUsername} = useBetween(useShareableState);
+  // const url=window.location.href;
+  // const params = new URLSearchParams(window.location.pathname);
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
   const img = require("./wagon_spec.webp");
   return (
     <>
@@ -22,7 +26,7 @@ const Afterflip = ({ title }) => {
         <div className="actual-card">
           <div className="border-div">
             <div className="text-div">
-              <p className="text-margin">What is the {title} of Wagonr</p>
+              <p className="text-margin">{params.get("question")}</p>
               <div className="margin-div">
                 <input
                   type="text"
@@ -30,10 +34,10 @@ const Afterflip = ({ title }) => {
                   placeholder="Enter Answer"
                   required
                 />
-                <Link to="/flipcard">
-                  <button className="card-btn-style" onClick={()=>{
-                  
-                  }}>Submit</button>
+                <Link to={params.get("question")}>
+                  <button className="card-btn-style" onClick={() => {}}>
+                    Submit
+                  </button>
                 </Link>
               </div>
             </div>

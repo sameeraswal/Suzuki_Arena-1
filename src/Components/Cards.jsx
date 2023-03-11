@@ -4,30 +4,34 @@ import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 // import Remaincard from "./Remaincard";
 import bgImg from "./leaderboardfinal/05.png";
+import axios from "axios";
+import { APIURL } from "../App";
+import { randomWheelNo } from "./Wheel";
 
 const Cards = () => {
   const [count, setCount] = useState(5);
-  let response = {
-    status: true,
-    data: [
-      { id: 0, cardName: "Height",class: "front-icon1", classBack: "back-1" },
-      { id: 1, cardName: "Length",class: "front-icon2", classBack: "back-2" },
-      { id: 2, cardName: "Power",class: "front-icon3", classBack: "back-3" },
-      { id: 3, cardName: "Torque",class: "front-icon4", classBack: "back-4" },
-      { id: 4, cardName: "Bootspace",class: "front-icon5", classBack: "back-5" },
-      { id: 5, cardName: "Mileage",class: "front-icon6", classBack: "back-6" },
-      { id: 6, cardName: "Width",class: "front-icon7", classBack: "back-7" },
-      { id: 7, cardName: "Wheelbase",class: "front-icon8", classBack: "back-8" },
-      { id: 8, cardName: "BC",class: "front-icon9", classBack: "back-9" },
-      { id: 9, cardName: "FTC",class: "front-icon10", classBack: "back-10" },
-    ],
-  };
+  // let response = {
+  //   status: true,
+  //   data: [
+  //     { id: 0, cardName: "Height",class: "front-icon1", classBack: "back-1" },
+  //     { id: 1, cardName: "Length",class: "front-icon2", classBack: "back-2" },
+  //     { id: 2, cardName: "Power",class: "front-icon3", classBack: "back-3" },
+  //     { id: 3, cardName: "Torque",class: "front-icon4", classBack: "back-4" },
+  //     { id: 4, cardName: "Bootspace",class: "front-icon5", classBack: "back-5" },
+  //     { id: 5, cardName: "Mileage",class: "front-icon6", classBack: "back-6" },
+  //     { id: 6, cardName: "Width",class: "front-icon7", classBack: "back-7" },
+  //     { id: 7, cardName: "Wheelbase",class: "front-icon8", classBack: "back-8" },
+  //     { id: 8, cardName: "BC",class: "front-icon9", classBack: "back-9" },
+  //     { id: 9, cardName: "FTC",class: "front-icon10", classBack: "back-10" },
+  //   ],
+  // };
 
   // useEffect(() => {
   //    setCount(count-1);
   // }, [count])
 
-  let cards = response.data;
+  // let cards = response.data;
+
 
   return (
     <>
@@ -41,13 +45,13 @@ const Cards = () => {
         </div>
 
         <div className="flex-container-child bg-correct">
-          {cards.map((item) => (
-            <>
-              <div className="flex-child bg-correct">
-                <FlippableCard title={item} />
-              </div>
-            </>
-          ))}
+          {/* {cards.map((item) => ( */}
+          <>
+            <div className="flex-child bg-correct">
+              <FlippableCard title={"item"} />
+            </div>
+          </>
+          {/* ))} */}
         </div>
       </div>
     </>
