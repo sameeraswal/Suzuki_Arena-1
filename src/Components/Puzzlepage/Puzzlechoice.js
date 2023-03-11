@@ -7,6 +7,24 @@ import Buttonp from "./Buttonp";
 import Buttonn from "../Puzzle4/Buttonn";
 import Finishmodal from "../Modalframmer/finishmodal";
 import { motion, AnimatePresence } from "framer-motion";
+// import bgImg1 from '../../Assets/PuzzleImages/1.1.jpeg';
+
+import bgImg1 from '../../Assets/PuzzleImages/1.2.jpeg';
+import bgImg2 from '../../Assets/PuzzleImages/1.3.jpeg';
+import bgImg3 from '../../Assets/PuzzleImages/2.1.jpeg';
+import bgImg4 from '../../Assets/PuzzleImages/2.2.jpeg';
+import bgImg5 from '../../Assets/PuzzleImages/2.3.jpeg';
+import bgImg6 from '../../Assets/PuzzleImages/3.1.jpeg';
+import bgImg7 from '../../Assets/PuzzleImages/3.2.jpeg';
+import bgImg8 from '../../Assets/PuzzleImages/3.3.jpeg';
+import bgImg9 from '../../Assets/PuzzleImages/4.1 solved.jpeg';
+import bgImg10 from '../../Assets/PuzzleImages/4.2.jpeg';
+import bgImg11 from '../../Assets/PuzzleImages/4.3 solved.jpeg';
+import bgImg13 from '../../Assets/PuzzleImages/5.1 solved.jpeg';
+import bgImg14 from '../../Assets/PuzzleImages/5.2 solved.jpeg';
+import bgImg15 from '../../Assets/PuzzleImages/5.3 solved.jpeg';
+
+
 
 // import ModalFrammer from "./ModalFrammer";
 import "../modalcss.css";
@@ -115,7 +133,7 @@ const Puzzlechoice = () => {
       })
       .catch((error) => console.log(error));
   };
-
+  let x = Number(2);
   return (
     <>
       <Navbar />
@@ -125,7 +143,7 @@ const Puzzlechoice = () => {
         <div className="puzzle-box">
           <div>
             <img
-              src={wordpattern}
+              src={`bgImg${num}`}
               alt="pattern"
               height={400}
               width={400}
