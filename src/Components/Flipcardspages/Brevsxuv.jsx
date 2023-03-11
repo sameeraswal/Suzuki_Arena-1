@@ -28,6 +28,19 @@ const Brewsuv = () => {
     ],
   };
 
+  // metaData['Height'] = {
+  //   classFront: "front-icon1",
+  //   classBack: "back-1"
+  // }
+  // metaData['Length'] = {
+  //   classFront: "front-icon2",
+  //   classBack: "back-2"
+  // }
+  
+  // //Then use
+  // metaData[item.cardTitle]['classFront']
+  // metaData[item.cardTitle]['classBack']
+
   // useEffect(() => {
   //    setCount(count-1);
   // }, [count])

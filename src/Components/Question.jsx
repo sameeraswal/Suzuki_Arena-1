@@ -220,6 +220,7 @@ const Question = () => {
                         onClickNext();
                         fetchAnswer();
                         onClickReset();
+                        setOpenModal(true);
                       }}
                       id="cancelBtn"
                       className="third icon-conatiner"
@@ -270,7 +271,6 @@ const Question = () => {
             </ul>
           </div>
 
-          {/* modal */}
           <div>
             {activeQuestion !== 4 ? (
               cid > 0 ? (
@@ -281,13 +281,13 @@ const Question = () => {
                     onClickReset();
                     setOpenModal(true);
                   }}
-                  className="third question-btn icon-conatiner"
+                  className="third question-btn icon-conatiner submit-margin"
                 >
                   Submit
                 </button>
               ) : (
-                <button className="third question-btn icon-conatiner please-chose">
-                  Please Chose an Option
+                <button className="roll question-btn icon-conatiner please-chose">
+                  Please Choose an Option
                 </button>
               )
             ) : (
