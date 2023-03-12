@@ -3,7 +3,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { APIURL } from "../App";
 import Navbar from "./Navbar";
-import {useState} from 'react'
+import {useState} from 'react';
+import bgImage from '../Assets/Dice_BG.png'
+
 
 function getValue(){
   return localStorage.getItem('random1')
@@ -75,6 +77,7 @@ const Casestudy = () => {
   return (
     <div>
       <Navbar></Navbar>
+      <img src={bgImage} alt="" className="background-image"/>
       <div className="round-box">Case-{data1}</div>
       <div className="case-study-text">
         <p>
@@ -84,7 +87,7 @@ const Casestudy = () => {
 
       <Link to="/puzzlecase">
         <button
-          className="third icon-conatiner scoring-btn case-study-btn"
+          className="roll icon-conatiner scoring-btn case-study-btn"
           onClick={getData}
         >
           Enter Score

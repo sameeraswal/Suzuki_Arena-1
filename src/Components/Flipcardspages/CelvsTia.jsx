@@ -10,6 +10,7 @@ import { getData } from "./Altovskwid";
 import axios from "axios";
 import { APIURL } from "../../App";
 
+
 const CelvsTia = () => {
   const [count, setCount] = useState(5);
   const [questionid, setQuestionid] = useState(0);
@@ -43,6 +44,15 @@ const CelvsTia = () => {
     // return false;
   };
 
+  // useEffect(() => {
+  //   if(count === null || count === ''){
+  //     setCount(5)
+  //   }
+  //    setCount(localStorage.setItem('counter', JSON.stringify(count-1)))
+  // }, [count])
+
+
+
   return (
     <>
       <Navbar></Navbar>
@@ -65,9 +75,7 @@ const CelvsTia = () => {
               <div
                 className="flex-child bg-correct"
                 onClick={() => {
-                  {
-                    count > 0 ? setCount(count - 1) : setCount(0);
-                  }
+                  
                   setOpenModal(!item.isCorrect);
                   setQuestionid(
                     localStorage.setItem(
