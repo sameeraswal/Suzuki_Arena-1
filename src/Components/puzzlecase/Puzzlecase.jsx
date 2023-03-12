@@ -30,21 +30,21 @@ const Puzzlecase = () => {
     status: true,
     data: [
       {
-        question: "Q.1) Made reference of his observation",
+        question: "Q.1) VAS 1: Introduces/ pitches the VAS",
 
         btn1: "YES",
         btn2: "NO",
         index: 0,
       },
       {
-        question: "Q.2) Mentioned about Importance (impact) of the topic",
+        question: "Q.2) VAS 1: Explains the benefits of the VAS",
 
         btn1: "YES",
         btn2: "NO",
         index: 1,
       },
       {
-        question: "Q.3) Explained in an easy to understanding way",
+        question: "Q.3) VAS 1: Understands needs Provides appropriate options/ plans",
 
         btn1: "YES",
         btn2: "NO",
@@ -52,18 +52,53 @@ const Puzzlecase = () => {
       },
       {
         question:
-          "Q.4) Concluded the Coaching with a summary (points to remember)",
+          "Q.4) VAS 1: Detailed Explanation- Explains documents/conditions/ plans/terms and conditions. Calculates the cost/EMI etc. ",
 
         btn1: "YES",
         btn2: "NO",
         index: 3,
       },
       {
-        question: "Q.5) Checked understanding of the RM",
+        question: "Q.5) VAS 1: Handles objections of the customer",
 
         btn1: "YES",
         btn2: "NO",
         index: 4,
+      },
+      {
+        question: "Q.6) VAS 2: Introduces/ pitches the VAS",
+
+        btn1: "YES",
+        btn2: "NO",
+        index: 5,
+      },
+      {
+        question: "Q.7) VAS 2: Explains the benefits of the VAS",
+
+        btn1: "YES",
+        btn2: "NO",
+        index: 6,
+      },
+      {
+        question: "Q.8) VAS 2: Understands needs Provides appropriate options/ plans",
+
+        btn1: "YES",
+        btn2: "NO",
+        index: 7,
+      },
+      {
+        question: "Q.9) VAS 2: Detailed Explanation- Explains documents/conditions/ costs/ terms and conditions. Calculates the cost/EMI etc.",
+
+        btn1: "YES",
+        btn2: "NO",
+        index: 8,
+      },
+      {
+        question: "Q.10) VAS 2: Handles objections of the customer",
+
+        btn1: "YES",
+        btn2: "NO",
+        index: 9,
       },
     ],
   };
