@@ -111,9 +111,9 @@ const Leaderboard = () => {
                 {round.map((item) => (
                   <>
                     <tr>
-                      <td className={item.class}>{item.registrationNumber}</td>
-                      <td className={item.class}>{item.name}</td>
-                      <td className={item.class}>
+                      <td className="table-content">{item.registrationNumber}</td>
+                      <td className="table-content-name">{item.name}</td>
+                      <td className="table-content">
                         {item.rounds["1-A"] === undefined
                           ? "NA"
                           : item.rounds["1-A"]}
