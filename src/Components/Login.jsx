@@ -28,13 +28,6 @@ const Login = () => {
         regNumber: regno,
       })
       .then((res) => {
-        // console.log(res.data.status, "Response is here");
-        // setMessage(res.data.message);
-        // {
-        //   res.status == "false"
-        //     ? alert("False status")
-        //     : alert("message");
-        // }
         console.log(res, "Response");
         setStatus(res.data.status);
         console.log(res.data.status, "Response");
@@ -56,12 +49,9 @@ const Login = () => {
 
   const arena = require("./Pratham.png");
   const navigateLogin = () => {
-    mspin &&
-      regno ? (
-      setTimeout(
-        () => (!status ? window.open("./dashboard", "_self") : status),
-        2000
-      )) : (setMessage("Please Enter details"));
+    console.log(status)(mspin && regno && status)
+      ? setTimeout(() => window.open("./dashboard", "_self"), 2000)
+      : setMessage("Please Enter details");
   };
   // const [mspin, setMspin] = useState([]);
 

@@ -115,9 +115,7 @@ table img {
   border-radius: 100%;
 }
 
-.table-content-name{
-  margin: 0 40px;
-}
+
 
 
 table td {
@@ -132,35 +130,19 @@ table td {
   transform: scale(1.025);
   transition: 0.2s ease-in-out;
 } */
-tbody tr td:nth-child(2) p {
-  display: inline-block;
-  transform: translateY(-0.5em);
-  padding-left: 0.5em;
-  text-align: left;
-}
-table td:nth-child(2) {
-  max-width: 4em;
-  text-align: center;
-  
-}
-table td:nth-child(1) {
-  max-width: 4em;
-}
 
-
-/* #winner {
-  color: gold;
-  font-weight: 800;
+.table-content{
+  padding-left: -10px;
+  padding-right: 10px;
 }
-#runner-up {
-  color: silver;
-  font-weight: 800;
-  border-radius: 10px;
+.table-content-name{
+  padding-right: 39px;
+  padding-left: 35px;
 }
-#second-runner-up {
-  color: #cd7f32;
-  font-weight: 800;
-} */
+.table-round-3{
+  padding-right: 39px;
+  padding-left: 35px;
+}
 @media (max-width: 860px) {
   .leaderboard {
     padding: 0;
