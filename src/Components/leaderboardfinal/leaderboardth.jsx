@@ -15,7 +15,7 @@ const Leaderboardth = () => {
   const [name2, setName2] = useState([]);
 
   const [name3, setName3] = useState([]);
-
+  const arr = [];
   useEffect(() => {
     // alert("Page is running");
     // fetchData();
@@ -23,18 +23,15 @@ const Leaderboardth = () => {
       .get(`${APIURL}/api/v1/quiz/scoreboard`)
       .then((res) => {
         setRound(res.data.data.scoreBoard);
-        setName();
-        console.log(res);
+        // console.log(res)
       })
       .catch((error) => console.log(error, "error is here"));
   }, []);
-  const setName = () => {
-    for (let i = 0; i < round.length; i++) {
-      console.log(round[i].rank);
-      round[i].rank === 1 ? setName1(round.name1) : setName1(round.name1);
-    }
-  };
-
+  // let j = 0;
+  // for (let i = 0; i < 3; i++) {
+  //   arr[i] = round[j++];
+  //   console.log(arr[i], "arr");
+  // }
   return (
     <div>
       <Navbar />
@@ -44,15 +41,16 @@ const Leaderboardth = () => {
           <img src={text} alt="" className="resp-text" />
           <img src={trophy} alt="" className="resp-trophy" />
         </div>
-        {/* {round.map((item) => ( */}
-        <>
-          <img src={f} alt="" className="first" />
-          <h1 className="position-text align-lead-1">{name1}</h1>
-          <img src={s} alt="" className="second" />
-          <h1 className="position-text align-lead-2">{name2}</h1>
-          <img src={t} alt="" className="thirdlast" />
-          <h1 className="position-text align-lead-3">{name3}</h1>
-        </>
+        {/* {arr.map((item) => (
+          <> */}
+        <img src={f} alt="" className="first" />
+        <h1 className="position-text align-lead-1">{}</h1>
+        <img src={s} alt="" className="second" />
+        <h1 className="position-text align-lead-2">{}</h1>
+        <img src={t} alt="" className="thirdlast" />
+        <h1 className="position-text align-lead-3">{}</h1>
+        {/* </>
+        ))} */}
       </div>
     </div>
   );
