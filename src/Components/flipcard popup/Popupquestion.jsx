@@ -30,7 +30,7 @@ function Popupquestion({ setOpenModal }) {
   }
   return (
     <div className="modalBackground">
-      <div className="modalContainer">
+      <div className="modalContainer" style={{marginLeft:"5%"}}>
         <div className="titleCloseBtn">
           <button
             onClick={() => {

@@ -36,6 +36,7 @@
 
 .full-height{
   background: url('../NewImages/Spin-Wheel_BG.png');
+  height: 130vh;
 }
 .sbt-btn{
   margin-left: 70%;
