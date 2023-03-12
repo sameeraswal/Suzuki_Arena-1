@@ -16,6 +16,14 @@ const employeeSchema = new mongoose.Schema({
     registrationNumber: {
         type: String,
         required: true
+    },
+    region: {
+        type: String,
+        required: true
+    },
+    category: {
+        type: String,
+        required: true
     }
 });
 
