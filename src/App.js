@@ -59,13 +59,15 @@ import Leaderboardsrm from "./Components/ScoreboardSRM/Leaderboardsrm";
 export const APIURL = "http://localhost:4500";
 export const APIURLLOCAL = "http://localhost:3000";
 export const QUESTIONIMAGEPATH = "../Assets/Questions/Round1-A/";
+export const imgur = "../Assets/Questions/Round2";
+
 const App = () => {
   // API URLs
 
   const places = [
     {
       id: 0,
-      title: "",
+      title: "Ertiga Vs Carens",
       class: "wheel-color",
     },
     {
