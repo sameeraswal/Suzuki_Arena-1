@@ -12,7 +12,7 @@ import { APIURL, countc } from "../../App";
 
 const Wagovstiago = () => {
   const [questionid, setQuestionid] = useState(0);
-
+  const [count, setCount] = useState(5);
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
   useEffect(() => {
@@ -53,7 +53,7 @@ const Wagovstiago = () => {
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>
-          <p>Remaining: {"count"}</p>
+          <p>Remaining:  {5-Math.abs(JSON.parse(localStorage.getItem("cod")))}</p>
         </div>
 
         <div className="flex-container-child bg-correct">
@@ -70,6 +70,12 @@ const Wagovstiago = () => {
                     localStorage.setItem(
                       "qid",
                       JSON.stringify(item.cardQuestionId)
+                    )
+                  );
+                  setCount(
+                    localStorage.setItem(
+                      "cod",
+                      JSON.stringify(JSON.parse(localStorage.getItem("cod"))-1)
                     )
                   );
 
