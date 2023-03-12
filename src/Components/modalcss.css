@@ -132,13 +132,15 @@ button {
 }
 
 .modal-button {
-  position: relative;
+  position: absolute;
   bottom: 1.5rem;
   padding: 0 3rem;
   min-height: 3rem;
   margin: auto auto 0 auto;
   background: var(--arena-color);
   color: var(--light);
+  margin-left: 43%;
+  margin-top: -30%;
 }
 
 .save-button {
@@ -393,6 +395,12 @@ li {
   margin-top: 5%;
   margin-left: 33%;
   bottom: 2%;
+}
+
+.guidelines-img img{
+  height: 70vh;
+  width: 70vw;
+  margin-left: 15%;
 }
 /* finish round  */
 @media screen and (max-width: 768px) {

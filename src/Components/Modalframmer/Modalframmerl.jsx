@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Backdrop from "../backdrop/Backdrop";
 import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
-
+import guidelines from '../../Assets/List-the-Twist---Guidelines.png'
 const dropIn = {
   hidden: {
     y: "-100vh",
@@ -36,7 +36,7 @@ const Modalframmerl = ({ handleClose, text, type }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient"
+        className=""
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -49,29 +49,25 @@ const Modalframmerl = ({ handleClose, text, type }) => {
   );
 };
 
+
 const ModalText = () => (
-  <div className="modal-text">
-    <h3>List the twist- Guidelines</h3>
+  <div className="guidelines-img">
+    {/* <h3>The First Mile- Guidelines</h3>
     <h5>
       <div>
-        <div>◉</div>
-
+        <div>◉ </div>
         <div>
-        &nbsp;Question in the form of riddles will be displayed on the screen.
-        </div>
-      </div>
-      <div>
-        <div>◉</div>
-
-        <div>
-        &nbsp;Participant first to push buzzer gets a chance to answer ____Questions
-        &nbsp;in ___ seconds for each participant that carries 1 mark per question
-        &nbsp;Total duration of this round is 20 minutes
+          &nbsp;First round will be based on images or videos in which 5 questions
+          would display as per randomizer. The duration of this round would be 1
+          minute per question
         </div>
       </div>
     </h5>
+    <br />
+    <h5>◉  &nbsp;Each question carries 10 marks</h5> */}
+    <img src={guidelines} alt="" />
   </div>
-);
+)
 
 const ModalButton = ({ onClick, label }) => (
   <Link to="/enterscore6">

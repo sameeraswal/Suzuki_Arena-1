@@ -1,0 +1,14 @@
+Deploy React Node app to AWS EC2 - 2021
+https://www.youtube.com/watch?v=zjuItRMUAcM
+
+Deploy a NodeJS React app to AWS EC2 (EASY!)
+https://www.youtube.com/watch?v=rE8mJ1OYjmM
+
+CI/CD from Github to AWS EC2 Step by Step | Node.js Express Backend API as an Example
+https://www.youtube.com/watch?v=Buh3GjHPmjo
+
+
+https://ap-southeast-2.console.aws.amazon.com/ec2/home?region=ap-southeast-2#Instances:
+http://3.27.108.232:3000
+
+ssh -i SameerFirstKeyValuePair.pem ubuntu@3.27.108.232

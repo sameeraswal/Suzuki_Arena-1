@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Backdrop from "./backdrop/Backdrop";
 import { stateLogger } from "../stateLogger";
 import { Link } from "react-router-dom";
+import guidelines from "../Assets/The-First-Mile---Guidelines.png"
 
 const dropIn = {
   hidden: {
@@ -36,7 +37,7 @@ const ModalFrammer = ({ handleClose, text, type }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient"
+        className=""
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -51,8 +52,8 @@ const ModalFrammer = ({ handleClose, text, type }) => {
 };
 
 const ModalText = () => (
-  <div className="modal-text">
-    <h3>The First Mile- Guidelines</h3>
+  <div className="guidelines-img">
+    {/* <h3>The First Mile- Guidelines</h3>
     <h5>
       <div>
         <div>◉ </div>
@@ -64,7 +65,8 @@ const ModalText = () => (
       </div>
     </h5>
     <br />
-    <h5>◉  &nbsp;Each question carries 10 marks</h5>
+    <h5>◉  &nbsp;Each question carries 10 marks</h5> */}
+    <img src={guidelines} alt="" />
   </div>
 );
 

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Backdrop from "../backdrop/Backdrop";
 import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
+import guidelines from '../../Assets/Chase-the-Maze---Guidelines.png'
 
 const dropIn = {
   hidden: {
@@ -36,7 +37,7 @@ const ModalFrammerc = ({ handleClose, text, type }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient resp-tablet"
+        className=""
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -51,24 +52,23 @@ const ModalFrammerc = ({ handleClose, text, type }) => {
 };
 
 const ModalText = () => (
-  <div className="modal-text">
-    <h3>Chase The Maze- Guidelines</h3>
+  <div className="guidelines-img">
+    {/* <h3>The First Mile- Guidelines</h3>
     <h5>
-      ◉ Participants would roll the dice digitally
-      <br />
-      ◉ Participants to show dice number to the trainer
-      <br />
-      ◉ Participants would get puzzle paper as per dice number
-      <br />
-      ◉ Participant would read the tab and find the answer in the maze
-      <br />◉ Number of questions is 6 and the duration of this round will
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <br></br>
-      &nbsp;&nbsp;&nbsp;&nbsp; be 1 minute per question.
-      <br />◉ And each question carries 10 marks
+      <div>
+        <div>◉ </div>
+        <div>
+          &nbsp;First round will be based on images or videos in which 5 questions
+          would display as per randomizer. The duration of this round would be 1
+          minute per question
+        </div>
+      </div>
     </h5>
+    <br />
+    <h5>◉  &nbsp;Each question carries 10 marks</h5> */}
+    <img src={guidelines} alt="" />
   </div>
-);
+)
 
 const ModalText1 = () => (
   <div className="modal-text">

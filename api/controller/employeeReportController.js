@@ -965,7 +965,7 @@ exports.getScoreBoardRoundLevel = async (req, res) => {
 
     let status = false;
     try {
-        const roundScoreOfEveryone = await EmpRoundScore.find({}).select("mspin name roundName totalScore");
+        const roundScoreOfEveryone = await EmpRoundScore.find({}).select("mspin name registrationNumber roundName totalScore");
         if (roundScoreOfEveryone.length) {
             status = true;
             const parentRound = {};
@@ -982,6 +982,7 @@ exports.getScoreBoardRoundLevel = async (req, res) => {
             const result = roundScoreOfEveryone.reduce((result, currentValue) => {
                 let mspin = currentValue.mspin;
                 let name = currentValue.name;
+                let registrationNumber = currentValue.registrationNumber;
                 let totalScore = currentValue.totalScore;
                 let roundName = currentValue.roundName;
                 if (parentRound[roundName] === undefined) {
@@ -991,6 +992,7 @@ exports.getScoreBoardRoundLevel = async (req, res) => {
                     result[mspin] = {};
                     result[mspin].mspin = mspin;
                     result[mspin].name = name;
+                    result[mspin].registrationNumber = registrationNumber;
                     result[mspin].totalScoreOfAllRounds = totalScore;
                     result[mspin]['rounds'] = {};
                     result[mspin]['rounds'][roundName] = totalScore;
@@ -1037,8 +1039,6 @@ exports.getScoreBoardRoundLevel = async (req, res) => {
             status: status,
             error: error
         })
-
     }
-
 }
 
