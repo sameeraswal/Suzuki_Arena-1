@@ -22,7 +22,7 @@ const Puzzle = () => {
       <Navbar />
       <img src={bgImg} alt="" className="background-image"/>
       
-
+      <div className="round-box">Puzzle - {num}</div>
         <Link to="/puzzlechoice">
           {" "}
           <button className="roll icon-conatiner scoring-btn puzzle-scoring-btn">

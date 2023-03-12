@@ -7,10 +7,33 @@
   display: flex;
   align-items: center;
   /* margin-top: 75px; */
-  background: url(../NewImages/Spin-Wheel_BG.png);
+  background: url(../../Assets/Leaderboard/02.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
+
+.title-image{
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  margin-top: 100px;
+}
+
+.head-image-scoreboard{
+  height: 50px;
+  position: absolute;
+  margin-left: 35%;
+  margin-top: 10px;
+}
+
+.user-image{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  
+}
+
 
 .leaderboard {
   width: 100vw;
@@ -23,16 +46,25 @@
   /* border-radius: 20px; */
   /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
-  background-color: #e5e5f7;
+  /* background-color: red; */
 
   opacity: 0.8;
-  background: url(../NewImages/Spin-Wheel_BG.png);
+  /* background: url(../NewImages/Spin-Wheel_BG.png); */
   background-repeat: no-repeat;
   background-size: cover;
   /* background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px); */
   /* background-size: 10px 10px; */
   /* width: 1000px; */
 }
+
+.fix-scroll{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+
 .theme-img {
   width: 20em;
   border-radius: 10px;

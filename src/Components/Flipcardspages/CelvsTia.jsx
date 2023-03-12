@@ -10,6 +10,7 @@ import { getData } from "./Altovskwid";
 import axios from "axios";
 import { APIURL } from "../../App";
 
+
 const CelvsTia = () => {
   const [count, setCount] = useState(5);
   const [questionid, setQuestionid] = useState(0);
@@ -42,6 +43,15 @@ const CelvsTia = () => {
       .catch((error) => console.log(error.response.data.message));
     // return false;
   };
+
+  // useEffect(() => {
+  //   if(count === null || count === ''){
+  //     setCount(5)
+  //   }
+  //    setCount(localStorage.setItem('counter', JSON.stringify(count-1)))
+  // }, [count])
+
+
 
   return (
     <>
