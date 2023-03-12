@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Backdrop from "../backdrop/Backdrop";
 import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
-
+import guidelines from '../../Assets/Bespoke_Sales-Pitch_Guidelines.png'
 const dropIn = {
   hidden: {
     y: "-100vh",
@@ -36,7 +36,7 @@ const ModalFrammers = ({ handleClose, text, type }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient resp-tablet-b-s-s-p resp-desktop-b-s-sp"
+        className=""
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -50,40 +50,25 @@ const ModalFrammers = ({ handleClose, text, type }) => {
   );
 };
 
+
 const ModalText = () => (
-  <div className="modal-text">
-    <h3>Bespoke - Sales Pitch</h3>
+  <div className="guidelines-img">
+    {/* <h3>The First Mile- Guidelines</h3>
     <h5>
       <div>
-        <div>◉</div>
-
+        <div>◉ </div>
         <div>
-          {" "}
-          &nbsp;Throw of Dice: To get a random scenario that carries 15 marks
+          &nbsp;First round will be based on images or videos in which 5 questions
+          would display as per randomizer. The duration of this round would be 1
+          minute per question
         </div>
-      </div>
-      <div>
-        <div>◉</div>
-        <div>
-        &nbsp;Participant would be given a scenario with a specific customer
-          profile,  &nbsp;including his/her usage & needs
-        </div>
-      </div>
-      <div>
-        <div>◉</div>
-        <div> &nbsp;Stage 1: Self + Brand Introduction Pitch</div>
-      </div>
-      <div>
-        <div>◉</div>
-        <div> &nbsp;Stage 2: Understanding of Customers' Needs & Aspirations</div>
-      </div>
-      <div>
-        <div>◉</div>
-        <div> &nbsp;The duration of this scenario is 10 minutes</div>
       </div>
     </h5>
+    <br />
+    <h5>◉  &nbsp;Each question carries 10 marks</h5> */}
+    <img src={guidelines} alt="" />
   </div>
-);
+)
 
 const ModalText1 = () => (
   <div className="modal-text">

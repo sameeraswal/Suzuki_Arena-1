@@ -4,6 +4,7 @@ import Backdrop from "../backdrop/Backdrop";
 import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
 import modalimg from "../modal1.jpeg";
+import guidelines from '../../Assets/Ask-Express---Guidelines.png'
 
 const dropIn = {
   hidden: {
@@ -37,7 +38,7 @@ const Modalframmeras = ({ handleClose, text, type }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient"
+        className=""
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -51,28 +52,25 @@ const Modalframmeras = ({ handleClose, text, type }) => {
   );
 };
 
+
 const ModalText = () => (
-  <div className="modal-text">
-    <h3>Ask Express- Guidelines</h3>
+  <div className="guidelines-img">
+    {/* <h3>The First Mile- Guidelines</h3>
     <h5>
       <div>
-        <div>◉</div>
-
+        <div>◉ </div>
         <div>
-        &nbsp;15 Questions in 60 seconds for each participant (1 mark per question)
-        &nbsp;Participant has the option to answer or pass Total duration of this
-        &nbsp;round is 25 minutes
+          &nbsp;First round will be based on images or videos in which 5 questions
+          would display as per randomizer. The duration of this round would be 1
+          minute per question
         </div>
       </div>
-      <div>
-        <div>◉</div>
-
-        <div>&nbsp;Each question carries 10 marks</div>
-      </div>
     </h5>
+    <br />
+    <h5>◉  &nbsp;Each question carries 10 marks</h5> */}
+    <img src={guidelines} alt="" />
   </div>
-);
-
+)
 const ModalButton = ({ onClick, label }) => (
   <Link to="/enterscore5">
     {" "}

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Backdrop from "../backdrop/Backdrop";
 import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
-
+import guidelines from '../../Assets/Eye-for-an-Eye---Guidelines.png'
 const dropIn = {
   hidden: {
     y: "-100vh",
@@ -36,7 +36,7 @@ const ModalFrammerc = ({ handleClose, text, type }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient resp-tablet-e-f-e resp-desktop"
+        className=""
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -50,58 +50,23 @@ const ModalFrammerc = ({ handleClose, text, type }) => {
 };
 
 const ModalText = () => (
-  <div className="modal-text">
-    <h3>Eye for an Eye- Guidelines</h3>
+  <div className="guidelines-img">
+    {/* <h3>The First Mile- Guidelines</h3>
     <h5>
       <div>
         <div>◉ </div>
         <div>
-        &nbsp;Participants would spin the wheel digitally to select the competition
-        &nbsp; &nbsp;comparison
+          &nbsp;First round will be based on images or videos in which 5 questions
+          would display as per randomizer. The duration of this round would be 1
+          minute per question
         </div>
-      </div>
-      <div>
-        <div>◉</div>
-        <div>
-        &nbsp;Inverted cards with benefit statements would be shown on the screen
-        </div>
-      </div>
-      <div>
-        <div>◉</div>
-        <div>
-          {" "}
-          &nbsp;Participants would choose the correct card with mentioned parameter &nbsp;of
-          dominance over the shown competition vehicle out of the cards
-          &nbsp;displayed
-        </div>
-      </div>
-      <div>
-        <div> ◉</div>
-        <div>
-        &nbsp;The number of cards would drop after A choice, whether correct or
-           &nbsp;incorrect{" "}
-        </div>
-      </div>
-      <div>
-        <div> ◉</div>
-        <div>
-        &nbsp;Out of 8 cards 5 cards would be flipped by the participant, which is
-          an  &nbsp;advantage over the competition; the duration of this round will be
-          1  &nbsp;minute per question
-        </div>
-      </div>
-      <div>
-        <div> ◉</div>
-        <div>  &nbsp;Value would be entered as per the card chosen</div>
-      </div>
-      <div>
-        <div>◉ </div>
-        <div>  &nbsp;And each question carries 10 marks</div>
       </div>
     </h5>
+    <br />
+    <h5>◉  &nbsp;Each question carries 10 marks</h5> */}
+    <img src={guidelines} alt="" />
   </div>
-);
-
+)
 const ModalText1 = () => (
   <div className="modal-text">
     <h3>Chase The Maze - Guidelines</h3>
