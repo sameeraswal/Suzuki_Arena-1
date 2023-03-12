@@ -49,10 +49,12 @@ const Altovskwid = () => {
   // const getCardCount = () => {
   //   localStorage.setItem("co", JSON.stringify(setCount(count - 1)));
   // };
-  // const timeOutFun = () => {
-  //   JSON.parse(localStorage.getItem("cod")) === -1 &&
-  //     setTimeout(() => window.open('../casestudy', "_self"), 400);
-  // };
+  const timeOutFun = () => {
+    if (JSON.parse(localStorage.getItem("cod"))===-6) {
+      // alert(JSON.parse(localStorage.getItem("cod"))===-6);
+      setTimeout(() => window.open("../", "_self"), 400);
+    }
+  };
   return (
     <>
       <Navbar></Navbar>
@@ -64,7 +66,9 @@ const Altovskwid = () => {
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>
-          <p>Remaining:  {5-Math.abs(JSON.parse(localStorage.getItem("cod")))}</p>
+          <p>
+            Remaining: {5 - Math.abs(JSON.parse(localStorage.getItem("cod")))}
+          </p>
         </div>
 
         <div className="flex-container-child bg-correct">
@@ -92,7 +96,7 @@ const Altovskwid = () => {
                       )
                     )
                   );
-                  // timeOutFun();
+                  timeOutFun();
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
@@ -112,14 +116,6 @@ const Altovskwid = () => {
             </>
           ))}
         </div>
-        <Link to="/">
-          <button
-            className="roll icon-conatiner finish-card"
-            onClick={getData()}
-          >
-            Finish Round
-          </button>
-        </Link>
       </div>
     </>
   );

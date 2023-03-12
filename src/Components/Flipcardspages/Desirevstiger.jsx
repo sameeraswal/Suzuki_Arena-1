@@ -45,7 +45,12 @@ const Dezirevstiger = () => {
       .catch((error) => console.log(error.response.data.message));
     // return false;
   };
-
+  const timeOutFun = () => {
+    if (JSON.parse(localStorage.getItem("cod"))===-6) {
+      // alert(JSON.parse(localStorage.getItem("cod"))===-6);
+      setTimeout(() => window.open("../", "_self"), 400);
+    }
+  };
   return (
     <>
       <Navbar></Navbar>
@@ -84,6 +89,8 @@ const Dezirevstiger = () => {
                       JSON.stringify(JSON.parse(localStorage.getItem("cod"))-1)
                     )
                   );
+                  timeOutFun();
+
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
