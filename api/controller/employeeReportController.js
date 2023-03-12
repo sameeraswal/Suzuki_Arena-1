@@ -90,7 +90,7 @@ exports.submitAnswerOfQuestion = async (req, res) => {
                     
                     if(checked === false){
                         return res.status(404).json({
-                            message: "data not found from checkanswer func"
+                            message: "data not found"
                         })
 
                     }
