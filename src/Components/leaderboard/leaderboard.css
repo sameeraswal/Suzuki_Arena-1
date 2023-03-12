@@ -13,6 +13,15 @@
   background-attachment: fixed;
 }
 
+.leader-btn{
+  width: 12%;
+  position: absolute;
+  z-index: 1;
+  margin-top: -60px;
+  float: right;
+  right: 0;
+}
+
 .title-image{
   width: 100%;
   height: 50px;
