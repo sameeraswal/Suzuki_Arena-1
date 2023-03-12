@@ -40,9 +40,9 @@ const Leaderboard = () => {
     // alert("Page is running");
     // fetchData();
     axios
-      .get(`${APIURL}/api/v1/quiz/finalscore/leaderboard`)
+      .get(`${APIURL}/api/v1/quiz/scoreboard`)
       .then((res) => {
-        setRound(res.data.data.leaderboard);
+        setRound(res.data.data.scoreBoard);
         // setFinalscore(res.data.data.leaderboard.finalScore)
         // console.log(res.data.data.leaderboard[1].finalScore)
 
