@@ -30,37 +30,34 @@ const Puzzlequestion = () => {
     status: true,
     data: [
       {
-        question: "Q.1) Made reference of his observation",
+        question: "Q.1) Enquired about users of the vehicle (drivers/occupants)",
 
         btn1: "YES",
         btn2: "NO",
         index: 0,
       },
       {
-        question: "Q.2) Mentioned about Importance (impact) of the topic",
+        question: "Q.2) Enquired about daily (regular)/ long (occasional) commute",
 
         btn1: "YES",
         btn2: "NO",
         index: 1,
       },
       {
-        question: "Q.3) Explained in an easy to understand/Interesting way",
+        question: "Q.3) Asked about preferences (features wanted) in the new vehicle ",
 
         btn1: "YES",
         btn2: "NO",
         index: 2,
       },
       {
-        question:
-          "Q.4) Concluded the Coaching with a summary (points to remember)",
-
+        question: "Q.4) Asked about considered competition",
         btn1: "YES",
         btn2: "NO",
         index: 3,
       },
       {
-        question: "Q.5) Checked understanding of the RM",
-
+        question: "Q.5) Suggested the correct model and mentioned its  High 5 / 6 ",
         btn1: "YES",
         btn2: "NO",
         index: 4,
@@ -118,7 +115,7 @@ const Puzzlequestion = () => {
       <Navbar />
 
       <div className="dashboard-container full-height">
-        <img src={bgImg} alt="" className="ques-bg" />
+        {/* <img src={bgImg} alt="" className="ques-bg" /> */}
         <div className="round-box-dashboard">Questions</div>
 
         <div className="puzzle-box">

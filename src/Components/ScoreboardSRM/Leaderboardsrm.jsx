@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Navbar'
-import headImg from '../../Assets/Leaderboard/01.png'
+import headImg from '../../Assets/ScoreboardNew/SRM.png'
 import userImg from '../../Assets/ScoreboardNew/04.png'
 import titlesImg from '../../Assets/Leaderboard/06.png'
 import { useNavigate } from 'react-router-dom'
