@@ -41,10 +41,11 @@ export default class Wheel extends React.Component {
       } else if (num === -1) {
         num = 11;
       }
-      car = this.props.items[num].title.replace(/ /g, "").toLowerCase();
+      randomWheelNo = selectedItem;
+      car = this.props.items[selectedItem].title.replace(/ /g, "").toLowerCase();
       // alert(car)
-      console.log(this.props.items[num].title)
-      randomWheelNo = num;
+      console.log(this.props.items[num].title);
+
       // randomWheelNo = 3;
     } else {
       this.setState({ selectedItem: null });
@@ -61,10 +62,11 @@ export default class Wheel extends React.Component {
     localStorage.setItem("roundName", JSON.stringify(randomWheelNo));
     localStorage.setItem("carRoute", JSON.stringify(car));
 
-    setTimeout(() => window.open(`/${car}`, "_self"), 18000);
+    setTimeout(() => window.open(`/${car}`, "_self"), 1000);
+    
   }
 
-  render() { 
+  render() {
     const { selectedItem } = this.state;
     const { seltitle } = this.state;
     const { items } = this.props;

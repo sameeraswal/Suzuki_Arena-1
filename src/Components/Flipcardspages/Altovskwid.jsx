@@ -25,10 +25,11 @@ const Altovskwid = () => {
         roundOrder: JSON.parse(localStorage.getItem("roundName")),
       })
       .then((res) => {
-        setResult(res.data.data.questions);
         console.log(res, "Respnse");
+        setResult(res.data.data.questions);
+        // console.log(res, "Respnse");
       })
-      .catch((error) => console.log(error.response.data.message));
+      .catch((error) => console.log(error));
   }, []);
 
   const getData = () => {

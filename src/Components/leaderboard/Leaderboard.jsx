@@ -97,17 +97,17 @@ const Leaderboard = () => {
                           ? "NA"
                           : item.rounds["1-B"]}
                       </td>
-                      <td className={item.class}>
+                      <td className="table-round-2">
                         {item.rounds["2"] === undefined
                           ? "NA"
                           : item.rounds["2"]}
                       </td>
-                      <td className={item.class}>
+                      <td className="table-round-3">
                         {item.rounds["3"] === undefined
                           ? "NA"
                           : item.rounds["3"]}
                       </td>
-                      <td className={item.class}>
+                      <td className="table-round-4">
                         {item.rounds["4"] === undefined
                           ? "NA"
                           : item.rounds["4"]}
