@@ -193,7 +193,7 @@ const Question = () => {
             <>
               <div
                 className="modalBackground"
-                style={{ zIndex: "1", marginLeft: "-10%" }}
+                style={{ zIndex: "1"}}
               >
                 <div className="modalContainer">
                   <div className="titleCloseBtn">

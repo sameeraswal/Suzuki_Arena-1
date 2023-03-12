@@ -8,7 +8,7 @@ import "./leaderboard.css";
 import { APIURL } from "../../App";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import headImg from '../../Assets/Leaderboard/01.png'
+import headImg from '../../Assets/ScoreboardNew/RM.png'
 import userImg from '../../Assets/ScoreboardNew/04.png'
 import titlesImg from '../../Assets/Leaderboard/06.png'
 import { useNavigate } from "react-router-dom";
