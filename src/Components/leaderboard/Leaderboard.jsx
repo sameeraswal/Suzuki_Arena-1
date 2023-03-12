@@ -8,14 +8,16 @@ import "./leaderboard.css";
 import { APIURL } from "../../App";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import headImg from '../../Assets/Leaderboard/01.png'
-import userImg from '../../Assets/ScoreboardNew/04.png'
-import titlesImg from '../../Assets/Leaderboard/06.png'
+import headImg from "../../Assets/Leaderboard/01.png";
+import userImg from "../../Assets/ScoreboardNew/04.png";
+import titlesImg from "../../Assets/Leaderboard/06.png";
 import { useNavigate } from "react-router-dom";
 
 const Leaderboard = () => {
   const navigate = useNavigate();
   const [round, setRound] = useState([]);
+  const [rounds, setRounds] = useState([]);
+
   const [finalscore, setFinalscore] = useState([]);
 
   // const round1A="1-A";
@@ -44,6 +46,7 @@ const Leaderboard = () => {
       .get(`${APIURL}/api/v1/quiz/scoreboard`)
       .then((res) => {
         setRound(res.data.data.scoreBoard);
+        setRounds(res.data.data.scoreBoard.rounds);
         // setFinalscore(res.data.data.leaderboard.finalScore)
         // console.log(res.data.data.leaderboard[1].finalScore)
 
@@ -55,10 +58,15 @@ const Leaderboard = () => {
   return (
     <>
       <Navbar></Navbar>
-      <button className="roll leader-btn icon-conatiner" onClick={() => navigate('/scoreboardsrm')}>Toggle to SRM</button>
-      <img src={headImg} alt="" className="head-image-scoreboard"/>
-      <img src={titlesImg} alt="" className="title-image"/>
-     
+      <button
+        className="roll leader-btn icon-conatiner"
+        onClick={() => navigate("/scoreboardsrm")}
+      >
+        Toggle to SRM
+      </button>
+      <img src={headImg} alt="" className="head-image-scoreboard" />
+      <img src={titlesImg} alt="" className="title-image" />
+
       <div className="leaderboard-container">
         <div className="leaderboard">
           {/* <div className="description">
@@ -102,21 +110,52 @@ const Leaderboard = () => {
 
                 {round.map((item) => (
                   <>
-                 
                     <tr>
-                    
                       <td className={item.class}>{item.registrationNumber}</td>
                       <td className={item.class}>{item.name}</td>
-                      
-                      {/* <td className={item.class}>{round1A}</td> */}
-                      {/*<td className={item.class}>{item.round}</td>
-                      <td className={item.class}>{item.round}</td>
-                      <td className={item.class}>{item.round}</td>
-                      <td className={item.class}>{item.round}</td>
-                      <td className={item.class}>{item.round}</td>
-                      <td className={item.class}>{item.round}</td>
-                      <td className={item.class}>{item.round}</td> */}
-                      <td className={item.class}>{item.finalScore}</td>
+                      <td className={item.class}>
+                        {item.rounds["1-A"] === undefined
+                          ? "NA"
+                          : item.rounds["1-A"]}
+                      </td>
+                      <td className={item.class}>
+                        {item.rounds["1-B"] === undefined
+                          ? "NA"
+                          : item.rounds["1-B"]}
+                      </td>
+                      <td className={item.class}>
+                        {item.rounds["2"] === undefined
+                          ? "NA"
+                          : item.rounds["2"]}
+                      </td>
+                      <td className={item.class}>
+                        {item.rounds["3"] === undefined
+                          ? "NA"
+                          : item.rounds["3"]}
+                      </td>
+                      <td className={item.class}>
+                        {item.rounds["4"] === undefined
+                          ? "NA"
+                          : item.rounds["4"]}
+                      </td>
+                      <td className={item.class}>
+                        {item.rounds["5"] === undefined
+                          ? "NA"
+                          : item.rounds["5"]}
+                      </td>
+                      <td className={item.class}>
+                        {item.rounds["6"] === undefined
+                          ? "NA"
+                          : item.rounds["6"]}
+                      </td>
+                      <td className={item.class}>
+                        {item.rounds["7"] === undefined
+                          ? "NA"
+                          : item.rounds["7"]}
+                      </td>
+                      <td className={item.class}>
+                        {item.totalScoreOfAllRounds}
+                      </td>
                       <td className={item.class}>{item.rank}</td>
                     </tr>
                   </>

@@ -8,13 +8,11 @@ import Buttonn from "../Puzzle4/Buttonn";
 import Finishmodal from "../Modalframmer/finishmodal";
 import { motion, AnimatePresence } from "framer-motion";
 
-
-
 import "../modalcss.css";
 import Finishmodal1b from "../Modalframmer/finishmodal1b";
 import axios from "axios";
 import { APIURL } from "../../App";
-import bgMainImage from '../../Assets/Puzzle (1).png'
+import bgMainImage from "../../Assets/Puzzle (1).png";
 
 let x = [0, 0, 0, 0, 0, 0];
 function randomnum() {
@@ -89,7 +87,6 @@ const Puzzlechoice = () => {
     x[index] = 0;
     console.log("array", x);
   };
-
   let count = 0;
   let newCount;
 
@@ -117,11 +114,11 @@ const Puzzlechoice = () => {
       })
       .catch((error) => console.log(error));
   };
-  let x = Number(2);
+
   return (
     <>
       <Navbar />
-      <img src={bgMainImage} alt="" className="background-image"/>
+      <img src={bgMainImage} alt="" className="background-image" />
       <div className="">
         <div className="round-box">Puzzle - {num}</div>
         <div className="puzzle-box">
