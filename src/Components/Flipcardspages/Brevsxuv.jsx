@@ -33,7 +33,7 @@ const Brewsuv = () => {
     axios
       .post(`${APIURL}/api/v1/finishround`, {
         mspin: JSON.parse(localStorage.getItem("mspin")),
-        roundName: "2",
+        roundName: JSON.parse(localStorage.getItem("roundName")),
       })
       .then((res) => {
         console.log(JSON.parse(localStorage.getItem("mspin")), "MSPIN");

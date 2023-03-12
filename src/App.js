@@ -65,62 +65,62 @@ const App = () => {
   const places = [
     {
       id: 0,
-      title: "S presso Vs Kwid",
+      title: "Ertiga Vs Carens",
       class: "wheel-color",
     },
     {
       id: 1,
-      title: "WagonR Vs Tiago",
+      title: "Ertiga Vs Triber",
       class: "wheel-color1",
     },
     {
       id: 2,
-      title: "Alto K10 Vs Kwid",
+      title: "Dzire Vs Aura",
       class: "wheel-color2",
     },
     {
       id: 3,
-      title: "Celerio Vs Tiago",
+      title: "S presso Vs Kwid",
       class: "wheel-color3",
     },
     {
       id: 4,
-      title: "Swift Vs Altroz",
+      title: "WagonR Vs Tiago",
       class: "wheel-color4",
     },
     {
       id: 5,
-      title: "Swift Vs Grand i10 NIOS",
+      title: "Alto K10 Vs Kwid",
       class: "wheel-color5",
     },
     {
       id: 6,
-      title: "Dzire Vs Amaze",
+      title: "Celerio Vs Tiago",
       class: "wheel-color6",
     },
     {
       id: 7,
-      title: "Dzire Vs Tigor",
+      title: "Swift Vs Altroz",
       class: "wheel-color",
     },
     {
       id: 8,
-      title: "Brezza Vs XUV 300",
+      title: "Swift Vs Grand i10 NIOS",
       class: "wheel-color1",
     },
     {
       id: 9,
-      title: "Ertiga Vs Carens",
+      title: "Dzire Vs Amaze",
       class: "wheel-color2",
     },
     {
       id: 10,
-      title: "Ertiga Vs Triber",
+      title: "Dzire Vs Tigor",
       class: "wheel-color3",
     },
     {
       id: 11,
-      title: "Dzire Vs Aura",
+      title: "Brezza Vs XUV 300",
       class: "wheel-color4",
     },
   ];
@@ -242,7 +242,6 @@ const App = () => {
           <Route path="/popupquestion" element={<Popupquestion />}></Route>
           <Route path="/popupexample" element={<Popupexample />}></Route>
           <Route path="/scoreboardsrm" element={<Leaderboardsrm />}></Route>
-
         </Routes>
       </div>
     </Router>

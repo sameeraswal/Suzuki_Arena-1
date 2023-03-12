@@ -75,14 +75,14 @@ function Card({ onClick, title, isCorrect, cardQuestion,cardQuestionId }) {
     <>
       <div className="card" onClick={onClick}>
         <div
-          className={`card-back text-on-card-back ${metaData[title].classBack}`}
+          className={`card-back text-on-card-back ${metaData[title]?.classBack}`}
         >
           {title}
         </div>
 
         <div className="card-front ">
           <button
-            className={`middle card-front ${metaData[title].classFront}`}
+            className={`middle card-front ${metaData[title]?.classFront}`}
             onClick={() => {
               timeOutFun();
             }}

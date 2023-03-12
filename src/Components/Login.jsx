@@ -49,7 +49,7 @@ const Login = () => {
 
   const arena = require("./Pratham.png");
   const navigateLogin = () => {
-    console.log(status)(mspin && regno && status)
+    mspin && regno
       ? setTimeout(() => window.open("./dashboard", "_self"), 2000)
       : setMessage("Please Enter details");
   };
