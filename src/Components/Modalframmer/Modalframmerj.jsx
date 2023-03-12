@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Backdrop from "../backdrop/Backdrop";
 import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
+import guidelines from '../../Assets/Judges-Round-Guidelines.png'
 
 const dropIn = {
   hidden: {
@@ -36,7 +37,7 @@ const Modalframmerj = ({ handleClose, text, type }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient"
+        className=""
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -50,26 +51,23 @@ const Modalframmerj = ({ handleClose, text, type }) => {
 };
 
 const ModalText = () => (
-  <div className="modal-text">
-    <h3>Judges Round- Guidelines</h3>
+  <div className="guidelines-img">
+    {/* <h3>The First Mile- Guidelines</h3>
     <h5>
       <div>
-        <div>◉</div>
-
+        <div>◉ </div>
         <div>
-        &nbsp;One question would be asked to each participant by the Jury members.
-        &nbsp;Average score would be considered as final marks for the round
+          &nbsp;First round will be based on images or videos in which 5 questions
+          would display as per randomizer. The duration of this round would be 1
+          minute per question
         </div>
       </div>
-      <div>
-        <div>◉</div>
-
-        <div>&nbsp;Total duration of Jury round is for 20 minutes</div>
-      </div>
     </h5>
+    <br />
+    <h5>◉  &nbsp;Each question carries 10 marks</h5> */}
+    <img src={guidelines} alt="" />
   </div>
-);
-
+)
 const ModalButton = ({ onClick, label }) => (
   <Link to="/enterscore7">
     {" "}

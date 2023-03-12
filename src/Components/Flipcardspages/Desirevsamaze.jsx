@@ -44,6 +44,12 @@ const Dezirevsamaze = () => {
     // return false;
   };
 
+  const timeOutFun = () => {
+    if (JSON.parse(localStorage.getItem("cod"))===-6) {
+      // alert(JSON.parse(localStorage.getItem("cod"))===-6);
+      setTimeout(() => window.open("../", "_self"), 400);
+    }
+  };
   return (
     <>
       <Navbar></Navbar>
@@ -57,7 +63,7 @@ const Dezirevsamaze = () => {
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>
-          <p>Remaining: {count}</p>
+          <p>Remaining:  {5-Math.abs(JSON.parse(localStorage.getItem("cod")))}</p>
         </div>
 
         <div className="flex-container-child bg-correct">
@@ -66,9 +72,9 @@ const Dezirevsamaze = () => {
               <div
                 className="flex-child bg-correct"
                 onClick={() => {
-                  {
-                    count > 0 ? setCount(count - 1) : setCount(0);
-                  }
+                  // {
+                  //   count > 0 ? setCount(count - 1) : setCount(0);
+                  // }
                   setOpenModal(!item.isCorrect);
                   setQuestionid(
                     localStorage.setItem(
@@ -76,6 +82,14 @@ const Dezirevsamaze = () => {
                       JSON.stringify(item.cardQuestionId)
                     )
                   );
+                  setCount(
+                    localStorage.setItem(
+                      "cod",
+                      JSON.stringify(JSON.parse(localStorage.getItem("cod"))-1)
+                    )
+                  );
+                  timeOutFun();
+
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Backdrop from "../backdrop/Backdrop";
 import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
-
+import guidelines from '../../Assets/Solutions-Only---Guidelines.png'
 const dropIn = {
   hidden: {
     y: "-100vh",
@@ -36,7 +36,7 @@ const Modalframmerso = ({ handleClose, text, type }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-        className="modal orange-gradient"
+        className=""
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -49,28 +49,25 @@ const Modalframmerso = ({ handleClose, text, type }) => {
   );
 };
 
+
 const ModalText = () => (
-  <div className="modal-text">
-    <h3>Solutions Only- Guidelines</h3>
+  <div className="guidelines-img">
+    {/* <h3>The First Mile- Guidelines</h3>
     <h5>
       <div>
-        <div>◉</div>
-
+        <div>◉ </div>
         <div>
-          {" "}
-          &nbsp;Pick a card to get a random scenario related to Calculate pricing &
-          &nbsp;discount, MS Subscribe feasibility, MS Smart finance that carries 15
-          &nbsp;&nbsp;marks
+          &nbsp;First round will be based on images or videos in which 5 questions
+          would display as per randomizer. The duration of this round would be 1
+          minute per question
         </div>
       </div>
-      <div>
-        <div>◉</div>
-
-        <div>&nbsp;Duration of this round is 15 minutes</div>
-      </div>
     </h5>
+    <br />
+    <h5>◉  &nbsp;Each question carries 10 marks</h5> */}
+    <img src={guidelines} alt="" />
   </div>
-);
+)
 
 const ModalButton = ({ onClick, label }) => (
   <Link to="/flipcardcasestudy">

@@ -68,6 +68,7 @@ const Login = () => {
   useEffect(() => {
     localStorage.setItem("mspin", JSON.stringify(mspin));
     localStorage.setItem("regNo", JSON.stringify(regno));
+    localStorage.removeItem("cod");
   }, [mspin, regno]);
   return (
     <>

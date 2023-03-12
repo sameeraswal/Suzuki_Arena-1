@@ -10,6 +10,7 @@ import { getData } from "./Altovskwid";
 import axios from "axios";
 import { APIURL } from "../../App";
 
+
 const CelvsTia = () => {
   const [count, setCount] = useState(5);
   const [questionid, setQuestionid] = useState(0);
@@ -43,6 +44,20 @@ const CelvsTia = () => {
     // return false;
   };
 
+  // useEffect(() => {
+  //   if(count === null || count === ''){
+  //     setCount(5)
+  //   }
+  //    setCount(localStorage.setItem('counter', JSON.stringify(count-1)))
+  // }, [count])
+  const timeOutFun = () => {
+    if (JSON.parse(localStorage.getItem("cod"))===-6) {
+      // alert(JSON.parse(localStorage.getItem("cod"))===-6);
+      setTimeout(() => window.open("../", "_self"), 400);
+    }
+  };
+
+
   return (
     <>
       <Navbar></Navbar>
@@ -56,7 +71,7 @@ const CelvsTia = () => {
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>
-          <p>Remaining: {count}</p>
+          <p>Remaining:  {5-Math.abs(JSON.parse(localStorage.getItem("cod")))}</p>
         </div>
 
         <div className="flex-container-child bg-correct">
@@ -65,9 +80,9 @@ const CelvsTia = () => {
               <div
                 className="flex-child bg-correct"
                 onClick={() => {
-                  {
-                    count > 0 ? setCount(count - 1) : setCount(0);
-                  }
+                  // {
+                  //   count > 0 ? setCount(count - 1) : setCount(0);
+                  // }
                   setOpenModal(!item.isCorrect);
                   setQuestionid(
                     localStorage.setItem(
@@ -75,6 +90,14 @@ const CelvsTia = () => {
                       JSON.stringify(item.cardQuestionId)
                     )
                   );
+                  setCount(
+                    localStorage.setItem(
+                      "cod",
+                      JSON.stringify(JSON.parse(localStorage.getItem("cod"))-1)
+                    )
+                  );
+                  timeOutFun();
+
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
