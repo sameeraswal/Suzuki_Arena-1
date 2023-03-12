@@ -11,9 +11,10 @@ import { useEffect, useState } from "react";
 import headImg from '../../Assets/Leaderboard/01.png'
 import userImg from '../../Assets/ScoreboardNew/04.png'
 import titlesImg from '../../Assets/Leaderboard/06.png'
+import { useNavigate } from "react-router-dom";
 
 const Leaderboard = () => {
- 
+  const navigate = useNavigate();
   const [round, setRound] = useState([]);
   const [finalscore, setFinalscore] = useState([]);
 
@@ -54,6 +55,7 @@ const Leaderboard = () => {
   return (
     <>
       <Navbar></Navbar>
+      <button className="roll leader-btn icon-conatiner" onClick={() => navigate('/scoreboardsrm')}>Toggle to SRM</button>
       <img src={headImg} alt="" className="head-image-scoreboard"/>
       <img src={titlesImg} alt="" className="title-image"/>
      
