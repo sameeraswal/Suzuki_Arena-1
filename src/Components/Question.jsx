@@ -250,7 +250,7 @@ const Question = () => {
 
           <div className="question-box">
           <img src={bgImg1} alt="" className="head-question-design"/>
-            <div className="question-div ">
+            <div className="question-div">
               <h2 key={i}>{question}</h2>
             </div>
             <div className="">
