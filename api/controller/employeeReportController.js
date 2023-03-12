@@ -27,7 +27,7 @@ exports.submitAnswerOfQuestion = async (req, res) => {
         let questionId = req.body.questionId;
         let cId = req.body.cId;
 
-        console.log(roundName);
+        
         const checkemployeeExists = await Employee.findOne({ mspin: mspin });
         if (!checkemployeeExists) {
             return res.status(404).json({
@@ -42,17 +42,17 @@ exports.submitAnswerOfQuestion = async (req, res) => {
 
             if (round) {
                 status = true;
-                console.log(round.correctAnswers)
+                
                 let correctAnswers = round.correctAnswers;
                 let correctQuestionsAnswers = {}
 
                 correctAnswers.forEach((obj) => {
                     correctQuestionsAnswers[obj.questionId] = obj.cId;
                 });
-                console.log(correctQuestionsAnswers)
+                
                 const questions = Object.keys(correctQuestionsAnswers);
-                console.log("questionssss")
-                console.log(questions)
+                
+                
                 //     // const total = questions.length;
                 let score = 0;
                 // let employeeAnswer = {};
@@ -78,9 +78,8 @@ exports.submitAnswerOfQuestion = async (req, res) => {
                         employeeAnswer["score"] = score;
 
                     } else if (!!cId && questions[questionId - 1] !== questionId && correctQuestionsAnswers[questionId] !== cId) {
-                        return res.status(404).json({
-                            message: "data not found"
-                        })
+                       return false;
+                        
                     }
                     return employeeAnswer;
                 }
@@ -88,6 +87,13 @@ exports.submitAnswerOfQuestion = async (req, res) => {
                 const employeeAnsExists = await EmployeeAnswer.find({ mspin: mspin, roundName: roundName, "empAnswers.questionId": questionId });
                 if (employeeAnsExists.length) {
                     let checked = await checkAnswer();
+                    
+                    if(checked === false){
+                        return res.status(404).json({
+                            message: "data not found"
+                        })
+
+                    }
 
                     const updateQuery = async () => {
                         try {
@@ -106,6 +112,7 @@ exports.submitAnswerOfQuestion = async (req, res) => {
                             });
                             await calculateScoreOfOneRoundHelper(mspin, roundName);
                             await calculateCurrentScoreOfEmpHelper(mspin);
+                            return;
 
                         } catch (error) {
                             res.status(400).json({
@@ -115,7 +122,7 @@ exports.submitAnswerOfQuestion = async (req, res) => {
                     }
                     updateQuery();
                 } else {
-                    console.log("not exits. save the answer")
+                    
                     let checked = await checkAnswer();
                     const roundReport = new EmployeeAnswer({ mspin, registrationNumber, name, roundName, empAnswers: checked });
                     const ansSubmitted = await roundReport.save();
@@ -135,6 +142,7 @@ exports.submitAnswerOfQuestion = async (req, res) => {
                         });
                         await calculateScoreOfOneRoundHelper(mspin, roundName);
                         await calculateCurrentScoreOfEmpHelper(mspin);
+                        return ;
 
                     } else {
                         return res.status(404).json({
@@ -148,7 +156,7 @@ exports.submitAnswerOfQuestion = async (req, res) => {
             } else {
                 return res.status(404).json({
                     status: status,
-                    message: "data not found"
+                    message: "data not found 3"
                 })
             }
 
@@ -159,7 +167,7 @@ exports.submitAnswerOfQuestion = async (req, res) => {
 
     } catch (error) {
         res.status(404).json({
-            message: "data not found"
+            message: "data not found 2"
         })
     }
 }
@@ -277,11 +285,9 @@ exports.submitAnswersOfCardQuestion = async (req, res) => {
                         data: employeeAnswer
                     })
                 }
-                console.log(dbcid)
+               
                 const questions = Object.keys(correctQuestionsAnswers);
-                console.log("questionssss")
-                console.log(questions)
-
+                
             }
 
         }
@@ -337,12 +343,8 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                     correctAnswers.forEach((obj) => {
                         correctQuestionsAnswers[obj.cardQuestionId] = obj.cId;
                     });
-                    console.log("correctQuestionsAnswers---------", correctQuestionsAnswers)
+                    
                     const questions = Object.keys(correctQuestionsAnswers);
-                    console.log("questionssss==========+++++")
-                    console.log(questions)
-
-                    //     // const total = questions.length;
                     let score = 0;
                     // let employeeAnswer = {};
                     const checkAnswer = async () => {
@@ -403,6 +405,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                                 });
                                 await calculateScoreOfOneRoundHelper(mspin, roundName);
                                 await calculateCurrentScoreOfEmpHelper(mspin);
+                                return;
 
                             } catch (error) {
                                 res.status(400).json({
@@ -454,6 +457,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                             });
                             await calculateScoreOfOneRoundHelper(mspin, roundName);
                             await calculateCurrentScoreOfEmpHelper(mspin);
+                            return;
 
                         } else {
                             return res.status(404).json({
@@ -539,6 +543,7 @@ exports.submitScoreForRound = async (req, res) => {
                             });
                             await calculateScoreOfOneRoundHelper(mspin, roundName);
                             await calculateCurrentScoreOfEmpHelper(mspin);
+                            return;
 
                         } catch (error) {
                             res.status(400).json({
@@ -567,6 +572,7 @@ exports.submitScoreForRound = async (req, res) => {
                         });
                         await calculateScoreOfOneRoundHelper(mspin, roundName);
                         await calculateCurrentScoreOfEmpHelper(mspin);
+                        return;
 
                     } else {
                         return res.status(404).json({

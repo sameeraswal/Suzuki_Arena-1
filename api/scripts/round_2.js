@@ -1,7 +1,7 @@
 require("../db/connection");
 const Round = require("../model/wheelRoundsSchema");
 var XLSX = require('xlsx')
-var workbook = XLSX.readFile('files/round_3.xlsx');
+var workbook = XLSX.readFile('files/round_2.xlsx');
 var sheet_name_list = workbook.SheetNames;
 var xlData = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
 

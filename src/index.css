@@ -820,13 +820,13 @@
 }
 
 .margin-div {
-  margin-top: 100px;
+  margin-top: 36px;
   display: flex;
   justify-content: center;
 }
 
 .text-margin {
-  margin-top: 100px;
+  margin-top: 42px;
   font-size: 40px;
   text-align: center;
   color: white;
