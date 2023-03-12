@@ -71,20 +71,11 @@ exports.registerEmployee = async (req, res) => {
                     message:
                         "employee is already registered with this mspin and registration number",
                 });
-                // status = true;
-                // const name = employeeDetails.name;
-                // const dealership = employeeDetails.dealership;
-                // res.status(201).json({
-                //     status: status,
-                //     data: { name, dealership }
-                // })
             } else {
                 const regNumberSaved = await Employee.updateOne(
                     { mspin: mspin, name: name, dealership: dealership },
                     { $set: { registrationNumber: registrationNumber } }
                 );
-                //const regNumber = new Employee({ registrationNumber: registrationNumber });
-                // const regNumberSaved = await regNumber.save();
                 console.log(regNumberSaved);
                 if (regNumberSaved) {
                     status = true;
@@ -111,35 +102,33 @@ exports.registerEmployee = async (req, res) => {
 exports.checkLogin = async (req, res) => {
     let status = false;
     try {
-        const { mspin, regNumber } = req.body;
+        const mspin = req.body.mspin;
+        const regNumber = req.body.regNumber;
         if (!mspin || !regNumber) {
             return res.status(400).json({
                 status: status,
                 error: "Please fill all the fields",
             });
         }
-        const emloyeeLogin = await Employee.findOne({
-            mspin: mspin,
-            registrationNumber: regNumber,
-        });
-        console.log(emloyeeLogin);
+        const emloyeeLogin = await Employee.findOne({ mspin: mspin, registrationNumber: regNumber});
         if (emloyeeLogin) {
+            const categoryType = emloyeeLogin.category;
             status = true;
-            //const token = jwt.sign({ mspin, regNumber }, secretKey);
-            res.status(201).json({
+            return res.status(201).json({
                 status: status,
+                categoryTypeofEmployee : categoryType,
                 message: "Employee logged in succesfully",
             });
         } else {
-            res.status(404).json({
+            return res.status(404).json({
                 status: status,
                 message: "invalid credientials",
             });
         }
     } catch (error) {
-        res.status(404).json({
+        return res.status(404).json({
             status: status,
-            error: error,
+            error: error
         });
     }
 };

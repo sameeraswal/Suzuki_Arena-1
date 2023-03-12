@@ -1,63 +1,63 @@
 require("../db/connection");
 const Round = require("../model/roundsSchema");
 const WheelRounds = require("../model/wheelRoundsSchema");
-console.log("WheelRounds",WheelRounds)
-//const employeeUnlockedRound = require("../model/employeeUnlockedRound"); Roundunlocked
 const Roundunlocked = require("../model/employeeUnlockedRound");
-
 const WheelRoundLocked = require("../model/employeeWheelUnlockedRound");
-
+const Employee = require("../model/employeeSchema")
 
 exports.getRoundLists = async (req, res) => {
     let status = false;
     try {
         const mspin = req.body.mspin;
-        //const name = req.body.name;
-        const rounds = await Round.find({}).select({ roundName: 1,route:1, roundOrder: 1, _id: 0 }).sort({ roundOrder: 1 });
-        console.log("1111111111 rounds before updataion=========", rounds)
-
-        if (rounds.length) {
-            rounds.forEach((round, index, rounds) => {
-                rounds[index]["isDisabled"] = false;
-            })
-            status = true;
-            let disabledRound = await Roundunlocked.findOne({ mspin: mspin }).select({ disabled: 1, unlocked: 1 });
-            console.log("disabledRound:",{ mspin: mspin },disabledRound)
-            if (disabledRound) {
-                let disabledRounds = disabledRound.disabled;
+        const checkemployeeExists = await Employee.findOne({ mspin: mspin });
+        if (!checkemployeeExists) {
+            return res.status(404).json({
+                status: status,
+                message: "employee does not exists with this given employee details",
+            });
+        } else {
+            const rounds = await Round.find({}).select({ roundName: 1, route: 1, roundOrder: 1, _id: 0 }).sort({ roundOrder: 1 });
+            if (rounds.length) {
                 rounds.forEach((round, index, rounds) => {
-                    let checkRoundNameExists = disabledRounds.includes(round.roundName)
-                    if (checkRoundNameExists) {
-                        rounds[index]["isDisabled"] = true;
-                    } else {
-                        rounds[index]["isDisabled"] = false;
-                    }
-                    if (disabledRound.unlocked && disabledRound.unlocked === rounds[index]["roundName"]) {
-                        rounds[index]["isRoundLocked"] = false;
-                    } else {
-                        rounds[index]["isRoundLocked"] = true;
-                    }
+                    rounds[index]["isDisabled"] = false;
                 })
-                console.log("rounds aftrer updataion=========", rounds)
-
-            } else {//When we don't have any data in Roundunlocked for the given mspin
-                rounds.forEach((round, index, rounds) => {
-                    if (rounds[index]["roundOrder"] == 1) {//Keep the first round unlocked
-                        rounds[index]["isRoundLocked"] = false;
-                    } else {//other round will be locked
-                        rounds[index]["isRoundLocked"] = true;
-                    }
+                status = true;
+                let disabledRound = await Roundunlocked.findOne({ mspin: mspin }).select({ disabled: 1, unlocked: 1 });
+                //console.log("disabledRound:", { mspin: mspin }, disabledRound)
+                if (disabledRound) {
+                    let disabledRounds = disabledRound.disabled;
+                    rounds.forEach((round, index, rounds) => {
+                        let checkRoundNameExists = disabledRounds.includes(round.roundName)
+                        if (checkRoundNameExists) {
+                            rounds[index]["isDisabled"] = true;
+                        } else {
+                            rounds[index]["isDisabled"] = false;
+                        }
+                        if (disabledRound.unlocked && disabledRound.unlocked === rounds[index]["roundName"]) {
+                            rounds[index]["isRoundLocked"] = false;
+                        } else {
+                            rounds[index]["isRoundLocked"] = true;
+                        }
+                    })
+                } else {//When we don't have any data in Roundunlocked for the given mspin
+                    rounds.forEach((round, index, rounds) => {
+                        if (rounds[index]["roundOrder"] == 1) {//Keep the first round unlocked
+                            rounds[index]["isRoundLocked"] = false;
+                        } else {//other round will be locked
+                            rounds[index]["isRoundLocked"] = true;
+                        }
+                    })
+                }
+                res.status(201).json({
+                    status: status,
+                    data: rounds
+                })
+            } else {
+                res.status(404).json({
+                    status: status,
+                    message: "Data not found"
                 })
             }
-            res.status(201).json({
-                status: status,
-                data: rounds
-            })
-        } else {
-            res.status(404).json({
-                status: status,
-                message: "data not found"
-            })
         }
     } catch (error) {
         res.status(404).json({
@@ -66,32 +66,30 @@ exports.getRoundLists = async (req, res) => {
         })
     }
 }
+
 exports.wheelRoundQuestions = async (req, res) => {
     let status = false;
     try {
         const mspin = req.body.mspin;
         const roundOrder = req.body.roundOrder;
-        const rounds = await WheelRounds.findOne({roundOrder:roundOrder}).select({ roundName: 1,route:1, roundOrder: 1, questions:1, _id: 0 }).sort({ "questions.cardQuestionId": 1 });
+        const rounds = await WheelRounds.findOne({ roundOrder: roundOrder }).select({ roundName: 1, route: 1, roundOrder: 1, questions: 1, _id: 0 }).sort({ "questions.cardQuestionId": 1 });
         if (rounds) {
             rounds.questions.forEach((question, index, rounds) => {//set all cards as open by default
                 rounds[index]["isCardQuestionDidabled"] = false;
             })
             status = true;
-            let disabledQuestionInfo = await WheelRoundLocked.findOne({ mspin: mspin,roundOrder:roundOrder }).select({ disabledQuestions: 1});
+            let disabledQuestionInfo = await WheelRoundLocked.findOne({ mspin: mspin, roundOrder: roundOrder }).select({ disabledQuestions: 1 });
             if (disabledQuestionInfo) {
                 let disabledQuestions = disabledQuestionInfo.disabledQuestions;
-                console.log("disabledQuestions",disabledQuestions)
                 rounds.questions.forEach((question, index, rounds) => {
                     let checkQuestionDisabled = disabledQuestions[question["cardQuestionId"]];
-                    if (checkQuestionDisabled!==undefined) {
+                    if (checkQuestionDisabled !== undefined) {
                         rounds[index]["isCardQuestionDidabled"] = true;
                     } else {
                         rounds[index]["isCardQuestionDidabled"] = false;
                     }
                 })
-
             }
-            //rounds.questions = getRandomNFromArr(rounds.questions,rounds.questions.length);
             res.status(201).json({
                 status: status,
                 data: rounds
@@ -109,10 +107,11 @@ exports.wheelRoundQuestions = async (req, res) => {
         })
     }
 }
-const getRandomNFromArr = (arr,n)=>{
-    n = Math.min(n,arr.length);
-    let shuffled = arr.sort(function(){return .5 - Math.random()});
-    let selected = shuffled.slice(0,n);
+
+const getRandomNFromArr = (arr, n) => {
+    n = Math.min(n, arr.length);
+    let shuffled = arr.sort(function () { return .5 - Math.random() });
+    let selected = shuffled.slice(0, n);
     return selected;
 }
 
@@ -120,26 +119,20 @@ exports.getRoundDetails = async (req, res) => {
     let status = false;
     const round = req.params.roundName;
     try {
-        //const rounds = await Round.find({ roundName: round }, { roundName: 1, questions: 1 });
-        //const rounds = await Round.find({ roundName: round }, { roundName: 1, questions: 1, isRoundLocked: 1});
         const rounds = await Round.find({ roundName: round }).select({ roundName: 1, route: 1, questions: 1, isRoundLocked: 1, _id: 0 });
-        console.log("==============")
-        console.log(rounds);
         if (!rounds.length) {
             res.status(400).json({
                 status: status,
                 message: "data not found"
             })
-
         } else {
             //Return random 5 questions 
-            rounds[0].questions = getRandomNFromArr(rounds[0].questions,5);
+            rounds[0].questions = getRandomNFromArr(rounds[0].questions, 5);
             status = true;
             res.status(201).json({
                 status: status,
                 data: rounds
             })
-
         }
     } catch (error) {
         res.status(404).json({
@@ -154,7 +147,6 @@ exports.getWheelTitles = async (req, res) => {
     try {
         const roundName = req.params.roundName;
         const round = await Round.findOne({ roundName: roundName }, { "questions.wheelQuestiontitle": 1, _id: 0 });
-        console.log(round, roundName)
         if (round) {
             const wheelTitle = round.questions;
             status = true;
@@ -183,23 +175,12 @@ exports.getCardsTitles = async (req, res) => {
     try {
         const roundName = req.params.roundName;
         const wheelQuestionId = req.params.wheelQuestionId;
-        //const round = await Round.findOne({ roundName: roundName, "questions.wheelQuestionId ": wheelQuestionId},{"questions.cardQuestions":1})
-        //const round = await Round.find({$and: [{roundName: 2}, {questions:{"questions.wheelQuestionId": 2}}]},{"questions.cardQuestions":1})
         const round = await Round.find({ roundName: roundName, "questions.wheelQuestionId": wheelQuestionId }, { "questions.cardQuestions": 1 });
-        //const round = await Round.findOne({ roundName: roundName});
-        console.log(round)
         let q = {};
-        round.forEach((obj) => {
-            q["xyz"] = obj.questions
-
-
+        round.forEach((roundObj) => {
+            q["xyz"] = roundObj.questions
         })
-        console.log(q)
-        //console.log(round)
-        //, { "questions.wheelQuestiontitle": 1, _id: 0 }
         if (round) {
-            //const wheelTitle = round.questions;
-            //let arrayOfCardDeatils = round.questions
             status = true;
             return res.status(201).json({
                 message: status,
@@ -208,10 +189,9 @@ exports.getCardsTitles = async (req, res) => {
         } else {
             return res.status(404).json({
                 message: status,
-                data: "data not found"
+                data: "Data not found"
             });
         }
-
     } catch (error) {
         res.status(404).json({
             status: status,
@@ -235,20 +215,15 @@ exports.finishRound = async (req, res) => {
     }
     try {
         const finishedRound = await Round.findOne({ roundName: round }).select("roundOrder");
-        console.log("finishedRound: ", finishedRound)
         if (finishedRound) {
             const nextRound = await Round.findOne({ roundOrder: finishedRound.roundOrder + 1 }, { "roundName": 1 });
-            console.log("nextRound:", nextRound, nextRound.length);
             if (nextRound) {
                 const roundLockedEntry = await Roundunlocked.findOneAndUpdate({ mspin: mspin }, { mspin: mspin, unlocked: nextRound.roundName, disbled: [round.roundName, "B-1"] }, { upsert: true });
-                //update({_id : ... },{$set : { "history.$[section1].status" : 1, "history.$[section2]. completedDate" : new Date()} , { arrayFilters: [ { "section1": sectionID1,  "section2": sectionID2} } ] })
-                console.log("roundLockedEntry",roundLockedEntry)
             }
             res.status(400).json({
                 status: true,
                 message: "next round is unlocked"
             })
-
         } else {
             res.status(400).json({
                 status: status,

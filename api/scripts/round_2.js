@@ -33,6 +33,8 @@ async function insert(xlData) {
         question.cardTitle = xlData[i]["cardtitle"];
         question.isCorrect = (xlData[i]["isValidChoice"] === "Y" ? true : false);
         question.cardQuestion = xlData[i]["cardQuestion"];
+        question.cardtitleImage1 = xlData[i]["cardtitleImage1"] ? xlData[i]["cardtitleImage1"] : "image1.png";
+        question.cardtitleImage2 = xlData[i]["cardtitleImage2"] ? xlData[i]["cardtitleImage2"] : "image2.png";
 
         data[roundOrder]["questions"].push(question);
 

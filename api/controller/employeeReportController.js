@@ -185,7 +185,7 @@ exports.submitAnswersOfCardQuestion = async (req, res) => {
         let cardQuestionId = req.body.cardQuestionId;
         let wheelQuestionId = req.body.wheelQuestionId;
         let userAnswer = req.body.userAnswer;
-        console.log(roundName);
+        
         const checkemployeeExists = await Employee.findOne({ mspin: mspin });
         if (!checkemployeeExists) {
             return res.status(404).json({
@@ -206,11 +206,10 @@ exports.submitAnswersOfCardQuestion = async (req, res) => {
                 });
             } else {
                 //const round = await Round.findOne({ roundName: roundName ,"correctAnswers.wheelQuestionId":wheelQuestionId }).select("correctAnswers");
-                console.log(round)
+               
 
                 let correctAnswer = round.correctAnswers;
-                console.log("======================================")
-                console.log(correctAnswer)
+                
                 let correctQuestionsAnswers = {}
                 let questionsArray = correctAnswer.map((obj) => {
                     let wheelid = obj.wheelQuestionId
@@ -531,7 +530,7 @@ exports.submitScoreForRound = async (req, res) => {
                             await EmployeeAnswer.updateOne({ mspin: mspin, roundName: roundName, "empAnswers.questionId": questionId }, { "$set": { empAnswers: checked } });
                             res.status(201).json({
                                 status: status,
-                                message: "answer is submitted",
+                                message: "updated answer is submitted",
                                 Employee_result: {
                                     employeeMspin: mspin,
                                     employeeRegistrationNumber: registrationNumber,
