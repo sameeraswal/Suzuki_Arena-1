@@ -9,12 +9,14 @@ import t from "./04.png";
 import axios from "axios";
 import { APIURL } from "../../App";
 
+
 const Leaderboardth = () => {
   const [round, setRound] = useState([]);
-  const [name1, setName1] = useState([]);
-  const [name2, setName2] = useState([]);
-
-  const [name3, setName3] = useState([]);
+  const [name, setName] = useState('');
+  const [name1, setName1] = useState('');
+  const [name2, setName2] = useState('');
+  
+ 
   const arr = [];
   useEffect(() => {
     // alert("Page is running");
@@ -23,18 +25,19 @@ const Leaderboardth = () => {
       .get(`${APIURL}/api/v1/quiz/scoreboard`)
       .then((res) => {
         setRound(res.data.data.scoreBoard);
-        // console.log(res)
+        setName(res.data.data.scoreBoard[0].name);
+        setName1(res.data.data.scoreBoard[1].name);
+        setName2(res.data.data.scoreBoard[2].name);
       })
       .catch((error) => console.log(error, "error is here"));
   }, []);
-  // let j = 0;
-  // for (let i = 0; i < 3; i++) {
-  //   arr[i] = round[j++];
-  //   console.log(arr[i], "arr");
-  // }
+ 
+   
+
   return (
     <div>
       <Navbar />
+     
       <div className=" bg-img">
         <div className="description">
           <img src={trophy} alt="" className="resp-trophy resp-trophy-1" />{" "}
@@ -44,11 +47,11 @@ const Leaderboardth = () => {
         {/* {arr.map((item) => (
           <> */}
         <img src={f} alt="" className="first" />
-        <h1 className="position-text align-lead-1">{}</h1>
+        <h1 className="position-text align-lead-1">{name}</h1>
         <img src={s} alt="" className="second" />
-        <h1 className="position-text align-lead-2">{}</h1>
+        <h1 className="position-text align-lead-2">{name1}</h1>
         <img src={t} alt="" className="thirdlast" />
-        <h1 className="position-text align-lead-3">{}</h1>
+        <h1 className="position-text align-lead-3">{name2}</h1>
         {/* </>
         ))} */}
       </div>
