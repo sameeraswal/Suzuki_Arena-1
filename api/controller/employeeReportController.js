@@ -112,6 +112,7 @@ exports.submitAnswerOfQuestion = async (req, res) => {
                             });
                             await calculateScoreOfOneRoundHelper(mspin, roundName);
                             await calculateCurrentScoreOfEmpHelper(mspin);
+                            return;
 
                         } catch (error) {
                             res.status(400).json({
@@ -141,6 +142,7 @@ exports.submitAnswerOfQuestion = async (req, res) => {
                         });
                         await calculateScoreOfOneRoundHelper(mspin, roundName);
                         await calculateCurrentScoreOfEmpHelper(mspin);
+                        return ;
 
                     } else {
                         return res.status(404).json({
@@ -403,6 +405,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                                 });
                                 await calculateScoreOfOneRoundHelper(mspin, roundName);
                                 await calculateCurrentScoreOfEmpHelper(mspin);
+                                return;
 
                             } catch (error) {
                                 res.status(400).json({
@@ -454,6 +457,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                             });
                             await calculateScoreOfOneRoundHelper(mspin, roundName);
                             await calculateCurrentScoreOfEmpHelper(mspin);
+                            return;
 
                         } else {
                             return res.status(404).json({
@@ -539,6 +543,7 @@ exports.submitScoreForRound = async (req, res) => {
                             });
                             await calculateScoreOfOneRoundHelper(mspin, roundName);
                             await calculateCurrentScoreOfEmpHelper(mspin);
+                            return;
 
                         } catch (error) {
                             res.status(400).json({
@@ -567,6 +572,7 @@ exports.submitScoreForRound = async (req, res) => {
                         });
                         await calculateScoreOfOneRoundHelper(mspin, roundName);
                         await calculateCurrentScoreOfEmpHelper(mspin);
+                        return;
 
                     } else {
                         return res.status(404).json({
