@@ -967,8 +967,6 @@ exports.getScoreBoardRoundLevel = async (req, res) => {
     try {
         const roundScoreOfEveryone = await EmpRoundScore.find({}).select("mspin name roundName totalScore");
         if (roundScoreOfEveryone.length) {
-            console.log("roundScoreOfEveryone=====", roundScoreOfEveryone)
-            console.log("inside")
             status = true;
             const parentRound = {};
             parentRound['1-A'] = true;
@@ -980,6 +978,7 @@ exports.getScoreBoardRoundLevel = async (req, res) => {
             parentRound['6'] = true;
             parentRound['7'] = true;
             parentRound['8'] = true;
+
             const result = roundScoreOfEveryone.reduce((result, currentValue) => {
                 let mspin = currentValue.mspin;
                 let name = currentValue.name;
@@ -1014,6 +1013,11 @@ exports.getScoreBoardRoundLevel = async (req, res) => {
             }
             scoreBoardReport.sort(function (a, b) {
                 return b['totalScoreOfAllRounds'] - a['totalScoreOfAllRounds'];
+
+            })
+            let rank = 0;
+            scoreBoardReport.forEach((eachEmpScoreBoardReport) => {
+                eachEmpScoreBoardReport['rank'] = ++rank;
             })
 
             return res.status(201).json({
