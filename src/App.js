@@ -65,7 +65,7 @@ const App = () => {
   const places = [
     {
       id: 0,
-      title: "Ertiga Vs Carens",
+      title: "",
       class: "wheel-color",
     },
     {
