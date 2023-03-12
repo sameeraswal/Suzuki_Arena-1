@@ -8,6 +8,9 @@ import s from "./03.png";
 import t from "./04.png";
 import axios from "axios";
 import { APIURL } from "../../App";
+import bgImg1 from "../../Assets/Leaderboard.png"
+import headImg from '../../Assets/ScoreboardNew/RM.png'
+import lead from './01.png'
 
 
 const Leaderboardth = () => {
@@ -37,24 +40,13 @@ const Leaderboardth = () => {
   return (
     <div>
       <Navbar />
-     
-      <div className=" bg-img">
-        <div className="description">
-          <img src={trophy} alt="" className="resp-trophy resp-trophy-1" />{" "}
-          <img src={text} alt="" className="resp-text" />
-          <img src={trophy} alt="" className="resp-trophy" />
-        </div>
-        {/* {arr.map((item) => (
-          <> */}
-        <img src={f} alt="" className="first" />
-        <h1 className="position-text align-lead-1">{name}</h1>
-        <img src={s} alt="" className="second" />
-        <h1 className="position-text align-lead-2">{name1}</h1>
-        <img src={t} alt="" className="thirdlast" />
-        <h1 className="position-text align-lead-3">{name2}</h1>
-        {/* </>
-        ))} */}
-      </div>
+      <img src={lead} alt="" className="lead-pos"/>
+      {/* <img src={headImg} alt="" className="head-image-scoreboard" /> */}
+      <img src={bgImg1} alt="" className="background-image"/>
+      <h1 className="position-text align-lead-1">{name}</h1>
+      <h1 className="position-text align-lead-2">{name1}</h1>
+      <h1 className="position-text align-lead-3">{name2}</h1>
+      
     </div>
   );
 };
