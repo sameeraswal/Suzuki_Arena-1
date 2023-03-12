@@ -8,10 +8,11 @@ import bgImg from "../leaderboardfinal/05.png";
 import Popupquestion from "../flipcard popup/Popupquestion";
 import { getData } from "./Altovskwid";
 import axios from "axios";
-import { APIURL } from "../../App";
+import { APIURL, countc } from "../../App";
 
 const Wagovstiago = () => {
-  const [count, setCount] = useState(5);
+  const [questionid, setQuestionid] = useState(0);
+
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
   useEffect(() => {
@@ -52,7 +53,7 @@ const Wagovstiago = () => {
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>
-          <p>Remaining: {count}</p>
+          <p>Remaining: {"count"}</p>
         </div>
 
         <div className="flex-container-child bg-correct">
@@ -61,10 +62,18 @@ const Wagovstiago = () => {
               <div
                 className="flex-child bg-correct"
                 onClick={() => {
-                  {
-                    count > 0 ? setCount(count - 1) : setCount(0);
-                  }
+                  // countc--;
+
+                  // setQuestionid(item.cardQuestionId)
                   setOpenModal(!item.isCorrect);
+                  setQuestionid(
+                    localStorage.setItem(
+                      "qid",
+                      JSON.stringify(item.cardQuestionId)
+                    )
+                  );
+
+                  console.log(item.cardQuestionId, "questionid");
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
@@ -80,7 +89,7 @@ const Wagovstiago = () => {
               </div>
               {openModal && !item.isCorrect && (
                 <Popupquestion setOpenModal={setOpenModal} />
-               )}
+              )}
             </>
           ))}
         </div>

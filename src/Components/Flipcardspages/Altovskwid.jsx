@@ -12,6 +12,8 @@ import { APIURL } from "../../App";
 
 const Altovskwid = () => {
   const [count, setCount] = useState(5);
+  const [questionid, setQuestionid] = useState(0);
+
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
   localStorage.setItem("co", JSON.stringify(5));
@@ -72,6 +74,12 @@ const Altovskwid = () => {
                   }
 
                   setOpenModal(!item.isCorrect);
+                  setQuestionid(
+                    localStorage.setItem(
+                      "qid",
+                      JSON.stringify(item.cardQuestionId)
+                    )
+                  );
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
