@@ -39,7 +39,7 @@ function Popupquestion({ setOpenModal }) {
           ></button>
         </div>
         <div className="title">
-          <h1 style={{ color: "blue" }}>Oops! You choose a wrong card!</h1>
+          <h1 style={{ color: "blue" }}>Oops! You chose a wrong card!</h1>
         </div>
         <div className="footer">
           <button

@@ -248,7 +248,7 @@ const Question = () => {
             </div>
           )}
           {fileType === "image" && (
-            <div className="question-video">
+            <div className="question-video question-image">
               {/* {console.log(v.video)} */}
               <img width="430" height="305" src={QUESTIONIMAGEPATH + v} />
             </div>
