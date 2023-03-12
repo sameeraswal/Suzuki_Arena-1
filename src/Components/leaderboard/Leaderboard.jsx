@@ -9,7 +9,7 @@ import { APIURL } from "../../App";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import headImg from '../../Assets/Leaderboard/01.png'
-import userImg from '../../Assets/Leaderboard/04.png'
+import userImg from '../../Assets/ScoreboardNew/04.png'
 import titlesImg from '../../Assets/Leaderboard/06.png'
 
 const Leaderboard = () => {
@@ -56,7 +56,7 @@ const Leaderboard = () => {
       <Navbar></Navbar>
       <img src={headImg} alt="" className="head-image-scoreboard"/>
       <img src={titlesImg} alt="" className="title-image"/>
-      <img src={userImg} alt="" className="user-image"/>
+     
       <div className="leaderboard-container">
         <div className="leaderboard">
           {/* <div className="description">
@@ -100,9 +100,12 @@ const Leaderboard = () => {
 
                 {round.map((item) => (
                   <>
+                 
                     <tr>
+                    
                       <td className={item.class}>{item.registrationNumber}</td>
                       <td className={item.class}>{item.name}</td>
+                      
                       {/* <td className={item.class}>{round1A}</td> */}
                       {/*<td className={item.class}>{item.round}</td>
                       <td className={item.class}>{item.round}</td>
