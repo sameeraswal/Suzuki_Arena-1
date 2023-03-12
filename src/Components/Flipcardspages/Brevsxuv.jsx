@@ -57,7 +57,7 @@ const Brewsuv = () => {
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>
-          <p>Remaining: {JSON.parse(localStorage.getItem("cod"))}</p>
+          <p>Remaining: {5-Math.abs(JSON.parse(localStorage.getItem("cod")))}</p>
         </div>
 
         <div className="flex-container-child bg-correct">

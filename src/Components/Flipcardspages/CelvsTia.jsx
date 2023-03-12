@@ -66,7 +66,7 @@ const CelvsTia = () => {
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>
-          <p>Remaining: {count}</p>
+          <p>Remaining:  {5-Math.abs(JSON.parse(localStorage.getItem("cod")))}</p>
         </div>
 
         <div className="flex-container-child bg-correct">
@@ -75,12 +75,20 @@ const CelvsTia = () => {
               <div
                 className="flex-child bg-correct"
                 onClick={() => {
-                  
+                  // {
+                  //   count > 0 ? setCount(count - 1) : setCount(0);
+                  // }
                   setOpenModal(!item.isCorrect);
                   setQuestionid(
                     localStorage.setItem(
                       "qid",
                       JSON.stringify(item.cardQuestionId)
+                    )
+                  );
+                  setCount(
+                    localStorage.setItem(
+                      "cod",
+                      JSON.stringify(JSON.parse(localStorage.getItem("cod"))-1)
                     )
                   );
                 }}
