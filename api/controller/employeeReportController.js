@@ -17,18 +17,11 @@ exports.submitAnswerOfQuestion = async (req, res) => {
     try {
         const roundName = req.body.roundName;
         const mspin = req.body.mspin;
-
-        //calculateScoreOfOneRoundHelper()
-
-
-        // const registrationNumber = req.body.registrationNumber;
-        // const name = req.body.name;
-
         let questionId = req.body.questionId;
         let cId = req.body.cId;
-
         
         const checkemployeeExists = await Employee.findOne({ mspin: mspin });
+        console.log("checkemployeeExists====?",checkemployeeExists);
         if (!checkemployeeExists) {
             return res.status(404).json({
                 status: status,
@@ -37,6 +30,8 @@ exports.submitAnswerOfQuestion = async (req, res) => {
         } else {
             let name = checkemployeeExists.name;
             let registrationNumber = checkemployeeExists.registrationNumber;
+            let category = checkemployeeExists.category;
+
             //const round = await Round.find({ roundName: roundName }, { correctAnswers: 1, _id: 0 });
             const round = await Round.findOne({ roundName: roundName }, { correctAnswers: 1, _id: 0 });
 
@@ -104,6 +99,7 @@ exports.submitAnswerOfQuestion = async (req, res) => {
                                 Employee_result: {
                                     employeeMspin: mspin,
                                     employeeRegistrationNumber: registrationNumber,
+                                    category : category,
                                     roundName,
                                     name,
                                     employeeReport: checked,
@@ -124,7 +120,7 @@ exports.submitAnswerOfQuestion = async (req, res) => {
                 } else {
                     
                     let checked = await checkAnswer();
-                    const roundReport = new EmployeeAnswer({ mspin, registrationNumber, name, roundName, empAnswers: checked });
+                    const roundReport = new EmployeeAnswer({ mspin, registrationNumber,category:category, name, roundName, empAnswers: checked });
                     const ansSubmitted = await roundReport.save();
                     if (ansSubmitted) {
                         res.status(201).json({
@@ -133,6 +129,7 @@ exports.submitAnswerOfQuestion = async (req, res) => {
                             Employee_result: {
                                 employeeMspin: mspin,
                                 employeeRegistrationNumber: registrationNumber,
+                                category : category,
                                 name,
                                 roundName,
                                 employeeReport: checked,
@@ -173,132 +170,135 @@ exports.submitAnswerOfQuestion = async (req, res) => {
 }
 
 //submit answer of round 2. NO USE
-exports.submitAnswersOfCardQuestion = async (req, res) => {
-    let status = false;
-    try {
-        const roundName = req.body.roundName;
-        const mspin = req.body.mspin;
-        //Calling these APIs to update score and leaderboard
-        // await calculateScoreOfOneRoundHelper(mspin, roundName);
-        // await calculateCurrentScoreOfEmpHelper(mspin);
+// exports.submitAnswersOfCardQuestion = async (req, res) => {
+//     let status = false;
+//     try {
+//         const roundName = req.body.roundName;
+//         const mspin = req.body.mspin;
+//         //Calling these APIs to update score and leaderboard
+//         // await calculateScoreOfOneRoundHelper(mspin, roundName);
+//         // await calculateCurrentScoreOfEmpHelper(mspin);
 
-        let cardQuestionId = req.body.cardQuestionId;
-        let wheelQuestionId = req.body.wheelQuestionId;
-        let userAnswer = req.body.userAnswer;
+//         let cardQuestionId = req.body.cardQuestionId;
+//         let wheelQuestionId = req.body.wheelQuestionId;
+//         let userAnswer = req.body.userAnswer;
         
-        const checkemployeeExists = await Employee.findOne({ mspin: mspin });
-        if (!checkemployeeExists) {
-            return res.status(404).json({
-                status: status,
-                message: "employee does not exists with this given employee details"
-            });
-        } else {
+//         const checkemployeeExists = await Employee.findOne({ mspin: mspin });
+//         if (!checkemployeeExists) {
+//             return res.status(404).json({
+//                 status: status,
+//                 message: "employee does not exists with this given employee details"
+//             });
+//         } else {
 
-            let name = checkemployeeExists.name;
-            let registrationNumber = checkemployeeExists.registrationNumber;
+//             let name = checkemployeeExists.name;
+//             let registrationNumber = checkemployeeExists.registrationNumber;
 
-            //const round = await Round.find({ roundName: roundName }, { correctAnswers: 1, _id: 0 });
-            const round = await Round.findOne({ roundName: roundName }, { correctAnswers: 1, _id: 0 });
-            if (!round) {
-                return res.status(404).json({
-                    status: status,
-                    message: "this round is not exists"
-                });
-            } else {
-                //const round = await Round.findOne({ roundName: roundName ,"correctAnswers.wheelQuestionId":wheelQuestionId }).select("correctAnswers");
+//             //const round = await Round.find({ roundName: roundName }, { correctAnswers: 1, _id: 0 });
+//             const round = await Round.findOne({ roundName: roundName }, { correctAnswers: 1, _id: 0 });
+//             if (!round) {
+//                 return res.status(404).json({
+//                     status: status,
+//                     message: "this round is not exists"
+//                 });
+//             } else {
+//                 //const round = await Round.findOne({ roundName: roundName ,"correctAnswers.wheelQuestionId":wheelQuestionId }).select("correctAnswers");
                
 
-                let correctAnswer = round.correctAnswers;
+//                 let correctAnswer = round.correctAnswers;
                 
-                let correctQuestionsAnswers = {}
-                let questionsArray = correctAnswer.map((obj) => {
-                    let wheelid = obj.wheelQuestionId
-                    console.log("wheelidddddddd", wheelid)
-                    if (wheelQuestionId == wheelid) {
-                        let qarray = obj.questions;
-                        let cardsremains = obj.cardsRemaining;
-                        correctQuestionsAnswers["qarrays"] = qarray;
-                        correctQuestionsAnswers["cardsRemaining"] = cardsremains;
-                        //console.log("qarrarrrrrrrrrrrrry",qarray) 
-                        //return qarray;
+//                 let correctQuestionsAnswers = {}
+//                 let questionsArray = correctAnswer.map((obj) => {
+//                     let wheelid = obj.wheelQuestionId
+//                     console.log("wheelidddddddd", wheelid)
+//                     if (wheelQuestionId == wheelid) {
+//                         let qarray = obj.questions;
+//                         let cardsremains = obj.cardsRemaining;
+//                         correctQuestionsAnswers["qarrays"] = qarray;
+//                         correctQuestionsAnswers["cardsRemaining"] = cardsremains;
+//                         //console.log("qarrarrrrrrrrrrrrry",qarray) 
+//                         //return qarray;
 
-                    }
-                })
-                console.log("questionsArray", questionsArray);
+//                     }
+//                 })
+//                 console.log("questionsArray", questionsArray);
 
 
-                console.log("lllllllllllllll")
-                console.log(correctQuestionsAnswers)
-                console.log("cccccccccccccc", correctQuestionsAnswers.qarrays)
-                let arrayOfCardsAns = correctQuestionsAnswers.qarrays;
-                let cardsRemaining = correctQuestionsAnswers.cardsRemaining;
-                console.log("arrayOfCardsAns=============", arrayOfCardsAns);
+//                 console.log("lllllllllllllll")
+//                 console.log(correctQuestionsAnswers)
+//                 console.log("cccccccccccccc", correctQuestionsAnswers.qarrays)
+//                 let arrayOfCardsAns = correctQuestionsAnswers.qarrays;
+//                 let cardsRemaining = correctQuestionsAnswers.cardsRemaining;
+//                 console.log("arrayOfCardsAns=============", arrayOfCardsAns);
 
-                let dbcid = 0;
-                arrayOfCardsAns.forEach((cardobj) => {
-                    console.log("from bodyidddddddddddddddd", cardQuestionId)
-                    console.log("from db body idddddddddd", cardobj.cardQuestionId)
-                    if (cardQuestionId == cardobj.cardQuestionId) {
-                        console.log("insideeeeee from db body idddddddddd", cardobj.cardQuestionId)
-                        dbcid = cardobj.cId;
-                        //console.log("outside",dbcid)
+//                 let dbcid = 0;
+//                 arrayOfCardsAns.forEach((cardobj) => {
+//                     console.log("from bodyidddddddddddddddd", cardQuestionId)
+//                     console.log("from db body idddddddddd", cardobj.cardQuestionId)
+//                     if (cardQuestionId == cardobj.cardQuestionId) {
+//                         console.log("insideeeeee from db body idddddddddd", cardobj.cardQuestionId)
+//                         dbcid = cardobj.cId;
+//                         //console.log("outside",dbcid)
 
-                        // if(userAnswer == dbcid){
-                        //     console.log("userAnswerrrrrrrrrrrrr",userAnswer)
-                        //     console.log("ddddddddddddddd",dbcid)
-                        //     console.log("user ans is correct")
-                        // }else{
-                        //     console.log("ans is incorrect")
-                        // }
-                    }
+//                         // if(userAnswer == dbcid){
+//                         //     console.log("userAnswerrrrrrrrrrrrr",userAnswer)
+//                         //     console.log("ddddddddddddddd",dbcid)
+//                         //     console.log("user ans is correct")
+//                         // }else{
+//                         //     console.log("ans is incorrect")
+//                         // }
+//                     }
 
-                })
-                let score = 0;
-                let employeeAnswer = {};
-                if (userAnswer == dbcid) {
-                    console.log("userAnswerrrrrrrrrrrrr", userAnswer)
-                    console.log("ddddddddddddddd", dbcid)
-                    console.log("user ans is correct")
-                    score = score + 10;
-                    cardsRemaining = --cardsRemaining;
-                    employeeAnswer["wheelQuestionId"] = wheelQuestionId;
-                    employeeAnswer["cardQuestionId"] = cardQuestionId;
-                    employeeAnswer["userAnswer"] = userAnswer;
-                    employeeAnswer["cardsRemaining"] = cardsRemaining;
-                    employeeAnswer["isCorrect"] = true;
-                    //employeeAnswer["cardsRemaining"] = true;
-                    //score = score + 10;
-                    employeeAnswer["score"] = score;
-                    res.status(201).json({
-                        data: employeeAnswer
-                    })
-                } else {
-                    console.log("ans is incorrect")
-                    employeeAnswer["wheelQuestionId"] = wheelQuestionId;
-                    employeeAnswer["cardQuestionId"] = cardQuestionId;
-                    employeeAnswer["userAnswer"] = userAnswer;
-                    employeeAnswer["cardsRemaining"] = cardsRemaining;
-                    employeeAnswer["isCorrect"] = false;
-                    employeeAnswer["score"] = score;
-                    res.status(201).json({
-                        data: employeeAnswer
-                    })
-                }
+//                 })
+//                 let score = 0;
+//                 let employeeAnswer = {};
+//                 if (userAnswer == dbcid) {
+//                     console.log("userAnswerrrrrrrrrrrrr", userAnswer)
+//                     console.log("ddddddddddddddd", dbcid)
+//                     console.log("user ans is correct")
+//                     score = score + 10;
+//                     cardsRemaining = --cardsRemaining;
+//                     employeeAnswer["wheelQuestionId"] = wheelQuestionId;
+//                     employeeAnswer["cardQuestionId"] = cardQuestionId;
+//                     employeeAnswer["userAnswer"] = userAnswer;
+//                     employeeAnswer["cardsRemaining"] = cardsRemaining;
+//                     employeeAnswer["isCorrect"] = true;
+//                     //employeeAnswer["cardsRemaining"] = true;
+//                     //score = score + 10;
+//                     employeeAnswer["score"] = score;
+//                     res.status(201).json({
+//                         data: employeeAnswer
+//                     })
+//                 } else {
+//                     console.log("ans is incorrect")
+//                     employeeAnswer["wheelQuestionId"] = wheelQuestionId;
+//                     employeeAnswer["cardQuestionId"] = cardQuestionId;
+//                     employeeAnswer["userAnswer"] = userAnswer;
+//                     employeeAnswer["cardsRemaining"] = cardsRemaining;
+//                     employeeAnswer["isCorrect"] = false;
+//                     employeeAnswer["score"] = score;
+//                     res.status(201).json({
+//                         data: employeeAnswer
+//                     })
+//                 }
                
-                const questions = Object.keys(correctQuestionsAnswers);
+//                 const questions = Object.keys(correctQuestionsAnswers);
                 
-            }
+//             }
 
-        }
-    } catch (error) {
-        res.status(404).json({
-            message: "data not found",
+//         }
+//     } catch (error) {
+//         res.status(404).json({
+//             message: "data not found",
 
-        })
-    }
-}
+//         })
+//     }
+// }
+
+
 
 //submit wheel round question
+
 exports.submitAnswerOfCardQuestion = async (req, res) => {
     let status = false;
     try {
@@ -317,9 +317,10 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                 message: "employee does not exists with this given employee details"
             });
         } else {
-            console.log(checkemployeeExists)
+            console.log("checkemployeeExists++++++",checkemployeeExists);
             let name = checkemployeeExists.name;
             let registrationNumber = checkemployeeExists.registrationNumber;
+            let category = checkemployeeExists.category
 
             const roundNameOfWheel = await WheelRounds.findOne({ roundOrder: roundOrder }).select("roundName");
             if (!roundNameOfWheel) {
@@ -337,6 +338,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                     status = true;
                     console.log(round.correctAnswers)
                     let correctAnswers = round.correctAnswers;
+                    //console.log("correctAnswers=====>",correctAnswers)
                     let correctQuestionsAnswers = {}
 
                     correctAnswers.forEach((obj) => {
@@ -394,6 +396,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                                     Employee_result: {
                                         employeeMspin: mspin,
                                         employeeRegistrationNumber: registrationNumber,
+                                        category : category,
                                         cardQuestionId: questionId,
                                         isLocked: true,
                                         roundName: roundName,
@@ -419,7 +422,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                         let checked = await checkAnswer();
 
                         console.log("checked++++", checked)
-                        const roundReport = new EmployeeAnswer({ mspin, registrationNumber, name, roundName: roundName, empAnswers: checked });
+                        const roundReport = new EmployeeAnswer({ mspin, registrationNumber,category : category, name, roundName: roundName, empAnswers: checked });
                         console.log("roundReport", roundReport)
                         const ansSubmitted = await roundReport.save();
                         if (ansSubmitted) {
@@ -447,6 +450,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                                     cardQuestionId: questionId,
                                     isLocked: true,
                                     employeeRegistrationNumber: registrationNumber,
+                                    category : category,
                                     name,
                                     roundName: roundName,
                                     employeeReport: checked,
@@ -475,14 +479,7 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                 }
 
             }
-
-
-
         }
-        // await calculateScoreOfOneRoundHelper(mspin,roundName);
-        // await calculateCurrentScoreOfEmpHelper(mspin);
-
-
     } catch (error) {
         res.status(404).json({
             message: "data not found",
@@ -502,7 +499,6 @@ exports.submitScoreForRound = async (req, res) => {
 
         let cId = 1;
         let score = parseInt(req.body.score);
-
         const checkemployeeExists = await Employee.findOne({ mspin: mspin });
         if (!checkemployeeExists) {
             return res.status(404).json({
@@ -512,6 +508,7 @@ exports.submitScoreForRound = async (req, res) => {
         } else {
             let name = checkemployeeExists.name;
             let registrationNumber = checkemployeeExists.registrationNumber;
+            let category = checkemployeeExists.category
             //const round = await Round.find({ roundName: roundName }, { correctAnswers: 1, _id: 0 });
             const round = await Round.findOne({ roundName: roundName }, { correctAnswers: 1, _id: 0 });
 
@@ -523,6 +520,7 @@ exports.submitScoreForRound = async (req, res) => {
                 checked["cId"] = cId;
                 checked["isCorrect"] = true;
                 checked["score"] = score;
+                console.log("checkedobj========>",checked);
                 const employeeAnsExists = await EmployeeAnswer.find({ mspin: mspin, roundName: roundName, "empAnswers.questionId": questionId });
                 if (employeeAnsExists.length) {
                     const updateQuery = async () => {
@@ -534,6 +532,7 @@ exports.submitScoreForRound = async (req, res) => {
                                 Employee_result: {
                                     employeeMspin: mspin,
                                     employeeRegistrationNumber: registrationNumber,
+                                    category : category,
                                     roundName,
                                     name,
                                     employeeReport: checked,
@@ -553,7 +552,8 @@ exports.submitScoreForRound = async (req, res) => {
                     updateQuery();
                 } else {
                     console.log("not exits. save the answer")
-                    const roundReport = new EmployeeAnswer({ mspin, registrationNumber, name, roundName, empAnswers: checked });
+                    
+                    const roundReport = new EmployeeAnswer({ mspin, registrationNumber,category : category, name, roundName, empAnswers: checked });
                     const ansSubmitted = await roundReport.save();
                     if (ansSubmitted) {
                         res.status(201).json({
@@ -562,6 +562,7 @@ exports.submitScoreForRound = async (req, res) => {
                             Employee_result: {
                                 employeeMspin: mspin,
                                 employeeRegistrationNumber: registrationNumber,
+                                category : category,
                                 name,
                                 roundName,
                                 employeeReport: checked,
@@ -585,7 +586,7 @@ exports.submitScoreForRound = async (req, res) => {
             } else {
                 return res.status(404).json({
                     status: status,
-                    message: "data not found 1"
+                    message: "data not found"
                 })
             }
 
@@ -593,7 +594,7 @@ exports.submitScoreForRound = async (req, res) => {
 
     } catch (error) {
         res.status(404).json({
-            message: "data not found 2"
+            message: error
         })
     }
 }
@@ -625,12 +626,15 @@ const calculateScoreOfOneRoundHelper = async (mspin, roundName) => {
             response['message'] = "data not found";
             return response;
         } else {
+            console.log("roundAnswerDetail============>",roundAnswerDetail)
             let name = "";
             let regNumber = "";
             let total = 0;
+            let category = "";
             roundAnswerDetail.forEach((empObj) => {
                 name = empObj.name;
                 regNumber = empObj.registrationNumber;
+                category = empObj.category
                 let checkAns = empObj.empAnswers.isCorrect;
                 if (checkAns == true) {
                     let score = empObj.empAnswers.score;
@@ -651,6 +655,7 @@ const calculateScoreOfOneRoundHelper = async (mspin, roundName) => {
                         mspin,
                         name,
                         registrationNumber: regNumber,
+                        category : category,
                         roundName,
                         totalScoreOfThisRound: total
                     }
@@ -662,7 +667,7 @@ const calculateScoreOfOneRoundHelper = async (mspin, roundName) => {
                 }
             } else {
                 console.log("inside if roundscore does not exists")
-                const roundScore = new EmpRoundScore({ mspin: mspin, name: name, registrationNumber: regNumber, roundName: roundName, totalScore: total })
+                const roundScore = new EmpRoundScore({ mspin: mspin, name: name, registrationNumber: regNumber,category : category, roundName: roundName, totalScore: total })
 
                 const savedRoundScore = await roundScore.save();
                 if (savedRoundScore) {
@@ -670,6 +675,7 @@ const calculateScoreOfOneRoundHelper = async (mspin, roundName) => {
                         mspin,
                         name,
                         registrationNumber: regNumber,
+                        category : category,
                         roundName,
                         totalScoreOfThisRound: total
 
@@ -682,9 +688,6 @@ const calculateScoreOfOneRoundHelper = async (mspin, roundName) => {
                 }
             }
         }
-
-
-
     } catch (error) {
         response['message'] = error.message;
     }
@@ -724,8 +727,10 @@ const calculateCurrentScoreOfEmpHelper = async (mspin) => {
             response['message'] = "This emp didn't attempted any questions";
             return response;
         } else {
+            console.log("checkemployeeExists-------",checkemployeeExists)
             let name = checkemployeeExists.name;
             let registrationNumber = checkemployeeExists.registrationNumber;
+            let category = checkemployeeExists.category;
             const calculateFinalScore = async () => {
                 let response = [];
                 response['status'] = false;
@@ -772,6 +777,7 @@ const calculateCurrentScoreOfEmpHelper = async (mspin) => {
                     response['data'] = {
                         mspin,
                         registrationNumber,
+                        category:category,
                         name,
                         finalScore
                     }
@@ -790,10 +796,10 @@ const calculateCurrentScoreOfEmpHelper = async (mspin) => {
                     response['message'] = scoreCalcultedRespone['message'];
                     return response;
                 }
-                console.log(scoreCalculted)
+                //console.log(scoreCalculted)
                 let finalScore = scoreCalculted.finalScore;
 
-                const finalResult = new EmpFinalScore({ mspin: mspin, registrationNumber: registrationNumber, name: name, finalScore: finalScore })
+                const finalResult = new EmpFinalScore({ mspin: mspin, registrationNumber : registrationNumber,category : category, name : name, finalScore : finalScore })
                 console.log(finalResult)
                 const savedFinalScore = await finalResult.save();
                 console.log(savedFinalScore)
@@ -803,6 +809,7 @@ const calculateCurrentScoreOfEmpHelper = async (mspin) => {
                     response['data'] = {
                         mspin,
                         registrationNumber,
+                        category :category,
                         name,
                         finalScore
                     };
@@ -889,7 +896,7 @@ exports.getFinalScoreOfAllRounds = async (req, res) => {
     }
 }
 
-// scorebaord
+// scorebaord NO USE
 exports.getScoreOfEveryone = async (req, res) => {
 
     let status = false;
@@ -970,7 +977,10 @@ exports.getScoreBoardRoundLevel = async (req, res) => {
 
     let status = false;
     try {
-        const roundScoreOfEveryone = await EmpRoundScore.find({}).select("mspin name registrationNumber roundName totalScore");
+        const categoryType = req.body.categoryType;
+        console.log("categoryType==>",categoryType);
+        const roundScoreOfEveryone = await EmpRoundScore.find({}).select("mspin name registrationNumber category roundName totalScore");
+        console.log("roundScoreOfEveryone=====>",roundScoreOfEveryone);
         if (roundScoreOfEveryone.length) {
             status = true;
             const parentRound = {};
@@ -988,6 +998,12 @@ exports.getScoreBoardRoundLevel = async (req, res) => {
                 let mspin = currentValue.mspin;
                 let name = currentValue.name;
                 let registrationNumber = currentValue.registrationNumber;
+                let category = currentValue.category;
+                //sales expert, sales captain
+                if(category!==categoryType){
+                    return result;
+
+                }
                 let totalScore = currentValue.totalScore;
                 let roundName = currentValue.roundName;
                 if (parentRound[roundName] === undefined) {
@@ -998,6 +1014,7 @@ exports.getScoreBoardRoundLevel = async (req, res) => {
                     result[mspin].mspin = mspin;
                     result[mspin].name = name;
                     result[mspin].registrationNumber = registrationNumber;
+                    result[mspin].category = category;
                     result[mspin].totalScoreOfAllRounds = totalScore;
                     result[mspin]['rounds'] = {};
                     result[mspin]['rounds'][roundName] = totalScore;
