@@ -26,5 +26,4 @@ const empRoundScoreSchema = new mongoose.Schema({
 );
 
 const EmpRoundScore = mongoose.model("EmpRoundScore", empRoundScoreSchema);
-
 module.exports = EmpRoundScore;
