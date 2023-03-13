@@ -89,3 +89,13 @@
     margin-top: 49.9%;
   }
 }
+@media screen and (max-width: 1180px) {
+  /* timer section  */
+  .timer-container {
+    margin-left: 1%;
+  }
+  .score-correct {
+    margin-left: 50%;
+    margin-top: 43.2%;
+  }
+}
