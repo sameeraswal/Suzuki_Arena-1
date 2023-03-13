@@ -1394,6 +1394,14 @@ ul {
   }
 }
 
+@media screen and (max-width: 1180px) {
+
+  /* question */
+
+  
+ 
+}
+
 @media screen and (max-width: 1024px) {
   /* enterscore5  */
   .inputscore-btn1 {
@@ -1786,7 +1794,13 @@ ul {
   text-align: end;
 }
 
+.remain-container{
+  margin-top: 20px;
 }
+}
+
+
+
 
 
 
