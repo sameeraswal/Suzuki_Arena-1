@@ -6,7 +6,6 @@ exports.getEmployeeDetails = async (req, res) => {
     const mspin = req.params.mspin;
     try {
         const employeeDetails = await Employee.findOne({ mspin: mspin });
-        console.log(employeeDetails, " Employee detals", { mspin: mspin });
         if (employeeDetails) {
             status = true;
             const name = employeeDetails.name;
@@ -55,7 +54,6 @@ exports.registerEmployee = async (req, res) => {
                 dealership: dealership,
                 registrationNumber: registrationNumber
             });
-            console.log(employeeDetails);
             if (employeeDetails.length) {
                 return res.json({
                     status: status,
@@ -67,7 +65,7 @@ exports.registerEmployee = async (req, res) => {
                     { mspin: mspin, name: name, dealership: dealership },
                     { $set: { registrationNumber: registrationNumber } }
                 );
-                console.log(regNumberSaved);
+                
                 if (regNumberSaved) {
                     status = true;
                     return res.status(201).json({
