@@ -80,6 +80,7 @@ const ModalButton = ({ onClick, label }) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
+      style={{top:"81%"}}
     >
       Let's Begin
     </motion.button>
