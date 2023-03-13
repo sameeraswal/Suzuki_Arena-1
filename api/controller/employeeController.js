@@ -1,15 +1,6 @@
 require("../db/connection");
 const Employee = require("../model/employeeSchema");
-//const jwt = require("jsonwebtoken");
-//const secretKey = "secretKeycccccccccccc"
 
-// exports.verifyToken = async(req,res,next)=>{
-//     const token = req.headers.Authorization;
-//     const decoded = jwt.verify(token,secretKey);
-//     req.decoded = decoded;
-//     next();
-
-// }
 exports.getEmployeeDetails = async (req, res) => {
     let status = false;
     const mspin = req.params.mspin;
@@ -22,18 +13,18 @@ exports.getEmployeeDetails = async (req, res) => {
             const dealership = employeeDetails.dealership;
             return res.status(201).json({
                 status: status,
-                data: { name, dealership },
+                data: { name, dealership }
             });
         } else {
             return res.status(404).json({
                 status: status,
-                message: "data not found",
+                message: "data not found"
             });
         }
     } catch (error) {
         res.json({
             status: status,
-            error: error,
+            error: error
         });
     }
 };
@@ -55,14 +46,14 @@ exports.registerEmployee = async (req, res) => {
         if (!checkemployeeExists.length) {
             return res.status(404).json({
                 status: status,
-                message: "employee does not exists with this given employee details",
+                message: "employee does not exists with this given employee details"
             });
         } else {
             const employeeDetails = await Employee.find({
                 mspin: mspin,
                 name: name,
                 dealership: dealership,
-                registrationNumber: registrationNumber,
+                registrationNumber: registrationNumber
             });
             console.log(employeeDetails);
             if (employeeDetails.length) {
@@ -81,12 +72,12 @@ exports.registerEmployee = async (req, res) => {
                     status = true;
                     return res.status(201).json({
                         status: status,
-                        message: "employee registered succesfully",
+                        message: "employee registered succesfully"
                     });
                 } else {
                     return res.status(400).json({
                         status: status,
-                        message: "error during saving registration number",
+                        message: "error during saving registration number"
                     });
                 }
             }
@@ -107,7 +98,7 @@ exports.checkLogin = async (req, res) => {
         if (!mspin || !regNumber) {
             return res.status(400).json({
                 status: status,
-                error: "Please fill all the fields",
+                error: "Please fill all the fields"
             });
         }
         const emloyeeLogin = await Employee.findOne({ mspin: mspin, registrationNumber: regNumber});
@@ -116,13 +107,13 @@ exports.checkLogin = async (req, res) => {
             status = true;
             return res.status(201).json({
                 status: status,
-                categoryTypeofEmployee : categoryType,
-                message: "Employee logged in succesfully",
+                category : categoryType,
+                message: "Employee logged in succesfully"
             });
         } else {
             return res.status(404).json({
                 status: status,
-                message: "invalid credientials",
+                message: "invalid credientials"
             });
         }
     } catch (error) {

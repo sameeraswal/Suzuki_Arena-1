@@ -26,10 +26,14 @@ const Leaderboard = () => {
 
   useEffect(() => {
     axios
-      .get(`${APIURL}/api/v1/quiz/scoreboard`)
+      .post(`${APIURL}/api/v1/quiz/scoreboard/category`, {
+        categoryType: JSON.parse(
+          localStorage.getItem("categoryTypeofEmployee")
+        ),
+      })
       .then((res) => {
         setRound(res.data.data.scoreBoard);
-        setRounds(res.data.data.scoreBoard.rounds);
+        // setRounds(res.data.data.scoreBoard.rounds);
         console.log(res);
       })
       .catch((error) => console.log(error, "error is here"));
@@ -41,7 +45,9 @@ const Leaderboard = () => {
       <Navbar></Navbar>
       <button
         className="roll leader-btn icon-conatiner"
-        onClick={() => navigate("/scoreboardsrm")}
+        onClick={() => {navigate("/scoreboardsrm")
+        
+        }}
       >
         Toggle to SRM
       </button>
@@ -64,7 +70,9 @@ const Leaderboard = () => {
             </DownloadTableExcel>
             <table ref={tableRef}>
               <td className="table-content-2">Reg No.</td>
-              <td className="table-content-2"><p>Name</p></td>
+              <td className="table-content-2">
+                <p>Name</p>
+              </td>
               <td className="table-content-2">Round 1-A</td>
               <td className="table-content-2">Round 1-B</td>
               <td className="table-content-2">Round 2</td>

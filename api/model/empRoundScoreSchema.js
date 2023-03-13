@@ -12,6 +12,9 @@ const empRoundScoreSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    category :{
+        type:String
+    },
     roundName: {
         type: String,
         required: true

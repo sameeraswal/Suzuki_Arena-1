@@ -9,6 +9,9 @@ const empFinalScoreSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    category :{
+        type:String
+    },
     name:{
         type:String
     },
