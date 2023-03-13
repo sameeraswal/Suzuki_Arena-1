@@ -1,0 +1,12 @@
+curl 'http://prathamquestforthebest.com:4500/api/v1/wheelRoundQuestions' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/json' \
+  -H 'DNT: 1' \
+  -H 'Origin: http://prathamquestforthebest.com' \
+  -H 'Referer: http://prathamquestforthebest.com/' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36' \
+  --data-raw '{"mspin":"","roundOrder":null}' \
+  --compressed \
+  --insecure
