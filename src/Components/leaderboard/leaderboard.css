@@ -96,12 +96,12 @@
 
 table {
   margin-top: 6em;
-  width: 99em;
-  color: black;
-  margin-right: auto;
-  margin-left: auto;
-  border-spacing: 20px 30px;
-  margin-left: -39px;
+    width: 99em;
+    color: black;
+    margin-right: auto;
+    margin-left: auto;
+    border-spacing: 20px 30px;
+    margin-left: -76px;
 }
 table thead {
   opacity: 0.8;
@@ -130,15 +130,18 @@ table td {
   padding-right: 10px;
 }
 .table-content-name {
-  padding-right: 39px;
-  padding-left: 35px;
+  padding-right: 24px;
+  padding-left: 56px;
+}
+
+
+.table-content-name {
+ margin-right: 20px;
 }
 .table-round-3 {
-  padding-right: 85px;
+  
 }
-.table-round-3{
-  padding-left: -100px;
-}
+
 @media (max-width: 860px) {
   .leaderboard {
     padding: 0;

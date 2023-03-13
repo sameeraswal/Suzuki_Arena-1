@@ -55,6 +55,7 @@ import Enterscore5 from "./Components/Enterscore5";
 import Enterscore6 from "./Components/Enterscore6";
 import Puzzlecase from "./Components/puzzlecase/Puzzlecase";
 import Leaderboardsrm from "./Components/ScoreboardSRM/Leaderboardsrm";
+import Leaderboardthsrm from "./Components/Leaderboardthsrm/Leaderboardsrm";
 
 export const APIURL = "http://localhost:4500";
 export const APIURLLOCAL = "http://localhost:3000";
@@ -158,7 +159,7 @@ const App = () => {
           <Route path="/firstmile" element={<FirstMile />}></Route>
           <Route path="/randomizer" element={<Randomizer />}></Route>
           <Route path="/dice" element={<Dice />}></Route>
-          <Route path="/leaderboard" element={<Leaderboard />}></Route>
+          
           <Route
             path="/afterflip/height"
             element={<Afterflip title={data[0].cardName} />}
@@ -214,7 +215,8 @@ const App = () => {
           <Route path="/listthetwist" element=<Listthetwist />></Route>
           <Route path="/judgesround" element=<Judgesround />></Route>
           <Route path="/solutionsonly" element=<Solutionsonly />></Route>
-          <Route path="/leaderboardth" element={<Leaderboardth />}></Route>
+         
+
           <Route path="/casestudy" element={<Casestudy />}></Route>
           <Route path="/finishmodal" element={<Finishmodal />}></Route>
           {/* flipcard routes after wheel */}
@@ -241,7 +243,12 @@ const App = () => {
           <Route path="/enterbrezza" element={<Enterbrezza />}></Route>
           <Route path="/popupquestion" element={<Popupquestion />}></Route>
           <Route path="/popupexample" element={<Popupexample />}></Route>
+
+          {/* all leaderboard */}
           <Route path="/scoreboardsrm" element={<Leaderboardsrm />}></Route>
+          <Route path="/leaderboardth" element={<Leaderboardth />}></Route>
+          <Route path="/leaderboardthsrm" element={<Leaderboardthsrm />}></Route>
+          <Route path="/leaderboard" element={<Leaderboard />}></Route>
         </Routes>
       </div>
     </Router>

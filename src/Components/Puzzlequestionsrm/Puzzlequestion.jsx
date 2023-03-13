@@ -16,7 +16,7 @@ import axios from "axios";
 import { APIURL } from "../../App";
 
 let x = [0, 0, 0, 0, 0];
-const Puzzlequestion = () => {
+const Puzzlesrm = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => {
@@ -173,4 +173,4 @@ const Puzzlequestion = () => {
   );
 };
 
-export default Puzzlequestion;
+export default Puzzlesrm;

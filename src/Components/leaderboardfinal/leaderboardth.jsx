@@ -11,9 +11,11 @@ import { APIURL } from "../../App";
 import bgImg1 from "../../Assets/Leaderboard.png"
 import headImg from '../../Assets/ScoreboardNew/RM.png'
 import lead from './01.png'
+import { useNavigate } from "react-router-dom";
 
 
 const Leaderboardth = () => {
+  const navigate = useNavigate();
   const [round, setRound] = useState([]);
   const [name, setName] = useState('');
   const [name1, setName1] = useState('');
@@ -40,8 +42,13 @@ const Leaderboardth = () => {
   return (
     <div>
       <Navbar />
+      <button
+        className="roll leader-btn icon-conatiner"
+        onClick={() => navigate("/leaderboardthsrm")}
+      >
+        Toggle to SRM
+      </button>
       <img src={lead} alt="" className="lead-pos"/>
-      {/* <img src={headImg} alt="" className="head-image-scoreboard" /> */}
       <img src={bgImg1} alt="" className="background-image"/>
       <h1 className="position-text align-lead-1">{name}</h1>
       <h1 className="position-text align-lead-2">{name1}</h1>
