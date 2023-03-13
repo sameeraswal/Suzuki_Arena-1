@@ -132,7 +132,7 @@ const Puzzlecase = () => {
       console.log(x[i], "xx[i]");
       console.log(count);
     }
-    newCount = count * 10;
+    newCount = count * 5;
     console.log(newCount, "newCount");
   };
   const fetchData = () => {
@@ -154,7 +154,7 @@ const Puzzlecase = () => {
       <Navbar />
 
       <div className="dashboard-container full-height">
-        <img src={bgImg} alt="" className="ques-bg" />
+        {/* <img src={bgImg} alt="" className="ques-bg" /> */}
         <div className="round-box-dashboard">Questions</div>
 
         <div className="puzzle-box">

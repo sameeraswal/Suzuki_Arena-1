@@ -62,7 +62,7 @@ export default class Wheel extends React.Component {
     localStorage.setItem("roundName", JSON.stringify(randomWheelNo));
     localStorage.setItem("carRoute", JSON.stringify(car));
 
-    setTimeout(() => window.open(`/${car}`, "_self"), 3000);
+    setTimeout(() => window.open(`/${car}`, "_self"), 18000);
     
   }
 

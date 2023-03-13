@@ -820,13 +820,13 @@
 }
 
 .margin-div {
-  margin-top: 100px;
+  margin-top: 36px;
   display: flex;
   justify-content: center;
 }
 
 .text-margin {
-  margin-top: 100px;
+  margin-top: 42px;
   font-size: 40px;
   text-align: center;
   color: white;
@@ -953,9 +953,13 @@ input:focus {
 }
 .question-video {
   width: 100px;
-  margin-top: 130px;
+  margin-top: 80px;
   padding-top: 37px;
   margin-left: 10px;
+}
+.question-image{
+  width: 100%;
+  object-fit: cover;
 }
 
 ul li {
@@ -1176,7 +1180,7 @@ ul {
   margin: auto;
   margin-left: 61%;
   margin-top: 42%;
-  color: red;
+  color: green;
 }
 .btn-bottom {
   margin-top: 70px;
@@ -1350,7 +1354,7 @@ ul {
 /* question option css  */
 
 .question-option-color {
-  background: var(--arena-color);
+  background: rgb(136, 136, 254);
   color: white;
   font-weight: bold;
 }

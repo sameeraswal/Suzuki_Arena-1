@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { reactLocalStorage } from "reactjs-localstorage";
 import Popupexample from "../flipcard popup/Popup";
 
-function Card({ onClick, title, isCorrect, cardQuestion,cardQuestionId }) {
+function Card({ onClick, title, isCorrect, cardQuestion, cardQuestionId }) {
   const metaData = {};
   metaData["Height"] = {
     classFront: "front-icon1",
@@ -49,7 +49,7 @@ function Card({ onClick, title, isCorrect, cardQuestion,cardQuestionId }) {
     classFront: "front-icon10",
     classBack: "back-10",
   };
-  let link=JSON.parse(localStorage.getItem("carRoute"));
+  let link = JSON.parse(localStorage.getItem("carRoute"));
   // let cardQuestionId=JSON.parse(localStorage.getItem("cardQuestionId"));
 
   const [cardRemain, setCardRemain] = useState(5);
@@ -76,9 +76,7 @@ function Card({ onClick, title, isCorrect, cardQuestion,cardQuestionId }) {
       <div className="card" onClick={onClick}>
         <div
           className={`card-back text-on-card-back ${metaData[title]?.classBack}`}
-        >
-          {title}
-        </div>
+        ></div>
 
         <div className="card-front ">
           <button
@@ -87,16 +85,25 @@ function Card({ onClick, title, isCorrect, cardQuestion,cardQuestionId }) {
               timeOutFun();
             }}
           >
+          <img
+            src={require("../../Assets/Card/height1.png")}
+            alt=""
+            height={252}
+            width={199}
+          />
             button
           </button>
-          <p
+          {/* <p
             onClick={() => {
               timeOutFun();
             }}
             className="text-on-card"
           >
             {title}
-          </p>
+            {/* ${params.get("link")}.png */}
+          {/* </p> */} 
+          
+          
         </div>
       </div>
     </>

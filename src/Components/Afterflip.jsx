@@ -1,7 +1,8 @@
 import Navbar from "./Navbar";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { APIURL, APIURLLOCAL } from "../App";
+import { APIURL, APIURLLOCAL, imgur } from "../App";
+
 import axios from "axios";
 // import { useBetween } from 'use-between';
 export const fal = false;
@@ -57,7 +58,7 @@ const Afterflip = ({ title }) => {
   return (
     <>
       <Navbar></Navbar>
-      <div className="round-box">Flip a Card</div>
+      <div className="round-box">Fill the Answer</div>
       <div className="outer-div">
         <div className="actual-card">
           <div className="border-div">
@@ -87,7 +88,10 @@ const Afterflip = ({ title }) => {
           </div>
         </div>
         <div className="right-img">
-          <img src={img} alt="img" />
+          <img
+            src={require(`../../public/Assets/Questions/Round2/${params.get("link")}.png`)}
+            alt="img"
+          />
         </div>
       </div>
     </>
