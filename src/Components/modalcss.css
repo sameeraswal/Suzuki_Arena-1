@@ -152,13 +152,12 @@ button {
   height: 150%;
   font-size: 25px;
   font-weight: bold;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
-.modal-guide-btn{
-   margin-top: 400px;
+.modal-guide-btn {
+  margin-top: 400px;
   margin-left: 170px;
- 
 }
 
 .close-button {
@@ -398,12 +397,12 @@ li {
   bottom: 2%;
 }
 
-.guidelines-img img{
+.guidelines-img img {
   height: 70vh;
   width: 70vw;
   margin-left: 15%;
 }
-.lets-begin-efe{
+.lets-begin-efe {
   top: 82%;
 }
 /* finish round  */
@@ -430,5 +429,29 @@ li {
   }
   .resp-tablet-b-s-s-p {
     height: 40%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* Askexpress  */
+  .modal-guide-btn {
+    margin-top: 360px;
+    margin-left: 122px;
+  }
+  .save-button {
+    width: 15%;
+  }
+  .cls-btn {
+    left: -20px;
+    top: 1%;
+  }
+
+  /* casestudy */
+  .case-study-text p {
+    text-align: center;
+    font-size: 27px;
+  }
+  .full-height {
+    height: 152vh;
   }
 }

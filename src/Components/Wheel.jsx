@@ -44,7 +44,7 @@ export default class Wheel extends React.Component {
       randomWheelNo = num;
       car = this.props.items[num].title.replace(/ /g, "").toLowerCase();
       // alert(car)
-      console.log(this.props.items[num].title);
+      console.log(this.props.items[num].title.replace(/ /g, "").toLowerCase());
 
       // randomWheelNo = 3;
     } else {

@@ -1407,12 +1407,20 @@ ul {
   /* Askexpress  */
   .modal-guide-btn {
     margin-top: 360px;
-    margin-left: 112px;
+    margin-left: 122px;
   }
   .save-button {
     width: 15%;
   }
 
+  /* puzzle  */
+  .puzzle-scoring-btn {
+    margin-left: 39.3%;
+    width: 22%;
+    margin-top: 40%;
+  }
+
+  
    /* question */
    
    .question-container {
@@ -1763,6 +1771,8 @@ ul {
   color: rgb(203, 59, 59);
   text-align: end;
 }
+
 }
+
 
 
