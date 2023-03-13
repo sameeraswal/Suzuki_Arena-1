@@ -59,7 +59,7 @@ const Sprevskwid = () => {
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
       <div className="round-box bg-correct">
-      S presso VXi+ Vs Kwid RXL (o) 1L
+      S-Presso VXi Vs Kwid RXL (O)
       </div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">

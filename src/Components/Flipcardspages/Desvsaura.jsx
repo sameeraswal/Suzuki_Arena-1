@@ -58,7 +58,7 @@ const Desvsaura = () => {
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
       <div className="round-box bg-correct">
-      Dzire ZXi+ Vs Aura SX+
+      Dzire ZXi+ Vs Aura SX(O)
       </div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">

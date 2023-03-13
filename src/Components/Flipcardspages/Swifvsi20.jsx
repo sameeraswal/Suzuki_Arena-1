@@ -57,7 +57,7 @@ const Swifvsi20 = () => {
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
       <div className="round-box bg-correct">
-        Swift ZXi+ AMT Vs Altroz XZ (o)
+        Swift ZXi+ Vs Altroz XZ (O)
       </div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">

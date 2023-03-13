@@ -57,7 +57,7 @@ const Swiftvsgrandi10 = () => {
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
       <div className="round-box bg-correct">
-        Swift ZXi+ AMT Vs Grand i10 NIOS Asta
+        Swift ZXi+ Vs Grand i10 NIOS Asta
       </div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">
