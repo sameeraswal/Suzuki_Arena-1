@@ -52,7 +52,7 @@ const Leaderboardsrm = () => {
           <div className="table-div">
             <div className="table-heading"></div>
             <DownloadTableExcel
-              filename="users table"
+              filename="SRM SCoreboard"
               sheet="users"
               currentTableRef={tableRef.current}
             >

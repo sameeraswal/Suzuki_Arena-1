@@ -95,29 +95,33 @@ const Enterscore5 = () => {
         Enter Score
       </button>
 
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="roll icon-conatiner finish-score-btn"
-        onClick={() => {
-          modalOpen ? close() : open();
-          fetchData();
-          getData();
-        }}
-      >
-        Finish Round
-      </motion.button>
+      {score % 10 === 0 && score != "" && (
+        <>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="roll icon-conatiner finish-score-btn"
+            onClick={() => {
+              modalOpen ? close() : open();
+              fetchData();
+              getData();
+            }}
+          >
+            Finish Round
+          </motion.button>
 
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        // Fires when all exiting nodes have completed animating out
-        onExitComplete={() => null}
-      >
-        {modalOpen && (
-          <Finishmodalenter modalOpen={modalOpen} handleClose={close} />
-        )}
-      </AnimatePresence>
+          <AnimatePresence
+            initial={false}
+            exitBeforeEnter={true}
+            // Fires when all exiting nodes have completed animating out
+            onExitComplete={() => null}
+          >
+            {modalOpen && (
+              <Finishmodalenter modalOpen={modalOpen} handleClose={close} />
+            )}
+          </AnimatePresence>
+        </>
+      )}
     </div>
   );
 };

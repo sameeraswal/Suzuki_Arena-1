@@ -181,16 +181,17 @@ input {
   padding: 0.25rem 0.5rem;
   outline: none;
   background: var(--dark);
-  border: 2px solid #ff9d00;
+  border: 2px solid var(--arena-color);
   border-radius: 6px;
-  color: #ff9d00;
+  color: white;
   font-size: 1.25rem;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
+  font-style: normal;
 }
 
 ::placeholder {
-  font-style: italic;
+  font-style: normal;
 }
 
 /* ul,
