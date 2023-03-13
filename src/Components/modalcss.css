@@ -438,6 +438,13 @@ li {
 
 @media screen and (max-width: 1024px) {
   /* Askexpress  */
+
+  .backdrop-finish{
+    margin-top: -67%;
+  }
+
+
+
   .modal-guide-btn {
     margin-top: 360px;
     margin-left: 122px;
@@ -466,7 +473,7 @@ li {
 
 @media screen and (max-width: 1180px) {
   .cls-btn{
-    margin-left: 480px;
+    margin-left: 431px;
   }
   .backdrop-finish-1b{
     top: 79px;
@@ -474,7 +481,7 @@ li {
   }
   .finish-modal-btn{
     margin-top: 5%;
-    margin-left: 33%;
+    margin-left: 36%;
     bottom: 2%;
   }
   .modal-guide-btn{

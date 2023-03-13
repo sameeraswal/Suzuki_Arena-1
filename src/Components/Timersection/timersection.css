@@ -80,22 +80,54 @@
   position: absolute;
   margin-left: 54%;
 }
-@media screen and (max-width: 1024px) {
-  /* timer section  */
-  .timer-container {
-    margin-left: 1%;
-  }
-  .score-correct {
-    margin-top: 49.9%;
-  }
-}
+
 @media screen and (max-width: 1180px) {
   /* timer section  */
   .timer-container {
     margin-left: 6%;
   }
   .score-correct {
-    margin-left: 55%;
-    margin-top: 43.2%;
+    margin-left: 56%;
+    margin-top: 42.6%;
   }
 }
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  /* timer section  */
+  .timer-container {
+    margin-left: 6%;
+  }
+  .score-correct {
+    margin-left: 56%;
+    margin-top: 43%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+ /* timer section  */
+ .timer-container {
+  margin-left: 1%;
+}
+.score-correct {
+  margin-left: 56%;
+  margin-top: 50%;
+}
+}
+
+
