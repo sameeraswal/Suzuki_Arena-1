@@ -13,7 +13,4 @@ const wheelRounds = new mongoose.Schema({
 });
 
 const WHEEL_ROUND = mongoose.model("wheelrounds", wheelRounds);
-
-
-
 module.exports = WHEEL_ROUND;

@@ -21,10 +21,5 @@ const wheelRoundunLockedSchema = new mongoose.Schema({
     disabledQuestions: {}
 });
 
-//const emplyeeWheelUnlockedRound = mongoose.model("wheelroundlocks", wheelRoundunLockedSchema);
 const wheelroundlocks = mongoose.model("wheelroundlocks", wheelRoundunLockedSchema);
-
-//console.log("wheelroundlocks",emplyeeWheelUnlockedRound)
-
-//module.exports = emplyeeWheelUnlockedRound;
 module.exports = wheelroundlocks;
