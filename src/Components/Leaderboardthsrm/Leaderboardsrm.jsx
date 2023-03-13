@@ -78,7 +78,7 @@ const Leaderboardthsrm = () => {
 
               {round.map((item) => (
                 <>
-{/* {item.categoryTypeofEmployee==="Sales Captain" &&} */}
+{/* {item.category==="Sales Captain" &&} */}
 
                   <tr>
                     <td className="table-content">{item.registrationNumber}</td>

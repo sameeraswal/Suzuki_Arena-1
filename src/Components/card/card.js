@@ -100,6 +100,7 @@ function Card({
             alt=""
             height={271}
             width={189}
+            className="resp-card-1"
           />
           {console.log(cardtitleImage1, "Item")}
         </div>
@@ -116,6 +117,7 @@ function Card({
               alt=""
               height={271}
               width={189}
+              className="resp-card-1"
             />
           {console.log(cardtitleImage2, "Item")}
 
