@@ -20,7 +20,9 @@ const Enterscore5 = () => {
 
   const [show, setShow] = useState(false);
   const handleChangescore = (event) => {
+    
     setScore(event.target.value);
+   
   };
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -57,7 +59,7 @@ const Enterscore5 = () => {
         console.log(res, "Response of roundlist");
       })
       .catch((error) => console.log(error.response.data.message));
-    // return false;
+   
   };
   return (
     <div>
@@ -74,8 +76,7 @@ const Enterscore5 = () => {
             onChange={handleChangescore}
           />
         )}
-        {/* {data && ( */}
-        {/* <Link to="/puzzle"> */}
+      
       </div>
       {/* <button
           className="roll icon-conatiner finish-card finish-btn-enter-score"
