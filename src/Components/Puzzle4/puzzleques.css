@@ -1,14 +1,14 @@
-.wordslct1 {
-  /* background-color: blue; */
+/* .wordslct1 {
+  
   height: 500px;
   width: 80%;
-  /* position: absolute; */
+  
   display: flex;
 
   flex-direction: column;
   gap: 40px;
   padding-top: 50px;
-}
+} */
 
 .wordyes1 {
   width: 90%;
@@ -34,10 +34,28 @@
   height: 145%;
 }
 
-.full-height{
+/* .full-height{
   background: url('../NewImages/Spin-Wheel_BG.png');
   height: 130vh;
-}
-.sbt-btn{
+} */
+.sbt-btn {
   margin-left: 70%;
+}
+
+@media screen and (max-width: 1024px) {
+  /* puzzleQuestion */
+  .wordslct1 {
+    height: 500px;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding-top: 28px;
+  }
+
+  .sbt-btn{
+    margin-left: 67%;
+  }
+
 }
