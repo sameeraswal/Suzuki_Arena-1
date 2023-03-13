@@ -405,6 +405,10 @@ li {
 .lets-begin-efe {
   top: 82%;
 }
+.finish1css {
+  height: 480px;
+  width: 700px;
+}
 /* finish round  */
 @media screen and (max-width: 768px) {
   .backdrop-finish {
@@ -443,7 +447,7 @@ li {
   }
   .cls-btn {
     left: -20px;
-    top: 1%;
+    top: 81%;
   }
 
   /* casestudy */
@@ -453,5 +457,9 @@ li {
   }
   .full-height {
     height: 152vh;
+  }
+  .finish1css {
+    height: 300px;
+    width: 10%;
   }
 }
