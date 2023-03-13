@@ -20,3 +20,13 @@
     margin-right: -72px;
   }
 }
+
+@media screen and (max-width: 1180px) {
+  .flippable-card-container {
+    height: 445px;
+    width: 225px;
+    perspective: 1000px;
+    margin-bottom: -170px;
+    margin-right: -66px;
+  }
+}

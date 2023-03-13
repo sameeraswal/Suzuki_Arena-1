@@ -463,3 +463,22 @@ li {
     width: 10%;
   }
 }
+
+@media screen and (max-width: 1180px) {
+  .cls-btn{
+    margin-left: 480px;
+  }
+  .backdrop-finish-1b{
+    top: 79px;
+    left: 0;
+  }
+  .finish-modal-btn{
+    margin-top: 5%;
+    margin-left: 33%;
+    bottom: 2%;
+  }
+  .modal-guide-btn{
+    margin-left: 133px;
+  }
+  
+}

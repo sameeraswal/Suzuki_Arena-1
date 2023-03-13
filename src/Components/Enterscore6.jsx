@@ -82,7 +82,7 @@ const Enterscore6 = () => {
           Enter Score
         </button>
       </div>
-      {score % 5 === 0 && score != "" (
+      {score % 5 === 0 && score !== "" && score <= 100 && (
         <>
           <motion.button
             whileHover={{ scale: 1.1 }}

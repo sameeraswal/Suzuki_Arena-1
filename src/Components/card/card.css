@@ -217,8 +217,19 @@
     height: 86%;
     width: 85%;
   }
-  .resp-card-1{
+  .resp-card-1 {
     height: 190px;
     width: 140px;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .card-front,
+  .card-back {
+    height: 86%;
+    width: 85%;
+  }
+  .resp-card-1 {
+    height: 218px;
+    width: 141px;
   }
 }

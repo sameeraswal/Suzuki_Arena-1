@@ -19,16 +19,14 @@ export default function Random() {
 
   // const handleRandomNum = () => {};
   // const timeOutFun = (e) => {
-    
+
   //   // console.log(title);
   // };
   useEffect(() => {
-      localStorage.setItem('random', JSON.stringify(randomNum))
-  },[randomNum])
+    localStorage.setItem("random", JSON.stringify(randomNum));
+  }, [randomNum]);
 
   const [play, setPlay] = useState(false);
-
-  const url = play ? `${randomnumimg}?autoplay=1` : randomnumimg;
 
   return (
     <>
@@ -38,12 +36,15 @@ export default function Random() {
         {/* <div className="round-box ">Number Generator</div> */}
         {/* <div className="round-box">Random Number Generator</div> */}
         <iframe
-          src={url}
+          src={randomnumimg}
           alt=""
           height={550}
           width={1000}
-          allow="autoplay;"
-          style={{ marginLeft: "-30px", marginBottom: "-350px", paddingLeft:"-300px" }}
+          style={{
+            marginLeft: "-30px",
+            marginBottom: "-350px",
+            paddingLeft: "-300px",
+          }}
           className="randomno-video"
         ></iframe>
         <div className="containerx">
