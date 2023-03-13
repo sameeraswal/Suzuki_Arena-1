@@ -23,14 +23,14 @@ const Leaderboardthsrm = () => {
 
   // const round1A="1-A";
   const mspin = JSON.parse(localStorage.getItem("mspin"));
-  let categoryType = "Sales Captain";
   useEffect(() => {
     axios
       .post(`${APIURL}/api/v1/quiz/scoreboard/category`, {
-        categoryType: categoryType,
+        categoryType: "Sales Captain",
       })
       .then((res) => {
-        setRound(res.data);
+        // setRound(res.data);
+        setRound(res.data.data.scoreBoard);
         // setRounds(res.data.data.scoreBoard.rounds);
         console.log(res);
       })

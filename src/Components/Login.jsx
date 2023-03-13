@@ -11,7 +11,7 @@ const Login = () => {
   const [mspin, setMspin] = useState("");
   const [regno, setRegno] = useState("");
   const [res, setRes] = useState(true);
- 
+
   const [message, setMessage] = useState("");
   const handleChangemspin = (event) => {
     setMspin(event.target.value);
@@ -65,8 +65,11 @@ const Login = () => {
   // const [mspin, setMspin] = useState([]);
 
   useEffect(() => {
+    console.log(mspin,"Before Setting");
+
     localStorage.setItem("mspin", JSON.stringify(mspin));
     localStorage.setItem("regNo", JSON.stringify(regno));
+    console.log(mspin,"AFter Setting");
     localStorage.removeItem("cod");
   }, [mspin, regno]);
   return (

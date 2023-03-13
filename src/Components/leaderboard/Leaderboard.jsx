@@ -31,7 +31,7 @@ const Leaderboard = () => {
         categoryType: categoryType,
       })
       .then((res) => {
-        setRound(res.data.data.scoreBoard);
+        // setRound(res.data.data.scoreBoard);
         // setRounds(res.data.data.scoreBoard.rounds);
         console.log(res);
       })
