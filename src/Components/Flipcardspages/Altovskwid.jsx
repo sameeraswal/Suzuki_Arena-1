@@ -16,6 +16,8 @@ const Altovskwid = () => {
 
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
+  const [cardImg, setCardimg] = useState([]);
+
   localStorage.setItem("co", JSON.stringify(5));
 
   useEffect(() => {
@@ -51,7 +53,7 @@ const Altovskwid = () => {
   //   localStorage.setItem("co", JSON.stringify(setCount(count - 1)));
   // };
   const timeOutFun = () => {
-    if (JSON.parse(localStorage.getItem("cod"))===-6) {
+    if (JSON.parse(localStorage.getItem("cod")) === -6) {
       // alert(JSON.parse(localStorage.getItem("cod"))===-6);
       setTimeout(() => window.open("../", "_self"), 400);
     }

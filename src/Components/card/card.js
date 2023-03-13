@@ -76,7 +76,9 @@ function Card({ onClick, title, isCorrect, cardQuestion, cardQuestionId }) {
       <div className="card" onClick={onClick}>
         <div
           className={`card-back text-on-card-back ${metaData[title]?.classBack}`}
-        ></div>
+        >
+          
+        </div>
 
         <div className="card-front ">
           <button
@@ -85,25 +87,8 @@ function Card({ onClick, title, isCorrect, cardQuestion, cardQuestionId }) {
               timeOutFun();
             }}
           >
-          <img
-            src={require("../../Assets/Card/height1.png")}
-            alt=""
-            height={252}
-            width={199}
-          />
             button
           </button>
-          {/* <p
-            onClick={() => {
-              timeOutFun();
-            }}
-            className="text-on-card"
-          >
-            {title}
-            {/* ${params.get("link")}.png */}
-          {/* </p> */} 
-          
-          
         </div>
       </div>
     </>

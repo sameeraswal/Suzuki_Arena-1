@@ -44,9 +44,9 @@ const ModalFrammers = ({ handleClose, text, type }) => {
         exit="exit"
       >
         {JSON.parse(localStorage.getItem("categoryTypeofEmployee")) ===
-          "Sales Captain" && <ModalText text={text} />}
+          "Sales Captain" && <ModalText1 text={text} />}
         {JSON.parse(localStorage.getItem("categoryTypeofEmployee")) ===
-          "Sales Expert" && <ModalText1 text={text} />}
+          "Sales Expert" && <ModalText text={text} />}
         <ModalButton onClick={handleClose} label="Close" />
       </motion.div>
     </Backdrop>
