@@ -57,7 +57,7 @@ const Ertvscare = () => {
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
       <div className="round-box bg-correct">
-      Ertiga ZXi+ Vs Carens 1.5 Prestige MT
+      Ertiga ZXi+ Vs Carens 1.5 Prestige
       </div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">

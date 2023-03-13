@@ -59,7 +59,7 @@ const Ertvstrib = () => {
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
       <div className="round-box bg-correct">
-      Ertiga ZXi+ AT Vs Triber RXZ
+      Ertiga ZXi+ Vs Triber RXZ
       </div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">

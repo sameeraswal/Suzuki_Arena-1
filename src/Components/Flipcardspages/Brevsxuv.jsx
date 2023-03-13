@@ -57,7 +57,7 @@ const Brewsuv = () => {
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
       <div className="round-box bg-correct">
-        Brezza ZXi+ MT Vs XUV 300 W8(o) AMT
+        Brezza ZXi+ Vs XUV 300 W8(O)
       </div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">
