@@ -1038,8 +1038,9 @@ ul {
 
 .submit-margin{
   margin-top: 20px;
-  margin-left: 334px;
+  margin-left: 324px;
   position: absolute;
+  color: white;
 }
 
 .question-design-container{

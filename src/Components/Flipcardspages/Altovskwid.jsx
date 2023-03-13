@@ -16,7 +16,6 @@ const Altovskwid = () => {
 
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
-  const [cardImg, setCardimg] = useState([]);
 
   localStorage.setItem("co", JSON.stringify(5));
 
@@ -110,6 +109,8 @@ const Altovskwid = () => {
                   cardQuestion={item.cardQuestion}
                   isCardQuestionDidabled={item.isCardQuestionDidabled}
                   cardQuestionId={item.cardQuestionId}
+                  cardtitleImage1={item.cardtitleImage1}
+                  cardtitleImage2={item.cardtitleImage2}
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>

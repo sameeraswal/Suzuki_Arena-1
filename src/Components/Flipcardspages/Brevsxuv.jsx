@@ -45,6 +45,7 @@ const Brewsuv = () => {
   };
   const timeOutFun = () => {
     if (JSON.parse(localStorage.getItem("cod"))===-6) {
+      getData();
       // alert(JSON.parse(localStorage.getItem("cod"))===-6);
       setTimeout(() => window.open("../", "_self"), 400);
     }
@@ -99,6 +100,8 @@ const Brewsuv = () => {
                   cardQuestion={item.cardQuestion}
                   isCardQuestionDidabled={item.isCardQuestionDidabled}
                   cardQuestionId={item.cardQuestionId}
+                  cardtitleImage1={item.cardtitleImage1}
+                  cardtitleImage2={item.cardtitleImage2}
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
@@ -108,14 +111,14 @@ const Brewsuv = () => {
             </>
           ))}
         </div>
-        <Link to="/">
+        {/* <Link to="/">
           <button
             className="roll icon-conatiner finish-card"
             onClick={getData()}
           >
             Finish Round
           </button>
-        </Link>
+        </Link> */}
       </div>
     </>
   );

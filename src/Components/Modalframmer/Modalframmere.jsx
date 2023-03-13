@@ -85,7 +85,7 @@ const ModalButton = ({ onClick, label }) => (
   <Link to="/wheel">
     {" "}
     <motion.button
-      className="modal-button cls-btn"
+      className="modal-button cls-btn lets-begin-efe"
       type="button"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}

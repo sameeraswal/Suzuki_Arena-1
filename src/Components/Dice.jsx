@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Timer from "./Timer";
-import bgImg from './NewImages/Spin-Wheel_BG.png'
+import bgImg from "./NewImages/Spin-Wheel_BG.png";
 
 const Dice = () => {
   const navigate = useNavigate();
@@ -61,7 +61,7 @@ const Dice = () => {
   return (
     <div>
       <Navbar />
-      <img src={bgImg} alt="" className="background-image"/>
+      <img src={bgImg} alt="" className="background-image" />
       <div className="round-box">Dice</div>
       <div className="container1">
         <div className="dice">
@@ -72,10 +72,9 @@ const Dice = () => {
           <div className="face right"></div>
           <div className="face left"></div>
         </div>
-      
       </div>
       <div className="dice-btn-pos">
-      <button
+        <button
           className="roll icon-conatiner"
           onClick={() => {
             randomDice();
@@ -83,13 +82,22 @@ const Dice = () => {
         >
           Roll Dice
         </button>
-        <Link to="/puzzlequestion">
-          {" "}
-          <button className="roll icon-conatiner">
-            Enter Score
-          </button>
-        </Link>
-        </div>
+
+        {JSON.parse(localStorage.getItem("categoryTypeofEmployee")) ===
+          "Sales Captain" && (
+          <Link to="/puzzlesrm">
+            {" "}
+            <button className="roll icon-conatiner">Enter Score</button>
+          </Link>
+        )}
+        {JSON.parse(localStorage.getItem("categoryTypeofEmployee")) ===
+          "Sales Expert" && (
+          <Link to="/puzzlequestion">
+            {" "}
+            <button className="roll icon-conatiner">Enter Score</button>
+          </Link>
+        )}
+      </div>
     </div>
   );
 };
