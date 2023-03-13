@@ -34,10 +34,18 @@
   height: 145%;
 }
 
-.full-height{
-  background: url('../NewImages/Spin-Wheel_BG.png');
-  height: 130vh;
+.full-height {
+  background: url("../NewImages/Spin-Wheel_BG.png");
 }
-.sbt-btn{
+
+
+
+.sbt-btn {
   margin-left: 70%;
+}
+
+@media screen and (max-width: 1024px){
+  .sbt-btn {
+    margin-left: 66%;
+  }
 }

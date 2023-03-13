@@ -68,6 +68,27 @@
 
 @media screen and (max-width: 1024px) {
   /* puzzleQuestion */
+  
+  .wordslct{
+    width: 51%;
+    margin-left: -127px;
+    gap: 30px;
+  }
+
+  .puzzle-img{
+    height: 60%;
+    width: 54%;
+    margin-left: 92px;
+  }
+
+  .finish-btn{
+    margin-left: 35%;
+  }
+
+
+
+
+
   .wordslct1 {
     height: 500px;
     width: 80%;
