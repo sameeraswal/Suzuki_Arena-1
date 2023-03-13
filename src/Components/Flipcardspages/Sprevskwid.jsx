@@ -48,6 +48,7 @@ const Sprevskwid = () => {
   const timeOutFun = () => {
     if (JSON.parse(localStorage.getItem("cod"))===-6) {
       // alert(JSON.parse(localStorage.getItem("cod"))===-6);
+      getData();
       setTimeout(() => window.open("../", "_self"), 400);
     }
   };
@@ -101,6 +102,8 @@ const Sprevskwid = () => {
                   cardQuestion={item.cardQuestion}
                   isCardQuestionDidabled={item.isCardQuestionDidabled}
                   cardQuestionId={item.cardQuestionId}
+                  cardtitleImage1={item.cardtitleImage1}
+                  cardtitleImage2={item.cardtitleImage2}
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
@@ -110,14 +113,14 @@ const Sprevskwid = () => {
             </>
           ))}
         </div>
-        <Link to="/">
+        {/* <Link to="/">
           <button
             className="roll icon-conatiner finish-card"
             onClick={getData()}
           >
             Finish Round
           </button>
-        </Link>
+        </Link> */}
       </div>
     </>
   );

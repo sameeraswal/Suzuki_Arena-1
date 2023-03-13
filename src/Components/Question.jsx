@@ -306,7 +306,7 @@ const Question = () => {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="third question-btn icon-conatiner"
+                  className="third question-btn icon-conatiner submit-margin"
                   onClick={() => (modalOpen ? close() : open())}
                 >
                   Submit

@@ -402,6 +402,9 @@ li {
   width: 70vw;
   margin-left: 15%;
 }
+.lets-begin-efe{
+  top: 82%;
+}
 /* finish round  */
 @media screen and (max-width: 768px) {
   .backdrop-finish {

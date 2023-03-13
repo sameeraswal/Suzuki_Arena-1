@@ -62,17 +62,18 @@
   
 }
 
-.timer-txt{
- font-size: 36px;
- margin-left: 130px;
- margin-top: 210px;
-}
 
 .timer-margin{
   margin-top: 150px;
-  margin-right: 200px;
+  margin-right: 285px;
 }
 
+
+.timer-txt{
+  font-size: 36px;
+  margin-left: 173px;
+  margin-top: 210px;
+ }
 .score-correct{
   margin: auto;
   align-items: center;
