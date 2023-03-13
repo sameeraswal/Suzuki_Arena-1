@@ -92,10 +92,10 @@
 @media screen and (max-width: 1180px) {
   /* timer section  */
   .timer-container {
-    margin-left: 1%;
+    margin-left: 6%;
   }
   .score-correct {
-    margin-left: 50%;
+    margin-left: 55%;
     margin-top: 43.2%;
   }
 }
