@@ -9,6 +9,9 @@ const employeeAnswers = new mongoose.Schema({
         type: String,
         required: true
     },
+    category:{
+        type:String
+    },
     name: {
         type: String,
         required: true

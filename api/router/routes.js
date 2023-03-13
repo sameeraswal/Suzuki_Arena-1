@@ -30,7 +30,9 @@ router.get("/api/v1/quiz/finalscore/mspin/:mspin", employeeReportController.getF
 
 router.get("/api/v1/quiz/finalscore/leaderboard", employeeReportController.getScoreOfEveryone);
 
-router.get("/api/v1/quiz/scoreboard", employeeReportController.getScoreBoardRoundLevel);
+//router.get("/api/v1/quiz/scoreboard", employeeReportController.getScoreBoardRoundLevel); //old
+//router.get("/api/v1/quiz/scoreboard/category/:targetCategory", employeeReportController.getScoreBoardRoundLevel);
+router.post("/api/v1/quiz/scoreboard/category", employeeReportController.getScoreBoardRoundLevel);
 router.post("/api/v1/finishround", roundController.finishRound);
 
 
