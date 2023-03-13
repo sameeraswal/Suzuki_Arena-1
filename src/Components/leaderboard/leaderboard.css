@@ -123,11 +123,20 @@ table td {
 
 .table-content-2 {
   background: #fff;
-  color: black;
-  padding-top: 12px;
-  border-radius: 10px;
-  font-size: bold;
+    color: black;
+    padding: 12px;
+    border-radius: 14px 14px 0 0;
+    font-size: bold;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #0784e6;
+    vertical-align: middle;
 }
+
+
+
+
 .export{
   margin-left: 88.5%;
 }

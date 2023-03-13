@@ -64,7 +64,7 @@ const Leaderboard = () => {
             </DownloadTableExcel>
             <table ref={tableRef}>
               <td className="table-content-2">Reg No.</td>
-              <td className="table-content-2">Name</td>
+              <td className="table-content-2"><p>Name</p></td>
               <td className="table-content-2">Round 1-A</td>
               <td className="table-content-2">Round 1-B</td>
               <td className="table-content-2">Round 2</td>
