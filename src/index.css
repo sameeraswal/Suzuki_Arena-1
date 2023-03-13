@@ -1040,7 +1040,8 @@ ul {
   margin-top: 20px;
   margin-left: 324px;
   position: absolute;
-  color: white;
+  color: var(--arena-color);
+  height: 50px;
 }
 
 .question-design-container{
@@ -1355,8 +1356,8 @@ ul {
 /* question option css  */
 
 .question-option-color {
-  background: rgb(136, 136, 254);
-  color: white;
+  background: #BAD7E9;
+  color: black;
   font-weight: bold;
 }
 

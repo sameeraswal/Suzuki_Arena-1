@@ -292,7 +292,7 @@ const Question = () => {
                     onClickReset();
                     setOpenModal(true);
                   }}
-                  className="third question-btn icon-conatiner submit-margin"
+                  className="roll question-btn icon-conatiner submit-margin"
                 >
                   Submit
                 </button>
@@ -306,7 +306,7 @@ const Question = () => {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="third question-btn icon-conatiner submit-margin"
+                  className="roll question-btn icon-conatiner submit-margin"
                   onClick={() => (modalOpen ? close() : open())}
                 >
                   Submit

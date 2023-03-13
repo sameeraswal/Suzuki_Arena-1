@@ -53,7 +53,7 @@ const Leaderboard = () => {
           <div className="table-div">
             <div className="table-heading"></div>
             <DownloadTableExcel
-              filename="users table"
+              filename="RM Scoreboard"
               sheet="users"
               currentTableRef={tableRef.current}
             >

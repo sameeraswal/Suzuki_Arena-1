@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 // import enterscore from "./enterscore.jpeg";
-import bgImg from '../Assets/Enter-Score.png'
+import bgImg from "../Assets/Enter-Score.png";
 import Finishmodal from "./Modalframmer/finishmodal";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -59,11 +59,10 @@ const Enterscore6 = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <img src={bgImg} alt="" className="background-image"/>
+      <img src={bgImg} alt="" className="background-image" />
       <div className="enter-score-container">
+        <h1 className="score-text">Enter score</h1>
 
-      <h1 className="score-text">Enter score</h1>
-       
         {show && (
           <input
             type="text"
@@ -83,29 +82,33 @@ const Enterscore6 = () => {
           Enter Score
         </button>
       </div>
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="roll icon-conatiner finish-score-btn"
-        onClick={() => {
-          modalOpen ? close() : open();
-          fetchData();
-          getData();
-        }}
-      >
-        Finish Round
-      </motion.button>
+      {score % 5 === 0 && score % 10 != 0 && score != "" && (
+        <>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="roll icon-conatiner finish-score-btn"
+            onClick={() => {
+              modalOpen ? close() : open();
+              fetchData();
+              getData();
+            }}
+          >
+            Finish Round
+          </motion.button>
 
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        // Fires when all exiting nodes have completed animating out
-        onExitComplete={() => null}
-      >
-        {modalOpen && (
-          <Finishmodalenter modalOpen={modalOpen} handleClose={close} />
-        )}
-      </AnimatePresence>
+          <AnimatePresence
+            initial={false}
+            exitBeforeEnter={true}
+            // Fires when all exiting nodes have completed animating out
+            onExitComplete={() => null}
+          >
+            {modalOpen && (
+              <Finishmodalenter modalOpen={modalOpen} handleClose={close} />
+            )}
+          </AnimatePresence>
+        </>
+      )}
     </div>
   );
 };
