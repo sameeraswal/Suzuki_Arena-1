@@ -33,6 +33,7 @@
     "reactjs-popup": "^2.0.5",
     "redux-persist": "^6.0.0",
     "sass": "^1.58.1",
+    "sfcookies": "^1.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

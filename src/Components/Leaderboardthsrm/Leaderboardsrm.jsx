@@ -23,16 +23,14 @@ const Leaderboardthsrm = () => {
 
   // const round1A="1-A";
   const mspin = JSON.parse(localStorage.getItem("mspin"));
-
+  let categoryType = "Sales Captain";
   useEffect(() => {
     axios
       .post(`${APIURL}/api/v1/quiz/scoreboard/category`, {
-        categoryType: JSON.parse(
-          localStorage.getItem("categoryTypeofEmployee")
-        ),
+        categoryType: categoryType,
       })
       .then((res) => {
-        // setRound(res.data.data.scoreBoard);
+        setRound(res.data);
         // setRounds(res.data.data.scoreBoard.rounds);
         console.log(res);
       })
@@ -57,7 +55,7 @@ const Leaderboardthsrm = () => {
           <div className="table-div">
             <div className="table-heading"></div>
             <DownloadTableExcel
-              filename="SRM Scoreboard"
+              filename="RM Scoreboard"
               sheet="users"
               currentTableRef={tableRef.current}
             >
@@ -84,61 +82,45 @@ const Leaderboardthsrm = () => {
 
               {round.map((item) => (
                 <>
-                  {/* {item.category === "Sales Captain" && ( */}
-                    <tr>
-                      <td className="table-content">
-                        {item.registrationNumber}
-                      </td>
+                  <tr>
+                    <td className="table-content">{item.registrationNumber}</td>
 
-                      <td className="table-content-name" width="25%">
-                        {item.name}
-                      </td>
-                      <td className="table-content" width="8%">
-                        {item.rounds["1-A"] === undefined
-                          ? "NA"
-                          : item.rounds["1-A"]}
-                      </td>
-                      <td className="table-content" width="8%">
-                        {item.rounds["1-B"] === undefined
-                          ? "NA"
-                          : item.rounds["1-B"]}
-                      </td>
-                      <td className="table-content">
-                        {item.rounds["2"] === undefined
-                          ? "NA"
-                          : item.rounds["2"]}
-                      </td>
-                      <td className="table-content">
-                        {item.rounds["3"] === undefined
-                          ? "NA"
-                          : item.rounds["3"]}
-                      </td>
-                      <td className="table-content">
-                        {item.rounds["4"] === undefined
-                          ? "NA"
-                          : item.rounds["4"]}
-                      </td>
-                      <td className="table-content">
-                        {item.rounds["5"] === undefined
-                          ? "NA"
-                          : item.rounds["5"]}
-                      </td>
-                      <td className="table-content">
-                        {item.rounds["6"] === undefined
-                          ? "NA"
-                          : item.rounds["6"]}
-                      </td>
-                      <td className="table-content">
-                        {item.rounds["7"] === undefined
-                          ? "NA"
-                          : item.rounds["7"]}
-                      </td>
-                      <td className="table-content">
-                        {item.totalScoreOfAllRounds}
-                      </td>
-                      <td className="table-content">{item.rank}</td>
-                    </tr>
-                  {/* )} */}
+                    <td className="table-content-name" width="25%">
+                      {item.name}
+                    </td>
+                    <td className="table-content" width="8%">
+                      {item.rounds["1-A"] === undefined
+                        ? "NA"
+                        : item.rounds["1-A"]}
+                    </td>
+                    <td className="table-content" width="8%">
+                      {item.rounds["1-B"] === undefined
+                        ? "NA"
+                        : item.rounds["1-B"]}
+                    </td>
+                    <td className="table-content">
+                      {item.rounds["2"] === undefined ? "NA" : item.rounds["2"]}
+                    </td>
+                    <td className="table-content">
+                      {item.rounds["3"] === undefined ? "NA" : item.rounds["3"]}
+                    </td>
+                    <td className="table-content">
+                      {item.rounds["4"] === undefined ? "NA" : item.rounds["4"]}
+                    </td>
+                    <td className="table-content">
+                      {item.rounds["5"] === undefined ? "NA" : item.rounds["5"]}
+                    </td>
+                    <td className="table-content">
+                      {item.rounds["6"] === undefined ? "NA" : item.rounds["6"]}
+                    </td>
+                    <td className="table-content">
+                      {item.rounds["7"] === undefined ? "NA" : item.rounds["7"]}
+                    </td>
+                    <td className="table-content">
+                      {item.totalScoreOfAllRounds}
+                    </td>
+                    <td className="table-content">{item.rank}</td>
+                  </tr>
                 </>
               ))}
             </table>

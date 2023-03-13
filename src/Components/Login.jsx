@@ -11,7 +11,7 @@ const Login = () => {
   const [mspin, setMspin] = useState("");
   const [regno, setRegno] = useState("");
   const [res, setRes] = useState(true);
-
+ 
   const [message, setMessage] = useState("");
   const handleChangemspin = (event) => {
     setMspin(event.target.value);
@@ -51,6 +51,9 @@ const Login = () => {
       .catch((error) => setMessage(error.response.data.message));
     // return false;
   };
+
+  // document.cookie=`mspin=${mspin}`;
+  // document.cookie=`regno=${regno}`
 
   const arena = require("./Pratham.png");
   const navigateLogin = () => {

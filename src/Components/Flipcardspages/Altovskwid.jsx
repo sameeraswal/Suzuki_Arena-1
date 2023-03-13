@@ -18,7 +18,10 @@ const Altovskwid = () => {
   const [result, setResult] = useState([]);
 
   localStorage.setItem("co", JSON.stringify(5));
+  // let x = document.cookie;
+  // var value = document.cookie("mspin");
 
+  // console.log(value ,"Value is ")
   useEffect(() => {
     axios
       .post(`${APIURL}/api/v1/wheelRoundQuestions`, {
