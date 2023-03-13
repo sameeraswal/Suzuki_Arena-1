@@ -78,7 +78,7 @@ const Casestudy = () => {
     <div>
       <Navbar></Navbar>
       <img src={bgImage} alt="" className="background-image"/>
-      <div className="round-box">Case-{data1}</div>
+      <div className="round-box">Case - {Number(data1)+1}</div>
       <div className="case-study-text">
         <p>
          {casestudydata[data1].description}

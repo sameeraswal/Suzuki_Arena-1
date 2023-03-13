@@ -33,7 +33,7 @@ const Brewsuv = () => {
     axios
       .post(`${APIURL}/api/v1/finishround`, {
         mspin: JSON.parse(localStorage.getItem("mspin")),
-        roundName: "2",
+        roundName: JSON.parse(localStorage.getItem("roundName")),
       })
       .then((res) => {
         console.log(JSON.parse(localStorage.getItem("mspin")), "MSPIN");
@@ -45,6 +45,7 @@ const Brewsuv = () => {
   };
   const timeOutFun = () => {
     if (JSON.parse(localStorage.getItem("cod"))===-6) {
+      getData();
       // alert(JSON.parse(localStorage.getItem("cod"))===-6);
       setTimeout(() => window.open("../", "_self"), 400);
     }
@@ -56,7 +57,7 @@ const Brewsuv = () => {
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
       <div className="round-box bg-correct">
-        Brezza ZXi+ MT Vs XUV 300 W8(o) AMT
+        Brezza ZXi+ Vs XUV 300 W8(O)
       </div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">
@@ -99,6 +100,8 @@ const Brewsuv = () => {
                   cardQuestion={item.cardQuestion}
                   isCardQuestionDidabled={item.isCardQuestionDidabled}
                   cardQuestionId={item.cardQuestionId}
+                  cardtitleImage1={item.cardtitleImage1}
+                  cardtitleImage2={item.cardtitleImage2}
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
@@ -108,14 +111,14 @@ const Brewsuv = () => {
             </>
           ))}
         </div>
-        <Link to="/">
+        {/* <Link to="/">
           <button
             className="roll icon-conatiner finish-card"
             onClick={getData()}
           >
             Finish Round
           </button>
-        </Link>
+        </Link> */}
       </div>
     </>
   );

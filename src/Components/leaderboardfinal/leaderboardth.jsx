@@ -8,14 +8,21 @@ import s from "./03.png";
 import t from "./04.png";
 import axios from "axios";
 import { APIURL } from "../../App";
+import bgImg1 from "../../Assets/Leaderboard.png"
+import headImg from '../../Assets/ScoreboardNew/RM.png'
+import lead from './01.png'
+import { useNavigate } from "react-router-dom";
+
 
 const Leaderboardth = () => {
+  const navigate = useNavigate();
   const [round, setRound] = useState([]);
-  const [name1, setName1] = useState([]);
-  const [name2, setName2] = useState([]);
-
-  const [name3, setName3] = useState([]);
-
+  const [name, setName] = useState('');
+  const [name1, setName1] = useState('');
+  const [name2, setName2] = useState('');
+  
+ 
+  const arr = [];
   useEffect(() => {
     // alert("Page is running");
     // fetchData();
@@ -23,37 +30,30 @@ const Leaderboardth = () => {
       .get(`${APIURL}/api/v1/quiz/scoreboard`)
       .then((res) => {
         setRound(res.data.data.scoreBoard);
-        setName();
-        console.log(res);
+        setName(res.data.data.scoreBoard[0].name);
+        setName1(res.data.data.scoreBoard[1].name);
+        setName2(res.data.data.scoreBoard[2].name);
       })
       .catch((error) => console.log(error, "error is here"));
   }, []);
-  const setName = () => {
-    for (let i = 0; i < round.length; i++) {
-      console.log(round[i].rank);
-      round[i].rank === 1 ? setName1(round.name1) : setName1(round.name1);
-    }
-  };
+ 
+   
 
   return (
     <div>
       <Navbar />
-      <div className=" bg-img">
-        <div className="description">
-          <img src={trophy} alt="" className="resp-trophy resp-trophy-1" />{" "}
-          <img src={text} alt="" className="resp-text" />
-          <img src={trophy} alt="" className="resp-trophy" />
-        </div>
-        {/* {round.map((item) => ( */}
-        <>
-          <img src={f} alt="" className="first" />
-          <h1 className="position-text align-lead-1">{name1}</h1>
-          <img src={s} alt="" className="second" />
-          <h1 className="position-text align-lead-2">{name2}</h1>
-          <img src={t} alt="" className="thirdlast" />
-          <h1 className="position-text align-lead-3">{name3}</h1>
-        </>
-      </div>
+      <button
+        className="roll leader-btn icon-conatiner"
+        onClick={() => navigate("/leaderboardthsrm")}
+      >
+        Toggle to SRM
+      </button>
+      <img src={lead} alt="" className="lead-pos"/>
+      <img src={bgImg1} alt="" className="background-image"/>
+      <h1 className="position-text align-lead-1">{name}</h1>
+      <h1 className="position-text align-lead-2">{name1}</h1>
+      <h1 className="position-text align-lead-3">{name2}</h1>
+      
     </div>
   );
 };

@@ -1,4 +1,3 @@
-
 import { React, useEffect, useState } from "react";
 import FlippableCard from "../FlippableCard";
 import Navbar from "../Navbar";
@@ -17,6 +16,7 @@ const Sprevskwid = () => {
 
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
+
   useEffect(() => {
     axios
       .post(`${APIURL}/api/v1/wheelRoundQuestions`, {
@@ -25,9 +25,10 @@ const Sprevskwid = () => {
       })
       .then((res) => {
         setResult(res.data.data.questions);
+        console.log(result);
         console.log(res, "Respnse");
       })
-      .catch((error) => console.log(error.response.data.message));
+      .catch((error) => console.log(error));
   }, []);
 
   const getData = () => {
@@ -41,13 +42,14 @@ const Sprevskwid = () => {
         console.log(res, "Response of roundlist");
         console.log(2, "Response of RoundName");
       })
-      .catch((error) => console.log(error.response.data.message));
+      .catch((error) => console.log(error));
     // return false;
   };
 
   const timeOutFun = () => {
-    if (JSON.parse(localStorage.getItem("cod"))===-6) {
+    if (JSON.parse(localStorage.getItem("cod")) === -6) {
       // alert(JSON.parse(localStorage.getItem("cod"))===-6);
+      getData();
       setTimeout(() => window.open("../", "_self"), 400);
     }
   };
@@ -57,14 +59,14 @@ const Sprevskwid = () => {
 
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">
-      S presso VXi+ Vs Kwid RXL (o) 1L
-      </div>
+      <div className="round-box bg-correct">S-Presso VXi Vs Kwid RXL (O)</div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>
-          <p>Remaining:  {5-Math.abs(JSON.parse(localStorage.getItem("cod")))}</p>
+          <p>
+            Remaining: {5 - Math.abs(JSON.parse(localStorage.getItem("cod")))}
+          </p>
         </div>
 
         <div className="flex-container-child bg-correct">
@@ -86,38 +88,41 @@ const Sprevskwid = () => {
                   setCount(
                     localStorage.setItem(
                       "cod",
-                      JSON.stringify(JSON.parse(localStorage.getItem("cod"))-1)
+                      JSON.stringify(
+                        JSON.parse(localStorage.getItem("cod")) - 1
+                      )
                     )
                   );
                   timeOutFun();
-
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
 
                 <FlippableCard
-                 title={item.cardTitle}
+                  title={item.cardTitle}
                   isCorrect={item.isCorrect}
                   cardQuestion={item.cardQuestion}
                   isCardQuestionDidabled={item.isCardQuestionDidabled}
                   cardQuestionId={item.cardQuestionId}
+                  cardtitleImage1={item.cardtitleImage1}
+                  cardtitleImage2={item.cardtitleImage2}
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
               {openModal && !item.isCorrect && (
                 <Popupquestion setOpenModal={setOpenModal} />
-               )}
+              )}
             </>
           ))}
         </div>
-        <Link to="/">
+        {/* <Link to="/">
           <button
             className="roll icon-conatiner finish-card"
             onClick={getData()}
           >
             Finish Round
           </button>
-        </Link>
+        </Link> */}
       </div>
     </>
   );

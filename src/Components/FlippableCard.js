@@ -5,14 +5,22 @@ import React, { useEffect, useState } from "react";
 import useDidMountEffect from "./Custumhook";
 import { fal } from "./Afterflip";
 
-function FlippableCard({ title, isCorrect, cardQuestion,isCardQuestionDidabled,cardQuestionId}) {
+function FlippableCard({
+  title,
+  isCorrect,
+  cardQuestion,
+  isCardQuestionDidabled,
+  cardQuestionId,
+  result,
+  cardtitleImage1,
+  cardtitleImage2
+}) {
   const [showFront, setShowFront] = useState(true);
 
   // console.log("showFront");
 
   useEffect(() => {
-   setShowFront(!isCardQuestionDidabled)
-
+    setShowFront(!isCardQuestionDidabled);
   }, [showFront]);
 
   // // useDidMountEffect(() => {
@@ -31,6 +39,9 @@ function FlippableCard({ title, isCorrect, cardQuestion,isCardQuestionDidabled,c
           isCorrect={isCorrect}
           cardQuestion={cardQuestion}
           cardQuestionId={cardQuestionId}
+          result={result}
+          cardtitleImage1={cardtitleImage1}
+          cardtitleImage2={cardtitleImage2}
           onClick={() => {
             // setShowFront((v) => !v);
 

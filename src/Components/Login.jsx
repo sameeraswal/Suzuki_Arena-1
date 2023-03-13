@@ -28,22 +28,20 @@ const Login = () => {
         regNumber: regno,
       })
       .then((res) => {
-        // console.log(res.data.status, "Response is here");
-        // setMessage(res.data.message);
-        // {
-        //   res.status == "false"
-        //     ? alert("False status")
-        //     : alert("message");
-        // }
         console.log(res, "Response");
         setStatus(res.data.status);
-        console.log(res.data.status, "Response");
+        console.log(res.data.status, "");
+        localStorage.setItem(
+          "categoryTypeofEmployee",
+          JSON.stringify(res.data.category)
+        );
 
+        // console.log(res)
         if (res.data.status === true) {
           // setRes(res.data.status);
           setMessage(res.data.message);
 
-          // console.log(res.data.status, res.data.message);
+          console.log(res.data.status, res.data.message);
           // setLoginStatus(true);
           // alert("admin login successfull");
         } else {
@@ -56,12 +54,10 @@ const Login = () => {
 
   const arena = require("./Pratham.png");
   const navigateLogin = () => {
-    mspin &&
-      regno ? (
-      setTimeout(
-        () => (!status ? window.open("./dashboard", "_self") : status),
-        2000
-      )) : (setMessage("Please Enter details"));
+    console.log(status, "stat");
+    mspin && regno
+      ? setTimeout(() => window.open("./dashboard", "_self"), 2000)
+      : setMessage("Please Enter details");
   };
   // const [mspin, setMspin] = useState([]);
 
@@ -121,7 +117,7 @@ const Login = () => {
               class="control-button up third icon-conatiner btn-bottom"
               onClick={() => {
                 fetchData();
-                navigateLogin();
+                !status && navigateLogin();
               }}
               type="button"
               value="Login"

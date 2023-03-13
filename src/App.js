@@ -55,72 +55,76 @@ import Enterscore5 from "./Components/Enterscore5";
 import Enterscore6 from "./Components/Enterscore6";
 import Puzzlecase from "./Components/puzzlecase/Puzzlecase";
 import Leaderboardsrm from "./Components/ScoreboardSRM/Leaderboardsrm";
+import Leaderboardthsrm from "./Components/Leaderboardthsrm/Leaderboardsrm";
+import Puzzlesrm from "./Components/Puzzlequestionsrm/Puzzlesrm";
 
 export const APIURL = "http://localhost:4500";
 export const APIURLLOCAL = "http://localhost:3000";
 export const QUESTIONIMAGEPATH = "../Assets/Questions/Round1-A/";
+export const imgur = "../Assets/Questions/Round2";
+
 const App = () => {
   // API URLs
 
   const places = [
     {
       id: 0,
-      title: "S presso Vs Kwid",
+      title: "Ertiga Vs Carens",
       class: "wheel-color",
     },
     {
       id: 1,
-      title: "WagonR Vs Tiago",
+      title: "Ertiga Vs Triber",
       class: "wheel-color1",
     },
     {
       id: 2,
-      title: "Alto K10 Vs Kwid",
+      title: "Dzire Vs Aura",
       class: "wheel-color2",
     },
     {
       id: 3,
-      title: "Celerio Vs Tiago",
+      title: "S presso Vs Kwid",
       class: "wheel-color3",
     },
     {
       id: 4,
-      title: "Swift Vs Altroz",
+      title: "WagonR Vs Tiago",
       class: "wheel-color4",
     },
     {
       id: 5,
-      title: "Swift Vs Grand i10 NIOS",
+      title: "Alto K10 Vs Kwid",
       class: "wheel-color5",
     },
     {
       id: 6,
-      title: "Dzire Vs Amaze",
+      title: "Celerio Vs Tiago",
       class: "wheel-color6",
     },
     {
       id: 7,
-      title: "Dzire Vs Tigor",
+      title: "Swift Vs Altroz",
       class: "wheel-color",
     },
     {
       id: 8,
-      title: "Brezza Vs XUV 300",
+      title: "Swift Vs Grand i10 NIOS",
       class: "wheel-color1",
     },
     {
       id: 9,
-      title: "Ertiga Vs Carens",
+      title: "Dzire Vs Amaze",
       class: "wheel-color2",
     },
     {
       id: 10,
-      title: "Ertiga Vs Triber",
+      title: "Dzire Vs Tigor",
       class: "wheel-color3",
     },
     {
       id: 11,
-      title: "Dzire Vs Aura",
+      title: "Brezza Vs XUV 300",
       class: "wheel-color4",
     },
   ];
@@ -158,7 +162,7 @@ const App = () => {
           <Route path="/firstmile" element={<FirstMile />}></Route>
           <Route path="/randomizer" element={<Randomizer />}></Route>
           <Route path="/dice" element={<Dice />}></Route>
-          <Route path="/leaderboard" element={<Leaderboard />}></Route>
+          
           <Route
             path="/afterflip/height"
             element={<Afterflip title={data[0].cardName} />}
@@ -214,7 +218,8 @@ const App = () => {
           <Route path="/listthetwist" element=<Listthetwist />></Route>
           <Route path="/judgesround" element=<Judgesround />></Route>
           <Route path="/solutionsonly" element=<Solutionsonly />></Route>
-          <Route path="/leaderboardth" element={<Leaderboardth />}></Route>
+         
+
           <Route path="/casestudy" element={<Casestudy />}></Route>
           <Route path="/finishmodal" element={<Finishmodal />}></Route>
           {/* flipcard routes after wheel */}
@@ -241,8 +246,13 @@ const App = () => {
           <Route path="/enterbrezza" element={<Enterbrezza />}></Route>
           <Route path="/popupquestion" element={<Popupquestion />}></Route>
           <Route path="/popupexample" element={<Popupexample />}></Route>
-          <Route path="/scoreboardsrm" element={<Leaderboardsrm />}></Route>
 
+          {/* all leaderboard */}
+          <Route path="/scoreboardsrm" element={<Leaderboardsrm />}></Route>
+          <Route path="/leaderboardth" element={<Leaderboardth />}></Route>
+          <Route path="/leaderboardthsrm" element={<Leaderboardthsrm />}></Route>
+          <Route path="/leaderboard" element={<Leaderboard />}></Route>
+          <Route path="/puzzlesrm" element={<Puzzlesrm />}></Route>
         </Routes>
       </div>
     </Router>

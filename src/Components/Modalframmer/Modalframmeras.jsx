@@ -4,7 +4,7 @@ import Backdrop from "../backdrop/Backdrop";
 import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
 import modalimg from "../modal1.jpeg";
-import guidelines from '../../Assets/Ask-Express---Guidelines.png'
+import guidelines from "../../Assets/Ask-Express---Guidelines.png";
 
 const dropIn = {
   hidden: {
@@ -52,7 +52,6 @@ const Modalframmeras = ({ handleClose, text, type }) => {
   );
 };
 
-
 const ModalText = () => (
   <div className="guidelines-img">
     {/* <h3>The First Mile- Guidelines</h3>
@@ -70,7 +69,7 @@ const ModalText = () => (
     <h5>◉  &nbsp;Each question carries 10 marks</h5> */}
     <img src={guidelines} alt="" />
   </div>
-)
+);
 const ModalButton = ({ onClick, label }) => (
   <Link to="/enterscore5">
     {" "}
@@ -80,6 +79,7 @@ const ModalButton = ({ onClick, label }) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
+      style={{ top: "81%" }}
     >
       Let's Begin
     </motion.button>

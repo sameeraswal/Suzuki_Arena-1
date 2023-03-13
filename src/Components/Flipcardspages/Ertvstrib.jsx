@@ -48,6 +48,7 @@ const Ertvstrib = () => {
   const timeOutFun = () => {
     if (JSON.parse(localStorage.getItem("cod"))===-6) {
       // alert(JSON.parse(localStorage.getItem("cod"))===-6);
+      getData();
       setTimeout(() => window.open("../", "_self"), 400);
     }
   };
@@ -58,7 +59,7 @@ const Ertvstrib = () => {
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
       <div className="round-box bg-correct">
-      Ertiga ZXi+ AT Vs Triber RXZ
+      Ertiga ZXi+ Vs Triber RXZ
       </div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">
@@ -101,6 +102,8 @@ const Ertvstrib = () => {
                   cardQuestion={item.cardQuestion}
                   isCardQuestionDidabled={item.isCardQuestionDidabled}
                   cardQuestionId={item.cardQuestionId}
+                  cardtitleImage1={item.cardtitleImage1}
+                  cardtitleImage2={item.cardtitleImage2}
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
@@ -110,14 +113,6 @@ const Ertvstrib = () => {
             </>
           ))}
         </div>
-        <Link to="/">
-          <button
-            className="roll icon-conatiner finish-card"
-            onClick={getData()}
-          >
-            Finish Round
-          </button>
-        </Link>
       </div>
     </>
   );

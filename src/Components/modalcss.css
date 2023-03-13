@@ -152,13 +152,12 @@ button {
   height: 150%;
   font-size: 25px;
   font-weight: bold;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
-.modal-guide-btn{
-   margin-top: 400px;
+.modal-guide-btn {
+  margin-top: 400px;
   margin-left: 170px;
- 
 }
 
 .close-button {
@@ -181,16 +180,17 @@ input {
   padding: 0.25rem 0.5rem;
   outline: none;
   background: var(--dark);
-  border: 2px solid #ff9d00;
+  border: 2px solid var(--arena-color);
   border-radius: 6px;
-  color: #ff9d00;
+  color: white;
   font-size: 1.25rem;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
+  font-style: normal;
 }
 
 ::placeholder {
-  font-style: italic;
+  font-style: normal;
 }
 
 /* ul,
@@ -309,8 +309,8 @@ li {
 }
 .backdrop-finish {
   position: absolute;
-  top: 60px;
-  left: -15%;
+  top: 89px;
+  left: -93%;
   height: 87vh;
   width: 97vw;
 
@@ -397,10 +397,17 @@ li {
   bottom: 2%;
 }
 
-.guidelines-img img{
+.guidelines-img img {
   height: 70vh;
   width: 70vw;
   margin-left: 15%;
+}
+.lets-begin-efe {
+  top: 82%;
+}
+.finish1css {
+  height: 480px;
+  width: 700px;
 }
 /* finish round  */
 @media screen and (max-width: 768px) {
@@ -426,5 +433,33 @@ li {
   }
   .resp-tablet-b-s-s-p {
     height: 40%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* Askexpress  */
+  .modal-guide-btn {
+    margin-top: 360px;
+    margin-left: 122px;
+  }
+  .save-button {
+    width: 15%;
+  }
+  .cls-btn {
+    left: -20px;
+    top: 81%;
+  }
+
+  /* casestudy */
+  .case-study-text p {
+    text-align: center;
+    font-size: 27px;
+  }
+  .full-height {
+    height: 152vh;
+  }
+  .finish1css {
+    height: 300px;
+    width: 10%;
   }
 }

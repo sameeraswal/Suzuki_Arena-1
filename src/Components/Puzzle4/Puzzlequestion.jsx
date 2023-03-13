@@ -4,7 +4,7 @@ import Navbar from "../Navbar";
 import "../Puzzlepage/Puzzlechoice";
 import { useState } from "react";
 // import Buttonp from "../Puzzlepage/Buttonp";
-import Buttonn from "./Buttonn";
+import Buttonn from "../Puzzlequestionsrm/Buttonn";
 import "./puzzleques.css";
 import bgImg from "../leaderboardfinal/05.png";
 import { motion, AnimatePresence } from "framer-motion";
@@ -13,6 +13,7 @@ import Finishmodal from "../Modalframmer/finishmodal";
 import "../modalcss.css";
 import Finishmodal3 from "../Modalframmer/finishmodal3";
 import axios from "axios";
+import bgImg1 from '../../Assets/Dice_BG.png';
 import { APIURL } from "../../App";
 
 let x = [0, 0, 0, 0, 0];
@@ -30,21 +31,24 @@ const Puzzlequestion = () => {
     status: true,
     data: [
       {
-        question: "Q.1) Enquired about users of the vehicle (drivers/occupants)",
+        question:
+          "Q.1) Enquired about users of the vehicle (drivers/occupants)",
 
         btn1: "YES",
         btn2: "NO",
         index: 0,
       },
       {
-        question: "Q.2) Enquired about daily (regular)/ long (occasional) commute",
+        question:
+          "Q.2) Enquired about daily (regular)/ long (occasional) commute",
 
         btn1: "YES",
         btn2: "NO",
         index: 1,
       },
       {
-        question: "Q.3) Asked about preferences (features wanted) in the new vehicle ",
+        question:
+          "Q.3) Asked about preferences (features wanted) in the new vehicle ",
 
         btn1: "YES",
         btn2: "NO",
@@ -57,7 +61,8 @@ const Puzzlequestion = () => {
         index: 3,
       },
       {
-        question: "Q.5) Suggested the correct model and mentioned its  High 5 / 6 ",
+        question:
+          "Q.5) Suggested the correct model and mentioned its  High 5 / 6 ",
         btn1: "YES",
         btn2: "NO",
         index: 4,
@@ -114,9 +119,9 @@ const Puzzlequestion = () => {
     <>
       <Navbar />
 
-      <div className="dashboard-container full-height">
-        {/* <img src={bgImg} alt="" className="ques-bg" /> */}
-        <div className="round-box-dashboard">Questions</div>
+      
+        <img src={bgImg1} alt="" className="background-image" />
+        <div className="round-box">Questions</div>
 
         <div className="puzzle-box">
           <div className="wordslct1">
@@ -168,7 +173,7 @@ const Puzzlequestion = () => {
             </AnimatePresence>
           </div>
         </div>
-      </div>
+      
     </>
   );
 };

@@ -7,10 +7,10 @@
   margin-left: 22%;
   margin-top: 30px;
 }
-.bg-img {
+/* .bg-img {
   background: #d6d9f8;
   height: 89.2vh;
-}
+} */
 .first {
   height: 220px;
   width: 500px;
@@ -31,19 +31,34 @@
   color: white;
   font: 700;
   position: absolute;
+  z-index: 1;
 }
 .align-lead-1 {
-  margin-left: 41%;
-  margin-top: -115px;
+  margin-left: 42%;
+    /* margin-top: -115px; */
+    color: white;
+    top: 335px;
 }
 .align-lead-2 {
-  margin-left: 18%;
-  margin-top: -110px;
+  margin-left: 19%;
+  /* margin-top: -110px; */
+  color: white;
+  bottom: 150px;
 }
 .align-lead-3 {
-  margin-left: 67%;
-  margin-top: -110px;
+  color: white;
+  right: 290px;
+  bottom: 150px;
 }
+
+.lead-pos{
+  height: 10%;
+  width: 20%;
+  position:absolute;
+  margin-left: 40%;
+  margin-top: 14px;
+}
+
 
 @media screen and (max-width: 768px) {
   .resp-trophy {

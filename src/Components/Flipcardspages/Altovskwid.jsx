@@ -16,6 +16,7 @@ const Altovskwid = () => {
 
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
+
   localStorage.setItem("co", JSON.stringify(5));
 
   useEffect(() => {
@@ -25,10 +26,11 @@ const Altovskwid = () => {
         roundOrder: JSON.parse(localStorage.getItem("roundName")),
       })
       .then((res) => {
-        setResult(res.data.data.questions);
         console.log(res, "Respnse");
+        setResult(res.data.data.questions);
+        // console.log(res, "Respnse");
       })
-      .catch((error) => console.log(error.response.data.message));
+      .catch((error) => console.log(error));
   }, []);
 
   const getData = () => {
@@ -50,7 +52,7 @@ const Altovskwid = () => {
   //   localStorage.setItem("co", JSON.stringify(setCount(count - 1)));
   // };
   const timeOutFun = () => {
-    if (JSON.parse(localStorage.getItem("cod"))===-6) {
+    if (JSON.parse(localStorage.getItem("cod")) === -6) {
       // alert(JSON.parse(localStorage.getItem("cod"))===-6);
       setTimeout(() => window.open("../", "_self"), 400);
     }
@@ -107,6 +109,8 @@ const Altovskwid = () => {
                   cardQuestion={item.cardQuestion}
                   isCardQuestionDidabled={item.isCardQuestionDidabled}
                   cardQuestionId={item.cardQuestionId}
+                  cardtitleImage1={item.cardtitleImage1}
+                  cardtitleImage2={item.cardtitleImage2}
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>

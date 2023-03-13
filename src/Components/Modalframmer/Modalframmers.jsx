@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import Backdrop from "../backdrop/Backdrop";
 import { stateLogger } from "../../stateLogger.js";
 import { Link } from "react-router-dom";
-import guidelines from '../../Assets/Bespoke_Sales-Pitch_Guidelines.png'
+import guidelines from "../../Assets/Bespoke_Sales-Pitch_Guidelines.png";
+import guidelinessrm from "../../Assets/SRM-The-Coach---Guidelines.png";
 const dropIn = {
   hidden: {
     y: "-100vh",
@@ -41,15 +42,16 @@ const ModalFrammers = ({ handleClose, text, type }) => {
         initial="hidden"
         animate="visible"
         exit="exit"
-        
       >
-        <ModalText text={text} />
+        {JSON.parse(localStorage.getItem("categoryTypeofEmployee")) ===
+          "Sales Captain" && <ModalText1 text={text} />}
+        {JSON.parse(localStorage.getItem("categoryTypeofEmployee")) ===
+          "Sales Expert" && <ModalText text={text} />}
         <ModalButton onClick={handleClose} label="Close" />
       </motion.div>
     </Backdrop>
   );
 };
-
 
 const ModalText = () => (
   <div className="guidelines-img">
@@ -68,19 +70,24 @@ const ModalText = () => (
     <h5>◉  &nbsp;Each question carries 10 marks</h5> */}
     <img src={guidelines} alt="" />
   </div>
-)
+);
 
 const ModalText1 = () => (
-  <div className="modal-text">
-    <h3>Bespoke - Sales Pitch</h3>
+  <div className="guidelines-img">
+    {/* <h3>The First Mile- Guidelines</h3>
     <h5>
-      ◉ First round will be based on images or videos in which 5 questions
-      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;would display as per randomizer. The
-      duration of this round would be 1 &nbsp; &nbsp;&nbsp;&nbsp;minute per
-      question
+      <div>
+        <div>◉ </div>
+        <div>
+          &nbsp;First round will be based on images or videos in which 5 questions
+          would display as per randomizer. The duration of this round would be 1
+          minute per question
+        </div>
+      </div>
     </h5>
     <br />
-    <h5>◉&nbsp; Each question carries 10 marks</h5>
+    <h5>◉  &nbsp;Each question carries 10 marks</h5> */}
+    <img src={guidelinessrm} alt="" />
   </div>
 );
 
@@ -93,6 +100,7 @@ const ModalButton = ({ onClick, label }) => (
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
+      style={{top:"81%"}}
     >
       Let's begin
     </motion.button>

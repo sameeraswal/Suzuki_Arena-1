@@ -9,7 +9,7 @@ import Finishmodal from "./Modalframmer/finishmodal";
 import axios from "axios";
 import { APIURL, QUESTIONIMAGEPATH } from "../App";
 import bgImg from "../Assets/Question/01.png";
-import bgImg1 from "../Assets/Question/04.png"
+import bgImg1 from "../Assets/Question/04.png";
 
 const Question = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -104,6 +104,7 @@ const Question = () => {
   let [v, setV] = useState([]);
   let [rn, setRN] = useState([]);
   let [cid, setCID] = useState(0);
+  let [fileType, setFileType] = useState("");
 
   let [question, setQuestion] = useState("");
 
@@ -128,6 +129,8 @@ const Question = () => {
         setV(res.data.data[0].questions[activeQuestion].questionUrl);
         setRN(res.data.data[0].questions[activeQuestion]);
         setCID(res.data.data[0].questions[activeQuestion].choices);
+        setFileType(res.data.data[0].questions[activeQuestion].fileType);
+
         // console.log(res.data.data[0].questions[activeQuestion], "ID ");
       })
       .catch((error) => console.log(error, "error is here"));
@@ -181,7 +184,7 @@ const Question = () => {
       <div className="round-box">Round 1-A</div>
 
       <div className="">
-        <div className="ques-number">{`${(activeQuestion + 1)}/5`}</div>
+        <div className="ques-number">{`${activeQuestion + 1}/5`}</div>
 
         <div className="timer-div">
           <h2>{timer}</h2>
@@ -191,10 +194,7 @@ const Question = () => {
           {/* {console.log(openModel)} */}
           {timer === "00:00" && openModel && (
             <>
-              <div
-                className="modalBackground"
-                style={{ zIndex: "1"}}
-              >
+              <div className="modalBackground" style={{ zIndex: "1" }}>
                 <div className="modalContainer">
                   <div className="titleCloseBtn">
                     <button
@@ -237,7 +237,7 @@ const Question = () => {
         </div>
 
         <div className="question-design-container">
-          {v && (
+          {fileType === "video" && (
             <div className="question-video">
               {/* {console.log(v.video)} */}
               <iframe
@@ -247,10 +247,15 @@ const Question = () => {
               ></iframe>
             </div>
           )}
-
+          {fileType === "image" && (
+            <div className="question-video question-image">
+              {/* {console.log(v.video)} */}
+              <img width="430" height="305" src={QUESTIONIMAGEPATH + v} />
+            </div>
+          )}
           <div className="question-box">
-          <img src={bgImg1} alt="" className="head-question-design"/>
-            <div className="question-div ">
+            <img src={bgImg1} alt="" className="head-question-design" />
+            <div className="question-div">
               <h2 key={i}>{question}</h2>
             </div>
             <div className="">
@@ -287,7 +292,7 @@ const Question = () => {
                     onClickReset();
                     setOpenModal(true);
                   }}
-                  className="third question-btn icon-conatiner submit-margin"
+                  className="roll question-btn icon-conatiner submit-margin"
                 >
                   Submit
                 </button>
@@ -301,7 +306,7 @@ const Question = () => {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="third question-btn icon-conatiner"
+                  className="roll question-btn icon-conatiner submit-margin"
                   onClick={() => (modalOpen ? close() : open())}
                 >
                   Submit

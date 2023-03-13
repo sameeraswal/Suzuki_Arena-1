@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import modalImg from '../Assets/Bespoke---Sales-Pitch.png'
+import modalImg from "../Assets/Bespoke---Sales-Pitch.png";
+import modalImgSRM from "../Assets/SRM-The Coach.png";
 import "./modalcss.css";
 
 import ModalFrammerc from "./Modalframmer/Modalframmerc";
@@ -23,7 +24,15 @@ const Bespokesalespitch = () => {
   return (
     <div>
       <Navbar />
-      <img src={modalImg} alt="" className="background-image"/>
+      {JSON.parse(localStorage.getItem("categoryTypeofEmployee")) ===
+        "Sales Captain" && (
+        <img src={modalImgSRM} alt="" className="background-image" />
+      )}
+      {JSON.parse(localStorage.getItem("categoryTypeofEmployee")) ===
+        "Sales Expert" && (
+        <img src={modalImg} alt="" className="background-image" />
+      )}
+
       <div className="">
         <motion.button
           whileHover={{ scale: 1.1 }}
@@ -31,7 +40,7 @@ const Bespokesalespitch = () => {
           className="save-button modal-guide-btn"
           onClick={() => (modalOpen ? close() : open())}
         >
-         Guidelines
+          Guidelines
         </motion.button>
       </div>
 

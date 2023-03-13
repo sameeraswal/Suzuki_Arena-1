@@ -13,14 +13,16 @@ import Finishmodalenter from "./Modalframmer/finishmodalenter";
 import axios from "axios";
 import { APIURL } from "../App";
 import { Link } from "react-router-dom";
-import bgImg from '../Assets/Enter-Score.png'
+import bgImg from "../Assets/Enter-Score.png";
 
 const Enterscore5 = () => {
   const [score, setScore] = useState("");
 
   const [show, setShow] = useState(false);
   const handleChangescore = (event) => {
+    
     setScore(event.target.value);
+   
   };
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -57,16 +59,15 @@ const Enterscore5 = () => {
         console.log(res, "Response of roundlist");
       })
       .catch((error) => console.log(error.response.data.message));
-    // return false;
+   
   };
   return (
     <div>
-     
       <Navbar></Navbar>
-      <img src={bgImg} alt="" className="background-image"/>
+      <img src={bgImg} alt="" className="background-image" />
       <div className="">
         <h1 className="score-text">Enter score</h1>
-        
+
         {show && (
           <input
             type="text"
@@ -75,9 +76,7 @@ const Enterscore5 = () => {
             onChange={handleChangescore}
           />
         )}
-        {/* {data && ( */}
-        {/* <Link to="/puzzle"> */}
-       
+      
       </div>
       {/* <button
           className="roll icon-conatiner finish-card finish-btn-enter-score"
@@ -88,38 +87,42 @@ const Enterscore5 = () => {
         >
           Finish Round
         </button> */}
-        <button
-          className="roll icon-conatiner inputscore-btn1"
-          onClick={() => {
-            setShow(true);
-          }}
-        >
-          Enter Score
-        </button>
-
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="roll icon-conatiner finish-score-btn"
+      <button
+        className="roll icon-conatiner inputscore-btn1"
         onClick={() => {
-          modalOpen ? close() : open();
-          fetchData();
-          getData();
+          setShow(true);
         }}
       >
-        Finish Round
-      </motion.button>
+        Enter Score
+      </button>
 
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        // Fires when all exiting nodes have completed animating out
-        onExitComplete={() => null}
-      >
-        {modalOpen && (
-          <Finishmodalenter modalOpen={modalOpen} handleClose={close} />
-        )}
-      </AnimatePresence>
+      {score % 10 === 0 && score != "" && (
+        <>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="roll icon-conatiner finish-score-btn"
+            onClick={() => {
+              modalOpen ? close() : open();
+              fetchData();
+              getData();
+            }}
+          >
+            Finish Round
+          </motion.button>
+
+          <AnimatePresence
+            initial={false}
+            exitBeforeEnter={true}
+            // Fires when all exiting nodes have completed animating out
+            onExitComplete={() => null}
+          >
+            {modalOpen && (
+              <Finishmodalenter modalOpen={modalOpen} handleClose={close} />
+            )}
+          </AnimatePresence>
+        </>
+      )}
     </div>
   );
 };

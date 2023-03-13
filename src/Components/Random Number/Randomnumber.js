@@ -12,9 +12,9 @@ export default function Random() {
   const [randomNum, setRandomNum] = useState("");
   useEffect(() => {
     setTimeout(() => {
-      setRandomNum(Math.floor(Math.random() * (18 - 1 + 1) + 1));
+      setRandomNum(Math.floor(Math.random() * (30 - 1 + 1) + 1));
     }, 16000);
-    setTimeout(() => window.open("/timersection", "_self"), 30000);
+    setTimeout(() => window.open("/timersection", "_self"), 22000);
   }, []);
 
   // const handleRandomNum = () => {};

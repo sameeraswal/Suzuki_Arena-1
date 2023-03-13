@@ -47,6 +47,7 @@ const Desvsaura = () => {
   const timeOutFun = () => {
     if (JSON.parse(localStorage.getItem("cod"))===-6) {
       // alert(JSON.parse(localStorage.getItem("cod"))===-6);
+      getData();
       setTimeout(() => window.open("../", "_self"), 400);
     }
   };
@@ -57,7 +58,7 @@ const Desvsaura = () => {
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
       <div className="round-box bg-correct">
-      Dzire ZXi+ Vs Aura SX+
+      Dzire ZXi+ Vs Aura SX(O)
       </div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">
@@ -100,6 +101,8 @@ const Desvsaura = () => {
                   cardQuestion={item.cardQuestion}
                   isCardQuestionDidabled={item.isCardQuestionDidabled}
                   cardQuestionId={item.cardQuestionId}
+                  cardtitleImage1={item.cardtitleImage1}
+                  cardtitleImage2={item.cardtitleImage2}
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
@@ -109,14 +112,14 @@ const Desvsaura = () => {
             </>
           ))}
         </div>
-        <Link to="/">
+        {/* <Link to="/">
           <button
             className="roll icon-conatiner finish-card"
             onClick={getData()}
           >
             Finish Round
           </button>
-        </Link>
+        </Link> */}
       </div>
     </>
   );
