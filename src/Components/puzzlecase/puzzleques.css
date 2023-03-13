@@ -34,8 +34,7 @@
   height: 145%;
 }
 
-
-.sbt-btn{
+.sbt-btn {
   margin-left: 70%;
 }
 
@@ -51,10 +50,9 @@
     padding-top: 28px;
   }
 
-  .sbt-btn{
+  .sbt-btn {
     margin-left: 67%;
   }
-
 }
 
 @media screen and (max-width: 1180px) {
@@ -69,8 +67,9 @@
     padding-top: 28px;
   }
 
-  .sbt-btn{
+  .sbt-btn {
     margin-left: 67%;
   }
 
+ 
 }

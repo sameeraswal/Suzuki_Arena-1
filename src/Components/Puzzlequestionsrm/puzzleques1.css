@@ -60,4 +60,10 @@
      bottom: 78px;
      margin-left: 51%;
   }
+   .resp-puzzle-case-btn {
+    position: absolute;
+
+    margin-top: 100%;
+    top: -15%;
+  }
 }
