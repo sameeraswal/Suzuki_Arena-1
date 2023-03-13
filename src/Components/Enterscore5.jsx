@@ -13,7 +13,7 @@ import Finishmodalenter from "./Modalframmer/finishmodalenter";
 import axios from "axios";
 import { APIURL } from "../App";
 import { Link } from "react-router-dom";
-import bgImg from '../Assets/Enter-Score.png'
+import bgImg from "../Assets/Enter-Score.png";
 
 const Enterscore5 = () => {
   const [score, setScore] = useState("");
@@ -61,12 +61,11 @@ const Enterscore5 = () => {
   };
   return (
     <div>
-     
       <Navbar></Navbar>
-      <img src={bgImg} alt="" className="background-image"/>
+      <img src={bgImg} alt="" className="background-image" />
       <div className="">
         <h1 className="score-text">Enter score</h1>
-        
+
         {show && (
           <input
             type="text"
@@ -77,7 +76,6 @@ const Enterscore5 = () => {
         )}
         {/* {data && ( */}
         {/* <Link to="/puzzle"> */}
-       
       </div>
       {/* <button
           className="roll icon-conatiner finish-card finish-btn-enter-score"
@@ -88,14 +86,14 @@ const Enterscore5 = () => {
         >
           Finish Round
         </button> */}
-        <button
-          className="roll icon-conatiner inputscore-btn1"
-          onClick={() => {
-            setShow(true);
-          }}
-        >
-          Enter Score
-        </button>
+      <button
+        className="roll icon-conatiner inputscore-btn1"
+        onClick={() => {
+          setShow(true);
+        }}
+      >
+        Enter Score
+      </button>
 
       <motion.button
         whileHover={{ scale: 1.1 }}
