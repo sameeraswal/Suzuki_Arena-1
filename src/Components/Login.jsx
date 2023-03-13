@@ -33,7 +33,7 @@ const Login = () => {
         console.log(res.data.status, "");
         localStorage.setItem(
           "categoryTypeofEmployee",
-          JSON.stringify(res.data.categoryTypeofEmployee)
+          JSON.stringify(res.data.category)
         );
 
         // console.log(res)

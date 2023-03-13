@@ -1,9 +1,16 @@
-.case-study-container{
- padding-left: 150px;
+.case-study-container {
+  padding-left: 150px;
   height: 70%;
   width: 80%;
 }
 
-.actual-card{
+.actual-card {
   margin-left: 16%;
+}
+@media screen and (max-width: 1024px) {
+  /* .card-front1,
+  .card-back1 {
+    height: 95%;
+    width: 95%;
+  } */
 }

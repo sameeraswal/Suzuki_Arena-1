@@ -32,9 +32,9 @@ function Cardcasestudy({ onClick, title }) {
   return (
     <>
       <div className="card" onClick={onClick}>
-        <div className="card-back back-case-study">{title}</div>
+        <div className="card-back1 back-case-study">{title}</div>
 
-        <div className="card-front front-icon">
+        <div className="card-front1 front-icon">
           <button
             className="middle card-front front-icon"
             onClick={() => {

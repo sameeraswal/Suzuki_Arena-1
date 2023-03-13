@@ -1419,4 +1419,18 @@ ul {
     width: 22%;
     margin-top: 40%;
   }
+  .flex-container-child {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 6px 0 0 17px;
+    overflow: hidden;
+  }
+  .flippable-card-container {
+    height: 428px;
+    width: 165px;
+    perspective: 1000px;
+    margin-bottom: -172px;
+    margin-right: -17px;
+    overflow-y: hidden;
+  }
 }
