@@ -59,7 +59,9 @@ function Card({
   //   classBack: "back-10",
   // };
   let link = JSON.parse(localStorage.getItem("carRoute"));
-  console.log(result, "result hai");
+  console.log(result, "result");
+  console.log(link, "Link");
+
   // let cardQuestionId=JSON.parse(localStorage.getItem("cardQuestionId"));
 
   const [cardRemain, setCardRemain] = useState(5);
@@ -68,10 +70,18 @@ function Card({
   const timeOutFun = (e) => {
     if (isCorrect) {
       // setTimeout(() => window.open(`../afterflip/${title}`), 400);
+      console.log(`../afterflip/${title}?question=${cardQuestion}&link=${link}&Id=${cardQuestionId}`,"Path")
+      console.log(title, "title");
+      console.log(cardQuestion, "cardQuestion");
+      console.log(link, "link");
+      console.log(cardQuestionId, "cardQuesID");
+
+
+
       setTimeout(
         () =>
           window.open(
-            `../afterflip/${title}?question=${cardQuestion}&link=${link}&Id=${cardQuestionId}`,
+            `../afterflip/height?question=${cardQuestion}&link=${link}&Id=${cardQuestionId}`,
             "_self"
           ),
         400
@@ -107,6 +117,8 @@ function Card({
               height={271}
               width={189}
             />
+          {console.log(cardtitleImage2, "Item")}
+
             button
           </button>
         </div>

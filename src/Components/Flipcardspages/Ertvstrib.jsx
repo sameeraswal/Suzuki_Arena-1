@@ -113,14 +113,6 @@ const Ertvstrib = () => {
             </>
           ))}
         </div>
-        {/* <Link to="/">
-          <button
-            className="roll icon-conatiner finish-card"
-            onClick={getData()}
-          >
-            Finish Round
-          </button>
-        </Link> */}
       </div>
     </>
   );

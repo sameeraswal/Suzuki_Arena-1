@@ -58,23 +58,20 @@
   width: 20%;
 }
 
-.timer-container{
-  
+.timer-container {
 }
 
-
-.timer-margin{
+.timer-margin {
   margin-top: 150px;
   margin-right: 285px;
 }
 
-
-.timer-txt{
+.timer-txt {
   font-size: 36px;
   margin-left: 173px;
   margin-top: 210px;
- }
-.score-correct{
+}
+.score-correct {
   margin: auto;
   align-items: center;
   display: flex;
@@ -83,4 +80,12 @@
   position: absolute;
   margin-left: 54%;
 }
-
+@media screen and (max-width: 1024px) {
+  /* timer section  */
+  .timer-container {
+    margin-left: 1%;
+  }
+  .score-correct {
+    margin-top: 49.9%;
+  }
+}

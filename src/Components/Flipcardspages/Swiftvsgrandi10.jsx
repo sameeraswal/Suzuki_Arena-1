@@ -44,7 +44,7 @@ const Swiftvsgrandi10 = () => {
     // return false;
   };
   const timeOutFun = () => {
-    if (JSON.parse(localStorage.getItem("cod"))===-6) {
+    if (JSON.parse(localStorage.getItem("cod")) === -6) {
       // alert(JSON.parse(localStorage.getItem("cod"))===-6);
       getData();
       setTimeout(() => window.open("../", "_self"), 400);
@@ -63,7 +63,9 @@ const Swiftvsgrandi10 = () => {
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>
-          <p>Remaining:  {5-Math.abs(JSON.parse(localStorage.getItem("cod")))}</p>
+          <p>
+            Remaining: {5 - Math.abs(JSON.parse(localStorage.getItem("cod")))}
+          </p>
         </div>
 
         <div className="flex-container-child bg-correct">
@@ -85,11 +87,12 @@ const Swiftvsgrandi10 = () => {
                   setCount(
                     localStorage.setItem(
                       "cod",
-                      JSON.stringify(JSON.parse(localStorage.getItem("cod"))-1)
+                      JSON.stringify(
+                        JSON.parse(localStorage.getItem("cod")) - 1
+                      )
                     )
                   );
                   timeOutFun();
-
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
@@ -107,7 +110,7 @@ const Swiftvsgrandi10 = () => {
               </div>
               {openModal && !item.isCorrect && (
                 <Popupquestion setOpenModal={setOpenModal} />
-               )}
+              )}
             </>
           ))}
         </div>
