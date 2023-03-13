@@ -36,6 +36,7 @@
 
 .full-height {
   background: url("../NewImages/Spin-Wheel_BG.png");
+  height: 140vh;
 }
 
 
@@ -58,5 +59,11 @@
      position: absolute;
      bottom: 78px;
      margin-left: 51%;
+  }
+   .resp-puzzle-case-btn {
+    position: absolute;
+
+    margin-top: 100%;
+    top: -15%;
   }
 }

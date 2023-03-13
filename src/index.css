@@ -1841,4 +1841,21 @@ ul {
     text-align: center;
     color: white;
   }
+  .case-study-read-btn {
+    width: 141px;
+    height: 55px;
+    margin-right: -11px;
+  }
+  .inputscore-btn1 {
+    position: absolute;
+    bottom: 97px;
+    right: 295px;
+    width: 16%;
+  }
+  .finish-score-btn {
+    position: absolute;
+    bottom: 98px;
+    right: 82px;
+    width: 16%;
+  }
 }

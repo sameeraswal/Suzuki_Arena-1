@@ -117,7 +117,7 @@ const Login = () => {
               class="control-button up third icon-conatiner btn-bottom"
               onClick={() => {
                 fetchData();
-                !status && navigateLogin();
+                status && navigateLogin();
               }}
               type="button"
               value="Login"

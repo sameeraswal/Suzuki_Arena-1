@@ -123,21 +123,18 @@ table td {
 
 .table-content-2 {
   background: #fff;
-    color: black;
-    padding: 12px;
-    border-radius: 14px 14px 0 0;
-    font-size: bold;
-    font-size: 17px;
-    font-weight: bold;
-    text-align: center;
-    border: 2px solid #0784e6;
-    vertical-align: middle;
+  color: black;
+  padding: 12px;
+  border-radius: 14px 14px 0 0;
+  font-size: bold;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #0784e6;
+  vertical-align: middle;
 }
 
-
-
-
-.export{
+.export {
   margin-left: 88.5%;
 }
 @media (max-width: 860px) {
@@ -426,25 +423,22 @@ table td {
   }
 }
 
-
-
-@media screen and (max-width: 1024px) { 
+@media screen and (max-width: 1024px) {
   table {
     width: 65em;
   }
 
-  .table-content-2{
+  .table-content-2 {
     font-size: 10px;
     font-weight: bold;
   }
 
-  
   .export {
-      margin-left: 90.5%;
-      width: 100px;
+    margin-left: 90.5%;
+    width: 100px;
   }
 
-  .leader-btn{
+  .leader-btn {
     width: 18%;
     position: absolute;
     z-index: 1;
@@ -458,5 +452,18 @@ table td {
     position: absolute;
     margin-left: 34%;
     margin-top: 10px;
+  }
 }
+@media screen and (max-width: 1180px) {
+  .leader-btn {
+    width: 17%;
+  }
+  .export {
+    margin-left: 86.5%;
+  }
+  table{
+    width: 75em;
+  }
+  
+
 }

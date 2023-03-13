@@ -12,3 +12,11 @@
     height: 100%;
   }
 }
+
+@media screen and (max-width: 1180px) {
+  .case-study-container {
+    padding-left: 40px;
+    height: 71%;
+    width: 67%;
+  }
+}

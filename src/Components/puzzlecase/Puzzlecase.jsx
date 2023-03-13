@@ -180,7 +180,7 @@ const Puzzlecase = () => {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="roll icon-conatiner sbt-btn"
+              className="roll icon-conatiner sbt-btn resp-puzzle-case-btn"
               onClick={() => {
                 modalOpen ? close() : open();
                 noOfCount(count);
