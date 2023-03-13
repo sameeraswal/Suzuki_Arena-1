@@ -20,9 +20,7 @@ const Enterscore5 = () => {
 
   const [show, setShow] = useState(false);
   const handleChangescore = (event) => {
-    
     setScore(event.target.value);
-   
   };
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -59,7 +57,6 @@ const Enterscore5 = () => {
         console.log(res, "Response of roundlist");
       })
       .catch((error) => console.log(error.response.data.message));
-   
   };
   return (
     <div>
@@ -76,7 +73,6 @@ const Enterscore5 = () => {
             onChange={handleChangescore}
           />
         )}
-      
       </div>
       {/* <button
           className="roll icon-conatiner finish-card finish-btn-enter-score"
@@ -96,7 +92,7 @@ const Enterscore5 = () => {
         Enter Score
       </button>
 
-      {score % 10 === 0 && score != "" && (
+      {score % 10 === 0 && score != "" && score <= 100 && (
         <>
           <motion.button
             whileHover={{ scale: 1.1 }}
