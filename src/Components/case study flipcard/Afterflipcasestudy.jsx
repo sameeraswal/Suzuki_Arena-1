@@ -35,7 +35,7 @@ const Afterflipcasestudy = ({ title }) => {
           <div className="border-div">
             <div className="text-div">
               <p className="text-margin case-study-text-afterflip">
-               Case: {data1+'1'}
+               Case: {Number(data1)+1}
               </p>
               <div className="margin-div">
                 <Link to="/casestudy">
