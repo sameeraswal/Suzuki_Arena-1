@@ -11,6 +11,16 @@ const Employee = require("../model/employeeSchema");
 const WheelRounds = require("../model/wheelRoundsSchema");
 const wheelroundlocks = require("../model/employeeWheelUnlockedRound");
 
+const matchStrings = (a,b)=>{
+    if(String(a).toLowerCase()===String(b).toLowerCase()){
+        console.log("checking function matchstring",a,b,true)
+        return true;
+    }else{
+        console.log("checking function matchstring from false",a,b,false)
+        return false;
+    }
+}
+
 // submit answer of each round
 exports.submitAnswerOfQuestion = async (req, res) => {
     let status = false;
@@ -53,26 +63,26 @@ exports.submitAnswerOfQuestion = async (req, res) => {
                 // let employeeAnswer = {};
                 const checkAnswer = async () => {
                     let employeeAnswer = {};
-                    if (!!cId && questions[questionId - 1] == questionId && correctQuestionsAnswers[questionId] == cId) {
+                    if (!!cId && questions[questionId - 1] == questionId && matchStrings(correctQuestionsAnswers[questionId],cId)) {
 
                         employeeAnswer["questionId"] = questionId;
                         employeeAnswer["cId"] = cId;
                         employeeAnswer["isCorrect"] = true;
                         score = score + 10;
                         employeeAnswer["score"] = score;
-                    } else if (!!cId && questions[questionId - 1] == questionId && correctQuestionsAnswers[questionId] !== cId) {
+                    } else if (!!cId && questions[questionId - 1] == questionId && matchStrings(correctQuestionsAnswers[questionId],cId)===false) {
                         employeeAnswer["questionId"] = questionId;
                         employeeAnswer["cId"] = cId;
                         employeeAnswer["isCorrect"] = false;
                         employeeAnswer["score"] = score;
 
-                    } else if (!cId && questions[questionId - 1] == questionId && correctQuestionsAnswers[questionId] !== cId) {
+                    } else if (!cId && questions[questionId - 1] == questionId && matchStrings(correctQuestionsAnswers[questionId],cId)===false) {
                         employeeAnswer["questionId"] = questionId;
                         employeeAnswer["cId"] = "Question Not attempted";
                         employeeAnswer["isCorrect"] = false;
                         employeeAnswer["score"] = score;
 
-                    } else if (!!cId && questions[questionId - 1] !== questionId && correctQuestionsAnswers[questionId] !== cId) {
+                    } else if (!!cId && questions[questionId - 1] !== questionId && matchStrings(correctQuestionsAnswers[questionId],cId)===false) {
                        return false;
                         
                     }
@@ -348,28 +358,29 @@ exports.submitAnswerOfCardQuestion = async (req, res) => {
                     const questions = Object.keys(correctQuestionsAnswers);
                     let score = 0;
                     // let employeeAnswer = {};
+
                     const checkAnswer = async () => {
                         let employeeAnswer = {};
-                        if (!!cId && questions[questionId - 1] == questionId && correctQuestionsAnswers[questionId] == cId) {
+                        if (!!cId && questions[questionId - 1] == questionId && matchStrings(correctQuestionsAnswers[questionId],cId)){
 
                             employeeAnswer["questionId"] = questionId;
                             employeeAnswer["cId"] = cId;
                             employeeAnswer["isCorrect"] = true;
                             score = score + 10;
                             employeeAnswer["score"] = score;
-                        } else if (!!cId && questions[questionId - 1] == questionId && correctQuestionsAnswers[questionId] !== cId) {
+                        } else if (!!cId && questions[questionId - 1] == questionId && matchStrings(correctQuestionsAnswers[questionId],cId)===false) {
                             employeeAnswer["questionId"] = questionId;
                             employeeAnswer["cId"] = cId;
                             employeeAnswer["isCorrect"] = false;
                             employeeAnswer["score"] = score;
 
-                        } else if (!cId && questions[questionId - 1] == questionId && correctQuestionsAnswers[questionId] !== cId) {
+                        } else if (!cId && questions[questionId - 1] == questionId && matchStrings(correctQuestionsAnswers[questionId],cId)===false) {
                             employeeAnswer["questionId"] = questionId;
                             employeeAnswer["cId"] = "Question Not attempted";
                             employeeAnswer["isCorrect"] = false;
                             employeeAnswer["score"] = score;
 
-                        } else if (!!cId && questions[questionId - 1] !== questionId && correctQuestionsAnswers[questionId] !== cId) {
+                        } else if (!!cId && questions[questionId - 1] !== questionId && matchStrings(correctQuestionsAnswers[questionId],cId)===false) {
                             console.log("cId,questionId,roundOrder", cId, questionId, roundOrder)
                             return res.status(404).json({
                                 message: "dddata not found"
@@ -499,6 +510,7 @@ exports.submitScoreForRound = async (req, res) => {
 
         let cId = 1;
         let score = parseInt(req.body.score);
+        score = +score || 0;
         const checkemployeeExists = await Employee.findOne({ mspin: mspin });
         if (!checkemployeeExists) {
             return res.status(404).json({
@@ -1063,4 +1075,5 @@ exports.getScoreBoardRoundLevel = async (req, res) => {
         })
     }
 }
+
 
