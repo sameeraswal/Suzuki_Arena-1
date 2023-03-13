@@ -56,6 +56,7 @@ import Enterscore6 from "./Components/Enterscore6";
 import Puzzlecase from "./Components/puzzlecase/Puzzlecase";
 import Leaderboardsrm from "./Components/ScoreboardSRM/Leaderboardsrm";
 import Leaderboardthsrm from "./Components/Leaderboardthsrm/Leaderboardsrm";
+import Puzzlesrm from "./Components/Puzzlequestionsrm/Puzzlesrm";
 
 export const APIURL = "http://localhost:4500";
 export const APIURLLOCAL = "http://localhost:3000";
@@ -251,6 +252,7 @@ const App = () => {
           <Route path="/leaderboardth" element={<Leaderboardth />}></Route>
           <Route path="/leaderboardthsrm" element={<Leaderboardthsrm />}></Route>
           <Route path="/leaderboard" element={<Leaderboard />}></Route>
+          <Route path="/puzzlesrm" element={<Puzzlesrm />}></Route>
         </Routes>
       </div>
     </Router>

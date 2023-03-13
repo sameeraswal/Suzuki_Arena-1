@@ -1,70 +1,22 @@
-import React, { useEffect } from "react";
-
+import React from "react";
+import wordpattern from "../wordpattern.jpg";
 import Navbar from "../Navbar";
-import "./puzzlepage.css";
+import "../Puzzlepage/Puzzlechoice";
 import { useState } from "react";
-import Buttonp from "./Buttonp";
-import Buttonn from "../Puzzlequestionsrm/Buttonn";
-import Finishmodal from "../Modalframmer/finishmodal";
+// import Buttonp from "../Puzzlepage/Buttonp";
+import Buttonn from "./Buttonn";
+import "./puzzleques.css";
+import bgImg from "../leaderboardfinal/05.png";
 import { motion, AnimatePresence } from "framer-motion";
-
+import ModalFrammer from "../ModalFrammer";
+import Finishmodal from "../Modalframmer/finishmodal";
 import "../modalcss.css";
-import Finishmodal1b from "../Modalframmer/finishmodal1b";
+import Finishmodal3 from "../Modalframmer/finishmodal3";
 import axios from "axios";
 import { APIURL } from "../../App";
-import bgMainImage from "../../Assets/Puzzle (1).png";
 
-let x = [0, 0, 0, 0, 0, 0];
-function randomnum() {
-  const random = localStorage.getItem("random");
-  return random;
-}
-
-const Puzzlechoice = () => {
-  const [num, setNum] = useState(randomnum);
-
-  let response = {
-    status: true,
-    data: [
-      {
-        name: "Word-1",
-        btn1: "YES",
-        btn2: "NO",
-        index: 0,
-      },
-      {
-        name: "Word-2",
-        btn1: "YES",
-        btn2: "NO",
-        index: 1,
-      },
-      {
-        name: "Word-3",
-        btn1: "YES",
-        btn2: "NO",
-        index: 2,
-      },
-      {
-        name: "Word-4",
-        btn1: "YES",
-        btn2: "NO",
-        index: 3,
-      },
-      {
-        name: "Word-5",
-        btn1: "YES",
-        btn2: "NO",
-        index: 4,
-      },
-      {
-        name: "Word-6",
-        btn1: "YES",
-        btn2: "NO",
-        index: 5,
-      },
-    ],
-  };
-
+let x = [0, 0, 0, 0, 0];
+const Puzzlesrm = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => {
@@ -74,7 +26,44 @@ const Puzzlechoice = () => {
     setModalOpen(true);
   };
 
-  let choices = response.data;
+  let response = {
+    status: true,
+    data: [
+      {
+        question: "Q.1) Made reference of his observation (why this session)",
+
+        btn1: "YES",
+        btn2: "NO",
+        index: 0,
+      },
+      {
+        question: "Q.2) Mentioned the importance (impact) of the topic",
+
+        btn1: "YES",
+        btn2: "NO",
+        index: 1,
+      },
+      {
+        question: "Q.3) Explained in an easy to understand/ interesting way ",
+
+        btn1: "YES",
+        btn2: "NO",
+        index: 2,
+      },
+      {
+        question: "Q.4) Concluded the Coaching with a summary (points to remember)",
+        btn1: "YES",
+        btn2: "NO",
+        index: 3,
+      },
+      {
+        question: "Q.5) Checked understanding of the RM (post explanation)",
+        btn1: "YES",
+        btn2: "NO",
+        index: 4,
+      },
+    ],
+  };
 
   const handleClick = (index) => {
     console.log("from click", index);
@@ -86,6 +75,12 @@ const Puzzlechoice = () => {
     console.log("from click", index);
     x[index] = 0;
     console.log("array", x);
+  };
+
+  let questions = response.data;
+
+  const timeOutFun = () => {
+    setTimeout(() => window.open("/finish1b", "_self"), 3000);
   };
   let count = 0;
   let newCount;
@@ -106,7 +101,7 @@ const Puzzlechoice = () => {
     axios
       .post(`${APIURL}/api/v1/round/submitScoreForRound`, {
         mspin: JSON.parse(localStorage.getItem("mspin")),
-        roundName: "1-B",
+        roundName: "3",
         score: newCount,
       })
       .then((res) => {
@@ -118,30 +113,20 @@ const Puzzlechoice = () => {
   return (
     <>
       <Navbar />
-      <img src={bgMainImage} alt="" className="background-image" />
-      <div className="">
-        <div className="round-box">Puzzle - {num}</div>
+
+      <div className="dashboard-container full-height">
+        {/* <img src={bgImg} alt="" className="ques-bg" /> */}
+        <div className="round-box-dashboard">Questions</div>
+
         <div className="puzzle-box">
-          {console.log(`bgImg${num}`, "BGIMG")}
-          <div>
-            <img
-              src={require(`./puzzleimage/${num}.jpeg`)}
-              alt="pattern"
-              height={400}
-              width={400}
-              className="puzzle-img"
-              //   style={{ marginLeft: "37%", marginTop: "30px" }}
-            />
-          </div>
-
-          <div className="wordslct">
+          <div className="wordslct1">
             {/* map */}
-            {choices.map((item, i) => (
+            {questions.map((item, i) => (
               <>
-                <div className="wordyes">
-                  <span>{item.name}</span>
+                <div className="wordyes1">
+                  <span key={i}>{item.question}</span>
 
-                  <Buttonp
+                  <Buttonn
                     key={i}
                     index={item.index}
                     name1={item.btn1}
@@ -156,14 +141,14 @@ const Puzzlechoice = () => {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="roll icon-conatiner finish-btn"
+              className="roll icon-conatiner sbt-btn"
               onClick={() => {
                 modalOpen ? close() : open();
                 noOfCount(count);
                 fetchData();
               }}
             >
-              Finish
+              Submit
             </motion.button>
 
             <AnimatePresence
@@ -178,11 +163,7 @@ const Puzzlechoice = () => {
               onExitComplete={() => null}
             >
               {modalOpen && (
-                <Finishmodal1b
-                  modalOpen={modalOpen}
-                  handleClose={close}
-                  roundName={"1-B"}
-                />
+                <Finishmodal3 modalOpen={modalOpen} handleClose={close} />
               )}
             </AnimatePresence>
           </div>
@@ -192,4 +173,4 @@ const Puzzlechoice = () => {
   );
 };
 
-export default Puzzlechoice;
+export default Puzzlesrm;
