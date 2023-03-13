@@ -30,8 +30,13 @@ const Login = () => {
       .then((res) => {
         console.log(res, "Response");
         setStatus(res.data.status);
-        console.log(res.data.status, "Response");
+        console.log(res.data.status, "");
+        localStorage.setItem(
+          "categoryTypeofEmployee",
+          JSON.stringify(res.data.categoryTypeofEmployee)
+        );
 
+        // console.log(res)
         if (res.data.status === true) {
           // setRes(res.data.status);
           setMessage(res.data.message);
@@ -112,7 +117,7 @@ const Login = () => {
               class="control-button up third icon-conatiner btn-bottom"
               onClick={() => {
                 fetchData();
-                navigateLogin();
+                !status && navigateLogin();
               }}
               type="button"
               value="Login"
