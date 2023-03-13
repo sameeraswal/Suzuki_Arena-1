@@ -31,7 +31,11 @@ const Afterflip = ({ title }) => {
   const timeout = () => {
     // 👇️ redirects to an external URL
     setTimeout(
-      () => window.open(`${APIURLLOCAL}/${params.get("link")}`, "_self"),
+      () =>
+        window.open(
+          `${APIURLLOCAL}/${params.get("link")}?ms=${params.get("ms")}`,
+          "_self"
+        ),
       400
     );
   };
@@ -89,7 +93,9 @@ const Afterflip = ({ title }) => {
         </div>
         <div className="right-img">
           <img
-            src={require(`../../public/Assets/Questions/Round2/${params.get("link")}.png`)}
+            src={require(`../../public/Assets/Questions/Round2/${params.get(
+              "link"
+            )}.png`)}
             alt="img"
           />
         </div>

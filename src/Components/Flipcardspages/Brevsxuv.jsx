@@ -44,26 +44,27 @@ const Brewsuv = () => {
     // return false;
   };
   const timeOutFun = () => {
-    if (JSON.parse(localStorage.getItem("cod"))===-6) {
+    if (JSON.parse(localStorage.getItem("cod")) === -6) {
       getData();
       // alert(JSON.parse(localStorage.getItem("cod"))===-6);
       setTimeout(() => window.open("../", "_self"), 400);
     }
   };
+  let x = JSON.parse(localStorage.getItem("mspin"));
   return (
     <>
       <Navbar></Navbar>
 
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">
-        Brezza ZXi+ Vs XUV 300 W8(O)
-      </div>
+      <div className="round-box bg-correct">Brezza ZXi+ Vs XUV 300 W8(O)</div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>
-          <p>Remaining: {5-Math.abs(JSON.parse(localStorage.getItem("cod")))}</p>
+          <p>
+            Remaining: {5 - Math.abs(JSON.parse(localStorage.getItem("cod")))}
+          </p>
         </div>
 
         <div className="flex-container-child bg-correct">
@@ -85,11 +86,12 @@ const Brewsuv = () => {
                   setCount(
                     localStorage.setItem(
                       "cod",
-                      JSON.stringify(JSON.parse(localStorage.getItem("cod"))-1)
+                      JSON.stringify(
+                        JSON.parse(localStorage.getItem("cod")) - 1
+                      )
                     )
                   );
                   timeOutFun();
-
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
@@ -102,6 +104,7 @@ const Brewsuv = () => {
                   cardQuestionId={item.cardQuestionId}
                   cardtitleImage1={item.cardtitleImage1}
                   cardtitleImage2={item.cardtitleImage2}
+                  mspin={x}
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>

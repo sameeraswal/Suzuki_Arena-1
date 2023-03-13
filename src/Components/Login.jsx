@@ -65,11 +65,11 @@ const Login = () => {
   // const [mspin, setMspin] = useState([]);
 
   useEffect(() => {
-    console.log(mspin,"Before Setting");
+    console.log(mspin, "Before Setting");
 
-    localStorage.setItem("mspin", JSON.stringify(mspin));
-    localStorage.setItem("regNo", JSON.stringify(regno));
-    console.log(mspin,"AFter Setting");
+    mspin != '""' && localStorage.setItem("mspin", JSON.stringify(mspin));
+    regno != '""' && localStorage.setItem("regNo", JSON.stringify(regno));
+    console.log(mspin, "AFter Setting");
     localStorage.removeItem("cod");
   }, [mspin, regno]);
   return (

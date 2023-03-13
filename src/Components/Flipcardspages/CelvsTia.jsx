@@ -58,7 +58,7 @@ const CelvsTia = () => {
     }
   };
 
-
+  let x=JSON.parse(localStorage.getItem("mspin"))
   return (
     <>
       <Navbar></Navbar>
@@ -111,6 +111,7 @@ const CelvsTia = () => {
                   cardQuestionId={item.cardQuestionId}
                   cardtitleImage1={item.cardtitleImage1}
                   cardtitleImage2={item.cardtitleImage2}
+                  mspin={x}
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
