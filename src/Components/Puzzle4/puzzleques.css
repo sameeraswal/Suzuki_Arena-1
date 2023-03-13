@@ -38,9 +38,7 @@
   background: url('../NewImages/Spin-Wheel_BG.png');
   height: 130vh;
 } */
-.sbt-btn {
-  margin-left: 70%;
-}
+
 
 @media screen and (max-width: 1024px) {
   /* puzzleQuestion */
@@ -56,6 +54,11 @@
 
   .sbt-btn{
     margin-left: 67%;
+    margin-bottom: 50px;
   }
 
+}
+
+.sbt-btn {
+  margin-left: 70%;
 }

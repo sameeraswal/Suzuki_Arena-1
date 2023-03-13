@@ -5,7 +5,7 @@ import "../Puzzlepage/Puzzlechoice";
 import { useState } from "react";
 // import Buttonp from "../Puzzlepage/Buttonp";
 import Buttonn from "./Buttonn";
-import "./puzzleques.css";
+import "./puzzleques1.css";
 import bgImg from "../leaderboardfinal/05.png";
 import { motion, AnimatePresence } from "framer-motion";
 import ModalFrammer from "../ModalFrammer";
