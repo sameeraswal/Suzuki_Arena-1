@@ -13,6 +13,7 @@ import Finishmodal from "../Modalframmer/finishmodal";
 import "../modalcss.css";
 import Finishmodal3 from "../Modalframmer/finishmodal3";
 import axios from "axios";
+import bgImg1 from '../../Assets/Dice_BG.png';
 import { APIURL } from "../../App";
 
 let x = [0, 0, 0, 0, 0];
@@ -118,9 +119,9 @@ const Puzzlequestion = () => {
     <>
       <Navbar />
 
-      <div className="dashboard-container full-height">
-        {/* <img src={bgImg} alt="" className="ques-bg" /> */}
-        <div className="round-box-dashboard">Questions</div>
+      
+        <img src={bgImg1} alt="" className="background-image" />
+        <div className="round-box">Questions</div>
 
         <div className="puzzle-box">
           <div className="wordslct1">
@@ -172,7 +173,7 @@ const Puzzlequestion = () => {
             </AnimatePresence>
           </div>
         </div>
-      </div>
+      
     </>
   );
 };
