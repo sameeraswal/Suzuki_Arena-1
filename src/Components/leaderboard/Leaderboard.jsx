@@ -23,34 +23,13 @@ const Leaderboard = () => {
 
   // const round1A="1-A";
   const mspin = JSON.parse(localStorage.getItem("mspin"));
-  // const fetchData = async () => {
-  // const player1 = `${APIURL}/api/v1/round/roundscore`;
-  // const player2 = `${APIURL}/api/v1/quiz/employee/currentscore`;
-  //   const player3 = `${APIURL}/api/v1/quiz/finalscore/leaderboard`;
-  //   const getPlayer2 = axios.post(player2, {
-  //     mspin: mspin,
-  //   });
-  //   const getPlayer3 = axios.get(player3);
-  //   axios.all([getPlayer2, getPlayer3]).then(
-  //     axios.spread((...allData) => {
-  //       const allPlayer1 = allData[0];
-  //       const allPlayer2 = allData[1];
-  //       console.log(allPlayer1);
-  //       console.log(allPlayer2);
-  //     })
-  //   );
-  // };
+
   useEffect(() => {
-    // alert("Page is running");
-    // fetchData();
     axios
       .get(`${APIURL}/api/v1/quiz/scoreboard`)
       .then((res) => {
         setRound(res.data.data.scoreBoard);
         setRounds(res.data.data.scoreBoard.rounds);
-        // setFinalscore(res.data.data.leaderboard.finalScore)
-        // console.log(res.data.data.leaderboard[1].finalScore)
-
         console.log(res);
       })
       .catch((error) => console.log(error, "error is here"));
@@ -78,7 +57,10 @@ const Leaderboard = () => {
               sheet="users"
               currentTableRef={tableRef.current}
             >
-              <button className="roll icon-conatiner export"> Export excel </button>
+              <button className="roll icon-conatiner export">
+                {" "}
+                Export excel{" "}
+              </button>
             </DownloadTableExcel>
             <table ref={tableRef}>
               <td className="table-content-2">Reg No.</td>
@@ -94,7 +76,6 @@ const Leaderboard = () => {
               <td className="table-content-2">Total Score</td>
               <td className="table-content-2">Rank</td>
 
-              {/* <tbody>/ */}
               {round.map((item) => (
                 <>
                   <tr>
@@ -138,7 +119,6 @@ const Leaderboard = () => {
                   </tr>
                 </>
               ))}
-              {/* </tbody>/ */}
             </table>
           </div>
         </div>

@@ -36,7 +36,7 @@ const Login = () => {
           // setRes(res.data.status);
           setMessage(res.data.message);
 
-          // console.log(res.data.status, res.data.message);
+          console.log(res.data.status, res.data.message);
           // setLoginStatus(true);
           // alert("admin login successfull");
         } else {
@@ -49,6 +49,7 @@ const Login = () => {
 
   const arena = require("./Pratham.png");
   const navigateLogin = () => {
+    console.log(status, "stat");
     mspin && regno
       ? setTimeout(() => window.open("./dashboard", "_self"), 2000)
       : setMessage("Please Enter details");
