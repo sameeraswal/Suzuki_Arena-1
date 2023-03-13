@@ -25,7 +25,7 @@ router.post("/api/v1/wheelRoundQuestions", roundController.wheelRoundQuestions);
 router.get("/api/v1/round/roundscore/mspin/:mspin/roundname/:roundname", employeeReportController.getRoundScore); //this should be get or post?
 router.get("/api/v1/quiz/finalscore/mspin/:mspin", employeeReportController.getFinalScoreOfAllRounds);
 
-router.get("/api/v1/quiz/finalscore/leaderboard", employeeReportController.getScoreOfEveryone);
+//router.get("/api/v1/quiz/finalscore/leaderboard", employeeReportController.getScoreOfEveryone);
 
 //router.get("/api/v1/quiz/scoreboard", employeeReportController.getScoreBoardRoundLevel); //old
 //router.get("/api/v1/quiz/scoreboard/category/:targetCategory", employeeReportController.getScoreBoardRoundLevel);
