@@ -5,6 +5,7 @@ import Search from "./search";
 import loginImg from "./loginicon.png";
 import axios from "axios";
 import { APIURL } from "../App";
+import useCookies from "react-cookie/cjs/useCookies";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -55,9 +56,18 @@ const Login = () => {
   // document.cookie=`mspin=${mspin}`;
   // document.cookie=`regno=${regno}`
 
+  const [cookies, setCookie] = useCookies(["mspinnew"]);
+
+  function handleCookie() {
+    setCookie("mspinnew", `${mspin}`, {
+      path: "/"
+    });
+  }
+
   const arena = require("./Pratham.png");
   const navigateLogin = () => {
     console.log(status, "stat");
+    handleCookie()
     mspin && regno
       ? setTimeout(() => window.open("./dashboard", "_self"), 2000)
       : setMessage("Please Enter details");

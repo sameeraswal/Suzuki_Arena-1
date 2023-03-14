@@ -9,6 +9,7 @@ import Popupquestion from "../flipcard popup/Popupquestion";
 import { getData } from "./Altovskwid";
 import axios from "axios";
 import { APIURL } from "../../App";
+import { useCookies } from "react-cookie";
 
 const Altovskwid = () => {
   const [count, setCount] = useState(5);
@@ -18,15 +19,18 @@ const Altovskwid = () => {
   const [result, setResult] = useState([]);
 
   localStorage.setItem("co", JSON.stringify(5));
-  // let x = document.cookie;
-  // var value = document.cookie("mspin");
+  // const [cookies, setCookie] = useCookies();
+  const [cookies, setCookie] = useCookies(["roundName"]);
+  setCookie("roundName", `${JSON.parse(localStorage.getItem("roundName"))}`, {
+    path: "/"
+  });
 
   // console.log(value ,"Value is ")
   useEffect(() => {
     axios
       .post(`${APIURL}/api/v1/wheelRoundQuestions`, {
-        mspin: JSON.parse(localStorage.getItem("mspin")),
-        roundOrder: JSON.parse(localStorage.getItem("roundName")),
+        mspin: cookies.mspinnew,
+        roundOrder: cookies.roundName,
       })
       .then((res) => {
         console.log(res, "Respnse");
@@ -39,7 +43,7 @@ const Altovskwid = () => {
   const getData = () => {
     axios
       .post(`${APIURL}/api/v1/finishround`, {
-        mspin: JSON.parse(localStorage.getItem("mspin")),
+        mspin: cookies.mspinnew,
         roundName: "2",
       })
       .then((res) => {

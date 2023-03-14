@@ -1614,3 +1614,17 @@ ul {
 }
 
 
+@media screen and (min-device-width: 768px) and (max-device-width: 960px) {
+  .body-img{
+    margin-left: 21%;
+    margin-top: 78%;
+  }
+  .wheel{
+    margin-left: 215px;
+    margin-top: -75.5%;
+  }
+  .wheel-marker{
+    top: -78%;
+  }
+ 
+}
