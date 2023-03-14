@@ -74,7 +74,7 @@ const ModalButton = ({ onClick, label }) => (
   <Link to="/question">
     {" "}
     <motion.button
-      className="modal-button cls-btn"
+      className="modal-button cls-btn first-btn"
       type="button"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}

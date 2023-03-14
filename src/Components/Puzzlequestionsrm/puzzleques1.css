@@ -45,11 +45,7 @@
   margin-left: 70%;
 }
 
-@media screen and (max-width: 1024px){
-  .sbt-btn {
-    margin-left: 66%;
-  }
-}
+
 
 @media screen and (max-width: 1180px) {
   .sbt-btn {
@@ -58,12 +54,19 @@
      */
      position: absolute;
      bottom: 78px;
-     margin-left: 51%;
+     margin-left: 54%;
   }
    .resp-puzzle-case-btn {
     position: absolute;
 
     margin-top: 100%;
     top: -15%;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .sbt-btn {
+    margin-left: 53%;
+    bottom: -17px;
   }
 }

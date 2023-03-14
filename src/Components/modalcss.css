@@ -436,8 +436,40 @@ li {
   }
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1430px){
+
+}
+
+
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .cls-btn{
+    margin-left: 482px;
+  }
+  .backdrop-finish-1b{
+    top: 79px;
+    left: 0;
+  }
+  .finish-modal-btn{
+    margin-top: 5%;
+    margin-left: 36%;
+    bottom: 2%;
+  }
+  .modal-guide-btn{
+    margin-left: 133px;
+  }
+  
+}
+
 @media screen and (max-width: 1024px) {
   /* Askexpress  */
+
+  .backdrop-finish{
+    margin-top: -67%;
+  }
+
+
+
   .modal-guide-btn {
     margin-top: 360px;
     margin-left: 122px;
@@ -445,9 +477,14 @@ li {
   .save-button {
     width: 15%;
   }
-  .cls-btn {
-    left: -20px;
-    top: 81%;
+  
+
+  .first-btn{
+    margin-left: 324px;
+  }
+
+  .bespoke-btn{
+    margin-left: 249px;
   }
 
   /* casestudy */
@@ -462,23 +499,4 @@ li {
     height: 300px;
     width: 10%;
   }
-}
-
-@media screen and (max-width: 1180px) {
-  .cls-btn{
-    margin-left: 480px;
-  }
-  .backdrop-finish-1b{
-    top: 79px;
-    left: 0;
-  }
-  .finish-modal-btn{
-    margin-top: 5%;
-    margin-left: 33%;
-    bottom: 2%;
-  }
-  .modal-guide-btn{
-    margin-left: 133px;
-  }
-  
 }

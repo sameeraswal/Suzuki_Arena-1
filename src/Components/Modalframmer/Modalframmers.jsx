@@ -95,7 +95,7 @@ const ModalButton = ({ onClick, label }) => (
   <Link to="/dice">
     {" "}
     <motion.button
-      className="modal-button cls-btn"
+      className="modal-button cls-btn bespoke-btn"
       type="button"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
