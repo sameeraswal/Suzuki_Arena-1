@@ -10,12 +10,13 @@ export default function Random() {
   // const [minVal, setMinVal] = useState(0);
   // const [maxVal, setMaxVal] = useState(10);
   const [randomNum, setRandomNum] = useState("");
-  useEffect(() => {
+  const timeout = () => {
+    console.log("Rando,m");
     setTimeout(() => {
       setRandomNum(Math.floor(Math.random() * (30 - 1 + 1) + 1));
-    }, 16000);
-    setTimeout(() => window.open("/timersection", "_self"), 22000);
-  }, []);
+    }, 14000);
+    setTimeout(() => window.open("/timersection", "_self"), 20000);
+  };
 
   // const handleRandomNum = () => {};
   // const timeOutFun = (e) => {
@@ -35,6 +36,7 @@ export default function Random() {
       <div className="hero">
         {/* <div className="round-box ">Number Generator</div> */}
         {/* <div className="round-box">Random Number Generator</div> */}
+
         <iframe
           src={randomnumimg}
           alt=""
@@ -46,7 +48,9 @@ export default function Random() {
             paddingLeft: "-300px",
           }}
           className="randomno-video"
+          sandbox=""
         ></iframe>
+
         <div className="containerx">
           {/* <div className="randomNum"> */}
           <h1 className="txt-bold random_no_alignment">{randomNum}</h1>
