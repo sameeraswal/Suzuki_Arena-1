@@ -12,14 +12,12 @@ export default function Random() {
   // const [minVal, setMinVal] = useState(0);
   // const [maxVal, setMaxVal] = useState(10);
   const [randomNum, setRandomNum] = useState("");
-  const timeout = () => {
-    // alert("Rando,m");
+  useEffect(() => {
     setTimeout(() => {
       setRandomNum(Math.floor(Math.random() * (30 - 1 + 1) + 1));
-    }, 14000);
-    setTimeout(() => window.open("/timersection", "_self"), 20000);
-  };
-
+    }, 16000);
+    setTimeout(() => window.open("/timersection", "_self"), 22000);
+  }, []);
   // const handleRandomNum = () => {};
   // const timeOutFun = (e) => {
 
@@ -35,30 +33,30 @@ export default function Random() {
     <>
       <Navbar />
 
-<div className="hero">
-  {/* <div className="round-box ">Number Generator</div> */}
-  {/* <div className="round-box">Random Number Generator</div> */}
+      <div className="hero">
+        {/* <div className="round-box ">Number Generator</div> */}
+        {/* <div className="round-box">Random Number Generator</div> */}
 
-  <iframe
-    src={randomnumimg}
-    alt=""
-    height={550}
-    width={1000}
-    style={{
-      marginLeft: "-30px",
-      marginBottom: "-350px",
-      paddingLeft: "-300px",
-    }}
-    className="randomno-video"
-    sandbox=""
-  ></iframe>
+        <iframe
+          src={randomnumimg}
+          alt=""
+          height={550}
+          width={1000}
+          style={{
+            marginLeft: "-30px",
+            marginBottom: "-350px",
+            paddingLeft: "-300px",
+          }}
+          className="randomno-video"
+          // sandbox=""
+        ></iframe>
 
-  <div className="containerx">
-    {/* <div className="randomNum"> */}
-    <h1 className="txt-bold random_no_alignment">{randomNum}</h1>
-    {/* </div> */}
+        <div className="containerx">
+          {/* <div className="randomNum"> */}
+          <h1 className="txt-bold random_no_alignment">{randomNum}</h1>
+          {/* </div> */}
 
-    {/* <button
+          {/* <button
       onClick={() => {
         handleRandomNum();
         timeOutFun();
@@ -68,8 +66,8 @@ export default function Random() {
     >
       Spin
     </button> */}
-  </div>
-</div>
-</>
-);
+        </div>
+      </div>
+    </>
+  );
 }
