@@ -82,7 +82,7 @@ const ModalText1 = () => (
 );
 
 const ModalButton = ({ onClick, label }) => (
-  <Link to="/wheel">
+  <Link to="/enterscore2">
     {" "}
     <motion.button
       className="modal-button cls-btn lets-begin-efe"
