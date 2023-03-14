@@ -50,7 +50,6 @@ const Brewsuv = () => {
       setTimeout(() => window.open("../", "_self"), 400);
     }
   };
-  let x = JSON.parse(localStorage.getItem("mspin"));
   return (
     <>
       <Navbar></Navbar>
@@ -104,7 +103,7 @@ const Brewsuv = () => {
                   cardQuestionId={item.cardQuestionId}
                   cardtitleImage1={item.cardtitleImage1}
                   cardtitleImage2={item.cardtitleImage2}
-                  mspin={x}
+        
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>

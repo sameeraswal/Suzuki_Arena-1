@@ -49,7 +49,6 @@ const Wagovstiago = () => {
       setTimeout(() => window.open("../", "_self"), 400);
     }
   };
-  let x = JSON.parse(localStorage.getItem("mspin"));
   return (
     <>
       <Navbar></Navbar>
@@ -105,7 +104,6 @@ const Wagovstiago = () => {
                   cardQuestionId={item.cardQuestionId}
                   cardtitleImage1={item.cardtitleImage1}
                   cardtitleImage2={item.cardtitleImage2}
-                  mspin={x}
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>

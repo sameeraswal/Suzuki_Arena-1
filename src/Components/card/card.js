@@ -31,7 +31,7 @@ function Card({
     if (isCorrect) {
       // setTimeout(() => window.open(`../afterflip/${title}`), 400);
       console.log(
-        `../afterflip/${title}?question=${cardQuestion}&link=${link}&Id=${cardQuestionId}&ms=${mspin}`,
+        `../afterflip/${title}?question=${cardQuestion}&link=${link}&Id=${cardQuestionId}`,
         "Path"
       );
       console.log(title, "title");
@@ -42,7 +42,7 @@ function Card({
       setTimeout(
         () =>
           window.open(
-            `../afterflip/height?question=${cardQuestion}&link=${link}&Id=${cardQuestionId}&ms=${mspin}`,
+            `../afterflip/height?question=${cardQuestion}&link=${link}&Id=${cardQuestionId}`,
             "_self"
           ),
         400

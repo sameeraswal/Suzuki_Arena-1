@@ -52,7 +52,7 @@ const Ertvstrib = () => {
       setTimeout(() => window.open("../", "_self"), 400);
     }
   };
-  let x=JSON.parse(localStorage.getItem("mspin"))
+  // let x=JSON.parse(localStorage.getItem("mspin"))
   return (
     <>
       <Navbar></Navbar>
@@ -105,7 +105,7 @@ const Ertvstrib = () => {
                   cardQuestionId={item.cardQuestionId}
                   cardtitleImage1={item.cardtitleImage1}
                   cardtitleImage2={item.cardtitleImage2}
-                  mspin={x}
+
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
