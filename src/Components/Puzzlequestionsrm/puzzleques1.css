@@ -57,10 +57,7 @@
     margin-left: 51%;
   }
    .resp-puzzle-case-btn {
-    position: absolute;
-
-    margin-top: 100%;
-    top: -15%;
+    bottom: -366px;
   }
 }
 
@@ -69,4 +66,17 @@
     margin-left: 62%;
     bottom: -17px;
   }
+
+  .resp-puzzle-case-btn {
+    position: absolute;
+   
+    bottom: -675px;
+   
+    left: -26px
+}
+
+.full-height {
+  /* background: url(http://localhost:3000/static/media/Spin-Wheel_BG.d222529….png); */
+  height: 177vh;
+}
 }

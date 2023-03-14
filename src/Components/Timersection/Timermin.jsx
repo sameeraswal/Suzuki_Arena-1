@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 const formatTime = (timer) => {
   const getSeconds = `0${timer % 60}`.slice(-2);
@@ -32,7 +33,17 @@ const Timermin = () => {
           ) : (
             <button onClick={handleResume} className="roll icon-conatiner timer-margin">Resume</button>
           )}
+
+          <Link to="/puzzle">
+            <button
+              className="roll icon-conatiner"
+              
+            >
+              Enter Score
+            </button>
+          </Link>
         </div>
+       
       </div>
     </div>
   );
