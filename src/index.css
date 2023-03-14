@@ -1270,6 +1270,7 @@ ul {
   margin-left: 29%;
   margin-top: 20px;
   padding-bottom: 40px;
+  font-size: 17px;
 }
 .guidelines-img {
   width: 98.9vw;
@@ -1394,27 +1395,62 @@ ul {
   }
 }
 
-@media screen and (max-width: 1194px){
+@media screen and {
+  
+}
+
+
+
+@media screen and (min-width: 1200px) and (max-width: 1430px){
+
+  .puzzle-scoring-btn{
+    margin-top: 39%;
+  }
+
+
+
   .question-box{
     margin-left: 412px;
   }
+
+  .submit-margin{
+    margin-top: 20px;
+    margin-left: 263px;
+    position: absolute;
+    color: var(--arena-color);
+    height: 50px;
+  }
+
+  .body-img{
+    margin-left: 31%;
+    margin-top: -51%;
+  }
+
+  .wheel{
+    margin-top: -49.3%;
+    margin-left: 430px;
+  }
+
+  .wheel-marker{
+    margin-left: 48.5%;
+    margin-top: -51%;
+  }
+
+
 }
 
 
 
 
-@media screen and (max-width: 1200px) {
-  .puzzle-scoring-btn {
-    width: 50vw;
-    height: 42vh;
-    /* border: 4px solid red; */
-    margin: auto;
-    margin-top: 140px;
-    /* box-shadow: rgb(14 30 37 / 12%) 0px 2px 4px 0px, rgb(14 30 37 / 32%) 0px 2px 16px 0px; */
-    border-radius: 10px;
-    position: absolute;
-    margin-top: 37%;
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  
+    .puzzle-scoring-btn {
+      width: 33vw;
+      height: 9vh;
+      margin-left: 34%;
+      margin-top: 41%;
   }
+ 
 
   .question-box {
     /* this */
@@ -1426,14 +1462,15 @@ ul {
     /* box-shadow: rgb(14 30 37 / 12%) 0px 2px 4px 0px, rgb(14 30 37 / 32%) 0px 2px 16px 0px; */
     border-radius: 10px;
     position: absolute;
-    margin-left: 410px;
+    margin-left: 360px;
   }
   .please-chose {
-    width: 59%;
-    margin-left: 21%;
+    width: 52%;
+    margin-left: 24%;
+    font-size: 18px;
   }
   .submit-margin {
-    margin-left: 236px;
+    margin-left: 200px
   }
 
   .body-img {
@@ -1441,8 +1478,8 @@ ul {
     margin-top: -57%;
   }
   .wheel {
-    margin-left: 370px;
-    margin-top: -55.3%;
+    margin-left: 280px;
+    margin-top: -64.3%;
   }
   .wheel-marker {
     height: 70px;
@@ -1492,7 +1529,7 @@ ul {
 
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
   .question-div{
     margin-bottom: 17px;
   }
@@ -1512,8 +1549,9 @@ ul {
   }
 
   .please-chose {
-    width: 67%;
-    margin-left: 16%;
+    width: 58%;
+    margin-left: 21%;
+    font-size: 20px;
 }
 
 .submit-margin {
@@ -1528,23 +1566,24 @@ ul {
   width: 33vw;
     height: 9vh;
     margin-left: 33%;
+    margin-top: 45%;
 }
 
 
 /* wheel */
 .body-img{
-  margin-left: 28%;
-  margin-top: -68%;
+  margin-left: 17%;
+    margin-top: -89%;
 }
 
 .wheel{
-  margin-left: 310px;
-    margin-top: -65.5%;
+  margin-left: 154px;
+  margin-top: -85.5%;
 }
 
 .wheel-marker{
-  margin-left: 50.9%;
-    margin-top: -68%;
+  margin-left: 47.9%;
+  margin-top: -89%;
 }
 
 /* flippcard */

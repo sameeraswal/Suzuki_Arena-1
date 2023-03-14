@@ -74,6 +74,12 @@
   margin-top: 10px;
 }
 
+@media screen and (min-width: 1201px) and (max-width: 1460px){
+  .wordslct{
+    width: 40%;
+  }
+}
+
 
 
 @media screen and (max-width: 1200px) {
@@ -111,11 +117,11 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   /* puzzleQuestion */
 
   .wordslct {
-    width: 43%;
+    width: 45%;
     margin-left: -221px;
     gap: 30px;
     margin-top: 14px;

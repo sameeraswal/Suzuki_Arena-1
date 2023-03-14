@@ -34,7 +34,7 @@ const Timersection = () => {
 
           <Link to="/puzzle">
             <button
-              className="roll icon-conatiner score-correct"
+              className="roll icon-conatiner score-correct timer-margin"
               onClick={() => {
                 setShow(true);
               }}

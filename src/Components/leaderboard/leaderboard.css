@@ -423,9 +423,41 @@ table td {
   }
 }
 
+@media only screen   
+and (min-width: 1030px)   
+and (max-width: 1366px)  
+{ /* STYLES GO HERE */} 
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+  table{
+    width: 75em;
+  }
+}
+
+
+
+
+@media screen and (max-width: 1180px) {
+  .leader-btn {
+    width: 17%;
+  }
+  .export {
+    margin-left: 86.5%;
+  }
+  table{
+    width: 75em;
+  }
+  
+
+}
+
 @media screen and (max-width: 1024px) {
   table {
-    width: 65em;
+    width: 63em;
   }
 
   .table-content-2 {
@@ -454,16 +486,4 @@ table td {
     margin-top: 10px;
   }
 }
-@media screen and (max-width: 1180px) {
-  .leader-btn {
-    width: 17%;
-  }
-  .export {
-    margin-left: 86.5%;
-  }
-  table{
-    width: 75em;
-  }
-  
 
-}

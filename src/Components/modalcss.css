@@ -436,9 +436,13 @@ li {
   }
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1430px){
+
+}
 
 
-@media screen and (max-width: 1180px) {
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
   .cls-btn{
     margin-left: 482px;
   }
@@ -476,7 +480,7 @@ li {
   
 
   .first-btn{
-    margin-left: 400px;
+    margin-left: 324px;
   }
 
   .bespoke-btn{
