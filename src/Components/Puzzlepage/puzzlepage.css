@@ -78,11 +78,22 @@
   .wordslct{
     width: 40%;
   }
+
+  .finish-btn{
+    margin-top: -23px;
+    margin-left: 37%;
+    width: 200px;
+  }
+
+  .puzzle-img{
+    margin-top: 60px;
+    margin-right: 27px;
+  }
 }
 
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
   /* puzzleQuestion */
 
   .wordslct {
@@ -99,7 +110,7 @@
   }
 
   .finish-btn {
-    margin-left: 35%;
+    margin-left: 40%;
   }
 
   .wordslct1 {
@@ -121,20 +132,20 @@
   /* puzzleQuestion */
 
   .wordslct {
-    width: 75%;
-    margin-left: -221px;
+    width: 91%;
+    margin-left: 135px;
     gap: 30px;
     margin-top: 14px;
   }
 
   .puzzle-img {
     height: 60%;
-    width: 54%;
-    margin-left: 31px;
-  }
+    width: 86%;
+    margin-left: 93px;
+}
 
   .finish-btn {
-    margin-left: 40%;
+    margin-left: 28%;
   }
 
   .wordslct1 {
@@ -149,5 +160,9 @@
 
   .sbt-btn {
     margin-left: 67%;
+  }
+
+  .wordyes span{
+    margin-right: 44px;
   }
 }

@@ -32,16 +32,7 @@ const Timersection = () => {
             <Timermin />
           </div>
 
-          <Link to="/puzzle">
-            <button
-              className="roll icon-conatiner score-correct timer-margin"
-              onClick={() => {
-                setShow(true);
-              }}
-            >
-              Enter Score
-            </button>
-          </Link>
+         
        
         {/* )} */}
       </div>
