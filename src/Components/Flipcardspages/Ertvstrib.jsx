@@ -11,6 +11,8 @@ import Popupquestion from "../flipcard popup/Popupquestion";
 import { getData } from "./Altovskwid";
 import axios from "axios";
 import { APIURL } from "../../App";
+import { useCookies } from "react-cookie";
+
 
 const Ertvstrib = () => {
   const [count, setCount] = useState(5);
@@ -18,11 +20,15 @@ const Ertvstrib = () => {
 
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
+  const [cookies, setCookie] = useCookies(["roundName"]);
+  setCookie("roundName", `${JSON.parse(localStorage.getItem("roundName"))}`, {
+    path: "/"
+  });
   useEffect(() => {
     axios
       .post(`${APIURL}/api/v1/wheelRoundQuestions`, {
-        mspin: JSON.parse(localStorage.getItem("mspin")),
-        roundOrder: JSON.parse(localStorage.getItem("roundName")),
+        mspin: cookies.mspinnew,
+        roundOrder: cookies.roundName,
       })
       .then((res) => {
         setResult(res.data.data.questions);
@@ -33,7 +39,7 @@ const Ertvstrib = () => {
   const getData = () => {
     axios
       .post(`${APIURL}/api/v1/finishround`, {
-        mspin: JSON.parse(localStorage.getItem("mspin")),
+        mspin: cookies.mspinnew,
         roundName: "2",
       })
       .then((res) => {

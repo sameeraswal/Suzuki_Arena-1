@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { APIURL, APIURLLOCAL, imgur } from "../App";
+import { useCookies } from "react-cookie";
 
 import axios from "axios";
 // import { useBetween } from 'use-between';
@@ -28,6 +29,7 @@ const Afterflip = ({ title }) => {
     setScore(event.target.value);
   };
 
+  const [cookies, setCookie] = useCookies();
   const timeout = () => {
     // 👇️ redirects to an external URL
     setTimeout(
@@ -43,8 +45,8 @@ const Afterflip = ({ title }) => {
     // console.log(mspin, name, dealership, regno);
     axios
       .post(`${APIURL}/api/v1/round/submitcardanswer`, {
-        mspin: JSON.parse(localStorage.getItem("mspin")),
-        roundOrder: JSON.parse(localStorage.getItem("roundName")),
+        mspin: cookies.mspinnew,
+        roundOrder: cookies.roundName,
         questionId: params.get("Id"),
         cId: score,
       })
