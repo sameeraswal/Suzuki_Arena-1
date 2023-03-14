@@ -81,15 +81,12 @@
   margin-left: 54%;
 }
 
-
-@media screen and (min-width: 1200px) and (max-width: 1430px){
+@media screen and (min-width: 1200px) and (max-width: 1430px) {
   .score-correct {
     margin-left: 61%;
     margin-top: 42%;
+  }
 }
-}
-
-
 
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
   /* timer section  */
@@ -98,23 +95,19 @@
   }
   .score-correct {
     margin-left: 58%;
-    margin-top: 45.6%;
+    margin-top: 43.3%;
   }
 }
 
-@media screen and (min-width: 786px) and (max-width: 1024px){
-  .timer-container{
+@media screen and (min-width: 786px) and (max-width: 1024px) {
+  .timer-container {
     margin-left: -5%;
   }
 
-  .score-btn{
+  .score-btn {
     margin-top: 52.6%;
   }
 }
-
-
-
-
 
 /* @media screen and (min-device-width: 768px) and (max-device-width: 960px) {
     

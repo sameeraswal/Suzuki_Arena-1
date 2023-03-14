@@ -1395,25 +1395,17 @@ ul {
   }
 }
 
-@media screen and {
-  
-}
 
-
-
-@media screen and (min-width: 1200px) and (max-width: 1430px){
-
-  .puzzle-scoring-btn{
+@media screen and (min-width: 1200px) and (max-width: 1430px) {
+  .puzzle-scoring-btn {
     margin-top: 39%;
   }
 
-
-
-  .question-box{
+  .question-box {
     margin-left: 412px;
   }
 
-  .submit-margin{
+  .submit-margin {
     margin-top: 20px;
     margin-left: 263px;
     position: absolute;
@@ -1421,36 +1413,28 @@ ul {
     height: 50px;
   }
 
-  .body-img{
+  .body-img {
     margin-left: 31%;
     margin-top: -51%;
   }
 
-  .wheel{
+  .wheel {
     margin-top: -49.3%;
     margin-left: 430px;
   }
 
-  .wheel-marker{
+  .wheel-marker {
     margin-left: 48.5%;
     margin-top: -51%;
   }
-
-
 }
 
-
-
-
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
-  
-    .puzzle-scoring-btn {
-      width: 33vw;
-      height: 9vh;
-      margin-left: 34%;
-      margin-top: 41%;
+  .puzzle-scoring-btn {
+    height: 6vh;
+    margin-left: 33%;
+    width: 33vw;
   }
- 
 
   .question-box {
     /* this */
@@ -1470,7 +1454,7 @@ ul {
     font-size: 18px;
   }
   .submit-margin {
-    margin-left: 200px
+    margin-left: 200px;
   }
 
   .body-img {
@@ -1478,8 +1462,9 @@ ul {
     margin-top: -57%;
   }
   .wheel {
-    margin-left: 280px;
-    margin-top: -64.3%;
+      margin-left: 366px;
+      margin-top: -55.3%;
+
   }
   .wheel-marker {
     height: 70px;
@@ -1513,32 +1498,28 @@ ul {
     width: 16%;
   }
 
-  .puzzle-scoring-btn{
+  .puzzle-scoring-btn {
     width: 33vw;
-      height: 9vh;
-      margin-left: 33%;
+    height: 9vh;
+    margin-left: 33%;
   }
 
-  .flex-container-child{
+  .flex-container-child {
     gap: 5px;
     margin-left: 10px;
   }
 }
 
-
-
-
-
 @media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
-  .question-div{
+  .question-div {
     margin-bottom: 17px;
   }
 
-  .question-box{
+  .question-box {
     margin-left: 334px;
   }
 
-  .head-question-design{
+  .head-question-design {
     width: 124vw;
     margin-top: -178px;
     position: absolute;
@@ -1552,79 +1533,73 @@ ul {
     width: 58%;
     margin-left: 21%;
     font-size: 20px;
-}
+  }
 
-.submit-margin {
-  margin-left: 197px;
-}
+  .submit-margin {
+    margin-left: 197px;
+  }
 
-.question-video{
-  margin-left: -134px;
-}
+  .question-video {
+    margin-left: -134px;
+  }
 
-.puzzle-scoring-btn{
-  width: 33vw;
+  .puzzle-scoring-btn {
+    width: 33vw;
     height: 9vh;
     margin-left: 33%;
     margin-top: 45%;
-}
+  }
 
-
-/* wheel */
-.body-img{
-  margin-left: 17%;
+  /* wheel */
+  .body-img {
+    margin-left: 17%;
     margin-top: -89%;
-}
+  }
 
-.wheel{
-  margin-left: 154px;
-  margin-top: -85.5%;
-}
+  .wheel {
+    margin-left: 154px;
+    margin-top: -85.5%;
+  }
 
-.wheel-marker{
-  margin-left: 47.9%;
-  margin-top: -89%;
-}
+  .wheel-marker {
+    margin-left: 47.9%;
+    margin-top: -89%;
+  }
 
-/* flippcard */
-.flex-container-child{
-  margin-left: 10px;
-}
+  /* flippcard */
+  .flex-container-child {
+    margin-left: 10px;
+  }
 
-.remain-container{
-  margin-right: 26px;
-}
+  .remain-container {
+    margin-right: 26px;
+  }
 
-/* afterflip */
+  /* afterflip */
 
-.outer-div{
-  margin-top: 35px;
+  .outer-div {
+    margin-top: 35px;
     margin-left: -113px;
-}
+  }
 
-
-
-.actual-card{
-  height: 459px;
+  .actual-card {
+    height: 459px;
     width: 350px;
     margin-left: 15%;
     margin-right: 57px;
+  }
 }
-
-}
-
 
 @media screen and (min-device-width: 768px) and (max-device-width: 960px) {
-  .body-img{
+  .body-img {
     margin-left: 21%;
     margin-top: 78%;
   }
-  .wheel{
+  .wheel {
     margin-left: 215px;
     margin-top: -75.5%;
   }
-  .wheel-marker{
+  .wheel-marker {
     top: -78%;
   }
- 
 }

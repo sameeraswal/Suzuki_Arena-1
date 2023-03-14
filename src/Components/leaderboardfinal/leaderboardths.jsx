@@ -13,7 +13,7 @@ import headImg from "../../Assets/ScoreboardNew/RM.png";
 import lead from "./01.png";
 import { useNavigate } from "react-router-dom";
 
-const Leaderboardth = () => {
+const Leaderboardths = () => {
   const navigate = useNavigate();
   const [round, setRound] = useState([]);
   const [name, setName] = useState("");
@@ -21,7 +21,7 @@ const Leaderboardth = () => {
   const [name2, setName2] = useState("");
 
   const arr = [];
-  let categoryType = "Sales Expert";
+  let categoryType = "Sales Captain";
   useEffect(() => {
     // alert("Page is running");
     // fetchData();
@@ -44,7 +44,7 @@ const Leaderboardth = () => {
       <Navbar />
       <button
         className="roll leader-btn icon-conatiner"
-        onClick={() => navigate("/leaderboardfinalsrm")}
+        onClick={() => navigate("/leaderboardfinalrm")}
       >
         Toggle to SRM
       </button>
@@ -57,4 +57,4 @@ const Leaderboardth = () => {
   );
 };
 
-export default Leaderboardth;
+export default Leaderboardths;
