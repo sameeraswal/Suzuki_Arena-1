@@ -23,13 +23,12 @@ const Leaderboard = () => {
 
   // const round1A="1-A";
   const mspin = JSON.parse(localStorage.getItem("mspin"));
+  let categoryType = "Sales Expert";
 
   useEffect(() => {
     axios
       .post(`${APIURL}/api/v1/quiz/scoreboard/category`, {
-        categoryType: JSON.parse(
-          localStorage.getItem("categoryTypeofEmployee")
-        ),
+        categoryType: categoryType,
       })
       .then((res) => {
         setRound(res.data.data.scoreBoard);
@@ -45,8 +44,8 @@ const Leaderboard = () => {
       <Navbar></Navbar>
       <button
         className="roll leader-btn icon-conatiner"
-        onClick={() => {navigate("/scoreboardsrm")
-        
+        onClick={() => {
+          navigate("/scoreboardsrm");
         }}
       >
         Toggle to SRM

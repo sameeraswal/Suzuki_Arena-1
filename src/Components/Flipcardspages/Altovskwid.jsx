@@ -18,7 +18,10 @@ const Altovskwid = () => {
   const [result, setResult] = useState([]);
 
   localStorage.setItem("co", JSON.stringify(5));
+  // let x = document.cookie;
+  // var value = document.cookie("mspin");
 
+  // console.log(value ,"Value is ")
   useEffect(() => {
     axios
       .post(`${APIURL}/api/v1/wheelRoundQuestions`, {
@@ -53,6 +56,7 @@ const Altovskwid = () => {
   // };
   const timeOutFun = () => {
     if (JSON.parse(localStorage.getItem("cod")) === -6) {
+      getData();
       // alert(JSON.parse(localStorage.getItem("cod"))===-6);
       setTimeout(() => window.open("../", "_self"), 400);
     }

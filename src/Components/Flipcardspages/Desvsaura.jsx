@@ -51,6 +51,7 @@ const Desvsaura = () => {
       setTimeout(() => window.open("../", "_self"), 400);
     }
   };
+  // let x=JSON.parse(localStorage.getItem("mspin"))
   return (
     <>
       <Navbar></Navbar>

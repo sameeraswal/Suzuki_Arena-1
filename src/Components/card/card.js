@@ -16,48 +16,8 @@ function Card({
   result,
   cardtitleImage1,
   cardtitleImage2,
+  mspin,
 }) {
-  // const metaData = {};
-  // metaData["Height"] = {
-  //   classFront: "front-icon1",
-  //   classBack: "back-1",
-  // };
-  // metaData["Length"] = {
-  //   classFront: "front-icon2",
-  //   classBack: "back-2",
-  // };
-  // metaData["Power"] = {
-  //   classFront: "front-icon3",
-  //   classBack: "back-3",
-  // };
-  // metaData["Torque"] = {
-  //   classFront: "front-icon4",
-  //   classBack: "back-4",
-  // };
-  // metaData["Bootspace"] = {
-  //   classFront: "front-icon5",
-  //   classBack: "back-5",
-  // };
-  // metaData["Mileage"] = {
-  //   classFront: "front-icon6",
-  //   classBack: "back-6",
-  // };
-  // metaData["Width"] = {
-  //   classFront: "front-icon7",
-  //   classBack: "back-7",
-  // };
-  // metaData["Wheelbase"] = {
-  //   classFront: "front-icon8",
-  //   classBack: "back-8",
-  // };
-  // metaData["Engine"] = {
-  //   classFront: "front-icon9",
-  //   classBack: "back-9",
-  // };
-  // metaData["FTC"] = {
-  //   classFront: "front-icon10",
-  //   classBack: "back-10",
-  // };
   let link = JSON.parse(localStorage.getItem("carRoute"));
   console.log(result, "result");
   console.log(link, "Link");
@@ -70,13 +30,14 @@ function Card({
   const timeOutFun = (e) => {
     if (isCorrect) {
       // setTimeout(() => window.open(`../afterflip/${title}`), 400);
-      console.log(`../afterflip/${title}?question=${cardQuestion}&link=${link}&Id=${cardQuestionId}`,"Path")
+      console.log(
+        `../afterflip/${title}?question=${cardQuestion}&link=${link}&Id=${cardQuestionId}`,
+        "Path"
+      );
       console.log(title, "title");
       console.log(cardQuestion, "cardQuestion");
       console.log(link, "link");
       console.log(cardQuestionId, "cardQuesID");
-
-
 
       setTimeout(
         () =>
@@ -119,8 +80,7 @@ function Card({
               width={189}
               className="resp-card-1"
             />
-          {console.log(cardtitleImage2, "Item")}
-
+            {console.log(cardtitleImage2, "Item")}
             button
           </button>
         </div>

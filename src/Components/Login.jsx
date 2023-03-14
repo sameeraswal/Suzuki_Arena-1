@@ -52,6 +52,9 @@ const Login = () => {
     // return false;
   };
 
+  // document.cookie=`mspin=${mspin}`;
+  // document.cookie=`regno=${regno}`
+
   const arena = require("./Pratham.png");
   const navigateLogin = () => {
     console.log(status, "stat");
@@ -62,8 +65,11 @@ const Login = () => {
   // const [mspin, setMspin] = useState([]);
 
   useEffect(() => {
-    localStorage.setItem("mspin", JSON.stringify(mspin));
-    localStorage.setItem("regNo", JSON.stringify(regno));
+    console.log(mspin, "Before Setting");
+
+    mspin != '""' && localStorage.setItem("mspin", JSON.stringify(mspin));
+    regno != '""' && localStorage.setItem("regNo", JSON.stringify(regno));
+    console.log(mspin, "AFter Setting");
     localStorage.removeItem("cod");
   }, [mspin, regno]);
   return (

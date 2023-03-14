@@ -13,7 +13,8 @@ function FlippableCard({
   cardQuestionId,
   result,
   cardtitleImage1,
-  cardtitleImage2
+  cardtitleImage2,
+  mspin
 }) {
   const [showFront, setShowFront] = useState(true);
 
@@ -42,6 +43,7 @@ function FlippableCard({
           result={result}
           cardtitleImage1={cardtitleImage1}
           cardtitleImage2={cardtitleImage2}
+          mspin={mspin}
           onClick={() => {
             // setShowFront((v) => !v);
 

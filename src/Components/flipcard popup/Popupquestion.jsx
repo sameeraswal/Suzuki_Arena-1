@@ -11,7 +11,7 @@ function Popupquestion({ setOpenModal }) {
         mspin: JSON.parse(localStorage.getItem("mspin")),
         roundOrder: JSON.parse(localStorage.getItem("roundName")),
         questionId: JSON.parse(localStorage.getItem("qid")),
-        cId: "NA",
+        cId: "WrongChoice",
       })
 
       .then((res) => {
@@ -30,7 +30,7 @@ function Popupquestion({ setOpenModal }) {
   }
   return (
     <div className="modalBackground">
-      <div className="modalContainer" style={{marginLeft:"5%"}}>
+      <div className="modalContainer" style={{ marginLeft: "5%" }}>
         <div className="titleCloseBtn">
           <button
             onClick={() => {

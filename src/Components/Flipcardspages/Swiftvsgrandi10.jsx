@@ -50,6 +50,7 @@ const Swiftvsgrandi10 = () => {
       setTimeout(() => window.open("../", "_self"), 400);
     }
   };
+
   return (
     <>
       <Navbar></Navbar>
@@ -105,6 +106,7 @@ const Swiftvsgrandi10 = () => {
                   cardQuestionId={item.cardQuestionId}
                   cardtitleImage1={item.cardtitleImage1}
                   cardtitleImage2={item.cardtitleImage2}
+                  
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>

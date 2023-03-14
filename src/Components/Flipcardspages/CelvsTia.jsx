@@ -58,7 +58,6 @@ const CelvsTia = () => {
     }
   };
 
-
   return (
     <>
       <Navbar></Navbar>

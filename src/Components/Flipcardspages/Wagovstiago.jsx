@@ -43,9 +43,9 @@ const Wagovstiago = () => {
     // return false;
   };
   const timeOutFun = () => {
-    if (JSON.parse(localStorage.getItem("cod"))===-6) {
+    if (JSON.parse(localStorage.getItem("cod")) === -6) {
       // alert(JSON.parse(localStorage.getItem("cod"))===-6);
-      getData()
+      getData();
       setTimeout(() => window.open("../", "_self"), 400);
     }
   };
@@ -60,7 +60,9 @@ const Wagovstiago = () => {
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>
-          <p>Remaining:  {5-Math.abs(JSON.parse(localStorage.getItem("cod")))}</p>
+          <p>
+            Remaining: {5 - Math.abs(JSON.parse(localStorage.getItem("cod")))}
+          </p>
         </div>
 
         <div className="flex-container-child bg-correct">
@@ -82,11 +84,12 @@ const Wagovstiago = () => {
                   setCount(
                     localStorage.setItem(
                       "cod",
-                      JSON.stringify(JSON.parse(localStorage.getItem("cod"))-1)
+                      JSON.stringify(
+                        JSON.parse(localStorage.getItem("cod")) - 1
+                      )
                     )
                   );
                   timeOutFun();
-
 
                   console.log(item.cardQuestionId, "questionid");
                 }}
