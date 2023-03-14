@@ -59,6 +59,7 @@ import Leaderboardthsrm from "./Components/Leaderboardthsrm/Leaderboardsrm";
 import Puzzlesrm from "./Components/Puzzlequestionsrm/Puzzlesrm";
 import Enterscore8 from "./Components/Enterscore8";
 import Leaderboardths from "./Components/leaderboardfinal/leaderboardths";
+import Roundscore from "./Components/Roundscore";
 
 export const APIURL = "http://localhost:4500";
 export const APIURLLOCAL = "http://localhost:3000";
@@ -258,6 +259,8 @@ const App = () => {
           <Route path="/leaderboard" element={<Leaderboard />}></Route>
           <Route path="/puzzlesrm" element={<Puzzlesrm />}></Route>
           <Route path="/wheelscore" element={<Enterscore8 />}></Route>
+          <Route path="/roundscore" element={<Roundscore />}></Route>
+
           
         </Routes>
       </div>
