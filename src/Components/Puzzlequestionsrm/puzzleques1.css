@@ -47,14 +47,14 @@
 
 
 
-@media screen and (max-width: 1180px) {
+@media screen and (min-width: 1023px) and (max-width: 1180px) {
   .sbt-btn {
     margin-left: 67%;
     /* top: 10%;
      */
      position: absolute;
-     bottom: 78px;
-     margin-left: 54%;
+     bottom: -16px;
+    margin-left: 51%;
   }
    .resp-puzzle-case-btn {
     position: absolute;
@@ -64,9 +64,9 @@
   }
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (min-width: 768px) and (max-width: 1023px){
   .sbt-btn {
-    margin-left: 53%;
+    margin-left: 62%;
     bottom: -17px;
   }
 }
