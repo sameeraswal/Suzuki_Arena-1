@@ -1395,7 +1395,7 @@ ul {
   .body-img {
     position: absolute;
     margin-left: 15%;
-    margin-top: -105%;
+    margin-top: -52%;
   }
   .wheel {
     margin-top: -102.3%;
@@ -1434,18 +1434,18 @@ ul {
   }
 
   .body-img {
-    margin-left: 31%;
-    margin-top: -51%;
+    margin-left: 30%;
+    margin-top: -53%;
   }
 
   .wheel {
-    margin-top: -49.3%;
-    margin-left: 430px;
+    margin-top: -51.3%;
+    margin-left: 409px;
   }
 
   .wheel-marker {
     margin-left: 48.5%;
-    margin-top: -51%;
+    margin-top: -53%;
   }
 }
 
@@ -1530,7 +1530,7 @@ ul {
   }
 }
 
-@media screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .question-div {
     margin-bottom: 17px;
   }
@@ -1572,18 +1572,18 @@ ul {
 
   /* wheel */
   .body-img {
-    margin-left: 17%;
-    margin-top: -89%;
+    margin-left: 23%;
+    margin-top: -674px;
   }
 
   .wheel {
-    margin-left: 154px;
-    margin-top: -85.5%;
+    margin-left: 213px;
+    margin-top: -78.5%;
   }
 
   .wheel-marker {
-    margin-left: 47.9%;
-    margin-top: -89%;
+    margin-left: 50.9%;
+    margin-top: -81%;
   }
 
   /* flippcard */
@@ -1607,19 +1607,5 @@ ul {
     width: 350px;
     margin-left: 15%;
     margin-right: 57px;
-  }
-}
-
-@media screen and (min-device-width: 768px) and (max-device-width: 960px) {
-  .body-img {
-    margin-left: 21%;
-    margin-top: 78%;
-  }
-  .wheel {
-    margin-left: 215px;
-    margin-top: -75.5%;
-  }
-  .wheel-marker {
-    top: -78%;
   }
 }
