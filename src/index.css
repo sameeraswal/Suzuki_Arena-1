@@ -1278,6 +1278,26 @@ ul {
   background-size: contain;
 }
 
+
+.input-round-score{
+  width: 150px;
+  margin-right: 100px;
+}
+.drop-down-btn{
+  width: 100px;
+  height: 50px;
+}
+.flex-roundscore{
+  display: flex;
+}
+.input-round-score{
+  margin-top: 2%;
+}
+.finish-round-btn{
+  top: 85%;
+  right: 10%;
+}
+
 /* media Queries */
 /* Potrait */
 @media screen and (max-width: 768px) {
