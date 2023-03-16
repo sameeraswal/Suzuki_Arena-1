@@ -1,49 +1,65 @@
-[{
-  "_id": {
-    "$oid": "63fa3389724a0ba8c3c0aef1"
+[
+  {
+    "_id": {
+      "$oid": "63fa3389724a0ba8c3c0aef1"
+    },
+    "mspin": "123",
+    "name": "rakesh",
+    "registrationNumber": "23",
+    "dealership": "xyz"
   },
-  "mspin": "123",
-  "name": "rakesh",
-  "registrationNumber": "23",
-  "dealership": "xyz"
-},{
-  "_id": {
-    "$oid": "63fa344a724a0ba8c3c0aef2"
+  {
+    "_id": {
+      "$oid": "63fa344a724a0ba8c3c0aef2"
+    },
+    "mspin": "124",
+    "name": "gaurav",
+    "registrationNumber": "23",
+    "dealership": "xyz"
   },
-  "mspin": "124",
-  "name": "gaurav",
-  "registrationNumber": "23",
-  "dealership": "xyz"
-},{
-  "_id": {
-    "$oid": "63fa344a724a0ba8c3c0aef3"
+  {
+    "_id": {
+      "$oid": "63fa344a724a0ba8c3c0aef3"
+    },
+    "mspin": "125",
+    "name": "aman sharma",
+    "registrationNumber": "24",
+    "dealership": "qwe"
   },
-  "mspin": "125",
-  "name": "aman sharma",
-  "registrationNumber": "24",
-  "dealership": "qwe"
-},{
-  "_id": {
-    "$oid": "64048792144a5b613c575ce3"
+  {
+    "_id": {
+      "$oid": "64048792144a5b613c575ce3"
+    },
+    "mspin": "140",
+    "name": "ravi verma",
+    "dealership": "rrr",
+    "registrationNumber": "401"
   },
-  "mspin": "140",
-  "name": "ravi verma",
-  "dealership": "rrr",
-  "registrationNumber": "401"
-},{
-  "_id": {
-    "$oid": "64048cf5144a5b613c575ce4"
+  {
+    "_id": {
+      "$oid": "64048cf5144a5b613c575ce4"
+    },
+    "mspin": "141",
+    "name": "akshay verma",
+    "dealership": "aaa",
+    "registrationNumber": "41"
   },
-  "mspin": "141",
-  "name": "akshay verma",
-  "dealership": "aaa",
-  "registrationNumber": "41"
-},{
-  "_id": {
-    "$oid": "64061909144a5b613c575cec"
+  {
+    "_id": {
+      "$oid": "64061909144a5b613c575cec"
+    },
+    "mspin": "130",
+    "name": "rahul yadav",
+    "dealership": "rrr",
+    "registrationNumber": "30"
   },
-  "mspin": "130",
-  "name": "rahul yadav",
-  "dealership": "rrr",
-  "registrationNumber": "30"
-}]
+  {
+    "mspin": "1000",
+    "name": "Test",
+    "dealership": "Test",
+    "registrationNumber": "1000",
+    "region": "Test",
+    "category": "Sales Expert",
+    "__v": 0
+  }
+]

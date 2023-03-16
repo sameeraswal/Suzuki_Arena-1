@@ -5,8 +5,7 @@ import Search from "./search";
 import loginImg from "./loginicon.png";
 import axios from "axios";
 import { APIURL } from "../App";
-import useCookies from "react-cookie/cjs/useCookies";
-
+import useCookies from "react-cookie/cjs/useCookies"
 const Login = () => {
   const navigate = useNavigate();
   const [mspin, setMspin] = useState("");
@@ -133,7 +132,7 @@ const Login = () => {
               class="control-button up third icon-conatiner btn-bottom"
               onClick={() => {
                 fetchData();
-                status && navigateLogin();
+                navigateLogin();
               }}
               type="button"
               value="Login"
