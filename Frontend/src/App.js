@@ -63,7 +63,7 @@ import Roundscore from "./Components/Roundscore";
 import Enterscore2 from "./Components/Enterscore2";
 
 export const APIURL = "https://suzuki-arena-backend.onrender.com";
-export const APIURLLOCAL = "http://localhost:3000";
+export const APIURLLOCAL = "https://suzuki-arena-frontend.onrender.com";
 export const QUESTIONIMAGEPATH = "../Assets/Questions/Round1-A/";
 export const imgur = "../Assets/Questions/Round2";
 
