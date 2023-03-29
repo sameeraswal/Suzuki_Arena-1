@@ -192,7 +192,7 @@ const Question = () => {
         </div>
         <div>
           {/* {console.log(openModel)} */}
-          {timer === "00:00" && openModel && (
+          {timer === "00:00" && openModel && activeQuestion !== 4 && (
             <>
               <div className="modalBackground" style={{ zIndex: "1" }}>
                 <div className="modalContainer">
