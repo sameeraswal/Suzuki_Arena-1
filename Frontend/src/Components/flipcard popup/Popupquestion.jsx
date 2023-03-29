@@ -2,14 +2,18 @@ import axios from "axios";
 import React, { useState } from "react";
 import { APIURL } from "../../App";
 import "./Modal.css";
+import { useCookies } from "react-cookie";
+
 
 function Popupquestion({ setOpenModal }) {
+  const [cookies, setCookie] = useCookies();
+
   const postData = () => {
     // console.log(mspin, name, dealership, regno);
     axios
       .post(`${APIURL}/api/v1/round/submitcardanswer`, {
-        mspin: JSON.parse(localStorage.getItem("mspin")),
-        roundOrder: JSON.parse(localStorage.getItem("roundName")),
+        mspin: cookies.mspinnew,
+        roundOrder: cookies.roundName,
         questionId: JSON.parse(localStorage.getItem("qid")),
         cId: "WrongChoice",
       })
@@ -47,6 +51,8 @@ function Popupquestion({ setOpenModal }) {
               setOpenModal(false);
               postData();
               refreshPage();
+              refreshPage();
+
             }}
             id="cancelBtn"
             className="icon-conatiner"
