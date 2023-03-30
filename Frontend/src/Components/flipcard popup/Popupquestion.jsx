@@ -15,7 +15,7 @@ function Popupquestion({ setOpenModal }) {
         mspin: cookies.mspinnew,
         roundOrder: cookies.roundName,
         questionId: JSON.parse(localStorage.getItem("qid")),
-        cId: "WrongChoice",
+        cId: "",
       })
 
       .then((res) => {
