@@ -82,17 +82,15 @@ export default class Wheel extends React.Component {
         <Navbar></Navbar>
         {/* {console.log(items[selectedItem].title)} */}
         <img src={bgImg} alt="" className="background-image" />
-
-        {/* <div className="round-box">Wheel</div> */}
-        <div className="wheel-container" onClick={this.timeOutFun}>
-          {/* <div className="wheel-background"></div> */}
+        <div className="body-img-s">
           <img src={marker} alt="marker" className="wheel-marker" />
-          <div className="body-img">
-            <img src={bodyImg} alt="img" height={630} width={520} />
-          </div>
-
+        </div>
+        <div className="body-img-s">
+          <img src={bodyImg} alt="img" className="body-img-h-w" />
+        </div>
+        
           <div
-            className={`wheel ${spinning}`}
+            className={`wheel ${spinning} wheel-cent`}
             style={wheelVars}
             onClick={() => {
               this.selectItem();
@@ -114,8 +112,7 @@ export default class Wheel extends React.Component {
               </>
             ))}
           </div>
-          {/* <h1 className="car-name-from-wheel">{car}</h1> */}
-        </div>
+       
       </>
     );
   }
