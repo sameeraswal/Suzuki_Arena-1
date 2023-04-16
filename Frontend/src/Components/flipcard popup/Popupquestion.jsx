@@ -14,8 +14,8 @@ function Popupquestion({ setOpenModal }) {
       .post(`${APIURL}/api/v1/round/submitcardanswer`, {
         mspin: cookies.mspinnew,
         roundOrder: cookies.roundName,
-        questionId: JSON.parse(localStorage.getItem("qid")),
-        cId: "",
+        questionId: "7",
+        cId: "WrongChoice",
       })
 
       .then((res) => {
@@ -51,8 +51,6 @@ function Popupquestion({ setOpenModal }) {
               setOpenModal(false);
               postData();
               refreshPage();
-              refreshPage();
-
             }}
             id="cancelBtn"
             className="icon-conatiner"
