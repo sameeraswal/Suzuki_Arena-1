@@ -429,7 +429,6 @@
 }
 
 .wheel {
- 
   /* margin-top: 10px; */
   box-sizing: content-box;
   width: var(--wheel-size);
@@ -504,7 +503,6 @@
   position: absolute;
 }
 
-
 .wheel-cont {
   display: flex;
   align-items: center;
@@ -516,15 +514,11 @@
   justify-content: center;
 }
 
-.wheel-cent{
-  top: 22%;
-  /* margin-left: 50%;
-  margin-right: 50%; */
- 
+.wheel-cent {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-
+  margin-left: -213px;
+  top: 22%;
 }
 
 .flex-container-child {
