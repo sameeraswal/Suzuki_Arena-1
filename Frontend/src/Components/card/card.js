@@ -47,6 +47,15 @@ function Card({
           ),
         400
       );
+    } else {
+      setTimeout(
+        () =>
+          window.open(
+            `../afterflipwrong?question=${cardQuestion}&link=${link}&Id=${cardQuestionId}`,
+            "_self"
+          ),
+        400
+      );
     }
 
     // console.log(title);

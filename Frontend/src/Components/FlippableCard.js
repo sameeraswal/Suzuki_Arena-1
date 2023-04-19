@@ -17,10 +17,6 @@ function FlippableCard({
   mspin,
 }) {
   const [showFront, setShowFront] = useState(true);
-  const [seed, setSeed] = useState(1);
-  const reset = () => {
-    setSeed(Math.random());
-  };
   // console.log("showFront");
 
   useEffect(() => {
@@ -39,7 +35,6 @@ function FlippableCard({
     <div className="flippable-card-container ">
       <CSSTransition in={showFront} timeout={300} classNames="flip">
         <Card
-          key={seed}
           title={title}
           isCorrect={isCorrect}
           cardQuestion={cardQuestion}
@@ -52,7 +47,6 @@ function FlippableCard({
             // setShowFront((v) => !v);
 
             setShowFront(false);
-            reset();
           }}
         />
       </CSSTransition>

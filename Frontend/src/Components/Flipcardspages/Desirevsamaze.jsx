@@ -113,9 +113,9 @@ const Dezirevsamaze = () => {
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>
-              {openModal && !item.isCorrect && (
+              {/* {openModal && !item.isCorrect && (
                 <Popupquestion setOpenModal={setOpenModal} />
-               )}
+               )} */}
             </>
           ))}
         </div>
