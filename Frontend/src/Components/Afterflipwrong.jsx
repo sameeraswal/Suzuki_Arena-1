@@ -42,15 +42,32 @@ const Afterflipwrong = () => {
   };
   return (
     <div>
-      <div>Wrong Card</div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop:'100px'
+        }}
+      >
+          Oops You choose Wrong Card
+
+      </div>
       <button
         className="card-btn-style"
         onClick={() => {
           postData();
           timeout();
         }}
+        style={{
+          marginLeft: "30%",
+          marginTop: "20%",
+          fontSize: "50px",
+          width: "40%",
+          height:'40%'
+        }}
       >
-        Submit
+      Click here to choose another card
       </button>
     </div>
   );

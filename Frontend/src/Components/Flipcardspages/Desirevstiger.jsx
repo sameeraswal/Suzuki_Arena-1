@@ -1,6 +1,3 @@
-
-
-
 import { React, useEffect, useState } from "react";
 import FlippableCard from "../FlippableCard";
 import Navbar from "../Navbar";
@@ -14,19 +11,18 @@ import axios from "axios";
 import { APIURL } from "../../App";
 import { useCookies } from "react-cookie";
 
-
 const Dezirevstiger = () => {
   const [count, setCount] = useState(5);
   const [questionid, setQuestionid] = useState(0);
 
   const [openModal, setOpenModal] = useState(false);
   const [result, setResult] = useState([]);
-  
+
   const [cookies, setCookie] = useCookies(["roundName"]);
   setCookie("roundName", `${JSON.parse(localStorage.getItem("roundName"))}`, {
-    path: "/"
+    path: "/",
   });
-  useEffect(() => {
+  const postData = () => {
     axios
       .post(`${APIURL}/api/v1/wheelRoundQuestions`, {
         mspin: cookies.mspinnew,
@@ -37,6 +33,9 @@ const Dezirevstiger = () => {
         console.log(res, "Respnse");
       })
       .catch((error) => console.log(error.response.data.message));
+  };
+  useEffect(() => {
+    postData();
   }, []);
   const getData = () => {
     axios
@@ -53,7 +52,7 @@ const Dezirevstiger = () => {
     // return false;
   };
   const timeOutFun = () => {
-    if (JSON.parse(localStorage.getItem("cod"))===-6) {
+    if (JSON.parse(localStorage.getItem("cod")) === -6) {
       // alert(JSON.parse(localStorage.getItem("cod"))===-6);
       getData();
       setTimeout(() => window.open("../", "_self"), 400);
@@ -65,14 +64,14 @@ const Dezirevstiger = () => {
 
       {/* <h1>{cards}</h1> */}
       <img src={bgImg} alt="" className="flip-bg" />
-      <div className="round-box bg-correct">
-      Dzire ZXi+ Vs Tigor XZ+
-      </div>
+      <div className="round-box bg-correct">Dzire ZXi+ Vs Tigor XZ+</div>
       {/* <h1>{cards}</h1> */}
       <div className="flex-container bg-correct">
         <div className="remain-container bg-correct">
           <p>Cards</p>
-          <p>Remaining:  {5-Math.abs(JSON.parse(localStorage.getItem("cod")))}</p>
+          <p>
+            Remaining: {5 - Math.abs(JSON.parse(localStorage.getItem("cod")))}
+          </p>
         </div>
 
         <div className="flex-container-child bg-correct">
@@ -94,11 +93,12 @@ const Dezirevstiger = () => {
                   setCount(
                     localStorage.setItem(
                       "cod",
-                      JSON.stringify(JSON.parse(localStorage.getItem("cod"))-1)
+                      JSON.stringify(
+                        JSON.parse(localStorage.getItem("cod")) - 1
+                      )
                     )
                   );
                   timeOutFun();
-
                 }}
               >
                 {console.log(item.cardTitle, "before Card Title")}
@@ -111,7 +111,6 @@ const Dezirevstiger = () => {
                   cardQuestionId={item.cardQuestionId}
                   cardtitleImage1={item.cardtitleImage1}
                   cardtitleImage2={item.cardtitleImage2}
-
                 />
                 {/* {console.log(item.cardTitle, "Card Title")} */}
               </div>

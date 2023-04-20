@@ -29,15 +29,6 @@ function Card({
   const navigate = useNavigate();
   const timeOutFun = (e) => {
     if (isCorrect) {
-      // setTimeout(() => window.open(`../afterflip/${title}`), 400);
-      console.log(
-        `../afterflip/${title}?question=${cardQuestion}&link=${link}&Id=${cardQuestionId}`,
-        "Path"
-      );
-      console.log(title, "title");
-      console.log(cardQuestion, "cardQuestion");
-      console.log(link, "link");
-      console.log(cardQuestionId, "cardQuesID");
 
       setTimeout(
         () =>
@@ -72,7 +63,7 @@ function Card({
             width={189}
             className="resp-card-1"
           />
-          {console.log(cardtitleImage1, "Item")}
+
         </div>
 
         <div className="card-front">
@@ -89,7 +80,6 @@ function Card({
               width={189}
               className="resp-card-1"
             />
-            {console.log(cardtitleImage2, "Item")}
             button
           </button>
         </div>

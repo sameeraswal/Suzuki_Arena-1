@@ -109,7 +109,7 @@ const Altovskwid = () => {
                   timeOutFun();
                 }}
               >
-                {console.log(item.cardTitle, "before Card Title")}
+            
 
                 <FlippableCard
                   title={item.cardTitle}
