@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { APIURL, APIURLLOCAL, imgur } from "../App";
+import { APIURL, imgur } from "../App";
 import { useCookies } from "react-cookie";
 
 import axios from "axios";
@@ -35,7 +35,7 @@ const Afterflip = ({ title }) => {
     setTimeout(
       () =>
         window.open(
-          `${APIURLLOCAL}/${params.get("link")}?ms=${params.get("ms")}`,
+          `/${params.get("link")}?ms=${params.get("ms")}`,
           "_self"
         ),
       400
