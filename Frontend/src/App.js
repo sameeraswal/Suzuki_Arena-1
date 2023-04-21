@@ -61,9 +61,9 @@ import Enterscore8 from "./Components/Enterscore8";
 import Leaderboardths from "./Components/leaderboardfinal/leaderboardths";
 import Roundscore from "./Components/Roundscore";
 import Enterscore2 from "./Components/Enterscore2";
+import Afterflipwrong from "./Components/Afterflipwrong";
 
-export const APIURL = "https://suzuki-arena-backend.onrender.com";
-export const APIURLLOCAL = "https://suzuki-arena-frontend.onrender.com";
+export const APIURL = "http://localhost:4500";
 export const QUESTIONIMAGEPATH = "../Assets/Questions/Round1-A/";
 export const imgur = "../Assets/Questions/Round2";
 
@@ -166,6 +166,10 @@ const App = () => {
           <Route path="/firstmile" element={<FirstMile />}></Route>
           <Route path="/randomizer" element={<Randomizer />}></Route>
           <Route path="/dice" element={<Dice />}></Route>
+          <Route
+            path="/afterflipwrong"
+            element={<Afterflipwrong />}
+          ></Route>
           
           <Route
             path="/afterflip/height"

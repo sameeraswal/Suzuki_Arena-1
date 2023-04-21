@@ -1,5 +1,5 @@
 import React from "react";
-import { APIURL, APIURLLOCAL } from "../App";
+import { APIURL } from "../App";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 import { useLocation } from "react-router-dom";
@@ -12,7 +12,7 @@ const Afterflipwrong = () => {
     setTimeout(
       () =>
         window.open(
-          `${APIURLLOCAL}/${params.get("link")}?ms=${params.get("ms")}`,
+          `/${params.get("link")}?ms=${params.get("ms")}`,
           "_self"
         ),
       400
