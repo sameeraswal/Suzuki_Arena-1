@@ -115,9 +115,9 @@ const Question = () => {
       .get(`${APIURL}/api/v1/quiz/roundname/1-A`)
       .then((res) => {
         // console.log(res.data.data[0].questions.sort(() => Math.random() - 0.5));
-        console.log(res.data.data[0].questions[activeQuestion], "data");
+        // console.log(res.data.data[0].questions[activeQuestion], "data");
         setQuestion(res.data.data[0].questions[activeQuestion].question);
-        console.log(question);
+        // console.log(question);
 
         // const { question, choices, video, id } = question;
         // setQ(question);
@@ -160,7 +160,7 @@ const Question = () => {
         cId: cid,
       })
       .then((res) => {
-        console.log(res, "Response");
+        // console.log(res, "Response");
         // setStatus(res.data.status);
       })
       .catch((error) => console.log(error));
@@ -173,7 +173,7 @@ const Question = () => {
     //HTTP call
 
     setActiveQuestion((i) => i + 1);
-    console.log(activeQuestion);
+    // console.log(activeQuestion);
     handleToggleClasslistRef(ref);
   };
 
@@ -231,15 +231,17 @@ const Question = () => {
                 </div>
               </div>
 
-              {console.log(openModel, !openModel)}
+              {/* {console.log(openModel, !openModel)} */}
             </>
           )}
         </div>
 
+        {console.log(QUESTIONIMAGEPATH + v, "PATHHHHHHHHHHHHHHHHHHHHHHHH")}
+
         <div className="question-design-container">
           {fileType === "video" && (
             <div className="question-video">
-              {/* {console.log(v.video)} */}
+             
               <iframe
                 width="430"
                 height="305"
